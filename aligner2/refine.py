@@ -30,7 +30,7 @@ Continuous joins (the coarse stage found no pause):
   J12 vowel / stop > stop: the letter-peak midpoint (mid-closure; homorganic pairs share one closure) -- only
       when J13 has no window.
   J13 any sound > stop, and > DH (except after a nasal): the quietest 2 ms frame within +-20 ms of the letter-
-      peak midpoint. A closure / dental constriction is silent or near-silent; reviewers put the join inside it
+      peak midpoint. (The middle of the near-minimum stretch instead: +0.2 s dev, -0.4 s held-out -> not used.) A closure / dental constriction is silent or near-silent; reviewers put the join inside it
       and cannot hear where, so the quietest point is the stable choice (V>stop 18.6 -> 17.0 ms, V>DH 24.3 ->
       16.0: the frication onset of J4 fires on nothing for DH, which has almost no hiss). After a nasal, DH
       assimilates ("in the" -> dental nasal) and has no dip: J4 stays.
