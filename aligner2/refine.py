@@ -26,8 +26,17 @@ Continuous joins (the coarse stage found no pause):
   J9  vowel > vowel / glide / liquid, liquid > glide: no reliable acoustic landmark -> the midpoint of the two
       letter peaks (V-V dev MAE 30 -> 20 ms); liquid > vowel: the middle of the loudness rise, else the midpoint.
   J10 stop > glide / nasal, liquid > stop: the midpoint of the joint change between the two phones.
-  J12 vowel / stop > stop: the letter-peak midpoint (mid-closure; homorganic pairs share one closure).
+  J12 vowel / stop > stop: the letter-peak midpoint (mid-closure; homorganic pairs share one closure) -- only
+      when J13 has no window.
+  J13 any sound > stop, and > DH (except after a nasal): the quietest 2 ms frame within +-20 ms of the letter-
+      peak midpoint. A closure / dental constriction is silent or near-silent; reviewers put the join inside it
+      and cannot hear where, so the quietest point is the stable choice (V>stop 18.6 -> 17.0 ms, V>DH 24.3 ->
+      16.0: the frication onset of J4 fires on nothing for DH, which has almost no hiss). After a nasal, DH
+      assimilates ("in the" -> dental nasal) and has no dip: J4 stays.
   Other junctions keep the coarse cut.
+  J0  a short coarse "pause" (< 100 ms) that never comes within 10 dB of the local floor is not a pause: it is a
+      closure, voicing bar or frication inside running speech (v16 splits weak word-initial fricatives, whose CTC
+      letter lags to the fricative's end) -> treated as a continuous join (rules above; none -> gap middle).
 Pause edges (the coarse stage found a pause):
   P1  word end: kept unless (a) a SEPARATE EVENT follows the word's last letter across a real gap (breath, hum,
       laugh, click; R3) -> end at the gap; (d) a sonorant-final word runs into a long hiss with no CTC letters
@@ -50,7 +59,7 @@ CLASS = {**{p: "V" for p in VOWELS}, **{p: "stop" for p in ("P", "B", "T", "D", 
          "HH": "h", **{p: "nas" for p in ("M", "N", "NG")}, "L": "liq", "R": "liq", "W": "gl", "Y": "gl"}
 BG_DB = 6.0                                   # a released stop's tail: until within 6 dB of the residual level
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
-RULES = {"J1", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "E1", "E2"}   # enabled
+RULES = {"J0", "J1", "J13", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "E1", "E2"}   # enabled
 # (aligner2/local_bench.py --rules J1,J4,... for ablations)
 
 
@@ -312,6 +321,15 @@ class Clip:
         A, B = last_phone(self.arpa[k]), first_phone(self.arpa[k + 1])
         cA, cB = pclass(A), pclass(B)
         t = None
+        pa_, pb_ = self.lex["last"][k], self.lex["first"][k + 1]
+        if "J13" in RULES and (cB == "stop" or (B == "DH" and cA != "nas")) and cA != "?" \
+                and pb_ > pa_:     # J13: constriction
+            m = (pa_ + pb_) // 2
+            w0, w1 = max(lo_lim, m - MS(20)), min(hi_lim, m + MS(20))
+            if w1 - w0 >= MS(10):
+                t = w0 + int(np.argmin(S.Ls[w0:w1]))
+                self.note(k, "J13 quietest", cut=t)
+                return t
         if cA == "stop" and cB == "V" and "J1" in RULES:                         # J1
             bu = burst_onset(S, a, b, prefer="max")
             if bu is not None:                            # released: voicing onset after the release
@@ -339,7 +357,6 @@ class Clip:
                 if t is not None:
                     self.note(k, f"J8 {name}", cut=t)
                     break
-        pa_, pb_ = self.lex["last"][k], self.lex["first"][k + 1]
         if cA == "V" and cB == "nas" and "J7" in RULES:                           # J7
             for name, q, feats in (("nasal-onset-end", 0.8, ("lo", "cent")), ("joint", 0.8, None)):
                 t = transition(S, cA, cB, a, cut, b, q, feats)
@@ -556,9 +573,27 @@ class Clip:
             return S.T - 1
         return self.pause_end(n, (S.T - 1) * HOP + MS(10) * HOP)
 
+    def voiced_gap(self, k):
+        """J0: a short coarse gap that never comes near the background (> 10 dB above the local floor
+        throughout, < 100 ms) is a closure, voicing bar or frication inside running speech, not a pause"""
+        g = self.s[k + 1] - self.e[k]
+        if not (0.005 < g < 0.100):
+            return False
+        a, b = self.idx(self.e[k]), self.idx(self.s[k + 1])
+        return b > a and (self.S.Ls[a:b] - self.S.floor[a:b]).min() > 10.0
+
     def run(self):
         e, s = list(self.e), list(self.s)
         for k in range(self.n - 1):
+            if "J0" in RULES and self.voiced_gap(k):
+                t = self.join(k)
+                if t is None:
+                    t = self.idx((self.e[k] + self.s[k + 1]) / 2)
+                    self.note(k, "J0 gap-mid", cut=t)
+                else:
+                    self.trace[k] = "J0+" + self.trace.get(k, "")
+                e[k], s[k + 1] = t * HOP - 0.001, t * HOP + 0.001
+                continue
             if self.s[k + 1] - self.e[k] <= 0.005:
                 t = self.join(k)
                 if t is not None:                                 # the gold convention: end = cut - 1 ms,

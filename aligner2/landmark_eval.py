@@ -57,7 +57,29 @@ def candidates(S, pa, pb, cut, pair):
     bu = R.burst_onset(S, a, b, prefer="last")
     if bu is not None:
         c["burst_last"] = bu
+    if cB in ("stop", "aff"):
+        bm = R.burst_onset(S, a, b, prefer="max")
+        if bm is not None:
+            c["burst_max"] = bm
+            off = closure_onset(S, pa, bm, a)
+            if off is not None:
+                c["clos_on"] = off
+                c["clos_mid"] = (off + bm) // 2
     return c
+
+
+def closure_onset(S, pa, bu, a):
+    """where the loudness falls halfway (in dB) from the sound before the closure to the closure minimum"""
+    lo = S.clip(min(pa, bu - MS(10)))
+    if bu - lo < 3:
+        return None
+    mi = lo + int(np.argmin(S.Ls[lo:bu]))
+    va = S.Ls[S.clip(min(pa, mi) - MS(30)):S.clip(min(pa, mi) + MS(10))].max()
+    m = S.Ls[mi]
+    off = mi
+    while off > a and S.Ls[off] < m + (va - m) / 2:
+        off -= 1
+    return off
 
 
 def main():
