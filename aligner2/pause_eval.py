@@ -78,6 +78,29 @@ def candidates(S, clip, k, coarse, p99, nxt):
             low = min(low, S.Ls[j]); j += 1
         if j > i_end:
             c["fric_run"] = j
+            # the same, only for a SIBILANT tail (most energy above 4 kHz, dense zero crossings): a released / fricated
+            # stop's own noise; breath noise after a pause is broader (hi -10..-15 dB, zcr 0.2-0.35)
+            w = slice(i_end, min(j, i_end + MS(30)))
+            for hth, zth in ((-6.0, 0.4), (-8.0, 0.35), (-4.0, 0.45)):
+                if np.median(S.hi[w]) >= hth and np.median(S.zcr[w]) >= zth:
+                    c[f"sib{int(-hth)}_{int(zth * 100)}"] = j
+    # a FRICATED stop release with no closure (wasn't H: the nasal runs straight into 100 ms of /s/-like noise): frication
+    # (10 ms zcr >= 0.3, >= -10 dB above 4 kHz, floor + 10) starting within 30 ms of the coarse end and joined to the
+    # word without a gap runs on until it dies
+    zs, hs = R._box(S.zcr, MS(10)), R._box(S.hi, MS(10))
+    f = next((q for q in range(max(0, i_end - MS(10)), min(cap, i_end + MS(30)))
+              if zs[q] >= 0.3 and hs[q] >= -10.0 and S.Ls[q] >= S.floor[q] + 10.0), None)
+    if f is not None and (f <= i_end or (S.Ls[i_end:f + 1] - S.floor[i_end:f + 1]).min() >= 10.0):
+        zref = float(np.median(zs[f:f + MS(20)]))
+        j = f
+        while j < min(cap, f + MS(200)) and zs[j] >= max(0.15, 0.5 * zref) and S.Ls[j] >= S.floor[j] + 6.0:
+            j += 1
+        c["ftail"] = max(i_end, j)
+        for X in (40, 43):                         # ... but no longer than it is audible
+            q = f
+            while q < j and S.Ls[q] >= p99 - X:
+                q += 1
+            c[f"ftail_aud{X}"] = max(i_end, q)
     # R6: a smooth voiced / breathy decay continuing from the coarse end ends near -40 dB re p99 (no re-rise, <= 150 ms)
     for X in (38, 40, 43):
         j, low = i_end, S.Ls[i_end]

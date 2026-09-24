@@ -57,7 +57,12 @@ Pause edges (the coarse stage found a pause):
       (voiced / silent closures run that long: like.end, walk.end H), never into the next word's letters, any
       >= 2 dB transient after a closure (weak releases), and only if it DECAYS -- a burst that grows into a vowel
       within 50 ms is the next word's onset (P1b100 + P1bt2: dev +0.10 s, stop>stop pause H 33.3 -> 25.9 ms;
-      049 +0.05 s).
+      049 +0.05 s). P1bv: a VOICED closure counts too (voice bar: periodic, loud below 400 Hz, silent above
+      4 kHz -> the level above 4 kHz jumps >= 12 dB at the burst); its release lasts while audible (>= p99 - 40 dB,
+      over the residual) or still fricated (zcr >= 0.15 over floor + 6), <= 200 ms (like H: voiced K closure, then
+      170 ms of affricated release, -233 -> +27 ms; cried +10; dev +0.22 s, 049 / ear unchanged).
+      P1f: no burst, but the stop devoices straight into frication (a fricated release, wasn't H): it runs on until
+      it dies (Clip.fricated_release).
   P2  word start: kept unless a separate event precedes the word across a real gap -> start out of the gap.
   P3  otherwise the speech onset: the steepest loudness rise within 30 ms of the coarse start (after the
       pause's middle, before the first-letter peak).
@@ -90,7 +95,7 @@ CLASS = {**{p: "V" for p in VOWELS}, **{p: "stop" for p in ("P", "B", "T", "D", 
 BG_DB = 6.0                                   # a released stop's tail: until within 6 dB of the residual level
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
 RULES = {"F2", "J0", "J1", "J1n", "J1m", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "P3", "E1", "E2",
-         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b"}   # enabled
+         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f"}   # enabled
 # (aligner2/local_bench.py --rules J1,J4,... for ablations)
 
 
@@ -138,9 +143,11 @@ class Sig:
 
 
 # ── landmark detectors (indices on the 2 ms grid) ────────────────────────────────────────────────────────
-def burst_onset(S, a, b, prefer="last", closure_db=6.0, min_trn=3.0):
+def burst_onset(S, a, b, prefer="last", closure_db=6.0, min_trn=3.0, hb_db=None, info=None):
     """stop release in [a, b): a >2 kHz transient (>= 3 dB) that follows a CLOSURE -- the 16 ms before it at
     least closure_db quieter than the 16 ms after it (glottal pulses in creaky voice have no closure).
+    hb_db: a VOICED closure (voice bar: loud below 400 Hz, silent above 4 kHz) also counts when the level above
+    4 kHz jumps by >= hb_db at the transient (info["voiced"] tells which kind was found).
     Returns the burst onset: the first frame >= 25% of the transient peak within 10 ms before it."""
     a, b = S.clip(a), S.clip(b)
     if b - a < 2:
@@ -155,20 +162,25 @@ def burst_onset(S, a, b, prefer="last", closure_db=6.0, min_trn=3.0):
             pk = i + int(np.argmax(S.trn[i:j + 1]))
             before = np.median(S.Ls[max(0, pk - MS(18)):max(1, pk - MS(2))])
             after = S.Ls[pk:min(S.T, pk + MS(16))].max()
-            if after - before >= closure_db:
+            voiced_closure = False
+            if hb_db is not None and after - before < closure_db:
+                hb = S.Ls + S.hi                                       # level above 4 kHz
+                pre = slice(max(0, pk - MS(18)), max(1, pk - MS(2)))
+                voiced_closure = (hb[pk:min(S.T, pk + MS(16))].max() - np.median(hb[pre]) >= hb_db
+                                  and np.median(S.per[pre]) >= 0.4)    # a voice bar is voicing (periodic)
+            if after - before >= closure_db or voiced_closure:
                 lo = max(0, pk - MS(10))
                 on = next((q for q in range(lo, pk + 1) if S.trn[q] >= max(2.0, 0.25 * S.trn[pk])), pk)
-                cands.append((on, S.trn[pk]))
+                cands.append((on, S.trn[pk], voiced_closure))
             i = j + 1
         else:
             i += 1
     if not cands:
         return None
-    if prefer == "last":
-        return cands[-1][0]
-    if prefer == "first":
-        return cands[0][0]
-    return max(cands, key=lambda c: c[1])[0]
+    c = cands[-1] if prefer == "last" else cands[0] if prefer == "first" else max(cands, key=lambda c: c[1])
+    if info is not None:
+        info["voiced"] = c[2]
+    return c[0]
 
 
 def voicing_onset(S, pb, lim):
@@ -541,19 +553,70 @@ class Clip:
             blim = min(lim, i_end + MS(win))
             if "P1b100" in RULES and k + 1 < self.n:                    # never into the next word's letters
                 blim = min(blim, self.lex["first"][k + 1] - MS(20))
+            binfo = {}
             bu = burst_onset(S, i_end, blim, prefer="first",
-                             min_trn=2.0 if "P1bt2" in RULES else 3.0)  # weak releases count
+                             min_trn=2.0 if "P1bt2" in RULES else 3.0,   # weak releases count
+                             hb_db=12.0 if "P1bv" in RULES else None, info=binfo)   # voiced closures (P1bv)
             wpk = S.Ls[self.idx(self.s[k]):i_end + 1].max()
             if bu is not None and "P1b100" in RULES and                     S.Ls[S.clip(bu + MS(30)):S.clip(bu + MS(50))].max() > S.Ls[bu:S.clip(bu + MS(12))].max():
                 bu = None                                  # it grows into a vowel: the next word's onset, not a release
             if bu is not None and S.Ls[bu:bu + MS(20)].max() >= wpk - 30.0:   # an audible release
                 resid = S.Ls[bu:min(lim, bu + MS(200))].min()
                 j = bu + MS(6)
+                if binfo.get("voiced"):
+                    # P1bv, after a voiced closure: the release lasts while it is audible (>= p99 - 40 dB and
+                    # over the residual) or still fricated (zcr >= 0.15 over floor + 6), <= 200 ms
+                    p99 = float(np.percentile(S.L, 99))
+                    while j < min(lim, bu + MS(200)) and (
+                            (S.Ls[j] >= max(p99 - 40.0, resid + BG_DB))
+                            or (S.zcr[j] >= 0.15 and S.Ls[j] >= S.floor[j] + BG_DB)):
+                        j += 1
+                    self.note(k, "P1 voiced release", end=j, burst=bu)
+                    return j
                 while j < min(lim, bu + MS(80)) and S.Ls[j] >= resid + BG_DB:
                     j += 1
                 self.note(k, "P1 release", end=j, burst=bu)
                 return j
+            if "P1f" in RULES:
+                t = self.fricated_release(k, i_end, lim)
+                if t is not None:
+                    return t
         return None
+
+    def fricated_release(self, k, i_end, lim):
+        """P1f: a stop released as FRICATION with no closure (wasn't H: the nasal runs straight into 100 ms of /s/-like
+        noise): frication (10 ms zcr >= 0.3, >= -10 dB above 4 kHz, floor + 10) that starts within 30 ms of the coarse
+        end, within 30 ms of the word's last voiced frame and within 10 ms of where that voicing stops (the stop devoices
+        straight into its noise; a breath or hiss after a pause starts later), with no gap between, runs on until it
+        dies (zcr under half its level or under floor + 6), <= 200 ms, never into the next word's letters.
+        wasn't H -126 -> -16 ms; dev +0.11 s, 049 / ear unchanged (without the voicing-offset test: 049 -0.04 s)."""
+        S = self.S
+        p99 = float(np.percentile(S.L, 99))
+        bound = lim if k + 1 >= self.n else min(lim, self.lex["first"][k + 1] - MS(20))
+        zs, hs = _box(S.zcr, MS(10)), _box(S.hi, MS(10))
+        f = next((q for q in range(max(0, i_end - MS(10)), min(bound, i_end + MS(30)))
+                  if zs[q] >= 0.3 and hs[q] >= -10.0 and S.Ls[q] >= S.floor[q] + 10.0), None)
+        if f is None or (f > i_end and (S.Ls[i_end:f + 1] - S.floor[i_end:f + 1]).min() < 10.0):
+            return None
+        v = f
+        while v > max(0, f - MS(30)) and not (S.per[v] >= 0.5 and S.Ls[v] >= p99 - 35.0):
+            v -= 1
+        if not (S.per[v] >= 0.5 and S.Ls[v] >= p99 - 35.0):
+            return None                                        # not straight out of the word's voicing
+        off = v                                                # the voicing stops where the frication starts:
+        pm = _box(S.per, MS(6))                                # the stop devoices straight into its release noise
+        while off < f + MS(20) and pm[off] >= 0.3:
+            off += 1
+        if abs(off - f) > MS(10):
+            return None
+        zref = float(np.median(zs[f:f + MS(20)]))
+        j = f
+        while j < min(bound, f + MS(200)) and zs[j] >= max(0.15, 0.5 * zref) and S.Ls[j] >= S.floor[j] + 6.0:
+            j += 1
+        if j <= i_end or j >= min(bound, f + MS(200)):
+            return None                                        # it must die (a release, not a breath running on)
+        self.note(k, "P1 fricated release", end=j, onset=f)
+        return j
 
     def breath_split(self, k):
         """J4b (candidate): vowel / nasal > fricative joined by the coarse stage, where the fricative's OWN onset (walked
