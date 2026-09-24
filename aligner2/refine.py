@@ -41,6 +41,9 @@ Continuous joins (the coarse stage found no pause):
   J8m nasal > vowel where J8's class references fail (34 dev + held-out joins, coarse cut late +14..+19 ms by ear):
       the vowel starts at the release of the nasal murmur found near the cut (low-band share or high band leaves it).
       Ear: 049 accepted +3 / rejected -1, 026 rejected -1; gold +0.02 s.
+  J4w when J4 finds no transition because the letters lag into the fricative (i|said H: word k's last-letter peak
+      inside the /s/, so the window holds no vowel), retry with the window reaching 60 ms further back. Gold +0.24 s,
+      ear +106 ms, nothing worse.
   J4h J4 also before an ASPIRATED h (>= 20 ms of noise before the next word's first letter: where|he); an h that is
       voiced or dropped (functioning|had, we|have) keeps the coarse cut. Ear +49 ms, gold +0.07 s.
   J4l J4 also after a LIQUID (for|sure, your|friends, or|something): the fricative starts at its frication onset.
@@ -108,7 +111,7 @@ CLASS = {**{p: "V" for p in VOWELS}, **{p: "stop" for p in ("P", "B", "T", "D", 
 BG_DB = 6.0                                   # a released stop's tail: until within 6 dB of the residual level
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
 RULES = {"F2", "J0", "J1", "J1n", "J1m", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "P3", "E1", "E2",
-         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe", "J4l", "J8m", "J4h"}   # enabled
+         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe", "J4l", "J8m", "J4h", "J4w"}   # enabled
 # (aligner2/local_bench.py --rules J1,J4,... for ablations)
 
 
@@ -437,6 +440,11 @@ class Clip:
                 if t is not None:
                     self.note(k, f"J4 {name}", cut=t)
                     break
+            if t is None and "J4w" in RULES:              # J4w: the letters lag into the fricative (i|said:
+                a2 = max(lo_lim, a - MS(60))             # word k's last-letter peak inside the /s/): the window
+                t = transition(S, cA, cB, a2, cut, b, 0.2, ("zcr", "hi"))    # must reach back to the vowel
+                if t is not None:
+                    self.note(k, "J4w onset", cut=t)
         if cA == "fric" and cB in ("V", "gl") and "J5" in RULES:                  # J5
             for name, q, feats in (("crossfade", 0.5, ("zcr", "hi")), ("joint", 0.5, None)):
                 t = transition(S, cA, cB, a, cut, b, q, feats)
