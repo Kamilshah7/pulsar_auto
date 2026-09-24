@@ -19,6 +19,7 @@ from aligner2.signals import clip_key
 BASE = {"min_pause": 0.03, "pause_model": "word_ref", "lam": 1000.0, "cont_model": "class", "radius_ms": 20,
         "onset_ms": 10, "ref_mode": "word", "theta_db": 20.0, "clip_anchor_ms": 150}                     # v11
 GRID = [dict(BASE, unit="letter4", radius_ms=10, soft=sm) for sm in ("off", "wild", "wild+cut")]
+GRID += [dict(BASE, unit="letter4", radius_ms=10, soft="off", refine=True)]     # + the rule stage (aligner2/refine.py)
 SETS = ("009", "026", "049", "old14")
 
 

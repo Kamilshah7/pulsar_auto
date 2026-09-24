@@ -1,36 +1,44 @@
 """
-aligner2 boundary rules: moves each word boundary from the coarse aligner (v16) onto the acoustic landmark
-that human reviewers use for that kind of junction. No training, no fitted parameters: every rule is a
-phonetic definition read from the boundary-by-boundary study in bench/cache/aligner2/fullread/NOTES.md
-(sets 009 and 026; 'H' = a boundary a reviewer moved by hand).
+aligner2 rule stage: moves each word boundary from the coarse aligner (segment.py, the v16 setting) onto the
+acoustic landmark reviewers use for that kind of junction. No training and no fitted parameters: each rule is
+a phonetic definition taken from the boundary-by-boundary study (bench/cache/aligner2/fullread/NOTES.md, sets
+009 and 026; 'H' = a boundary a reviewer moved by hand), checked on those dev sets with aligner2/landmark_eval.py
+(a few candidate definitions per junction kind, the one reviewers use kept) and scored with
+aligner2/local_bench.py. Set 049 is held out.
 
-The junction kind comes from the last phone of word k (A) and the first phone of word k+1 (B), in ARPAbet.
-Positions are found in the signals on the 2 ms grid (aligner2/signals.py). Levels are always taken
-RELATIVE to the recording (the two phones' own steady states, the local background), never absolute.
+Search region. The boundary between word k and k+1 lies between word k's last-letter peak and word k+1's first-
+letter peak of the HuBERT CTC letters (97% of the dev joins within +-10 ms, 99% within +-20 ms). Rules look for
+their landmark there; the junction kind is (last phone of word k) > (first phone of word k+1), ARPAbet classes.
+Levels are relative (the two phones' own most typical 10 ms, the local floor), never absolute.
 
-Continuous joins (no pause between the words):
-  J1 released stop  -> vowel-initial word: the release belongs to word k; cut at the VOICING ONSET of B =
-     halfway up the loudness rise into the vowel            (good|a-, and|if, write|about, book|is: H)
-  J2 vowel/sonorant -> voiced stop/affricate (B D G JH): cut at the BURST ONSET; the voice bar belongs to
-     word k                                                  (they've|been, they've|done, cutting|jerome: H)
-  J3 vowel/sonorant -> voiceless stop/affricate (P T K CH): word k ends at its decay KNEE (end of voicing),
-     word k+1 starts at its BURST ONSET; the silent closure is left unassigned (you're|preseason: H)
-  J4 sonorant -> fricative: frication crossover = halfway through the sonorant->fricative change
-     (compromise between the 009 reviewer's frication onset and the 026 reviewer's plateau start)
-  J5 fricative -> sonorant: CROSSFADE MIDPOINT (situations|and, drive|so, his|ability, next|one: H); a vowel-
-     initial word with a glottal attack is cut at the attack (is|at)
-  J6 fricative -> fricative: the loudness minimum between them (is|they've, teens|the, was|the)
-  J7 vowel -> nasal: END of the nasal-onset transition (think|more, my|mother: H)
-  J8 nasal -> vowel-initial word: the glottal attack when there is one (leading|up: H, woman|i), else the
-     middle of the nasal-release ramp (thing|about: H)
-  J9 vowel -> glide/liquid: the constriction maximum (loudness / high-band minimum; the|real: H, R4)
-  J10 everything else: the midpoint of the joint spectral change between the two phones' steady states
-Pause edges (a silence between the words):
-  P1 word end: where its decay reaches the local background + 6 dB (walk.end, howard.end, first.end: H);
-     releases and aspiration are kept (R2); an event after a dip toward the background (breath, click, hum,
-     laugh) is not the word's (R3)
-  P2 word start: where the rise into the word leaves the background + 6 dB, skipping separate events
-     before it (R3); a stop-initial word starts at its burst onset (R8)
+Continuous joins (the coarse stage found no pause):
+  J1  stop > vowel-initial word: the release belongs to word k; cut where the spectrum is halfway from the
+      release to the vowel (voicing onset; good|a-, and|if, write|about, book|is: H). Unreleased / glottal stop:
+      the re-onset after the loudness dip.
+  J4  vowel or nasal > fricative: frication onset (20% of the zcr / high-band change); else the middle of the
+      loudness fall; else 20% of the joint change. (The 009 reviewer's convention; the 026 reviewer cuts later,
+      at the steady-frication start.)
+  J5  fricative > vowel or glide: crossfade midpoint (situations|and, drive|so, his|ability, next|one: H).
+  J6  stop > fricative: frication crossover (50% of the zcr / high-band change between the letter peaks).
+  J7  vowel > nasal: END of the nasal-onset transition (80% of the low-band / centroid change; think|more,
+      my|mother: H).
+  J8  nasal > vowel: middle of the nasal-release ramp (thing|about: H).
+  J9  vowel > vowel / glide / liquid, liquid > glide: no reliable acoustic landmark -> the midpoint of the two
+      letter peaks (V-V dev MAE 30 -> 20 ms); liquid > vowel: the middle of the loudness rise, else the midpoint.
+  J10 stop > glide / nasal, liquid > stop: the midpoint of the joint change between the two phones.
+  J12 vowel / stop > stop: the letter-peak midpoint (mid-closure; homorganic pairs share one closure).
+  Other junctions keep the coarse cut.
+Pause edges (the coarse stage found a pause):
+  P1  word end: kept unless (a) a SEPARATE EVENT follows the word's last letter across a real gap (breath, hum,
+      laugh, click; R3) -> end at the gap; (d) a sonorant-final word runs into a long hiss with no CTC letters
+      (a breath) -> end where the hiss starts; F1 a final fricative still sounding at the coarse end runs on
+      until the frication dies (R7; H convention -- the old accepted golds cut fricatives ~15 ms earlier);
+      (b) a final stop's release burst right after the coarse end is kept (R2).
+  P2  word start: kept unless a separate event precedes the word across a real gap -> start out of the gap.
+  E1  first word: rises out of the last real gap before its first letter; no gap = the clip cuts into running
+      speech -> the clip start.
+  E2  last word: P1 against the clip end; a clip that cuts off running speech -> the clip end.
+Real gap: >= 8 dB under the word, within 30 dB of the local floor, >= 16 ms wide (6 dB band).
 """
 import numpy as np
 
@@ -40,12 +48,10 @@ VOWELS = set("AA AE AH AO AW AY EH ER EY IH IY OW OY UH UW".split())
 CLASS = {**{p: "V" for p in VOWELS}, **{p: "stop" for p in ("P", "B", "T", "D", "K", "G")},
          **{p: "aff" for p in ("CH", "JH")}, **{p: "fric" for p in ("F", "V", "TH", "DH", "S", "Z", "SH", "ZH")},
          "HH": "h", **{p: "nas" for p in ("M", "N", "NG")}, "L": "liq", "R": "liq", "W": "gl", "Y": "gl"}
-VOICELESS = {"P", "T", "K", "CH", "F", "TH", "S", "SH", "HH"}
-SONORANT = {"V", "nas", "liq", "gl"}
-BG_DB = 6.0                                   # pause edges: background + 6 dB (read from the H pause ends)
+BG_DB = 6.0                                   # a released stop's tail: until within 6 dB of the residual level
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
-J0_DB, J0_MS = 8, 40
-RULES = {"J1", "J4", "J5", "J6", "J7", "J8", "J9", "P1d", "P1", "P2", "E1", "E2", "F1"}                    # enabled rules (aligner2/local_bench.py --rules for ablations)
+RULES = {"J1", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "E1", "E2"}   # enabled
+# (aligner2/local_bench.py --rules J1,J4,... for ablations)
 
 
 def first_phone(arpa):
@@ -60,11 +66,6 @@ def last_phone(arpa):
 
 def pclass(ph):
     return CLASS.get(ph, "?") if ph else "?"
-
-
-def _runs(mask):
-    d = np.diff(np.r_[0, mask.astype(int), 0])
-    return list(zip(np.where(d == 1)[0], np.where(d == -1)[0]))
 
 
 def _box(x, n):
@@ -130,14 +131,6 @@ def burst_onset(S, a, b, prefer="last", closure_db=6.0):
     return max(cands, key=lambda c: c[1])[0]
 
 
-def after_burst(S, pb):
-    """first frame after a burst onset where the burst's own loudness rise is over"""
-    i = pb
-    while i < min(S.T - 1, pb + MS(20)) and S.slope[i] >= RISE_DB / 2:
-        i += 1
-    return max(i, pb + MS(4))
-
-
 def voicing_onset(S, pb, lim):
     """after a release at pb: where the spectrum is halfway from the release (its first 6 ms) to the vowel
     (the most periodic 10 ms within 10-60 ms after the release) -- low-band share, centroid, zcr, periodicity"""
@@ -171,37 +164,6 @@ def first_rise(S, a, b, min_db=3.0):
     half = (S.Ls[i0] + top) / 2
     for i in range(i0, min(S.T, k + MS(20))):
         if S.Ls[i] >= half:
-            return i
-    return k
-
-
-def rise_mid(S, a, b):
-    """halfway up the steepest loudness rise in [a, b): between the minimum before it and the top after it"""
-    a, b = S.clip(a), S.clip(b)
-    if b - a < 3:
-        return None
-    k = a + int(np.argmax(S.slope[a:b]))
-    lo_i = max(a - MS(10), k - MS(20)); hi_i = min(S.T, k + MS(20))
-    bot = S.Ls[lo_i:k + 1].min(); top = S.Ls[k:hi_i].max()
-    half = (bot + top) / 2
-    i0 = lo_i + int(np.argmin(S.Ls[lo_i:k + 1]))
-    for i in range(i0, hi_i):
-        if S.Ls[i] >= half:
-            return i
-    return k
-
-
-def fall_knee(S, a, b):
-    """end of a steep decay in [a, b): after the steepest fall, the first frame where the loudness has come
-    down 90% of the way from the level before the fall to the level at the end of the window"""
-    a, b = S.clip(a), S.clip(b)
-    if b - a < 3:
-        return None
-    k = a + int(np.argmin(S.slope[a:b]))
-    top = S.Ls[max(0, k - MS(12)):k + 1].max(); bot = S.Ls[k:b].min()
-    lvl = top - 0.9 * (top - bot)
-    for i in range(k, b):
-        if S.Ls[i] <= lvl:
             return i
     return k
 
@@ -308,7 +270,7 @@ def peak_transition(S, pa, pb, q, feats=None):
 
 
 # ── lexical region: the boundary lies between word k's last-letter peak and word k+1's first-letter peak ──
-def lexical_peaks(z, texts):
+def lexical_peaks(z, texts, device=None):
     """HuBERT CTC letters (4 frame phases averaged, aligner2/lexical.py): per token the 2 ms-grid index of its
     first / last letter's posterior peak. Read on 009 + 026: 97% of the gold joins lie between word k's
     last-letter peak and word k+1's first-letter peak (+-10 ms), 99% within +-20 ms."""
@@ -316,7 +278,7 @@ def lexical_peaks(z, texts):
     T = len(z["loudness"])
     views = [(z["ctc_logp"], lexical.FRAME_OFF)]
     views += [(z[f"ctc_logp_s{sh}"], lexical.FRAME_OFF + sh / 16000) for sh in (80, 160, 240) if f"ctc_logp_s{sh}" in z]
-    outs = [lexical.boundary_priors(lp.astype(float), texts, T, HOP, None, frame_off=off) for lp, off in views]
+    outs = [lexical.boundary_priors(lp.astype(float), texts, T, HOP, device, frame_off=off) for lp, off in views]
     n = len(texts)
     first = [int(np.argmax(np.mean([o[5]["first"][k] for o in outs], 0))) for k in range(n)]
     last = [int(np.argmax(np.mean([o[5]["last"][k] for o in outs], 0))) for k in range(n)]
@@ -325,9 +287,9 @@ def lexical_peaks(z, texts):
 
 # ── the rules ────────────────────────────────────────────────────────────────────────────────────────────
 class Clip:
-    def __init__(self, z, texts, arpa, coarse, lex=None):
+    def __init__(self, z, texts, arpa, coarse, lex=None, device=None):
         self.S = Sig(z)
-        self.lex = lex if lex is not None else lexical_peaks(z, texts)
+        self.lex = lex if lex is not None else lexical_peaks(z, texts, device)
         self.texts, self.arpa = texts, arpa
         self.n = len(texts)
         self.e = [c["end"] for c in coarse]
@@ -337,14 +299,8 @@ class Clip:
     def idx(self, t):
         return self.S.clip(int(round(t / HOP)))
 
-    def refs(self, cut, lo_lim, hi_lim):
-        """reference windows for phone A (before the cut) and phone B (after it)"""
-        ra = (max(lo_lim, cut - MS(35)), max(lo_lim + 1, cut - MS(15)))
-        rb = (min(hi_lim - 1, cut + MS(15)), min(hi_lim, cut + MS(35)))
-        return ra, rb
-
     def join(self, k):
-        """continuous join k|k+1 -> (end_k, start_k+1) in seconds"""
+        """continuous join k|k+1 -> the cut (2 ms grid index) or None to keep the coarse cut"""
         S = self.S
         cut = self.idx((self.e[k] + self.s[k + 1]) / 2)
         lo_lim = self.idx(self.s[k]) + MS(10)                       # stay inside the two words
@@ -355,15 +311,7 @@ class Clip:
             return None
         A, B = last_phone(self.arpa[k]), first_phone(self.arpa[k + 1])
         cA, cB = pclass(A), pclass(B)
-        ra, rb = self.refs(cut, lo_lim, hi_lim)
         t = None
-        if cA not in ("stop", "aff") and cB not in ("stop", "aff") and "J0" in RULES:   # J0: a missed pause
-            quiet = S.Ls[a:b] <= S.floor[a:b] + J0_DB
-            runs = [(a + r0, a + r1) for r0, r1 in _runs(quiet) if r1 - r0 >= MS(J0_MS)]
-            if runs:
-                r0, r1 = max(runs, key=lambda r: r[1] - r[0])
-                self.note(k, "J0 silence", end=r0, start=r1)
-                return r0, r1
         if cA == "stop" and cB == "V" and "J1" in RULES:                         # J1
             bu = burst_onset(S, a, b, prefer="max")
             if bu is not None:                            # released: voicing onset after the release
@@ -379,7 +327,7 @@ class Clip:
                 if t is not None:
                     self.note(k, f"J4 {name}", cut=t)
                     break
-        if cA == "fric" and cB == "V" and "J5" in RULES:                          # J5
+        if cA == "fric" and cB in ("V", "gl") and "J5" in RULES:                  # J5
             for name, q, feats in (("crossfade", 0.5, ("zcr", "hi")), ("joint", 0.5, None)):
                 t = transition(S, cA, cB, a, cut, b, q, feats)
                 if t is not None:
@@ -411,19 +359,21 @@ class Clip:
             if pb_ > pa_:                                                          # J9: no acoustic landmark
                 t = (pa_ + pb_) // 2
                 self.note(k, "J9 letter-midpoint", cut=t)
-        return (t, t) if t is not None else None
+        if cA == "stop" and cB in ("gl", "nas") and "J10" in RULES:              # J10: release into a sonorant
+            t = transition(S, cA, cB, a, cut, b, 0.5)
+            if t is not None:
+                self.note(k, "J10 release-mid", cut=t)
+        if cA == "liq" and cB == "stop" and "J10" in RULES:
+            t = transition(S, cA, cB, a, cut, b, 0.5)
+            if t is not None:
+                self.note(k, "J10 closure-mid", cut=t)
+        if cB == "stop" and cA in ("stop", "V") and "J12" in RULES and pb_ > pa_:  # J12: mid-closure
+            t = (pa_ + pb_) // 2
+            self.note(k, "J12 letter-midpoint", cut=t)
+        return t
 
     def note(self, k, rule, **marks):
         self.trace[k] = rule + " " + " ".join(f"{n}={v * HOP:.3f}" if v is not None else f"{n}=-" for n, v in marks.items())
-
-    def background(self, i0, i1):
-        """the quiet level of a pause [i0, i1): 10th percentile of the 10 ms loudness (the quietest 25 ms if short)"""
-        S = self.S
-        i0, i1 = S.clip(i0), S.clip(i1)
-        if i1 - i0 >= MS(40):
-            return float(np.percentile(S.Ls[i0:i1], 10))
-        c = (i0 + i1) // 2
-        return float(S.Ls[S.clip(c - MS(12)):S.clip(c + MS(13)) + 1].min())
 
     def pause_end(self, k, nxt):
         """P1 (word k before a pause): the coarse end is kept unless
@@ -441,7 +391,7 @@ class Clip:
         stop_final = pclass(last_phone(self.arpa[k])) == "stop"
         fric_final = pclass(last_phone(self.arpa[k])) in ("fric", "aff")
         lo = max(self.lex["last"][k], self.idx(self.s[k]) + MS(20))
-        if i_end - lo >= MS(30) and last_phone(self.arpa[k]):              # not for '(())' / wildcards                                             # (a) separate event
+        if i_end - lo >= MS(30) and last_phone(self.arpa[k]):     # (a) a separate event; not for '(())' / wildcards
             M = m = S.Ls[lo]; ti = lo
             for i in range(lo, i_end + 1):
                 x = S.Ls[i]
@@ -610,13 +560,9 @@ class Clip:
         e, s = list(self.e), list(self.s)
         for k in range(self.n - 1):
             if self.s[k + 1] - self.e[k] <= 0.005:
-                r = self.join(k)
-                if r is not None:
-                    t0, t1 = r
-                    if t1 > t0:                                   # J0: a pause inside the join
-                        e[k], s[k + 1] = t0 * HOP, t1 * HOP
-                    else:
-                        e[k], s[k + 1] = t0 * HOP - 0.001, t1 * HOP + 0.001
+                t = self.join(k)
+                if t is not None:                                 # the gold convention: end = cut - 1 ms,
+                    e[k], s[k + 1] = t * HOP - 0.001, t * HOP + 0.001      # start = cut + 1 ms
             else:
                 r = self.pause_end(k, self.s[k + 1]) if "P1" in RULES else None
                 if r is not None:
@@ -641,11 +587,11 @@ class Clip:
         return out
 
 
-def refine(z, texts, arpa, coarse, trace=None, lex=None):
-    """z: signals dict (aligner2/signals.py), texts: tokens, arpa: per-token ARPAbet strings, coarse: v16
-    [{start, end}] -> refined [{start, end}]; trace: optional dict filled with {boundary k: rule + landmarks};
-    lex: precomputed lexical_peaks(z, texts)"""
-    c = Clip(z, texts, arpa, coarse, lex)
+def refine(z, texts, arpa, coarse, trace=None, lex=None, device=None):
+    """z: signals dict (aligner2/signals.py), texts: tokens, arpa: per-token ARPAbet strings (fc_align), coarse:
+    the coarse [{start, end}] -> refined [{start, end}]. trace: optional dict filled with {boundary k: rule and
+    landmarks}; lex: precomputed lexical_peaks(z, texts); device: 'cuda' for the lexical forward-backward"""
+    c = Clip(z, texts, arpa, coarse, lex, device)
     out = c.run()
     if trace is not None:
         trace.update(c.trace)

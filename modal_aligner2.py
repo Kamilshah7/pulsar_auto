@@ -119,9 +119,9 @@ class Engine:
     def code_version(self) -> str:
         """hash of the aligner code this container actually runs (the client checks it matches local)"""
         import hashlib
-        from aligner2 import fc_align, lexical, phones, segment, signals
+        from aligner2 import fc_align, lexical, phones, refine, segment, signals
         h = hashlib.sha1()
-        for m in (signals, lexical, segment, phones, fc_align):   # the files actually imported
+        for m in (signals, lexical, segment, phones, fc_align, refine):   # the files actually imported
             h.update(open(m.__file__, "rb").read())
         return h.hexdigest() + " @ " + os.path.dirname(segment.__file__)
 
@@ -157,5 +157,11 @@ class Engine:
                                                phone_units=[[-1] if s_ else u for u, s_ in zip(units, soft)],
                                                phone_strs=["*" if s_ else x for x, s_ in zip(strs, soft)],
                                                fc_ids=[[-1] if s_ else f for f, s_ in zip(fc_ids, soft)])
-        return {"key": key, "preds": [segment.align_two_pass(preps, texts, **g) for g in grid],
-                "phones": strs, "arpabet": fc_strs}
+        from aligner2 import refine
+        preds = []
+        for g in grid:
+            g = dict(g)
+            rules = g.pop("refine", False)                      # the rule stage (aligner2/refine.py) on top
+            p = segment.align_two_pass(preps, texts, **g)
+            preds.append(refine.refine(z, texts, fc_strs, p, device="cuda") if rules else p)
+        return {"key": key, "preds": preds, "phones": strs, "arpabet": fc_strs}

@@ -23,7 +23,7 @@ STAMP = os.path.join(ROOT, "bench", "cache", "aligner2", "deployed.sha")
 _OBJ = None
 PHONES = {}                       # key -> per-token phone strings from the last align_many
 ARPA = {}                         # key -> per-token ARPAbet strings (charsiu) from the last align_many
-REMOTE_FILES = ("signals.py", "lexical.py", "segment.py", "phones.py", "fc_align.py")   # the code the GPU engine runs
+REMOTE_FILES = ("signals.py", "lexical.py", "segment.py", "phones.py", "fc_align.py", "refine.py")   # the engine's code
 
 
 def _source_hash():

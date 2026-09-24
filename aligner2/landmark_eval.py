@@ -41,6 +41,8 @@ def candidates(S, pa, pb, cut, pair):
         for q, i in transition_marks(S, pa, pb, feats).items():
             c[f"{name}_{q}"] = i
     cA, cB = pair.split(">")
+    if "?" in (cA, cB):
+        return c
     for q in (0.2, 0.5, 0.8):
         for name, feats in (("self", None), ("self_zh", ("zcr", "hi")), ("self_loud", ("Ls",)), ("self_lo", ("lo", "cent"))):
             i = R.transition(S, cA, cB, a, cut, b, q, feats)
@@ -60,7 +62,8 @@ def candidates(S, pa, pb, cut, pair):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("pair"); ap.add_argument("--cascade", action="append", default=[])
-    ap.add_argument("--top", type=int, default=15); args = ap.parse_args()
+    ap.add_argument("--top", type=int, default=15); ap.add_argument("--b-phone"); ap.add_argument("--a-phone")
+    args = ap.parse_args()
     res = collections.defaultdict(list); rows = []
     for c, z, ar, coarse, lx in clip_inputs(("009", "026")):
         S = R.Sig(z); toks = c["tokens"]
@@ -68,12 +71,28 @@ def main():
             if toks[k + 1]["start"] - toks[k]["end"] > 0.005:
                 continue
             pair = f"{R.pclass(R.last_phone(ar[k]))}>{R.pclass(R.first_phone(ar[k + 1]))}"
-            if pair != args.pair:
+            if args.pair != "*" and pair != args.pair:
+                continue
+            if args.b_phone and R.first_phone(ar[k + 1]) != args.b_phone:
+                continue
+            if args.a_phone and R.last_phone(ar[k]) != args.a_phone:
                 continue
             g = (toks[k]["end"] + toks[k + 1]["start"]) / 2
             cut = int(round((coarse[k]["end"] + coarse[k + 1]["start"]) / 2 / HOP))
             h = toks[k]["end_human"] or toks[k + 1]["start_human"]
             cd = candidates(S, lx["last"][k], lx["first"][k + 1], cut, pair)
+            a_, b_ = S.clip(min(lx["last"][k], cut) - MS(10)), S.clip(max(lx["first"][k + 1], cut) + MS(10))
+            mid = (lx["last"][k] + lx["first"][k + 1]) // 2
+            for r in (10, 20):
+                w0, w1 = S.clip(mid - MS(r)), S.clip(mid + MS(r))
+                if w1 > w0 + 2:
+                    cd[f"mid_loudmin{r}"] = w0 + int(np.argmin(S.Ls[w0:w1]))
+                    cd[f"mid_himin{r}"] = w0 + int(np.argmin(S.hi[w0:w1]))
+                    cd[f"mid_glo{r}"] = w0 + int(np.argmax(S.glottal[w0:w1]))
+            if b_ > a_ + 2:
+                cd["hi_min_region"] = a_ + int(np.argmin(S.hi[a_:b_]))
+                lm = a_ + int(np.argmin(S.Ls[a_:b_]))
+                cd["loud_min_region"] = lm
             rows.append((c["set"], h, g, cd))
             for name, i in cd.items():
                 res[name].append((c["set"], h, (i * HOP - g) * 1000))
