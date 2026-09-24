@@ -415,7 +415,7 @@ class Clip:
                 self.note(k, "J9 letter-midpoint", cut=t)
         if cB == "V" and cA in GA_FROM and "J14" in RULES and pb_ > pa_:          # J14: glottal attack
             g = glottal_onset(S, pa_, pb_)
-            if g is not None:
+            if g is not None and g > pa_:                                          # not word k's own last letter
                 t = g
                 self.note(k, "J14 glottal-attack", cut=t)
         if cA == "stop" and cB in ("gl", "nas") and "J10" in RULES:              # J10: release into a sonorant

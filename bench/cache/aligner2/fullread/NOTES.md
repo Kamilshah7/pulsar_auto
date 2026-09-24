@@ -5471,3 +5471,44 @@ New or confirmed in 026-7:
    (president|of H, T elided); the system sits on SEP edges 18-26 ms early or late.
  - Pause ends: the accepted golds keep ending at the last glottal pulse or -22..-40 dB (to, who, um, uh: 15-45 ms early vs the floor-
    relative convention); first.end H again keeps a released T plus a voiced offglide to the end of voicing.
+
+## RULE-STAGE RESIDUAL STUDY (aligner2/refine.py, 2 ms reads of the remaining errors)
+Tools: aligner2/residuals.py (error by rule; --list worst; --show 2 ms table with G/S/N/L/F markers), aligner2/landmark_eval.py
+(candidate landmark definitions vs the gold, per junction class, all / H / per set). Dev = 009 + 026; 049 held out (scored at
+checkpoints; its worst cases spot-read only after the build, never used to pick among definitions except to REJECT one that failed).
+
+Root causes found, in order of size, and what was done:
+ 1. FALSE PAUSES inside running speech (v16 "pause" where the gold is continuous; the join rules never ran there).
+    a. Gaps < 100 ms that never come within 10 dB of the local floor are closures / voicing bars / frication, not pauses (non-silent
+       gaps: gold continuous 86 vs pause 33; silent gaps ~50/50). -> J0: treat as a join.
+    b. A weak word-initial F / TH / S sits AT the background level (the|field: 3-8 dB over the floor), so no loudness test sees it, and its
+       CTC letter lags to its end -> v16 calls it silence. Spectrally it is frication throughout the gap (10th pct zcr >= 0.2, >= -10 dB above
+       4 kHz). -> F2: the frication belongs to the fricative-initial word, continuous join. H golds agree every time (the|field, how|far,
+       any|fear, my|father, die|for, a|force, it's|fine); the old ACCEPTED golds leave the weak fricative out entirely (very|first, em|fill,
+       happen|first, a|fear, benefit|from: a 45 ms "gap" inside unbroken frication) -- an artifact of the aligner that produced them.
+ 2. JOINS INTO DH were placed at a frication onset that DH (almost no hiss) does not have (V>DH 24.3 ms). The gold sits 15-24 ms before the
+    DH's letter peak, at the constriction. -> J13: any sound > stop and > DH: the quietest frame within +-20 ms of the letter-peak midpoint
+    (V>DH 16.0, V>stop 17.0, fric>stop 11.1). After a nasal DH assimilates ("in the") and has no dip -> J4 stays there.
+    The "middle of the near-minimum stretch" variant gained 0.2 s on dev and lost 0.4 s on 049 -> rejected.
+ 3. V>V has no acoustic landmark except a HARD ONSET: a vowel-initial word often starts with a glottal stop (transient >= 8 dB after a
+    closure >= 10 dB quieter). The reviewers put the boundary exactly there (today|at H -5, i|and +3, know|i +1, law|and +3, uh|ailments 0).
+    -> J14 (after a vowel only: after nasals / liquids the release itself is a transient). The attack must start after word k's last-letter
+    peak (a spelled letter "p" put its own /p/ burst there on 049). 049: J14 joins 11.9 ms vs v16 48.8.
+    Everything else for V>V / V>glide / V>liquid stays at ~20 ms whatever the estimator: letter-peak midpoint 20.0, boundary-prior median
+    21.7, letter posterior edges 20.2, MFCC trajectory 32, MFCC / formant velocity 39-43, charsiu 10 ms phone edges 33.7 (errors weakly
+    correlated but charsiu is biased for glides). That is the resolution of the available evidence, not a rule defect.
+ 4. UNRELEASED FINAL T / D before a vowel ("dip" path, 67 joins, 11 ms late): /nd/ /nt/ lose the stop in running speech ("and", "find",
+    "want") -> the nasal > vowel rule; flapped / glottal stops -> the middle of the stop > vowel change.
+ 5. PAUSE EDGES: starts are already tight (median 5 ms); P3 = steepest rise within 30 ms (w5 36 -> 38%). Pause ENDS: median error 11 ms, but
+    half the error is 54 gross misses (partial words, laughs, fillers, coarse misplacements); no end definition beats v16 (fixed levels re
+    the word peak, the end of the fall, x% of the fall: all worse on the accepted golds; 65% of the fall is better on H only).
+ 6. MISSED PAUSES (gold pause, output continuous: 69 joins, 7.4 s): mostly NOT silent -- breath or hesitation noise fills them; floor-level
+    runs between the letters are rare and ambiguous (4 of 14 runs >= 40 ms are gold pauses). A quiet word next to a loud one also hides a
+    real pause from v16's word-relative test (yeah|so: "so" 25 dB under "yeah"). No principled rule found yet.
+ 7. CLIP START (049-08): a clicky silence after a previous speaker's tail failed the 16 ms-wide trough test (a deep narrow dip below the
+    floor) and the fallback called it running speech (-338 ms). Fixes: the trough band is measured from the background when the dip goes
+    below it; "running speech" needs the level to stay >= 6 dB over the floor all the way to the first letter.
+
+Scores (MAE ms; H = reviewer-moved boundaries):   v16 -> rules
+  dev 009+026   21.8 -> 17.5   H 28.9 -> 22.7
+  held-out 049  24.9 -> 19.9   H 28.7 -> 22.9
