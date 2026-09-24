@@ -45,7 +45,7 @@ SONORANT = {"V", "nas", "liq", "gl"}
 BG_DB = 6.0                                   # pause edges: background + 6 dB (read from the H pause ends)
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
 J0_DB, J0_MS = 8, 40
-RULES = {"J1", "J4", "J5", "J8", "P1", "P2", "E1", "E2", "F1"}                    # enabled rules (aligner2/local_bench.py --rules for ablations)
+RULES = {"J1", "J4", "J5", "J6", "J7", "J8", "J9", "P1d", "P1", "P2", "E1", "E2", "F1"}                    # enabled rules (aligner2/local_bench.py --rules for ablations)
 
 
 def first_phone(arpa):
@@ -297,6 +297,16 @@ def transition(S, clsA, clsB, a, cut, b, q, feats=None, vlA=False, vlB=False):
     return lo_ + i if i is not None else None
 
 
+def peak_transition(S, pa, pb, q, feats=None):
+    """frame where the joint change from the 10 ms around pa (word k's last-letter peak) to the 10 ms around
+    pb (word k+1's first-letter peak) has progressed a fraction q"""
+    if pb - pa < MS(12):
+        return None
+    p = progress(S, pa, pb, (pa - MS(5), pa + MS(5)), (pb - MS(5), pb + MS(5)), feats or FEATS)
+    i = crossing(p, q)
+    return pa + i if i is not None else None
+
+
 # ── lexical region: the boundary lies between word k's last-letter peak and word k+1's first-letter peak ──
 def lexical_peaks(z, texts):
     """HuBERT CTC letters (4 frame phases averaged, aligner2/lexical.py): per token the 2 ms-grid index of its
@@ -381,6 +391,26 @@ class Clip:
                 if t is not None:
                     self.note(k, f"J8 {name}", cut=t)
                     break
+        pa_, pb_ = self.lex["last"][k], self.lex["first"][k + 1]
+        if cA == "V" and cB == "nas" and "J7" in RULES:                           # J7
+            for name, q, feats in (("nasal-onset-end", 0.8, ("lo", "cent")), ("joint", 0.8, None)):
+                t = transition(S, cA, cB, a, cut, b, q, feats)
+                if t is not None:
+                    self.note(k, f"J7 {name}", cut=t)
+                    break
+        if cA == "stop" and cB == "fric" and "J6" in RULES:                       # J6
+            t = peak_transition(S, pa_, pb_, 0.5, ("zcr", "hi"))
+            if t is not None:
+                self.note(k, "J6 crossover", cut=t)
+        if cA == "liq" and cB == "V" and "J9" in RULES:                           # J9 (liquid -> vowel)
+            t = peak_transition(S, pa_, pb_, 0.5, ("Ls",))
+            if t is None and pb_ > pa_:
+                t = (pa_ + pb_) // 2
+            self.note(k, "J9 liq-rise", cut=t)
+        if ((cA == "V" and cB in ("V", "gl", "liq")) or (cA == "liq" and cB == "gl")) and "J9" in RULES:
+            if pb_ > pa_:                                                          # J9: no acoustic landmark
+                t = (pa_ + pb_) // 2
+                self.note(k, "J9 letter-midpoint", cut=t)
         return (t, t) if t is not None else None
 
     def note(self, k, rule, **marks):
@@ -434,22 +464,43 @@ class Clip:
                     ok = (t1 - t0 >= MS(16) and i + MS(30) <= i_end and above.all()
                           and m <= S.floor[ti] + 30.0                     # a real gap, not a dip inside speech
                           and body >= S.Ls[ev].max() - 15.0)             # the word's nucleus is before the gap
-                    if ok and stop_final and burst_onset(S, ti, i + MS(4)) is not None:
+                    # how long the event lasts, and whether the CTC hears letters in it
+                    ev_end = i
+                    while ev_end < i_end and S.Ls[ev_end] >= m + 6.0:
+                        ev_end += 1
+                    short = ev_end - i <= MS(100)
+                    lexical = float(np.mean(S.ctc_blank[i:ev_end + 1])) < 0.9
+                    if ok and stop_final and (short or lexical) and burst_onset(S, ti, i + MS(4)) is not None:
                         ok = False                                        # the final stop's release (R2)
-                    if ok and (fric_final or stop_final) and np.median(S.zcr[i:i + MS(40)]) >= 0.25:
+                    if ok and (fric_final or stop_final) and (short or lexical) and np.median(S.zcr[i:i + MS(40)]) >= 0.25:
                         ok = False                                        # the final fricative / affricated release
                     if ok:
                         self.note(k, "P1 event", end=t0, trough=ti)
                         return t0
                     m = x; ti = i                                  # keep the word's level M, look for a new trough
+        if not (fric_final or stop_final) and last_phone(self.arpa[k]) and "P1d" in RULES:
+            # (d) a sonorant-final word followed by a long hiss (>= 80 ms of frication with no CTC letters):
+            # a breath -> the word ends where the hiss starts
+            zs = _box(S.zcr, MS(10))
+            f = lo
+            while f < i_end - MS(80):
+                if zs[f] >= 0.2 and (zs[f:f + MS(80)] >= 0.2).mean() >= 0.9 and \
+                        float(np.mean(S.ctc_blank[f:f + MS(80)])) >= 0.9:
+                    self.note(k, "P1 hiss", end=f)
+                    return f
+                f += 1
         if fric_final and "F1" in RULES:                                       # (c) the final fricative runs on
             ref = slice(max(0, i_end - MS(20)), i_end)
             zr = float(np.median(S.zcr[ref]))
             if zr >= 0.25:
-                j = i_end
-                while j < min(lim, i_end + MS(200)) and S.zcr[j] >= max(0.15, 0.5 * zr) and S.Ls[j] >= S.floor[j] + 6.0:
-                    j += 1
-                if j > i_end:
+                bound = min(lim, i_end + MS(200))
+                if k + 1 < self.n:                          # never into the next word's letters
+                    bound = min(bound, self.lex["first"][k + 1] - MS(20))
+                j, low = i_end, S.Ls[i_end]
+                while j < bound and S.zcr[j] >= max(0.15, 0.5 * zr) and S.Ls[j] >= S.floor[j] + 6.0 \
+                        and S.Ls[j] <= low + 3.0:          # a decaying tail, not a new rise
+                    low = min(low, S.Ls[j]); j += 1
+                if j > i_end and j < bound:                 # it must die before the bound
                     self.note(k, "P1 fricative", end=j)
                     return j
         if stop_final:                                                         # (b) release after the coarse end
