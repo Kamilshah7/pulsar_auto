@@ -5700,3 +5700,12 @@ FRICATIVE-INITIAL PAUSE STARTS (27.0 -> 22.7 ms, v16 26.3; H 56.8 -> 52.6):
  about|things 78 ms are gold-continuous accepted joins); be|scooped H -135 and to|say -70 are coarse misplacements.
 PRODUCTION: the app's FastAPI endpoints are async; Modal refused its blocking starmap there, so every clip fell back
  to the old ForcedAligner (live log 2026-09-24 20:40). production.prefetch now runs the engine in a worker thread.
+FILLERS (this round): filler-token boundaries are 23-25 ms MAE (H 31-34) after v16 + rules; their H error (2.3 s) sits in ~6
+ gross cases with different causes (uh uh you: the 2nd uh inside the 1st's vowel, "you" spans a 62 ms silence and the
+ real 2nd uh where xlsr emits A/I; that uh but: H gives the 100 ms voiced B closure to "uh"; your uh opinion; and and uh).
+ xlsr espeak phones emit ONE vowel spike (ɐ 23, ʌ 7, ɑː 6, æ 5 of 60) near a filler's onset, blanks after, nothing for ~15.
+ Phone-anchored voiced islands (spike -> grow while audible + voiced): 67 / 108 ms vs 25 / 23 -- the island merges into
+ the neighbours in running speech. Sixth filler detector rejected. "No stop-free word spans a >= 50 ms silence": 7 dev
+ cases, only "you" is a misplacement (weak initial fricatives and lengthened nasals are legitimately under p99 - 40).
+STOP > V vs THE EAR: on 026's review items the "self" 20-50% transition lands on more accepted options (22 vs 18, rejected
+ 10 vs 14) but the H gold prefers J1 (H 17.0 vs 17.8): the ear and the editor disagree by a few ms -> kept J1.
