@@ -44,7 +44,7 @@ def candidates(S, pa, pb, cut, pair):
     cA, cB = pair.split(">")
     if "?" in (cA, cB):
         return c
-    for q in (0.2, 0.5, 0.8):
+    for q in (0.1, 0.2, 0.5, 0.8):
         for name, feats in (("self", None), ("self_zh", ("zcr", "hi")), ("self_z", ("zcr",)), ("self_loud", ("Ls",)),
                             ("self_lo", ("lo", "cent")), ("self_hi", ("hi",)), ("self_hilo", ("hi", "lo"))):
             i = R.transition(S, cA, cB, a, cut, b, q, feats)

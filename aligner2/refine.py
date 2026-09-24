@@ -37,6 +37,8 @@ Continuous joins (the coarse stage found no pause):
   J14 vowel > vowel-initial word with a HARD (glottal) onset: a >= 8 dB transient after a glottal closure (>= 10
       dB quieter before than after) between the two letter peaks -> its onset (today|at, i|and, know|i, law|and,
       uh|ailments: 0-5 ms). Only after a vowel: after a nasal / liquid the release itself is a transient.
+  Jthe "the" + consonant: the cut is the end of the reduced vowel (6 dB under its peak) -- the LISTENING convention;
+      the editor gold keeps "the" ~40 ms longer (Clip.the_end).
   Other junctions keep the coarse cut.
   J0  a short coarse "pause" (< 100 ms) that never comes within 10 dB of the local floor is not a pause: it is a
       closure, voicing bar or frication inside running speech (v16 splits weak word-initial fricatives, whose CTC
@@ -97,7 +99,7 @@ CLASS = {**{p: "V" for p in VOWELS}, **{p: "stop" for p in ("P", "B", "T", "D", 
 BG_DB = 6.0                                   # a released stop's tail: until within 6 dB of the residual level
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
 RULES = {"F2", "J0", "J1", "J1n", "J1m", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "P3", "E1", "E2",
-         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a"}   # enabled
+         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe"}   # enabled
 # (aligner2/local_bench.py --rules J1,J4,... for ablations)
 
 
@@ -381,6 +383,10 @@ class Clip:
         cA, cB = pclass(A), pclass(B)
         t = None
         pa_, pb_ = self.lex["last"][k], self.lex["first"][k + 1]
+        if "Jthe" in RULES and self.texts[k].strip().lower() == "the" and cB not in ("V", "?"):
+            t = self.the_end(k, cut, max(cut, pb_))
+            if t is not None:
+                return t
         if "J13" in RULES and (cB == "stop" or (B == "DH" and cA != "nas")) and cA != "?" \
                 and pb_ > pa_:     # J13: constriction
             m = (pa_ + pb_) // 2
@@ -645,6 +651,34 @@ class Clip:
             return None                                        # it must die (a release, not a breath running on)
         self.note(k, "P1 fricated release", end=j, onset=f)
         return j
+
+    def the_end(self, k, cut, lim):
+        """Jthe: "the" before a consonant is [DH AH]: the listening review ends it at the end of its reduced vowel
+        (026: 17 of 20 judged "the|C" cuts lay > 10 ms before ours, median -38 ms, none after; the user rejected the
+        editor gold's cut in most of them). After the vowel's loudness peak: the first frame 6 dB under the peak, else
+        where the high-band share falls 5 dB below the vowel's (lips / tongue closing), else a 3 dB loudness fall.
+        Ear (verify): accepted +1 on 026 / 049 / old14, rejected 59 -> 54 (026), 35 -> 34 (old14), manual MAE 23.0 ->
+        20.4 (026), 19.1 -> 16.3 (old14). The editor gold keeps "the" ~40 ms longer: gold -3.8 s (listening wins,
+        the user 2026-09-25)."""
+        S = self.S
+        s0 = self.idx(self.s[k])
+        if cut - s0 < MS(20):
+            return None
+        pk = s0 + int(np.argmax(S.Ls[s0:cut]))
+        hs = _box(S.hi, MS(6))
+        ref = float(np.median(hs[max(s0, pk - MS(10)):pk + MS(10)]))
+        q = next((i for i in range(pk, min(lim, S.T - 1)) if S.Ls[i] < S.Ls[pk] - 6.0), None)   # the vowel's end
+        how = "vowel-6dB"
+        if q is None:
+            q = next((i for i in range(pk, min(lim, S.T - 1)) if hs[i] < ref - 5.0), None)
+            how = "hi-fall"
+        if q is None:
+            q = next((i for i in range(pk, cut) if S.Ls[i] < S.Ls[pk] - 3.0), None)
+            how = "loud-fall"
+        if q is None:
+            return None
+        self.note(k, f"Jthe {how}", cut=q)
+        return q
 
     def breath_split(self, k):
         """J4b (candidate): vowel / nasal > fricative joined by the coarse stage, where the fricative's OWN onset (walked
