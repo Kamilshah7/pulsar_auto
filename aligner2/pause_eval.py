@@ -69,6 +69,21 @@ def candidates(S, clip, k, coarse, p99, nxt):
                     j = q; continue
             break
         c[f"aud{X}"] = max(i_end, j)
+    # R7 for any final phone: a frication tail sounding at / right after the coarse end runs on until it dies
+    zr = max(float(np.median(S.zcr[max(0, i_end - MS(20)):i_end])), float(np.median(S.zcr[i_end:i_end + MS(10)])))
+    if zr >= 0.25:
+        j, low = i_end, S.Ls[i_end]
+        while j < min(cap, i_end + MS(200)) and S.zcr[j] >= max(0.15, 0.5 * zr) and S.Ls[j] >= S.floor[j] + 6.0 \
+                and S.Ls[j] <= low + 3.0:
+            low = min(low, S.Ls[j]); j += 1
+        if j > i_end:
+            c["fric_run"] = j
+    # R6: a smooth voiced / breathy decay continuing from the coarse end ends near -40 dB re p99 (no re-rise, <= 150 ms)
+    for X in (38, 40, 43):
+        j, low = i_end, S.Ls[i_end]
+        while j < min(cap, i_end + MS(150)) and S.Ls[j] >= max(p99 - X, S.floor[j] + 6.0) and S.Ls[j] <= low + 3.0:
+            low = min(low, S.Ls[j]); j += 1
+        c[f"decay{X}"] = j
     # no release found: a fricated / aspirated tail right after the coarse end
     j = i_end
     while j < min(lim, i_end + MS(200)) and S.zcr[j] >= 0.2 and S.Ls[j] >= S.floor[j] + 6.0:

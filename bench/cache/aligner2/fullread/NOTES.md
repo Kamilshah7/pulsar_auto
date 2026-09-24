@@ -5656,3 +5656,13 @@ vowel / liquid version hurt -0.13 s), E1f foreign voiceless frication at the cli
 049 0), J4b breath split before a fricative (yeah|so -384 -> -7, i|thought H -70 -> -3; dev +0.21 s, 049 0). These are
 narrow and principled; 049 is unchanged by all three (no held-out gain, no loss).
 Scores (local == engine v20): dev 16.8 (H 20.9), 049 19.8 (H 23.0), all sets 18.9 (H 22.1).
+REJECTED IN THE NEXT ROUND (dev / 049 via rule_ab; tools kept in pause_eval.py / landmark_eval.py):
+ - F1x: R7 for any final phone (a hiss still sounding when the coarse end cuts a stop-final word runs on until it dies):
+   right in most cases (chest -53 -> -9, out -50 -> -24, overtake H -36 -> -18, a- H -32 -> -2) but the hiss at a late
+   coarse end is often a breath (like +180 -> +246): dev -0.05 s, 049 -0.04 s (also with the "hissing before the cut" guard).
+ - R6x: a smooth decay ends at -40 dB re p99: dev -0.61 s, 049 -0.37 s (the accepted golds end earlier; H mixed).
+ - High-band (F2/F3 proxy) transition midpoints for V>gl / V>liq / V>V: 24-32 ms vs the letter midpoint 20-22.
+ - Phone-CTC (xlsr) peak midpoints: worse for V>V / V>gl / V>liq / liq>V (30-40 ms), errors correlated 0.5-0.8 with the
+   letters' (averaging does not help); better only where rules already win (nas>V J8 11.8, stop>V J1 16.0).
+ - Fricative pause starts (rules 22.1 vs v16 19.4 on the audited gold): P3f (frication onset walked back from the
+   letter) dev -0.09 s / 049 -0.11 s; P3nf (no P3 for fricatives) dev +0.02 s / 049 -0.06 s.
