@@ -1,0 +1,97 @@
+"""
+Where do reviewers put a junction of a given class pair, relative to candidate landmark definitions?
+Dev sets only (009 + 026). For each continuous gold join of the pair, candidates are computed inside the
+lexical region (word k's last-letter peak .. word k+1's first-letter peak, +-10 ms) and compared with the
+gold: MAE and median signed error, all / H (reviewer-moved) / per set. Used to CHOOSE among a few
+principled definitions (no fitted parameters).
+
+    python -m aligner2.landmark_eval "V>fric"
+"""
+import argparse
+import collections
+
+import numpy as np
+
+from aligner2 import refine as R
+from aligner2.local_bench import clip_inputs
+
+HOP, MS = R.HOP, R.MS
+
+
+def transition_marks(S, pa, pb, feats=R.FEATS):
+    """progress of the joint change from the 10 ms around pa (phone A) to the 10 ms around pb (phone B):
+    the frames where it reaches 0.2 / 0.5 / 0.8"""
+    if pb - pa < MS(12):
+        return {}
+    ra, rb = (pa - MS(5), pa + MS(5)), (pb - MS(5), pb + MS(5))
+    p = R.progress(S, pa, pb, ra, rb, feats)
+    out = {}
+    for q in (0.2, 0.5, 0.8):
+        i = R.crossing(p, q)
+        if i is not None:
+            out[f"prog{int(q * 100)}"] = pa + i
+    return out
+
+
+def candidates(S, pa, pb, cut, pair):
+    a, b = S.clip(min(pa, cut) - MS(10)), S.clip(max(pb, cut) + MS(10))
+    c = {"v16": cut, "mid_peaks": (pa + pb) // 2}
+    c.update(transition_marks(S, pa, pb))
+    for name, feats in (("zh", ("zcr", "hi")), ("lo_cent", ("lo", "cent")), ("loud", ("Ls",))):
+        for q, i in transition_marks(S, pa, pb, feats).items():
+            c[f"{name}_{q}"] = i
+    cA, cB = pair.split(">")
+    for q in (0.2, 0.5, 0.8):
+        for name, feats in (("self", None), ("self_zh", ("zcr", "hi")), ("self_loud", ("Ls",)), ("self_lo", ("lo", "cent"))):
+            i = R.transition(S, cA, cB, a, cut, b, q, feats)
+            if i is not None:
+                c[f"{name}{int(q * 100)}"] = i
+    m = R.loud_min(S, a, b)
+    if m is not None:
+        c["loud_min"] = m
+    hm = a + int(np.argmin(S.hi[a:b])) if b > a else None
+    if hm is not None:
+        c["hi_min"] = hm
+    bu = R.burst_onset(S, a, b, prefer="last")
+    if bu is not None:
+        c["burst_last"] = bu
+    return c
+
+
+def main():
+    ap = argparse.ArgumentParser(); ap.add_argument("pair"); ap.add_argument("--cascade", action="append", default=[])
+    ap.add_argument("--top", type=int, default=15); args = ap.parse_args()
+    res = collections.defaultdict(list); rows = []
+    for c, z, ar, coarse, lx in clip_inputs(("009", "026")):
+        S = R.Sig(z); toks = c["tokens"]
+        for k in range(len(toks) - 1):
+            if toks[k + 1]["start"] - toks[k]["end"] > 0.005:
+                continue
+            pair = f"{R.pclass(R.last_phone(ar[k]))}>{R.pclass(R.first_phone(ar[k + 1]))}"
+            if pair != args.pair:
+                continue
+            g = (toks[k]["end"] + toks[k + 1]["start"]) / 2
+            cut = int(round((coarse[k]["end"] + coarse[k + 1]["start"]) / 2 / HOP))
+            h = toks[k]["end_human"] or toks[k + 1]["start_human"]
+            cd = candidates(S, lx["last"][k], lx["first"][k + 1], cut, pair)
+            rows.append((c["set"], h, g, cd))
+            for name, i in cd.items():
+                res[name].append((c["set"], h, (i * HOP - g) * 1000))
+    n = len(res["v16"])
+    print(f"{args.pair}: n={n}")
+    print(f"{'candidate':14} {'cover':>5} {'MAE':>6} {'med':>6} | {'H MAE':>6} {'H med':>6} | {'009':>6} {'026':>6}")
+    for spec in args.cascade:
+        names = spec.split(",")
+        for st, h, g, cd in rows:
+            i = next((cd[nm] for nm in names if nm in cd), cd["v16"])
+            res["CASCADE " + spec].append((st, h, (i * HOP - g) * 1000))
+    for name, v in sorted(res.items(), key=lambda kv: np.mean(np.abs([x[2] for x in kv[1]])))[:args.top] + \
+            [kv for kv in res.items() if kv[0] == "v16" or kv[0].startswith("CASCADE")]:
+        e = np.array([x[2] for x in v]); h = np.array([x[1] for x in v]); st = np.array([x[0] for x in v])
+        print(f"{name:14} {len(v) / n * 100:4.0f}% {np.abs(e).mean():6.1f} {np.median(e):+6.1f} | "
+              f"{np.abs(e[h]).mean() if h.any() else 0:6.1f} {np.median(e[h]) if h.any() else 0:+6.1f} | "
+              f"{np.abs(e[st == '009']).mean():6.1f} {np.abs(e[st == '026']).mean():6.1f}")
+
+
+if __name__ == "__main__":
+    main()

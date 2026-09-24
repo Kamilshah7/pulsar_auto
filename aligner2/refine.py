@@ -44,7 +44,8 @@ VOICELESS = {"P", "T", "K", "CH", "F", "TH", "S", "SH", "HH"}
 SONORANT = {"V", "nas", "liq", "gl"}
 BG_DB = 6.0                                   # pause edges: background + 6 dB (read from the H pause ends)
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
-RULES = {"J1", "P1", "P2"}                    # enabled rules (aligner2/local_bench.py --rules for ablations)
+J0_DB, J0_MS = 8, 40
+RULES = {"J1", "J4", "J5", "J8", "P1", "P2", "E1", "E2", "F1"}                    # enabled rules (aligner2/local_bench.py --rules for ablations)
 
 
 def first_phone(arpa):
@@ -59,6 +60,11 @@ def last_phone(arpa):
 
 def pclass(ph):
     return CLASS.get(ph, "?") if ph else "?"
+
+
+def _runs(mask):
+    d = np.diff(np.r_[0, mask.astype(int), 0])
+    return list(zip(np.where(d == 1)[0], np.where(d == -1)[0]))
 
 
 def _box(x, n):
@@ -254,6 +260,43 @@ def crossing(p, q):
     return None
 
 
+# ── class prototypes: the most typical 10 ms of a phone class inside a range ─────────────────────────────
+def pick_ref(S, cls, a, b, voiceless=False):
+    """start index of the 10 ms window in [a, b) that looks most like `cls` (a pclass name)"""
+    a, b = S.clip(a), S.clip(b)
+    w = MS(10)
+    if b - a <= w:
+        return None
+    sm = lambda x: _box(x[a:b], w)
+    if cls == "V":
+        score = sm(S.per) + sm(S.Ls) / 20.0
+    elif cls in ("fric", "aff", "h"):
+        score = sm(S.zcr) if voiceless else sm(S.hi) / 10.0 + sm(S.zcr)
+    elif cls == "nas":
+        score = sm(S.per) + sm(S.lo) / 3.0 - sm(S.cent)
+    elif cls in ("liq", "gl"):
+        score = sm(S.per) - sm(S.hi) / 20.0 - sm(S.Ls) / 20.0
+    elif cls == "stop":
+        score = -sm(S.Ls)
+    else:
+        return None
+    i = int(np.argmax(score[w // 2:len(score) - w // 2])) + w // 2     # the window's centre
+    return a + i - w // 2
+
+
+def transition(S, clsA, clsB, a, cut, b, q, feats=None, vlA=False, vlB=False):
+    """frame where the joint change from phone A's most typical 10 ms (in [a, cut + 10 ms]) to phone B's (in
+    [cut - 10 ms, b]) has progressed a fraction q"""
+    ia = pick_ref(S, clsA, a, cut + MS(10), vlA)
+    ib = pick_ref(S, clsB, cut - MS(10), b, vlB)
+    if ia is None or ib is None or ib - ia < MS(22):
+        return None
+    lo_, hi_ = ia + MS(10), ib
+    p = progress(S, lo_, hi_, (ia, ia + MS(10)), (ib, ib + MS(10)), feats or FEATS)
+    i = crossing(p, q)
+    return lo_ + i if i is not None else None
+
+
 # ── lexical region: the boundary lies between word k's last-letter peak and word k+1's first-letter peak ──
 def lexical_peaks(z, texts):
     """HuBERT CTC letters (4 frame phases averaged, aligner2/lexical.py): per token the 2 ms-grid index of its
@@ -304,6 +347,13 @@ class Clip:
         cA, cB = pclass(A), pclass(B)
         ra, rb = self.refs(cut, lo_lim, hi_lim)
         t = None
+        if cA not in ("stop", "aff") and cB not in ("stop", "aff") and "J0" in RULES:   # J0: a missed pause
+            quiet = S.Ls[a:b] <= S.floor[a:b] + J0_DB
+            runs = [(a + r0, a + r1) for r0, r1 in _runs(quiet) if r1 - r0 >= MS(J0_MS)]
+            if runs:
+                r0, r1 = max(runs, key=lambda r: r[1] - r[0])
+                self.note(k, "J0 silence", end=r0, start=r1)
+                return r0, r1
         if cA == "stop" and cB == "V" and "J1" in RULES:                         # J1
             bu = burst_onset(S, a, b, prefer="max")
             if bu is not None:                            # released: voicing onset after the release
@@ -313,6 +363,24 @@ class Clip:
                 m = glottal_attack(S, a, b)
                 t = first_rise(S, m, min(hi_lim, m + MS(30))) if m is not None else None
                 self.note(k, "J1 dip", dip=m, rise=t)
+        if cA in ("V", "nas") and cB == "fric" and "J4" in RULES:                 # J4
+            for name, q, feats in (("onset", 0.2, ("zcr", "hi")), ("loud-fall", 0.5, ("Ls",)), ("joint", 0.2, None)):
+                t = transition(S, cA, cB, a, cut, b, q, feats)
+                if t is not None:
+                    self.note(k, f"J4 {name}", cut=t)
+                    break
+        if cA == "fric" and cB == "V" and "J5" in RULES:                          # J5
+            for name, q, feats in (("crossfade", 0.5, ("zcr", "hi")), ("joint", 0.5, None)):
+                t = transition(S, cA, cB, a, cut, b, q, feats)
+                if t is not None:
+                    self.note(k, f"J5 {name}", cut=t)
+                    break
+        if cA == "nas" and cB == "V" and "J8" in RULES:                           # J8
+            for name, q, feats in (("release", 0.5, ("lo", "cent")), ("joint", 0.5, None)):
+                t = transition(S, cA, cB, a, cut, b, q, feats)
+                if t is not None:
+                    self.note(k, f"J8 {name}", cut=t)
+                    break
         return (t, t) if t is not None else None
 
     def note(self, k, rule, **marks):
@@ -333,7 +401,10 @@ class Clip:
               rises >= 6 dB out of that trough for >= 30 ms (breath, hum, laugh, hiss; R3) -> end where the decay
               reaches the trough (+3 dB). A final stop's release burst is not an event (R2).
           (b) the word ends in a stop and its release burst lies after the coarse end (a silent closure between)
-              -> end where the release has decayed back to the residual level + BG_DB (R2)."""
+              -> end where the release has decayed back to the residual level + BG_DB (R2);
+          (c) F1: the word ends in a fricative that is still sounding at the coarse end -> end where the
+              frication dies (zcr under half its value, or the local floor + 6 dB; R7; 8 H pause ends: 8 ms
+              MAE vs 38 ms for the coarse end -- the accepted old golds cut fricatives earlier)."""
         S = self.S
         i_end, i_nxt = self.idx(self.e[k]), self.idx(nxt)
         lim = S.clip(i_nxt - MS(10))
@@ -371,9 +442,20 @@ class Clip:
                         self.note(k, "P1 event", end=t0, trough=ti)
                         return t0
                     m = x; ti = i                                  # keep the word's level M, look for a new trough
+        if fric_final and "F1" in RULES:                                       # (c) the final fricative runs on
+            ref = slice(max(0, i_end - MS(20)), i_end)
+            zr = float(np.median(S.zcr[ref]))
+            if zr >= 0.25:
+                j = i_end
+                while j < min(lim, i_end + MS(200)) and S.zcr[j] >= max(0.15, 0.5 * zr) and S.Ls[j] >= S.floor[j] + 6.0:
+                    j += 1
+                if j > i_end:
+                    self.note(k, "P1 fricative", end=j)
+                    return j
         if stop_final:                                                         # (b) release after the coarse end
             bu = burst_onset(S, i_end, min(lim, i_end + MS(60)), prefer="first")
-            if bu is not None:
+            wpk = S.Ls[self.idx(self.s[k]):i_end + 1].max()
+            if bu is not None and S.Ls[bu:bu + MS(20)].max() >= wpk - 30.0:   # an audible release
                 resid = S.Ls[bu:min(lim, bu + MS(200))].min()
                 j = bu + MS(6)
                 while j < min(lim, bu + MS(80)) and S.Ls[j] >= resid + BG_DB:
@@ -419,6 +501,60 @@ class Clip:
                 m = x; ti = i
         return None
 
+    def _trough_before(self, hi):
+        """scanning back from hi: the deepest real gap before the word -- a stretch >= 8 dB under the word,
+        within 30 dB of the local floor, >= 16 ms wide (6 dB band). Returns (trough index, level) or None."""
+        S = self.S
+        M = S.Ls[hi]; m = M; ti = hi
+        for i in range(hi, -1, -1):
+            x = S.Ls[i]
+            if x > M and ti == hi:
+                M = m = x
+            if x < m:
+                m = x; ti = i
+            if (x - m >= 6.0 or i == 0) and M - m >= 8.0 and m <= S.floor[ti] + 30.0:
+                t0 = t1 = ti
+                while t0 > 0 and S.Ls[t0 - 1] <= m + 6.0:
+                    t0 -= 1
+                while t1 < hi and S.Ls[t1 + 1] <= m + 6.0:
+                    t1 += 1
+                if t1 - t0 >= MS(16):
+                    return ti, m
+        return None
+
+    def clip_start(self):
+        """E1: the first word starts where it rises out of the last real gap before its first letter (level:
+        trough + 6 dB, but at most 35 dB under the word's first peak); with no gap (the clip cuts into running
+        speech) it starts at the clip start"""
+        S = self.S
+        hi = min(self.lex["first"][0], self.idx(self.e[0]) - MS(20))
+        if hi < MS(10):
+            return None
+        g = self._trough_before(hi)
+        if g is None:
+            if np.median(S.Ls[MS(10):MS(30)]) >= S.floor[0] + 15.0:
+                self.trace[-1] = "E1 running speech at the clip start"
+                return 0
+            return None
+        ti, m = g
+        top = S.Ls[ti:self.idx(self.e[0]) + 1].max()               # the first word's own peak
+        lvl = max(m + 6.0, top - 35.0)
+        on = next((i for i in range(ti, hi + 1) if S.Ls[i] >= lvl), None)
+        self.trace[-1] = f"E1 gap start={on * HOP:.3f}" if on is not None else "E1 -"
+        return on
+
+    def clip_end(self):
+        """E2: the last word: the P1 checks against the clip end; if the clip cuts off running speech (no drop
+        after the last letter) it ends at the clip end"""
+        S = self.S
+        n = self.n - 1
+        lo = max(self.lex["last"][n], self.idx(self.s[n]) + MS(20))
+        tail = S.Ls[lo:]
+        if len(tail) and tail.min() >= tail.max() - 8.0 and np.median(S.Ls[S.T - MS(30):S.T - MS(10)]) >= S.floor[-1] + 15.0:
+            self.trace[n] = "E2 running speech at the clip end"
+            return S.T - 1
+        return self.pause_end(n, (S.T - 1) * HOP + MS(10) * HOP)
+
     def run(self):
         e, s = list(self.e), list(self.s)
         for k in range(self.n - 1):
@@ -426,7 +562,10 @@ class Clip:
                 r = self.join(k)
                 if r is not None:
                     t0, t1 = r
-                    e[k], s[k + 1] = t0 * HOP - 0.001, t1 * HOP + 0.001
+                    if t1 > t0:                                   # J0: a pause inside the join
+                        e[k], s[k + 1] = t0 * HOP, t1 * HOP
+                    else:
+                        e[k], s[k + 1] = t0 * HOP - 0.001, t1 * HOP + 0.001
             else:
                 r = self.pause_end(k, self.s[k + 1]) if "P1" in RULES else None
                 if r is not None:
@@ -434,6 +573,14 @@ class Clip:
                 r = self.pause_start(k + 1, self.e[k]) if "P2" in RULES else None
                 if r is not None:
                     s[k + 1] = r * HOP
+        if "E1" in RULES:
+            r = self.clip_start()
+            if r is not None:
+                s[0] = r * HOP
+        if "E2" in RULES:
+            r = self.clip_end()
+            if r is not None:
+                e[-1] = r * HOP
         out = []
         for k in range(self.n):
             st, en = s[k], e[k]
