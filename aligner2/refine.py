@@ -13,8 +13,9 @@ Levels are relative (the two phones' own most typical 10 ms, the local floor), n
 
 Continuous joins (the coarse stage found no pause):
   J1  stop > vowel-initial word: the release belongs to word k; cut where the spectrum is halfway from the
-      release to the vowel (voicing onset; good|a-, and|if, write|about, book|is: H). Unreleased / glottal stop:
-      the re-onset after the loudness dip.
+      release to the vowel (voicing onset; good|a-, and|if, write|about, book|is: H). No release: a final
+      /nd/ /nt/ (and, find, want) loses its stop in running speech -> the nasal > vowel rule (J8); other
+      (flapped / glottal) stops -> the middle of the joint stop > vowel change; else the re-onset after the dip.
   J4  vowel or nasal > fricative: frication onset (20% of the zcr / high-band change); else the middle of the
       loudness fall; else 20% of the joint change. (The 009 reviewer's convention; the 026 reviewer cuts later,
       at the steady-frication start.)
@@ -52,6 +53,8 @@ Pause edges (the coarse stage found a pause):
       until the frication dies (R7; H convention -- the old accepted golds cut fricatives ~15 ms earlier);
       (b) a final stop's release burst right after the coarse end is kept (R2).
   P2  word start: kept unless a separate event precedes the word across a real gap -> start out of the gap.
+  P3  otherwise the speech onset: the steepest loudness rise within 30 ms of the coarse start (after the
+      pause's middle, before the first-letter peak).
   E1  first word: rises out of the last real gap before its first letter; no gap = the clip cuts into running
       speech -> the clip start.
   E2  last word: P1 against the clip end; a clip that cuts off running speech -> the clip end.
@@ -67,7 +70,7 @@ CLASS = {**{p: "V" for p in VOWELS}, **{p: "stop" for p in ("P", "B", "T", "D", 
          "HH": "h", **{p: "nas" for p in ("M", "N", "NG")}, "L": "liq", "R": "liq", "W": "gl", "Y": "gl"}
 BG_DB = 6.0                                   # a released stop's tail: until within 6 dB of the residual level
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
-RULES = {"F2", "J0", "J1", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "E1", "E2"}   # enabled
+RULES = {"F2", "J0", "J1", "J1n", "J1m", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "P3", "E1", "E2"}   # enabled
 # (aligner2/local_bench.py --rules J1,J4,... for ablations)
 
 
@@ -355,10 +358,24 @@ class Clip:
             if bu is not None:                            # released: voicing onset after the release
                 t = voicing_onset(S, bu, hi_lim)
                 self.note(k, "J1 burst", burst=bu, voice=t)
-            else:                                         # glottal / elided stop: re-onset after the dip
-                m = glottal_attack(S, a, b)
-                t = first_rise(S, m, min(hi_lim, m + MS(30))) if m is not None else None
-                self.note(k, "J1 dip", dip=m, rise=t)
+            else:                                         # no release
+                ph = self.arpa[k].split()
+                nd = len(ph) >= 2 and pclass(ph[-2]) == "nas" and A in ("D", "T")
+                t = None
+                if nd and "J1n" in RULES:                 # 'and', 'find', 'want': /nd/, /nt/ lose the stop ->
+                    for name, q, feats in (("release", 0.5, ("lo", "cent")), ("joint", 0.5, None)):   # nasal > vowel (J8)
+                        t = transition(S, "nas", cB, a, cut, b, q, feats)
+                        if t is not None:
+                            self.note(k, f"J1 nasal-{name}", cut=t)
+                            break
+                elif "J1m" in RULES:                      # flapped / glottal: middle of the change
+                    t = transition(S, cA, cB, a, cut, b, 0.5)
+                    if t is not None:
+                        self.note(k, "J1 change-mid", cut=t)
+                if t is None:                             # re-onset after the dip
+                    m = glottal_attack(S, a, b)
+                    t = first_rise(S, m, min(hi_lim, m + MS(30))) if m is not None else None
+                    self.note(k, "J1 dip", dip=m, rise=t)
         if cA in ("V", "nas") and cB == "fric" and "J4" in RULES:                 # J4
             for name, q, feats in (("onset", 0.2, ("zcr", "hi")), ("loud-fall", 0.5, ("Ls",)), ("joint", 0.2, None)):
                 t = transition(S, cA, cB, a, cut, b, q, feats)
@@ -544,6 +561,17 @@ class Clip:
                 m = x; ti = i
         return None
 
+    def onset(self, k, prv):
+        """P3 (word k after a pause, no separate event): the steepest loudness rise within 30 ms of the coarse
+        start -- the speech onset -- kept after the pause's middle and before word k's first-letter peak"""
+        S = self.S
+        s0 = self.idx(self.s[k])
+        a = max(s0 - MS(30), (self.idx(prv) + s0) // 2 + 1)
+        b = min(s0 + MS(30), self.lex["first"][k], self.idx(self.e[k]) - MS(10))
+        if b - a < 3:
+            return None
+        return a + int(np.argmax(S.slope[a:b]))
+
     def _trough_before(self, hi):
         """scanning back from hi: the deepest real gap before the word -- a stretch >= 8 dB under the word,
         within 30 dB of the local floor, >= 16 ms wide (6 dB band). Returns (trough index, level) or None."""
@@ -649,6 +677,8 @@ class Clip:
                 if r is not None:
                     e[k] = r * HOP
                 r = self.pause_start(k + 1, self.e[k]) if "P2" in RULES else None
+                if r is None and "P3" in RULES:
+                    r = self.onset(k + 1, self.e[k])
                 if r is not None:
                     s[k + 1] = r * HOP
         if "E1" in RULES:
