@@ -1,0 +1,9 @@
+2026/09/12-03:24:41.437 1da8 Reusing MANIFEST F:\BB\ETN-SC\pulsar_auto\profiles\labelbox\Default\Local Storage\leveldb/MANIFEST-000001
+2026/09/12-03:24:41.446 1da8 Recovering log #8
+2026/09/12-03:24:41.449 1da8 Reusing old log F:\BB\ETN-SC\pulsar_auto\profiles\labelbox\Default\Local Storage\leveldb/000008.log 
+2026/09/12-03:24:58.106 5848 Level-0 table #12: started
+2026/09/12-03:24:58.118 5848 Level-0 table #12: 55754 bytes OK
+2026/09/12-03:24:58.122 5848 Delete type=0 #8
+2026/09/12-03:25:19.159 1da8 Level-0 table #14: started
+2026/09/12-03:25:19.174 1da8 Level-0 table #14: 50736 bytes OK
+2026/09/12-03:25:19.179 1da8 Delete type=0 #11

@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulsar // Automation Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Oxanium:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070a0f;
+      --bg2: #0e1420;
+      --bg3: #131a28;
+      --border: rgba(34, 211, 238, 0.15);
+      --border2: rgba(34, 211, 238, 0.3);
+      --text: #e2eaf3;
+      --text2: #9bb0c8;
+      --text3: #6b7f99;
+      --cyan: #22d3ee;
+      --cyan-dim: rgba(34, 211, 238, 0.12);
+      --green: #34d399;
+      --green-dim: rgba(52, 211, 153, 0.15);
+      --amber: #fbbf24;
+      --amber-dim: rgba(251, 191, 36, 0.15);
+      --red: #f87171;
+      --mono: 'JetBrains Mono', monospace;
+      --sans: 'Inter', sans-serif;
+      --brand: 'Oxanium', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem 2rem 3rem;
+      background-image: 
+        radial-gradient(ellipse 60% 40% at 50% -10%, rgba(34, 211, 238, 0.08) 0, transparent 60%),
+        linear-gradient(rgba(34, 211, 238, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 211, 238, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 40px 40px, 40px 40px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--brand);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--cyan);
+    }
+
+    h1 {
+      font-family: var(--brand);
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    h1 em { font-style: normal; color: var(--cyan); }
+
+    .tag-status {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: var(--bg2);
+      border: 1px solid var(--border2);
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .stepper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 2rem;
+    }
+
+    .step-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.2s;
+    }
+
+    .step-card.active {
+      border-color: var(--cyan);
+      background: var(--cyan-dim);
+      box-shadow: 0 0 15px rgba(34, 211, 238, 0.15);
+    }
+
+    .step-card.completed {
+      border-color: var(--green);
+      background: var(--green-dim);
+    }
+
+    .step-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--bg3);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text2);
+    }
+
+    .step-card.active .step-num { background: var(--cyan); color: #000; }
+    .step-card.completed .step-num { background: var(--green); color: #000; }
+
+    .step-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .step-sub {
+      font-size: 11px;
+      color: var(--text3);
+      font-family: var(--mono);
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .card-title {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .input-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      border-radius: 8px;
+      padding: 12px 14px;
+      color: var(--text);
+      font-family: var(--mono);
+      font-size: 12px;
+      outline: none;
+      transition: border 0.15s;
+    }
+
+    input[type="text"]:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 10px rgba(34, 211, 238, 0.2);
+    }
+
+    button {
+      background: var(--cyan);
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 18px;
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s;
+    }
+
+    button:hover:not(:disabled) {
+      background: #67e8f9;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(34, 211, 238, 0.3);
+    }
+
+    button:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    button.btn-green {
+      background: var(--green);
+      color: #000;
+    }
+    button.btn-green:hover:not(:disabled) {
+      background: #6ee7b7;
+      box-shadow: 0 4px 12px rgba(52, 211, 153, 0.3);
+    }
+
+    button.btn-secondary {
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      color: var(--text);
+    }
+    button.btn-secondary:hover:not(:disabled) {
+      background: var(--bg2);
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+
+    .banner-auth {
+      background: rgba(251, 191, 36, 0.12);
+      border: 1px solid rgba(251, 191, 36, 0.4);
+      border-left: 4px solid var(--amber);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 1.2rem;
+      display: none;
+    }
+
+    .banner-auth.visible { display: block; }
+    .banner-auth h3 {
+      color: var(--amber);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .banner-auth p {
+      font-size: 12px;
+      color: var(--text2);
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    .auth-creds {
+      background: var(--bg3);
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-family: var(--mono);
+      font-size: 11px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 240px;
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      border-radius: 8px;
+      padding: 12px;
+      color: var(--text);
+      font-family: var(--mono);
+      font-size: 12px;
+      line-height: 1.4;
+      resize: vertical;
+      outline: none;
+      margin-bottom: 12px;
+    }
+
+    textarea:focus {
+      border-color: var(--cyan);
+    }
+
+    .log-box {
+      height: 260px;
+      overflow-y: auto;
+      background: #04070a;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 8px;
+      padding: 12px;
+      font-family: var(--mono);
+      font-size: 11px;
+      line-height: 1.6;
+      color: var(--text2);
+    }
+
+    .log-box div.log-info { color: var(--text2); }
+    .log-box div.log-highlight { color: var(--cyan); font-weight: 600; }
+    .log-box div.log-acoustic { color: #38bdf8; font-weight: 600; text-shadow: 0 0 10px rgba(56, 189, 248, 0.25); }
+    .log-box div.log-vad { color: #c084fc; font-weight: 600; }
+    .log-box div.log-success { color: var(--green); font-weight: 600; }
+    .log-box div.log-error { color: var(--red); font-weight: 600; }
+
+    .acoustic-panel {
+      background: rgba(34, 211, 238, 0.04);
+      border: 1px solid var(--border2);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .acoustic-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .acoustic-title {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+    .acoustic-badge {
+      background: rgba(34, 211, 238, 0.15);
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-family: var(--mono);
+      font-weight: 700;
+    }
+    .acoustic-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .stat-chip {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-family: var(--mono);
+    }
+    .stat-chip-label {
+      color: var(--text3);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: block;
+    }
+    .stat-chip-val {
+      color: var(--text);
+      font-weight: 700;
+      font-size: 15px;
+      margin-top: 3px;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--bg2);
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      font-family: var(--mono);
+      font-size: 12px;
+      padding: 12px 18px;
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      display: none;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="logo-badge">P</div>
+      <div>
+        <h1>PULSAR <em>AUTOMATION STUDIO</em></h1>
+        <div style="font-size: 11px; color: var(--text3); font-family: var(--mono); margin-top: 2px;">
+          End-to-End Alignment Pipeline &amp; Injection Console
+        </div>
+      </div>
+    </div>
+    <div class="tag-status" id="statusBadge">IDLE</div>
+  </header>
+
+  <!-- Step Bar -->
+  <div class="stepper">
+    <div class="step-card active" id="stepCard1">
+      <div class="step-num">1</div>
+      <div>
+        <div class="step-title">Extract Audio</div>
+        <div class="step-sub">Paste task link &amp; auth</div>
+      </div>
+    </div>
+    <div class="step-card" id="stepCard2">
+      <div class="step-num">2</div>
+      <div>
+        <div class="step-title">Multi-Stream ASR</div>
+        <div class="step-sub">Whisper + Wav2Vec2 CTC</div>
+      </div>
+    </div>
+    <div class="step-card" id="stepCard3">
+      <div class="step-num">3</div>
+      <div>
+        <div class="step-title">Prompt LLM</div>
+        <div class="step-sub">Copy prompt &amp; input</div>
+      </div>
+    </div>
+    <div class="step-card" id="stepCard4">
+      <div class="step-num">4</div>
+      <div>
+        <div class="step-title">Forced Aligner</div>
+        <div class="step-sub">Trellis backtrace &amp; inject</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Acoustic Engine Telemetry Panel -->
+  <div class="acoustic-panel">
+    <div class="acoustic-header">
+      <div class="acoustic-title">
+        <span style="font-size: 14px;">⚡</span>
+        <span>Pre-Label-Independent Acoustic Engine (Whisper + Wav2Vec2 CTC + ForcedAligner)</span>
+      </div>
+      <div class="acoustic-badge" id="engineStatusBadge">MULTI-STREAM CTC READY</div>
+    </div>
+    <div class="acoustic-stats-grid">
+      <div class="stat-chip">
+        <span class="stat-chip-label">Recovered Tokens</span>
+        <div class="stat-chip-val" id="statTokens">-</div>
+      </div>
+      <div class="stat-chip">
+        <span class="stat-chip-label">Median Boundary Accuracy</span>
+        <div class="stat-chip-val" id="statBoundary" style="color: var(--cyan);">-</div>
+      </div>
+      <div class="stat-chip">
+        <span class="stat-chip-label">Acoustic CTC &amp; Micro-Slices</span>
+        <div class="stat-chip-val" id="statAcoustic" style="color: var(--amber);">50 fps CTC</div>
+      </div>
+      <div class="stat-chip">
+        <span class="stat-chip-label">Contiguous Snapping</span>
+        <div class="stat-chip-val" id="statSnapping" style="color: var(--green);">2.0ms (0 Overlaps)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-grid">
+    <!-- Left Column: Actions & Inputs -->
+    <div>
+      <!-- Step 1: Input URL -->
+      <div class="card">
+        <div class="card-title">1. Task URL</div>
+        <div class="input-row">
+          <input type="text" id="taskUrlInput" placeholder="https://pulsar-upload-portal.vercel.app/?bundle=...&dataRowId=...&sig=..." />
+          <button id="startBtn" onclick="startTask()">
+            <span>🚀 Start Extraction</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Auth Banner (Appears during auth step) -->
+      <div class="banner-auth" id="authBanner">
+        <h3>🔐 ACTION REQUIRED IN CHROME</h3>
+        <p>A Chrome browser window has opened. Please enter the password and email into the login prompt:</p>
+        <div class="auth-creds">
+          Password: <strong style="color: #fff;">PulsarNew!!</strong> &nbsp;|&nbsp; 
+          Email: <strong style="color: #fff;">kamilkhan1704@gmail.com</strong>
+        </div>
+        <p>Once you see the audio waveform and clips loaded in Chrome, click the button below to continue:</p>
+        <button class="btn-green" onclick="confirmAuth()">
+          <span>✓ Continue (Editor is Loaded)</span>
+        </button>
+      </div>
+
+      <!-- Step 3: LLM Prompt & Input Copy Card -->
+      <div class="card">
+        <div class="card-title">
+          <span>2. LLM Prompt &amp; Input</span>
+          <button class="btn-secondary" style="padding: 4px 10px; font-size: 11px;" onclick="copyLlmPayload()">
+            📋 Copy Prompt &amp; Input
+          </button>
+        </div>
+        <textarea id="llmPayloadBox" readonly placeholder="Waiting for transcription to complete... Prompt and input will automatically appear here with a 1-click copy button."></textarea>
+      </div>
+
+      <!-- Step 4: Paste LLM Output & Generate Injection Script -->
+      <div class="card">
+        <div class="card-title">3. Paste LLM Output</div>
+        <textarea id="llmOutputBox" placeholder="Paste the JSON response from your LLM chat here..."></textarea>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <button id="injectBtn" onclick="processLlmOutput()">
+            <span>⚡ Run Forced Aligner on LLM Output</span>
+          </button>
+          <button class="btn-secondary" id="baselineBtn" onclick="useBaseline()">
+            <span>⚡ Run Forced Aligner on Baseline (Whisper + Micro-Slice)</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Final Injection Output & Live Logs -->
+    <div>
+      <!-- Injection Script Card -->
+      <div class="card">
+        <div class="card-title">
+          <span>4. Final Injection Code (Console)</span>
+          <button class="btn-green" id="copyScriptBtn" style="padding: 4px 10px; font-size: 11px;" onclick="copyInjectionScript()">
+            📋 Copy Injection Code
+          </button>
+        </div>
+        <p style="font-size: 12px; color: var(--text3); margin-bottom: 8px;">
+          Open DevTools in the editor tab (<strong>F12</strong>), paste into the <strong>Console</strong>, and press Enter.
+        </p>
+        <textarea id="injectionScriptBox" style="height: 180px;" readonly placeholder="Injection JavaScript will appear here..."></textarea>
+      </div>
+
+      <!-- Live Log Stream -->
+      <div class="card">
+        <div class="card-title">
+          <span>Live Activity Log</span>
+          <span id="clipStats" style="color: var(--text3); font-weight: normal; font-size: 10px;"></span>
+        </div>
+        <div class="log-box" id="logBox">
+          <div class="log-info">[Ready] Enter your task link and click Start Extraction to begin.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Copied to clipboard!</div>
+
+  <script>
+    let lastLogLength = 0;
+    let pollInterval = null;
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.style.display = 'block';
+      setTimeout(() => { t.style.display = 'none'; }, 2500);
+    }
+
+    async function startTask() {
+      const url = document.getElementById('taskUrlInput').value.trim();
+      if (!url) {
+        alert('Please paste a valid Pulsar task URL.');
+        return;
+      }
+
+      document.getElementById('startBtn').disabled = true;
+      try {
+        const resp = await fetch('/api/start', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ task_url: url })
+        });
+        const data = await resp.json();
+        if (data.ok) {
+          startPolling();
+        } else {
+          alert('Error: ' + data.error);
+          document.getElementById('startBtn').disabled = false;
+        }
+      } catch (e) {
+        alert('Network error: ' + e.message);
+        document.getElementById('startBtn').disabled = false;
+      }
+    }
+
+    async function confirmAuth() {
+      try {
+        await fetch('/api/auth-done', { method: 'POST' });
+        document.getElementById('authBanner').classList.remove('visible');
+      } catch (e) {
+        alert('Failed to signal auth: ' + e.message);
+      }
+    }
+
+    function updateTelemetryUI(stats) {
+      if (!stats) return;
+      if (stats.total_tokens !== undefined && stats.total_tokens > 0) {
+        const pct = stats.token_recovery_pct ? (' (' + stats.token_recovery_pct + '%)') : '';
+        document.getElementById('statTokens').textContent = stats.total_tokens + pct;
+      }
+      if (stats.median_boundary_ms !== undefined) {
+        const maeStr = stats.mae_boundary_ms ? (' (MAE ' + stats.mae_boundary_ms.toFixed(1) + 'ms)') : '';
+        document.getElementById('statBoundary').textContent = stats.median_boundary_ms.toFixed(1) + ' ms' + maeStr;
+      }
+      if (stats.ctc_framerate) {
+        document.getElementById('statAcoustic').textContent = stats.ctc_framerate + ' + Repaired';
+      }
+      if (stats.contiguous_snaps !== undefined) {
+        const snaps = stats.contiguous_snaps;
+        const viols = stats.overlap_violations || 0;
+        document.getElementById('statSnapping').textContent = snaps + ' snaps (' + viols + ' overlaps)';
+      }
+      document.getElementById('engineStatusBadge').textContent = '🟢 ACOUSTIC ENGINE ACTIVE';
+      document.getElementById('engineStatusBadge').style.borderColor = 'var(--green)';
+      document.getElementById('engineStatusBadge').style.color = 'var(--green)';
+      document.getElementById('engineStatusBadge').style.background = 'var(--green-dim)';
+    }
+
+    async function processLlmOutput() {
+      const text = document.getElementById('llmOutputBox').value.trim();
+      if (!text) {
+        alert('Please paste the LLM JSON output.');
+        return;
+      }
+
+      const btn = document.getElementById('injectBtn');
+      btn.disabled = true;
+      btn.innerHTML = '<span>⏳ Running Acoustic Engine...</span>';
+      try {
+        const resp = await fetch('/api/submit-llm', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ llm_output: text })
+        });
+        const data = await resp.json();
+        if (data.ok) {
+          document.getElementById('injectionScriptBox').value = data.inject_script;
+          showToast('Acoustic injection code ready (' + data.count + ' tokens)!');
+          updateTelemetryUI(data.acoustic_stats);
+          updateStep(4);
+        } else {
+          alert('Error: ' + data.error);
+        }
+      } catch (e) {
+        alert('Error: ' + e.message);
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<span>⚡ Run Acoustic Engine on LLM Output</span>';
+      }
+    }
+
+    async function useBaseline() {
+      const btn = document.getElementById('baselineBtn');
+      btn.disabled = true;
+      btn.innerHTML = '<span>⏳ Processing Waveform VAD & Stutters...</span>';
+      try {
+        const resp = await fetch('/api/use-baseline');
+        const data = await resp.json();
+        if (data.ok) {
+          document.getElementById('injectionScriptBox').value = data.inject_script;
+          showToast('Acoustic baseline ready (' + data.count + ' tokens)!');
+          updateTelemetryUI(data.acoustic_stats);
+          updateStep(4);
+        } else {
+          alert('Error: ' + data.error);
+        }
+      } catch(e) {
+        alert('Error: ' + e.message);
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<span>⚡ Run Acoustic Engine on Baseline (VAD + Stutters)</span>';
+      }
+    }
+
+    function copyLlmPayload() {
+      const text = document.getElementById('llmPayloadBox').value;
+      if (!text) return;
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('Prompt & Input copied to clipboard! Paste into LLM.');
+      });
+    }
+
+    function copyInjectionScript() {
+      const text = document.getElementById('injectionScriptBox').value;
+      if (!text) return;
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('Injection code copied! Paste into Chrome F12 Console.');
+      });
+    }
+
+    function updateStep(step) {
+      for (let i = 1; i <= 4; i++) {
+        const el = document.getElementById('stepCard' + i);
+        el.classList.remove('active', 'completed');
+        if (i < step) el.classList.add('completed');
+        else if (i === step) el.classList.add('active');
+      }
+    }
+
+    async function fetchStatus() {
+      try {
+        const resp = await fetch('/api/status');
+        const state = await resp.json();
+
+        document.getElementById('statusBadge').textContent = state.status.toUpperCase();
+
+        // Update auth banner
+        if (state.status === 'waiting_auth') {
+          document.getElementById('authBanner').classList.add('visible');
+          updateStep(1);
+        } else {
+          document.getElementById('authBanner').classList.remove('visible');
+        }
+
+        if (state.status === 'transcribing') {
+          updateStep(2);
+        } else if (state.status === 'ready_for_llm') {
+          updateStep(3);
+          if (state.combined_llm_payload) {
+            document.getElementById('llmPayloadBox').value = state.combined_llm_payload;
+          }
+        } else if (state.status === 'complete') {
+          updateStep(4);
+          if (state.inject_script) {
+            document.getElementById('injectionScriptBox').value = state.inject_script;
+          }
+        }
+
+        if (state.acoustic_stats) {
+          updateTelemetryUI(state.acoustic_stats);
+        }
+
+        // Update logs
+        if (state.logs && state.logs.length !== lastLogLength) {
+          const logBox = document.getElementById('logBox');
+          logBox.innerHTML = '';
+          state.logs.forEach(l => {
+            const d = document.createElement('div');
+            if (l.startsWith('ERROR')) d.className = 'log-error';
+            else if (l.includes('[Acoustic Engine]')) d.className = 'log-acoustic';
+            else if (l.includes('VadTrimmer') || l.includes('Reconciler')) d.className = 'log-vad';
+            else if (l.includes('SUCCESS') || l.includes('unpacked')) d.className = 'log-success';
+            else if (l.includes('Transcribing') || l.includes('Extracting')) d.className = 'log-highlight';
+            else d.className = 'log-info';
+            d.textContent = l;
+            logBox.appendChild(d);
+          });
+          logBox.scrollTop = logBox.scrollHeight;
+          lastLogLength = state.logs.length;
+        }
+
+        if (state.clips && state.clips.length) {
+          document.getElementById('clipStats').textContent = state.clips.length + ' clips detected';
+        }
+
+      } catch (e) {
+        console.error('Polling error', e);
+      }
+    }
+
+    function startPolling() {
+      if (!pollInterval) {
+        pollInterval = setInterval(fetchStatus, 1200);
+      }
+    }
+
+    // Initial check
+    fetchStatus();
+    startPolling();
+  </script>
+</body>
+</html>

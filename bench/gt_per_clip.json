@@ -1,0 +1,4376 @@
+{
+  "0": {
+    "filename": "zencastr-en_603c4aa5c3e46e0013dcece4-00005_68.wav",
+    "n_tokens": 68,
+    "tokens": [
+      {
+        "text": "surprisingly",
+        "start": 0.895,
+        "end": 2.082
+      },
+      {
+        "text": "s-",
+        "start": 2.45,
+        "end": 2.813
+      },
+      {
+        "text": "surprisingly",
+        "start": 2.869,
+        "end": 3.72
+      },
+      {
+        "text": "restrained",
+        "start": 3.721,
+        "end": 4.268
+      },
+      {
+        "text": "and",
+        "start": 4.27,
+        "end": 4.3884
+      },
+      {
+        "text": "i",
+        "start": 4.3894,
+        "end": 4.53
+      },
+      {
+        "text": "think",
+        "start": 4.571,
+        "end": 4.92
+      },
+      {
+        "text": "it",
+        "start": 5.06,
+        "end": 5.16
+      },
+      {
+        "text": "doesn't",
+        "start": 5.162,
+        "end": 5.4044
+      },
+      {
+        "text": "show",
+        "start": 5.4054,
+        "end": 5.94
+      },
+      {
+        "text": "that",
+        "start": 5.942,
+        "end": 6.213
+      },
+      {
+        "text": "much",
+        "start": 6.231,
+        "end": 6.6
+      },
+      {
+        "text": "and",
+        "start": 6.605,
+        "end": 6.691
+      },
+      {
+        "text": "i",
+        "start": 6.693,
+        "end": 6.768
+      },
+      {
+        "text": "think",
+        "start": 6.77,
+        "end": 6.945
+      },
+      {
+        "text": "that's",
+        "start": 6.947,
+        "end": 7.213
+      },
+      {
+        "text": "pretty",
+        "start": 8.114,
+        "end": 8.339
+      },
+      {
+        "text": "cool",
+        "start": 8.383,
+        "end": 8.712
+      },
+      {
+        "text": "um",
+        "start": 9.512,
+        "end": 10.16
+      },
+      {
+        "text": "i",
+        "start": 10.233,
+        "end": 10.393
+      },
+      {
+        "text": "think",
+        "start": 10.414,
+        "end": 10.7057
+      },
+      {
+        "text": "uh",
+        "start": 10.7067,
+        "end": 11.214
+      },
+      {
+        "text": "you",
+        "start": 11.982,
+        "end": 12.062
+      },
+      {
+        "text": "don't",
+        "start": 12.064,
+        "end": 12.213
+      },
+      {
+        "text": "really",
+        "start": 12.214,
+        "end": 12.453
+      },
+      {
+        "text": "get",
+        "start": 12.454,
+        "end": 12.735
+      },
+      {
+        "text": "any",
+        "start": 13.63,
+        "end": 14.006
+      },
+      {
+        "text": "shots",
+        "start": 14.634,
+        "end": 15.033
+      },
+      {
+        "text": "of",
+        "start": 15.035,
+        "end": 15.138
+      },
+      {
+        "text": "like",
+        "start": 15.14,
+        "end": 15.336
+      },
+      {
+        "text": "the",
+        "start": 15.338,
+        "end": 15.4775
+      },
+      {
+        "text": "villains",
+        "start": 15.4785,
+        "end": 16.25
+      },
+      {
+        "text": "um",
+        "start": 16.325,
+        "end": 17.037
+      },
+      {
+        "text": "you",
+        "start": 17.134,
+        "end": 17.224
+      },
+      {
+        "text": "only",
+        "start": 17.226,
+        "end": 17.402
+      },
+      {
+        "text": "get",
+        "start": 17.404,
+        "end": 17.5122
+      },
+      {
+        "text": "like",
+        "start": 17.5132,
+        "end": 17.69
+      },
+      {
+        "text": "glimpses",
+        "start": 17.692,
+        "end": 18.222
+      },
+      {
+        "text": "of",
+        "start": 18.224,
+        "end": 18.319
+      },
+      {
+        "text": "the",
+        "start": 18.321,
+        "end": 18.476
+      },
+      {
+        "text": "bat",
+        "start": 18.478,
+        "end": 18.735
+      },
+      {
+        "text": "suit",
+        "start": 18.738,
+        "end": 19.22
+      },
+      {
+        "text": "you",
+        "start": 19.654,
+        "end": 19.735
+      },
+      {
+        "text": "don't",
+        "start": 19.737,
+        "end": 19.855
+      },
+      {
+        "text": "even",
+        "start": 19.857,
+        "end": 19.9782
+      },
+      {
+        "text": "see",
+        "start": 19.9792,
+        "end": 20.177
+      },
+      {
+        "text": "cat",
+        "start": 20.179,
+        "end": 20.435
+      },
+      {
+        "text": "woman",
+        "start": 20.437,
+        "end": 20.6543
+      },
+      {
+        "text": "in",
+        "start": 20.6553,
+        "end": 20.814
+      },
+      {
+        "text": "costume",
+        "start": 20.833,
+        "end": 21.5687
+      },
+      {
+        "text": "i",
+        "start": 21.5697,
+        "end": 21.6949
+      },
+      {
+        "text": "think",
+        "start": 21.6959,
+        "end": 21.805
+      },
+      {
+        "text": "it's",
+        "start": 21.807,
+        "end": 21.939
+      },
+      {
+        "text": "good",
+        "start": 21.941,
+        "end": 22.232
+      },
+      {
+        "text": "i",
+        "start": 22.855,
+        "end": 22.9323
+      },
+      {
+        "text": "think",
+        "start": 22.9333,
+        "end": 23.102
+      },
+      {
+        "text": "((it's))",
+        "start": 23.103,
+        "end": 23.304
+      },
+      {
+        "text": "i",
+        "start": 23.883,
+        "end": 23.9259
+      },
+      {
+        "text": "think",
+        "start": 23.9269,
+        "end": 24.169
+      },
+      {
+        "text": "it",
+        "start": 24.172,
+        "end": 24.298
+      },
+      {
+        "text": "does",
+        "start": 24.3,
+        "end": 24.4787
+      },
+      {
+        "text": "exactly",
+        "start": 24.4797,
+        "end": 24.886
+      },
+      {
+        "text": "what",
+        "start": 24.888,
+        "end": 24.9795
+      },
+      {
+        "text": "a",
+        "start": 24.9805,
+        "end": 25.265
+      },
+      {
+        "text": "trailer",
+        "start": 25.57,
+        "end": 26.029
+      },
+      {
+        "text": "should",
+        "start": 26.226,
+        "end": 26.436
+      },
+      {
+        "text": "do",
+        "start": 26.438,
+        "end": 26.639
+      },
+      {
+        "text": "um",
+        "start": 27.693,
+        "end": 28.066
+      }
+    ]
+  },
+  "1": {
+    "filename": "zencastr-en_6044eb9db82b030014de5da5-00004_16.wav",
+    "n_tokens": 88,
+    "tokens": [
+      {
+        "text": "the",
+        "start": 0.018,
+        "end": 0.111
+      },
+      {
+        "text": "thing",
+        "start": 0.113,
+        "end": 0.312
+      },
+      {
+        "text": "is",
+        "start": 0.314,
+        "end": 0.556
+      },
+      {
+        "text": "rami",
+        "start": 0.558,
+        "end": 1.005
+      },
+      {
+        "text": "is",
+        "start": 1.007,
+        "end": 1.174
+      },
+      {
+        "text": "that",
+        "start": 1.176,
+        "end": 1.343
+      },
+      {
+        "text": "the-",
+        "start": 1.417,
+        "end": 1.597
+      },
+      {
+        "text": "the-",
+        "start": 1.599,
+        "end": 1.839
+      },
+      {
+        "text": "that",
+        "start": 1.841,
+        "end": 2.001
+      },
+      {
+        "text": "the",
+        "start": 2.003,
+        "end": 2.095
+      },
+      {
+        "text": "thing",
+        "start": 2.097,
+        "end": 2.305
+      },
+      {
+        "text": "that",
+        "start": 2.307,
+        "end": 2.431
+      },
+      {
+        "text": "um",
+        "start": 2.534,
+        "end": 2.816
+      },
+      {
+        "text": "i",
+        "start": 2.827,
+        "end": 2.9009
+      },
+      {
+        "text": "think",
+        "start": 2.9019,
+        "end": 3.071
+      },
+      {
+        "text": "(())",
+        "start": 3.072,
+        "end": 3.3593
+      },
+      {
+        "text": "uh",
+        "start": 3.3603,
+        "end": 3.6309
+      },
+      {
+        "text": "most",
+        "start": 3.6319,
+        "end": 3.932
+      },
+      {
+        "text": "uh",
+        "start": 4.015,
+        "end": 4.317
+      },
+      {
+        "text": "like",
+        "start": 4.319,
+        "end": 4.457
+      },
+      {
+        "text": "in",
+        "start": 4.459,
+        "end": 4.571
+      },
+      {
+        "text": "jordan",
+        "start": 4.573,
+        "end": 4.96
+      },
+      {
+        "text": "definitely",
+        "start": 4.962,
+        "end": 5.503
+      },
+      {
+        "text": "ah",
+        "start": 6.04,
+        "end": 6.374
+      },
+      {
+        "text": "when",
+        "start": 6.789,
+        "end": 7.0127
+      },
+      {
+        "text": "you",
+        "start": 7.0137,
+        "end": 7.481
+      },
+      {
+        "text": "manage",
+        "start": 7.484,
+        "end": 7.983
+      },
+      {
+        "text": "to",
+        "start": 8.062,
+        "end": 8.605
+      },
+      {
+        "text": "trick",
+        "start": 8.679,
+        "end": 8.9316
+      },
+      {
+        "text": "someone",
+        "start": 8.9326,
+        "end": 9.421
+      },
+      {
+        "text": "into",
+        "start": 9.423,
+        "end": 9.733
+      },
+      {
+        "text": "buying",
+        "start": 9.735,
+        "end": 9.96
+      },
+      {
+        "text": "something",
+        "start": 9.962,
+        "end": 10.428
+      },
+      {
+        "text": "more",
+        "start": 10.43,
+        "end": 10.74
+      },
+      {
+        "text": "expensive",
+        "start": 10.773,
+        "end": 11.29
+      },
+      {
+        "text": "than",
+        "start": 11.292,
+        "end": 11.444
+      },
+      {
+        "text": "what",
+        "start": 11.446,
+        "end": 11.596
+      },
+      {
+        "text": "it",
+        "start": 11.598,
+        "end": 11.742
+      },
+      {
+        "text": "actually",
+        "start": 11.744,
+        "end": 12.312
+      },
+      {
+        "text": "is",
+        "start": 12.314,
+        "end": 12.658
+      },
+      {
+        "text": "and",
+        "start": 13.253,
+        "end": 13.4857
+      },
+      {
+        "text": "um",
+        "start": 13.5339,
+        "end": 13.871
+      },
+      {
+        "text": "then",
+        "start": 13.872,
+        "end": 14.073
+      },
+      {
+        "text": "you",
+        "start": 14.075,
+        "end": 14.271
+      },
+      {
+        "text": "become",
+        "start": 14.273,
+        "end": 14.793
+      },
+      {
+        "text": "a",
+        "start": 14.814,
+        "end": 15.131
+      },
+      {
+        "text": "a",
+        "start": 15.15,
+        "end": 15.2484
+      },
+      {
+        "text": "kharouf",
+        "start": 15.2494,
+        "end": 15.718
+      },
+      {
+        "text": "literally",
+        "start": 16.24,
+        "end": 16.7229
+      },
+      {
+        "text": "a",
+        "start": 16.7239,
+        "end": 16.8324
+      },
+      {
+        "text": "sheep",
+        "start": 16.8334,
+        "end": 17.158
+      },
+      {
+        "text": "they",
+        "start": 17.757,
+        "end": 17.897
+      },
+      {
+        "text": "will",
+        "start": 17.899,
+        "end": 18.055
+      },
+      {
+        "text": "call",
+        "start": 18.057,
+        "end": 18.2871
+      },
+      {
+        "text": "you",
+        "start": 18.2881,
+        "end": 18.3912
+      },
+      {
+        "text": "a",
+        "start": 18.3922,
+        "end": 18.527
+      },
+      {
+        "text": "sheep",
+        "start": 18.528,
+        "end": 18.818
+      },
+      {
+        "text": "and",
+        "start": 19.135,
+        "end": 19.288
+      },
+      {
+        "text": "there's",
+        "start": 19.29,
+        "end": 19.508
+      },
+      {
+        "text": "like",
+        "start": 19.51,
+        "end": 19.647
+      },
+      {
+        "text": "this",
+        "start": 19.65,
+        "end": 19.876
+      },
+      {
+        "text": "inherent",
+        "start": 19.878,
+        "end": 20.379
+      },
+      {
+        "text": "fear",
+        "start": 20.381,
+        "end": 20.865
+      },
+      {
+        "text": "that's",
+        "start": 20.867,
+        "end": 21.0205
+      },
+      {
+        "text": "happening",
+        "start": 21.0215,
+        "end": 21.338
+      },
+      {
+        "text": "in",
+        "start": 21.341,
+        "end": 21.423
+      },
+      {
+        "text": "everybody's",
+        "start": 21.425,
+        "end": 21.969
+      },
+      {
+        "text": "mind",
+        "start": 21.971,
+        "end": 22.163
+      },
+      {
+        "text": "at",
+        "start": 22.165,
+        "end": 22.28
+      },
+      {
+        "text": "the",
+        "start": 22.309,
+        "end": 22.3633
+      },
+      {
+        "text": "same",
+        "start": 22.3643,
+        "end": 22.643
+      },
+      {
+        "text": "time",
+        "start": 22.645,
+        "end": 22.819
+      },
+      {
+        "text": "it's",
+        "start": 22.821,
+        "end": 22.929
+      },
+      {
+        "text": "like",
+        "start": 22.931,
+        "end": 23.16
+      },
+      {
+        "text": "i",
+        "start": 23.651,
+        "end": 23.719
+      },
+      {
+        "text": "don't",
+        "start": 23.722,
+        "end": 23.901
+      },
+      {
+        "text": "care",
+        "start": 23.915,
+        "end": 24.189
+      },
+      {
+        "text": "really",
+        "start": 24.191,
+        "end": 24.4453
+      },
+      {
+        "text": "about",
+        "start": 24.4463,
+        "end": 24.781
+      },
+      {
+        "text": "the",
+        "start": 24.838,
+        "end": 24.93
+      },
+      {
+        "text": "money",
+        "start": 24.932,
+        "end": 25.372
+      },
+      {
+        "text": "but",
+        "start": 25.704,
+        "end": 25.8783
+      },
+      {
+        "text": "i",
+        "start": 25.8793,
+        "end": 26.002
+      },
+      {
+        "text": "don't",
+        "start": 26.004,
+        "end": 26.181
+      },
+      {
+        "text": "wanna",
+        "start": 26.183,
+        "end": 26.403
+      },
+      {
+        "text": "be",
+        "start": 26.404,
+        "end": 26.4901
+      },
+      {
+        "text": "a",
+        "start": 26.4911,
+        "end": 26.5537
+      },
+      {
+        "text": "sheep",
+        "start": 26.5547,
+        "end": 26.801
+      }
+    ]
+  },
+  "2": {
+    "filename": "zencastr-en_6044eb9db82b030014de5da5-00004_35.wav",
+    "n_tokens": 109,
+    "tokens": [
+      {
+        "text": "(())",
+        "start": 0.9517,
+        "end": 1.3988
+      },
+      {
+        "text": "the",
+        "start": 1.3998,
+        "end": 1.4956
+      },
+      {
+        "text": "haggling",
+        "start": 1.4966,
+        "end": 1.924
+      },
+      {
+        "text": "used",
+        "start": 1.926,
+        "end": 2.091
+      },
+      {
+        "text": "to",
+        "start": 2.096,
+        "end": 2.15
+      },
+      {
+        "text": "happen",
+        "start": 2.152,
+        "end": 2.445
+      },
+      {
+        "text": "even",
+        "start": 2.447,
+        "end": 2.692
+      },
+      {
+        "text": "with",
+        "start": 2.694,
+        "end": 2.91
+      },
+      {
+        "text": "like",
+        "start": 2.912,
+        "end": 3.191
+      },
+      {
+        "text": "um",
+        "start": 3.2644,
+        "end": 3.51
+      },
+      {
+        "text": "it",
+        "start": 3.512,
+        "end": 3.6276
+      },
+      {
+        "text": "is",
+        "start": 3.6286,
+        "end": 3.761
+      },
+      {
+        "text": "like",
+        "start": 3.762,
+        "end": 3.9308
+      },
+      {
+        "text": "it's",
+        "start": 3.9318,
+        "end": 4.091
+      },
+      {
+        "text": "kinda",
+        "start": 4.092,
+        "end": 4.336
+      },
+      {
+        "text": "sad",
+        "start": 4.337,
+        "end": 4.665
+      },
+      {
+        "text": "cause",
+        "start": 4.686,
+        "end": 4.8491
+      },
+      {
+        "text": "you",
+        "start": 4.8501,
+        "end": 4.93
+      },
+      {
+        "text": "have",
+        "start": 4.932,
+        "end": 5.083
+      },
+      {
+        "text": "those",
+        "start": 5.085,
+        "end": 5.339
+      },
+      {
+        "text": "kids",
+        "start": 5.342,
+        "end": 5.7609
+      },
+      {
+        "text": "um",
+        "start": 5.7619,
+        "end": 6.552
+      },
+      {
+        "text": "in",
+        "start": 6.648,
+        "end": 6.811
+      },
+      {
+        "text": "those",
+        "start": 6.812,
+        "end": 7.1239
+      },
+      {
+        "text": "uh",
+        "start": 7.1249,
+        "end": 7.305
+      },
+      {
+        "text": "markets",
+        "start": 7.306,
+        "end": 7.763
+      },
+      {
+        "text": "and",
+        "start": 7.765,
+        "end": 7.8385
+      },
+      {
+        "text": "stuff",
+        "start": 7.8395,
+        "end": 8.072
+      },
+      {
+        "text": "like",
+        "start": 8.099,
+        "end": 8.34
+      },
+      {
+        "text": "that",
+        "start": 8.342,
+        "end": 8.513
+      },
+      {
+        "text": "that",
+        "start": 8.5818,
+        "end": 8.673
+      },
+      {
+        "text": "come",
+        "start": 8.694,
+        "end": 8.851
+      },
+      {
+        "text": "from",
+        "start": 8.853,
+        "end": 9.003
+      },
+      {
+        "text": "like",
+        "start": 9.005,
+        "end": 9.225
+      },
+      {
+        "text": "you",
+        "start": 9.226,
+        "end": 9.299
+      },
+      {
+        "text": "know",
+        "start": 9.301,
+        "end": 9.459
+      },
+      {
+        "text": "really",
+        "start": 9.461,
+        "end": 9.713
+      },
+      {
+        "text": "poor",
+        "start": 9.806,
+        "end": 10.0721
+      },
+      {
+        "text": "areas",
+        "start": 10.0731,
+        "end": 10.7323
+      },
+      {
+        "text": "yeah",
+        "start": 11.302,
+        "end": 11.679
+      },
+      {
+        "text": "and",
+        "start": 11.681,
+        "end": 11.7642
+      },
+      {
+        "text": "like",
+        "start": 11.7652,
+        "end": 11.9939
+      },
+      {
+        "text": "you",
+        "start": 11.9949,
+        "end": 12.073
+      },
+      {
+        "text": "know",
+        "start": 12.074,
+        "end": 12.1598
+      },
+      {
+        "text": "i",
+        "start": 12.1608,
+        "end": 12.323
+      },
+      {
+        "text": "we-",
+        "start": 12.324,
+        "end": 12.453
+      },
+      {
+        "text": "we'll",
+        "start": 12.455,
+        "end": 12.623
+      },
+      {
+        "text": "walk",
+        "start": 12.625,
+        "end": 12.8272
+      },
+      {
+        "text": "into",
+        "start": 12.8282,
+        "end": 13.187
+      },
+      {
+        "text": "that",
+        "start": 13.189,
+        "end": 13.354
+      },
+      {
+        "text": "area",
+        "start": 13.384,
+        "end": 13.6756
+      },
+      {
+        "text": "sometimes",
+        "start": 13.6766,
+        "end": 14.0565
+      },
+      {
+        "text": "it",
+        "start": 14.0575,
+        "end": 14.119
+      },
+      {
+        "text": "go",
+        "start": 14.121,
+        "end": 14.2353
+      },
+      {
+        "text": "like",
+        "start": 14.2363,
+        "end": 14.375
+      },
+      {
+        "text": "oh",
+        "start": 14.377,
+        "end": 14.5153
+      },
+      {
+        "text": "this",
+        "start": 14.5163,
+        "end": 14.6657
+      },
+      {
+        "text": "kid",
+        "start": 14.696,
+        "end": 14.913
+      },
+      {
+        "text": "like",
+        "start": 14.927,
+        "end": 15.094
+      },
+      {
+        "text": "is",
+        "start": 15.122,
+        "end": 15.223
+      },
+      {
+        "text": "selling",
+        "start": 15.225,
+        "end": 15.558
+      },
+      {
+        "text": "gum",
+        "start": 15.56,
+        "end": 15.848
+      },
+      {
+        "text": "or",
+        "start": 15.85,
+        "end": 15.9129
+      },
+      {
+        "text": "something",
+        "start": 15.9139,
+        "end": 16.2252
+      },
+      {
+        "text": "like",
+        "start": 16.2262,
+        "end": 16.413
+      },
+      {
+        "text": "that",
+        "start": 16.415,
+        "end": 16.544
+      },
+      {
+        "text": "then",
+        "start": 16.5791,
+        "end": 16.6607
+      },
+      {
+        "text": "i",
+        "start": 16.6617,
+        "end": 16.724
+      },
+      {
+        "text": "go",
+        "start": 16.726,
+        "end": 16.841
+      },
+      {
+        "text": "like",
+        "start": 16.843,
+        "end": 16.9702
+      },
+      {
+        "text": "i'm",
+        "start": 16.9712,
+        "end": 17.127
+      },
+      {
+        "text": "gonna",
+        "start": 17.129,
+        "end": 17.384
+      },
+      {
+        "text": "give",
+        "start": 17.386,
+        "end": 17.5368
+      },
+      {
+        "text": "him",
+        "start": 17.5378,
+        "end": 17.648
+      },
+      {
+        "text": "i",
+        "start": 17.651,
+        "end": 17.762
+      },
+      {
+        "text": "wanna",
+        "start": 17.763,
+        "end": 17.944
+      },
+      {
+        "text": "give",
+        "start": 17.946,
+        "end": 18.0792
+      },
+      {
+        "text": "him",
+        "start": 18.0802,
+        "end": 18.2065
+      },
+      {
+        "text": "some",
+        "start": 18.2075,
+        "end": 18.444
+      },
+      {
+        "text": "money",
+        "start": 18.446,
+        "end": 18.687
+      },
+      {
+        "text": "so",
+        "start": 19.2004,
+        "end": 19.315
+      },
+      {
+        "text": "i",
+        "start": 19.317,
+        "end": 19.4545
+      },
+      {
+        "text": "go",
+        "start": 19.4555,
+        "end": 19.704
+      },
+      {
+        "text": "over",
+        "start": 19.706,
+        "end": 20.0152
+      },
+      {
+        "text": "and",
+        "start": 20.0162,
+        "end": 20.1641
+      },
+      {
+        "text": "i",
+        "start": 20.1651,
+        "end": 20.28
+      },
+      {
+        "text": "give",
+        "start": 20.282,
+        "end": 20.505
+      },
+      {
+        "text": "him",
+        "start": 20.507,
+        "end": 20.728
+      },
+      {
+        "text": "the",
+        "start": 20.73,
+        "end": 20.825
+      },
+      {
+        "text": "money",
+        "start": 20.827,
+        "end": 21.17
+      },
+      {
+        "text": "and",
+        "start": 21.504,
+        "end": 21.625
+      },
+      {
+        "text": "then",
+        "start": 21.627,
+        "end": 21.7899
+      },
+      {
+        "text": "he",
+        "start": 21.7909,
+        "end": 21.9322
+      },
+      {
+        "text": "starts",
+        "start": 21.9332,
+        "end": 22.2589
+      },
+      {
+        "text": "haggling",
+        "start": 22.2599,
+        "end": 22.672
+      },
+      {
+        "text": "i",
+        "start": 23.171,
+        "end": 23.256
+      },
+      {
+        "text": "go",
+        "start": 23.258,
+        "end": 23.3812
+      },
+      {
+        "text": "like",
+        "start": 23.3822,
+        "end": 23.606
+      },
+      {
+        "text": "what",
+        "start": 23.863,
+        "end": 24.109
+      },
+      {
+        "text": "five",
+        "start": 24.552,
+        "end": 24.81
+      },
+      {
+        "text": "bucks",
+        "start": 24.812,
+        "end": 25.2359
+      },
+      {
+        "text": "can't",
+        "start": 26.048,
+        "end": 26.251
+      },
+      {
+        "text": "you",
+        "start": 26.253,
+        "end": 26.3884
+      },
+      {
+        "text": "give",
+        "start": 26.3894,
+        "end": 26.5568
+      },
+      {
+        "text": "me",
+        "start": 26.5578,
+        "end": 26.727
+      },
+      {
+        "text": "twenty",
+        "start": 26.729,
+        "end": 27.176
+      },
+      {
+        "text": "and",
+        "start": 27.273,
+        "end": 27.4352
+      },
+      {
+        "text": "i",
+        "start": 27.4362,
+        "end": 27.5248
+      },
+      {
+        "text": "like",
+        "start": 27.5258,
+        "end": 27.739
+      }
+    ]
+  },
+  "3": {
+    "filename": "zencastr-en_6044eb9db82b030014de5da5-00004_71.wav",
+    "n_tokens": 74,
+    "tokens": [
+      {
+        "text": "i",
+        "start": 0.7207,
+        "end": 0.819
+      },
+      {
+        "text": "mean",
+        "start": 0.821,
+        "end": 0.9711
+      },
+      {
+        "text": "like",
+        "start": 0.9721,
+        "end": 1.1292
+      },
+      {
+        "text": "(())",
+        "start": 1.1302,
+        "end": 1.294
+      },
+      {
+        "text": "you",
+        "start": 1.296,
+        "end": 1.43
+      },
+      {
+        "text": "tie",
+        "start": 1.462,
+        "end": 1.651
+      },
+      {
+        "text": "it",
+        "start": 1.653,
+        "end": 1.713
+      },
+      {
+        "text": "to",
+        "start": 1.715,
+        "end": 1.835
+      },
+      {
+        "text": "the",
+        "start": 1.837,
+        "end": 1.9996
+      },
+      {
+        "text": "system",
+        "start": 2.0006,
+        "end": 2.391
+      },
+      {
+        "text": "right",
+        "start": 2.393,
+        "end": 2.533
+      },
+      {
+        "text": "like",
+        "start": 2.559,
+        "end": 2.6868
+      },
+      {
+        "text": "imagine",
+        "start": 2.6878,
+        "end": 3.072
+      },
+      {
+        "text": "that",
+        "start": 3.074,
+        "end": 3.403
+      },
+      {
+        "text": "when",
+        "start": 3.553,
+        "end": 3.663
+      },
+      {
+        "text": "you're",
+        "start": 3.665,
+        "end": 3.888
+      },
+      {
+        "text": "pricing",
+        "start": 3.89,
+        "end": 4.294
+      },
+      {
+        "text": "the",
+        "start": 4.295,
+        "end": 4.398
+      },
+      {
+        "text": "items",
+        "start": 4.4,
+        "end": 4.785
+      },
+      {
+        "text": "in",
+        "start": 4.786,
+        "end": 4.9113
+      },
+      {
+        "text": "a",
+        "start": 4.9123,
+        "end": 5.018
+      },
+      {
+        "text": "game",
+        "start": 5.02,
+        "end": 5.194
+      },
+      {
+        "text": "you're",
+        "start": 5.196,
+        "end": 5.377
+      },
+      {
+        "text": "actually",
+        "start": 5.379,
+        "end": 5.823
+      },
+      {
+        "text": "pricing",
+        "start": 5.885,
+        "end": 6.205
+      },
+      {
+        "text": "them",
+        "start": 6.207,
+        "end": 6.352
+      },
+      {
+        "text": "a",
+        "start": 6.354,
+        "end": 6.506
+      },
+      {
+        "text": "little",
+        "start": 6.508,
+        "end": 6.76
+      },
+      {
+        "text": "bit",
+        "start": 6.762,
+        "end": 6.877
+      },
+      {
+        "text": "more",
+        "start": 6.893,
+        "end": 7.106
+      },
+      {
+        "text": "expensive",
+        "start": 7.108,
+        "end": 7.66
+      },
+      {
+        "text": "so",
+        "start": 7.662,
+        "end": 7.792
+      },
+      {
+        "text": "that",
+        "start": 7.794,
+        "end": 7.938
+      },
+      {
+        "text": "you're",
+        "start": 8.6746,
+        "end": 8.8977
+      },
+      {
+        "text": "you're",
+        "start": 8.8987,
+        "end": 9.116
+      },
+      {
+        "text": "keeping",
+        "start": 9.117,
+        "end": 9.461
+      },
+      {
+        "text": "like",
+        "start": 9.463,
+        "end": 9.667
+      },
+      {
+        "text": "a",
+        "start": 9.67,
+        "end": 9.7522
+      },
+      {
+        "text": "little",
+        "start": 9.7532,
+        "end": 9.9691
+      },
+      {
+        "text": "room",
+        "start": 9.9701,
+        "end": 10.352
+      },
+      {
+        "text": "for",
+        "start": 10.355,
+        "end": 10.53
+      },
+      {
+        "text": "for",
+        "start": 10.6821,
+        "end": 10.85
+      },
+      {
+        "text": "people",
+        "start": 10.905,
+        "end": 11.187
+      },
+      {
+        "text": "to",
+        "start": 11.189,
+        "end": 11.281
+      },
+      {
+        "text": "come",
+        "start": 11.283,
+        "end": 11.4777
+      },
+      {
+        "text": "in",
+        "start": 11.4787,
+        "end": 11.583
+      },
+      {
+        "text": "and",
+        "start": 11.584,
+        "end": 11.7056
+      },
+      {
+        "text": "haggle",
+        "start": 11.7066,
+        "end": 12.25
+      },
+      {
+        "text": "and",
+        "start": 12.252,
+        "end": 12.404
+      },
+      {
+        "text": "like",
+        "start": 12.406,
+        "end": 12.557
+      },
+      {
+        "text": "get",
+        "start": 12.559,
+        "end": 12.703
+      },
+      {
+        "text": "the",
+        "start": 12.718,
+        "end": 12.857
+      },
+      {
+        "text": "price",
+        "start": 12.859,
+        "end": 13.202
+      },
+      {
+        "text": "like",
+        "start": 13.204,
+        "end": 13.396
+      },
+      {
+        "text": "get",
+        "start": 13.398,
+        "end": 13.524
+      },
+      {
+        "text": "the",
+        "start": 13.533,
+        "end": 13.628
+      },
+      {
+        "text": "item",
+        "start": 13.631,
+        "end": 13.865
+      },
+      {
+        "text": "cheaper",
+        "start": 13.867,
+        "end": 14.124
+      },
+      {
+        "text": "and",
+        "start": 14.126,
+        "end": 14.205
+      },
+      {
+        "text": "go",
+        "start": 14.207,
+        "end": 14.311
+      },
+      {
+        "text": "like",
+        "start": 14.313,
+        "end": 14.435
+      },
+      {
+        "text": "well",
+        "start": 14.437,
+        "end": 14.5286
+      },
+      {
+        "text": "i",
+        "start": 14.5296,
+        "end": 14.652
+      },
+      {
+        "text": "got",
+        "start": 14.712,
+        "end": 14.865
+      },
+      {
+        "text": "this",
+        "start": 14.875,
+        "end": 15.026
+      },
+      {
+        "text": "a-",
+        "start": 15.073,
+        "end": 15.43
+      },
+      {
+        "text": "at",
+        "start": 15.432,
+        "end": 15.5648
+      },
+      {
+        "text": "a",
+        "start": 15.5658,
+        "end": 15.6758
+      },
+      {
+        "text": "deal",
+        "start": 15.727,
+        "end": 16.0599
+      },
+      {
+        "text": "uh",
+        "start": 16.6877,
+        "end": 16.9863
+      },
+      {
+        "text": "share",
+        "start": 17.2173,
+        "end": 17.584
+      },
+      {
+        "text": "tell",
+        "start": 17.64,
+        "end": 17.7932
+      },
+      {
+        "text": "your",
+        "start": 17.7942,
+        "end": 17.9148
+      },
+      {
+        "text": "friends",
+        "start": 17.9158,
+        "end": 18.3919
+      }
+    ]
+  },
+  "4": {
+    "filename": "zencastr-en_6044eb9db82b030014de5da5-00004_90.wav",
+    "n_tokens": 51,
+    "tokens": [
+      {
+        "text": "it'd",
+        "start": 0.0,
+        "end": 0.109
+      },
+      {
+        "text": "be",
+        "start": 0.111,
+        "end": 0.1692
+      },
+      {
+        "text": "like",
+        "start": 0.1702,
+        "end": 0.3727
+      },
+      {
+        "text": "uh",
+        "start": 0.3737,
+        "end": 0.4629
+      },
+      {
+        "text": "l",
+        "start": 0.4639,
+        "end": 0.6636
+      },
+      {
+        "text": "a",
+        "start": 0.6646,
+        "end": 0.79
+      },
+      {
+        "text": "noire",
+        "start": 0.792,
+        "end": 1.245
+      },
+      {
+        "text": "but",
+        "start": 1.247,
+        "end": 1.411
+      },
+      {
+        "text": "for",
+        "start": 1.425,
+        "end": 1.6207
+      },
+      {
+        "text": "haggling",
+        "start": 1.6217,
+        "end": 2.087
+      },
+      {
+        "text": "you",
+        "start": 2.089,
+        "end": 2.2324
+      },
+      {
+        "text": "start",
+        "start": 2.2334,
+        "end": 2.472
+      },
+      {
+        "text": "to",
+        "start": 2.476,
+        "end": 2.5699
+      },
+      {
+        "text": "like",
+        "start": 2.5709,
+        "end": 2.793
+      },
+      {
+        "text": "read",
+        "start": 2.824,
+        "end": 3.29
+      },
+      {
+        "text": "r-",
+        "start": 3.3899,
+        "end": 3.5955
+      },
+      {
+        "text": "read",
+        "start": 3.8448,
+        "end": 4.068
+      },
+      {
+        "text": "the",
+        "start": 4.07,
+        "end": 4.2275
+      },
+      {
+        "text": "(())",
+        "start": 4.2285,
+        "end": 4.4001
+      },
+      {
+        "text": "read",
+        "start": 4.4011,
+        "end": 4.574
+      },
+      {
+        "text": "the",
+        "start": 4.576,
+        "end": 4.6437
+      },
+      {
+        "text": "character",
+        "start": 4.6447,
+        "end": 4.9932
+      },
+      {
+        "text": "to",
+        "start": 4.9942,
+        "end": 5.101
+      },
+      {
+        "text": "go",
+        "start": 5.103,
+        "end": 5.2207
+      },
+      {
+        "text": "like",
+        "start": 5.2217,
+        "end": 5.371
+      },
+      {
+        "text": "oh",
+        "start": 5.372,
+        "end": 5.4971
+      },
+      {
+        "text": "i",
+        "start": 5.4981,
+        "end": 5.646
+      },
+      {
+        "text": "got",
+        "start": 5.654,
+        "end": 5.7894
+      },
+      {
+        "text": "an",
+        "start": 5.7904,
+        "end": 5.8815
+      },
+      {
+        "text": "n-",
+        "start": 5.8825,
+        "end": 6.166
+      },
+      {
+        "text": "what",
+        "start": 6.465,
+        "end": 6.5931
+      },
+      {
+        "text": "about",
+        "start": 6.5941,
+        "end": 6.917
+      },
+      {
+        "text": "my",
+        "start": 6.937,
+        "end": 7.096
+      },
+      {
+        "text": "kid",
+        "start": 7.149,
+        "end": 7.338
+      },
+      {
+        "text": "would",
+        "start": 7.356,
+        "end": 7.576
+      },
+      {
+        "text": "you",
+        "start": 7.578,
+        "end": 7.707
+      },
+      {
+        "text": "want",
+        "start": 7.709,
+        "end": 7.878
+      },
+      {
+        "text": "to",
+        "start": 7.887,
+        "end": 7.9706
+      },
+      {
+        "text": "make",
+        "start": 7.9716,
+        "end": 8.148
+      },
+      {
+        "text": "my",
+        "start": 8.15,
+        "end": 8.3
+      },
+      {
+        "text": "kid",
+        "start": 8.347,
+        "end": 8.539
+      },
+      {
+        "text": "sad",
+        "start": 8.541,
+        "end": 8.859
+      },
+      {
+        "text": "and",
+        "start": 9.071,
+        "end": 9.189
+      },
+      {
+        "text": "then",
+        "start": 9.191,
+        "end": 9.2628
+      },
+      {
+        "text": "see",
+        "start": 9.2638,
+        "end": 9.4411
+      },
+      {
+        "text": "what",
+        "start": 10.191,
+        "end": 10.362
+      },
+      {
+        "text": "they're",
+        "start": 10.364,
+        "end": 10.5009
+      },
+      {
+        "text": "gonna",
+        "start": 10.5019,
+        "end": 10.7113
+      },
+      {
+        "text": "react",
+        "start": 10.7123,
+        "end": 11.101
+      },
+      {
+        "text": "to",
+        "start": 11.131,
+        "end": 11.248
+      },
+      {
+        "text": "that",
+        "start": 11.25,
+        "end": 11.443
+      }
+    ]
+  },
+  "5": {
+    "filename": "zencastr-en_6044eb9db82b030014de5da5-00004_96.wav",
+    "n_tokens": 54,
+    "tokens": [
+      {
+        "text": "well",
+        "start": 0.018,
+        "end": 0.149
+      },
+      {
+        "text": "the",
+        "start": 0.151,
+        "end": 0.239
+      },
+      {
+        "text": "mechanic",
+        "start": 0.241,
+        "end": 0.631
+      },
+      {
+        "text": "is",
+        "start": 0.687,
+        "end": 0.9046
+      },
+      {
+        "text": "the",
+        "start": 1.258,
+        "end": 1.36
+      },
+      {
+        "text": "mechanic",
+        "start": 1.362,
+        "end": 1.68
+      },
+      {
+        "text": "is",
+        "start": 1.682,
+        "end": 1.788
+      },
+      {
+        "text": "gonna",
+        "start": 1.79,
+        "end": 1.9665
+      },
+      {
+        "text": "be",
+        "start": 1.9675,
+        "end": 2.081
+      },
+      {
+        "text": "basically",
+        "start": 2.083,
+        "end": 2.546
+      },
+      {
+        "text": "me-",
+        "start": 2.547,
+        "end": 2.6973
+      },
+      {
+        "text": "uh",
+        "start": 2.6983,
+        "end": 3.059
+      },
+      {
+        "text": "uh",
+        "start": 3.06,
+        "end": 3.2805
+      },
+      {
+        "text": "different",
+        "start": 3.2815,
+        "end": 3.6663
+      },
+      {
+        "text": "ways",
+        "start": 3.6663,
+        "end": 3.9981
+      },
+      {
+        "text": "of",
+        "start": 3.9991,
+        "end": 4.156
+      },
+      {
+        "text": "making",
+        "start": 4.159,
+        "end": 4.5053
+      },
+      {
+        "text": "an",
+        "start": 4.5063,
+        "end": 4.6329
+      },
+      {
+        "text": "offer",
+        "start": 4.6339,
+        "end": 5.053
+      },
+      {
+        "text": "and",
+        "start": 5.644,
+        "end": 5.971
+      },
+      {
+        "text": "then",
+        "start": 5.973,
+        "end": 6.477
+      },
+      {
+        "text": "another",
+        "start": 6.478,
+        "end": 7.066
+      },
+      {
+        "text": "mechanic",
+        "start": 7.067,
+        "end": 7.537
+      },
+      {
+        "text": "that",
+        "start": 7.674,
+        "end": 7.876
+      },
+      {
+        "text": "the-",
+        "start": 8.057,
+        "end": 8.674
+      },
+      {
+        "text": "needs",
+        "start": 8.676,
+        "end": 8.8371
+      },
+      {
+        "text": "to",
+        "start": 8.8908,
+        "end": 8.9418
+      },
+      {
+        "text": "simpli-",
+        "start": 8.9428,
+        "end": 9.571
+      },
+      {
+        "text": "signify",
+        "start": 9.572,
+        "end": 10.693
+      },
+      {
+        "text": "tone",
+        "start": 10.758,
+        "end": 11.025
+      },
+      {
+        "text": "right",
+        "start": 11.589,
+        "end": 11.799
+      },
+      {
+        "text": "so",
+        "start": 12.205,
+        "end": 12.4818
+      },
+      {
+        "text": "like",
+        "start": 12.4828,
+        "end": 12.74
+      },
+      {
+        "text": "ah",
+        "start": 12.937,
+        "end": 13.07
+      },
+      {
+        "text": "this",
+        "start": 13.072,
+        "end": 13.287
+      },
+      {
+        "text": "offer",
+        "start": 13.289,
+        "end": 13.859
+      },
+      {
+        "text": "friendly",
+        "start": 14.276,
+        "end": 14.801
+      },
+      {
+        "text": "this",
+        "start": 14.919,
+        "end": 15.147
+      },
+      {
+        "text": "offer",
+        "start": 15.149,
+        "end": 15.5965
+      },
+      {
+        "text": "aggressive",
+        "start": 15.5975,
+        "end": 16.182
+      },
+      {
+        "text": "and",
+        "start": 17.066,
+        "end": 17.292
+      },
+      {
+        "text": "like",
+        "start": 17.294,
+        "end": 17.483
+      },
+      {
+        "text": "based",
+        "start": 17.485,
+        "end": 17.783
+      },
+      {
+        "text": "on",
+        "start": 17.785,
+        "end": 17.982
+      },
+      {
+        "text": "the",
+        "start": 17.984,
+        "end": 18.101
+      },
+      {
+        "text": "tone",
+        "start": 18.103,
+        "end": 18.2912
+      },
+      {
+        "text": "of",
+        "start": 18.2922,
+        "end": 18.414
+      },
+      {
+        "text": "the",
+        "start": 18.416,
+        "end": 18.5269
+      },
+      {
+        "text": "conversation",
+        "start": 18.5279,
+        "end": 19.367
+      },
+      {
+        "text": "those",
+        "start": 19.369,
+        "end": 19.56
+      },
+      {
+        "text": "kinda",
+        "start": 19.563,
+        "end": 19.8003
+      },
+      {
+        "text": "like",
+        "start": 19.8013,
+        "end": 20.025
+      },
+      {
+        "text": "even",
+        "start": 20.041,
+        "end": 20.3307
+      },
+      {
+        "text": "out",
+        "start": 20.3317,
+        "end": 20.563
+      }
+    ]
+  },
+  "6": {
+    "filename": "zencastr-en_6049f1bff79637001585bcfa-00000_21.wav",
+    "n_tokens": 54,
+    "tokens": [
+      {
+        "text": "there",
+        "start": 0.501,
+        "end": 0.6112
+      },
+      {
+        "text": "was",
+        "start": 0.6122,
+        "end": 0.8116
+      },
+      {
+        "text": "s-",
+        "start": 0.8126,
+        "end": 1.11
+      },
+      {
+        "text": "uh",
+        "start": 1.111,
+        "end": 1.3067
+      },
+      {
+        "text": "uh",
+        "start": 1.3077,
+        "end": 1.4325
+      },
+      {
+        "text": "sad",
+        "start": 1.4335,
+        "end": 1.693
+      },
+      {
+        "text": "news",
+        "start": 1.704,
+        "end": 2.076
+      },
+      {
+        "text": "last",
+        "start": 2.083,
+        "end": 2.361
+      },
+      {
+        "text": "week",
+        "start": 2.402,
+        "end": 2.643
+      },
+      {
+        "text": "among",
+        "start": 2.644,
+        "end": 2.904
+      },
+      {
+        "text": "this",
+        "start": 2.906,
+        "end": 3.078
+      },
+      {
+        "text": "hilarity",
+        "start": 3.08,
+        "end": 3.5298
+      },
+      {
+        "text": "of",
+        "start": 3.5308,
+        "end": 3.645
+      },
+      {
+        "text": "uh",
+        "start": 3.7978,
+        "end": 3.9935
+      },
+      {
+        "text": "uh",
+        "start": 3.9945,
+        "end": 4.1207
+      },
+      {
+        "text": "hilarity",
+        "start": 4.1217,
+        "end": 4.477
+      },
+      {
+        "text": "of",
+        "start": 4.479,
+        "end": 4.576
+      },
+      {
+        "text": "lady",
+        "start": 4.578,
+        "end": 4.835
+      },
+      {
+        "text": "gaga",
+        "start": 4.837,
+        "end": 5.227
+      },
+      {
+        "text": "that",
+        "start": 5.229,
+        "end": 5.339
+      },
+      {
+        "text": "ex",
+        "start": 5.602,
+        "end": 5.814
+      },
+      {
+        "text": "borough",
+        "start": 5.888,
+        "end": 6.181
+      },
+      {
+        "text": "keeper",
+        "start": 6.183,
+        "end": 6.5109
+      },
+      {
+        "text": "willie",
+        "start": 6.5119,
+        "end": 6.79
+      },
+      {
+        "text": "wiggum",
+        "start": 6.793,
+        "end": 7.106
+      },
+      {
+        "text": "has",
+        "start": 7.408,
+        "end": 7.5835
+      },
+      {
+        "text": "died",
+        "start": 7.619,
+        "end": 7.903
+      },
+      {
+        "text": "was",
+        "start": 8.268,
+        "end": 8.383
+      },
+      {
+        "text": "there",
+        "start": 8.385,
+        "end": 8.4875
+      },
+      {
+        "text": "any",
+        "start": 8.4885,
+        "end": 8.705
+      },
+      {
+        "text": "truth",
+        "start": 8.756,
+        "end": 9.0561
+      },
+      {
+        "text": "in",
+        "start": 9.0571,
+        "end": 9.164
+      },
+      {
+        "text": "those",
+        "start": 9.166,
+        "end": 9.411
+      },
+      {
+        "text": "stories",
+        "start": 9.413,
+        "end": 9.871
+      },
+      {
+        "text": "that",
+        "start": 9.873,
+        "end": 10.006
+      },
+      {
+        "text": "he",
+        "start": 10.008,
+        "end": 10.102
+      },
+      {
+        "text": "used",
+        "start": 10.104,
+        "end": 10.267
+      },
+      {
+        "text": "to",
+        "start": 10.282,
+        "end": 10.337
+      },
+      {
+        "text": "take",
+        "start": 10.339,
+        "end": 10.5614
+      },
+      {
+        "text": "a",
+        "start": 10.5624,
+        "end": 10.6375
+      },
+      {
+        "text": "drag",
+        "start": 10.666,
+        "end": 11.0047
+      },
+      {
+        "text": "on",
+        "start": 11.192,
+        "end": 11.3293
+      },
+      {
+        "text": "cigarettes",
+        "start": 11.3303,
+        "end": 11.9412
+      },
+      {
+        "text": "offered",
+        "start": 11.9422,
+        "end": 12.1812
+      },
+      {
+        "text": "to",
+        "start": 12.2022,
+        "end": 12.2772
+      },
+      {
+        "text": "him",
+        "start": 12.2782,
+        "end": 12.451
+      },
+      {
+        "text": "by",
+        "start": 12.454,
+        "end": 12.6165
+      },
+      {
+        "text": "fans",
+        "start": 12.6175,
+        "end": 12.96
+      },
+      {
+        "text": "behind",
+        "start": 12.962,
+        "end": 13.271
+      },
+      {
+        "text": "the",
+        "start": 13.273,
+        "end": 13.382
+      },
+      {
+        "text": "goal",
+        "start": 13.384,
+        "end": 13.661
+      },
+      {
+        "text": "do",
+        "start": 13.663,
+        "end": 13.7302
+      },
+      {
+        "text": "you",
+        "start": 13.7312,
+        "end": 13.8218
+      },
+      {
+        "text": "think",
+        "start": 13.8718,
+        "end": 13.96
+      }
+    ]
+  },
+  "7": {
+    "filename": "zencastr-en_6049f1bff79637001585bcfa-00000_29.wav",
+    "n_tokens": 45,
+    "tokens": [
+      {
+        "text": "yes",
+        "start": 0.015,
+        "end": 0.5482
+      },
+      {
+        "text": "yeah",
+        "start": 0.704,
+        "end": 1.0441
+      },
+      {
+        "text": "indeed",
+        "start": 1.0825,
+        "end": 1.5861
+      },
+      {
+        "text": "yeah",
+        "start": 2.065,
+        "end": 2.4359
+      },
+      {
+        "text": "y-",
+        "start": 2.4369,
+        "end": 2.6082
+      },
+      {
+        "text": "this",
+        "start": 4.8165,
+        "end": 5.0517
+      },
+      {
+        "text": "pe-",
+        "start": 5.0527,
+        "end": 5.3201
+      },
+      {
+        "text": "uh",
+        "start": 5.3211,
+        "end": 5.6346
+      },
+      {
+        "text": "pe-",
+        "start": 5.6356,
+        "end": 5.9046
+      },
+      {
+        "text": "perfect",
+        "start": 5.9056,
+        "end": 6.4484
+      },
+      {
+        "text": "perfect",
+        "start": 6.475,
+        "end": 7.0858
+      },
+      {
+        "text": "yeah",
+        "start": 7.0868,
+        "end": 7.344
+      },
+      {
+        "text": "uh",
+        "start": 7.346,
+        "end": 7.5469
+      },
+      {
+        "text": "i",
+        "start": 7.8025,
+        "end": 7.9943
+      },
+      {
+        "text": "read",
+        "start": 7.9953,
+        "end": 8.177
+      },
+      {
+        "text": "when",
+        "start": 8.239,
+        "end": 8.406
+      },
+      {
+        "text": "when",
+        "start": 8.407,
+        "end": 8.511
+      },
+      {
+        "text": "he",
+        "start": 8.512,
+        "end": 8.5646
+      },
+      {
+        "text": "signed",
+        "start": 8.5656,
+        "end": 8.841
+      },
+      {
+        "text": "for",
+        "start": 8.842,
+        "end": 8.992
+      },
+      {
+        "text": "borough",
+        "start": 8.994,
+        "end": 9.286
+      },
+      {
+        "text": "the",
+        "start": 9.288,
+        "end": 9.4771
+      },
+      {
+        "text": "uh",
+        "start": 9.4781,
+        "end": 9.7736
+      },
+      {
+        "text": "coach",
+        "start": 9.907,
+        "end": 10.357
+      },
+      {
+        "text": "loads",
+        "start": 10.359,
+        "end": 10.6525
+      },
+      {
+        "text": "of",
+        "start": 10.6535,
+        "end": 10.767
+      },
+      {
+        "text": "falkirk",
+        "start": 10.769,
+        "end": 11.219
+      },
+      {
+        "text": "fans",
+        "start": 11.2301,
+        "end": 11.559
+      },
+      {
+        "text": "came",
+        "start": 11.561,
+        "end": 11.773
+      },
+      {
+        "text": "to",
+        "start": 11.775,
+        "end": 11.8328
+      },
+      {
+        "text": "see",
+        "start": 11.8338,
+        "end": 12.0565
+      },
+      {
+        "text": "his",
+        "start": 12.0575,
+        "end": 12.2145
+      },
+      {
+        "text": "debut",
+        "start": 12.229,
+        "end": 12.682
+      },
+      {
+        "text": "which",
+        "start": 12.753,
+        "end": 12.943
+      },
+      {
+        "text": "is",
+        "start": 12.945,
+        "end": 13.0563
+      },
+      {
+        "text": "a",
+        "start": 13.0573,
+        "end": 13.0892
+      },
+      {
+        "text": "fine",
+        "start": 13.0902,
+        "end": 13.427
+      },
+      {
+        "text": "thing",
+        "start": 13.429,
+        "end": 13.61
+      },
+      {
+        "text": "travelling",
+        "start": 13.849,
+        "end": 14.201
+      },
+      {
+        "text": "to",
+        "start": 14.206,
+        "end": 14.2579
+      },
+      {
+        "text": "watch",
+        "start": 14.2589,
+        "end": 14.474
+      },
+      {
+        "text": "a",
+        "start": 14.476,
+        "end": 14.534
+      },
+      {
+        "text": "goalkeeper",
+        "start": 14.536,
+        "end": 15.071
+      },
+      {
+        "text": "in",
+        "start": 15.073,
+        "end": 15.114
+      },
+      {
+        "text": "action",
+        "start": 15.1147,
+        "end": 15.45
+      }
+    ]
+  },
+  "8": {
+    "filename": "zencastr-en_6049f1bff79637001585bcfa-00000_32.wav",
+    "n_tokens": 69,
+    "tokens": [
+      {
+        "text": "yeah",
+        "start": 0.035,
+        "end": 0.4194
+      },
+      {
+        "text": "as",
+        "start": 1.2619,
+        "end": 1.443
+      },
+      {
+        "text": "per",
+        "start": 1.494,
+        "end": 1.68
+      },
+      {
+        "text": "an",
+        "start": 1.681,
+        "end": 1.7411
+      },
+      {
+        "text": "old",
+        "start": 1.7421,
+        "end": 1.8934
+      },
+      {
+        "text": "harry",
+        "start": 1.8944,
+        "end": 2.252
+      },
+      {
+        "text": "pearson",
+        "start": 2.254,
+        "end": 2.651
+      },
+      {
+        "text": "column",
+        "start": 2.653,
+        "end": 2.8813
+      },
+      {
+        "text": "in",
+        "start": 2.8823,
+        "end": 2.9785
+      },
+      {
+        "text": "when",
+        "start": 2.9795,
+        "end": 3.158
+      },
+      {
+        "text": "saturday",
+        "start": 3.1643,
+        "end": 3.594
+      },
+      {
+        "text": "comes",
+        "start": 3.6498,
+        "end": 4.1187
+      },
+      {
+        "text": "we",
+        "start": 7.774,
+        "end": 7.9069
+      },
+      {
+        "text": "had",
+        "start": 7.9079,
+        "end": 8.0503
+      },
+      {
+        "text": "a",
+        "start": 8.0513,
+        "end": 8.134
+      },
+      {
+        "text": "plasterer",
+        "start": 8.194,
+        "end": 8.906
+      },
+      {
+        "text": "who",
+        "start": 8.95,
+        "end": 9.253
+      },
+      {
+        "text": "really",
+        "start": 9.346,
+        "end": 9.678
+      },
+      {
+        "text": "looked",
+        "start": 9.679,
+        "end": 9.81
+      },
+      {
+        "text": "like",
+        "start": 9.811,
+        "end": 10.2017
+      },
+      {
+        "text": "willie",
+        "start": 10.2027,
+        "end": 10.512
+      },
+      {
+        "text": "wiggum",
+        "start": 10.514,
+        "end": 10.862
+      },
+      {
+        "text": "and",
+        "start": 11.288,
+        "end": 11.3605
+      },
+      {
+        "text": "i",
+        "start": 11.3615,
+        "end": 11.52
+      },
+      {
+        "text": "never",
+        "start": 11.529,
+        "end": 11.826
+      },
+      {
+        "text": "plucked",
+        "start": 11.8801,
+        "end": 12.0932
+      },
+      {
+        "text": "up",
+        "start": 12.0942,
+        "end": 12.187
+      },
+      {
+        "text": "the",
+        "start": 12.189,
+        "end": 12.286
+      },
+      {
+        "text": "courage",
+        "start": 12.288,
+        "end": 12.89
+      },
+      {
+        "text": "the",
+        "start": 12.923,
+        "end": 12.9775
+      },
+      {
+        "text": "courage",
+        "start": 12.9785,
+        "end": 13.3289
+      },
+      {
+        "text": "to",
+        "start": 13.3562,
+        "end": 13.4532
+      },
+      {
+        "text": "say",
+        "start": 13.4542,
+        "end": 13.727
+      },
+      {
+        "text": "and",
+        "start": 13.728,
+        "end": 13.9539
+      },
+      {
+        "text": "before",
+        "start": 14.172,
+        "end": 14.483
+      },
+      {
+        "text": "i",
+        "start": 14.485,
+        "end": 14.615
+      },
+      {
+        "text": "did",
+        "start": 14.617,
+        "end": 14.798
+      },
+      {
+        "text": "manage",
+        "start": 14.8,
+        "end": 15.134
+      },
+      {
+        "text": "to",
+        "start": 15.136,
+        "end": 15.1877
+      },
+      {
+        "text": "say",
+        "start": 15.1887,
+        "end": 15.3595
+      },
+      {
+        "text": "anything",
+        "start": 15.3605,
+        "end": 15.75
+      },
+      {
+        "text": "to",
+        "start": 15.814,
+        "end": 15.945
+      },
+      {
+        "text": "him",
+        "start": 15.947,
+        "end": 16.061
+      },
+      {
+        "text": "he",
+        "start": 16.335,
+        "end": 16.454
+      },
+      {
+        "text": "was",
+        "start": 16.456,
+        "end": 16.664
+      },
+      {
+        "text": "taken",
+        "start": 16.781,
+        "end": 17.094
+      },
+      {
+        "text": "off",
+        "start": 17.095,
+        "end": 17.274
+      },
+      {
+        "text": "the",
+        "start": 17.276,
+        "end": 17.35
+      },
+      {
+        "text": "job",
+        "start": 17.352,
+        "end": 17.561
+      },
+      {
+        "text": "by",
+        "start": 17.663,
+        "end": 17.868
+      },
+      {
+        "text": "the",
+        "start": 17.893,
+        "end": 18.0761
+      },
+      {
+        "text": "uh",
+        "start": 18.0771,
+        "end": 18.254
+      },
+      {
+        "text": "the",
+        "start": 18.403,
+        "end": 18.476
+      },
+      {
+        "text": "gaffer",
+        "start": 18.567,
+        "end": 19.005
+      },
+      {
+        "text": "um",
+        "start": 19.472,
+        "end": 20.05
+      },
+      {
+        "text": "because",
+        "start": 20.156,
+        "end": 20.4538
+      },
+      {
+        "text": "in",
+        "start": 20.4548,
+        "end": 20.5588
+      },
+      {
+        "text": "his",
+        "start": 20.5598,
+        "end": 20.778
+      },
+      {
+        "text": "words",
+        "start": 20.78,
+        "end": 21.038
+      },
+      {
+        "text": "he'd",
+        "start": 21.086,
+        "end": 21.277
+      },
+      {
+        "text": "grown",
+        "start": 21.308,
+        "end": 21.526
+      },
+      {
+        "text": "too",
+        "start": 21.562,
+        "end": 21.7667
+      },
+      {
+        "text": "fond",
+        "start": 21.7677,
+        "end": 22.1508
+      },
+      {
+        "text": "of",
+        "start": 22.1518,
+        "end": 22.477
+      },
+      {
+        "text": "opening",
+        "start": 22.553,
+        "end": 22.957
+      },
+      {
+        "text": "cans",
+        "start": 22.991,
+        "end": 23.37
+      },
+      {
+        "text": "in",
+        "start": 23.372,
+        "end": 23.516
+      },
+      {
+        "text": "the",
+        "start": 23.518,
+        "end": 23.598
+      },
+      {
+        "text": "morning",
+        "start": 23.599,
+        "end": 24.013
+      }
+    ]
+  },
+  "9": {
+    "filename": "zencastr-en_6049f1bff79637001585bcfa-00001_53.wav",
+    "n_tokens": 38,
+    "tokens": [
+      {
+        "text": "i",
+        "start": 0.004,
+        "end": 0.1671
+      },
+      {
+        "text": "i've",
+        "start": 0.1681,
+        "end": 0.4772
+      },
+      {
+        "text": "uh",
+        "start": 0.5971,
+        "end": 0.6938
+      },
+      {
+        "text": "i",
+        "start": 0.6948,
+        "end": 0.9672
+      },
+      {
+        "text": "i",
+        "start": 1.022,
+        "end": 1.2037
+      },
+      {
+        "text": "feel",
+        "start": 1.2047,
+        "end": 1.482
+      },
+      {
+        "text": "like",
+        "start": 1.484,
+        "end": 1.672
+      },
+      {
+        "text": "that",
+        "start": 1.674,
+        "end": 1.823
+      },
+      {
+        "text": "harry",
+        "start": 1.825,
+        "end": 2.064
+      },
+      {
+        "text": "and",
+        "start": 2.066,
+        "end": 2.174
+      },
+      {
+        "text": "i'm",
+        "start": 2.176,
+        "end": 2.318
+      },
+      {
+        "text": "glad",
+        "start": 2.32,
+        "end": 2.492
+      },
+      {
+        "text": "you",
+        "start": 2.494,
+        "end": 2.664
+      },
+      {
+        "text": "took",
+        "start": 2.692,
+        "end": 2.95
+      },
+      {
+        "text": "your",
+        "start": 3.275,
+        "end": 3.41
+      },
+      {
+        "text": "turn",
+        "start": 3.412,
+        "end": 3.657
+      },
+      {
+        "text": "in",
+        "start": 3.659,
+        "end": 3.7615
+      },
+      {
+        "text": "saying",
+        "start": 3.7625,
+        "end": 4.0483
+      },
+      {
+        "text": "cause",
+        "start": 4.0493,
+        "end": 4.1704
+      },
+      {
+        "text": "a-",
+        "start": 4.1714,
+        "end": 4.2496
+      },
+      {
+        "text": "andy",
+        "start": 4.28,
+        "end": 4.623
+      },
+      {
+        "text": "can",
+        "start": 4.625,
+        "end": 4.896
+      },
+      {
+        "text": "pronounce",
+        "start": 4.9219,
+        "end": 5.3469
+      },
+      {
+        "text": "it",
+        "start": 5.3479,
+        "end": 5.483
+      },
+      {
+        "text": "and",
+        "start": 5.5276,
+        "end": 5.742
+      },
+      {
+        "text": "proudly",
+        "start": 5.744,
+        "end": 6.118
+      },
+      {
+        "text": "does",
+        "start": 6.12,
+        "end": 6.4192
+      },
+      {
+        "text": "on",
+        "start": 6.653,
+        "end": 6.785
+      },
+      {
+        "text": "regular",
+        "start": 6.787,
+        "end": 7.1648
+      },
+      {
+        "text": "occasions",
+        "start": 7.1658,
+        "end": 7.674
+      },
+      {
+        "text": "but",
+        "start": 7.676,
+        "end": 7.7888
+      },
+      {
+        "text": "i",
+        "start": 8.0535,
+        "end": 8.2825
+      },
+      {
+        "text": "i",
+        "start": 8.358,
+        "end": 8.615
+      },
+      {
+        "text": "i",
+        "start": 8.9,
+        "end": 9.045
+      },
+      {
+        "text": "don't",
+        "start": 9.047,
+        "end": 9.228
+      },
+      {
+        "text": "dare",
+        "start": 9.23,
+        "end": 9.383
+      },
+      {
+        "text": "go",
+        "start": 9.385,
+        "end": 9.528
+      },
+      {
+        "text": "yeah",
+        "start": 9.824,
+        "end": 9.948
+      }
+    ]
+  },
+  "10": {
+    "filename": "zencastr-en_6062e18ef796370015878d9f-00001_33.wav",
+    "n_tokens": 28,
+    "tokens": [
+      {
+        "text": "oh",
+        "start": 0.789,
+        "end": 1.305
+      },
+      {
+        "text": "that's",
+        "start": 1.352,
+        "end": 1.595
+      },
+      {
+        "text": "insane",
+        "start": 1.598,
+        "end": 1.993
+      },
+      {
+        "text": "yeah",
+        "start": 2.138,
+        "end": 2.434
+      },
+      {
+        "text": "i",
+        "start": 2.518,
+        "end": 2.609
+      },
+      {
+        "text": "forget",
+        "start": 2.695,
+        "end": 2.8635
+      },
+      {
+        "text": "about",
+        "start": 2.8645,
+        "end": 3.074
+      },
+      {
+        "text": "that",
+        "start": 3.097,
+        "end": 3.279
+      },
+      {
+        "text": "who",
+        "start": 4.29,
+        "end": 4.439
+      },
+      {
+        "text": "is",
+        "start": 4.441,
+        "end": 4.819
+      },
+      {
+        "text": "in",
+        "start": 4.855,
+        "end": 4.978
+      },
+      {
+        "text": "terms",
+        "start": 4.98,
+        "end": 5.29
+      },
+      {
+        "text": "of",
+        "start": 5.291,
+        "end": 5.457
+      },
+      {
+        "text": "there's",
+        "start": 5.571,
+        "end": 5.787
+      },
+      {
+        "text": "three",
+        "start": 5.789,
+        "end": 6.007
+      },
+      {
+        "text": "teams",
+        "start": 6.009,
+        "end": 6.266
+      },
+      {
+        "text": "in",
+        "start": 6.268,
+        "end": 6.348
+      },
+      {
+        "text": "this",
+        "start": 6.35,
+        "end": 6.517
+      },
+      {
+        "text": "trade",
+        "start": 6.519,
+        "end": 6.916
+      },
+      {
+        "text": "who",
+        "start": 6.986,
+        "end": 7.149
+      },
+      {
+        "text": "came",
+        "start": 7.151,
+        "end": 7.369
+      },
+      {
+        "text": "first",
+        "start": 7.371,
+        "end": 7.599
+      },
+      {
+        "text": "who",
+        "start": 7.601,
+        "end": 7.744
+      },
+      {
+        "text": "came",
+        "start": 7.746,
+        "end": 7.953
+      },
+      {
+        "text": "second",
+        "start": 7.971,
+        "end": 8.173
+      },
+      {
+        "text": "who",
+        "start": 8.175,
+        "end": 8.271
+      },
+      {
+        "text": "came",
+        "start": 8.273,
+        "end": 8.44
+      },
+      {
+        "text": "last",
+        "start": 8.442,
+        "end": 8.59
+      }
+    ]
+  },
+  "11": {
+    "filename": "zencastr-en_606b213bf79637001587fcad-00002_42.wav",
+    "n_tokens": 62,
+    "tokens": [
+      {
+        "text": "so",
+        "start": 0.0,
+        "end": 0.189
+      },
+      {
+        "text": "time",
+        "start": 0.195,
+        "end": 0.539
+      },
+      {
+        "text": "and",
+        "start": 0.541,
+        "end": 0.693
+      },
+      {
+        "text": "oh",
+        "start": 1.133,
+        "end": 1.294
+      },
+      {
+        "text": "sorry",
+        "start": 1.428,
+        "end": 1.71
+      },
+      {
+        "text": "i",
+        "start": 3.4789,
+        "end": 3.5661
+      },
+      {
+        "text": "was",
+        "start": 3.5671,
+        "end": 3.662
+      },
+      {
+        "text": "just",
+        "start": 3.664,
+        "end": 3.813
+      },
+      {
+        "text": "gonna",
+        "start": 3.822,
+        "end": 3.9981
+      },
+      {
+        "text": "say",
+        "start": 3.9991,
+        "end": 4.1591
+      },
+      {
+        "text": "so",
+        "start": 4.1601,
+        "end": 4.342
+      },
+      {
+        "text": "time",
+        "start": 4.355,
+        "end": 4.6881
+      },
+      {
+        "text": "in",
+        "start": 4.6891,
+        "end": 4.7948
+      },
+      {
+        "text": "front",
+        "start": 4.7958,
+        "end": 5.0757
+      },
+      {
+        "text": "of",
+        "start": 5.0767,
+        "end": 5.2314
+      },
+      {
+        "text": "the",
+        "start": 5.2324,
+        "end": 5.342
+      },
+      {
+        "text": "t",
+        "start": 5.344,
+        "end": 5.642
+      },
+      {
+        "text": "v",
+        "start": 5.644,
+        "end": 5.958
+      },
+      {
+        "text": "was",
+        "start": 5.96,
+        "end": 6.203
+      },
+      {
+        "text": "sort",
+        "start": 6.205,
+        "end": 6.4356
+      },
+      {
+        "text": "of",
+        "start": 6.4366,
+        "end": 6.623
+      },
+      {
+        "text": "s-",
+        "start": 7.71,
+        "end": 7.816
+      },
+      {
+        "text": "specific",
+        "start": 8.071,
+        "end": 8.9611
+      },
+      {
+        "text": "a-",
+        "start": 8.9621,
+        "end": 9.096
+      },
+      {
+        "text": "and",
+        "start": 9.097,
+        "end": 9.4997
+      },
+      {
+        "text": "and",
+        "start": 9.5007,
+        "end": 9.8437
+      },
+      {
+        "text": "you",
+        "start": 10.617,
+        "end": 10.727
+      },
+      {
+        "text": "know",
+        "start": 10.729,
+        "end": 10.976
+      },
+      {
+        "text": "watched",
+        "start": 11.698,
+        "end": 12.3537
+      },
+      {
+        "text": "to",
+        "start": 12.3547,
+        "end": 12.4503
+      },
+      {
+        "text": "let",
+        "start": 12.4513,
+        "end": 12.602
+      },
+      {
+        "text": "him",
+        "start": 12.603,
+        "end": 12.787
+      },
+      {
+        "text": "while",
+        "start": 12.788,
+        "end": 13.029
+      },
+      {
+        "text": "watching",
+        "start": 13.031,
+        "end": 13.4035
+      },
+      {
+        "text": "over",
+        "start": 13.4045,
+        "end": 13.5732
+      },
+      {
+        "text": "your",
+        "start": 13.5742,
+        "end": 13.7154
+      },
+      {
+        "text": "shoulder",
+        "start": 13.7164,
+        "end": 14.244
+      },
+      {
+        "text": "but",
+        "start": 14.246,
+        "end": 14.37
+      },
+      {
+        "text": "then",
+        "start": 14.373,
+        "end": 14.4926
+      },
+      {
+        "text": "i",
+        "start": 14.4936,
+        "end": 14.714
+      },
+      {
+        "text": "imagine",
+        "start": 14.716,
+        "end": 15.24
+      },
+      {
+        "text": "rest",
+        "start": 15.242,
+        "end": 15.515
+      },
+      {
+        "text": "of",
+        "start": 15.517,
+        "end": 15.631
+      },
+      {
+        "text": "your",
+        "start": 15.633,
+        "end": 15.798
+      },
+      {
+        "text": "time",
+        "start": 15.8,
+        "end": 16.099
+      },
+      {
+        "text": "awake",
+        "start": 16.1,
+        "end": 16.487
+      },
+      {
+        "text": "was",
+        "start": 16.51,
+        "end": 16.663
+      },
+      {
+        "text": "spent",
+        "start": 16.665,
+        "end": 17.066
+      },
+      {
+        "text": "thinking",
+        "start": 17.502,
+        "end": 17.8112
+      },
+      {
+        "text": "about",
+        "start": 17.8122,
+        "end": 18.096
+      },
+      {
+        "text": "when",
+        "start": 18.098,
+        "end": 18.263
+      },
+      {
+        "text": "you",
+        "start": 18.266,
+        "end": 18.42
+      },
+      {
+        "text": "could",
+        "start": 18.422,
+        "end": 18.5371
+      },
+      {
+        "text": "be",
+        "start": 18.5381,
+        "end": 18.616
+      },
+      {
+        "text": "in",
+        "start": 18.617,
+        "end": 18.722
+      },
+      {
+        "text": "front",
+        "start": 18.78,
+        "end": 18.868
+      },
+      {
+        "text": "of",
+        "start": 18.869,
+        "end": 18.969
+      },
+      {
+        "text": "the",
+        "start": 18.971,
+        "end": 19.0457
+      },
+      {
+        "text": "television",
+        "start": 19.0467,
+        "end": 19.5024
+      },
+      {
+        "text": "again",
+        "start": 19.5034,
+        "end": 19.906
+      },
+      {
+        "text": "is",
+        "start": 20.358,
+        "end": 20.445
+      },
+      {
+        "text": "that",
+        "start": 20.447,
+        "end": 20.683
+      }
+    ]
+  },
+  "12": {
+    "filename": "zencastr-en_606b213bf79637001587fcad-00002_53.wav",
+    "n_tokens": 74,
+    "tokens": [
+      {
+        "text": "that",
+        "start": 0.047,
+        "end": 0.21
+      },
+      {
+        "text": "she",
+        "start": 0.213,
+        "end": 0.561
+      },
+      {
+        "text": "or",
+        "start": 0.584,
+        "end": 0.756
+      },
+      {
+        "text": "to",
+        "start": 0.763,
+        "end": 0.928
+      },
+      {
+        "text": "like",
+        "start": 0.929,
+        "end": 1.112
+      },
+      {
+        "text": "insinuate",
+        "start": 1.176,
+        "end": 1.899
+      },
+      {
+        "text": "that",
+        "start": 1.901,
+        "end": 2.0011
+      },
+      {
+        "text": "a",
+        "start": 2.0021,
+        "end": 2.137
+      },
+      {
+        "text": "girl",
+        "start": 2.139,
+        "end": 2.46
+      },
+      {
+        "text": "is",
+        "start": 2.462,
+        "end": 2.551
+      },
+      {
+        "text": "also",
+        "start": 2.552,
+        "end": 2.919
+      },
+      {
+        "text": "doing",
+        "start": 2.9662,
+        "end": 3.2212
+      },
+      {
+        "text": "it",
+        "start": 3.231,
+        "end": 3.366
+      },
+      {
+        "text": "it's",
+        "start": 3.368,
+        "end": 3.539
+      },
+      {
+        "text": "like",
+        "start": 3.541,
+        "end": 3.698
+      },
+      {
+        "text": "they're",
+        "start": 3.7,
+        "end": 3.8532
+      },
+      {
+        "text": "all",
+        "start": 3.8542,
+        "end": 4.204
+      },
+      {
+        "text": "doing",
+        "start": 4.227,
+        "end": 4.6099
+      },
+      {
+        "text": "it",
+        "start": 4.6109,
+        "end": 5.046
+      },
+      {
+        "text": "but",
+        "start": 5.145,
+        "end": 5.5826
+      },
+      {
+        "text": "it's",
+        "start": 5.774,
+        "end": 5.992
+      },
+      {
+        "text": "this",
+        "start": 5.994,
+        "end": 6.164
+      },
+      {
+        "text": "cloak",
+        "start": 6.313,
+        "end": 6.8009
+      },
+      {
+        "text": "right",
+        "start": 6.8019,
+        "end": 7.02
+      },
+      {
+        "text": "that",
+        "start": 7.039,
+        "end": 7.174
+      },
+      {
+        "text": "we",
+        "start": 7.176,
+        "end": 7.2784
+      },
+      {
+        "text": "live",
+        "start": 7.2794,
+        "end": 7.4741
+      },
+      {
+        "text": "under",
+        "start": 7.4751,
+        "end": 7.713
+      },
+      {
+        "text": "that's",
+        "start": 7.715,
+        "end": 7.913
+      },
+      {
+        "text": "like",
+        "start": 7.915,
+        "end": 8.062
+      },
+      {
+        "text": "no",
+        "start": 8.065,
+        "end": 8.182
+      },
+      {
+        "text": "no",
+        "start": 8.184,
+        "end": 8.434
+      },
+      {
+        "text": "girls",
+        "start": 8.493,
+        "end": 8.744
+      },
+      {
+        "text": "aren't",
+        "start": 8.746,
+        "end": 8.8839
+      },
+      {
+        "text": "allowed",
+        "start": 8.8849,
+        "end": 9.214
+      },
+      {
+        "text": "to",
+        "start": 9.216,
+        "end": 9.462
+      },
+      {
+        "text": "((ever))",
+        "start": 9.722,
+        "end": 10.697
+      },
+      {
+        "text": "do",
+        "start": 10.765,
+        "end": 10.8649
+      },
+      {
+        "text": "anything",
+        "start": 10.8659,
+        "end": 11.189
+      },
+      {
+        "text": "for",
+        "start": 11.191,
+        "end": 11.341
+      },
+      {
+        "text": "themselves",
+        "start": 11.343,
+        "end": 12.04
+      },
+      {
+        "text": "but",
+        "start": 12.625,
+        "end": 12.78
+      },
+      {
+        "text": "you're",
+        "start": 12.782,
+        "end": 13.1
+      },
+      {
+        "text": "like",
+        "start": 13.102,
+        "end": 13.301
+      },
+      {
+        "text": "watching",
+        "start": 13.616,
+        "end": 14.235
+      },
+      {
+        "text": "women",
+        "start": 14.237,
+        "end": 14.7487
+      },
+      {
+        "text": "again",
+        "start": 14.7497,
+        "end": 15.227
+      },
+      {
+        "text": "not",
+        "start": 15.229,
+        "end": 15.734
+      },
+      {
+        "text": "you're",
+        "start": 16.012,
+        "end": 16.308
+      },
+      {
+        "text": "too",
+        "start": 16.31,
+        "end": 16.4848
+      },
+      {
+        "text": "young",
+        "start": 16.4858,
+        "end": 16.744
+      },
+      {
+        "text": "too",
+        "start": 16.9,
+        "end": 17.1051
+      },
+      {
+        "text": "young",
+        "start": 17.1061,
+        "end": 17.48
+      },
+      {
+        "text": "to",
+        "start": 17.585,
+        "end": 17.6796
+      },
+      {
+        "text": "know",
+        "start": 17.6806,
+        "end": 17.879
+      },
+      {
+        "text": "this",
+        "start": 17.881,
+        "end": 18.065
+      },
+      {
+        "text": "but",
+        "start": 18.16,
+        "end": 18.413
+      },
+      {
+        "text": "you're",
+        "start": 18.415,
+        "end": 18.625
+      },
+      {
+        "text": "getting",
+        "start": 18.627,
+        "end": 18.9101
+      },
+      {
+        "text": "an",
+        "start": 18.9111,
+        "end": 18.9933
+      },
+      {
+        "text": "idea",
+        "start": 18.9943,
+        "end": 19.438
+      },
+      {
+        "text": "that",
+        "start": 19.457,
+        "end": 19.587
+      },
+      {
+        "text": "like",
+        "start": 19.589,
+        "end": 19.766
+      },
+      {
+        "text": "no",
+        "start": 19.795,
+        "end": 20.224
+      },
+      {
+        "text": "i",
+        "start": 20.333,
+        "end": 20.506
+      },
+      {
+        "text": "can",
+        "start": 20.614,
+        "end": 20.7844
+      },
+      {
+        "text": "see",
+        "start": 20.7854,
+        "end": 21.175
+      },
+      {
+        "text": "that",
+        "start": 21.196,
+        "end": 21.408
+      },
+      {
+        "text": "this",
+        "start": 21.4662,
+        "end": 21.6827
+      },
+      {
+        "text": "is",
+        "start": 21.6916,
+        "end": 21.837
+      },
+      {
+        "text": "something",
+        "start": 21.839,
+        "end": 22.483
+      },
+      {
+        "text": "that",
+        "start": 22.845,
+        "end": 22.9547
+      },
+      {
+        "text": "happens",
+        "start": 22.9557,
+        "end": 23.546
+      },
+      {
+        "text": "too",
+        "start": 23.5721,
+        "end": 23.922
+      }
+    ]
+  },
+  "13": {
+    "filename": "zencastr-en_606b213bf79637001587fcad-00003_50.wav",
+    "n_tokens": 44,
+    "tokens": [
+      {
+        "text": "so",
+        "start": 0.0,
+        "end": 0.198
+      },
+      {
+        "text": "you",
+        "start": 0.2,
+        "end": 0.387
+      },
+      {
+        "text": "beat",
+        "start": 0.684,
+        "end": 0.891
+      },
+      {
+        "text": "something",
+        "start": 0.929,
+        "end": 1.46
+      },
+      {
+        "text": "that",
+        "start": 1.462,
+        "end": 1.699
+      },
+      {
+        "text": "that",
+        "start": 2.031,
+        "end": 2.283
+      },
+      {
+        "text": "felt",
+        "start": 2.414,
+        "end": 2.696
+      },
+      {
+        "text": "like",
+        "start": 2.698,
+        "end": 2.9175
+      },
+      {
+        "text": "it",
+        "start": 2.9185,
+        "end": 3.003
+      },
+      {
+        "text": "was",
+        "start": 3.005,
+        "end": 3.116
+      },
+      {
+        "text": "consuming",
+        "start": 3.155,
+        "end": 3.864
+      },
+      {
+        "text": "your",
+        "start": 3.867,
+        "end": 4.1628
+      },
+      {
+        "text": "life",
+        "start": 4.1638,
+        "end": 4.553
+      },
+      {
+        "text": "and",
+        "start": 4.555,
+        "end": 4.7527
+      },
+      {
+        "text": "it",
+        "start": 4.7527,
+        "end": 4.87
+      },
+      {
+        "text": "was",
+        "start": 4.872,
+        "end": 5.166
+      },
+      {
+        "text": "and",
+        "start": 5.325,
+        "end": 5.4412
+      },
+      {
+        "text": "it",
+        "start": 5.4412,
+        "end": 5.567
+      },
+      {
+        "text": "was",
+        "start": 5.569,
+        "end": 5.84
+      },
+      {
+        "text": "still",
+        "start": 5.842,
+        "end": 6.571
+      },
+      {
+        "text": "you",
+        "start": 7.739,
+        "end": 7.87
+      },
+      {
+        "text": "didn't",
+        "start": 7.872,
+        "end": 8.0238
+      },
+      {
+        "text": "even",
+        "start": 8.0248,
+        "end": 8.271
+      },
+      {
+        "text": "get",
+        "start": 8.273,
+        "end": 8.402
+      },
+      {
+        "text": "to",
+        "start": 8.409,
+        "end": 8.5243
+      },
+      {
+        "text": "share",
+        "start": 8.5253,
+        "end": 8.874
+      },
+      {
+        "text": "the",
+        "start": 8.876,
+        "end": 9.023
+      },
+      {
+        "text": "joy",
+        "start": 9.025,
+        "end": 9.487
+      },
+      {
+        "text": "of",
+        "start": 9.489,
+        "end": 9.624
+      },
+      {
+        "text": "like",
+        "start": 9.647,
+        "end": 9.864
+      },
+      {
+        "text": "beating",
+        "start": 9.954,
+        "end": 10.385
+      },
+      {
+        "text": "something",
+        "start": 10.387,
+        "end": 10.953
+      },
+      {
+        "text": "with",
+        "start": 10.955,
+        "end": 11.152
+      },
+      {
+        "text": "someone",
+        "start": 11.154,
+        "end": 11.595
+      },
+      {
+        "text": "like",
+        "start": 11.597,
+        "end": 11.787
+      },
+      {
+        "text": "it",
+        "start": 11.801,
+        "end": 11.9192
+      },
+      {
+        "text": "was",
+        "start": 11.9202,
+        "end": 12.1088
+      },
+      {
+        "text": "shou-",
+        "start": 12.1098,
+        "end": 12.3569
+      },
+      {
+        "text": "it",
+        "start": 12.3579,
+        "end": 12.4209
+      },
+      {
+        "text": "was",
+        "start": 12.4219,
+        "end": 12.5873
+      },
+      {
+        "text": "all",
+        "start": 12.5883,
+        "end": 12.8781
+      },
+      {
+        "text": "just",
+        "start": 12.8791,
+        "end": 13.143
+      },
+      {
+        "text": "still",
+        "start": 13.145,
+        "end": 13.3755
+      },
+      {
+        "text": "internal",
+        "start": 13.3765,
+        "end": 14.035
+      }
+    ]
+  }
+}

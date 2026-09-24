@@ -1,0 +1,4776 @@
+{
+  "0": {
+    "text": " surprisingly, surprisingly restrained. And I think it doesn't show that much. And I think that's pretty cool. Um, I think, uh, you don't really get any shots of like the villains. Um, you only get like glimpses of the bat suit. You don't even see cat woman in costume. I think it's good. I think, I think it does exactly what a trailer should do. Um, Um,",
+    "words": [
+      {
+        "word": "surprisingly,",
+        "start": 0.94,
+        "end": 1.42,
+        "probability": 0.8759667277336121
+      },
+      {
+        "word": "surprisingly",
+        "start": 3.2199999999999998,
+        "end": 3.6999999999999997,
+        "probability": 0.9878823757171631
+      },
+      {
+        "word": "restrained.",
+        "start": 3.6999999999999997,
+        "end": 4.18,
+        "probability": 0.9982477426528931
+      },
+      {
+        "word": "And",
+        "start": 4.22,
+        "end": 4.34,
+        "probability": 0.9951926469802856
+      },
+      {
+        "word": "I",
+        "start": 4.34,
+        "end": 4.42,
+        "probability": 0.9997085928916931
+      },
+      {
+        "word": "think",
+        "start": 4.42,
+        "end": 4.66,
+        "probability": 0.9999655485153198
+      },
+      {
+        "word": "it",
+        "start": 4.66,
+        "end": 5.06,
+        "probability": 0.9992411136627197
+      },
+      {
+        "word": "doesn't",
+        "start": 5.06,
+        "end": 5.32,
+        "probability": 0.9999406337738037
+      },
+      {
+        "word": "show",
+        "start": 5.32,
+        "end": 5.54,
+        "probability": 0.9999260902404785
+      },
+      {
+        "word": "that",
+        "start": 5.54,
+        "end": 5.98,
+        "probability": 0.9997249245643616
+      },
+      {
+        "word": "much.",
+        "start": 5.98,
+        "end": 6.4,
+        "probability": 0.9999163150787354
+      },
+      {
+        "word": "And",
+        "start": 6.44,
+        "end": 6.6,
+        "probability": 0.9997214674949646
+      },
+      {
+        "word": "I",
+        "start": 6.6,
+        "end": 6.7,
+        "probability": 0.9999687671661377
+      },
+      {
+        "word": "think",
+        "start": 6.7,
+        "end": 6.86,
+        "probability": 0.9999872446060181
+      },
+      {
+        "word": "that's",
+        "start": 6.86,
+        "end": 7.18,
+        "probability": 0.9999500513076782
+      },
+      {
+        "word": "pretty",
+        "start": 7.18,
+        "end": 8.16,
+        "probability": 0.9963286519050598
+      },
+      {
+        "word": "cool.",
+        "start": 8.16,
+        "end": 8.56,
+        "probability": 0.9998440742492676
+      },
+      {
+        "word": "Um,",
+        "start": 9.18,
+        "end": 9.66,
+        "probability": 0.60991370677948
+      },
+      {
+        "word": "I",
+        "start": 9.9,
+        "end": 10.26,
+        "probability": 0.9991912245750427
+      },
+      {
+        "word": "think,",
+        "start": 10.26,
+        "end": 10.62,
+        "probability": 0.9998910427093506
+      },
+      {
+        "word": "uh,",
+        "start": 10.62,
+        "end": 10.76,
+        "probability": 0.9810625910758972
+      },
+      {
+        "word": "you",
+        "start": 11.48,
+        "end": 11.96,
+        "probability": 0.9960598349571228
+      },
+      {
+        "word": "don't",
+        "start": 11.96,
+        "end": 12.14,
+        "probability": 0.9998639523983002
+      },
+      {
+        "word": "really",
+        "start": 12.14,
+        "end": 12.26,
+        "probability": 0.999779999256134
+      },
+      {
+        "word": "get",
+        "start": 12.26,
+        "end": 12.56,
+        "probability": 0.9996476173400879
+      },
+      {
+        "word": "any",
+        "start": 12.56,
+        "end": 13.72,
+        "probability": 0.9845933318138123
+      },
+      {
+        "word": "shots",
+        "start": 13.72,
+        "end": 14.82,
+        "probability": 0.9929272532463074
+      },
+      {
+        "word": "of",
+        "start": 14.82,
+        "end": 15.06,
+        "probability": 0.9992315769195557
+      },
+      {
+        "word": "like",
+        "start": 15.06,
+        "end": 15.22,
+        "probability": 0.9892186522483826
+      },
+      {
+        "word": "the",
+        "start": 15.22,
+        "end": 15.36,
+        "probability": 0.9990409016609192
+      },
+      {
+        "word": "villains.",
+        "start": 15.36,
+        "end": 15.72,
+        "probability": 0.9990744590759277
+      },
+      {
+        "word": "Um,",
+        "start": 16.02,
+        "end": 16.5,
+        "probability": 0.9919626116752625
+      },
+      {
+        "word": "you",
+        "start": 16.82,
+        "end": 17.16,
+        "probability": 0.9990563988685608
+      },
+      {
+        "word": "only",
+        "start": 17.16,
+        "end": 17.28,
+        "probability": 0.9998719692230225
+      },
+      {
+        "word": "get",
+        "start": 17.28,
+        "end": 17.44,
+        "probability": 0.9999780654907227
+      },
+      {
+        "word": "like",
+        "start": 17.44,
+        "end": 17.56,
+        "probability": 0.9999467134475708
+      },
+      {
+        "word": "glimpses",
+        "start": 17.56,
+        "end": 18.06,
+        "probability": 0.9998538345098495
+      },
+      {
+        "word": "of",
+        "start": 18.06,
+        "end": 18.22,
+        "probability": 0.9998688697814941
+      },
+      {
+        "word": "the",
+        "start": 18.22,
+        "end": 18.36,
+        "probability": 0.9998588562011719
+      },
+      {
+        "word": "bat",
+        "start": 18.36,
+        "end": 18.58,
+        "probability": 0.9655984044075012
+      },
+      {
+        "word": "suit.",
+        "start": 18.58,
+        "end": 18.92,
+        "probability": 0.999904990196228
+      },
+      {
+        "word": "You",
+        "start": 19.16,
+        "end": 19.64,
+        "probability": 0.9996532201766968
+      },
+      {
+        "word": "don't",
+        "start": 19.64,
+        "end": 19.78,
+        "probability": 0.9999866485595703
+      },
+      {
+        "word": "even",
+        "start": 19.78,
+        "end": 19.86,
+        "probability": 0.9999251365661621
+      },
+      {
+        "word": "see",
+        "start": 19.86,
+        "end": 20.06,
+        "probability": 0.9998893737792969
+      },
+      {
+        "word": "cat",
+        "start": 20.06,
+        "end": 20.3,
+        "probability": 0.5619205236434937
+      },
+      {
+        "word": "woman",
+        "start": 20.3,
+        "end": 20.54,
+        "probability": 0.9937776327133179
+      },
+      {
+        "word": "in",
+        "start": 20.54,
+        "end": 20.7,
+        "probability": 0.9922670722007751
+      },
+      {
+        "word": "costume.",
+        "start": 20.7,
+        "end": 21.14,
+        "probability": 0.9999614953994751
+      },
+      {
+        "word": "I",
+        "start": 21.28,
+        "end": 21.6,
+        "probability": 0.9988635778427124
+      },
+      {
+        "word": "think",
+        "start": 21.6,
+        "end": 21.72,
+        "probability": 0.9999679327011108
+      },
+      {
+        "word": "it's",
+        "start": 21.72,
+        "end": 21.86,
+        "probability": 0.9999824166297913
+      },
+      {
+        "word": "good.",
+        "start": 21.86,
+        "end": 22.02,
+        "probability": 0.9999520778656006
+      },
+      {
+        "word": "I",
+        "start": 22.36,
+        "end": 22.84,
+        "probability": 0.9968699812889099
+      },
+      {
+        "word": "think,",
+        "start": 22.84,
+        "end": 23.02,
+        "probability": 0.9999426603317261
+      },
+      {
+        "word": "I",
+        "start": 23.02,
+        "end": 23.52,
+        "probability": 0.9967269897460938
+      },
+      {
+        "word": "think",
+        "start": 23.52,
+        "end": 24.02,
+        "probability": 0.9999096393585205
+      },
+      {
+        "word": "it",
+        "start": 24.02,
+        "end": 24.18,
+        "probability": 0.9962408542633057
+      },
+      {
+        "word": "does",
+        "start": 24.18,
+        "end": 24.36,
+        "probability": 0.999862551689148
+      },
+      {
+        "word": "exactly",
+        "start": 24.36,
+        "end": 24.7,
+        "probability": 0.9999595880508423
+      },
+      {
+        "word": "what",
+        "start": 24.7,
+        "end": 24.94,
+        "probability": 0.999932050704956
+      },
+      {
+        "word": "a",
+        "start": 24.94,
+        "end": 25.06,
+        "probability": 0.9998985528945923
+      },
+      {
+        "word": "trailer",
+        "start": 25.06,
+        "end": 25.72,
+        "probability": 0.9976344108581543
+      },
+      {
+        "word": "should",
+        "start": 25.72,
+        "end": 26.3,
+        "probability": 0.9974638223648071
+      },
+      {
+        "word": "do.",
+        "start": 26.3,
+        "end": 26.52,
+        "probability": 0.9999101161956787
+      },
+      {
+        "word": "Um,",
+        "start": 27.34,
+        "end": 27.82,
+        "probability": 0.9932277798652649
+      },
+      {
+        "word": "Um,",
+        "start": 27.82,
+        "end": 28.02,
+        "probability": 0.2662395238876343
+      }
+    ]
+  },
+  "1": {
+    "text": " The thing is, Rami, is that the thing that I think most, like in Jordan, definitely, when you manage to trick someone into buying something more expensive than what it actually is, then you become a kharouf, literally a sheep. They will call you a sheep. And there's like this inherent fear that's happening in everybody's mind at the same time. It's like, I don't care really about the money, but I don't want to be a sheep.",
+    "words": [
+      {
+        "word": "The",
+        "start": 0.0,
+        "end": 0.08,
+        "probability": 0.9705151319503784
+      },
+      {
+        "word": "thing",
+        "start": 0.08,
+        "end": 0.28,
+        "probability": 0.9998657703399658
+      },
+      {
+        "word": "is,",
+        "start": 0.28,
+        "end": 0.46,
+        "probability": 0.9993566870689392
+      },
+      {
+        "word": "Rami,",
+        "start": 0.46,
+        "end": 0.74,
+        "probability": 0.9886878132820129
+      },
+      {
+        "word": "is",
+        "start": 0.88,
+        "end": 1.1,
+        "probability": 0.97698974609375
+      },
+      {
+        "word": "that",
+        "start": 1.1,
+        "end": 1.26,
+        "probability": 0.9989945292472839
+      },
+      {
+        "word": "the",
+        "start": 1.26,
+        "end": 1.6,
+        "probability": 0.9841814041137695
+      },
+      {
+        "word": "thing",
+        "start": 1.6,
+        "end": 2.16,
+        "probability": 0.9980170726776123
+      },
+      {
+        "word": "that",
+        "start": 2.16,
+        "end": 2.36,
+        "probability": 0.9995169639587402
+      },
+      {
+        "word": "I",
+        "start": 2.36,
+        "end": 2.64,
+        "probability": 0.9829195737838745
+      },
+      {
+        "word": "think",
+        "start": 2.64,
+        "end": 3.0,
+        "probability": 0.9999775886535645
+      },
+      {
+        "word": "most,",
+        "start": 3.0,
+        "end": 3.72,
+        "probability": 0.9958329796791077
+      },
+      {
+        "word": "like",
+        "start": 4.0,
+        "end": 4.38,
+        "probability": 0.9874107241630554
+      },
+      {
+        "word": "in",
+        "start": 4.38,
+        "end": 4.5,
+        "probability": 0.9904041290283203
+      },
+      {
+        "word": "Jordan,",
+        "start": 4.5,
+        "end": 4.76,
+        "probability": 0.9999700784683228
+      },
+      {
+        "word": "definitely,",
+        "start": 4.84,
+        "end": 5.3,
+        "probability": 0.9997031092643738
+      },
+      {
+        "word": "when",
+        "start": 6.3000000000000025,
+        "end": 6.82,
+        "probability": 0.9964566826820374
+      },
+      {
+        "word": "you",
+        "start": 6.82,
+        "end": 7.16,
+        "probability": 0.999984622001648
+      },
+      {
+        "word": "manage",
+        "start": 7.16,
+        "end": 7.76,
+        "probability": 0.9965799450874329
+      },
+      {
+        "word": "to",
+        "start": 7.76,
+        "end": 8.12,
+        "probability": 0.9999947547912598
+      },
+      {
+        "word": "trick",
+        "start": 8.12,
+        "end": 8.78,
+        "probability": 0.999956488609314
+      },
+      {
+        "word": "someone",
+        "start": 8.78,
+        "end": 9.18,
+        "probability": 0.999944806098938
+      },
+      {
+        "word": "into",
+        "start": 9.18,
+        "end": 9.58,
+        "probability": 0.9998394250869751
+      },
+      {
+        "word": "buying",
+        "start": 9.58,
+        "end": 9.86,
+        "probability": 0.9999569654464722
+      },
+      {
+        "word": "something",
+        "start": 9.86,
+        "end": 10.12,
+        "probability": 0.9999631643295288
+      },
+      {
+        "word": "more",
+        "start": 10.12,
+        "end": 10.54,
+        "probability": 0.999626874923706
+      },
+      {
+        "word": "expensive",
+        "start": 10.54,
+        "end": 10.96,
+        "probability": 0.9999728202819824
+      },
+      {
+        "word": "than",
+        "start": 10.96,
+        "end": 11.32,
+        "probability": 0.9999610185623169
+      },
+      {
+        "word": "what",
+        "start": 11.32,
+        "end": 11.5,
+        "probability": 0.9999113082885742
+      },
+      {
+        "word": "it",
+        "start": 11.5,
+        "end": 11.64,
+        "probability": 0.9999746084213257
+      },
+      {
+        "word": "actually",
+        "start": 11.64,
+        "end": 12.02,
+        "probability": 0.9999113082885742
+      },
+      {
+        "word": "is,",
+        "start": 12.02,
+        "end": 12.5,
+        "probability": 0.9999852180480957
+      },
+      {
+        "word": "then",
+        "start": 13.320000000000002,
+        "end": 13.84,
+        "probability": 0.9987725615501404
+      },
+      {
+        "word": "you",
+        "start": 13.84,
+        "end": 14.14,
+        "probability": 0.9999903440475464
+      },
+      {
+        "word": "become",
+        "start": 14.14,
+        "end": 14.48,
+        "probability": 0.9999476671218872
+      },
+      {
+        "word": "a",
+        "start": 14.48,
+        "end": 15.18,
+        "probability": 0.9987645149230957
+      },
+      {
+        "word": "kharouf,",
+        "start": 15.18,
+        "end": 15.62,
+        "probability": 0.7575993686914444
+      },
+      {
+        "word": "literally",
+        "start": 15.72,
+        "end": 16.44,
+        "probability": 0.9999637603759766
+      },
+      {
+        "word": "a",
+        "start": 16.44,
+        "end": 16.76,
+        "probability": 0.9910928606987
+      },
+      {
+        "word": "sheep.",
+        "start": 16.76,
+        "end": 17.04,
+        "probability": 0.9993709921836853
+      },
+      {
+        "word": "They",
+        "start": 17.24,
+        "end": 17.76,
+        "probability": 0.9998019337654114
+      },
+      {
+        "word": "will",
+        "start": 17.76,
+        "end": 17.88,
+        "probability": 0.896119236946106
+      },
+      {
+        "word": "call",
+        "start": 17.88,
+        "end": 18.18,
+        "probability": 0.9999973773956299
+      },
+      {
+        "word": "you",
+        "start": 18.18,
+        "end": 18.34,
+        "probability": 0.9999978542327881
+      },
+      {
+        "word": "a",
+        "start": 18.34,
+        "end": 18.44,
+        "probability": 0.9999938011169434
+      },
+      {
+        "word": "sheep.",
+        "start": 18.44,
+        "end": 18.72,
+        "probability": 0.9999825954437256
+      },
+      {
+        "word": "And",
+        "start": 18.8,
+        "end": 19.2,
+        "probability": 0.9892478585243225
+      },
+      {
+        "word": "there's",
+        "start": 19.2,
+        "end": 19.42,
+        "probability": 0.9995486736297607
+      },
+      {
+        "word": "like",
+        "start": 19.42,
+        "end": 19.54,
+        "probability": 0.82847660779953
+      },
+      {
+        "word": "this",
+        "start": 19.54,
+        "end": 19.76,
+        "probability": 0.9988961219787598
+      },
+      {
+        "word": "inherent",
+        "start": 19.76,
+        "end": 20.02,
+        "probability": 0.9999954700469971
+      },
+      {
+        "word": "fear",
+        "start": 20.02,
+        "end": 20.56,
+        "probability": 0.9999964237213135
+      },
+      {
+        "word": "that's",
+        "start": 20.56,
+        "end": 20.94,
+        "probability": 0.9996119141578674
+      },
+      {
+        "word": "happening",
+        "start": 20.94,
+        "end": 21.24,
+        "probability": 0.9614137411117554
+      },
+      {
+        "word": "in",
+        "start": 21.24,
+        "end": 21.4,
+        "probability": 0.9987307190895081
+      },
+      {
+        "word": "everybody's",
+        "start": 21.4,
+        "end": 21.88,
+        "probability": 0.9999377727508545
+      },
+      {
+        "word": "mind",
+        "start": 21.88,
+        "end": 22.06,
+        "probability": 0.9999401569366455
+      },
+      {
+        "word": "at",
+        "start": 22.06,
+        "end": 22.22,
+        "probability": 0.9849117994308472
+      },
+      {
+        "word": "the",
+        "start": 22.22,
+        "end": 22.3,
+        "probability": 0.9999903440475464
+      },
+      {
+        "word": "same",
+        "start": 22.3,
+        "end": 22.52,
+        "probability": 0.9999456405639648
+      },
+      {
+        "word": "time.",
+        "start": 22.52,
+        "end": 22.72,
+        "probability": 0.9998972415924072
+      },
+      {
+        "word": "It's",
+        "start": 22.76,
+        "end": 22.88,
+        "probability": 0.9713793098926544
+      },
+      {
+        "word": "like,",
+        "start": 22.88,
+        "end": 22.98,
+        "probability": 0.9998805522918701
+      },
+      {
+        "word": "I",
+        "start": 23.1,
+        "end": 23.64,
+        "probability": 0.9999748468399048
+      },
+      {
+        "word": "don't",
+        "start": 23.64,
+        "end": 23.86,
+        "probability": 0.9999960064888
+      },
+      {
+        "word": "care",
+        "start": 23.86,
+        "end": 23.98,
+        "probability": 0.9999359846115112
+      },
+      {
+        "word": "really",
+        "start": 23.98,
+        "end": 24.3,
+        "probability": 0.9999316930770874
+      },
+      {
+        "word": "about",
+        "start": 24.3,
+        "end": 24.6,
+        "probability": 0.9999903440475464
+      },
+      {
+        "word": "the",
+        "start": 24.6,
+        "end": 24.86,
+        "probability": 0.999993085861206
+      },
+      {
+        "word": "money,",
+        "start": 24.86,
+        "end": 25.14,
+        "probability": 0.999976396560669
+      },
+      {
+        "word": "but",
+        "start": 25.22,
+        "end": 25.74,
+        "probability": 0.999951958656311
+      },
+      {
+        "word": "I",
+        "start": 25.74,
+        "end": 25.94,
+        "probability": 0.9999955892562866
+      },
+      {
+        "word": "don't",
+        "start": 25.94,
+        "end": 26.16,
+        "probability": 0.9999815821647644
+      },
+      {
+        "word": "want",
+        "start": 26.16,
+        "end": 26.18,
+        "probability": 0.9875325560569763
+      },
+      {
+        "word": "to",
+        "start": 26.18,
+        "end": 26.32,
+        "probability": 0.9999995231628418
+      },
+      {
+        "word": "be",
+        "start": 26.32,
+        "end": 26.42,
+        "probability": 0.999996542930603
+      },
+      {
+        "word": "a",
+        "start": 26.42,
+        "end": 26.52,
+        "probability": 0.9999885559082031
+      },
+      {
+        "word": "sheep.",
+        "start": 26.52,
+        "end": 26.74,
+        "probability": 0.9999737739562988
+      }
+    ]
+  },
+  "2": {
+    "text": " the haggling used to happen even with like um and it's like it's kind of sad because you have those kids um in those markets and stuff like that they come from like you know really poor areas yeah and like you know i walk into that area sometimes i go like oh this kid like they're selling gum or something like that then i go like all right i want to give him i want to give him some money so i go over and i give him the money and then he starts haggling they go like what five bucks can't you give me 20 and i'm like",
+    "words": [
+      {
+        "word": "the",
+        "start": 0.9800000000000029,
+        "end": 1.3800000000000014,
+        "probability": 0.1278885006904602
+      },
+      {
+        "word": "haggling",
+        "start": 1.3800000000000014,
+        "end": 1.78,
+        "probability": 0.9987315932909647
+      },
+      {
+        "word": "used",
+        "start": 1.78,
+        "end": 1.96,
+        "probability": 0.9968271851539612
+      },
+      {
+        "word": "to",
+        "start": 1.96,
+        "end": 2.1,
+        "probability": 0.9999480247497559
+      },
+      {
+        "word": "happen",
+        "start": 2.1,
+        "end": 2.32,
+        "probability": 0.9996743202209473
+      },
+      {
+        "word": "even",
+        "start": 2.32,
+        "end": 2.56,
+        "probability": 0.7334982752799988
+      },
+      {
+        "word": "with",
+        "start": 2.56,
+        "end": 2.8,
+        "probability": 0.33911067247390747
+      },
+      {
+        "word": "like",
+        "start": 2.8,
+        "end": 3.08,
+        "probability": 0.8695865869522095
+      },
+      {
+        "word": "um",
+        "start": 3.08,
+        "end": 3.34,
+        "probability": 0.14201292395591736
+      },
+      {
+        "word": "and",
+        "start": 3.34,
+        "end": 3.52,
+        "probability": 0.9738631844520569
+      },
+      {
+        "word": "it's",
+        "start": 3.52,
+        "end": 3.7,
+        "probability": 0.9999085664749146
+      },
+      {
+        "word": "like",
+        "start": 3.7,
+        "end": 3.82,
+        "probability": 0.999723494052887
+      },
+      {
+        "word": "it's",
+        "start": 3.82,
+        "end": 4.02,
+        "probability": 0.9998232126235962
+      },
+      {
+        "word": "kind",
+        "start": 4.02,
+        "end": 4.18,
+        "probability": 0.9994927644729614
+      },
+      {
+        "word": "of",
+        "start": 4.18,
+        "end": 4.3,
+        "probability": 0.9999898672103882
+      },
+      {
+        "word": "sad",
+        "start": 4.3,
+        "end": 4.5,
+        "probability": 0.999767005443573
+      },
+      {
+        "word": "because",
+        "start": 4.5,
+        "end": 4.74,
+        "probability": 0.997670590877533
+      },
+      {
+        "word": "you",
+        "start": 4.74,
+        "end": 4.86,
+        "probability": 0.9727312922477722
+      },
+      {
+        "word": "have",
+        "start": 4.86,
+        "end": 4.96,
+        "probability": 0.972622811794281
+      },
+      {
+        "word": "those",
+        "start": 4.96,
+        "end": 5.16,
+        "probability": 0.9977413415908813
+      },
+      {
+        "word": "kids",
+        "start": 5.16,
+        "end": 5.54,
+        "probability": 0.9978753328323364
+      },
+      {
+        "word": "um",
+        "start": 5.54,
+        "end": 6.06,
+        "probability": 0.9893890023231506
+      },
+      {
+        "word": "in",
+        "start": 6.06,
+        "end": 6.66,
+        "probability": 0.9899871945381165
+      },
+      {
+        "word": "those",
+        "start": 6.66,
+        "end": 6.92,
+        "probability": 0.9999822378158569
+      },
+      {
+        "word": "markets",
+        "start": 6.92,
+        "end": 7.5,
+        "probability": 0.9999264478683472
+      },
+      {
+        "word": "and",
+        "start": 7.5,
+        "end": 7.78,
+        "probability": 0.9999644756317139
+      },
+      {
+        "word": "stuff",
+        "start": 7.78,
+        "end": 7.96,
+        "probability": 0.9999163150787354
+      },
+      {
+        "word": "like",
+        "start": 7.96,
+        "end": 8.2,
+        "probability": 0.9999552965164185
+      },
+      {
+        "word": "that",
+        "start": 8.2,
+        "end": 8.42,
+        "probability": 0.9999783039093018
+      },
+      {
+        "word": "they",
+        "start": 8.42,
+        "end": 8.6,
+        "probability": 0.9933043122291565
+      },
+      {
+        "word": "come",
+        "start": 8.6,
+        "end": 8.74,
+        "probability": 0.9999654293060303
+      },
+      {
+        "word": "from",
+        "start": 8.74,
+        "end": 8.92,
+        "probability": 0.9999693632125854
+      },
+      {
+        "word": "like",
+        "start": 8.92,
+        "end": 9.08,
+        "probability": 0.9998573064804077
+      },
+      {
+        "word": "you",
+        "start": 9.08,
+        "end": 9.22,
+        "probability": 0.999029278755188
+      },
+      {
+        "word": "know",
+        "start": 9.22,
+        "end": 9.32,
+        "probability": 0.9994533658027649
+      },
+      {
+        "word": "really",
+        "start": 9.32,
+        "end": 9.54,
+        "probability": 0.9994805455207825
+      },
+      {
+        "word": "poor",
+        "start": 9.54,
+        "end": 9.82,
+        "probability": 0.9998561143875122
+      },
+      {
+        "word": "areas",
+        "start": 9.82,
+        "end": 10.4,
+        "probability": 0.9997451901435852
+      },
+      {
+        "word": "yeah",
+        "start": 10.980000000000002,
+        "end": 11.38,
+        "probability": 0.9969695210456848
+      },
+      {
+        "word": "and",
+        "start": 11.38,
+        "end": 11.68,
+        "probability": 0.9863457083702087
+      },
+      {
+        "word": "like",
+        "start": 11.68,
+        "end": 11.88,
+        "probability": 0.998941957950592
+      },
+      {
+        "word": "you",
+        "start": 11.88,
+        "end": 12.02,
+        "probability": 0.9958162903785706
+      },
+      {
+        "word": "know",
+        "start": 12.02,
+        "end": 12.1,
+        "probability": 0.9962367415428162
+      },
+      {
+        "word": "i",
+        "start": 12.1,
+        "end": 12.22,
+        "probability": 0.7545251250267029
+      },
+      {
+        "word": "walk",
+        "start": 12.22,
+        "end": 12.64,
+        "probability": 0.999548614025116
+      },
+      {
+        "word": "into",
+        "start": 12.64,
+        "end": 12.92,
+        "probability": 0.999969482421875
+      },
+      {
+        "word": "that",
+        "start": 12.92,
+        "end": 13.22,
+        "probability": 0.999966025352478
+      },
+      {
+        "word": "area",
+        "start": 13.22,
+        "end": 13.56,
+        "probability": 0.9995713829994202
+      },
+      {
+        "word": "sometimes",
+        "start": 13.56,
+        "end": 13.82,
+        "probability": 0.9995762705802917
+      },
+      {
+        "word": "i",
+        "start": 13.82,
+        "end": 14.06,
+        "probability": 0.9550106525421143
+      },
+      {
+        "word": "go",
+        "start": 14.06,
+        "end": 14.14,
+        "probability": 0.9984311461448669
+      },
+      {
+        "word": "like",
+        "start": 14.14,
+        "end": 14.3,
+        "probability": 0.9993535876274109
+      },
+      {
+        "word": "oh",
+        "start": 14.3,
+        "end": 14.4,
+        "probability": 0.9874747395515442
+      },
+      {
+        "word": "this",
+        "start": 14.4,
+        "end": 14.56,
+        "probability": 0.9997057318687439
+      },
+      {
+        "word": "kid",
+        "start": 14.56,
+        "end": 14.8,
+        "probability": 0.9991405010223389
+      },
+      {
+        "word": "like",
+        "start": 14.8,
+        "end": 15.0,
+        "probability": 0.9787966012954712
+      },
+      {
+        "word": "they're",
+        "start": 15.0,
+        "end": 15.2,
+        "probability": 0.8758026957511902
+      },
+      {
+        "word": "selling",
+        "start": 15.2,
+        "end": 15.36,
+        "probability": 0.9961056113243103
+      },
+      {
+        "word": "gum",
+        "start": 15.36,
+        "end": 15.64,
+        "probability": 0.9995406866073608
+      },
+      {
+        "word": "or",
+        "start": 15.64,
+        "end": 15.86,
+        "probability": 0.9998351335525513
+      },
+      {
+        "word": "something",
+        "start": 15.86,
+        "end": 16.08,
+        "probability": 0.9985828399658203
+      },
+      {
+        "word": "like",
+        "start": 16.08,
+        "end": 16.3,
+        "probability": 0.9996743202209473
+      },
+      {
+        "word": "that",
+        "start": 16.3,
+        "end": 16.48,
+        "probability": 0.9997844099998474
+      },
+      {
+        "word": "then",
+        "start": 16.48,
+        "end": 16.62,
+        "probability": 0.45809492468833923
+      },
+      {
+        "word": "i",
+        "start": 16.62,
+        "end": 16.7,
+        "probability": 0.9998111128807068
+      },
+      {
+        "word": "go",
+        "start": 16.7,
+        "end": 16.76,
+        "probability": 0.9990307092666626
+      },
+      {
+        "word": "like",
+        "start": 16.76,
+        "end": 16.88,
+        "probability": 0.9984136819839478
+      },
+      {
+        "word": "all",
+        "start": 16.88,
+        "end": 16.98,
+        "probability": 0.9764861464500427
+      },
+      {
+        "word": "right",
+        "start": 16.98,
+        "end": 17.06,
+        "probability": 0.9965677261352539
+      },
+      {
+        "word": "i",
+        "start": 17.06,
+        "end": 17.14,
+        "probability": 0.9998030066490173
+      },
+      {
+        "word": "want",
+        "start": 17.14,
+        "end": 17.24,
+        "probability": 0.9943015575408936
+      },
+      {
+        "word": "to",
+        "start": 17.24,
+        "end": 17.3,
+        "probability": 0.9996535778045654
+      },
+      {
+        "word": "give",
+        "start": 17.3,
+        "end": 17.44,
+        "probability": 0.999372661113739
+      },
+      {
+        "word": "him",
+        "start": 17.44,
+        "end": 17.6,
+        "probability": 0.9992997646331787
+      },
+      {
+        "word": "i",
+        "start": 17.6,
+        "end": 17.72,
+        "probability": 0.9972200393676758
+      },
+      {
+        "word": "want",
+        "start": 17.72,
+        "end": 17.82,
+        "probability": 0.998518168926239
+      },
+      {
+        "word": "to",
+        "start": 17.82,
+        "end": 17.9,
+        "probability": 0.9956996440887451
+      },
+      {
+        "word": "give",
+        "start": 17.9,
+        "end": 18.0,
+        "probability": 0.9959914088249207
+      },
+      {
+        "word": "him",
+        "start": 18.0,
+        "end": 18.14,
+        "probability": 0.999669075012207
+      },
+      {
+        "word": "some",
+        "start": 18.14,
+        "end": 18.32,
+        "probability": 0.9984847903251648
+      },
+      {
+        "word": "money",
+        "start": 18.32,
+        "end": 18.6,
+        "probability": 0.9992983341217041
+      },
+      {
+        "word": "so",
+        "start": 18.6,
+        "end": 19.24,
+        "probability": 0.9997977614402771
+      },
+      {
+        "word": "i",
+        "start": 19.24,
+        "end": 19.32,
+        "probability": 0.9999545812606812
+      },
+      {
+        "word": "go",
+        "start": 19.32,
+        "end": 19.52,
+        "probability": 0.9999324083328247
+      },
+      {
+        "word": "over",
+        "start": 19.52,
+        "end": 19.84,
+        "probability": 0.9998146891593933
+      },
+      {
+        "word": "and",
+        "start": 19.84,
+        "end": 20.08,
+        "probability": 0.999909520149231
+      },
+      {
+        "word": "i",
+        "start": 20.08,
+        "end": 20.18,
+        "probability": 0.9962001442909241
+      },
+      {
+        "word": "give",
+        "start": 20.18,
+        "end": 20.36,
+        "probability": 0.9972246885299683
+      },
+      {
+        "word": "him",
+        "start": 20.36,
+        "end": 20.56,
+        "probability": 0.9996211528778076
+      },
+      {
+        "word": "the",
+        "start": 20.56,
+        "end": 20.76,
+        "probability": 0.997532844543457
+      },
+      {
+        "word": "money",
+        "start": 20.76,
+        "end": 21.0,
+        "probability": 0.995766282081604
+      },
+      {
+        "word": "and",
+        "start": 21.0,
+        "end": 21.54,
+        "probability": 0.999276340007782
+      },
+      {
+        "word": "then",
+        "start": 21.54,
+        "end": 21.7,
+        "probability": 0.9993570446968079
+      },
+      {
+        "word": "he",
+        "start": 21.7,
+        "end": 21.84,
+        "probability": 0.9998569488525391
+      },
+      {
+        "word": "starts",
+        "start": 21.84,
+        "end": 22.1,
+        "probability": 0.9993355870246887
+      },
+      {
+        "word": "haggling",
+        "start": 22.1,
+        "end": 22.58,
+        "probability": 0.9970674514770508
+      },
+      {
+        "word": "they",
+        "start": 22.58,
+        "end": 23.18,
+        "probability": 0.6180652976036072
+      },
+      {
+        "word": "go",
+        "start": 23.18,
+        "end": 23.28,
+        "probability": 0.9753599762916565
+      },
+      {
+        "word": "like",
+        "start": 23.28,
+        "end": 23.44,
+        "probability": 0.9978772401809692
+      },
+      {
+        "word": "what",
+        "start": 23.44,
+        "end": 23.96,
+        "probability": 0.9989843964576721
+      },
+      {
+        "word": "five",
+        "start": 23.96,
+        "end": 24.62,
+        "probability": 0.9926126003265381
+      },
+      {
+        "word": "bucks",
+        "start": 24.62,
+        "end": 25.0,
+        "probability": 0.9979333877563477
+      },
+      {
+        "word": "can't",
+        "start": 25.0,
+        "end": 26.2,
+        "probability": 0.9999008476734161
+      },
+      {
+        "word": "you",
+        "start": 26.2,
+        "end": 26.24,
+        "probability": 0.9999415874481201
+      },
+      {
+        "word": "give",
+        "start": 26.24,
+        "end": 26.46,
+        "probability": 0.9999315738677979
+      },
+      {
+        "word": "me",
+        "start": 26.46,
+        "end": 26.62,
+        "probability": 0.9999077320098877
+      },
+      {
+        "word": "20",
+        "start": 26.62,
+        "end": 26.92,
+        "probability": 0.9957292675971985
+      },
+      {
+        "word": "and",
+        "start": 26.92,
+        "end": 27.36,
+        "probability": 0.972466766834259
+      },
+      {
+        "word": "i'm",
+        "start": 27.36,
+        "end": 27.52,
+        "probability": 0.9885550141334534
+      },
+      {
+        "word": "like",
+        "start": 27.52,
+        "end": 27.66,
+        "probability": 0.9999126195907593
+      }
+    ]
+  },
+  "3": {
+    "text": " I mean, like you tie it to the system, right? Like imagine that when you're pricing the items in the game, you're actually pricing them a little bit more expensive so that you're keeping like a little room for people to come in and haggle and like get the price, get the item cheaper and go like, well, I got this at a deal. Share, tell your friends.",
+    "words": [
+      {
+        "word": "I",
+        "start": 0.38000000000000056,
+        "end": 0.74,
+        "probability": 0.6620277762413025
+      },
+      {
+        "word": "mean,",
+        "start": 0.74,
+        "end": 0.9,
+        "probability": 0.9885690212249756
+      },
+      {
+        "word": "like",
+        "start": 0.92,
+        "end": 1.04,
+        "probability": 0.5667538046836853
+      },
+      {
+        "word": "you",
+        "start": 1.04,
+        "end": 1.2,
+        "probability": 0.6517090201377869
+      },
+      {
+        "word": "tie",
+        "start": 1.2,
+        "end": 1.5,
+        "probability": 0.8506971597671509
+      },
+      {
+        "word": "it",
+        "start": 1.5,
+        "end": 1.66,
+        "probability": 0.9935539960861206
+      },
+      {
+        "word": "to",
+        "start": 1.66,
+        "end": 1.74,
+        "probability": 0.767636775970459
+      },
+      {
+        "word": "the",
+        "start": 1.74,
+        "end": 1.88,
+        "probability": 0.9340638518333435
+      },
+      {
+        "word": "system,",
+        "start": 1.88,
+        "end": 2.24,
+        "probability": 0.9994704127311707
+      },
+      {
+        "word": "right?",
+        "start": 2.3,
+        "end": 2.44,
+        "probability": 0.9780582189559937
+      },
+      {
+        "word": "Like",
+        "start": 2.48,
+        "end": 2.58,
+        "probability": 0.8785029649734497
+      },
+      {
+        "word": "imagine",
+        "start": 2.58,
+        "end": 2.92,
+        "probability": 0.8666219711303711
+      },
+      {
+        "word": "that",
+        "start": 2.92,
+        "end": 3.14,
+        "probability": 0.9977989792823792
+      },
+      {
+        "word": "when",
+        "start": 3.14,
+        "end": 3.56,
+        "probability": 0.9844654202461243
+      },
+      {
+        "word": "you're",
+        "start": 3.56,
+        "end": 3.76,
+        "probability": 0.9986172914505005
+      },
+      {
+        "word": "pricing",
+        "start": 3.76,
+        "end": 4.08,
+        "probability": 0.9994901418685913
+      },
+      {
+        "word": "the",
+        "start": 4.08,
+        "end": 4.3,
+        "probability": 0.9980048537254333
+      },
+      {
+        "word": "items",
+        "start": 4.3,
+        "end": 4.64,
+        "probability": 0.9996891021728516
+      },
+      {
+        "word": "in",
+        "start": 4.64,
+        "end": 4.82,
+        "probability": 0.9986692667007446
+      },
+      {
+        "word": "the",
+        "start": 4.82,
+        "end": 4.9,
+        "probability": 0.9986410737037659
+      },
+      {
+        "word": "game,",
+        "start": 4.9,
+        "end": 5.08,
+        "probability": 0.9997631907463074
+      },
+      {
+        "word": "you're",
+        "start": 5.14,
+        "end": 5.28,
+        "probability": 0.9983604550361633
+      },
+      {
+        "word": "actually",
+        "start": 5.28,
+        "end": 5.62,
+        "probability": 0.9997170567512512
+      },
+      {
+        "word": "pricing",
+        "start": 5.62,
+        "end": 6.0,
+        "probability": 0.9993725419044495
+      },
+      {
+        "word": "them",
+        "start": 6.0,
+        "end": 6.26,
+        "probability": 0.9996466636657715
+      },
+      {
+        "word": "a",
+        "start": 6.26,
+        "end": 6.44,
+        "probability": 0.9988524913787842
+      },
+      {
+        "word": "little",
+        "start": 6.44,
+        "end": 6.62,
+        "probability": 0.999737560749054
+      },
+      {
+        "word": "bit",
+        "start": 6.62,
+        "end": 6.78,
+        "probability": 0.9994221925735474
+      },
+      {
+        "word": "more",
+        "start": 6.78,
+        "end": 6.98,
+        "probability": 0.9998358488082886
+      },
+      {
+        "word": "expensive",
+        "start": 6.98,
+        "end": 7.4,
+        "probability": 0.99982750415802
+      },
+      {
+        "word": "so",
+        "start": 7.4,
+        "end": 7.68,
+        "probability": 0.7396723628044128
+      },
+      {
+        "word": "that",
+        "start": 7.68,
+        "end": 7.84,
+        "probability": 0.9961974620819092
+      },
+      {
+        "word": "you're",
+        "start": 7.84,
+        "end": 8.76,
+        "probability": 0.9958823919296265
+      },
+      {
+        "word": "keeping",
+        "start": 8.76,
+        "end": 9.26,
+        "probability": 0.9872575402259827
+      },
+      {
+        "word": "like",
+        "start": 9.26,
+        "end": 9.56,
+        "probability": 0.9613147974014282
+      },
+      {
+        "word": "a",
+        "start": 9.56,
+        "end": 9.72,
+        "probability": 0.9982777833938599
+      },
+      {
+        "word": "little",
+        "start": 9.72,
+        "end": 9.86,
+        "probability": 0.9988815188407898
+      },
+      {
+        "word": "room",
+        "start": 9.86,
+        "end": 10.16,
+        "probability": 0.9998810291290283
+      },
+      {
+        "word": "for",
+        "start": 10.16,
+        "end": 10.48,
+        "probability": 0.99949049949646
+      },
+      {
+        "word": "people",
+        "start": 10.48,
+        "end": 10.88,
+        "probability": 0.864173412322998
+      },
+      {
+        "word": "to",
+        "start": 10.88,
+        "end": 11.18,
+        "probability": 0.9998434782028198
+      },
+      {
+        "word": "come",
+        "start": 11.18,
+        "end": 11.38,
+        "probability": 0.9998342990875244
+      },
+      {
+        "word": "in",
+        "start": 11.38,
+        "end": 11.52,
+        "probability": 0.9998667240142822
+      },
+      {
+        "word": "and",
+        "start": 11.52,
+        "end": 11.66,
+        "probability": 0.999626874923706
+      },
+      {
+        "word": "haggle",
+        "start": 11.66,
+        "end": 12.04,
+        "probability": 0.9994532267252604
+      },
+      {
+        "word": "and",
+        "start": 12.04,
+        "end": 12.3,
+        "probability": 0.993499755859375
+      },
+      {
+        "word": "like",
+        "start": 12.3,
+        "end": 12.42,
+        "probability": 0.8433459401130676
+      },
+      {
+        "word": "get",
+        "start": 12.42,
+        "end": 12.62,
+        "probability": 0.9882644414901733
+      },
+      {
+        "word": "the",
+        "start": 12.62,
+        "end": 12.78,
+        "probability": 0.999901533126831
+      },
+      {
+        "word": "price,",
+        "start": 12.78,
+        "end": 13.02,
+        "probability": 0.8666914701461792
+      },
+      {
+        "word": "get",
+        "start": 13.08,
+        "end": 13.38,
+        "probability": 0.9987916350364685
+      },
+      {
+        "word": "the",
+        "start": 13.38,
+        "end": 13.54,
+        "probability": 0.9999388456344604
+      },
+      {
+        "word": "item",
+        "start": 13.54,
+        "end": 13.74,
+        "probability": 0.9998378753662109
+      },
+      {
+        "word": "cheaper",
+        "start": 13.74,
+        "end": 13.98,
+        "probability": 0.999569833278656
+      },
+      {
+        "word": "and",
+        "start": 13.98,
+        "end": 14.14,
+        "probability": 0.996224045753479
+      },
+      {
+        "word": "go",
+        "start": 14.14,
+        "end": 14.24,
+        "probability": 0.9994027614593506
+      },
+      {
+        "word": "like,",
+        "start": 14.24,
+        "end": 14.34,
+        "probability": 0.9991810917854309
+      },
+      {
+        "word": "well,",
+        "start": 14.4,
+        "end": 14.48,
+        "probability": 0.9836165904998779
+      },
+      {
+        "word": "I",
+        "start": 14.52,
+        "end": 14.58,
+        "probability": 0.9995236396789551
+      },
+      {
+        "word": "got",
+        "start": 14.58,
+        "end": 14.74,
+        "probability": 0.9997130036354065
+      },
+      {
+        "word": "this",
+        "start": 14.74,
+        "end": 15.02,
+        "probability": 0.9999345541000366
+      },
+      {
+        "word": "at",
+        "start": 15.02,
+        "end": 15.18,
+        "probability": 0.9860500693321228
+      },
+      {
+        "word": "a",
+        "start": 15.18,
+        "end": 15.58,
+        "probability": 0.9999451637268066
+      },
+      {
+        "word": "deal.",
+        "start": 15.58,
+        "end": 15.86,
+        "probability": 0.9996976852416992
+      },
+      {
+        "word": "Share,",
+        "start": 16.96,
+        "end": 17.32,
+        "probability": 0.9924994111061096
+      },
+      {
+        "word": "tell",
+        "start": 17.5,
+        "end": 17.66,
+        "probability": 0.9996203184127808
+      },
+      {
+        "word": "your",
+        "start": 17.66,
+        "end": 17.82,
+        "probability": 0.9999850988388062
+      },
+      {
+        "word": "friends.",
+        "start": 17.82,
+        "end": 18.12,
+        "probability": 0.9999762773513794
+      }
+    ]
+  },
+  "4": {
+    "text": " It'd be like L.A. Noire, but for haggling. You start to read the character and go, oh, I got an N. What about my kid? Would you want to make my kid sad? And then see what they're going to react to that.",
+    "words": [
+      {
+        "word": "It'd",
+        "start": 0.0,
+        "end": 0.08,
+        "probability": 0.7390771508216858
+      },
+      {
+        "word": "be",
+        "start": 0.08,
+        "end": 0.12,
+        "probability": 0.9981029033660889
+      },
+      {
+        "word": "like",
+        "start": 0.12,
+        "end": 0.3,
+        "probability": 0.9898278713226318
+      },
+      {
+        "word": "L",
+        "start": 0.3,
+        "end": 0.62,
+        "probability": 0.7243020534515381
+      },
+      {
+        "word": ".A.",
+        "start": 0.62,
+        "end": 0.68,
+        "probability": 0.9331075847148895
+      },
+      {
+        "word": "Noire,",
+        "start": 0.8,
+        "end": 1.14,
+        "probability": 0.9925626516342163
+      },
+      {
+        "word": "but",
+        "start": 1.14,
+        "end": 1.28,
+        "probability": 0.9992364645004272
+      },
+      {
+        "word": "for",
+        "start": 1.28,
+        "end": 1.5,
+        "probability": 0.9996892213821411
+      },
+      {
+        "word": "haggling.",
+        "start": 1.5,
+        "end": 2.02,
+        "probability": 0.9858827193578085
+      },
+      {
+        "word": "You",
+        "start": 2.02,
+        "end": 2.18,
+        "probability": 0.9984205961227417
+      },
+      {
+        "word": "start",
+        "start": 2.18,
+        "end": 2.36,
+        "probability": 0.9975481629371643
+      },
+      {
+        "word": "to",
+        "start": 2.36,
+        "end": 2.54,
+        "probability": 0.9999122619628906
+      },
+      {
+        "word": "read",
+        "start": 2.54,
+        "end": 2.9,
+        "probability": 0.45844703912734985
+      },
+      {
+        "word": "the",
+        "start": 2.9,
+        "end": 4.1,
+        "probability": 0.9981675148010254
+      },
+      {
+        "word": "character",
+        "start": 4.1,
+        "end": 4.82,
+        "probability": 0.34116455912590027
+      },
+      {
+        "word": "and",
+        "start": 4.82,
+        "end": 5.02,
+        "probability": 0.7789404392242432
+      },
+      {
+        "word": "go,",
+        "start": 5.02,
+        "end": 5.12,
+        "probability": 0.9962764382362366
+      },
+      {
+        "word": "oh,",
+        "start": 5.18,
+        "end": 5.38,
+        "probability": 0.7815954089164734
+      },
+      {
+        "word": "I",
+        "start": 5.46,
+        "end": 5.52,
+        "probability": 0.9998422861099243
+      },
+      {
+        "word": "got",
+        "start": 5.52,
+        "end": 5.72,
+        "probability": 0.9966937303543091
+      },
+      {
+        "word": "an",
+        "start": 5.72,
+        "end": 5.88,
+        "probability": 0.9982331991195679
+      },
+      {
+        "word": "N.",
+        "start": 5.88,
+        "end": 6.04,
+        "probability": 0.987700343132019
+      },
+      {
+        "word": "What",
+        "start": 6.18,
+        "end": 6.52,
+        "probability": 0.9978775978088379
+      },
+      {
+        "word": "about",
+        "start": 6.52,
+        "end": 6.74,
+        "probability": 0.9999414682388306
+      },
+      {
+        "word": "my",
+        "start": 6.74,
+        "end": 7.02,
+        "probability": 0.9997730851173401
+      },
+      {
+        "word": "kid?",
+        "start": 7.02,
+        "end": 7.22,
+        "probability": 0.9966655373573303
+      },
+      {
+        "word": "Would",
+        "start": 7.34,
+        "end": 7.5,
+        "probability": 0.9981765747070312
+      },
+      {
+        "word": "you",
+        "start": 7.5,
+        "end": 7.62,
+        "probability": 0.9999785423278809
+      },
+      {
+        "word": "want",
+        "start": 7.62,
+        "end": 7.76,
+        "probability": 0.9986624717712402
+      },
+      {
+        "word": "to",
+        "start": 7.76,
+        "end": 7.9,
+        "probability": 0.9999516010284424
+      },
+      {
+        "word": "make",
+        "start": 7.9,
+        "end": 8.06,
+        "probability": 0.9999805688858032
+      },
+      {
+        "word": "my",
+        "start": 8.06,
+        "end": 8.2,
+        "probability": 0.9999008178710938
+      },
+      {
+        "word": "kid",
+        "start": 8.2,
+        "end": 8.44,
+        "probability": 0.9997844099998474
+      },
+      {
+        "word": "sad?",
+        "start": 8.44,
+        "end": 8.74,
+        "probability": 0.9998338222503662
+      },
+      {
+        "word": "And",
+        "start": 8.92,
+        "end": 9.08,
+        "probability": 0.9036362767219543
+      },
+      {
+        "word": "then",
+        "start": 9.08,
+        "end": 9.2,
+        "probability": 0.9461672306060791
+      },
+      {
+        "word": "see",
+        "start": 9.2,
+        "end": 9.36,
+        "probability": 0.9991326928138733
+      },
+      {
+        "word": "what",
+        "start": 9.36,
+        "end": 9.6,
+        "probability": 0.9742060899734497
+      },
+      {
+        "word": "they're",
+        "start": 9.6,
+        "end": 10.5,
+        "probability": 0.9997764229774475
+      },
+      {
+        "word": "going",
+        "start": 10.5,
+        "end": 10.5,
+        "probability": 0.9343422651290894
+      },
+      {
+        "word": "to",
+        "start": 10.5,
+        "end": 10.68,
+        "probability": 0.9999938011169434
+      },
+      {
+        "word": "react",
+        "start": 10.68,
+        "end": 10.98,
+        "probability": 0.9997031092643738
+      },
+      {
+        "word": "to",
+        "start": 10.98,
+        "end": 11.16,
+        "probability": 0.9999082088470459
+      },
+      {
+        "word": "that.",
+        "start": 11.16,
+        "end": 11.28,
+        "probability": 0.9996799230575562
+      }
+    ]
+  },
+  "5": {
+    "text": " Well, the mechanic is going to be basically different ways of making an offer. And then another mechanic that needs to signify tone, right? So like this offer, friendly. This offer, aggressive. And like based on the tone of the conversation, those kind of like even out.",
+    "words": [
+      {
+        "word": "Well,",
+        "start": 0.0,
+        "end": 0.1,
+        "probability": 0.6080026030540466
+      },
+      {
+        "word": "the",
+        "start": 0.1,
+        "end": 0.16,
+        "probability": 0.9995294809341431
+      },
+      {
+        "word": "mechanic",
+        "start": 0.16,
+        "end": 0.54,
+        "probability": 0.9963668584823608
+      },
+      {
+        "word": "is",
+        "start": 0.54,
+        "end": 0.76,
+        "probability": 0.9984883069992065
+      },
+      {
+        "word": "going",
+        "start": 0.76,
+        "end": 1.32,
+        "probability": 0.817974328994751
+      },
+      {
+        "word": "to",
+        "start": 1.32,
+        "end": 1.92,
+        "probability": 0.9998927116394043
+      },
+      {
+        "word": "be",
+        "start": 1.92,
+        "end": 2.02,
+        "probability": 0.9996289014816284
+      },
+      {
+        "word": "basically",
+        "start": 2.02,
+        "end": 2.3,
+        "probability": 0.9714491367340088
+      },
+      {
+        "word": "different",
+        "start": 2.3,
+        "end": 3.24,
+        "probability": 0.8888568878173828
+      },
+      {
+        "word": "ways",
+        "start": 3.24,
+        "end": 3.74,
+        "probability": 0.9998776912689209
+      },
+      {
+        "word": "of",
+        "start": 3.74,
+        "end": 4.04,
+        "probability": 0.999849796295166
+      },
+      {
+        "word": "making",
+        "start": 4.04,
+        "end": 4.32,
+        "probability": 0.9998975992202759
+      },
+      {
+        "word": "an",
+        "start": 4.32,
+        "end": 4.54,
+        "probability": 0.9998904466629028
+      },
+      {
+        "word": "offer.",
+        "start": 4.54,
+        "end": 4.82,
+        "probability": 0.9998908042907715
+      },
+      {
+        "word": "And",
+        "start": 5.16,
+        "end": 5.72,
+        "probability": 0.9978063702583313
+      },
+      {
+        "word": "then",
+        "start": 5.72,
+        "end": 6.1,
+        "probability": 0.9994935989379883
+      },
+      {
+        "word": "another",
+        "start": 6.1,
+        "end": 6.86,
+        "probability": 0.9827249646186829
+      },
+      {
+        "word": "mechanic",
+        "start": 6.86,
+        "end": 7.46,
+        "probability": 0.9998838901519775
+      },
+      {
+        "word": "that",
+        "start": 7.46,
+        "end": 7.76,
+        "probability": 0.9988086223602295
+      },
+      {
+        "word": "needs",
+        "start": 7.76,
+        "end": 8.74,
+        "probability": 0.5713825225830078
+      },
+      {
+        "word": "to",
+        "start": 8.74,
+        "end": 8.94,
+        "probability": 0.9994264841079712
+      },
+      {
+        "word": "signify",
+        "start": 8.94,
+        "end": 10.12,
+        "probability": 0.7598843276500702
+      },
+      {
+        "word": "tone,",
+        "start": 10.12,
+        "end": 10.82,
+        "probability": 0.9932374954223633
+      },
+      {
+        "word": "right?",
+        "start": 11.0,
+        "end": 11.64,
+        "probability": 0.999311089515686
+      },
+      {
+        "word": "So",
+        "start": 11.76,
+        "end": 12.26,
+        "probability": 0.9979155659675598
+      },
+      {
+        "word": "like",
+        "start": 12.26,
+        "end": 12.62,
+        "probability": 0.472514271736145
+      },
+      {
+        "word": "this",
+        "start": 12.62,
+        "end": 13.16,
+        "probability": 0.8048694133758545
+      },
+      {
+        "word": "offer,",
+        "start": 13.16,
+        "end": 13.46,
+        "probability": 0.999868631362915
+      },
+      {
+        "word": "friendly.",
+        "start": 13.7,
+        "end": 14.38,
+        "probability": 0.9994717240333557
+      },
+      {
+        "word": "This",
+        "start": 14.58,
+        "end": 14.98,
+        "probability": 0.9996658563613892
+      },
+      {
+        "word": "offer,",
+        "start": 14.98,
+        "end": 15.3,
+        "probability": 0.9999793767929077
+      },
+      {
+        "word": "aggressive.",
+        "start": 15.48,
+        "end": 15.92,
+        "probability": 0.9998961687088013
+      },
+      {
+        "word": "And",
+        "start": 16.58,
+        "end": 17.14,
+        "probability": 0.9997226595878601
+      },
+      {
+        "word": "like",
+        "start": 17.14,
+        "end": 17.36,
+        "probability": 0.8515507578849792
+      },
+      {
+        "word": "based",
+        "start": 17.36,
+        "end": 17.64,
+        "probability": 0.9886351823806763
+      },
+      {
+        "word": "on",
+        "start": 17.64,
+        "end": 17.88,
+        "probability": 0.9999910593032837
+      },
+      {
+        "word": "the",
+        "start": 17.88,
+        "end": 17.98,
+        "probability": 0.9999889135360718
+      },
+      {
+        "word": "tone",
+        "start": 17.98,
+        "end": 18.2,
+        "probability": 0.9999504089355469
+      },
+      {
+        "word": "of",
+        "start": 18.2,
+        "end": 18.36,
+        "probability": 0.999985933303833
+      },
+      {
+        "word": "the",
+        "start": 18.36,
+        "end": 18.42,
+        "probability": 0.9999860525131226
+      },
+      {
+        "word": "conversation,",
+        "start": 18.42,
+        "end": 18.96,
+        "probability": 0.9999724626541138
+      },
+      {
+        "word": "those",
+        "start": 19.2,
+        "end": 19.4,
+        "probability": 0.9991563558578491
+      },
+      {
+        "word": "kind",
+        "start": 19.4,
+        "end": 19.6,
+        "probability": 0.9997585415840149
+      },
+      {
+        "word": "of",
+        "start": 19.6,
+        "end": 19.78,
+        "probability": 0.9999799728393555
+      },
+      {
+        "word": "like",
+        "start": 19.78,
+        "end": 19.88,
+        "probability": 0.9971401691436768
+      },
+      {
+        "word": "even",
+        "start": 19.88,
+        "end": 20.18,
+        "probability": 0.9993246793746948
+      },
+      {
+        "word": "out.",
+        "start": 20.18,
+        "end": 20.42,
+        "probability": 0.9989857077598572
+      }
+    ]
+  },
+  "6": {
+    "text": " There was sad news last week among this hilarity of Lady Gaga that ex-borough keeper Willie Wiggum has died. Was there any truth in those stories that he used to take a drag on cigarettes offered to him by fans behind the goal, do you think?",
+    "words": [
+      {
+        "word": "There",
+        "start": 0.0,
+        "end": 0.52,
+        "probability": 0.9686370491981506
+      },
+      {
+        "word": "was",
+        "start": 0.52,
+        "end": 0.64,
+        "probability": 0.9999790191650391
+      },
+      {
+        "word": "sad",
+        "start": 0.64,
+        "end": 1.56,
+        "probability": 0.9971701502799988
+      },
+      {
+        "word": "news",
+        "start": 1.56,
+        "end": 1.84,
+        "probability": 0.9999902248382568
+      },
+      {
+        "word": "last",
+        "start": 1.84,
+        "end": 2.2,
+        "probability": 0.999826967716217
+      },
+      {
+        "word": "week",
+        "start": 2.2,
+        "end": 2.5,
+        "probability": 0.9999639987945557
+      },
+      {
+        "word": "among",
+        "start": 2.5,
+        "end": 2.72,
+        "probability": 0.9856023192405701
+      },
+      {
+        "word": "this",
+        "start": 2.72,
+        "end": 2.98,
+        "probability": 0.99910968542099
+      },
+      {
+        "word": "hilarity",
+        "start": 2.98,
+        "end": 3.44,
+        "probability": 0.998756468296051
+      },
+      {
+        "word": "of",
+        "start": 3.44,
+        "end": 3.56,
+        "probability": 0.9975172281265259
+      },
+      {
+        "word": "Lady",
+        "start": 3.56,
+        "end": 4.58,
+        "probability": 0.9873772263526917
+      },
+      {
+        "word": "Gaga",
+        "start": 4.58,
+        "end": 4.98,
+        "probability": 0.8340358734130859
+      },
+      {
+        "word": "that",
+        "start": 4.98,
+        "end": 5.24,
+        "probability": 0.9709337949752808
+      },
+      {
+        "word": "ex",
+        "start": 5.24,
+        "end": 5.78,
+        "probability": 0.9997544884681702
+      },
+      {
+        "word": "-borough",
+        "start": 5.78,
+        "end": 5.96,
+        "probability": 0.8141644895076752
+      },
+      {
+        "word": "keeper",
+        "start": 5.96,
+        "end": 6.26,
+        "probability": 0.9899587035179138
+      },
+      {
+        "word": "Willie",
+        "start": 6.26,
+        "end": 6.64,
+        "probability": 0.7797900438308716
+      },
+      {
+        "word": "Wiggum",
+        "start": 6.64,
+        "end": 7.0,
+        "probability": 0.9696134726206461
+      },
+      {
+        "word": "has",
+        "start": 7.0,
+        "end": 7.4,
+        "probability": 0.9997426867485046
+      },
+      {
+        "word": "died.",
+        "start": 7.4,
+        "end": 7.78,
+        "probability": 0.9999406337738037
+      },
+      {
+        "word": "Was",
+        "start": 7.94,
+        "end": 8.3,
+        "probability": 0.9995409250259399
+      },
+      {
+        "word": "there",
+        "start": 8.3,
+        "end": 8.4,
+        "probability": 0.9988859295845032
+      },
+      {
+        "word": "any",
+        "start": 8.4,
+        "end": 8.58,
+        "probability": 0.9999873638153076
+      },
+      {
+        "word": "truth",
+        "start": 8.58,
+        "end": 8.88,
+        "probability": 0.9999414682388306
+      },
+      {
+        "word": "in",
+        "start": 8.88,
+        "end": 9.1,
+        "probability": 0.99959796667099
+      },
+      {
+        "word": "those",
+        "start": 9.1,
+        "end": 9.24,
+        "probability": 0.9997358918190002
+      },
+      {
+        "word": "stories",
+        "start": 9.24,
+        "end": 9.66,
+        "probability": 0.9999687671661377
+      },
+      {
+        "word": "that",
+        "start": 9.66,
+        "end": 9.94,
+        "probability": 0.9992954730987549
+      },
+      {
+        "word": "he",
+        "start": 9.94,
+        "end": 10.0,
+        "probability": 0.8134040236473083
+      },
+      {
+        "word": "used",
+        "start": 10.0,
+        "end": 10.16,
+        "probability": 0.9999250173568726
+      },
+      {
+        "word": "to",
+        "start": 10.16,
+        "end": 10.3,
+        "probability": 0.9999910593032837
+      },
+      {
+        "word": "take",
+        "start": 10.3,
+        "end": 10.44,
+        "probability": 0.9999345541000366
+      },
+      {
+        "word": "a",
+        "start": 10.44,
+        "end": 10.58,
+        "probability": 0.9999933242797852
+      },
+      {
+        "word": "drag",
+        "start": 10.58,
+        "end": 10.82,
+        "probability": 0.9889963865280151
+      },
+      {
+        "word": "on",
+        "start": 10.82,
+        "end": 11.18,
+        "probability": 0.9999158382415771
+      },
+      {
+        "word": "cigarettes",
+        "start": 11.18,
+        "end": 11.6,
+        "probability": 0.9997251629829407
+      },
+      {
+        "word": "offered",
+        "start": 11.6,
+        "end": 12.02,
+        "probability": 0.9991377592086792
+      },
+      {
+        "word": "to",
+        "start": 12.02,
+        "end": 12.22,
+        "probability": 0.9999545812606812
+      },
+      {
+        "word": "him",
+        "start": 12.22,
+        "end": 12.38,
+        "probability": 0.9999957084655762
+      },
+      {
+        "word": "by",
+        "start": 12.38,
+        "end": 12.5,
+        "probability": 0.9999520778656006
+      },
+      {
+        "word": "fans",
+        "start": 12.5,
+        "end": 12.78,
+        "probability": 0.9980022311210632
+      },
+      {
+        "word": "behind",
+        "start": 12.78,
+        "end": 13.06,
+        "probability": 0.9998146891593933
+      },
+      {
+        "word": "the",
+        "start": 13.06,
+        "end": 13.3,
+        "probability": 0.9995477795600891
+      },
+      {
+        "word": "goal,",
+        "start": 13.3,
+        "end": 13.54,
+        "probability": 0.9858831763267517
+      },
+      {
+        "word": "do",
+        "start": 13.6,
+        "end": 13.7,
+        "probability": 0.9997487664222717
+      },
+      {
+        "word": "you",
+        "start": 13.7,
+        "end": 13.74,
+        "probability": 0.9999960660934448
+      },
+      {
+        "word": "think?",
+        "start": 13.74,
+        "end": 13.92,
+        "probability": 0.999990701675415
+      }
+    ]
+  },
+  "7": {
+    "text": " Yes, yeah, indeed. Yeah, perfect, perfect. Yeah, I read when he signed for Borough that coach loads of Falkirk fans came to see his debut, which is a fine thing, travelling to watch a goalkeeper in action.",
+    "words": [
+      {
+        "word": "Yes,",
+        "start": 0.0,
+        "end": 0.36,
+        "probability": 0.9851341247558594
+      },
+      {
+        "word": "yeah,",
+        "start": 0.36,
+        "end": 0.74,
+        "probability": 0.7920183539390564
+      },
+      {
+        "word": "indeed.",
+        "start": 0.84,
+        "end": 1.24,
+        "probability": 0.9998747110366821
+      },
+      {
+        "word": "Yeah,",
+        "start": 4.159999999999999,
+        "end": 4.64,
+        "probability": 0.7094195485115051
+      },
+      {
+        "word": "perfect,",
+        "start": 4.64,
+        "end": 5.12,
+        "probability": 0.981200635433197
+      },
+      {
+        "word": "perfect.",
+        "start": 6.34,
+        "end": 6.56,
+        "probability": 0.9996095299720764
+      },
+      {
+        "word": "Yeah,",
+        "start": 6.8,
+        "end": 7.12,
+        "probability": 0.9129894971847534
+      },
+      {
+        "word": "I",
+        "start": 7.2,
+        "end": 7.78,
+        "probability": 0.9998956918716431
+      },
+      {
+        "word": "read",
+        "start": 7.78,
+        "end": 8.08,
+        "probability": 0.9999619722366333
+      },
+      {
+        "word": "when",
+        "start": 8.08,
+        "end": 8.28,
+        "probability": 0.9982544779777527
+      },
+      {
+        "word": "he",
+        "start": 8.28,
+        "end": 8.52,
+        "probability": 0.9995860457420349
+      },
+      {
+        "word": "signed",
+        "start": 8.52,
+        "end": 8.7,
+        "probability": 0.9999390840530396
+      },
+      {
+        "word": "for",
+        "start": 8.7,
+        "end": 8.9,
+        "probability": 0.9982621073722839
+      },
+      {
+        "word": "Borough",
+        "start": 8.9,
+        "end": 9.18,
+        "probability": 0.9867574572563171
+      },
+      {
+        "word": "that",
+        "start": 9.18,
+        "end": 9.36,
+        "probability": 0.9458499550819397
+      },
+      {
+        "word": "coach",
+        "start": 9.36,
+        "end": 10.12,
+        "probability": 0.9957790374755859
+      },
+      {
+        "word": "loads",
+        "start": 10.12,
+        "end": 10.44,
+        "probability": 0.9499917030334473
+      },
+      {
+        "word": "of",
+        "start": 10.44,
+        "end": 10.7,
+        "probability": 0.9999024868011475
+      },
+      {
+        "word": "Falkirk",
+        "start": 10.7,
+        "end": 11.08,
+        "probability": 0.9964318672815958
+      },
+      {
+        "word": "fans",
+        "start": 11.08,
+        "end": 11.34,
+        "probability": 0.9999017715454102
+      },
+      {
+        "word": "came",
+        "start": 11.34,
+        "end": 11.58,
+        "probability": 0.9997350573539734
+      },
+      {
+        "word": "to",
+        "start": 11.58,
+        "end": 11.8,
+        "probability": 0.9999834299087524
+      },
+      {
+        "word": "see",
+        "start": 11.8,
+        "end": 11.96,
+        "probability": 0.9999475479125977
+      },
+      {
+        "word": "his",
+        "start": 11.96,
+        "end": 12.1,
+        "probability": 0.9997931122779846
+      },
+      {
+        "word": "debut,",
+        "start": 12.1,
+        "end": 12.44,
+        "probability": 0.9998693466186523
+      },
+      {
+        "word": "which",
+        "start": 12.54,
+        "end": 12.84,
+        "probability": 0.9998698234558105
+      },
+      {
+        "word": "is",
+        "start": 12.84,
+        "end": 12.96,
+        "probability": 0.9999903440475464
+      },
+      {
+        "word": "a",
+        "start": 12.96,
+        "end": 13.06,
+        "probability": 0.9999754428863525
+      },
+      {
+        "word": "fine",
+        "start": 13.06,
+        "end": 13.28,
+        "probability": 0.9998505115509033
+      },
+      {
+        "word": "thing,",
+        "start": 13.28,
+        "end": 13.5,
+        "probability": 0.9999896287918091
+      },
+      {
+        "word": "travelling",
+        "start": 13.58,
+        "end": 13.98,
+        "probability": 0.9847081899642944
+      },
+      {
+        "word": "to",
+        "start": 13.98,
+        "end": 14.22,
+        "probability": 0.9999918937683105
+      },
+      {
+        "word": "watch",
+        "start": 14.22,
+        "end": 14.36,
+        "probability": 0.9999465942382812
+      },
+      {
+        "word": "a",
+        "start": 14.36,
+        "end": 14.48,
+        "probability": 0.9988362193107605
+      },
+      {
+        "word": "goalkeeper",
+        "start": 14.48,
+        "end": 14.84,
+        "probability": 0.9986223578453064
+      },
+      {
+        "word": "in",
+        "start": 14.84,
+        "end": 15.04,
+        "probability": 0.9999676942825317
+      },
+      {
+        "word": "action.",
+        "start": 15.04,
+        "end": 15.26,
+        "probability": 0.9999622106552124
+      }
+    ]
+  },
+  "8": {
+    "text": " Yeah, as per an old Harry Pearson column in When Saturday Comes. We had a plasterer who really looked like Willie Wiggum and I never plucked up the courage to say. And before I did manage to say anything to him, he was taken off the job by the gaffer because, in his words, he'd grown too fond of opening cans in the morning.",
+    "words": [
+      {
+        "word": "Yeah,",
+        "start": 0.0,
+        "end": 0.2,
+        "probability": 0.9433132410049438
+      },
+      {
+        "word": "as",
+        "start": 0.28,
+        "end": 1.32,
+        "probability": 0.9988560676574707
+      },
+      {
+        "word": "per",
+        "start": 1.32,
+        "end": 1.44,
+        "probability": 0.9998679161071777
+      },
+      {
+        "word": "an",
+        "start": 1.44,
+        "end": 1.7,
+        "probability": 0.9999735355377197
+      },
+      {
+        "word": "old",
+        "start": 1.7,
+        "end": 1.86,
+        "probability": 0.9999186992645264
+      },
+      {
+        "word": "Harry",
+        "start": 1.86,
+        "end": 2.06,
+        "probability": 0.9995874762535095
+      },
+      {
+        "word": "Pearson",
+        "start": 2.06,
+        "end": 2.4,
+        "probability": 0.9961968660354614
+      },
+      {
+        "word": "column",
+        "start": 2.4,
+        "end": 2.78,
+        "probability": 0.9903312921524048
+      },
+      {
+        "word": "in",
+        "start": 2.78,
+        "end": 2.96,
+        "probability": 0.9988969564437866
+      },
+      {
+        "word": "When",
+        "start": 2.96,
+        "end": 3.06,
+        "probability": 0.9888535737991333
+      },
+      {
+        "word": "Saturday",
+        "start": 3.06,
+        "end": 3.3,
+        "probability": 0.9997825026512146
+      },
+      {
+        "word": "Comes.",
+        "start": 3.3,
+        "end": 3.72,
+        "probability": 0.9995043277740479
+      },
+      {
+        "word": "We",
+        "start": 7.260000000000001,
+        "end": 7.74,
+        "probability": 0.9584233164787292
+      },
+      {
+        "word": "had",
+        "start": 7.74,
+        "end": 7.96,
+        "probability": 0.9999853372573853
+      },
+      {
+        "word": "a",
+        "start": 7.96,
+        "end": 8.1,
+        "probability": 0.9999781847000122
+      },
+      {
+        "word": "plasterer",
+        "start": 8.1,
+        "end": 8.76,
+        "probability": 0.9985974729061127
+      },
+      {
+        "word": "who",
+        "start": 8.76,
+        "end": 9.06,
+        "probability": 0.9998983144760132
+      },
+      {
+        "word": "really",
+        "start": 9.06,
+        "end": 9.54,
+        "probability": 0.9999711513519287
+      },
+      {
+        "word": "looked",
+        "start": 9.54,
+        "end": 9.76,
+        "probability": 0.9999527931213379
+      },
+      {
+        "word": "like",
+        "start": 9.76,
+        "end": 10.06,
+        "probability": 0.9999849796295166
+      },
+      {
+        "word": "Willie",
+        "start": 10.06,
+        "end": 10.36,
+        "probability": 0.6094172596931458
+      },
+      {
+        "word": "Wiggum",
+        "start": 10.36,
+        "end": 10.74,
+        "probability": 0.9723309874534607
+      },
+      {
+        "word": "and",
+        "start": 10.74,
+        "end": 11.24,
+        "probability": 0.5083914399147034
+      },
+      {
+        "word": "I",
+        "start": 11.24,
+        "end": 11.4,
+        "probability": 0.9994427561759949
+      },
+      {
+        "word": "never",
+        "start": 11.4,
+        "end": 11.66,
+        "probability": 0.9870255589485168
+      },
+      {
+        "word": "plucked",
+        "start": 11.66,
+        "end": 12.06,
+        "probability": 0.9988148212432861
+      },
+      {
+        "word": "up",
+        "start": 12.06,
+        "end": 12.1,
+        "probability": 0.9999858140945435
+      },
+      {
+        "word": "the",
+        "start": 12.1,
+        "end": 12.26,
+        "probability": 0.9999953508377075
+      },
+      {
+        "word": "courage",
+        "start": 12.26,
+        "end": 12.48,
+        "probability": 0.9999935626983643
+      },
+      {
+        "word": "to",
+        "start": 12.48,
+        "end": 13.32,
+        "probability": 0.972217321395874
+      },
+      {
+        "word": "say.",
+        "start": 13.32,
+        "end": 13.62,
+        "probability": 0.9999033212661743
+      },
+      {
+        "word": "And",
+        "start": 13.74,
+        "end": 13.82,
+        "probability": 0.8260646462440491
+      },
+      {
+        "word": "before",
+        "start": 13.82,
+        "end": 14.3,
+        "probability": 0.9998815059661865
+      },
+      {
+        "word": "I",
+        "start": 14.3,
+        "end": 14.52,
+        "probability": 0.9999974966049194
+      },
+      {
+        "word": "did",
+        "start": 14.52,
+        "end": 14.68,
+        "probability": 0.99997878074646
+      },
+      {
+        "word": "manage",
+        "start": 14.68,
+        "end": 14.94,
+        "probability": 0.999920129776001
+      },
+      {
+        "word": "to",
+        "start": 14.94,
+        "end": 15.14,
+        "probability": 0.9999967813491821
+      },
+      {
+        "word": "say",
+        "start": 15.14,
+        "end": 15.3,
+        "probability": 0.9999971389770508
+      },
+      {
+        "word": "anything",
+        "start": 15.3,
+        "end": 15.5,
+        "probability": 0.9999759197235107
+      },
+      {
+        "word": "to",
+        "start": 15.5,
+        "end": 15.82,
+        "probability": 0.9999686479568481
+      },
+      {
+        "word": "him,",
+        "start": 15.82,
+        "end": 16.02,
+        "probability": 0.9999943971633911
+      },
+      {
+        "word": "he",
+        "start": 16.06,
+        "end": 16.34,
+        "probability": 0.9998865127563477
+      },
+      {
+        "word": "was",
+        "start": 16.34,
+        "end": 16.52,
+        "probability": 0.999988317489624
+      },
+      {
+        "word": "taken",
+        "start": 16.52,
+        "end": 16.9,
+        "probability": 0.9999704360961914
+      },
+      {
+        "word": "off",
+        "start": 16.9,
+        "end": 17.16,
+        "probability": 0.9999960660934448
+      },
+      {
+        "word": "the",
+        "start": 17.16,
+        "end": 17.26,
+        "probability": 0.9999983310699463
+      },
+      {
+        "word": "job",
+        "start": 17.26,
+        "end": 17.48,
+        "probability": 0.999975323677063
+      },
+      {
+        "word": "by",
+        "start": 17.48,
+        "end": 17.7,
+        "probability": 0.9999023675918579
+      },
+      {
+        "word": "the",
+        "start": 17.7,
+        "end": 17.98,
+        "probability": 0.9996587038040161
+      },
+      {
+        "word": "gaffer",
+        "start": 17.98,
+        "end": 18.88,
+        "probability": 0.9995346069335938
+      },
+      {
+        "word": "because,",
+        "start": 19.72,
+        "end": 20.2,
+        "probability": 0.879481852054596
+      },
+      {
+        "word": "in",
+        "start": 20.34,
+        "end": 20.52,
+        "probability": 0.9999715089797974
+      },
+      {
+        "word": "his",
+        "start": 20.52,
+        "end": 20.66,
+        "probability": 0.9999936819076538
+      },
+      {
+        "word": "words,",
+        "start": 20.66,
+        "end": 20.94,
+        "probability": 0.9999667406082153
+      },
+      {
+        "word": "he'd",
+        "start": 21.02,
+        "end": 21.2,
+        "probability": 0.9998123943805695
+      },
+      {
+        "word": "grown",
+        "start": 21.2,
+        "end": 21.38,
+        "probability": 0.9999487400054932
+      },
+      {
+        "word": "too",
+        "start": 21.38,
+        "end": 21.64,
+        "probability": 0.9999856948852539
+      },
+      {
+        "word": "fond",
+        "start": 21.64,
+        "end": 21.92,
+        "probability": 0.9999896287918091
+      },
+      {
+        "word": "of",
+        "start": 21.92,
+        "end": 22.28,
+        "probability": 0.9999912977218628
+      },
+      {
+        "word": "opening",
+        "start": 22.28,
+        "end": 22.76,
+        "probability": 0.999982476234436
+      },
+      {
+        "word": "cans",
+        "start": 22.76,
+        "end": 23.1,
+        "probability": 0.9996956586837769
+      },
+      {
+        "word": "in",
+        "start": 23.1,
+        "end": 23.4,
+        "probability": 0.9999874830245972
+      },
+      {
+        "word": "the",
+        "start": 23.4,
+        "end": 23.52,
+        "probability": 0.9999953508377075
+      },
+      {
+        "word": "morning.",
+        "start": 23.52,
+        "end": 23.88,
+        "probability": 0.9999634027481079
+      }
+    ]
+  },
+  "9": {
+    "text": " I feel like that, Harry, and I'm glad you took your turn in saying it because Andy can pronounce it and proudly does on regular occasions. But I don't dare go.",
+    "words": [
+      {
+        "word": "I",
+        "start": 0.0,
+        "end": 0.18,
+        "probability": 0.9913260340690613
+      },
+      {
+        "word": "feel",
+        "start": 0.18,
+        "end": 1.22,
+        "probability": 0.9837733507156372
+      },
+      {
+        "word": "like",
+        "start": 1.22,
+        "end": 1.56,
+        "probability": 0.9999284744262695
+      },
+      {
+        "word": "that,",
+        "start": 1.56,
+        "end": 1.72,
+        "probability": 0.9999419450759888
+      },
+      {
+        "word": "Harry,",
+        "start": 1.82,
+        "end": 1.92,
+        "probability": 0.9740616083145142
+      },
+      {
+        "word": "and",
+        "start": 2.0,
+        "end": 2.1,
+        "probability": 0.9996840953826904
+      },
+      {
+        "word": "I'm",
+        "start": 2.1,
+        "end": 2.26,
+        "probability": 0.9998151063919067
+      },
+      {
+        "word": "glad",
+        "start": 2.26,
+        "end": 2.38,
+        "probability": 0.9998979568481445
+      },
+      {
+        "word": "you",
+        "start": 2.38,
+        "end": 2.54,
+        "probability": 0.9999057054519653
+      },
+      {
+        "word": "took",
+        "start": 2.54,
+        "end": 2.78,
+        "probability": 0.9999607801437378
+      },
+      {
+        "word": "your",
+        "start": 2.78,
+        "end": 3.32,
+        "probability": 0.9996993541717529
+      },
+      {
+        "word": "turn",
+        "start": 3.32,
+        "end": 3.62,
+        "probability": 0.9970830082893372
+      },
+      {
+        "word": "in",
+        "start": 3.62,
+        "end": 3.72,
+        "probability": 0.9788957238197327
+      },
+      {
+        "word": "saying",
+        "start": 3.72,
+        "end": 3.9,
+        "probability": 0.9832216501235962
+      },
+      {
+        "word": "it",
+        "start": 3.9,
+        "end": 4.02,
+        "probability": 0.9668070673942566
+      },
+      {
+        "word": "because",
+        "start": 4.02,
+        "end": 4.14,
+        "probability": 0.6904351711273193
+      },
+      {
+        "word": "Andy",
+        "start": 4.14,
+        "end": 4.46,
+        "probability": 0.9988987445831299
+      },
+      {
+        "word": "can",
+        "start": 4.46,
+        "end": 4.66,
+        "probability": 0.9998001456260681
+      },
+      {
+        "word": "pronounce",
+        "start": 4.66,
+        "end": 5.08,
+        "probability": 0.9970026612281799
+      },
+      {
+        "word": "it",
+        "start": 5.08,
+        "end": 5.4,
+        "probability": 0.9999527931213379
+      },
+      {
+        "word": "and",
+        "start": 5.4,
+        "end": 5.54,
+        "probability": 0.9756292700767517
+      },
+      {
+        "word": "proudly",
+        "start": 5.54,
+        "end": 5.92,
+        "probability": 0.9978873133659363
+      },
+      {
+        "word": "does",
+        "start": 5.92,
+        "end": 6.18,
+        "probability": 0.9999591112136841
+      },
+      {
+        "word": "on",
+        "start": 6.18,
+        "end": 6.62,
+        "probability": 0.9995799660682678
+      },
+      {
+        "word": "regular",
+        "start": 6.62,
+        "end": 6.9,
+        "probability": 0.9999189376831055
+      },
+      {
+        "word": "occasions.",
+        "start": 6.9,
+        "end": 7.48,
+        "probability": 0.999924898147583
+      },
+      {
+        "word": "But",
+        "start": 7.5,
+        "end": 7.7,
+        "probability": 0.9533066749572754
+      },
+      {
+        "word": "I",
+        "start": 7.7,
+        "end": 8.14,
+        "probability": 0.9993320107460022
+      },
+      {
+        "word": "don't",
+        "start": 8.14,
+        "end": 9.18,
+        "probability": 0.9993804097175598
+      },
+      {
+        "word": "dare",
+        "start": 9.18,
+        "end": 9.28,
+        "probability": 0.991245448589325
+      },
+      {
+        "word": "go.",
+        "start": 9.28,
+        "end": 9.44,
+        "probability": 0.9986780285835266
+      }
+    ]
+  },
+  "10": {
+    "text": " Oh, that's insane. Yeah, I forget about that. Who is, in terms of, there's three teams in this trade. Who came first, who came second, who came last?",
+    "words": [
+      {
+        "word": "Oh,",
+        "start": 0.0,
+        "end": 0.76,
+        "probability": 0.6278246641159058
+      },
+      {
+        "word": "that's",
+        "start": 0.98,
+        "end": 1.58,
+        "probability": 0.9994846284389496
+      },
+      {
+        "word": "insane.",
+        "start": 1.58,
+        "end": 1.74,
+        "probability": 0.999459445476532
+      },
+      {
+        "word": "Yeah,",
+        "start": 1.94,
+        "end": 2.22,
+        "probability": 0.9923404455184937
+      },
+      {
+        "word": "I",
+        "start": 2.34,
+        "end": 2.52,
+        "probability": 0.9997259974479675
+      },
+      {
+        "word": "forget",
+        "start": 2.52,
+        "end": 2.74,
+        "probability": 0.9993752837181091
+      },
+      {
+        "word": "about",
+        "start": 2.74,
+        "end": 2.96,
+        "probability": 0.9999544620513916
+      },
+      {
+        "word": "that.",
+        "start": 2.96,
+        "end": 3.16,
+        "probability": 0.9999462366104126
+      },
+      {
+        "word": "Who",
+        "start": 3.92,
+        "end": 4.32,
+        "probability": 0.7599673867225647
+      },
+      {
+        "word": "is,",
+        "start": 4.32,
+        "end": 4.58,
+        "probability": 0.9999321699142456
+      },
+      {
+        "word": "in",
+        "start": 4.72,
+        "end": 4.9,
+        "probability": 0.9998164772987366
+      },
+      {
+        "word": "terms",
+        "start": 4.9,
+        "end": 5.14,
+        "probability": 0.999972939491272
+      },
+      {
+        "word": "of,",
+        "start": 5.14,
+        "end": 5.38,
+        "probability": 0.9999911785125732
+      },
+      {
+        "word": "there's",
+        "start": 5.4,
+        "end": 5.68,
+        "probability": 0.9996221363544464
+      },
+      {
+        "word": "three",
+        "start": 5.68,
+        "end": 5.86,
+        "probability": 0.9928897619247437
+      },
+      {
+        "word": "teams",
+        "start": 5.86,
+        "end": 6.14,
+        "probability": 0.999913215637207
+      },
+      {
+        "word": "in",
+        "start": 6.14,
+        "end": 6.28,
+        "probability": 0.9997431635856628
+      },
+      {
+        "word": "this",
+        "start": 6.28,
+        "end": 6.4,
+        "probability": 0.9999698400497437
+      },
+      {
+        "word": "trade.",
+        "start": 6.4,
+        "end": 6.66,
+        "probability": 0.9998624324798584
+      },
+      {
+        "word": "Who",
+        "start": 6.74,
+        "end": 7.0,
+        "probability": 0.9998247027397156
+      },
+      {
+        "word": "came",
+        "start": 7.0,
+        "end": 7.2,
+        "probability": 0.9999414682388306
+      },
+      {
+        "word": "first,",
+        "start": 7.2,
+        "end": 7.48,
+        "probability": 0.9993221759796143
+      },
+      {
+        "word": "who",
+        "start": 7.54,
+        "end": 7.64,
+        "probability": 0.9998692274093628
+      },
+      {
+        "word": "came",
+        "start": 7.64,
+        "end": 7.8,
+        "probability": 0.9999890327453613
+      },
+      {
+        "word": "second,",
+        "start": 7.8,
+        "end": 8.06,
+        "probability": 0.9998723268508911
+      },
+      {
+        "word": "who",
+        "start": 8.12,
+        "end": 8.2,
+        "probability": 0.9992720484733582
+      },
+      {
+        "word": "came",
+        "start": 8.2,
+        "end": 8.34,
+        "probability": 0.9999862909317017
+      },
+      {
+        "word": "last?",
+        "start": 8.34,
+        "end": 8.54,
+        "probability": 0.9999886751174927
+      }
+    ]
+  },
+  "11": {
+    "text": " So time in, oh, sorry. I was just going to say, so time in front of the TV was sort of specific and, you know, watched while watching over your shoulder. But then I imagine rest of your time awake was spent thinking about when you could be in front of the television again. Is that?",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.0,
+        "end": 0.08,
+        "probability": 0.7448431849479675
+      },
+      {
+        "word": "time",
+        "start": 0.08,
+        "end": 0.48,
+        "probability": 0.964965283870697
+      },
+      {
+        "word": "in,",
+        "start": 0.48,
+        "end": 0.62,
+        "probability": 0.6943727731704712
+      },
+      {
+        "word": "oh,",
+        "start": 0.64,
+        "end": 1.14,
+        "probability": 0.9803357124328613
+      },
+      {
+        "word": "sorry.",
+        "start": 1.24,
+        "end": 1.5,
+        "probability": 0.999936580657959
+      },
+      {
+        "word": "I",
+        "start": 3.0,
+        "end": 3.44,
+        "probability": 0.9991589784622192
+      },
+      {
+        "word": "was",
+        "start": 3.44,
+        "end": 3.62,
+        "probability": 0.9999402761459351
+      },
+      {
+        "word": "just",
+        "start": 3.62,
+        "end": 3.72,
+        "probability": 0.998920202255249
+      },
+      {
+        "word": "going",
+        "start": 3.72,
+        "end": 3.86,
+        "probability": 0.751854658126831
+      },
+      {
+        "word": "to",
+        "start": 3.86,
+        "end": 3.94,
+        "probability": 0.9999948740005493
+      },
+      {
+        "word": "say,",
+        "start": 3.94,
+        "end": 4.08,
+        "probability": 0.9999921321868896
+      },
+      {
+        "word": "so",
+        "start": 4.12,
+        "end": 4.2,
+        "probability": 0.9963197708129883
+      },
+      {
+        "word": "time",
+        "start": 4.2,
+        "end": 4.44,
+        "probability": 0.9997846484184265
+      },
+      {
+        "word": "in",
+        "start": 4.44,
+        "end": 4.72,
+        "probability": 0.9999134540557861
+      },
+      {
+        "word": "front",
+        "start": 4.72,
+        "end": 4.94,
+        "probability": 0.9999277591705322
+      },
+      {
+        "word": "of",
+        "start": 4.94,
+        "end": 5.12,
+        "probability": 0.9999662637710571
+      },
+      {
+        "word": "the",
+        "start": 5.12,
+        "end": 5.24,
+        "probability": 0.9998946189880371
+      },
+      {
+        "word": "TV",
+        "start": 5.24,
+        "end": 5.54,
+        "probability": 0.9993233680725098
+      },
+      {
+        "word": "was",
+        "start": 5.54,
+        "end": 6.04,
+        "probability": 0.9995738863945007
+      },
+      {
+        "word": "sort",
+        "start": 6.04,
+        "end": 6.3,
+        "probability": 0.999219536781311
+      },
+      {
+        "word": "of",
+        "start": 6.3,
+        "end": 6.6,
+        "probability": 0.9999850988388062
+      },
+      {
+        "word": "specific",
+        "start": 6.6,
+        "end": 8.36,
+        "probability": 0.9812379479408264
+      },
+      {
+        "word": "and,",
+        "start": 8.36,
+        "end": 9.22,
+        "probability": 0.9742828011512756
+      },
+      {
+        "word": "you",
+        "start": 9.32,
+        "end": 10.04,
+        "probability": 0.8218712210655212
+      },
+      {
+        "word": "know,",
+        "start": 10.04,
+        "end": 10.84,
+        "probability": 0.9999520778656006
+      },
+      {
+        "word": "watched",
+        "start": 10.9,
+        "end": 12.28,
+        "probability": 0.8637508153915405
+      },
+      {
+        "word": "while",
+        "start": 12.28,
+        "end": 12.5,
+        "probability": 0.8664504885673523
+      },
+      {
+        "word": "watching",
+        "start": 12.5,
+        "end": 13.2,
+        "probability": 0.9999055862426758
+      },
+      {
+        "word": "over",
+        "start": 13.2,
+        "end": 13.48,
+        "probability": 0.9991827607154846
+      },
+      {
+        "word": "your",
+        "start": 13.48,
+        "end": 13.66,
+        "probability": 0.9999678134918213
+      },
+      {
+        "word": "shoulder.",
+        "start": 13.66,
+        "end": 14.02,
+        "probability": 0.9999666213989258
+      },
+      {
+        "word": "But",
+        "start": 14.04,
+        "end": 14.26,
+        "probability": 0.9997214674949646
+      },
+      {
+        "word": "then",
+        "start": 14.26,
+        "end": 14.4,
+        "probability": 0.999840497970581
+      },
+      {
+        "word": "I",
+        "start": 14.4,
+        "end": 14.54,
+        "probability": 0.9996753931045532
+      },
+      {
+        "word": "imagine",
+        "start": 14.54,
+        "end": 14.98,
+        "probability": 0.7823711633682251
+      },
+      {
+        "word": "rest",
+        "start": 14.98,
+        "end": 15.3,
+        "probability": 0.9215654730796814
+      },
+      {
+        "word": "of",
+        "start": 15.3,
+        "end": 15.54,
+        "probability": 0.9999854564666748
+      },
+      {
+        "word": "your",
+        "start": 15.54,
+        "end": 15.66,
+        "probability": 0.9999830722808838
+      },
+      {
+        "word": "time",
+        "start": 15.66,
+        "end": 15.9,
+        "probability": 0.9999746084213257
+      },
+      {
+        "word": "awake",
+        "start": 15.9,
+        "end": 16.28,
+        "probability": 0.9997238516807556
+      },
+      {
+        "word": "was",
+        "start": 16.28,
+        "end": 16.6,
+        "probability": 0.9998371601104736
+      },
+      {
+        "word": "spent",
+        "start": 16.6,
+        "end": 16.86,
+        "probability": 0.9999514818191528
+      },
+      {
+        "word": "thinking",
+        "start": 16.86,
+        "end": 17.58,
+        "probability": 0.9988071918487549
+      },
+      {
+        "word": "about",
+        "start": 17.58,
+        "end": 17.88,
+        "probability": 0.9999648332595825
+      },
+      {
+        "word": "when",
+        "start": 17.88,
+        "end": 18.16,
+        "probability": 0.9998457431793213
+      },
+      {
+        "word": "you",
+        "start": 18.16,
+        "end": 18.34,
+        "probability": 0.999980092048645
+      },
+      {
+        "word": "could",
+        "start": 18.34,
+        "end": 18.44,
+        "probability": 0.9999704360961914
+      },
+      {
+        "word": "be",
+        "start": 18.44,
+        "end": 18.56,
+        "probability": 0.9999792575836182
+      },
+      {
+        "word": "in",
+        "start": 18.56,
+        "end": 18.66,
+        "probability": 0.9999324083328247
+      },
+      {
+        "word": "front",
+        "start": 18.66,
+        "end": 18.82,
+        "probability": 0.9997981190681458
+      },
+      {
+        "word": "of",
+        "start": 18.82,
+        "end": 18.9,
+        "probability": 0.9999781847000122
+      },
+      {
+        "word": "the",
+        "start": 18.9,
+        "end": 18.98,
+        "probability": 0.9997697472572327
+      },
+      {
+        "word": "television",
+        "start": 18.98,
+        "end": 19.32,
+        "probability": 0.9981446266174316
+      },
+      {
+        "word": "again.",
+        "start": 19.32,
+        "end": 19.64,
+        "probability": 0.9993403553962708
+      },
+      {
+        "word": "Is",
+        "start": 19.94,
+        "end": 20.38,
+        "probability": 0.9580195546150208
+      },
+      {
+        "word": "that?",
+        "start": 20.38,
+        "end": 20.46,
+        "probability": 0.9999802112579346
+      }
+    ]
+  },
+  "12": {
+    "text": " that she or to like insinuate that a girl is also doing it. It's like they're all doing it. But it's this cloak, right, that we live under that's like, no, no, girls aren't allowed to do anything for themselves. But you're like watching women, again, not too young, too young to know this, but you're getting an idea that like, no, I can see that this is something that happens too.",
+    "words": [
+      {
+        "word": "that",
+        "start": 0.0,
+        "end": 0.18,
+        "probability": 0.40629473328590393
+      },
+      {
+        "word": "she",
+        "start": 0.18,
+        "end": 0.32,
+        "probability": 0.9978985786437988
+      },
+      {
+        "word": "or",
+        "start": 0.32,
+        "end": 0.6,
+        "probability": 0.6451730132102966
+      },
+      {
+        "word": "to",
+        "start": 0.6,
+        "end": 0.76,
+        "probability": 0.9983263611793518
+      },
+      {
+        "word": "like",
+        "start": 0.76,
+        "end": 0.96,
+        "probability": 0.9226475358009338
+      },
+      {
+        "word": "insinuate",
+        "start": 0.96,
+        "end": 1.72,
+        "probability": 0.9946814378102621
+      },
+      {
+        "word": "that",
+        "start": 1.72,
+        "end": 1.94,
+        "probability": 0.9998923540115356
+      },
+      {
+        "word": "a",
+        "start": 1.94,
+        "end": 2.06,
+        "probability": 0.999957799911499
+      },
+      {
+        "word": "girl",
+        "start": 2.06,
+        "end": 2.28,
+        "probability": 0.9999144077301025
+      },
+      {
+        "word": "is",
+        "start": 2.28,
+        "end": 2.46,
+        "probability": 0.9999525547027588
+      },
+      {
+        "word": "also",
+        "start": 2.46,
+        "end": 2.74,
+        "probability": 0.9999566078186035
+      },
+      {
+        "word": "doing",
+        "start": 2.74,
+        "end": 3.04,
+        "probability": 0.9944221377372742
+      },
+      {
+        "word": "it.",
+        "start": 3.04,
+        "end": 3.3,
+        "probability": 0.999964714050293
+      },
+      {
+        "word": "It's",
+        "start": 3.32,
+        "end": 3.52,
+        "probability": 0.9978691041469574
+      },
+      {
+        "word": "like",
+        "start": 3.52,
+        "end": 3.56,
+        "probability": 0.9999339580535889
+      },
+      {
+        "word": "they're",
+        "start": 3.56,
+        "end": 3.78,
+        "probability": 0.9487892389297485
+      },
+      {
+        "word": "all",
+        "start": 3.78,
+        "end": 3.96,
+        "probability": 0.9999734163284302
+      },
+      {
+        "word": "doing",
+        "start": 3.96,
+        "end": 4.32,
+        "probability": 0.9999587535858154
+      },
+      {
+        "word": "it.",
+        "start": 4.32,
+        "end": 4.72,
+        "probability": 0.9999798536300659
+      },
+      {
+        "word": "But",
+        "start": 4.78,
+        "end": 5.18,
+        "probability": 0.999546468257904
+      },
+      {
+        "word": "it's",
+        "start": 5.18,
+        "end": 5.94,
+        "probability": 0.9999384880065918
+      },
+      {
+        "word": "this",
+        "start": 5.94,
+        "end": 6.04,
+        "probability": 0.9999278783798218
+      },
+      {
+        "word": "cloak,",
+        "start": 6.04,
+        "end": 6.56,
+        "probability": 0.9995254278182983
+      },
+      {
+        "word": "right,",
+        "start": 6.7,
+        "end": 6.9,
+        "probability": 0.999459445476532
+      },
+      {
+        "word": "that",
+        "start": 6.96,
+        "end": 7.1,
+        "probability": 0.9999403953552246
+      },
+      {
+        "word": "we",
+        "start": 7.1,
+        "end": 7.22,
+        "probability": 0.9999722242355347
+      },
+      {
+        "word": "live",
+        "start": 7.22,
+        "end": 7.38,
+        "probability": 0.9999539852142334
+      },
+      {
+        "word": "under",
+        "start": 7.38,
+        "end": 7.58,
+        "probability": 0.9996278285980225
+      },
+      {
+        "word": "that's",
+        "start": 7.58,
+        "end": 7.84,
+        "probability": 0.8855567872524261
+      },
+      {
+        "word": "like,",
+        "start": 7.84,
+        "end": 7.98,
+        "probability": 0.9994359612464905
+      },
+      {
+        "word": "no,",
+        "start": 8.0,
+        "end": 8.14,
+        "probability": 0.9988380074501038
+      },
+      {
+        "word": "no,",
+        "start": 8.18,
+        "end": 8.28,
+        "probability": 0.9979883432388306
+      },
+      {
+        "word": "girls",
+        "start": 8.3,
+        "end": 8.5,
+        "probability": 0.9967405200004578
+      },
+      {
+        "word": "aren't",
+        "start": 8.5,
+        "end": 8.9,
+        "probability": 0.9999537467956543
+      },
+      {
+        "word": "allowed",
+        "start": 8.9,
+        "end": 9.06,
+        "probability": 0.9998531341552734
+      },
+      {
+        "word": "to",
+        "start": 9.06,
+        "end": 9.3,
+        "probability": 0.9999514818191528
+      },
+      {
+        "word": "do",
+        "start": 9.3,
+        "end": 10.28,
+        "probability": 0.9990835189819336
+      },
+      {
+        "word": "anything",
+        "start": 10.28,
+        "end": 10.98,
+        "probability": 0.9999653100967407
+      },
+      {
+        "word": "for",
+        "start": 10.98,
+        "end": 11.26,
+        "probability": 0.999908447265625
+      },
+      {
+        "word": "themselves.",
+        "start": 11.26,
+        "end": 11.5,
+        "probability": 0.9989163875579834
+      },
+      {
+        "word": "But",
+        "start": 12.16,
+        "end": 12.6,
+        "probability": 0.9998742341995239
+      },
+      {
+        "word": "you're",
+        "start": 12.6,
+        "end": 13.0,
+        "probability": 0.9999837875366211
+      },
+      {
+        "word": "like",
+        "start": 13.0,
+        "end": 13.16,
+        "probability": 0.999123752117157
+      },
+      {
+        "word": "watching",
+        "start": 13.16,
+        "end": 13.96,
+        "probability": 0.9714676737785339
+      },
+      {
+        "word": "women,",
+        "start": 13.96,
+        "end": 14.4,
+        "probability": 0.999903678894043
+      },
+      {
+        "word": "again,",
+        "start": 14.48,
+        "end": 14.92,
+        "probability": 0.9998067021369934
+      },
+      {
+        "word": "not",
+        "start": 15.14,
+        "end": 15.48,
+        "probability": 0.9982408285140991
+      },
+      {
+        "word": "too",
+        "start": 15.48,
+        "end": 16.36,
+        "probability": 0.9948388934135437
+      },
+      {
+        "word": "young,",
+        "start": 16.36,
+        "end": 16.66,
+        "probability": 0.9999839067459106
+      },
+      {
+        "word": "too",
+        "start": 16.66,
+        "end": 16.9,
+        "probability": 0.9986276626586914
+      },
+      {
+        "word": "young",
+        "start": 16.9,
+        "end": 17.24,
+        "probability": 0.9999544620513916
+      },
+      {
+        "word": "to",
+        "start": 17.24,
+        "end": 17.58,
+        "probability": 0.9996345043182373
+      },
+      {
+        "word": "know",
+        "start": 17.58,
+        "end": 17.76,
+        "probability": 0.9998724460601807
+      },
+      {
+        "word": "this,",
+        "start": 17.76,
+        "end": 17.96,
+        "probability": 0.9998587369918823
+      },
+      {
+        "word": "but",
+        "start": 18.0,
+        "end": 18.2,
+        "probability": 0.9994557499885559
+      },
+      {
+        "word": "you're",
+        "start": 18.2,
+        "end": 18.48,
+        "probability": 0.9999868869781494
+      },
+      {
+        "word": "getting",
+        "start": 18.48,
+        "end": 18.76,
+        "probability": 0.9991961121559143
+      },
+      {
+        "word": "an",
+        "start": 18.76,
+        "end": 18.96,
+        "probability": 0.9999722242355347
+      },
+      {
+        "word": "idea",
+        "start": 18.96,
+        "end": 19.24,
+        "probability": 0.9999513626098633
+      },
+      {
+        "word": "that",
+        "start": 19.24,
+        "end": 19.5,
+        "probability": 0.9998413324356079
+      },
+      {
+        "word": "like,",
+        "start": 19.5,
+        "end": 19.64,
+        "probability": 0.9953448176383972
+      },
+      {
+        "word": "no,",
+        "start": 19.68,
+        "end": 19.84,
+        "probability": 0.9972370862960815
+      },
+      {
+        "word": "I",
+        "start": 19.96,
+        "end": 20.32,
+        "probability": 0.999755322933197
+      },
+      {
+        "word": "can",
+        "start": 20.32,
+        "end": 20.6,
+        "probability": 0.9999703168869019
+      },
+      {
+        "word": "see",
+        "start": 20.6,
+        "end": 20.98,
+        "probability": 0.9999896287918091
+      },
+      {
+        "word": "that",
+        "start": 20.98,
+        "end": 21.26,
+        "probability": 0.9999703168869019
+      },
+      {
+        "word": "this",
+        "start": 21.26,
+        "end": 21.56,
+        "probability": 0.9998818635940552
+      },
+      {
+        "word": "is",
+        "start": 21.56,
+        "end": 21.74,
+        "probability": 0.9999951124191284
+      },
+      {
+        "word": "something",
+        "start": 21.74,
+        "end": 22.06,
+        "probability": 0.9999456405639648
+      },
+      {
+        "word": "that",
+        "start": 22.06,
+        "end": 22.84,
+        "probability": 0.9999315738677979
+      },
+      {
+        "word": "happens",
+        "start": 22.84,
+        "end": 23.26,
+        "probability": 0.9999390840530396
+      },
+      {
+        "word": "too.",
+        "start": 23.26,
+        "end": 23.6,
+        "probability": 0.7101172208786011
+      }
+    ]
+  },
+  "13": {
+    "text": " So you beat something that felt like it was consuming your life and it was still, you didn't even get to share the joy of beating something with someone. It was all just still internal.",
+    "words": [
+      {
+        "word": "So",
+        "start": 0.0,
+        "end": 0.1,
+        "probability": 0.8804208040237427
+      },
+      {
+        "word": "you",
+        "start": 0.1,
+        "end": 0.26,
+        "probability": 0.9818976521492004
+      },
+      {
+        "word": "beat",
+        "start": 0.26,
+        "end": 0.74,
+        "probability": 0.9996494054794312
+      },
+      {
+        "word": "something",
+        "start": 0.74,
+        "end": 1.08,
+        "probability": 0.9999617338180542
+      },
+      {
+        "word": "that",
+        "start": 1.08,
+        "end": 1.58,
+        "probability": 0.9976441264152527
+      },
+      {
+        "word": "felt",
+        "start": 1.58,
+        "end": 2.28,
+        "probability": 0.47912123799324036
+      },
+      {
+        "word": "like",
+        "start": 2.28,
+        "end": 2.8,
+        "probability": 0.9998694658279419
+      },
+      {
+        "word": "it",
+        "start": 2.8,
+        "end": 2.92,
+        "probability": 0.999702513217926
+      },
+      {
+        "word": "was",
+        "start": 2.92,
+        "end": 3.04,
+        "probability": 0.9999902248382568
+      },
+      {
+        "word": "consuming",
+        "start": 3.04,
+        "end": 3.56,
+        "probability": 0.9998857975006104
+      },
+      {
+        "word": "your",
+        "start": 3.56,
+        "end": 3.94,
+        "probability": 0.9998737573623657
+      },
+      {
+        "word": "life",
+        "start": 3.94,
+        "end": 4.34,
+        "probability": 0.9999768733978271
+      },
+      {
+        "word": "and",
+        "start": 4.34,
+        "end": 4.66,
+        "probability": 0.7099422812461853
+      },
+      {
+        "word": "it",
+        "start": 4.66,
+        "end": 4.78,
+        "probability": 0.9958321452140808
+      },
+      {
+        "word": "was",
+        "start": 4.78,
+        "end": 4.98,
+        "probability": 0.9999754428863525
+      },
+      {
+        "word": "still,",
+        "start": 4.98,
+        "end": 5.96,
+        "probability": 0.943175733089447
+      },
+      {
+        "word": "you",
+        "start": 6.22,
+        "end": 7.72,
+        "probability": 0.9994931221008301
+      },
+      {
+        "word": "didn't",
+        "start": 7.72,
+        "end": 8.0,
+        "probability": 0.9998531639575958
+      },
+      {
+        "word": "even",
+        "start": 8.0,
+        "end": 8.12,
+        "probability": 0.9998970031738281
+      },
+      {
+        "word": "get",
+        "start": 8.12,
+        "end": 8.3,
+        "probability": 0.999985933303833
+      },
+      {
+        "word": "to",
+        "start": 8.3,
+        "end": 8.44,
+        "probability": 0.9999631643295288
+      },
+      {
+        "word": "share",
+        "start": 8.44,
+        "end": 8.7,
+        "probability": 0.9999332427978516
+      },
+      {
+        "word": "the",
+        "start": 8.7,
+        "end": 8.9,
+        "probability": 0.9999527931213379
+      },
+      {
+        "word": "joy",
+        "start": 8.9,
+        "end": 9.16,
+        "probability": 0.9999346733093262
+      },
+      {
+        "word": "of",
+        "start": 9.16,
+        "end": 9.56,
+        "probability": 0.9998960494995117
+      },
+      {
+        "word": "beating",
+        "start": 9.56,
+        "end": 9.86,
+        "probability": 0.44750159978866577
+      },
+      {
+        "word": "something",
+        "start": 9.86,
+        "end": 10.54,
+        "probability": 0.9997746348381042
+      },
+      {
+        "word": "with",
+        "start": 10.54,
+        "end": 11.0,
+        "probability": 0.9994643330574036
+      },
+      {
+        "word": "someone.",
+        "start": 11.0,
+        "end": 11.32,
+        "probability": 0.9999479055404663
+      },
+      {
+        "word": "It",
+        "start": 11.52,
+        "end": 11.76,
+        "probability": 0.8685261607170105
+      },
+      {
+        "word": "was",
+        "start": 11.76,
+        "end": 12.02,
+        "probability": 0.9999960660934448
+      },
+      {
+        "word": "all",
+        "start": 12.02,
+        "end": 12.64,
+        "probability": 0.9998424053192139
+      },
+      {
+        "word": "just",
+        "start": 12.64,
+        "end": 12.94,
+        "probability": 0.999751627445221
+      },
+      {
+        "word": "still",
+        "start": 12.94,
+        "end": 13.22,
+        "probability": 0.9999241828918457
+      },
+      {
+        "word": "internal.",
+        "start": 13.22,
+        "end": 13.54,
+        "probability": 0.9994146823883057
+      }
+    ]
+  }
+}

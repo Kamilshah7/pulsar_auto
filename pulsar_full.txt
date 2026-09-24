@@ -1,0 +1,1682 @@
+Ermis Transcription V2 Instructions
+Updated: July 28, 2026
+In this project, you will capture the textual representation of human speech, as well as
+non-textual information such as speaker gender and nativity.
+You will listen to audio files of human utterances and transcribe speech as the user says it. This
+data will be used to evaluate the model's performance and ability to recognize, understand,
+and deliver spoken responses.
+Table of Contents
+● Task General Description
+● Importance of Transcription Accuracy
+● Visual Flowchart for Transcribing a Segment
+Core Transcription Rules
+● Unintelligible and Guessed Words and Phrases
+● Backchannels and Filled Pauses
+● Text Normalization
+○ Numbers
+○ Acronyms
+○ Letter Sequences
+○ Alphanumeric Sequences
+○ Proper Nouns
+■ Titles and Catalog Entities
+■ Catalog Entity List
+■ URLs and Email Addresses
+■ YouTube channels
+■ People's Names
+■ Usernames
+■ Honorifics
+○ Other
+■ Plurals and Possessives of Letter Sequences
+■ Contractions and Informal Contractions
+■ Words with Same Pronunciation and Same Meaning
+● Special Characters, Symbols, and Punctuation
+○ Apostrophes
+○ Hyphens
+○ Truncations, Self-Corrections, and Stutters
+● Tags
+○ Multiple Speakers (<ol> tags)
+○ Cross Talk
+○ Backchannels and Filled Pauses ([fp] tag)
+○ Non-Lexical Vocal Sounds
+○ Background Speech
+○ Garbled Audio
+○ Audio Artifacts
+○ No Audio
+○ No Speech
+○ Sensitive Content
+● User Descriptors
+○ Gender
+○ Nativity
+● Research Best Practices
+● Glossary
+● Appendix
+○ Appendix 1 - Transcription Supplement
+■ Dictionary and Resource Hierarchy
+■ Non-standard Speech and Grammar
+■ Non-Target Languages
+■ Location Names
+● Change log
+Task General Description
+This section provides an overview of the task.
+For each task, you are given an audio file. Your ultimate goal is to generate a spoken-form
+transcription of the audio. Spoken-form transcriptions have the following characteristics,
+among others:
+● Letters are in lowercase only.
+● Punctuation is limited (see rules in the instructions).
+● Numbers are written as words (e.g., three).
+Note: Spoken-form transcription does NOT mean that you should use the phonetic spelling.
+Always transcribe according to the spelling in the reference dictionary (Appendix 1).
+To process a task, follow the below steps:
+1. Listen to the recording. Just play the clip, don't type. Focus on absorbing the overall
+meaning (topic, speakers). Context can help you figure out what to transcribe,
+especially if there are unclear words or homophones.
+2. Transcribe the audio. Play the audio in chunks, pausing to type what you heard. If
+you're not sure about how to deal with a specific phenomenon, look for and read the
+relative section in these instructions. If you encounter unclear audio segments, you can
+replay, slow down the audio, or use context which often helps to provide the correct
+transcription.
+3. Write your transcription in the Transcribe the audio text box.
+4. Indicate the number of the speaker(s) from the How many identified speakers does the
+audio contain? question.
+5. Indicate the gender of the speaker(s) from the Select the gender of the speaker(s)
+question.
+6. Indicate the nativity of the speaker(s) from the Select the nativity of the speaker(s) in
+the audio file question.
+7. Submit the task.
+Attention: The use of Automatic Speech Recognition (ASR) to produce transcriptions is
+prohibited.
+The following section specifies what are the most important aspects to take into account
+during the transcription process and why.
+Importance of Transcription Accuracy
+Your transcription is the map between audio and text that will be used to train a text-to-speech
+model. This means that your transcriptions are the signals that the model will use to learn the
+association between audio and text. The model learns: "when I hear this sound, the correct
+text is this." Every mismatch between what's in the audio and what you type teaches the
+model something wrong. This impacts the end-product and erodes customer trust. That's why
+you transcribe not just every word, but every "um"s and "oh"s, repeated words, and
+non-speech sound - exactly as they are spoken.
+There are three ways a transcription breaks that map. These are the errors most critical to the
+model:
+- Deletion - you leave out something that was said (a word or a tag, an "um," a repeat). The
+model incorrectly learns "it's OK to ignore sounds in the audio," and in production, it drops real
+words.
+Audio: "i uh i think so" --> Wrong transcription: "i think so" / Correct transcription: "i uh i
+think so"
+- Hallucination: you add something that wasn't said (an extra word or an extra tag, a guess
+typed as if certain). The model incorrectly learns "invent content to fill gaps," and in production,
+it makes up words.
+Audio: "we should probably h-home" --> Wrong transcription: "we should probably go
+home" / Correct transcription: "we should probably h- home"
+- Substitution: you write a different word than what was said (mishearing, "fixing" grammar,
+normalizing something you shouldn't). The model learns the wrong sound-to-text mapping.
+Audio: "he don't like it" -> Wrong transcription: "he doesn't like it" / Correct transcription:
+"he don't like it"
+Rule of thumb: If you read only your transcription, it should account for everything that was
+said in the audio and nothing that wasn't — same words, same fillers, same order. When in
+doubt, transcribe what you hear, not what you expect.
+Visual Flowchart for Transcribing a Segment
+Use the diagram below as a guide to providing accurate transcriptions for each audio segment.
+Core Transcription Rules
+The sections below provide specific rules on how to handle each transcription scenario you
+may encounter in an audio file.
+Unintelligible and Guessed Words and Phrases
+Audio can be noisy, and it is not always easy to grasp the speech content in an audio file. This
+section provides the guidance for handling unclear audio, where you can not clearly determine
+the accurate transcription. It is important to clearly and accurately mark the presence and
+location of this unintelligibility, in order to maximize usefulness of the data for the model.
+General guidance: Use double parentheses (()) for speech that is unintelligible. A single (())
+can cover one or multiple unintelligible words. Place it where the speech occurs. Do not include
+any space inside the parentheses. Use a space to separate (()) from adjacent words or tags.
+Specific guidance:
+● Do use (()) where speech is genuinely unintelligible. Do NOT use it where speech is
+clearly intelligible. Consider a word as genuinely unintelligible if it takes multiple listens,
+slowing the audio, or repeated verification to identify.
+● Always attempt a best guess inside the parentheses when audio is even partially
+intelligible, including truncated words. An uncertain guess is more valuable than empty
+(()).
+● Use empty (()) only when speech is completely indiscernible after multiple listens — no
+syllables, no guessable words.
+● Use (()) for problems with the speech itself (unknown language, confusing words), not
+for audio quality issues — use the Garbled Audio tag for those. Research unfamiliar
+words before marking them unintelligible.
+● If the entire file is unintelligible speech from the main speaker, insert (()) only.
+● For background unintelligible speech, refer to the Background Speech section.
+Examples:
+Ex. Audio Transcribed Text (Spoken)
+1 Play (unintelligible). play (())
+2 Play (sounds like "songs") play ((songs))
+3 (sounds like "play songs") ((play songs))
+4 Repeat after me: (nonsense
+words or speech).
+repeat after me (())
+5 Play (sounds like “music”
+but cut off, could be
+"musical")
+play ((musi-))
+6 Audio is unclear but
+sounds like "yes ma'am"
+((yes ma'am))
+7 Audio is unclear but
+sounds like a name
+((jennifer))
+8 Audio is completely
+indecipherable— no
+syllables
+(())
+9 intelligible [hn] my friend invited me to go eat chinese food
+but i haven't eaten it in so long and i don't know
+what to get i think last time i got sweet and sour
+chicken with fried rice but do you have any
+recommendations on other things i might like
+10 Unintelligible (()) but i don't know what to get
+AUDIO EXAMPLES: the following examples illustrate unintelligible speech.
+AUDIO EXAMPLE: [🔊 Audio file: 01_unclear.mp3]
+TRANSCRIPTION (SPOKEN FORM): "((play)) about how much their home has increased in
+value and what their home is worth"
+Backchannels and Filled Pauses
+What are backchannels and filled pauses and why are they important? Backchannels are
+signals that a listener produces during a conversation to signal that they are
+following/understanding/reacting to what the other person says, including non-verbal words
+for affirmations, negations, or thinking. These lack standardized spellings, so here we align on
+the normalization rules, so that the model will get a coherent signal from the transcription data.
+Backchannels and filled pauses are important components in natural, real-time
+communication, so we want the transcription to capture backchannels and filled pauses
+with maximum accuracy, for the model to be able to perform deep understanding of the
+user's speech and respond accordingly. Do NOT treat backchannels and filled pauses as
+secondary elements.
+General guidance: Transcribe backchannels using the standardized spellings in the reference
+table below. Use the [fp] tag for filled pauses not listed in the table. See the "Backchannels and
+Filled Pauses ([fp] tag)" section
+Specific guidance:
+● Do not replace non-verbal sounds in catalog entities (song titles, brand names, etc.)
+with a backchannel word.
+Reference table — backchannel spellings:
+Audio / Intent Transcription (spoken)
+Agreeing or listening signal (mouth closed) mm-hm
+Agreeing or listening signal (mouth open) uh-huh
+Thinking or considering hmm
+Short hesitation (open vowel) uh
+Hesitation with closed lip (nasal) um
+Disagreeing signal (mouth closed) mm-mm
+Disagreeing signal (mouth open) nuh-huh
+Surprise or realization (rhymes with "owe") oh
+Excitement or impressed (rhymes with "food") ooh
+Other [fp]
+Examples:
+Audio Transcribed Text (spoken)
+Mm-mm, that's not what I said. mm-mm that's not what i said
+Mm-mm-mm. You're not listening! mm-mm-mm you're not listening
+Play Mmm Mmm Mmm Mmm by
+Crash Test Dummies.
+play mmm mmm mmm mmm by crash
+test dummies
+Can you ummm, ahhh, can you play
+uhh songs?
+can you um [fp] can you play uh songs
+● AUDIO EXAMPLE: This example illustrates "um" and "oh"
+○ AUDIO: [🔊 Audio file: 02_artifact.mp3]
+○ TRANSCRIPTION (SPOKEN FORM): "<s1> so glad to have you in the state of
+south carolina <s2> thank you it's good to be here <s1> awesome [bg] um we
+have four in college and i'm going to grad school <s2> oh "
+● AUDIO EXAMPLE: the following example illustrates "uh". Note that every "uh" was
+transcribed
+○ AUDIO: [🔊 Audio file: 03_truncation.mp3]
+○ TRANSCRIPTION (SPOKEN FORM): "regional issues um so uh th- the when we
+go into these meetings y- y- you see the same people that are dealing with uh
+with uh issues throughout the middle east"
+● AUDIO EXAMPLE: "oh"
+○ AUDIO: [🔊 Audio file: 04_oh.mp3]
+○ TRANSCRIPTION (SPOKEN FORM): "oh that's great i love that"
+● AUDIO EXAMPLE: "hmm"
+○ AUDIO: [🔊 Audio file: 05_hm.mp3]
+○ TRANSCRIPTION (SPOKEN FORM): "<s1> very surprised <s2> hmm"
+● AUDIO EXAMPLE: "uh-huh"
+○ AUDIO: [🔊 Audio file: 06_uh_huh.mp3]
+○ TRANSCRIPTION (SPOKEN FORM): "yeah yeah ((what would)) uh-huh"
+● AUDIO EXAMPLE: "mm-mm"
+○ AUDIO: [🔊 Audio file: 07_mm-mm.mp3]
+○ TRANSCRIPTION (SPOKEN FORM): "i haven't been in the dating world at all
+i've just been totally turned off i'm just like ugh mm-mm mm-mm yeah"
+● AUDIO EXAMPLE: "nuh-huh"
+○ AUDIO: [🔊 Audio file: 08_nuh-huh.mp3]
+○ TRANSCRIPTION (SPOKEN FORM): "(()) kind nuh-huh you got some good ones
+ok "
+● AUDIO EXAMPLE: "mm-hm"
+○ AUDIO: [🔊 Audio file: 09_mhm.mp3]
+○ TRANSCRIPTION (SPOKEN FORM): "mm-hm yeah mm-hm "
+Text Normalization
+What is text normalization and why it is important: Text normalization is the process of
+converting different formats of text into standardized representations. Text normalization can
+be done on several elements. One example is numbers: One can transcribe numbers using
+digits or using words. Normalizing means deciding on one specific format to be used
+consistently across all instances. We normalize in order to avoid providing mixed signals to the
+model which can lead to unreliable behavior in the end-product.
+Numbers
+Transcribe numbers using words, not digits. Numbers include numerals, ordinals (like 1st),
+quantities, times, sequences, distances, and arithmetic.
+● Transcribe letters in codes and sequences with a following period (e.g., "a. b. c.", "u. a.").
+Examples (spoken form):
+- eighty-seven
+- fifth
+- three zero six
+- three oh six
+- what is five plus five plus five plus five plus five
+- my confirmation code is a. b. c. one two three
+- the flight number is u. a. seven twenty-nine
+- the pie costs five dollars
+● AUDIO EXAMPLE: the following example illustrates transcription of numbers
+○ AUDIO: [🔊 Audio file: 10_numbers.mp3]
+○ TRANSCRIPTION (SPOKEN FORM):"uh a gold coin a one ounce gold coin now
+would cost you about two thousand dollars but there are smaller coins "
+Acronyms
+Transcribe acronyms as words or as individual letters:
+● If the user pronounces an acronym as a word, transcribe it as a word.
+● If the user pronounces it as separate letters, follow the rules in Letter Sequences.
+Examples:
+Ex. Audio Transcribed Text
+(Spoken)
+1 User: What is OPEC? (pronounced “oh-peck”) what is opec
+2 User: What is OPEC? (pronounced "O-P-E-C") what is o. p. e. c.
+● AUDIO EXAMPLE: the following example illustrates transcription of acronyms
+○ AUDIO: [🔊 Audio file: 11_acronyms.mp3]
+○ TRANSCRIPTION (SPOKEN FORM): "[bg] miss allan matt west c. n. n. "
+Letter Sequences
+Letter sequences are spelled-out words or individual letters spoken in an audio file.
+● Add a period, then a space, following each individual letter.
+● Do NOT use a period after one-letter words (such as "i" in English and Italian, or "y" in
+Spanish and French).
+Examples:
+my name is marco alvarez a. l. v. a. r. e. z.
+Alphanumeric Sequences
+Alphanumeric sequences contain a mix of letters and numbers, such as confirmation codes,
+flight numbers, serial numbers, license plates, and booking references.
+● Transcribe letters per the Letter Sequences rules and numbers per the Numbers rules.
+● Transcribe the sequence in the order the user speaks it.
+Examples:
+Ex. Audio Transcribed spoken form Text
+1 User: My confirmation code is ABC123
+(spelled out).
+my confirmation code is a. b. c. one
+two three
+2 User: The flight number is UA729 (one
+number).
+the flight number is u. a. seven
+twenty-nine
+3 User: The serial number is X9R2K. the serial number is x. nine r. two k.
+4 Speaker says "ABC 123" with no
+preceding context
+a. b. c. one two three
+Proper Nouns
+Refer to the following guidelines for information on the transcription of proper nouns:
+· Titles and Catalog Entities
+· URLs and Email Addresses
+· YouTube Channels
+· People's Names
+Titles and Catalog Entities
+General guidance: A catalog entity is a titled or branded list item an agent could search for
+during entity resolution — books, movies, songs, albums, playlists, artists, apps, skills,
+channels, cities, countries, and so on. Transcriptions follow all standard transcription rules.
+(Note: language-specific guidance on titles and catalog entities appears in other sections; refer
+to the conventions as a whole.)
+Specific guidance:
+● Transcribe titles and catalog entities by their official spelling when possible, including
+hyphenation.
+● Omit disallowed characters when pronunciation isn't affected; if a character replaces a
+letter, transcribe the letter (e.g., P!nk → pink, Ke$ha → kesha).
+● Transcribe numbers and abbreviations as full words (e.g., I Would Die 4 U → i would die
+four u; Alien vs. Predator → alien versus predator).
+● Normalize a branded spelling when it isn't pronounceable as branded or doesn't reflect
+the user's pronunciation (e.g., CHVRCHES → churches).
+● For a single letter connected to a word by a hyphen, transcribe the hyphen and do not
+use a period + space (e.g., T-Pain → t-pain, Oral-B → oral-b).
+● When a phrase could be a catalog entity or common words, use context. If it clearly
+refers to a known entity, transcribe it as that entity (as close to branded spelling as
+spoken-form rules allow), not split into phonetically similar words (e.g., U2 → u. two,
+not "you two"; "play the northman" → the northman, not "the north men"). Research
+when uncertain.
+Examples:
+Example Transcription Branded Spelling
+1 panic at the disco Panic! at the Disco
+2 pink P!nk
+3 does kesha use an i. phone Does Ke$ha use an iPhone?
+4 i would die four u. I Would Die 4 U
+5 u. two U2
+6 alien versus predator Alien vs. Predator
+7 churches CHVRCHES
+8 k-rock f. m. K-ROQ FM
+9 t-pain T-Pain
+10 oral-b Oral-B
+Catalog Entity List
+General guidance: This is a non-exhaustive reference list of catalog entities you may
+encounter. If your utterance contains an entity not listed here, still transcribe it and research its
+branded spelling per the Dictionary and Resource Hierarchy.
+Specific guidance:
+● Always follow standard transcription rules and account for customer context, which
+may change how a catalog entity is transcribed based on pronunciation.
+● Apply the rules from the Titles and Catalog Entities section.
+Examples (spoken form):
+- mrbeast
+- travis kelce
+- the prison confessions of gypsy rose blanchard
+- percy jackson and the olympians
+- fargo
+- cocomelon
+- bitconned
+- cillian murphy
+- billie eilish
+- barry keoghan
+URLs and Email Addresses
+General guidance: Transcribe URLs and email domains as individual words, spelling out
+punctuation according to how the user pronounced it.
+Specific guidance:
+● Write each part as a separate word; spell out punctuation like "dot" and "at" as spoken.
+● Transcribe numbers and individual letters per the Numbers and Letter Sequences
+sections.
+Examples:
+Example Correct Transcription Incorrect Transcription
+1 is it christmas dot com isitchristmas.com
+2 w. w. w. dot i. m. d. b. dot com www.imdb.com
+3 jane smith eight at company dot com janesmith8@company.com
+YouTube Channels
+General guidance: Transcribe YouTube channel names using the official spelling. (Apply the
+same rules when transcribing Twitch streamers.)
+Specific guidance:
+● Use the official/branded spelling by default (e.g., "legaleagle").
+● Separate the name into individual words or letters when the channel contains a
+person's name, is composed of multiple proper nouns, includes letters pronounced
+separately, or includes cardinal/ordinal numbers.
+● When grammar indicates the possessive form of a person's name, normalize to reflect it
+(e.g., "hank's channel"). But if the channel stylizes the possessive, keep the branding
+and do not normalize (e.g., "bharatz kitchen").
+Examples (Correct Transcription - Spoken):
+- legaleagle
+- justin bieber vevo
+- hank's channel
+- bharatz kitchen
+- dan t. d. m.
+- only one noah
+- felix the first
+People's Names
+General guidance: Transcribe people's names according to standard or common spellings for
+the target locale.
+Specific guidance:
+● If a name has more than one common spelling, any common spelling is acceptable
+(e.g., "katelyn" or "caitlyn").
+● Names of celebrities, public figures, and fictional characters have only one correct
+spelling — confirm it through brief research.
+Examples (Transcribed Text - Spoken):
+- how is katelyn spelled
+- how is caitlyn spelled
+Usernames
+General guidance: Transcribe as you hear.
+Examples (Spoken-Form):
+- my username is john dot one two three
+- search for at dark underscore wolf
+- the account name is cool underscore guy ninety-nine
+- samantha one two four five
+Honorifics
+General guidance: Spell out personal titles completely (e.g., "mister," "missus") as per existing
+rules. Spell all personal titles in full.
+Examples (spoken form):
+- call mister johnson
+- missus smith is here
+- play songs by the band mister mister
+Other
+Plurals and Possessives of Letter Sequences
+General guidance: Form plurals and possessives of acronyms by attaching the ending
+immediately after the final period.
+Specific guidance:
+● For a plural, transcribe "s" immediately after the final period (e.g., "c. d.s").
+● For a possessive, transcribe "'s" immediately after the final period (e.g., "i. b. m.'s").
+Examples:
+- search for c. d.s
+- who is i. b. m.’s president
+Contractions and Informal Contractions
+General guidance
+Core principle: Transcribe contractions as spoken. If the speaker uses a contracted form, write
+the contraction. If the speaker clearly says the full/expanded form, write the full form. Why this
+matters: Transcriptions are used to train speech recognition systems and to align text with
+audio. Using the correct form, contracted or expanded, ensures the transcription accurately
+reflects both the timing and structure of what was actually said.
+When to use a contraction: Use a contraction when the speaker merges words together such
+that the contracted form is the most natural and recognizable way to represent what was said.
+For example:
+● If "I am" is spoken as one syllable, transcribe as "i'm" - the two words have merged into
+one unit.
+● If "give me" is spoken without the /v/ sound (as a single blended word), transcribe as
+"gimme" - writing "give me" would misrepresent what was actually spoken.
+● if a possible contraction doesn't sound anything like the full expanded version (e.g.
+“imma” doesn't sound anything like “I'm going to”) and there is a standard spelling of
+that contraction (found in a reputable dictionary, even if it's not Merriam-Webster or
+American Heritage Dictionary), then there is a good chance that the best judgment is to
+go ahead and use the contraction.
+When NOT to use a contraction: Use the expanded form when the speaker clearly articulates
+the separate words, even if a contraction exists. For example:
+● If you can clearly hear two distinct words "I am" with two syllables, transcribe as "i am"
+- not "i'm."
+● If the speaker clearly says "give me" with a distinct /v/, transcribe as "give me" - not
+"gimme."
+Steps to follow:
+1. Hear a potential contraction → listen carefully and determine if the speaker is actually
+using the contracted form (not clearly saying both words separately).
+2. If contracted form is spoken → check if it's in the list below.
+3. If it's in the list → use the contraction.
+4. If expanded form is clearly spoken → use the expanded form, even if the contraction is
+in the list.
+5. If the contraction is NOT in the list → use your best judgment. If it's a well-established
+contraction that accurately captures what was spoken, it may be acceptable. When in
+doubt, prefer the expanded form.
+Allowed contractions
+Standard contractions for am, are, is, has
+Examples:
+● Am: i'm
+● Are: you're, we're, they're
+● Is / Has: he's, she's, it's, what's, who's, where's, that's, why's, when's, how's, there's,
+here's
+Standard contractions for have
+Examples:
+● Have: i've, you've, we've, they've, could've, should've, would've
+Standard contractions for will / had / would
+Examples:
+● Will: i'll, you'll, he'll, she'll, we'll, they'll
+● Had / Would: i'd, you'd, he'd, she'd, we'd, they'd
+Standard contractions for not
+Examples:
+● isn't, aren't, wasn't, weren't, don't, doesn't, didn't, won't, can't, couldn't, shouldn't,
+wouldn't, hasn't, haven't, hadn't, mustn't, ain't
+Other standard contractions
+● let's (let us)
+Informal contractions
+● gimme, gonna, gotta, gotcha, lemme, wanna, whatcha, dunno, c'mon, 'cause, y'all,
+kinda, 'til, 'er / 'em (use when really spoken that way — mostly after "let" and "get" in
+fast, colloquial speech), imma
+Literary/archaic contractions
+Use only when contextually appropriate (e.g., quoting a poem or historical speech):
+● 'tis, 'twas, 'twasn't, 'twere, 'tweren't, 'tween, ne'er, o'er
+Note: If you encounter a contraction not listed here that accurately represents what the
+speaker said (a recognizable, well-known contraction), use your best judgment or consult the
+dictionary.
+● AUDIO EXAMPLE: contraction ("you're" vs "you are") -- this sounds more like "you're"
+than "you are"
+○ AUDIO: [🔊 Audio file: 12_contractions.mp3]
+○ TRANSCRIPTION (SPOKEN FORM): "if you're not taking part of it you feel as
+though you're inadequate or you're you know not a [hn] contributing member of
+society"
+Words with Same Pronunciation and Same Meaning
+General guidance: When two variant spellings share the same pronunciation and meaning and
+both appear in Merriam-Webster Dictionary, either form is acceptable. Labeler/verifier
+misalignment on these variants is not an error (e.g., yup vs. yep).
+Specific guidance:
+● Accept either variant when both are dictionary-listed and share pronunciation and
+meaning.
+● Some apparent synonyms have distinct usage — use the form matching the speaker's
+intended meaning: "all right" for correctness ("His answers were all right"), "alright" for
+adequacy/satisfaction ("I'm feeling alright").
+Examples:
+Variant A Variant B Notes
+yep yup Both acceptable
+yeah yea Both acceptable
+Special Characters, Symbols, and Punctuation
+What are special characters, symbols, and punctuation and why they are important.
+Special characters, symbols, and punctuation are non-alphabetical characters. Similar to text
+normalization, the goal is to use consistent formats for these elements to avoid sending mixed
+signals to the model and to improve its reliability.
+General guidance: Only a limited set of symbols and no sentence punctuation is allowed.
+Specific guidance:
+● Transcribe the dollar sign ($), euro (€), percent (%), and ampersand (&) as words.
+● Do not use punctuation to separate sentences; use only the symbols in the inventory
+table below.
+● Use apostrophes and hyphens per the target language (Refer to the Apostrophes and
+Hyphens sections for more information).
+The following table is a list of allowed symbols in spoken-form transcription.
+Ex. Symbol Name(s) Use Section
+1 <> Angle
+brackets,
+angle
+braces,
+carets
+Audio tags Tags, Multiple Speakers, Cross
+Talk, Garbled Audio, No Audio,
+No Speech, Sensitive Content
+2 ' Apostrophe Follows language
+rules
+Apostrophes
+3 - Hyphen,
+dash
+Truncation; proper
+nouns as needed;
+follows language
+rules
+Truncations, Self-Corrections,
+and Stutters, Titles and Catalog
+Entities, Hyphens
+4 (()) Parentheses Unintelligible
+speech
+Unintelligible and Guessed
+Words and Phrases
+5 {{}} Double curly
+braces
+Mis-spoken words Non-Standard Speech and
+Grammar
+6 . Period Individual letters, Letter Sequences, Acronyms
+7 [] Square
+brackets,
+square
+braces
+Human noise tag,
+filled pause tag
+Non-Lexical Vocal Sounds,
+Pause, Filled Pauses
+Apostrophes
+General guidance: Use apostrophes in accordance with standard English grammar rules.
+Specific guidance:
+● Use apostrophes in possessive constructions, including when the possessive ends in -s
+or -x.
+● Use apostrophes in names of artists, brands, and people according to their branded or
+standard spelling.
+● For contractions, refer to the Contractions and Informal Contractions section.
+Examples:
+Ex. Audio Transcribed Text
+(Spoken Form)
+1 Play kids’ music. (User pronounces "kids'" like
+the non-possessive word "kids.")
+play kids’ music
+2 Call James' cell. (User pronounces "James'"
+like the non-possessive name "James.")
+call james' cell
+3 Call James' cell. (User pronounces "James's"
+with two syllables, like "Jameses.")
+call james's cell
+4 Play music by Keb’ Mo’. play music by keb' mo'
+5 Call Jane O’Connor at ten o’clock. call jane o’connor at
+ten o’clock
+Hyphens
+General guidance: Transcribe hyphens only in the specific cases listed below.
+Specific guidance:
+● Use a hyphen when the dictionary of record spells the word with one. If both
+hyphenated and unhyphenated spellings exist, use the first-listed spelling.
+● Use a hyphen when it appears in a person's name, place name, or in made-up words
+within a brand name or title.
+● Do not use hyphens in multi-word adjectives or common words that can stand alone.
+Examples:
+Example Transcribed Text (Spoken Form)
+1 who played jean-luc picard
+2 add coca-cola to the shopping list
+3 play ob-la-di ob-la-da by the beatles
+4 find me a hotel in moreton-in-marsh
+5 read harry potter and the half blood prince
+6 what’s on my to do list
+Truncations, Self-Corrections, and Stutters
+General guidance: Use a hyphen (-) to indicate a cut-off or interrupted word, transcribing as
+much of the word as you can and placing the hyphen where the truncation occurs.
+Specific guidance:
+● Do NOT use a hyphen before or after a complete word. If a full word is slightly truncated
+but still fully audible, transcribe the whole word.
+● Do not insert hyphens after periods. If a speaker is interrupted while saying individual
+letters, transcribe only the letters they said.
+● Use a hyphen for a self-correction that results in truncation. If a self-correction does
+not result in truncation, transcribe the speech without hyphens.
+Examples:
+Ex. Audio Transcribed Text (Spoken)
+1 User: Set alarm for elev- set alarm for elev2 User: -ey, stop. -ey stop
+3 User: who founded H & eh… (user says the
+letter “m” but is slightly cut off)
+who founded h. and m.
+4 User: is tornado spelled t. o. r. is tornado spelled t. o. r.
+5 User: Turn down the televisio- ("television"
+is slightly truncated but still fully audible)
+turn down the television
+6 Play that sh (user self-corrects) song. play that sh- song
+7 Get directions to the…to the hotel. get directions to the to the hotel
+8 Call Janet…wait, I mean Janine! call janet wait i mean janine
+9 I w- w- would like that i w- w- would like that
+● AUDIO EXAMPLE: the following example illustrates transcription of truncations/
+self-corrections/ stutters
+○ AUDIO: [🔊 Audio file: 13_truncation.mp3]
+○ TRANSCRIPTION (SPOKEN FORM): "regional issues um so uh th- the when we
+go into these meetings y- y- you see the same people that are dealing with uh
+with uh issues throughout the middle east"
+Tags
+What are tags and why they are important: Tags are labels included in transcriptions to
+indicate specific features of the audio, like cross-talk, laughing, non-lexical sounds, etc.
+Indicating these specific features, with the correct tags and in the correct location where the
+audio features occur, is critical for the model. Missing tags that are needed or adding tags
+that shouldn't be added are critical error signals for the model, just like missing words or
+adding words incorrectly. See the table below for the full list of tags.
+General guidance: Some tags represent audio features that occur within speech; others
+represent types of speech.
+Specific guidance:
+● When multiple tags are needed, list them in alphabetical order, each separated by a
+single space. Do not add a space before a tag that begins the text or after a tag that
+ends the text.
+● Main and background speech tags apply only to human utterances.
+● Place [fp], [hn], and unintelligible markers (()) in their defined positions. Flag ambiguous
+placement for overturn review.
+● For single-speaker audio, do not include the <s1> tag.
+Examples:
+The following table demonstrates the use of tags in transcription.
+Tag Meaning Position in Transcribed
+Text
+Section
+<s1>,
+<s2>
+Multiple speakers Beginning of the
+speaker’s turn
+Multiple
+Speakers
+<ol>
+</ol>
+Overlapping speech Around where the audio
+feature occurs
+Multiple
+speakers
+<ct> Cross talk Where audio feature
+occurs
+Cross Talk
+[fp] Filled pause Where audio feature
+occurs
+Filled Pause
+[hn] Non-Lexical Vocal Sounds Where audio feature
+occurs
+Non-Lexical
+Vocal Sounds
+[laughter] Laughter Where audio feature
+occurs
+Non-Lexical
+Vocal Sounds
+[bg] Background Speech (and
+non-lexical vocal sounds
+from unidentifiable
+speaker(s))
+Where audio feature
+occurs
+Background
+Speech,
+Non-Lexical
+Vocal Sounds
+(()) Unintelligible speech Where audio feature
+occurs
+Unintelligible
+and Guessed
+Words and
+Phrases
+{{}} Mis-spoken words Where audio feature
+occurs
+Non-Standard
+Speech and
+Grammar
+[artifact] Audio Artifact Where audio feature
+occurs
+Audio Artifact
+<ga> Garbled audio Transcribe <ga> only Garbled Audio
+<na> No Audio Transcribe <na> only No Audio
+<ns> No Speech Transcribe <ns> only No Speech
+<nt> Audio contains only
+non-target language that is
+unidentifiable and cannot
+be transcribed
+Transcribe <nt> only Non-Target
+Languages
+<sc> Audio contains sensitive
+content
+Transcribe <sc> only Sensitive
+Content
+Multiple Speakers
+General guidance: Transcribe speech from multiple speakers in the order it occurs, using
+speaker tags (<s1>, <s2>, <s3>, etc.) assigned in order of first appearance. Place the speaker
+tag at the start of each speaker's turn. Spaces are required between tags.
+Specific guidance:
+● For intelligible simultaneous speech, wrap the whole overlap in a single <ol> … </ol>
+block and repeat each speaker's tag inside so every segment is attributed.
+● Use <ct> (cross talk) when overlapping speech is unintelligible. If intelligible overlap
+turns unintelligible, close </ol> first, then add <ct> — do not nest <ct> inside <ol>.
+● For 4+ simultaneous speakers: if intelligible but order is unclear, use <ol> with your
+best-guess order (either ordering is fine); if unintelligible, use <ct>; if partial, transcribe
+what you can in <ol>, then close and add <ct>.
+● Use <ct> only when content cannot be understood, never just because speaker order is
+unclear.
+Examples:
+The following table demonstrates examples of audio that contain multiple speakers.
+Ex. Audio Transcribed Text (Spoken)
+1 User 1: Play…
+User 2: ...songs.
+<s1> play <s2> songs
+2 User 1 and User 2,
+simultaneously: Stop!
+<ol> <s1> stop <s2> stop </ol>
+3 User 1: Set a timer.
+User 2: How long while User 1
+simultaneously says: For five
+minutes.
+User 2: Ok got it.
+<s1> set a timer <ol> <s2> how
+long <s1> for five minutes </ol>
+<s2> ok got it
+4 User 1 and User 2 overlap
+intelligibly, then become
+unintelligible
+<ol> <s1> wait <s2> no </ol> <ct>
+● AUDIO EXAMPLE: this example shows multiple speakers
+○ AUDIO: [🔊 Audio file: 14_artifact.mp3]
+○ TRANSCRIPTION (SPOKEN FORM): "<s1> so glad to have you in the state of
+south carolina <s2> thank you it's good to be here <s1> awesome [bg] um we
+have four in college and i'm going to grad school <s2> oh "
+Speaker Order Within <ol> Tags
+General guidance: When speakers talk at exactly the same time and it's impossible to tell who
+started first, the order of speaker tags inside <ol> is flexible, as long as each speaker's content
+is clearly attributed.
+Specific guidance:
+● Any speaker order within <ol> is acceptable for truly simultaneous speech.
+● Prioritize correct attribution over sequencing.
+● Verifiers and auditors: do not overturn a transcription solely because the speaker order
+within <ol> differs from another interpretation when speech is simultaneous.
+Examples:
+Audio Acceptable
+Transcription A
+(Spoken)
+Acceptable
+Transcription B
+(Spoken)
+User 1 and User 2 say "Stop"
+at exactly the same time
+<ol> <s1> stop <s2>
+stop </ol>
+<ol> <s2> stop <s1>
+stop </ol>
+Crowd/Group Responses (Large Groups, 15+ People)
+When a large group (e.g., a crowd, audience, class) responds simultaneously with short,
+identical responses (e.g., "Yes," "No," repeated phrases):
+● If the main speaker is identifiable and asking the question, assign them a speaker tag.
+● For the crowd response: If the crowd response is intelligible but you cannot identify
+individual speakers, transcribe the response once and attribute it to a single new
+speaker tag representing the group.
+● If the crowd response is unintelligible, use <ct>.
+● The crowd is treated as a single speaker (<s2>) since individual speakers cannot be
+distinguished. Do not create separate speaker tags for each person in the crowd.
+Example:
+Audio Transcribed Text
+Speaker 1 (teacher): "Ready?" Crowd (15+ students): "Yes!" <s1> ready <s2> yes
+Speaker 1: "What do we say?" Crowd responds unintelligibly <s1> what do we say
+<ct>
+Multiple Speakers Producing Non-Lexical Vocal Sounds Simultaneously
+General guidance: Handle simultaneous non-lexical vocal sounds (like laughter) based on
+whether the speakers can be identified.
+Specific guidance:
+● When multiple identified speakers produce non-lexical sounds at the same time, use
+<ol> … </ol> with each speaker's tag and their respective sound tag inside.
+● When an unidentifiable speaker's sound overlaps with an identified speaker, use a
+single tag ([bg]) placed after the identified speaker's content, per the rule for
+unidentifiable third-party sounds.
+● If you cannot identify who is producing the sound, place the tag where it occurs with no
+speaker attribution.
+Examples:
+Ex. Audio Transcribed Text (Spoken)
+1 User 1 and User 2
+laugh simultaneously.
+<ol> <s1> [laughter] <s2> [laughter] </ol>
+2 User 1: "That's funny."
+User 1 and User 2
+laugh simultaneously.
+<s1> that's funny <ol> <s1> [laughter] <s2>
+[laughter] </ol>
+3 User 1 laughs. An
+unidentifiable person
+also laughs.
+[laughter] [bg] (single speaker audio — no <s1> tag;
+second laugh from unidentifiable speaker treated as
+background non-lexical vocal sounds [bg])
+4 User 1: "Stop it." User
+2 laughs while User 1
+is speaking. (User 2 is
+identifiable)
+<s1> stop it <ol> <s1> [laughter] <s2> [laughter]
+</ol> — OR if only User 2 laughs during User 1's
+speech: <s1> stop <ol> <s1> it <s2> [laughter] </ol>
+5 User 1: "Stop it."
+(unidentifiable person
+laughs during speech)
+stop it [bg] (unidentifiable — place after the word
+during which the noise occurred)
+Cross Talk
+General guidance: The cross talk tag <ct> denotes unintelligible, overlapping speech from
+multiple speakers.
+Specific guidance:
+● Transcribe the <ct> tag where cross talk occurs in the audio file.
+● Do not insert a space-period-space to separate speakers already separated by a <ct>
+tag.
+Examples:
+Ex. Audio Transcribed Text (Spoken)
+1 User 1: Play—
+(User 1 and User 2 speak unintelligibly
+at the same time.)
+User 2: Don’t listen to her.
+<s1> play <ct> <s2> don’t listen to
+her
+2 User 1 and User 2 speak to each other
+unintelligibly at the same time.
+<ct>
+3 User 1, to User 2: I’m so mad at you!
+(User 1 and User 2 speak unintelligibly
+at the same time.)
+User 2, to User 1: —not my fault!
+<s1> i'm so mad at you <ct> <s2>
+not my fault
+Backchannels and Filled Pauses ([fp] tag)
+See the "Backchannels and Filled Pauses" section above for more details.
+● Use the [fp] tag for filled pauses not listed in the table. Place [fp] where it occurs; if two
+filled pauses occur back-to-back, transcribe [fp] once.
+Non-Lexical Vocal Sounds
+General guidance: Non-lexical vocal sounds are noises a speaker makes that can't be
+represented with standard spelling. For identifiable speakers, use the explicit tag [laughter]
+and use [hn] for any other (e.g., yawn, cry, cough, throat-clear, sneeze, lip-smack, sigh).
+Indicate these sounds in files with or without speech; if a file contains only such sounds, enter
+only the relevant tag.
+Specific guidance:
+● Do NOT use [hn] for regular breathing sound; [hn] is used for noticeable sharp
+inhalation, exhalation, yawns, cries, or other non-breathing non-lexical vocal sounds
+not covered by other tags.
+● Place the tag where the sound occurs. With multiple speakers, keep the tag with the
+speaker who made the noise.
+● If unsure whether the main speaker made the noise, assume they did.
+● Represent multiple sounds in succession with a single tag; for ongoing sounds, place
+one tag where it begins.
+● When a third unidentifiable person makes a sound between two speakers, place the
+[bg] tag at the end of the previous speaker's turn.
+● If a sound interrupts a word, place the tag within the word and mark the break per
+truncation rules (e.g., ama- [hn] -zing).
+● If an identifiable speaker makes a sound while an identified speaker talks, use
+overlapping speech tags <ol>.
+● Use [bg] for background speech with non-lexical sounds from unidentifiable speakers,
+whether it is laughter, unintelligible background speech, coughing, throat-clearing, etc.
+● If an unidentifiable speaker makes a sound while an identified speaker talks, place [bg]
+after the word it occurred during.
+Examples:
+Ex. Audio Transcribed Text (spoken)
+1 Speaker interrupts a word:
+"ama-" (sound) "-zing".
+ama- [hn] -zing
+2 User 1: Play mu- User 2
+(unidentifiable): (cough)User 1:
+-sic please.
+play music [bg] please
+3 User 1: Turn it up.User 2: Play
+mu-User 1: (sneeze)User 2: -sic
+please.
+<s1> turn it up <s2> play <ol>
+<s2>music <s1> [hn] </ol> <s2> please
+4 User 1: Play (cough)...
+User 2: Play music.
+<s1> play [hn] <s2> play music
+5 User: Play (two coughs) music. play [hn] music
+6 User 1: Stop.
+User 2, to User 1: Tell her to
+(sneeze) play music.
+<s1> stop <s2> tell her to [hn] play
+music
+7 User 1: (laughter)
+User 2: You’re funny!
+User 1: (laughter)
+<s1> [laughter] <s2> you're funny <s1>
+[laughter]
+8 User 1: Stop.
+User 2 (unidentifiable): (sneeze)
+stop [bg]
+9 User 1: pause...User 2
+(unidentified): (cough)
+User 3: Play!
+<s1> pause [bg] <s2> play
+● AUDIO EXAMPLE: this example shows the transcription of [laughter].
+○ AUDIO: [🔊 Audio file: 15_laughter.mp3]
+○ TRANSCRIPTION (SPOKEN FORM): " i told everybody i was in dallas [artifact]
+[laughter] [bg] i had no idea where i was [bg]"
+● AUDIO EXAMPLE: this example shows the transcription of [hn].
+○ AUDIO: [🔊 Audio file: 16_throat_clear.mp3]
+○ TRANSCRIPTION (SPOKEN FORM): "<s1> atlanta <s2> [hn] <s1> recently
+[artifact] after a very late flight to try and get here and there were no flights
+because there was a whole that whole uh [hn] air traffic control thing"
+Background Speech
+General guidance: The [bg] tag indicates background speech that cannot be attributed to an
+identified speaker — speech too distant or unclear to assign to a specific person (e.g., a distant
+voice in a crowd or an unidentifiable voice in another room). Use [bg] regardless of the spoken
+language. [bg] is also used for non-lexical sounds from unidentifiable speakers (see
+Non-Lexical Vocal Sounds)
+Specific guidance:
+● Use [bg] only when you cannot determine who is speaking.
+● If you can identify a distinct speaker, use their speaker tag even if they aren't part of the
+main conversation. If you can identify them but can't understand the content, use their
+speaker tag with the Unintelligible Speech tag.
+● A previously identified speaker keeps their speaker tag even if they become temporarily
+unintelligible — do not use [bg] for them.
+● Place [bg] where the unattributable speech occurs. For continuous background speech,
+place [bg] at each point it becomes noticeable, not just at the start and end.
+● Use one [bg] tag for multiple unidentifiable speakers in a single instance. If it occurs
+during an identified speaker's turn, place [bg] after the interrupted speech.
+● Absence of a wake word does not by itself mean speech is background speech — judge
+by the audio context.
+Examples:
+The following table demonstrates examples of background speech.
+Ex. Audio Transcribed Text (Spoken)
+1 User: Call mom.
+A distant, unidentifiable voice is
+faintly heard.
+User: "On speaker."
+call mom [bg] on speaker
+2 User 1: Call mom.
+User 2: Tell her I said hi.
+User 3 (distant, unintelligible)
+<s1> call mom <s2> tell her i
+said hi [bg]
+Garbled Audio
+General guidance: Use the <ga> tag to indicate audio distorted by recording or microphone
+issues. This tag is rarely needed.
+Specific guidance:
+● If the audio skips or sounds damaged, type only the <ga> tag, even if parts of the file
+are clear — the interruptions make the speech impossible to evaluate.
+● Do not use <ga> for audio intentionally distorted to protect privacy (e.g., pitch changes).
+These are applied after recording and don't affect model performance.
+● AUDIO EXAMPLE: garbled audio
+○ AUDIO: [🔊 Audio file: 17_garbled.mp3]
+○ TRANSCRIPTION (SPOKEN FORM): "<ga>"
+Audio Artifacts
+General guidance: The [artifact] tag indicates a brief, non-speech audio artifact such as a
+static burst, pop, click, feedback squeal, or momentary glitch. Use it for punctual technical
+noise, not persistent background noise (constant hiss or hum).
+Specific guidance:
+● Insert the [artifact] tag where the artifact occurs, then continue transcribing normally.
+● Do not use [artifact] for audio too garbled to transcribe — use <ga> in those cases.
+● Choosing between the two: use [artifact] for brief, isolated noise you can transcribe
+around; use <ga> when recording or mic issues compromise the whole file (transcribe
+only <ga>). If unsure, ask "Can I still transcribe meaningful speech around this noise?"
+— yes means [artifact], no means <ga>.
+Examples:
+Ex. Audio Transcribed Text (Spoken)
+1 User: Play (brief static burst)
+music.
+play [artifact] music
+2 User 1: Call mom.
+User 2: Tell her (click) I said
+hi.
+<s1> call mom <s2> tell her [artifact]
+i said hi
+3 (Brief feedback squeal) User:
+Stop.
+[artifact] stop
+● AUDIO EXAMPLE: audio artifact
+○ AUDIO: [🔊 Audio file: 18_artifact.mp3]
+○ TRANSCRIPTION (SPOKEN FORM): "yeah like there's def- [artifact] -initely
+timing"
+No Audio
+When the audio is blank, transcribe only the <na> tag.
+No Speech
+General guidance: When there is no speech in the entire audio file, transcribe only the <ns>
+tag. Accurate no-speech tagging teaches the model not to fill gaps with hallucinated content.
+Specific guidance:
+● Use <ns> only when no other tag applies — including audio with faint white noise but no
+speech.
+● If there is no speech but another tag applies, use that tag instead.
+● This tag does not apply if there is any speech or noise associated with another tag,
+including speech with prolonged pauses.
+● Do not use any tag to indicate a pause in speech.
+The next section will provide information on another aspect that capture extra aspects of the
+conversations: user descriptors.
+Sensitive Content
+When the content in the audio is sensitive, such as containing curse words or explicit content
+(depending on annotator judgement), use <sc> as the tag. There is no set criteria that qualifies
+sensitive content for this workflow. Use your best judgement to determine if the utterance is
+sensitive. The purpose of the workflow is not to identify sensitive content, this option collects
+general data and trends for the customer.
+User Descriptors
+What are user descriptors and how they are important? User descriptors allow us to capture
+metadata about the speakers involved in the dialogue. Like tags, these are useful for the model
+to obtain a clear understanding of what it's happening in the audio.
+Gender
+Indicate the gender of each speaker.
+Use the following definitions to determine the gender of the speakers in an audio file.
+● Masculine-Sounding: The speaker has a masculine-sounding voice.
+● Feminine-Sounding: The speaker has a feminine-sounding voice.
+● Unknown: The speaker has a voice which is ambiguous, e.g., toddlers, kids.
+If you cannot determine the gender of the user due to voice distortion, do not guess. Select
+Unknown.
+Nativity
+Indicate the nativity of each identified speaker in the audio file. Consider speakers with accents
+for English-speaking countries as native speakers (including US, British, Canadian, Scottish,
+Australian, Welsh).
+Use the following definitions to determine the nativity of the speakers in an utterance:
+● Native: Native speakers of English
+● Non-Native: Non-native speakers of English
+● Unknown: The nativity of all speakers is unknown or both native and non-native
+speakers are present.
+● TTS: The speaker(s) are computer-generated (agent) speech or TTS.
+NOTE: If you cannot determine the nativity of the user due to voice distortion, do not guess.
+Select Unknown. (Some Transcription service orders use intentionally distorted audio to
+obscure identifying details about users.)
+To classify a speaker as native or non-native, intelligible speech must be present from that
+speaker. If a speaker only produces non-verbal expressions (e.g., laughter, crying, coughing,
+sighing) without any intelligible speech, designate their nativity as Unknown.
+This section concludes the description of specific aspects. The next sections will provide some
+more general guidance, detailing some good practices and a glossary of definitions.
+Research Best Practices
+It is important to make sure that entity spellings are correct.
+Search online to check the spelling of any entities you are not sure of. If you do not know where
+to start, sound out the word or words. Enter them as best you can. Include key words that
+might help direct the search (such as "town," "song," "movie," or "actor").
+For example, if the user asks for music by the Bee Gees and you have never heard of the group,
+you might search "BGs." If you do not include search terms related to music, the search will not
+find the right spelling.
+Once you add a music-related term, the search results redirect to the music group the Bee
+Gees, even though the spelling of the search term is incorrect.
+Glossary
+● Audio feature: A sound that generates a data point for an audio file. Usually indicated
+with a tag.
+● Audio file: Specific instance of audio data that may include speech and other audio
+features. Also called an utterance.
+● Automatic Speech Recognition (ASR): The process by which the device interprets
+users’ speech.
+● Backchannel: A brief listener response such as "yeah," "right," or "uh huh" that signals
+attention or acknowledgment without constituting a full turn. Backchannels typically
+occur while another speaker is talking.
+● Catalog entity: A titled or branded list item. Examples include books, movies, songs,
+albums, playlists, artists, apps, skills, channels, cities, and countries. A catalog entity is
+something that an agent could search for during entity resolution.
+● Cross talk: Unintelligible, overlapping speech from multiple speakers.
+● Data source: The situation from which audio data originates.
+● Dictionary of record: The spelling reference for the target language.
+● Entity resolution: The process of identifying, linking, and merging disparate data
+records that refer to the same real-world entity (such as a person, organization, or
+product).
+● Homophone: A word that sounds the same as another word but has a different
+meaning.
+● Homonym: A word that is spelled the same as another word but has a different
+meaning.
+● Intelligible speech: Speech that you are able to understand and transcribe.
+● Main Speaker: The main person speaking in the utterance.
+● Metadata: Data associated with a file (for example, Gender and Nativity) that is not part
+of the transcribed text.
+● Non-target language: A language that is not supported or expected for a given locale.
+● Stream: A single, continuous audio file; may include several utterances.
+● Tag: A standard series of letters and characters that indicates an audio feature.
+● Target language: The language that is supported or expected for a given locale.
+● Truncation: The act of cutting off a word or sound before its intended end. Truncated
+audio often occurs at the beginning or end of the audio file.
+● Turn: A continuous stretch of speech by one speaker, bounded by another speaker's
+speech, a pause, or the start or end of the audio file.
+● Unintelligible speech: Speech that you cannot understand or transcribe.
+● User: The speaker in an audio file.
+● Verifier: A Data associate who audits transcriptions for quality.
+Appendix
+Appendix 1 - Transcription Supplement
+The transcription supplement provides additional guidelines for transcription.
+Dictionary and Resource Hierarchy
+Refer to The Merriam-Webster Dictionary online to verify the spelling of words. If a word is
+not found in that dictionary, refer to The American Heritage Dictionary online as a secondary
+source. American spelling is preferred. Use Cambridge Dictionary for British-specific
+vocabulary only.
+If an utterance contains a homophone, then use context and best judgement to determine the
+user’s intention. If the homonym exists in isolation, use your best judgement.
+To confirm the spelling of catalog entities, use other resources in the following order:
+1. Any resource on Amazon.com: this includes Amazon Music, the Kindle store, and all
+other Amazon programs. This includes all international websites for Amazon, including
+Amazon.co.uk, Amazon.in, and so on.
+2. Google
+3. IMDb.com (for film/tv)
+Non-standard Speech and Grammar
+Transcribe the following types of speech as the speaker said them.
+● Grammatical errors: Grammatical errors are when speakers do not follow rules of the
+language and contain grammar fragments in their speech. This is not the same as
+colloquialism.
+● Misused or mistaken words: Misused words are when a speaker does not know the
+word for something and substitutes it with another word that is incorrect.
+● Non-standard grammar: Non-standard grammar falls outside the prescriptive norms or
+conventions of a language. Colloquialisms may use non-standard grammar.
+● Repetition: Repetition is when the speaker repeats words that they have already
+spoken.
+The following table demonstrates examples of non-standard speech.
+Ex. Audio Transcribe
+d Text
+(Spoken)
+Explanation
+1 User: He don’t
+like that song.
+he don’t
+like that
+song
+Transcribe this utterance as is
+because it falls within the bounds of
+non-standard grammar. This
+sentence is understood as dialectal
+speech.
+2 User: Put a apple
+on my list.
+put a apple
+on my list
+Transcribe this utterance as is
+because it falls within the bounds of
+grammatical errors.
+3 (Artist name is
+Jason Mraz.)
+User: Play songs
+by Jason Mars.
+play songs
+by jason
+mars
+Transcribe this utterance as is
+because it falls within the bounds of
+mistaken words. The user confused
+the artist's last name with another
+word.
+4 User: I love you
+very, very, very,
+very much!
+i love you
+very very
+very very
+much
+Transcribe this utterance as is
+because it falls within the bounds of
+repetition. The user repeated the
+word "very" four times.
+5 User: What is five
+plus five plus five
+plus five plus
+five?
+what is five
+plus five
+plus five
+plus five
+plus five
+Transcribe this utterance as is
+because it falls within the bounds of
+repetition. The user repeated the
+phrase "five plus" .
+6 User:
+yeahyeahyeahye
+ah
+yeah yeah
+yeah yeah
+Transcribe this utterance as is
+because it falls within the bounds of
+repetition. Transcribe as many as
+intelligible words as you can.
+Do not transcribe extra letters to represent extended words or syllables.
+The double curly brackets is intended to capture very much the case where there is ambiguity
+on what word was intended to be spoken. This is different from truncations and guessing
+unintelligible words. This rule applies only when words are incorrectly spoken, not systematic
+accent/dialect features (e.g., dropped "g" in "-ing").
+If a word is mis-spoken, but the context makes it clear as to what the speaker intended and it
+is unambiguous what the speaker meant (e.g. “libary” for “library”), then normalize the
+mis-spoken word to the standard dictionary spelling. If a word is mis-spoken and it is
+ambiguous what could have been meant (e.g. “authentification” could be “authentication” or
+“verification”), then normalize the mis-spoken word to one of the possible words correctly
+spelled with the standard dictionary spelling, and place it in these brackets {{}}.
+The following table demonstrates normalization of mis-spoken words.
+Ex. Audio Transcribed Text
+(Spoken)
+Explanation
+1
+User: Play mushic. play music
+You normalize "mushic" to
+"music" because you
+normalize mis-spoken
+words and it's clear what
+is meant
+2
+User: When does the
+libary open?
+when does the library
+open
+You normalize "libary" to
+"library" because you
+normalize mis-spoken
+words and it's clear what
+is meant
+3
+User: I think we need
+authentification for
+this step
+● i think we
+need
+{{authenticatio
+n}} for this
+step
+● i think we
+need
+{{verification}}
+for this step
+Here the mis-spoken word
+could have been
+"authentication" or
+"verification" so both
+transcriptions are
+considered valid.
+4 User: I
+haaaaaaaaaate
+Mondays.
+i hate mondays You normalize
+"haaaaaaaaaaate" to
+"hate" because you do not
+transcribe extra letters to
+represent extended words
+or syllables.
+Exception: Preserve non-standard spellings of words when possible when the words are part
+of a catalog entity or brand name.
+The following table demonstrates exceptions to spelling normalization.
+Example Audio Transcribed Text (Spoken)
+1 User: You’re a lil silly. you're a little silly
+2 User: Play songs by Lil Wayne. play songs by lil wayne
+Non-Target Languages
+If you are processing and a non-target language appears in the utterance, attempt to transcribe
+it if the words/phrases are reasonably used within the target language (e.g. "he sneezed and i
+was like gesundheit"). If you understand the language, transcribe as much as you can. Only use
+accents and diacritics that are part of the target language. If a word includes an accent that is
+not part of the target language, transcribe the closest plain letter. Insert double parentheses to
+represent sections of non-target language speech that you do not understand.
+Do NOT transcribe non-target languages in background speech. Use the [bg] tag to indicate
+non-target languages that occur in background speech.
+If you are unable to transcribe any of a non-target language utterance, insert double
+parentheses.
+If the entire utterance is unintelligible non-target language, use <nt>.
+Non-Target Language Dictionaries
+When you encounter a word in a non-target language, and if the words/phrases are reasonably
+used within the target language (e.g. "he sneezed and i was like gesundheit"), use that
+non-target language's dictionary to confirm the correct spelling. Adapt the spelling to fit your
+locale's allowed characters:
+● Remove diacritics if your locale does not allow them. For example, "medellín"
+becomes "medellin" in English locales because accented characters are not permitted.
+● Use Latin characters only if your locale does not allow non-Latinate scripts. For
+example, if a speaker says a word in Russian or Arabic, write it using Latin characters
+rather than Cyrillic or Arabic script.
+If the word does not appear in the relevant dictionary, use Google to confirm the spelling.
+Find a complete list of locale dictionaries below:
+English
+Refer to the following dictionaries in order to confirm spelling of English words.
+1. Merriam-Webster Dictionary - https://www.merriam-webster.com/
+2. American Heritage Dictionary - https://www.ahdictionary.com/
+3. Cambridge Dictionary - https://dictionary.cambridge.org/
+*Note: Refer to Cambridge only for British-specific vocabulary.
+Spanish
+· Real Academia Española - https://www.rae.es/
+French
+· Larousse - https://www.larousse.fr/
+Italian
+· Treccani - https://www.treccani.it/
+German
+· Duden - https://duden.de
+Portuguese
+· Dicio - https://www.dicio.com.br/
+Dutch
+· Van Dale Groot woordenboek van de Nederlandse taal - https://www.vandale.nl/
+Non-Target Language Transcription Tables
+Transcribing non-target languages depends on your familiarity with the language. The
+following table gives more details.
+Utterance
+Content
+Type
+Familiarity with the content Example
+transcription
+(Spoken)
+Tagging Method
+Foreign
+Language in
+part of the
+utterance
+Full
+utterance in
+Foreign
+Language
+Content is easily identifiable to
+you and you are confident
+without using Google or a
+non-target language locale
+dictionary.
+quiero taco
+bell
+Transcribe without
+adding any tag.
+Content is easily identifiable to
+you and you are confident after
+using a dictionary or Google to
+verify the correct spelling for the
+word you heard.
+petite maman Transcribe without
+adding any tag.
+Content is not easily identifiable
+but you are confident after using
+a dictionary or Google to verify
+the correct spelling for the word
+you heard.
+rikititriki triqui
+titriki
+Transcribe without
+adding any tag.
+Content is not easily identifiable,
+and you are still not confident
+after using a dictionary or Google
+to verify the correct spelling for
+the word you heard.
+((siza)) Transcribe with
+guessed word in (()).
+Content is not easily identifiable
+and you are not confident in
+Google getting the spelling right
+for the word you heard. Also, you
+cannot find the word in the
+dictionary.
+i want to see
+(())
+Transcribe the
+intelligible part and
+add (()) for unknown
+foreign part.
+Unintelligibl
+e content in
+any part of
+utterance.
+An utterance looks like
+I like (you do not understand
+language).
+i like (())
+Transcribe the
+intelligible part and
+add (()) tag.
+Full
+utterance is
+unintelligibl
+e
+An utterance looks like (you do
+not understand language). <nt>
+If the entire
+utterance is
+unintelligible
+non-target language,
+use <nt>.
+Non-Target Language in Context
+If a word is not in the dictionary of record, consider it a non-target language word. Without
+tagging, this only means that you transcribe as much as you can. When transcribing non-target
+language words, drop any accents or characters that do not exist in English.
+For more examples of target and non-target language in context, review the following table.
+Utterance
+Content
+Type
+Detailed Scenario User
+Utterance
+Correct
+Transcription
+(Spoken)
+Foreign
+Language in
+Slot
+User asks to play a French (Foreign)
+song.
+The content is easily identifiable and
+you do not need to use the catalog as
+listed in the dictionary.
+play les
+enfants du
+paradis
+play les enfants
+du paradis
+User asks to play a French (Foreign)
+song.
+The content is popular and you are
+confident to transcribe after using
+Google or the catalog to verify the
+right spelling for the word you heard.
+play les
+enfants du
+paradis
+play les enfants
+du paradis
+User asks to play a French (Foreign)
+song.
+The content is not easily identifiable
+and you are confident to transcribe
+after using Google or the catalog to
+verify the right spelling for the word
+you heard.
+play les
+enfants du
+paradis
+play les enfants
+du paradis
+User asks to play a French (Foreign)
+song.
+The content is not easily identifiable
+and you are not confident to
+transcribe after using Google or the
+catalog to verify the right spelling for
+the word you heard. You put the
+closest possible guess in the double
+parentheses.
+play les
+enfants du
+paradis
+play ((les enfants
+du paradis))
+User asks to play a French (Foreign)
+song.
+The content is not easily identifiable
+and you are not confident to
+transcribe after using Google or the
+catalog to verify the right spelling for
+play les
+enfants du
+paradis
+play (())
+the word you heard. You cannot
+guess transcription.
+Foreign
+Language in
+Carrier
+Phrase
+User asks in Spanish (Foreign)
+language to name the singer of an
+English song.
+The content is easily identifiable and
+you do not need to use the catalog as
+listed in the Dictionary and Resource
+Hierarchy.
+quien canto
+hello
+quien canto hello
+User asks in Spanish (Foreign)
+language to name the singer of an
+English song.
+The content is easily identifiable and
+you are confident to transcribe after
+using Google or the catalog to verify
+the right spelling for the word you
+heard
+quien canto
+hello
+quien canto hello
+User asks in Spanish (Foreign)
+language to name the singer of an
+English song.
+The content is not easily identifiable
+and you are confident to transcribe
+after using Google or the catalog to
+verify the right spelling for the word
+you heard.
+quien canto
+hello
+quien canto hello
+User asks in Spanish (Foreign)
+language to name the singer of an
+English song.
+The content is not easily identifiable
+and you are not confident to
+transcribe after using Google or the
+catalog to verify the right spelling for
+the word you heard. You put the
+quien canto
+hello
+quien canto
+((hello))
+closest possible guess in the double
+parentheses.
+User asks in Spanish (Foreign)
+language to name the singer of an
+English song.
+The content is not easily identifiable
+and you are not confident to
+transcribe after using Google or the
+catalog to verify the right spelling for
+the word you heard. You cannot
+guess transcription.
+quien canto
+hello
+(())
+Full
+utterance in
+Foreign
+Language
+User speaks a German (Foreign)
+language phrase.
+The content is easily identifiable and
+you do not need to use the catalog as
+listed in the .
+wie geht es
+dir
+wie geht es dir
+User speaks a German (Foreign)
+language phrase.
+The content is easily identifiable and
+you are confident to transcribe after
+using Google or the catalog to verify
+the right spelling for the word you
+heard
+wie geht es
+dir
+wie geht es dir
+User speaks a German (Foreign)
+language phrase.
+The content is not easily identifiable
+and you are confident to transcribe
+after using Google or the catalog to
+verify the right spelling for the word
+you heard.
+wie geht es
+dir
+wie geht es dir
+User speaks a German (Foreign)
+language phrase.
+The content is not easily identifiable
+and you are not confident to
+transcribe after using Google or the
+catalog to verify the right spelling for
+the word you heard. You put the
+closest possible guess in the double
+parentheses.
+wie geht es
+dir
+((wie geht es
+dir))
+User speaks a German (Foreign)
+language phrase.
+The content is not easily identifiable
+and you are not confident to
+transcribe after using Google or the
+catalog to verify the right spelling for
+the word you heard. You cannot
+guess transcription.
+wie geht es
+dir
+(())
+Unintelligibl
+e content in
+any part of
+utterance
+In the user utterance, a part is
+Unintelligible. You are able to discern
+the rest of the content.
+can you
+(does not
+understand
+language)
+can you (())
+Full
+utterance is
+unintelligible
+The complete user utterance is
+Unintelligible.
+(does not
+understand
+language)
+<nt>
+Foreign
+Language in
+Slot (accent
+removal)
+User asks to play a song by a Spanish
+artist whose name contains an accent
+play songs
+by José
+González
+play songs by
+jose gonzalez
+The following table describes uncommon cases for transcription of non-target languages and
+how to transcribe.
+Situation Utterance Correct Transcription
+(Spoken)
+User speaks in multiple foreign
+languages. You can understand all the
+parts of the utterance.
+mi amiga tell me
+about a
+schauspielerin
+mi amiga tell me
+about a schauspielerin
+User speaks in multiple foreign
+languages. You can understand the
+intelligible part but the other part is
+unintelligible.
+mi amiga tell me
+about a (does not
+understand
+language)
+mi amiga tell me
+about a (())
+User speaks in multiple foreign
+languages. You can understand the
+intelligible part, but unsure about the
+other part.
+mi amiga tell me
+about a
+schauspielerin
+mi amiga tell me
+about a (())
+Cross-language homophones
+A cross-language homophone is a word with the same pronunciation in both the target
+language and a non-target language. An example is the English shoe and German schuh. If a
+cross-language homophone occurs in isolation, assume it is part of the target language.
+A foreign-origin word is part of the target language only if the user’s meaning matches the
+meaning in the dictionary. For instance, some non-English dictionaries include the English word
+“home” as it refers to technology (such as a home screen or a home page). If a user in a
+non-English locale uses the word “home” to refer to the place where one lives, this usage is not
+part of the target language.
+The following examples demonstrate foreign-origin words that are part of the target language.
+When a word is in the target language, you must transcribe it when intelligible.
+Examples:
+- spell tsunami
+- play a capella music
+Do not treat fictional languages as non-target languages.
+Example: Elvish/Sindarin (Lord of Rings): “mellon”
+Location Names
+General guidance: When transcribing names of cities, towns, and other locations, consider the
+locale the data comes from.
+Specific guidance:
+● Some locations are homophones — include locale context in your search to find the
+correct spelling.
+● Let the source device's locale guide your choice between homophone spellings.
+Change Log (Ermis V1 to V2):
+- Removed [cough], [sigh], [throat-clear], [sneeze], [lip-smack] → all consolidated into
+[hn]
+- Removed<i>, <sg>, <hum>, <ws>, <pws>, <lv> tags
+- Changed "mhm" to "mm-hm"
+- Removed written-form and save state/discard sections
+- Added <nt> (non-target language) and <sc> (sensitive content) tags
+- Added [laughter] as separate from [hn]
+- [bg] now covers all unidentifiable speaker sounds (speech, laughter, coughing, etc.)
+- Added contractions section with explicit allowed list
+- Mis-spoken words: unambiguous ones normalized directly, ambiguous ones use {{}}
+- Primary dictionary changed to Merriam-Webster (American Heritage as secondary)

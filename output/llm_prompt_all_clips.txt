@@ -1,0 +1,261 @@
+You are an elite verbatim speech transcription engine for conversational podcast alignment.
+Your job is to produce the 100% PERFECT, VERBATIM lexical token list for each audio clip by reconciling two independent acoustic sources:
+
+SOURCE 1: Groq Whisper-large-v3
+- Highly accurate vocabulary, proper nouns, spelling, and semantic meaning.
+- However, Whisper SMOOTHS away stutters, false starts, filler repetitions, and cut-off words.
+
+SOURCE 2: Wav2Vec2 Raw Acoustic Phonetic Stream
+- A frame-by-frame acoustic decoder that records EVERY sound uttered with ZERO smoothing.
+- It captures all stutters, repetitions, and cut-off syllables (e.g., "THE THE ON THE OTHE" -> "the the on- the on- the", "MY FIT I OOK" -> "my fa- i k- ok", "II WOULD BE" -> "i i wouldn't be su-").
+- However, it has phonetic misspellings (e.g. "SHURLOOK" for "sure look", "TREE" for "three", "BARNAL" for "bernal").
+
+YOUR TASK:
+Synthesize the two sources to produce the exact spoken sequence.
+- If Wav2Vec2 shows repetitions or cut-off syllables that Whisper skipped, YOU MUST INCLUDE THEM!
+- Use Whisper's correct vocabulary and spelling for the words themselves.
+- Provide word timestamps (start and end in seconds). If Whisper gave timestamps for a phrase, interpolate/anchor the added stutters within the onset acoustic interval.
+
+## TOKENIZATION & FORMATTING RULES:
+1. Lowercase only.
+2. Strip punctuation: remove periods, commas, question marks, colons, quotes.
+3. Hyphens:
+   - Use ONLY for cut-off / truncated words at the point of truncation: "on-", "fa-", "k-", "su-", "se-", "w-".
+   - Split compound words: "irish newsreaders" -> "irish", "news", "readers" (or "newsreaders" if single spoken word).
+4. Backchannels & Fillers:
+   - "mm hm" -> 2 tokens: "mm", "hm"
+   - "uh huh" -> 2 tokens: "uh", "huh"
+   - "uh", "um", "oh", "ooh", "ah", "ay".
+5. Numbers:
+   - Spoken words only: "three" (not "3"), "one" (not "1").
+6. Contractions:
+   - Standard spoken: "it's", "that's", "i'd", "don't", "can't", "would've", "i'm", "gonna", "wanna", "cause" / "'cause".
+7. Repetitions:
+   - Transcribe every single repeated word: "the", "the", "i", "i".
+8. Timing:
+   - Every token must have "start" and "end" in seconds relative to the clip (start >= 0.0).
+   - Ensure start < end (min duration 0.04s).
+   - Non-overlapping: token[i+1].start >= token[i].end.
+
+## OUTPUT FORMAT:
+Output ONLY a valid JSON object mapping clip index ("0", "1", ...) to a list of token objects:
+```json
+{
+  "0": [
+    {"text": "the", "start": 0.02, "end": 0.22},
+    {"text": "the", "start": 0.23, "end": 0.35},
+    {"text": "on-", "start": 0.36, "end": 0.55}
+  ]
+}
+```
+
+
+=== CLIPS TO TRANSCRIBE ===
+
+--- CLIP 0 (zencastr-en_66589d8247eb9800139a4b85-00000_41.wav) ---
+Clip Duration: 22.94s
+1. Groq Whisper Transcript:
+"the one thing I will say is that had the war begun because of this popular scenario for Irish news readers Neil it would have been it would have been a bumper day because obviously all around the world people like to do terrible impersonations of Irish accents and say oh sure look World War 3 has begun but it actually would have been World War 3"
+
+2. Groq Word Timestamps (seconds):
+the [0.00-1.92], one [1.92-2.82], thing [2.82-3.00], I [3.00-3.10], will [3.10-3.26], say [3.26-3.46], is [3.46-3.60], that [3.60-3.76], had [3.56-4.24], the [4.24-4.46], war [4.46-4.76], begun [4.76-5.28], because [4.90-6.26], of [6.26-6.72], this [6.72-7.22], popular [7.22-7.82], scenario [7.82-8.40], for [7.94-9.18], Irish [9.18-9.66], news [9.66-10.18], readers [10.18-10.42], Neil [10.42-10.72], it [10.26-11.22], would [11.22-11.46], have [11.46-11.56], been [11.56-11.86], it [11.44-12.16], would [12.16-12.32], have [12.32-12.40], been [12.40-12.54], a [12.54-12.86], bumper [12.86-13.20], day [13.20-13.56], because [13.30-14.16], obviously [14.16-14.46], all [14.46-14.76], around [14.76-14.96], the [14.96-15.08], world [15.08-15.28], people [14.80-15.62], like [15.62-15.88], to [15.88-16.02], do [16.02-16.28], terrible [15.82-16.76], impersonations [16.76-17.30], of [17.30-17.48], Irish [17.48-17.66], accents [17.66-17.82], and [17.36-18.14], say [18.14-18.40], oh [18.06-18.90], sure [18.90-19.16], look [19.16-19.40], World [19.64-19.92], War [19.92-20.08], 3 [20.08-20.38], has [20.38-20.70], begun [20.70-20.98], but [20.52-21.34], it [21.34-21.44], actually [21.44-21.72], would [21.72-21.90], have [21.90-21.96], been [21.96-22.08], World [21.58-22.34], War [22.34-22.46], 3 [22.46-22.78]
+
+3. Wav2Vec2 Acoustic Stream (every audible sound/stutter):
+"THE THE ON THE OTHE MONING I WILL SAY IS THAT HAD THE WAR BEGUN BECAUSE OF THIS POPULAR SCENARIO FOR IRISH NEWSREADERS NEEL IT WOULD HAVE BEEN IT WOULD HAVE BEEN A BUMPER DAY CAUSE OBVIOUSLY ALL AROUND THE WORLD PEOPLE LIKE TO DO TERRIBLE IN PERSONATIONS OF OUR SAXONS AND SAY AH SHURLOOK WORLDWAR TREE HAS BEGUN BUT AN ACTUALLY WOULD HAVE BEEN WORLD WORCHREE"
+
+============================================================
+
+--- CLIP 1 (zencastr-en_66589d8247eb9800139a4b85-00000_57.wav) ---
+Clip Duration: 8.19s
+1. Groq Whisper Transcript:
+"Wow, the longest border in the world. That's an incredible question. Russia and Mongolia."
+
+2. Groq Word Timestamps (seconds):
+Wow, [0.04-0.56], the [0.56-0.68], longest [0.68-1.12], border [1.12-1.50], in [1.50-1.64], the [1.64-1.74], world. [1.74-2.18], That's [2.14-2.32], an [2.32-2.42], incredible [2.42-2.82], question. [2.82-3.64], Russia [4.40-5.32], and [5.32-6.36], Mongolia. [6.36-8.00]
+
+3. Wav2Vec2 Acoustic Stream (every audible sound/stutter):
+"WOW THE LONGEST BORDER IN THE WORLD THAT'S THE CREDIBLE QUESTION A ROSHA AND MONGOLIA"
+
+============================================================
+
+--- CLIP 2 (zencastr-en_6668ae42d0c186248b5496d7-00005_16.wav) ---
+Clip Duration: 25.98s
+1. Groq Whisper Transcript:
+"Mm-hmm. It's so true. Yeah. And I like what you said earlier too, about just like the little wins, right? Like if you can reduce something that you know might have that potential, then that's great. But like even Jeanette was saying, like sometimes like you walk out of your apartment in Toronto and it's like, oh gosh, like what am I even breathing in today? So there's like the modifiable things and then there's the-"
+
+2. Groq Word Timestamps (seconds):
+Mm-hmm. [0.00-0.28], It's [0.28-2.54], so [2.54-2.76], true. [2.76-4.42], Yeah. [4.42-4.50], And [4.50-4.78], I [4.78-4.88], like [4.88-5.02], what [5.02-5.12], you [5.12-5.20], said [5.20-5.36], earlier [5.36-5.66], too, [5.66-5.92], about [5.92-6.16], just [6.16-6.56], like [6.56-6.98], the [6.98-7.20], little [7.20-7.48], wins, [7.48-8.60], right? [8.58-8.78], Like [8.78-8.98], if [8.98-9.10], you [9.10-9.24], can [9.24-9.74], reduce [9.74-10.32], something [10.32-10.92], that [10.92-11.18], you [11.18-11.32], know [11.32-11.58], might [11.58-11.82], have [11.82-12.14], that [12.14-12.32], potential, [12.32-13.12], then [13.12-13.14], that's [13.14-13.46], great. [13.46-14.34], But [14.26-14.40], like [14.40-14.56], even [14.56-14.80], Jeanette [14.80-15.04], was [15.04-15.22], saying, [15.22-15.54], like [15.54-15.78], sometimes [15.78-15.96], like [15.96-16.22], you [16.22-16.42], walk [16.42-16.80], out [16.80-16.96], of [16.96-17.06], your [17.06-17.14], apartment [17.14-17.48], in [17.48-17.66], Toronto [17.66-17.90], and [17.74-18.20], it's [18.20-18.36], like, [18.36-18.78], oh [18.78-18.90], gosh, [18.90-19.44], like [19.44-19.62], what [19.62-19.96], am [19.96-20.16], I [20.16-20.28], even [20.28-20.50], breathing [20.50-20.78], in [20.78-20.98], today? [20.98-22.36], So [22.36-22.48], there's [22.48-23.34], like [23.34-23.50], the [23.50-23.62], modifiable [23.62-24.02], things [24.12-24.62], and [24.62-24.82], then [24.82-24.98], there's [24.98-25.36], the- [25.36-25.92]
+
+3. Wav2Vec2 Acoustic Stream (every audible sound/stutter):
+"M IT'S SO TRUE YE AND I LIKE WHAT YOU SAID EARLY OR TWO ABOUT JUST LIKE THE LITTLE WINDS RIGHT LIKE IF YOU CAN REDUCE SOMETHING THAT YOU KNOW MIGHT HAVE THAT POTENTIAL THAN THAT'S CREAT BUT LIKE EVEN GEANETT WAS SAYING LIKE SOMETIMES LIKE YOU YOU WALK OUT OF YOUR APARTMENT IN CHIRONO AND IT'S LIKE OH GOSH LIKE WHAT AM I EVEN BREATHING IN TO DAY S THERE'S LIKE THE MOTOFIABLE THINGS AND THEN THERE'S THE"
+
+============================================================
+
+--- CLIP 3 (zencastr-en_66971c93200e233516a91b55-00004_0.wav) ---
+Clip Duration: 6.40s
+1. Groq Whisper Transcript:
+"or not. So, uh, that was mostly just a call out to Nick Allen. Hey, Nick. Hey,"
+
+2. Groq Word Timestamps (seconds):
+or [0.00-0.04], not. [0.04-0.92], So, [1.20-1.38], uh, [1.72-2.46], that [2.08-2.42], was [2.42-2.58], mostly [2.58-2.86], just [2.86-3.14], a [3.14-3.22], call [3.22-3.38], out [3.38-3.48], to [3.48-3.60], Nick [3.60-3.74], Allen. [3.74-4.40], Hey, [3.96-4.10], Nick. [4.18-4.36], Hey, [3.86-6.88]
+
+3. Wav2Vec2 Acoustic Stream (every audible sound/stutter):
+"OR NOT SO A THOU'S MOSTLY JUST CALL OUT TO NICKALLAN HEYNICK"
+
+============================================================
+
+--- CLIP 4 (zencastr-en_66971c93200e233516a91b55-00004_15.wav) ---
+Clip Duration: 29.18s
+1. Groq Whisper Transcript:
+"Did you guys ever see Battlestar Galactica, the new one? It was kind of fun. It's very dated. I don't think I could possibly enjoy it now. But it was a really big thing way back when. And every single episode did this. Pretty much every single episode. And it was just kind of a trick to hook you with the exciting part of the movie. I think that's why it did it. I don't necessarily know why Werner Herzog did it this way. Because I..."
+
+2. Groq Word Timestamps (seconds):
+Did [0.00-0.08], you [0.08-0.54], guys [0.54-0.72], ever [0.72-0.88], see [0.88-1.18], Battlestar [1.18-1.94], Galactica, [1.94-2.54], the [2.54-2.64], new [2.64-2.80], one? [2.80-3.48], It [4.80-5.48], was [5.48-5.92], kind [5.92-6.20], of [6.20-6.28], fun. [6.28-7.28], It's [7.14-7.42], very [7.42-7.92], dated. [7.92-8.60], I [8.60-8.66], don't [8.66-8.78], think [8.78-8.98], I [8.98-9.10], could [9.10-9.20], possibly [9.20-9.72], enjoy [9.72-10.08], it [10.08-10.26], now. [10.26-11.06], But [10.92-11.02], it [11.02-11.04], was [11.04-11.14], a [11.14-11.30], really [11.30-11.66], big [11.66-11.96], thing [11.96-12.36], way [12.36-12.56], back [12.56-12.84], when. [12.84-13.66], And [12.68-13.82], every [13.82-14.28], single [14.28-14.66], episode [14.66-15.08], did [15.08-15.34], this. [15.34-16.16], Pretty [16.26-16.48], much [16.48-16.74], every [16.74-16.96], single [16.96-17.24], episode. [17.24-18.10], And [17.88-17.92], it [17.92-18.02], was [18.02-18.20], just [18.20-18.54], kind [18.54-18.92], of [18.92-19.00], a [19.00-19.12], trick [19.12-19.34], to [19.34-19.54], hook [19.54-20.94], you [20.94-21.22], with [21.22-21.46], the [21.46-21.84], exciting [21.84-22.24], part [22.24-22.58], of [22.58-22.88], the [22.88-23.04], movie. [23.04-23.82], I [23.40-23.52], think [23.52-23.64], that's [23.64-23.86], why [23.86-24.12], it [24.12-24.40], did [24.40-24.66], it. [24.66-24.78], I [25.26-25.38], don't [25.38-26.02], necessarily [26.02-26.66], know [26.66-26.96], why [26.96-27.26], Werner [27.26-27.64], Herzog [27.64-27.96], did [27.96-28.16], it [28.16-28.26], this [28.26-28.46], way. [28.46-29.14], Because [28.28-28.88], I... [28.88-29.58]
+
+3. Wav2Vec2 Acoustic Stream (every audible sound/stutter):
+"DID YOU EVER SEE LIKE BATTLE STARGALATKA THE NEW ONE UM IT WAS KIND OF FUN IT'S VERY DATED I DON'T THINK I COULD POSSIBLY ENJOY IT NOW BUT IT WAS A REALLY BIG THING WAY BACK WHEN AND EVERY SINGLE EPISODE DID THIS LIKE PRETTY MUCH EVERY SINGLE EPISODE AND IT WAS JUST KIND OF A TRICK TO LIKE TO HOOK YOU WITH THE EXCITING PART OF THE MOVY I THINK THAT'S WHY IT WOULD IT I DON'T KNOW I DON'T NECESSARILY KNOW WHY VERNAR HERTSOK DID IT THIS WAX I"
+
+============================================================
+
+--- CLIP 5 (zencastr-en_66971c93200e233516a91b55-00004_50.wav) ---
+Clip Duration: 16.64s
+1. Groq Whisper Transcript:
+"Yes. That was my favorite. Okay, I'm just gonna say now, my favorite part of the movie is that Gael Garcia Bernal is, like, even in the movie, like, considered in the movie, when he's just kind of like this guy who wandered onto the set pretty much for one scene."
+
+2. Groq Word Timestamps (seconds):
+Yes. [0.00-2.06], That [2.06-2.14], was [2.14-2.30], my [2.30-2.54], favorite. [2.54-2.72], Okay, [2.72-3.22], I'm [3.22-3.40], just [3.40-3.56], gonna [3.56-3.66], say [3.66-3.86], now, [3.86-4.06], my [4.06-4.30], favorite [4.30-4.56], part [4.56-4.76], of [4.76-4.86], the [4.86-4.94], movie [4.94-5.20], is [5.20-5.80], that [5.80-6.04], Gael [6.04-7.10], Garcia [7.10-7.72], Bernal [7.72-8.00], is, [8.00-8.52], like, [8.52-9.28], even [9.28-9.62], in [9.62-9.84], the [9.84-9.98], movie, [9.98-10.46], like, [10.46-10.62], considered [10.62-11.26], in [11.26-11.50], the [11.50-11.62], movie, [11.62-12.20], when [12.20-12.32], he's [12.32-12.52], just [12.52-12.68], kind [12.68-12.92], of [12.92-13.04], like [13.04-13.24], this [13.24-13.72], guy [13.72-13.94], who [13.94-14.10], wandered [14.10-14.40], onto [14.40-14.66], the [14.66-14.78], set [14.78-15.08], pretty [15.08-15.32], much [15.32-15.52], for [15.52-15.64], one [15.64-15.90], scene. [15.90-16.28]
+
+3. Wav2Vec2 Acoustic Stream (every audible sound/stutter):
+"YES THAT WAS MY FIT I OOKAM JUST GOINGTO SAY NOW MY FAVOURITE PART OF THE MOVI IS THAT GALGARSIA BARNAL IS LIKE EVEN IN THE MOVI LIKE CONSIDERED IN THE MOVI WHEN HE'S JUST KIND OF LIKE THIS GUY HE WANDERED ONTO THE SAT PRETTY MUCH FOR ONE SCENE"
+
+============================================================
+
+--- CLIP 6 (zencastr-en_66a91dcbd392b8434b26caf7-00001_34.wav) ---
+Clip Duration: 18.68s
+1. Groq Whisper Transcript:
+"I love that. I would say then, just to kind of recap the second episode, again, it kind of encapsulates what happens later in the season. Because I didn't even think about him being the asshole and then Richie being actually more mature throughout. So that's a really good observation. Mm-hmm. Yeah."
+
+2. Groq Word Timestamps (seconds):
+I [0.00-0.10], love [0.10-0.32], that. [0.32-1.10], I [1.66-1.78], would [1.78-2.48], say [2.48-2.70], then, [2.70-3.26], just [3.26-3.30], to [3.30-3.42], kind [3.42-3.54], of [3.54-3.58], recap [3.58-3.80], the [3.80-3.98], second [3.98-4.20], episode, [4.20-4.74], again, [4.74-5.24], it [5.24-5.26], kind [5.26-5.50], of [5.50-5.62], encapsulates [5.62-6.02], what [6.02-6.22], happens [6.22-6.54], later [6.54-6.76], in [6.76-6.90], the [6.90-7.12], season. [7.12-8.08], Because [7.82-7.90], I [7.90-8.02], didn't [8.02-8.12], even [8.12-8.30], think [8.30-8.42], about [8.42-8.62], him [8.62-8.80], being [8.80-9.00], the [9.00-9.12], asshole [9.12-9.52], and [9.52-10.26], then [10.26-10.88], Richie [10.88-11.28], being [11.28-11.52], actually [11.52-11.86], more [11.86-12.00], mature [12.00-12.32], throughout. [12.32-13.14], So [12.90-13.00], that's [13.00-13.18], a [13.18-13.30], really [13.30-13.44], good [13.44-13.60], observation. [13.60-13.92], Mm-hmm. [16.12-16.32], Yeah. [18.20-18.92]
+
+3. Wav2Vec2 Acoustic Stream (every audible sound/stutter):
+"I LOVE THAT II WOULD SAY THEN JUST A KIND OF RECAPT THE SECOND EPISODE AGAIN IT A KIND OF INCAPISATES WHAT HAPPENS LATER IN THE THE SEASON CAUSE I DIDN'T THINK ABOUT HIM BEING THE ASSHOLE AND THEN IN THEN RICHY BEING ACTUALLY MORE MATURED THROUGHOUT SO THAT'S UT ERALLY GOOD OBSERVATION  YEH"
+
+============================================================
+
+--- CLIP 7 (zencastr-en_66a91dcbd392b8434b26caf7-00002_37.wav) ---
+Clip Duration: 23.87s
+1. Groq Whisper Transcript:
+"Oh, no, why? I mean, you know what it is? It's the book people that are like, oh, they were enemies at first, and then they become lovers. And I'm like, we don't need that here. We don't need that here. He's also more of a mentor figure than a love interest figure."
+
+2. Groq Word Timestamps (seconds):
+Oh, [0.00-1.86], no, [1.86-2.54], why? [2.54-3.62], I [4.00-4.08], mean, [4.08-5.64], you [5.64-5.72], know [5.72-5.82], what [5.82-5.96], it [5.96-6.06], is? [6.06-6.32], It's [7.28-7.50], the [7.50-7.78], book [7.78-9.46], people [9.46-9.98], that [9.98-10.26], are [10.26-10.42], like, [10.42-10.76], oh, [10.76-11.06], they [11.06-11.14], were [11.14-11.28], enemies [11.28-11.62], at [11.62-11.92], first, [11.92-12.28], and [12.28-12.38], then [12.38-12.52], they [12.52-12.60], become [12.60-12.88], lovers. [12.88-13.72], And [13.52-13.58], I'm [13.58-13.68], like, [13.68-14.20], we [14.20-14.34], don't [14.34-14.50], need [14.50-14.66], that [14.66-14.80], here. [14.80-15.46], We [15.44-15.54], don't [15.54-15.68], need [15.68-15.82], that [15.82-15.96], here. [15.96-16.60], He's [16.86-17.06], also [17.06-17.40], more [17.40-18.34], of [18.34-18.50], a [18.50-18.60], mentor [18.60-18.96], figure [18.96-19.30], than [19.30-20.22], a [20.22-23.22], love [23.22-23.44], interest [23.44-23.82], figure. [23.82-24.14]
+
+3. Wav2Vec2 Acoustic Stream (every audible sound/stutter):
+"OH AH NO WHY I MEAN YOU KNOW WHAT IT IS IT'S THE IT'S THE BOOK PEOPLE THAT ARE LIKE OH THEY WERE ENEMIES AT FIRST AND THEN THEY BECOME LOVERS AND U'LIKE WE DON'T NEED THO HEAR WE DON'T NEED TO HEAR SHES HE'S ALSO LIKE MORE BIKEAMENTOR FIGURE THAN ANASIN A THEN A THEN A LOVE INTEREST"
+
+============================================================
+
+--- CLIP 8 (zencastr-en_66a91dcbd392b8434b26caf7-00002_49.wav) ---
+Clip Duration: 24.64s
+1. Groq Whisper Transcript:
+"I think I think I think Sydney and Marcus should get together that's where it should be they have a little bit of history a little bit of reluctancy from Sydney but ultimately I think they get along really well but that's only if we really wanted to have them together they're great as friends"
+
+2. Groq Word Timestamps (seconds):
+I [0.86-1.00], think [1.00-3.62], I [5.22-5.28], think [5.28-5.60], I [5.16-5.24], think [5.24-7.54], Sydney [7.54-8.16], and [7.74-8.96], Marcus [8.96-9.30], should [9.30-9.52], get [9.52-9.68], together [9.68-9.98], that's [9.56-10.74], where [10.74-11.10], it [11.10-11.24], should [11.24-11.40], be [11.40-11.68], they [11.28-12.84], have [12.84-13.10], a [13.10-13.60], little [13.60-13.76], bit [13.76-13.88], of [13.88-13.98], history [13.98-14.30], a [13.86-14.90], little [14.90-15.04], bit [15.04-15.20], of [15.20-15.48], reluctancy [15.48-16.58], from [16.12-16.92], Sydney [16.92-17.32], but [17.32-18.26], ultimately [17.82-18.90], I [18.90-19.10], think [19.10-19.24], they [19.24-19.36], get [19.36-19.46], along [19.46-19.68], really [19.68-19.96], well [19.96-20.20], but [19.82-20.52], that's [20.52-21.06], only [21.06-21.26], if [21.26-21.50], we [21.50-21.64], really [21.64-21.92], wanted [21.92-22.30], to [21.80-22.58], have [22.58-22.82], them [22.82-22.96], together [22.96-23.22], they're [23.22-23.64], great [23.64-24.00], as [24.00-24.12], friends [24.12-24.44]
+
+3. Wav2Vec2 Acoustic Stream (every audible sound/stutter):
+"I THINK I THINK I I THINK SIDNEY AND MARCUS SHOULD GET TOGETHER THAT'S WHERE IT SHOULD BE UT THEY HAVE A LITTLE BIT OF HISTORY LITTLE BIT OF A RELUCTANCY FROM SYDNEY BUT ALTIRNATELY I THINK THEY GET ALONG REALLY WELL BUT THAT'S ONLY IF WE REALLY WANTED TO HAVE THEM TOGETHER  THEY'RE GREATEST FRIENDS"
+
+============================================================
+
+--- CLIP 9 (zencastr-en_66a91dcbd392b8434b26caf7-00002_75.wav) ---
+Clip Duration: 10.62s
+1. Groq Whisper Transcript:
+"Oh, there is a word for it, isn't there? I think there is. Or was that... Brendan Fraser... The Fraser Sons or something. Brendan Fraser..."
+
+2. Groq Word Timestamps (seconds):
+Oh, [0.00-0.76], there [0.76-0.82], is [0.82-1.02], a [1.02-1.14], word [1.14-1.32], for [1.32-1.50], it, [1.50-1.66], isn't [1.66-1.76], there? [1.76-2.04], I [2.08-2.16], think [2.16-2.28], there [2.28-2.44], is. [2.44-3.10], Or [3.08-3.18], was [3.18-3.34], that... [3.34-3.76], Brendan [5.26-5.58], Fraser... [5.58-6.24], The [7.30-8.26], Fraser [8.26-8.70], Sons [8.70-8.94], or [8.94-9.14], something. [9.14-9.40], Brendan [9.80-10.00], Fraser... [10.00-10.56]
+
+3. Wav2Vec2 Acoustic Stream (every audible sound/stutter):
+"OH THERE IS A WORD FOR IT ISN'T THERE I THINK THERE IS OR WAS THAT BRENDON FRASIER MY CONNISTHAN THE FRASIER SONS FOR SOMETHING BRENDON FRASIER"
+
+============================================================
+
+--- CLIP 10 (zencastr-en_66a91dcbd392b8434b26caf7-00003_32.wav) ---
+Clip Duration: 17.53s
+1. Groq Whisper Transcript:
+"Well, first of all, I think I need to do some Weezer research because I never really listened to them. I know. Blew up. All right. So to kind of rewind a little bit, Abby Elliott, I think, has really turned it around because I remember when I saw the first season..."
+
+2. Groq Word Timestamps (seconds):
+Well, [0.00-2.12], first [2.12-2.16], of [2.16-2.32], all, [2.32-2.44], I [2.44-2.46], think [2.46-2.60], I [2.60-2.70], need [2.70-2.80], to [2.80-2.88], do [2.88-3.02], some [3.02-3.22], Weezer [3.22-3.46], research [3.46-3.88], because [3.88-4.10], I [4.10-4.40], never [4.40-4.76], really [4.76-5.00], listened [5.00-5.26], to [5.26-5.42], them. [5.42-5.62], I [7.22-7.34], know. [7.34-8.04], Blew [8.40-8.58], up. [8.58-8.74], All [10.34-10.48], right. [10.48-10.64], So [11.10-11.28], to [11.28-11.70], kind [11.70-11.88], of [11.88-11.96], rewind [11.96-12.14], a [12.14-12.30], little [12.30-12.42], bit, [12.42-12.64], Abby [12.64-12.88], Elliott, [12.88-13.20], I [13.20-13.22], think, [13.22-13.94], has [13.94-14.06], really [14.06-14.50], turned [14.50-14.76], it [14.76-14.90], around [14.90-15.16], because [15.16-15.40], I [15.40-15.60], remember [15.60-15.78], when [15.78-15.94], I [15.94-16.04], saw [16.04-16.40], the [16.40-16.54], first [16.54-16.84], season... [16.84-17.82]
+
+3. Wav2Vec2 Acoustic Stream (every audible sound/stutter):
+"WELL FIRST OF ALL I THINK I NEED TO DO SOME WEEZER RESEARCH CAUSE I I NEVER REALLY LISTENED TO THEM A I KNOW BLEW UP ALL RIGHT SO A CONTARY WINED A LITTLE BABBEY ALLEY I THINK HAS REALLY TURNED IT AROUND BECAUSE I REMEMBER WHEN I SAW THE FIRST SEASON"
+
+============================================================
+
+--- CLIP 11 (zencastr-en_66a91dcbd392b8434b26caf7-00003_38.wav) ---
+Clip Duration: 6.88s
+1. Groq Whisper Transcript:
+"And like there are like she was told it was going to be a comedy. And she's like, I see some of it, but it's not quite what I expected."
+
+2. Groq Word Timestamps (seconds):
+And [0.00-0.18], like [0.18-0.30], there [0.30-0.46], are [0.46-0.66], like [0.66-1.00], she [1.00-1.18], was [1.18-1.32], told [1.32-1.52], it [1.52-1.66], was [1.66-1.86], going [1.86-1.96], to [1.96-2.02], be [2.02-2.12], a [2.12-2.22], comedy. [2.22-2.48], And [3.08-3.18], she's [3.18-3.38], like, [3.38-3.50], I [3.50-3.60], see [3.60-3.96], some [3.96-4.26], of [4.26-4.40], it, [4.40-4.60], but [4.60-4.70], it's [4.70-5.70], not [5.70-5.82], quite [5.82-6.04], what [6.04-6.18], I [6.18-6.28], expected. [6.28-6.62]
+
+3. Wav2Vec2 Acoustic Stream (every audible sound/stutter):
+"AND LIKE THER ARS LIKE SHE WAS TOLD IT WAS GOING TO BE A COMEDY AND SHE'S LIKE I SEE SOME OF IT BUT IT'S NOT QUITE WHAT I EXPECTED"
+
+============================================================
+
+--- CLIP 12 (zencastr-en_66a91dcbd392b8434b26caf7-00003_77.wav) ---
+Clip Duration: 8.60s
+1. Groq Whisper Transcript:
+"Oh, yeah. She's like, oh, this is stale brownie. Or this is bland ice cream. Mm-hmm. Mm-hmm."
+
+2. Groq Word Timestamps (seconds):
+Oh, [0.00-0.30], yeah. [0.30-1.32], She's [1.30-1.42], like, [1.42-1.66], oh, [1.66-1.80], this [1.80-1.92], is [1.92-2.06], stale [2.06-2.46], brownie. [2.46-3.08], Or [3.10-3.20], this [3.20-3.36], is [3.36-3.60], bland [3.60-4.78], ice [4.78-5.16], cream. [5.16-5.44], Mm-hmm. [7.36-7.62], Mm-hmm. [8.12-8.38]
+
+3. Wav2Vec2 Acoustic Stream (every audible sound/stutter):
+"OH YAH JIS LIKE ALL THIS IS STALE BROWNIE OR THIS IS BLAND ICE CREAM MM M"
+
+============================================================
+
+--- CLIP 13 (zencastr-en_66a91dcbd392b8434b26caf7-00003_84.wav) ---
+Clip Duration: 10.81s
+1. Groq Whisper Transcript:
+"You know, I wouldn't be surprised if they do it like the banana. It's at the end of the season, at the end of the show. Like, he makes the perfect donut. You know he's happy."
+
+2. Groq Word Timestamps (seconds):
+You [0.00-0.12], know, [0.12-0.48], I [0.48-0.50], wouldn't [0.50-0.78], be [0.78-0.90], surprised [0.90-3.60], if [3.60-3.94], they [3.94-4.08], do [4.08-4.24], it [4.24-4.38], like [4.38-4.56], the [4.56-4.70], banana. [4.70-5.52], It's [5.24-5.36], at [5.36-5.48], the [5.48-5.68], end [5.68-5.82], of [5.82-5.90], the [5.90-5.98], season, [5.98-6.82], at [6.82-6.86], the [6.86-6.98], end [6.98-7.10], of [7.10-7.18], the [7.18-7.30], show. [7.30-7.58], Like, [8.22-8.44], he [8.44-8.80], makes [8.80-9.02], the [9.02-9.14], perfect [9.14-9.42], donut. [9.42-10.00], You [9.84-10.02], know [10.02-10.14], he's [10.14-10.32], happy. [10.32-11.30]
+
+3. Wav2Vec2 Acoustic Stream (every audible sound/stutter):
+"YOU KNOW II WOULD BE I WOULDN'T BE SURPRISED IF THEY'D DO IT LIKE THE BANANA IT'S AT THAT END OF THE SEASON AT THE END OF THE SHOW LIKE HE MAKES THE PERFECT DOUGHNA AND YOU KNOW HE'S HAPPY"
+
+============================================================
+
+--- CLIP 14 (zencastr-en_66a91dcbd392b8434b26caf7-00004_19.wav) ---
+Clip Duration: 8.96s
+1. Groq Whisper Transcript:
+"And I think it was because also Mikey was the one that gave her that chance. And so, like, we don't know how long she was there before Carmi came in."
+
+2. Groq Word Timestamps (seconds):
+And [0.00-0.14], I [0.14-0.20], think [0.20-0.36], it [0.36-0.44], was [0.44-0.52], because [0.52-0.88], also [0.88-1.72], Mikey [1.72-2.06], was [2.06-2.26], the [2.26-2.38], one [2.38-2.46], that [2.46-2.62], gave [2.62-2.80], her [2.80-2.98], that [2.98-3.18], chance. [3.18-3.62], And [4.34-4.48], so, [4.48-4.80], like, [4.80-5.08], we [5.08-5.38], don't [5.38-5.50], know [5.50-5.62], how [5.62-5.78], long [5.78-6.04], she [6.04-6.22], was [6.22-6.36], there [6.36-6.56], before [6.56-7.08], Carmi [7.08-8.44], came [8.44-8.66], in. [8.66-8.88]
+
+3. Wav2Vec2 Acoustic Stream (every audible sound/stutter):
+"AND I THINK IT WAS BECAUSE ALSO MIKEY WAS THE ONE THAT GAVE HER THAT CHANCE AND OH LIKE WE DON'T KNOW HOW LONG SHE WAS THERE BEFORE A A CARMICEMAN"
+
+============================================================
+
+--- CLIP 15 (zencastr-en_66a91dcbd392b8434b26caf7-00004_6.wav) ---
+Clip Duration: 26.62s
+1. Groq Whisper Transcript:
+"Oh, man. Also, as a photographer, I was kind of offended by how badly they portrayed the photographer in this. It's like, why is he so close to the table? Like, maybe you'll get one photograph of the centerpiece. You're going to get a photo of the entire room. Everyone should leave the room and this should be just the photographer and the person with him. It's just so annoying to see photographers portrayed poorly. Yeah."
+
+2. Groq Word Timestamps (seconds):
+Oh, [0.00-0.20], man. [0.20-0.46], Also, [0.46-0.90], as [0.90-1.24], a [1.24-1.34], photographer, [1.34-2.14], I [2.14-2.16], was [2.16-2.36], kind [2.36-3.02], of [3.02-3.22], offended [3.22-3.70], by [3.70-4.00], how [4.00-4.32], badly [4.32-4.86], they [4.86-5.14], portrayed [5.14-5.56], the [5.56-5.92], photographer [5.92-6.34], in [6.34-6.64], this. [6.64-7.36], It's [7.38-7.52], like, [7.52-8.22], why [8.22-8.38], is [8.38-8.70], he [8.70-8.80], so [8.80-9.10], close [9.10-9.58], to [9.58-9.82], the [9.82-9.98], table? [9.98-10.88], Like, [10.74-10.92], maybe [10.92-12.42], you'll [12.42-12.64], get [12.64-12.76], one [12.76-13.12], photograph [13.12-13.64], of [13.64-13.88], the [13.88-14.04], centerpiece. [14.04-14.92], You're [15.08-15.32], going [15.32-15.38], to [15.38-15.46], get [15.46-15.66], a [15.66-15.78], photo [15.78-16.12], of [16.12-16.28], the [16.28-16.38], entire [16.38-16.78], room. [16.78-17.22], Everyone [17.72-17.88], should [17.88-18.18], leave [18.18-18.44], the [18.44-18.58], room [18.58-18.94], and [18.94-19.34], this [19.34-19.62], should [19.62-19.74], be [19.74-19.86], just [19.86-20.04], the [20.04-20.12], photographer [20.12-20.64], and [20.64-20.82], the [20.82-20.88], person [20.88-21.16], with [21.16-21.36], him. [21.36-21.48], It's [22.14-22.58], just [22.58-22.76], so [22.76-22.92], annoying [22.92-23.22], to [23.22-23.36], see [23.36-23.50], photographers [23.50-23.96], portrayed [23.96-24.30], poorly. [24.30-24.62], Yeah. [26.22-27.00]
+
+3. Wav2Vec2 Acoustic Stream (every audible sound/stutter):
+"OMENT ALSO AS A PHOTOGRAPHER I WAS A KIND OF OFFENDED BY HOW BADLY THEY PORTRAYED THE PHOTOGRAPHER IN THIS IT'S LIKE WHY'S HE SO CLOSE TO THE TABLE LIKE MAYBE YOU'LL GET ONE PHOTOGRAPH OF THE CENTRE PIECE YOU'RE GOING TO GET A PHOTO OF THE ENTIRE ROOM EVERY ONE SHOULD LEAVE THE ROOM AND THERE SHOULD BE JUST A PHOTOGRAPHER AND THE PERSON WITH HIM IT IT'S SO ANNOYING TO SEE PHOTOGRAPHERS PORTRAYED POORLY"
+
+============================================================

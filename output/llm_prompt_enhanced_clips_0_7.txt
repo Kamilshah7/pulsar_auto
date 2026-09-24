@@ -1,0 +1,225 @@
+You are an elite verbatim speech transcription engine for conversational podcast alignment.
+Your job is to produce the 100% PERFECT, VERBATIM lexical token list for each audio clip.
+
+You are provided with:
+1. Groq Whisper transcript & word timestamps (gives vocabulary, spelling, and general semantic anchors).
+2. Wav2Vec2 Raw Acoustic Stream (frame-by-frame phonetic decoder that captures every single sound uttered).
+3. DETECTED ACOUSTIC ANOMALIES & COLLAPSED SPEECH INTERVALS:
+   - Whisper frequently collapses multi-word stutters, false starts, and repetitions into a single bloated word lasting 1 to 3 seconds!
+   - We have automatically flagged every bloated interval and extracted the exact Wav2Vec2 phonemes spoken during that window.
+   - YOU MUST TRANSCRIBE EVERY SPOKEN WORD IN THESE INTERVALS. NEVER DROP THEM!
+
+## VERBATIM TRANSCRIPTION RULES:
+1. NO DROPPING SPEECH:
+   - If the speaker stutters, stammers, or restarts, transcribe EVERY attempt!
+   - Repetitions: "the", "the", "it", "it", "did", "did", "i", "i".
+   - Cut-off words end with a hyphen at the point of truncation: "on-", "fa-", "k-", "su-", "se-", "w-", "a-".
+   - Restarts across genders/words: if speaker says "she's he's", transcribe "she's", "he's"!
+2. PHONETIC TRANSLATION GUIDE (Wav2Vec2 -> English):
+   - "ANASIN" / "ANASIN A" -> "and this", "and this and uh"
+   - "THEN A THEN A" -> "than uh than a"
+   - "THE THE ON THE OTHE" -> "the the on- the on- the"
+   - "FIT I OOK" -> "fa- i k- ok"
+   - "II WOULD BE" -> "i i wouldn't be su-"
+   - "SHURLOOK" -> "sure look"
+   - "TREE" -> "three"
+   - "OUR SAXONS" -> "irish accents"
+3. BACKCHANNELS & FILLERS:
+   - "mm hm" -> 2 separate tokens: "mm", "hm"
+   - "uh huh" -> 2 separate tokens: "uh", "huh"
+   - "uh", "um", "oh", "ooh", "ah", "aw", "ay".
+4. CONTRACTIONS & NUMBERS:
+   - Contractions: write what is spoken. If one syllable ("would've"), write "would've". If two distinct words ("would have"), write "would have".
+   - Informal contractions: "gonna", "wanna", "'cause".
+   - Numbers: spell out ("three", not "3").
+5. ALL LOWERCASE & NO PUNCTUATION:
+   - Strip all periods, commas, colons, question marks, quotation marks.
+   - Only apostrophes in valid contractions ("that's", "i'd", "would've") and hyphens on cut-off words ("on-", "fa-").
+
+## OUTPUT FORMAT:
+Output ONLY a valid JSON object mapping clip index ("0" to "7") to a list of token objects:
+```json
+{
+  "0": [
+    {"text": "the", "start": 0.02, "end": 0.22},
+    {"text": "the", "start": 0.23, "end": 0.35},
+    {"text": "on-", "start": 0.36, "end": 0.55}
+  ]
+}
+```
+
+
+=== CLIPS TO TRANSCRIBE ===
+
+--- CLIP 0 (zencastr-en_66589d8247eb9800139a4b85-00000_41.wav) ---
+Clip Duration: 22.94s
+Groq Whisper Transcript:
+"the one thing I will say is that had the war begun because of this popular scenario for Irish news readers Neil it would have been it would have been a bumper day because obviously all around the world people like to do terrible impersonations of Irish accents and say oh sure look World War 3 has begun but it actually would have been World War 3"
+
+Wav2Vec2 Raw Acoustic Stream:
+"THE THE ON THE OTHE MONING I WILL SAY IS THAT HAD THE WAR BEGUN BECAUSE OF THIS POPULAR SCENARIO FOR IRISH NEWSREADERS NEEL IT WOULD HAVE BEEN IT WOULD HAVE BEEN A BUMPER DAY CAUSE OBVIOUSLY ALL AROUND THE WORLD PEOPLE LIKE TO DO TERRIBLE IN PERSONATIONS OF OUR SAXONS AND SAY AH SHURLOOK WORLDWAR TREE HAS BEGUN BUT AN ACTUALLY WOULD HAVE BEEN WORLD WORCHREE"
+
+CRITICAL: Whisper Collapsed Speech Intervals (Multi-word speech collapsed into single token):
+  - [0.0s - 1.92s] (1.92s): Whisper wrote single word 'the', but Wav2Vec2 heard: "the". Transcribe ALL spoken words in this window!
+  - [1.92s - 2.82s] (0.9s): Whisper wrote single word 'one', but Wav2Vec2 heard: "the the on the othe moning". Transcribe ALL spoken words in this window!
+  - [4.9s - 6.26s] (1.36s): Whisper wrote single word 'because', but Wav2Vec2 heard: "begun because". Transcribe ALL spoken words in this window!
+  - [7.94s - 9.18s] (1.24s): Whisper wrote single word 'for', but Wav2Vec2 heard: "popular scenario for". Transcribe ALL spoken words in this window!
+  - [10.26s - 11.22s] (0.96s): Whisper wrote single word 'it', but Wav2Vec2 heard: "newsreaders neel it". Transcribe ALL spoken words in this window!
+  - [11.44s - 12.16s] (0.72s): Whisper wrote single word 'it', but Wav2Vec2 heard: "would have been it would". Transcribe ALL spoken words in this window!
+  - [13.3s - 14.16s] (0.86s): Whisper wrote single word 'because', but Wav2Vec2 heard: "bumper day cause". Transcribe ALL spoken words in this window!
+  - [14.8s - 15.62s] (0.82s): Whisper wrote single word 'people', but Wav2Vec2 heard: "all around the world people". Transcribe ALL spoken words in this window!
+  - [15.82s - 16.76s] (0.94s): Whisper wrote single word 'terrible', but Wav2Vec2 heard: "like to do terrible in". Transcribe ALL spoken words in this window!
+  - [17.36s - 18.14s] (0.78s): Whisper wrote single word 'and', but Wav2Vec2 heard: "personations of our saxons and". Transcribe ALL spoken words in this window!
+  - [18.06s - 18.9s] (0.84s): Whisper wrote single word 'oh', but Wav2Vec2 heard: "and say ah". Transcribe ALL spoken words in this window!
+  - [20.52s - 21.34s] (0.82s): Whisper wrote single word 'but', but Wav2Vec2 heard: "tree has begun but". Transcribe ALL spoken words in this window!
+  - [21.58s - 22.34s] (0.76s): Whisper wrote single word 'World', but Wav2Vec2 heard: "actually would have been world worchree". Transcribe ALL spoken words in this window!
+
+Groq Word Timestamps:
+the [0.00-1.92], one [1.92-2.82], thing [2.82-3.00], I [3.00-3.10], will [3.10-3.26], say [3.26-3.46], is [3.46-3.60], that [3.60-3.76], had [3.56-4.24], the [4.24-4.46], war [4.46-4.76], begun [4.76-5.28], because [4.90-6.26], of [6.26-6.72], this [6.72-7.22], popular [7.22-7.82], scenario [7.82-8.40], for [7.94-9.18], Irish [9.18-9.66], news [9.66-10.18], readers [10.18-10.42], Neil [10.42-10.72], it [10.26-11.22], would [11.22-11.46], have [11.46-11.56], been [11.56-11.86], it [11.44-12.16], would [12.16-12.32], have [12.32-12.40], been [12.40-12.54], a [12.54-12.86], bumper [12.86-13.20], day [13.20-13.56], because [13.30-14.16], obviously [14.16-14.46], all [14.46-14.76], around [14.76-14.96], the [14.96-15.08], world [15.08-15.28], people [14.80-15.62], like [15.62-15.88], to [15.88-16.02], do [16.02-16.28], terrible [15.82-16.76], impersonations [16.76-17.30], of [17.30-17.48], Irish [17.48-17.66], accents [17.66-17.82], and [17.36-18.14], say [18.14-18.40], oh [18.06-18.90], sure [18.90-19.16], look [19.16-19.40], World [19.64-19.92], War [19.92-20.08], 3 [20.08-20.38], has [20.38-20.70], begun [20.70-20.98], but [20.52-21.34], it [21.34-21.44], actually [21.44-21.72], would [21.72-21.90], have [21.90-21.96], been [21.96-22.08], World [21.58-22.34], War [22.34-22.46], 3 [22.46-22.78]
+
+============================================================
+
+--- CLIP 1 (zencastr-en_66589d8247eb9800139a4b85-00000_57.wav) ---
+Clip Duration: 8.19s
+Groq Whisper Transcript:
+"Wow, the longest border in the world. That's an incredible question. Russia and Mongolia."
+
+Wav2Vec2 Raw Acoustic Stream:
+"WOW THE LONGEST BORDER IN THE WORLD THAT'S THE CREDIBLE QUESTION A ROSHA AND MONGOLIA"
+
+CRITICAL: Whisper Collapsed Speech Intervals (Multi-word speech collapsed into single token):
+  - [2.82s - 3.64s] (0.82s): Whisper wrote single word 'question.', but Wav2Vec2 heard: "credible question a". Transcribe ALL spoken words in this window!
+  - [4.4s - 5.32s] (0.92s): Whisper wrote single word 'Russia', but Wav2Vec2 heard: "rosha". Transcribe ALL spoken words in this window!
+  - [5.32s - 6.36s] (1.04s): Whisper wrote single word 'and', but Wav2Vec2 heard: "rosha and". Transcribe ALL spoken words in this window!
+  - [6.36s - 8.0s] (1.64s): Whisper wrote single word 'Mongolia.', but Wav2Vec2 heard: "and mongolia". Transcribe ALL spoken words in this window!
+
+Groq Word Timestamps:
+Wow, [0.04-0.56], the [0.56-0.68], longest [0.68-1.12], border [1.12-1.50], in [1.50-1.64], the [1.64-1.74], world. [1.74-2.18], That's [2.14-2.32], an [2.32-2.42], incredible [2.42-2.82], question. [2.82-3.64], Russia [4.40-5.32], and [5.32-6.36], Mongolia. [6.36-8.00]
+
+============================================================
+
+--- CLIP 2 (zencastr-en_6668ae42d0c186248b5496d7-00005_16.wav) ---
+Clip Duration: 25.98s
+Groq Whisper Transcript:
+"Mm-hmm. It's so true. Yeah. And I like what you said earlier too, about just like the little wins, right? Like if you can reduce something that you know might have that potential, then that's great. But like even Jeanette was saying, like sometimes like you walk out of your apartment in Toronto and it's like, oh gosh, like what am I even breathing in today? So there's like the modifiable things and then there's the-"
+
+Wav2Vec2 Raw Acoustic Stream:
+"M IT'S SO TRUE YE AND I LIKE WHAT YOU SAID EARLY OR TWO ABOUT JUST LIKE THE LITTLE WINDS RIGHT LIKE IF YOU CAN REDUCE SOMETHING THAT YOU KNOW MIGHT HAVE THAT POTENTIAL THAN THAT'S CREAT BUT LIKE EVEN GEANETT WAS SAYING LIKE SOMETIMES LIKE YOU YOU WALK OUT OF YOUR APARTMENT IN CHIRONO AND IT'S LIKE OH GOSH LIKE WHAT AM I EVEN BREATHING IN TO DAY S THERE'S LIKE THE MOTOFIABLE THINGS AND THEN THERE'S THE"
+
+CRITICAL: Whisper Collapsed Speech Intervals (Multi-word speech collapsed into single token):
+  - [0.28s - 2.54s] (2.26s): Whisper wrote single word 'It's', but Wav2Vec2 heard: "m it's so". Transcribe ALL spoken words in this window!
+  - [2.76s - 4.42s] (1.66s): Whisper wrote single word 'true.', but Wav2Vec2 heard: "so true ye". Transcribe ALL spoken words in this window!
+  - [7.48s - 8.6s] (1.12s): Whisper wrote single word 'wins,', but Wav2Vec2 heard: "little winds right". Transcribe ALL spoken words in this window!
+  - [12.32s - 13.12s] (0.8s): Whisper wrote single word 'potential,', but Wav2Vec2 heard: "that potential than". Transcribe ALL spoken words in this window!
+  - [13.46s - 14.34s] (0.88s): Whisper wrote single word 'great.', but Wav2Vec2 heard: "that's creat but". Transcribe ALL spoken words in this window!
+  - [20.98s - 22.36s] (1.38s): Whisper wrote single word 'today?', but Wav2Vec2 heard: "in to day s". Transcribe ALL spoken words in this window!
+  - [22.48s - 23.34s] (0.86s): Whisper wrote single word 'there's', but Wav2Vec2 heard: "s there's like". Transcribe ALL spoken words in this window!
+
+Groq Word Timestamps:
+Mm-hmm. [0.00-0.28], It's [0.28-2.54], so [2.54-2.76], true. [2.76-4.42], Yeah. [4.42-4.50], And [4.50-4.78], I [4.78-4.88], like [4.88-5.02], what [5.02-5.12], you [5.12-5.20], said [5.20-5.36], earlier [5.36-5.66], too, [5.66-5.92], about [5.92-6.16], just [6.16-6.56], like [6.56-6.98], the [6.98-7.20], little [7.20-7.48], wins, [7.48-8.60], right? [8.58-8.78], Like [8.78-8.98], if [8.98-9.10], you [9.10-9.24], can [9.24-9.74], reduce [9.74-10.32], something [10.32-10.92], that [10.92-11.18], you [11.18-11.32], know [11.32-11.58], might [11.58-11.82], have [11.82-12.14], that [12.14-12.32], potential, [12.32-13.12], then [13.12-13.14], that's [13.14-13.46], great. [13.46-14.34], But [14.26-14.40], like [14.40-14.56], even [14.56-14.80], Jeanette [14.80-15.04], was [15.04-15.22], saying, [15.22-15.54], like [15.54-15.78], sometimes [15.78-15.96], like [15.96-16.22], you [16.22-16.42], walk [16.42-16.80], out [16.80-16.96], of [16.96-17.06], your [17.06-17.14], apartment [17.14-17.48], in [17.48-17.66], Toronto [17.66-17.90], and [17.74-18.20], it's [18.20-18.36], like, [18.36-18.78], oh [18.78-18.90], gosh, [18.90-19.44], like [19.44-19.62], what [19.62-19.96], am [19.96-20.16], I [20.16-20.28], even [20.28-20.50], breathing [20.50-20.78], in [20.78-20.98], today? [20.98-22.36], So [22.36-22.48], there's [22.48-23.34], like [23.34-23.50], the [23.50-23.62], modifiable [23.62-24.02], things [24.12-24.62], and [24.62-24.82], then [24.82-24.98], there's [24.98-25.36], the- [25.36-25.92]
+
+============================================================
+
+--- CLIP 3 (zencastr-en_66971c93200e233516a91b55-00004_0.wav) ---
+Clip Duration: 6.40s
+Groq Whisper Transcript:
+"or not. So, uh, that was mostly just a call out to Nick Allen. Hey, Nick. Hey,"
+
+Wav2Vec2 Raw Acoustic Stream:
+"OR NOT SO A THOU'S MOSTLY JUST CALL OUT TO NICKALLAN HEYNICK"
+
+CRITICAL: Whisper Collapsed Speech Intervals (Multi-word speech collapsed into single token):
+  - [0.04s - 0.92s] (0.88s): Whisper wrote single word 'not.', but Wav2Vec2 heard: "or not". Transcribe ALL spoken words in this window!
+  - [1.72s - 2.46s] (0.74s): Whisper wrote single word 'uh,', but Wav2Vec2 heard: "a thou's". Transcribe ALL spoken words in this window!
+  - [3.86s - 6.88s] (3.02s): Whisper wrote single word 'Hey,', but Wav2Vec2 heard: "nickallan heynick". Transcribe ALL spoken words in this window!
+
+Groq Word Timestamps:
+or [0.00-0.04], not. [0.04-0.92], So, [1.20-1.38], uh, [1.72-2.46], that [2.08-2.42], was [2.42-2.58], mostly [2.58-2.86], just [2.86-3.14], a [3.14-3.22], call [3.22-3.38], out [3.38-3.48], to [3.48-3.60], Nick [3.60-3.74], Allen. [3.74-4.40], Hey, [3.96-4.10], Nick. [4.18-4.36], Hey, [3.86-6.88]
+
+============================================================
+
+--- CLIP 4 (zencastr-en_66971c93200e233516a91b55-00004_15.wav) ---
+Clip Duration: 29.18s
+Groq Whisper Transcript:
+"Did you guys ever see Battlestar Galactica, the new one? It was kind of fun. It's very dated. I don't think I could possibly enjoy it now. But it was a really big thing way back when. And every single episode did this. Pretty much every single episode. And it was just kind of a trick to hook you with the exciting part of the movie. I think that's why it did it. I don't necessarily know why Werner Herzog did it this way. Because I..."
+
+Wav2Vec2 Raw Acoustic Stream:
+"DID YOU EVER SEE LIKE BATTLE STARGALATKA THE NEW ONE UM IT WAS KIND OF FUN IT'S VERY DATED I DON'T THINK I COULD POSSIBLY ENJOY IT NOW BUT IT WAS A REALLY BIG THING WAY BACK WHEN AND EVERY SINGLE EPISODE DID THIS LIKE PRETTY MUCH EVERY SINGLE EPISODE AND IT WAS JUST KIND OF A TRICK TO LIKE TO HOOK YOU WITH THE EXCITING PART OF THE MOVY I THINK THAT'S WHY IT WOULD IT I DON'T KNOW I DON'T NECESSARILY KNOW WHY VERNAR HERTSOK DID IT THIS WAX I"
+
+CRITICAL: Whisper Collapsed Speech Intervals (Multi-word speech collapsed into single token):
+  - [1.18s - 1.94s] (0.76s): Whisper wrote single word 'Battlestar', but Wav2Vec2 heard: "see like battle stargalatka". Transcribe ALL spoken words in this window!
+  - [6.28s - 7.28s] (1.0s): Whisper wrote single word 'fun.', but Wav2Vec2 heard: "of fun it's". Transcribe ALL spoken words in this window!
+  - [10.26s - 11.06s] (0.8s): Whisper wrote single word 'now.', but Wav2Vec2 heard: "it now but it was". Transcribe ALL spoken words in this window!
+  - [12.84s - 13.66s] (0.82s): Whisper wrote single word 'when.', but Wav2Vec2 heard: "back when and". Transcribe ALL spoken words in this window!
+  - [12.68s - 13.82s] (1.14s): Whisper wrote single word 'And', but Wav2Vec2 heard: "back when and". Transcribe ALL spoken words in this window!
+  - [15.34s - 16.16s] (0.82s): Whisper wrote single word 'this.', but Wav2Vec2 heard: "did this like". Transcribe ALL spoken words in this window!
+  - [17.24s - 18.1s] (0.86s): Whisper wrote single word 'episode.', but Wav2Vec2 heard: "single episode and it was". Transcribe ALL spoken words in this window!
+  - [19.54s - 20.94s] (1.4s): Whisper wrote single word 'hook', but Wav2Vec2 heard: "to like to hook". Transcribe ALL spoken words in this window!
+  - [23.04s - 23.82s] (0.78s): Whisper wrote single word 'movie.', but Wav2Vec2 heard: "the movy i think that's". Transcribe ALL spoken words in this window!
+
+Groq Word Timestamps:
+Did [0.00-0.08], you [0.08-0.54], guys [0.54-0.72], ever [0.72-0.88], see [0.88-1.18], Battlestar [1.18-1.94], Galactica, [1.94-2.54], the [2.54-2.64], new [2.64-2.80], one? [2.80-3.48], It [4.80-5.48], was [5.48-5.92], kind [5.92-6.20], of [6.20-6.28], fun. [6.28-7.28], It's [7.14-7.42], very [7.42-7.92], dated. [7.92-8.60], I [8.60-8.66], don't [8.66-8.78], think [8.78-8.98], I [8.98-9.10], could [9.10-9.20], possibly [9.20-9.72], enjoy [9.72-10.08], it [10.08-10.26], now. [10.26-11.06], But [10.92-11.02], it [11.02-11.04], was [11.04-11.14], a [11.14-11.30], really [11.30-11.66], big [11.66-11.96], thing [11.96-12.36], way [12.36-12.56], back [12.56-12.84], when. [12.84-13.66], And [12.68-13.82], every [13.82-14.28], single [14.28-14.66], episode [14.66-15.08], did [15.08-15.34], this. [15.34-16.16], Pretty [16.26-16.48], much [16.48-16.74], every [16.74-16.96], single [16.96-17.24], episode. [17.24-18.10], And [17.88-17.92], it [17.92-18.02], was [18.02-18.20], just [18.20-18.54], kind [18.54-18.92], of [18.92-19.00], a [19.00-19.12], trick [19.12-19.34], to [19.34-19.54], hook [19.54-20.94], you [20.94-21.22], with [21.22-21.46], the [21.46-21.84], exciting [21.84-22.24], part [22.24-22.58], of [22.58-22.88], the [22.88-23.04], movie. [23.04-23.82], I [23.40-23.52], think [23.52-23.64], that's [23.64-23.86], why [23.86-24.12], it [24.12-24.40], did [24.40-24.66], it. [24.66-24.78], I [25.26-25.38], don't [25.38-26.02], necessarily [26.02-26.66], know [26.66-26.96], why [26.96-27.26], Werner [27.26-27.64], Herzog [27.64-27.96], did [27.96-28.16], it [28.16-28.26], this [28.26-28.46], way. [28.46-29.14], Because [28.28-28.88], I... [28.88-29.58]
+
+============================================================
+
+--- CLIP 5 (zencastr-en_66971c93200e233516a91b55-00004_50.wav) ---
+Clip Duration: 16.64s
+Groq Whisper Transcript:
+"Yes. That was my favorite. Okay, I'm just gonna say now, my favorite part of the movie is that Gael Garcia Bernal is, like, even in the movie, like, considered in the movie, when he's just kind of like this guy who wandered onto the set pretty much for one scene."
+
+Wav2Vec2 Raw Acoustic Stream:
+"YES THAT WAS MY FIT I OOKAM JUST GOINGTO SAY NOW MY FAVOURITE PART OF THE MOVI IS THAT GALGARSIA BARNAL IS LIKE EVEN IN THE MOVI LIKE CONSIDERED IN THE MOVI WHEN HE'S JUST KIND OF LIKE THIS GUY HE WANDERED ONTO THE SAT PRETTY MUCH FOR ONE SCENE"
+
+CRITICAL: Whisper Collapsed Speech Intervals (Multi-word speech collapsed into single token):
+  - [0.0s - 2.06s] (2.06s): Whisper wrote single word 'Yes.', but Wav2Vec2 heard: "yes that". Transcribe ALL spoken words in this window!
+  - [6.04s - 7.1s] (1.06s): Whisper wrote single word 'Gael', but Wav2Vec2 heard: "that galgarsia". Transcribe ALL spoken words in this window!
+  - [8.52s - 9.28s] (0.76s): Whisper wrote single word 'like,', but Wav2Vec2 heard: "is like". Transcribe ALL spoken words in this window!
+
+Groq Word Timestamps:
+Yes. [0.00-2.06], That [2.06-2.14], was [2.14-2.30], my [2.30-2.54], favorite. [2.54-2.72], Okay, [2.72-3.22], I'm [3.22-3.40], just [3.40-3.56], gonna [3.56-3.66], say [3.66-3.86], now, [3.86-4.06], my [4.06-4.30], favorite [4.30-4.56], part [4.56-4.76], of [4.76-4.86], the [4.86-4.94], movie [4.94-5.20], is [5.20-5.80], that [5.80-6.04], Gael [6.04-7.10], Garcia [7.10-7.72], Bernal [7.72-8.00], is, [8.00-8.52], like, [8.52-9.28], even [9.28-9.62], in [9.62-9.84], the [9.84-9.98], movie, [9.98-10.46], like, [10.46-10.62], considered [10.62-11.26], in [11.26-11.50], the [11.50-11.62], movie, [11.62-12.20], when [12.20-12.32], he's [12.32-12.52], just [12.52-12.68], kind [12.68-12.92], of [12.92-13.04], like [13.04-13.24], this [13.24-13.72], guy [13.72-13.94], who [13.94-14.10], wandered [14.10-14.40], onto [14.40-14.66], the [14.66-14.78], set [14.78-15.08], pretty [15.08-15.32], much [15.32-15.52], for [15.52-15.64], one [15.64-15.90], scene. [15.90-16.28]
+
+============================================================
+
+--- CLIP 6 (zencastr-en_66a91dcbd392b8434b26caf7-00001_34.wav) ---
+Clip Duration: 18.68s
+Groq Whisper Transcript:
+"I love that. I would say then, just to kind of recap the second episode, again, it kind of encapsulates what happens later in the season. Because I didn't even think about him being the asshole and then Richie being actually more mature throughout. So that's a really good observation. Mm-hmm. Yeah."
+
+Wav2Vec2 Raw Acoustic Stream:
+"I LOVE THAT II WOULD SAY THEN JUST A KIND OF RECAPT THE SECOND EPISODE AGAIN IT A KIND OF INCAPISATES WHAT HAPPENS LATER IN THE THE SEASON CAUSE I DIDN'T THINK ABOUT HIM BEING THE ASSHOLE AND THEN IN THEN RICHY BEING ACTUALLY MORE MATURED THROUGHOUT SO THAT'S UT ERALLY GOOD OBSERVATION  YEH"
+
+CRITICAL: Whisper Collapsed Speech Intervals (Multi-word speech collapsed into single token):
+  - [0.32s - 1.1s] (0.78s): Whisper wrote single word 'that.', but Wav2Vec2 heard: "love that". Transcribe ALL spoken words in this window!
+  - [1.78s - 2.48s] (0.7s): Whisper wrote single word 'would', but Wav2Vec2 heard: "ii would". Transcribe ALL spoken words in this window!
+  - [7.12s - 8.08s] (0.96s): Whisper wrote single word 'season.', but Wav2Vec2 heard: "the the season cause i didn't". Transcribe ALL spoken words in this window!
+  - [9.52s - 10.26s] (0.74s): Whisper wrote single word 'and', but Wav2Vec2 heard: "asshole and then". Transcribe ALL spoken words in this window!
+  - [12.32s - 13.14s] (0.82s): Whisper wrote single word 'throughout.', but Wav2Vec2 heard: "matured throughout so that's". Transcribe ALL spoken words in this window!
+  - [18.2s - 18.92s] (0.72s): Whisper wrote single word 'Yeah.', but Wav2Vec2 heard: "yeh". Transcribe ALL spoken words in this window!
+
+Groq Word Timestamps:
+I [0.00-0.10], love [0.10-0.32], that. [0.32-1.10], I [1.66-1.78], would [1.78-2.48], say [2.48-2.70], then, [2.70-3.26], just [3.26-3.30], to [3.30-3.42], kind [3.42-3.54], of [3.54-3.58], recap [3.58-3.80], the [3.80-3.98], second [3.98-4.20], episode, [4.20-4.74], again, [4.74-5.24], it [5.24-5.26], kind [5.26-5.50], of [5.50-5.62], encapsulates [5.62-6.02], what [6.02-6.22], happens [6.22-6.54], later [6.54-6.76], in [6.76-6.90], the [6.90-7.12], season. [7.12-8.08], Because [7.82-7.90], I [7.90-8.02], didn't [8.02-8.12], even [8.12-8.30], think [8.30-8.42], about [8.42-8.62], him [8.62-8.80], being [8.80-9.00], the [9.00-9.12], asshole [9.12-9.52], and [9.52-10.26], then [10.26-10.88], Richie [10.88-11.28], being [11.28-11.52], actually [11.52-11.86], more [11.86-12.00], mature [12.00-12.32], throughout. [12.32-13.14], So [12.90-13.00], that's [13.00-13.18], a [13.18-13.30], really [13.30-13.44], good [13.44-13.60], observation. [13.60-13.92], Mm-hmm. [16.12-16.32], Yeah. [18.20-18.92]
+
+============================================================
+
+--- CLIP 7 (zencastr-en_66a91dcbd392b8434b26caf7-00002_37.wav) ---
+Clip Duration: 23.87s
+Groq Whisper Transcript:
+"Oh, no, why? I mean, you know what it is? It's the book people that are like, oh, they were enemies at first, and then they become lovers. And I'm like, we don't need that here. We don't need that here. He's also more of a mentor figure than a love interest figure."
+
+Wav2Vec2 Raw Acoustic Stream:
+"OH AH NO WHY I MEAN YOU KNOW WHAT IT IS IT'S THE IT'S THE BOOK PEOPLE THAT ARE LIKE OH THEY WERE ENEMIES AT FIRST AND THEN THEY BECOME LOVERS AND U'LIKE WE DON'T NEED THO HEAR WE DON'T NEED TO HEAR SHES HE'S ALSO LIKE MORE BIKEAMENTOR FIGURE THAN ANASIN A THEN A THEN A LOVE INTEREST"
+
+CRITICAL: Whisper Collapsed Speech Intervals (Multi-word speech collapsed into single token):
+  - [0.0s - 1.86s] (1.86s): Whisper wrote single word 'Oh,', but Wav2Vec2 heard: "oh". Transcribe ALL spoken words in this window!
+  - [2.54s - 3.62s] (1.08s): Whisper wrote single word 'why?', but Wav2Vec2 heard: "no why". Transcribe ALL spoken words in this window!
+  - [4.08s - 5.64s] (1.56s): Whisper wrote single word 'mean,', but Wav2Vec2 heard: "i mean you". Transcribe ALL spoken words in this window!
+  - [7.78s - 9.46s] (1.68s): Whisper wrote single word 'book', but Wav2Vec2 heard: "the it's the book". Transcribe ALL spoken words in this window!
+  - [12.88s - 13.72s] (0.84s): Whisper wrote single word 'lovers.', but Wav2Vec2 heard: "become lovers and u'like". Transcribe ALL spoken words in this window!
+  - [17.4s - 18.34s] (0.94s): Whisper wrote single word 'more', but Wav2Vec2 heard: "also like more". Transcribe ALL spoken words in this window!
+  - [19.3s - 20.22s] (0.92s): Whisper wrote single word 'than', but Wav2Vec2 heard: "figure than". Transcribe ALL spoken words in this window!
+  - [20.22s - 23.22s] (3.0s): Whisper wrote single word 'a', but Wav2Vec2 heard: "anasin a then a then a love". Transcribe ALL spoken words in this window!
+
+Groq Word Timestamps:
+Oh, [0.00-1.86], no, [1.86-2.54], why? [2.54-3.62], I [4.00-4.08], mean, [4.08-5.64], you [5.64-5.72], know [5.72-5.82], what [5.82-5.96], it [5.96-6.06], is? [6.06-6.32], It's [7.28-7.50], the [7.50-7.78], book [7.78-9.46], people [9.46-9.98], that [9.98-10.26], are [10.26-10.42], like, [10.42-10.76], oh, [10.76-11.06], they [11.06-11.14], were [11.14-11.28], enemies [11.28-11.62], at [11.62-11.92], first, [11.92-12.28], and [12.28-12.38], then [12.38-12.52], they [12.52-12.60], become [12.60-12.88], lovers. [12.88-13.72], And [13.52-13.58], I'm [13.58-13.68], like, [13.68-14.20], we [14.20-14.34], don't [14.34-14.50], need [14.50-14.66], that [14.66-14.80], here. [14.80-15.46], We [15.44-15.54], don't [15.54-15.68], need [15.68-15.82], that [15.82-15.96], here. [15.96-16.60], He's [16.86-17.06], also [17.06-17.40], more [17.40-18.34], of [18.34-18.50], a [18.50-18.60], mentor [18.60-18.96], figure [18.96-19.30], than [19.30-20.22], a [20.22-23.22], love [23.22-23.44], interest [23.44-23.82], figure. [23.82-24.14]
+
+============================================================

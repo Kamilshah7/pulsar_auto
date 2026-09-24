@@ -1,0 +1,3159 @@
+{
+ "026-0-4": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "0",
+  "pair": 4,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_81d4c1dd26575dee829ccf417736f226_1900.0_2200.0-sortformer-16.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1238,
+  "class": "fric>vowel",
+  "gold": 2.8,
+  "live": 2.8419,
+  "cand": 2.8199,
+  "options": {
+   "A": {
+    "t": 2.8,
+    "cues": [
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 2.8419,
+    "cues": [
+     "live"
+    ]
+   },
+   "C": {
+    "t": 2.8199,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-0-26": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "0",
+  "pair": 26,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_81d4c1dd26575dee829ccf417736f226_1900.0_2200.0-sortformer-16.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1238,
+  "class": "fric>vowel",
+  "gold": 11.08,
+  "live": 11.1676,
+  "cand": 11.1476,
+  "options": {
+   "A": {
+    "t": 11.1476,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 11.1676,
+    "cues": [
+     "live"
+    ]
+   },
+   "C": {
+    "t": 11.08,
+    "cues": [
+     "yours"
+    ]
+   }
+  }
+ },
+ "026-0-27": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "0",
+  "pair": 27,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_81d4c1dd26575dee829ccf417736f226_1900.0_2200.0-sortformer-16.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1238,
+  "class": "fric>vowel",
+  "gold": 11.2,
+  "live": 11.2777,
+  "cand": 11.2257,
+  "options": {
+   "A": {
+    "t": 11.2257,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 11.2777,
+    "cues": [
+     "live"
+    ]
+   },
+   "C": {
+    "t": 11.2,
+    "cues": [
+     "yours"
+    ]
+   }
+  }
+ },
+ "026-0-53": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "0",
+  "pair": 53,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_81d4c1dd26575dee829ccf417736f226_1900.0_2200.0-sortformer-16.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "stop>fric",
+  "gold": 18.009999999999998,
+  "live": 18.0101,
+  "cand": 17.9901,
+  "options": {
+   "A": {
+    "t": 17.9901,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 18.009999999999998,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   }
+  }
+ },
+ "026-1-9": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "1",
+  "pair": 9,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_823b7c8ee60759c3ae58b4cda02e3c00_1180.0_1480.0-sortformer-34.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1248,
+  "class": "fric>dh/th",
+  "gold": 2.242,
+  "live": 2.2417,
+  "cand": 2.2197,
+  "options": {
+   "A": {
+    "t": 2.2197,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 2.2417,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   }
+  }
+ },
+ "026-1-58": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "1",
+  "pair": 58,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_823b7c8ee60759c3ae58b4cda02e3c00_1180.0_1480.0-sortformer-34.wav",
+  "rule": "ranker",
+  "branch": "case9",
+  "leaf_line": 1393,
+  "class": "vowel>liquid",
+  "gold": 15.395,
+  "live": 15.395,
+  "cand": 15.353,
+  "options": {
+   "A": {
+    "t": 15.395,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 15.353,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-2-2": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "2",
+  "pair": 2,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_83151db80f2e582182a71428443f5b68_2440.0_2740.0-sortformer-20.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1238,
+  "class": "fric>vowel",
+  "gold": 0.6655,
+  "live": 0.6655,
+  "cand": 0.6435000000000001,
+  "options": {
+   "A": {
+    "t": 0.6655,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 0.6435000000000001,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-2-13": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "2",
+  "pair": 13,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_83151db80f2e582182a71428443f5b68_2440.0_2740.0-sortformer-20.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "nasal>liquid",
+  "gold": 2.1505,
+  "live": 2.1505,
+  "cand": 2.1345,
+  "options": {
+   "A": {
+    "t": 2.1505,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 2.1345,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-2-16": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "2",
+  "pair": 16,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_83151db80f2e582182a71428443f5b68_2440.0_2740.0-sortformer-20.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "vowel>glide",
+  "gold": 2.895,
+  "live": 2.8948,
+  "cand": 2.8768000000000002,
+  "options": {
+   "A": {
+    "t": 2.8768000000000002,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 2.8948,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   }
+  }
+ },
+ "026-2-36": {
+  "set": "026",
+  "kind": "judged",
+  "clip": "2",
+  "pair": 36,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_83151db80f2e582182a71428443f5b68_2440.0_2740.0-sortformer-20.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1238,
+  "class": "fric>vowel",
+  "gold": 8.561599999999999,
+  "live": 8.567499999999999,
+  "cand": 8.5535,
+  "options": {
+   "A": {
+    "t": 8.567499999999999,
+    "cues": [
+     "live"
+    ]
+   },
+   "B": {
+    "t": 8.561599999999999,
+    "cues": [
+     "yours"
+    ]
+   },
+   "C": {
+    "t": 8.5535,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-2-49": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "2",
+  "pair": 49,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_83151db80f2e582182a71428443f5b68_2440.0_2740.0-sortformer-20.wav",
+  "rule": "ranker",
+  "branch": "case13",
+  "leaf_line": 1628,
+  "class": "nasal>dh/th",
+  "gold": 11.689,
+  "live": 11.689,
+  "cand": 11.669,
+  "options": {
+   "A": {
+    "t": 11.689,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 11.669,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-2-69": {
+  "set": "026",
+  "kind": "judged",
+  "clip": "2",
+  "pair": 69,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_83151db80f2e582182a71428443f5b68_2440.0_2740.0-sortformer-20.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1248,
+  "class": "fric>fric",
+  "gold": 17.223,
+  "live": 17.2226,
+  "cand": 17.1746,
+  "options": {
+   "A": {
+    "t": 17.2226,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 17.1746,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-2-92": {
+  "set": "026",
+  "kind": "human/verified",
+  "clip": "2",
+  "pair": 92,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_83151db80f2e582182a71428443f5b68_2440.0_2740.0-sortformer-20.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "nasal>dh/th",
+  "gold": 23.9115,
+  "live": 23.9112,
+  "cand": 23.8992,
+  "options": {
+   "A": {
+    "t": 23.8992,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 23.9112,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   }
+  }
+ },
+ "026-3-5": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "3",
+  "pair": 5,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_83b8e1159f6d5a328c7067f4b23b3fca_390.0_690.0-sortformer-11.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "letter>fric",
+  "gold": 1.4955,
+  "live": 1.4954999999999998,
+  "cand": 1.4814999999999998,
+  "options": {
+   "A": {
+    "t": 1.4954999999999998,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 1.4814999999999998,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-3-47": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "3",
+  "pair": 47,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_83b8e1159f6d5a328c7067f4b23b3fca_390.0_690.0-sortformer-11.wav",
+  "rule": "ranker",
+  "branch": "case13",
+  "leaf_line": 1628,
+  "class": "stop>dh/th",
+  "gold": 17.163,
+  "live": 17.1632,
+  "cand": 17.1552,
+  "options": {
+   "A": {
+    "t": 17.1552,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 17.163,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   }
+  }
+ },
+ "026-3-69": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "3",
+  "pair": 69,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_83b8e1159f6d5a328c7067f4b23b3fca_390.0_690.0-sortformer-11.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "vowel>vowel",
+  "gold": 23.955,
+  "live": 23.954700000000003,
+  "cand": 23.920700000000004,
+  "options": {
+   "A": {
+    "t": 23.920700000000004,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 23.954700000000003,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   }
+  }
+ },
+ "026-3-71": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "3",
+  "pair": 71,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_83b8e1159f6d5a328c7067f4b23b3fca_390.0_690.0-sortformer-11.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1199,
+  "class": "fric>liquid",
+  "gold": 24.7425,
+  "live": 24.7425,
+  "cand": 24.7205,
+  "options": {
+   "A": {
+    "t": 24.7425,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 24.7205,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-3-72": {
+  "set": "026",
+  "kind": "judged",
+  "clip": "3",
+  "pair": 72,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_83b8e1159f6d5a328c7067f4b23b3fca_390.0_690.0-sortformer-11.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1248,
+  "class": "fric>glide",
+  "gold": 25.131999999999998,
+  "live": 25.1324,
+  "cand": 25.116400000000002,
+  "options": {
+   "A": {
+    "t": 25.131999999999998,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   },
+   "B": {
+    "t": 25.116400000000002,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-3-73": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "3",
+  "pair": 73,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_83b8e1159f6d5a328c7067f4b23b3fca_390.0_690.0-sortformer-11.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "liquid>nasal",
+  "gold": 25.365000000000002,
+  "live": 25.365099999999998,
+  "cand": 25.359099999999998,
+  "options": {
+   "A": {
+    "t": 25.359099999999998,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 25.365000000000002,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   }
+  }
+ },
+ "026-4-15": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "4",
+  "pair": 15,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_83f1f7b625ba5908a57986310ba2b318_50.0_335.490563-sortformer-7.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "stop>dh/th",
+  "gold": 3.8970000000000002,
+  "live": 3.8966000000000003,
+  "cand": 3.8806000000000003,
+  "options": {
+   "A": {
+    "t": 3.8806000000000003,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 3.8966000000000003,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   }
+  }
+ },
+ "026-4-19": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "4",
+  "pair": 19,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_83f1f7b625ba5908a57986310ba2b318_50.0_335.490563-sortformer-7.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "stop>dh/th",
+  "gold": 4.823,
+  "live": 4.8233999999999995,
+  "cand": 4.783399999999999,
+  "options": {
+   "A": {
+    "t": 4.823,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   },
+   "B": {
+    "t": 4.783399999999999,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-4-41": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "4",
+  "pair": 41,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_83f1f7b625ba5908a57986310ba2b318_50.0_335.490563-sortformer-7.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1248,
+  "class": "fric>dh/th",
+  "gold": 12.331,
+  "live": 12.331,
+  "cand": 12.311,
+  "options": {
+   "A": {
+    "t": 12.331,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 12.311,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-5-19": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "5",
+  "pair": 19,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_84597de21f045361971a495f3bad029a_100.0_400.0-sortformer-42.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "stop>stop",
+  "gold": 7.891,
+  "live": 7.8914,
+  "cand": 7.8654,
+  "options": {
+   "A": {
+    "t": 7.891,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   },
+   "B": {
+    "t": 7.8654,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-5-31": {
+  "set": "026",
+  "kind": "judged",
+  "clip": "5",
+  "pair": 31,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_84597de21f045361971a495f3bad029a_100.0_400.0-sortformer-42.wav",
+  "rule": "ranker",
+  "branch": "case1",
+  "leaf_line": 1112,
+  "class": "fric>fric",
+  "gold": 11.656400000000001,
+  "live": 11.6798,
+  "cand": 11.6378,
+  "options": {
+   "A": {
+    "t": 11.656400000000001,
+    "cues": [
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 11.6798,
+    "cues": [
+     "live"
+    ]
+   },
+   "C": {
+    "t": 11.6378,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-6-11": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "6",
+  "pair": 11,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_860cc11fd6945943813db1466e083fdc_740.0_810.0-sortformer-1.wav",
+  "rule": "ranker",
+  "branch": "case13",
+  "leaf_line": 1628,
+  "class": "liquid>dh/th",
+  "gold": 3.263,
+  "live": 3.2629,
+  "cand": 3.2429,
+  "options": {
+   "A": {
+    "t": 3.2629,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 3.2429,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-6-49": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "6",
+  "pair": 49,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_860cc11fd6945943813db1466e083fdc_740.0_810.0-sortformer-1.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "nasal>stop",
+  "gold": 14.833,
+  "live": 14.832899999999999,
+  "cand": 14.812899999999999,
+  "options": {
+   "A": {
+    "t": 14.812899999999999,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 14.832899999999999,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   }
+  }
+ },
+ "026-7-4": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "7",
+  "pair": 4,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_8637895cca045d9c90cc9228e58078f7_1130.0_1390.0-sortformer-25.wav",
+  "rule": "ranker",
+  "branch": "case1",
+  "leaf_line": 1112,
+  "class": "fric>fric",
+  "gold": 2.0620000000000003,
+  "live": 2.0617,
+  "cand": 2.0397000000000003,
+  "options": {
+   "A": {
+    "t": 2.0617,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 2.0397000000000003,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-7-6": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "7",
+  "pair": 6,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_8637895cca045d9c90cc9228e58078f7_1130.0_1390.0-sortformer-25.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "vowel>fric",
+  "gold": 3.319,
+  "live": 3.3188,
+  "cand": 3.2808,
+  "options": {
+   "A": {
+    "t": 3.3188,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 3.2808,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-7-32": {
+  "set": "026",
+  "kind": "judged",
+  "clip": "7",
+  "pair": 32,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_8637895cca045d9c90cc9228e58078f7_1130.0_1390.0-sortformer-25.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1238,
+  "class": "fric>vowel",
+  "gold": 10.985,
+  "live": 10.9846,
+  "cand": 10.976600000000001,
+  "options": {
+   "A": {
+    "t": 10.9846,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 10.976600000000001,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-8-1": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "8",
+  "pair": 1,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_8637895cca045d9c90cc9228e58078f7_2250.0_2320.0-sortformer-2.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "vowel>vowel",
+  "gold": 0.809,
+  "live": 0.8094,
+  "cand": 0.8034000000000001,
+  "options": {
+   "A": {
+    "t": 0.8034000000000001,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 0.809,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   }
+  }
+ },
+ "026-8-12": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "8",
+  "pair": 12,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_8637895cca045d9c90cc9228e58078f7_2250.0_2320.0-sortformer-2.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "vowel>vowel",
+  "gold": 4.069,
+  "live": 4.0692,
+  "cand": 4.065200000000001,
+  "options": {
+   "A": {
+    "t": 4.069,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   },
+   "B": {
+    "t": 4.065200000000001,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-8-14": {
+  "set": "026",
+  "kind": "judged",
+  "clip": "8",
+  "pair": 14,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_8637895cca045d9c90cc9228e58078f7_2250.0_2320.0-sortformer-2.wav",
+  "rule": "ranker",
+  "branch": "case7",
+  "leaf_line": 1356,
+  "class": "vowel>fric",
+  "gold": 4.255,
+  "live": 4.2443,
+  "cand": 4.2343,
+  "options": {
+   "A": {
+    "t": 4.255,
+    "cues": [
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 4.2443,
+    "cues": [
+     "live"
+    ]
+   },
+   "C": {
+    "t": 4.2343,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-8-24": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "8",
+  "pair": 24,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_8637895cca045d9c90cc9228e58078f7_2250.0_2320.0-sortformer-2.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1199,
+  "class": "fric>liquid",
+  "gold": 7.225,
+  "live": 7.2252,
+  "cand": 7.2072,
+  "options": {
+   "A": {
+    "t": 7.225,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   },
+   "B": {
+    "t": 7.2072,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-8-44": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "8",
+  "pair": 44,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_8637895cca045d9c90cc9228e58078f7_2250.0_2320.0-sortformer-2.wav",
+  "rule": "ranker",
+  "branch": "case3",
+  "leaf_line": 1184,
+  "class": "vowel>glide",
+  "gold": 12.248000000000001,
+  "live": 12.2484,
+  "cand": 12.1904,
+  "options": {
+   "A": {
+    "t": 12.248000000000001,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   },
+   "B": {
+    "t": 12.1904,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-8-59": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "8",
+  "pair": 59,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_8637895cca045d9c90cc9228e58078f7_2250.0_2320.0-sortformer-2.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "liquid>nasal",
+  "gold": 16.5045,
+  "live": 16.5045,
+  "cand": 16.488500000000002,
+  "options": {
+   "A": {
+    "t": 16.488500000000002,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 16.5045,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   }
+  }
+ },
+ "026-8-67": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "8",
+  "pair": 67,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_8637895cca045d9c90cc9228e58078f7_2250.0_2320.0-sortformer-2.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1248,
+  "class": "fric>glide",
+  "gold": 18.845,
+  "live": 18.844900000000003,
+  "cand": 18.8149,
+  "options": {
+   "A": {
+    "t": 18.8149,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 18.844900000000003,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   }
+  }
+ },
+ "026-9-14": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "9",
+  "pair": 14,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_863aeaa3833956358847e3be43a887c6_3020.0_3320.0-sortformer-27.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1248,
+  "class": "fric>h",
+  "gold": 3.06,
+  "live": 3.0602,
+  "cand": 3.0442,
+  "options": {
+   "A": {
+    "t": 3.06,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   },
+   "B": {
+    "t": 3.0442,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-9-20": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "9",
+  "pair": 20,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_863aeaa3833956358847e3be43a887c6_3020.0_3320.0-sortformer-27.wav",
+  "rule": "ranker",
+  "branch": "case1",
+  "leaf_line": 1112,
+  "class": "fric>fric",
+  "gold": 4.765000000000001,
+  "live": 4.7646,
+  "cand": 4.7185999999999995,
+  "options": {
+   "A": {
+    "t": 4.7185999999999995,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 4.7646,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   }
+  }
+ },
+ "026-9-22": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "9",
+  "pair": 22,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_863aeaa3833956358847e3be43a887c6_3020.0_3320.0-sortformer-27.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "nasal>stop",
+  "gold": 5.1795,
+  "live": 5.1795,
+  "cand": 5.1635,
+  "options": {
+   "A": {
+    "t": 5.1795,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 5.1635,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-9-33": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "9",
+  "pair": 33,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_863aeaa3833956358847e3be43a887c6_3020.0_3320.0-sortformer-27.wav",
+  "rule": "ranker",
+  "branch": "case9",
+  "leaf_line": 1389,
+  "class": "vowel>liquid",
+  "gold": 9.362,
+  "live": 9.361699999999999,
+  "cand": 9.345699999999999,
+  "options": {
+   "A": {
+    "t": 9.345699999999999,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 9.361699999999999,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   }
+  }
+ },
+ "026-10-0": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "10",
+  "pair": 0,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_86f4c7a7102c51c5bd2f5f3b66920bd8_300.0_600.0-sortformer-14.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "liquid>dh/th",
+  "gold": 0.3495,
+  "live": 0.3495,
+  "cand": 0.3235,
+  "options": {
+   "A": {
+    "t": 0.3495,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 0.3235,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-10-11": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "10",
+  "pair": 11,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_86f4c7a7102c51c5bd2f5f3b66920bd8_300.0_600.0-sortformer-14.wav",
+  "rule": "ranker",
+  "branch": "case13",
+  "leaf_line": 1628,
+  "class": "nasal>dh/th",
+  "gold": 3.903,
+  "live": 3.9028,
+  "cand": 3.8808000000000002,
+  "options": {
+   "A": {
+    "t": 3.9028,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 3.8808000000000002,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-10-19": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "10",
+  "pair": 19,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_86f4c7a7102c51c5bd2f5f3b66920bd8_300.0_600.0-sortformer-14.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1199,
+  "class": "fric>liquid",
+  "gold": 5.93,
+  "live": 5.9299,
+  "cand": 5.9179,
+  "options": {
+   "A": {
+    "t": 5.9179,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 5.9299,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   }
+  }
+ },
+ "026-10-31": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "10",
+  "pair": 31,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_86f4c7a7102c51c5bd2f5f3b66920bd8_300.0_600.0-sortformer-14.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "vowel>fric",
+  "gold": 9.869,
+  "live": 9.8692,
+  "cand": 9.847199999999999,
+  "options": {
+   "A": {
+    "t": 9.847199999999999,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 9.869,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   }
+  }
+ },
+ "026-10-95": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "10",
+  "pair": 95,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_86f4c7a7102c51c5bd2f5f3b66920bd8_300.0_600.0-sortformer-14.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "stop>glide",
+  "gold": 27.606,
+  "live": 27.6062,
+  "cand": 27.622200000000003,
+  "options": {
+   "A": {
+    "t": 27.622200000000003,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 27.606,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   }
+  }
+ },
+ "026-10-96": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "10",
+  "pair": 96,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_86f4c7a7102c51c5bd2f5f3b66920bd8_300.0_600.0-sortformer-14.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1248,
+  "class": "fric>dh/th",
+  "gold": 27.799999999999997,
+  "live": 27.799599999999998,
+  "cand": 27.7796,
+  "options": {
+   "A": {
+    "t": 27.7796,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 27.799599999999998,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   }
+  }
+ },
+ "026-11-19": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "11",
+  "pair": 19,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_8718c6fa16375bce8bd1c65d79e36440_40.0_340.0-sortformer-12.wav",
+  "rule": "ranker",
+  "branch": "case10",
+  "leaf_line": 1446,
+  "class": "nasal>vowel",
+  "gold": 5.166,
+  "live": 5.166,
+  "cand": 5.182,
+  "options": {
+   "A": {
+    "t": 5.182,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 5.166,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   }
+  }
+ },
+ "026-11-28": {
+  "set": "026",
+  "kind": "judged",
+  "clip": "11",
+  "pair": 28,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_8718c6fa16375bce8bd1c65d79e36440_40.0_340.0-sortformer-12.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1238,
+  "class": "fric>vowel",
+  "gold": 7.9585,
+  "live": 8.008600000000001,
+  "cand": 7.964600000000002,
+  "options": {
+   "A": {
+    "t": 7.964600000000002,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 8.008600000000001,
+    "cues": [
+     "live"
+    ]
+   },
+   "C": {
+    "t": 7.9585,
+    "cues": [
+     "yours"
+    ]
+   }
+  }
+ },
+ "026-11-38": {
+  "set": "026",
+  "kind": "judged",
+  "clip": "11",
+  "pair": 38,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_8718c6fa16375bce8bd1c65d79e36440_40.0_340.0-sortformer-12.wav",
+  "rule": "ranker",
+  "branch": "case1",
+  "leaf_line": 1125,
+  "class": "vowel>fric",
+  "gold": 10.622,
+  "live": 10.6223,
+  "cand": 10.6283,
+  "options": {
+   "A": {
+    "t": 10.622,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   },
+   "B": {
+    "t": 10.6283,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "026-11-69": {
+  "set": "026",
+  "kind": "verified/verified",
+  "clip": "11",
+  "pair": 69,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026\\audio\\syndigate_podcasts_8718c6fa16375bce8bd1c65d79e36440_40.0_340.0-sortformer-12.wav",
+  "rule": "ranker",
+  "branch": "case13",
+  "leaf_line": 1628,
+  "class": "nasal>dh/th",
+  "gold": 17.52,
+  "live": 17.512,
+  "cand": 17.492,
+  "options": {
+   "A": {
+    "t": 17.512,
+    "cues": [
+     "live"
+    ]
+   },
+   "B": {
+    "t": 17.492,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "C": {
+    "t": 17.52,
+    "cues": [
+     "yours"
+    ]
+   }
+  }
+ },
+ "049-0-41": {
+  "set": "049",
+  "kind": "untouched/untouched",
+  "clip": "0",
+  "pair": 41,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_f656b2823256589f9ce90f687859b141_1820.0_2120.0-sortformer-20.wav",
+  "rule": "ranker",
+  "branch": "case@1188",
+  "leaf_line": 1189,
+  "class": "stop>glide",
+  "gold": 13.393,
+  "live": 13.392900000000001,
+  "cand": 13.350900000000001,
+  "options": {
+   "A": {
+    "t": 13.350900000000001,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 13.392900000000001,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   }
+  }
+ },
+ "049-0-51": {
+  "set": "049",
+  "kind": "untouched/untouched",
+  "clip": "0",
+  "pair": 51,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_f656b2823256589f9ce90f687859b141_1820.0_2120.0-sortformer-20.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "vowel>fric",
+  "gold": 17.552999999999997,
+  "live": 17.5351,
+  "cand": 17.5191,
+  "options": {
+   "A": {
+    "t": 17.552999999999997,
+    "cues": [
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 17.5191,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "C": {
+    "t": 17.5351,
+    "cues": [
+     "live"
+    ]
+   }
+  }
+ },
+ "049-3-30": {
+  "set": "049",
+  "kind": "untouched/untouched",
+  "clip": "3",
+  "pair": 30,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_f77228af80395de3a5b569486bf50f2c_360.0_660.0-sortformer-32.wav",
+  "rule": "ranker",
+  "branch": "case1",
+  "leaf_line": 1112,
+  "class": "fric>fric",
+  "gold": 8.396,
+  "live": 8.3962,
+  "cand": 8.3922,
+  "options": {
+   "A": {
+    "t": 8.3922,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 8.396,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   }
+  }
+ },
+ "049-3-39": {
+  "set": "049",
+  "kind": "untouched/untouched",
+  "clip": "3",
+  "pair": 39,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_f77228af80395de3a5b569486bf50f2c_360.0_660.0-sortformer-32.wav",
+  "rule": "ranker",
+  "branch": "case10",
+  "leaf_line": 1457,
+  "class": "stop>vowel",
+  "gold": 11.193000000000001,
+  "live": 11.1929,
+  "cand": 11.1889,
+  "options": {
+   "A": {
+    "t": 11.1889,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 11.1929,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   }
+  }
+ },
+ "049-3-59": {
+  "set": "049",
+  "kind": "untouched/untouched",
+  "clip": "3",
+  "pair": 59,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_f77228af80395de3a5b569486bf50f2c_360.0_660.0-sortformer-32.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "nasal>fric",
+  "gold": 16.758000000000003,
+  "live": 16.7252,
+  "cand": 16.6932,
+  "options": {
+   "A": {
+    "t": 16.758000000000003,
+    "cues": [
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 16.7252,
+    "cues": [
+     "live"
+    ]
+   },
+   "C": {
+    "t": 16.6932,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "049-3-79": {
+  "set": "049",
+  "kind": "untouched/untouched",
+  "clip": "3",
+  "pair": 79,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_f77228af80395de3a5b569486bf50f2c_360.0_660.0-sortformer-32.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "nasal>fric",
+  "gold": 21.711,
+  "live": 21.6937,
+  "cand": 21.6757,
+  "options": {
+   "A": {
+    "t": 21.6937,
+    "cues": [
+     "live"
+    ]
+   },
+   "B": {
+    "t": 21.6757,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "C": {
+    "t": 21.711,
+    "cues": [
+     "yours"
+    ]
+   }
+  }
+ },
+ "049-5-16": {
+  "set": "049",
+  "kind": "untouched/untouched",
+  "clip": "5",
+  "pair": 16,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_f81e71c59850566b95141e52c65c208c_610.0_910.0-sortformer-9.wav",
+  "rule": "ranker",
+  "branch": "case3",
+  "leaf_line": 1184,
+  "class": "vowel>glide",
+  "gold": 6.465,
+  "live": 6.4649,
+  "cand": 6.4249,
+  "options": {
+   "A": {
+    "t": 6.4649,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 6.4249,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "049-5-72": {
+  "set": "049",
+  "kind": "untouched/untouched",
+  "clip": "5",
+  "pair": 72,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_f81e71c59850566b95141e52c65c208c_610.0_910.0-sortformer-9.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1238,
+  "class": "fric>vowel",
+  "gold": 25.347,
+  "live": 25.347299999999997,
+  "cand": 25.3253,
+  "options": {
+   "A": {
+    "t": 25.3253,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 25.347,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   }
+  }
+ },
+ "049-6-1": {
+  "set": "049",
+  "kind": "untouched/untouched",
+  "clip": "6",
+  "pair": 1,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_f850878ca0f25094b1d0aa4b246afb19_3080.0_3360.0-sortformer-31.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1238,
+  "class": "fric>vowel",
+  "gold": 0.592,
+  "live": 0.5924,
+  "cand": 0.5844000000000001,
+  "options": {
+   "A": {
+    "t": 0.592,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   },
+   "B": {
+    "t": 0.5844000000000001,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "049-6-19": {
+  "set": "049",
+  "kind": "untouched/untouched",
+  "clip": "6",
+  "pair": 19,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_f850878ca0f25094b1d0aa4b246afb19_3080.0_3360.0-sortformer-31.wav",
+  "rule": "ranker",
+  "branch": "case9",
+  "leaf_line": 1393,
+  "class": "liquid>liquid",
+  "gold": 4.763999999999999,
+  "live": 4.7636,
+  "cand": 4.7236,
+  "options": {
+   "A": {
+    "t": 4.7636,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 4.7236,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "049-6-25": {
+  "set": "049",
+  "kind": "untouched/untouched",
+  "clip": "6",
+  "pair": 25,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_f850878ca0f25094b1d0aa4b246afb19_3080.0_3360.0-sortformer-31.wav",
+  "rule": "ranker",
+  "branch": "case9",
+  "leaf_line": 1393,
+  "class": "vowel>liquid",
+  "gold": 6.585,
+  "live": 6.585,
+  "cand": 6.521,
+  "options": {
+   "A": {
+    "t": 6.521,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 6.585,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   }
+  }
+ },
+ "049-6-31": {
+  "set": "049",
+  "kind": "untouched/untouched",
+  "clip": "6",
+  "pair": 31,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_f850878ca0f25094b1d0aa4b246afb19_3080.0_3360.0-sortformer-31.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1248,
+  "class": "fric>glide",
+  "gold": 8.263,
+  "live": 8.262699999999999,
+  "cand": 8.244699999999998,
+  "options": {
+   "A": {
+    "t": 8.244699999999998,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 8.262699999999999,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   }
+  }
+ },
+ "049-7-1": {
+  "set": "049",
+  "kind": "human/human",
+  "clip": "7",
+  "pair": 1,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_f86683b91527598da4d1ad52aa94fbce_2510.0_2700.0-sortformer-0.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1238,
+  "class": "fric>vowel",
+  "gold": 0.6393,
+  "live": 0.6399,
+  "cand": 0.6219000000000001,
+  "options": {
+   "A": {
+    "t": 0.6219000000000001,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 0.6393,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   }
+  }
+ },
+ "049-7-11": {
+  "set": "049",
+  "kind": "untouched/untouched",
+  "clip": "7",
+  "pair": 11,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_f86683b91527598da4d1ad52aa94fbce_2510.0_2700.0-sortformer-0.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1238,
+  "class": "fric>vowel",
+  "gold": 3.753,
+  "live": 3.753,
+  "cand": 3.741,
+  "options": {
+   "A": {
+    "t": 3.753,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 3.741,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "049-8-36": {
+  "set": "049",
+  "kind": "untouched/untouched",
+  "clip": "8",
+  "pair": 36,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_f8c8e77a069c5faba3e235e99cf93874_360.0_660.0-sortformer-10.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "stop>glide",
+  "gold": 12.147,
+  "live": 12.1284,
+  "cand": 12.1124,
+  "options": {
+   "A": {
+    "t": 12.147,
+    "cues": [
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 12.1284,
+    "cues": [
+     "live"
+    ]
+   },
+   "C": {
+    "t": 12.1124,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "049-9-0": {
+  "set": "049",
+  "kind": "untouched/untouched",
+  "clip": "9",
+  "pair": 0,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_f8e17213c56855e1983a3b626d74abc8_4000.0_4300.0-sortformer-8.wav",
+  "rule": "ranker",
+  "branch": "case12",
+  "leaf_line": 1601,
+  "class": "vowel>vowel",
+  "gold": 0.13,
+  "live": 0.1296,
+  "cand": 0.13560000000000005,
+  "options": {
+   "A": {
+    "t": 0.13560000000000005,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 0.1296,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   }
+  }
+ },
+ "049-9-22": {
+  "set": "049",
+  "kind": "untouched/untouched",
+  "clip": "9",
+  "pair": 22,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_f8e17213c56855e1983a3b626d74abc8_4000.0_4300.0-sortformer-8.wav",
+  "rule": "ranker",
+  "branch": "case@1188",
+  "leaf_line": 1189,
+  "class": "vowel>glide",
+  "gold": 7.226,
+  "live": 7.2256,
+  "cand": 7.1856,
+  "options": {
+   "A": {
+    "t": 7.2256,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 7.1856,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "049-10-37": {
+  "set": "049",
+  "kind": "human/human",
+  "clip": "10",
+  "pair": 37,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_f8e31611f2a651869d0895ddad0521ce_2120.0_2420.0-sortformer-27.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1238,
+  "class": "fric>vowel",
+  "gold": 12.930499999999999,
+  "live": 12.9311,
+  "cand": 12.9251,
+  "options": {
+   "A": {
+    "t": 12.930499999999999,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   },
+   "B": {
+    "t": 12.9251,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "049-10-55": {
+  "set": "049",
+  "kind": "untouched/untouched",
+  "clip": "10",
+  "pair": 55,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_f8e31611f2a651869d0895ddad0521ce_2120.0_2420.0-sortformer-27.wav",
+  "rule": "ranker",
+  "branch": "case1",
+  "leaf_line": 1112,
+  "class": "fric>fric",
+  "gold": 17.936,
+  "live": 17.9361,
+  "cand": 17.9181,
+  "options": {
+   "A": {
+    "t": 17.936,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   },
+   "B": {
+    "t": 17.9181,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "049-10-58": {
+  "set": "049",
+  "kind": "untouched/untouched",
+  "clip": "10",
+  "pair": 58,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_f8e31611f2a651869d0895ddad0521ce_2120.0_2420.0-sortformer-27.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1203,
+  "class": "fric>liquid",
+  "gold": 18.837,
+  "live": 18.8369,
+  "cand": 18.8189,
+  "options": {
+   "A": {
+    "t": 18.8369,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 18.8189,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "049-11-0": {
+  "set": "049",
+  "kind": "untouched/untouched",
+  "clip": "11",
+  "pair": 0,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_fa07d94b1ffe5b68b89a70b142be688c_940.0_1240.0-sortformer-17.wav",
+  "rule": "ranker",
+  "branch": "case@1188",
+  "leaf_line": 1189,
+  "class": "stop>glide",
+  "gold": 0.58,
+  "live": 0.5804,
+  "cand": 0.5384000000000001,
+  "options": {
+   "A": {
+    "t": 0.5384000000000001,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 0.58,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   }
+  }
+ },
+ "049-11-9": {
+  "set": "049",
+  "kind": "untouched/untouched",
+  "clip": "11",
+  "pair": 9,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_fa07d94b1ffe5b68b89a70b142be688c_940.0_1240.0-sortformer-17.wav",
+  "rule": "ranker",
+  "branch": "case1",
+  "leaf_line": 1116,
+  "class": "stop>fric",
+  "gold": 2.322,
+  "live": 2.3216,
+  "cand": 2.2476000000000003,
+  "options": {
+   "A": {
+    "t": 2.3216,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 2.2476000000000003,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "049-11-17": {
+  "set": "049",
+  "kind": "untouched/human",
+  "clip": "11",
+  "pair": 17,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto\\bench\\gold_sets\\20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049\\audio\\syndigate_podcasts_fa07d94b1ffe5b68b89a70b142be688c_940.0_1240.0-sortformer-17.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1238,
+  "class": "fric>vowel",
+  "gold": 4.795999999999999,
+  "live": 4.7959,
+  "cand": 4.7839,
+  "options": {
+   "A": {
+    "t": 4.7839,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 4.7959,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   }
+  }
+ },
+ "old14-0-13": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "0",
+  "pair": 13,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_603c4aa5c3e46e0013dcece4-00005_68.wav",
+  "rule": "ranker",
+  "branch": "case8",
+  "leaf_line": 1373,
+  "class": "vowel>dh/th",
+  "gold": 6.769,
+  "live": 6.7819,
+  "cand": 6.7439,
+  "options": {
+   "A": {
+    "t": 6.7819,
+    "cues": [
+     "live"
+    ]
+   },
+   "B": {
+    "t": 6.7439,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "C": {
+    "t": 6.769,
+    "cues": [
+     "yours"
+    ]
+   }
+  }
+ },
+ "old14-0-28": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "0",
+  "pair": 28,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_603c4aa5c3e46e0013dcece4-00005_68.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1203,
+  "class": "fric>liquid",
+  "gold": 15.139,
+  "live": 15.1643,
+  "cand": 15.1423,
+  "options": {
+   "A": {
+    "t": 15.1423,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 15.1643,
+    "cues": [
+     "live"
+    ]
+   },
+   "C": {
+    "t": 15.139,
+    "cues": [
+     "yours"
+    ]
+   }
+  }
+ },
+ "old14-0-37": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "0",
+  "pair": 37,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_603c4aa5c3e46e0013dcece4-00005_68.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1238,
+  "class": "fric>vowel",
+  "gold": 18.223,
+  "live": 18.2205,
+  "cand": 18.212500000000002,
+  "options": {
+   "A": {
+    "t": 18.212500000000002,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 18.2205,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   }
+  }
+ },
+ "old14-0-51": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "0",
+  "pair": 51,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_603c4aa5c3e46e0013dcece4-00005_68.wav",
+  "rule": "ranker",
+  "branch": "case10",
+  "leaf_line": 1401,
+  "class": "stop>vowel",
+  "gold": 21.805999999999997,
+  "live": 21.8062,
+  "cand": 21.784200000000002,
+  "options": {
+   "A": {
+    "t": 21.805999999999997,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   },
+   "B": {
+    "t": 21.784200000000002,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "old14-0-57": {
+  "set": "old14",
+  "kind": "dragged/dragged",
+  "clip": "0",
+  "pair": 57,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_603c4aa5c3e46e0013dcece4-00005_68.wav",
+  "rule": "ranker",
+  "branch": "case8",
+  "leaf_line": 1373,
+  "class": "vowel>dh/th",
+  "gold": 23.9264,
+  "live": 23.9268,
+  "cand": 23.9088,
+  "options": {
+   "A": {
+    "t": 23.9264,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   },
+   "B": {
+    "t": 23.9088,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "old14-1-9": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "1",
+  "pair": 9,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_6044eb9db82b030014de5da5-00004_16.wav",
+  "rule": "ranker",
+  "branch": "case8",
+  "leaf_line": 1373,
+  "class": "vowel>dh/th",
+  "gold": 2.096,
+  "live": 2.1209,
+  "cand": 2.0789,
+  "options": {
+   "A": {
+    "t": 2.096,
+    "cues": [
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 2.1209,
+    "cues": [
+     "live"
+    ]
+   },
+   "C": {
+    "t": 2.0789,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "old14-1-76": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "1",
+  "pair": 76,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_6044eb9db82b030014de5da5-00004_16.wav",
+  "rule": "ranker",
+  "branch": "case9",
+  "leaf_line": 1393,
+  "class": "liquid>liquid",
+  "gold": 24.189999999999998,
+  "live": 24.1707,
+  "cand": 24.1127,
+  "options": {
+   "A": {
+    "t": 24.1707,
+    "cues": [
+     "live"
+    ]
+   },
+   "B": {
+    "t": 24.189999999999998,
+    "cues": [
+     "yours"
+    ]
+   },
+   "C": {
+    "t": 24.1127,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "old14-2-7": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "2",
+  "pair": 7,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_6044eb9db82b030014de5da5-00004_35.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1203,
+  "class": "fric>liquid",
+  "gold": 2.911,
+  "live": 2.9108,
+  "cand": 2.9008000000000003,
+  "options": {
+   "A": {
+    "t": 2.9108,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 2.9008000000000003,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "old14-2-33": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "2",
+  "pair": 33,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_6044eb9db82b030014de5da5-00004_35.wav",
+  "rule": "ranker",
+  "branch": "case@1188",
+  "leaf_line": 1189,
+  "class": "vowel>glide",
+  "gold": 9.2255,
+  "live": 9.2026,
+  "cand": 9.162600000000001,
+  "options": {
+   "A": {
+    "t": 9.2255,
+    "cues": [
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 9.2026,
+    "cues": [
+     "live"
+    ]
+   },
+   "C": {
+    "t": 9.162600000000001,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "old14-2-39": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "2",
+  "pair": 39,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_6044eb9db82b030014de5da5-00004_35.wav",
+  "rule": "ranker",
+  "branch": "case12",
+  "leaf_line": 1601,
+  "class": "vowel>vowel",
+  "gold": 11.68,
+  "live": 11.6404,
+  "cand": 11.6204,
+  "options": {
+   "A": {
+    "t": 11.6204,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 11.6404,
+    "cues": [
+     "live"
+    ]
+   },
+   "C": {
+    "t": 11.68,
+    "cues": [
+     "yours"
+    ]
+   }
+  }
+ },
+ "old14-3-3": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "3",
+  "pair": 3,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_6044eb9db82b030014de5da5-00004_71.wav",
+  "rule": "ranker",
+  "branch": "pause",
+  "leaf_line": null,
+  "class": "?>glide",
+  "gold": 1.295,
+  "live": 1.3031000000000001,
+  "cand": 1.2831000000000001,
+  "options": {
+   "A": {
+    "t": 1.2831000000000001,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 1.3031000000000001,
+    "cues": [
+     "live"
+    ]
+   },
+   "C": {
+    "t": 1.295,
+    "cues": [
+     "yours"
+    ]
+   }
+  }
+ },
+ "old14-3-26": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "3",
+  "pair": 26,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_6044eb9db82b030014de5da5-00004_71.wav",
+  "rule": "ranker",
+  "branch": "case9",
+  "leaf_line": 1389,
+  "class": "vowel>liquid",
+  "gold": 6.507,
+  "live": 6.499499999999999,
+  "cand": 6.4895,
+  "options": {
+   "A": {
+    "t": 6.499499999999999,
+    "cues": [
+     "live"
+    ]
+   },
+   "B": {
+    "t": 6.4895,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "C": {
+    "t": 6.507,
+    "cues": [
+     "yours"
+    ]
+   }
+  }
+ },
+ "old14-3-29": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "3",
+  "pair": 29,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_6044eb9db82b030014de5da5-00004_71.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "liquid>vowel",
+  "gold": 7.106999999999999,
+  "live": 7.0869,
+  "cand": 7.0689,
+  "options": {
+   "A": {
+    "t": 7.0689,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 7.106999999999999,
+    "cues": [
+     "yours"
+    ]
+   },
+   "C": {
+    "t": 7.0869,
+    "cues": [
+     "live"
+    ]
+   }
+  }
+ },
+ "old14-3-30": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "3",
+  "pair": 30,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_6044eb9db82b030014de5da5-00004_71.wav",
+  "rule": "ranker",
+  "branch": "case1",
+  "leaf_line": 1112,
+  "class": "fric>fric",
+  "gold": 7.661,
+  "live": 7.6479,
+  "cand": 7.6259,
+  "options": {
+   "A": {
+    "t": 7.6259,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 7.661,
+    "cues": [
+     "yours"
+    ]
+   },
+   "C": {
+    "t": 7.6479,
+    "cues": [
+     "live"
+    ]
+   }
+  }
+ },
+ "old14-3-33": {
+  "set": "old14",
+  "kind": "dragged/dragged",
+  "clip": "3",
+  "pair": 33,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_6044eb9db82b030014de5da5-00004_71.wav",
+  "rule": "ranker",
+  "branch": "pause",
+  "leaf_line": null,
+  "class": "liquid>glide",
+  "gold": 8.8982,
+  "live": 8.8979,
+  "cand": 8.8479,
+  "options": {
+   "A": {
+    "t": 8.8479,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 8.8979,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   }
+  }
+ },
+ "old14-3-57": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "3",
+  "pair": 57,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_6044eb9db82b030014de5da5-00004_71.wav",
+  "rule": "ranker",
+  "branch": "case12",
+  "leaf_line": 1601,
+  "class": "liquid>vowel",
+  "gold": 14.125,
+  "live": 14.137699999999999,
+  "cand": 14.115699999999999,
+  "options": {
+   "A": {
+    "t": 14.137699999999999,
+    "cues": [
+     "live"
+    ]
+   },
+   "B": {
+    "t": 14.115699999999999,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "C": {
+    "t": 14.125,
+    "cues": [
+     "yours"
+    ]
+   }
+  }
+ },
+ "old14-3-72": {
+  "set": "old14",
+  "kind": "judged",
+  "clip": "3",
+  "pair": 72,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_6044eb9db82b030014de5da5-00004_71.wav",
+  "rule": "ranker",
+  "branch": "case14",
+  "leaf_line": 1666,
+  "class": "liquid>fric",
+  "gold": 17.915300000000002,
+  "live": 17.948700000000002,
+  "cand": 17.922700000000003,
+  "options": {
+   "A": {
+    "t": 17.948700000000002,
+    "cues": [
+     "live"
+    ]
+   },
+   "B": {
+    "t": 17.922700000000003,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "C": {
+    "t": 17.915300000000002,
+    "cues": [
+     "yours"
+    ]
+   }
+  }
+ },
+ "old14-7-25": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "7",
+  "pair": 25,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_6049f1bff79637001585bcfa-00000_29.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1248,
+  "class": "fric>fric",
+  "gold": 10.768,
+  "live": 10.7752,
+  "cand": 10.7092,
+  "options": {
+   "A": {
+    "t": 10.768,
+    "cues": [
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 10.7752,
+    "cues": [
+     "live"
+    ]
+   },
+   "C": {
+    "t": 10.7092,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "old14-7-35": {
+  "set": "old14",
+  "kind": "judged",
+  "clip": "7",
+  "pair": 35,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_6049f1bff79637001585bcfa-00000_29.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "vowel>fric",
+  "gold": 13.0897,
+  "live": 13.149999999999999,
+  "cand": 13.097999999999999,
+  "options": {
+   "A": {
+    "t": 13.097999999999999,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 13.149999999999999,
+    "cues": [
+     "live"
+    ]
+   },
+   "C": {
+    "t": 13.0897,
+    "cues": [
+     "yours"
+    ]
+   }
+  }
+ },
+ "old14-8-2": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "8",
+  "pair": 2,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_6049f1bff79637001585bcfa-00000_32.wav",
+  "rule": "ranker",
+  "branch": "case12",
+  "leaf_line": 1601,
+  "class": "liquid>vowel",
+  "gold": 1.6804999999999999,
+  "live": 1.6784,
+  "cand": 1.6623999999999999,
+  "options": {
+   "A": {
+    "t": 1.6784,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 1.6623999999999999,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "old14-8-20": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "8",
+  "pair": 20,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_6049f1bff79637001585bcfa-00000_32.wav",
+  "rule": "ranker",
+  "branch": "case3",
+  "leaf_line": 1184,
+  "class": "vowel>glide",
+  "gold": 10.513,
+  "live": 10.543299999999999,
+  "cand": 10.5033,
+  "options": {
+   "A": {
+    "t": 10.513,
+    "cues": [
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 10.543299999999999,
+    "cues": [
+     "live"
+    ]
+   },
+   "C": {
+    "t": 10.5033,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "old14-8-43": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "8",
+  "pair": 43,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_6049f1bff79637001585bcfa-00000_32.wav",
+  "rule": "ranker",
+  "branch": "case3",
+  "leaf_line": 1184,
+  "class": "vowel>glide",
+  "gold": 16.455,
+  "live": 16.4852,
+  "cand": 16.443199999999997,
+  "options": {
+   "A": {
+    "t": 16.455,
+    "cues": [
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 16.443199999999997,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "C": {
+    "t": 16.4852,
+    "cues": [
+     "live"
+    ]
+   }
+  }
+ },
+ "old14-8-57": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "8",
+  "pair": 57,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_6049f1bff79637001585bcfa-00000_32.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1248,
+  "class": "fric>glide",
+  "gold": 20.779,
+  "live": 20.778599999999997,
+  "cand": 20.7446,
+  "options": {
+   "A": {
+    "t": 20.778599999999997,
+    "cues": [
+     "live",
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 20.7446,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "old14-10-13": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "10",
+  "pair": 13,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_6062e18ef796370015878d9f-00001_33.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1248,
+  "class": "fric>dh/th",
+  "gold": 5.788,
+  "live": 5.7978000000000005,
+  "cand": 5.7658000000000005,
+  "options": {
+   "A": {
+    "t": 5.7978000000000005,
+    "cues": [
+     "live"
+    ]
+   },
+   "B": {
+    "t": 5.7658000000000005,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "C": {
+    "t": 5.788,
+    "cues": [
+     "yours"
+    ]
+   }
+  }
+ },
+ "old14-10-26": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "10",
+  "pair": 26,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_6062e18ef796370015878d9f-00001_33.wav",
+  "rule": "ranker",
+  "branch": "case11",
+  "leaf_line": 1580,
+  "class": "vowel>liquid",
+  "gold": 8.440999999999999,
+  "live": 8.436,
+  "cand": 8.43,
+  "options": {
+   "A": {
+    "t": 8.440999999999999,
+    "cues": [
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 8.436,
+    "cues": [
+     "live"
+    ]
+   },
+   "C": {
+    "t": 8.43,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "old14-11-6": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "11",
+  "pair": 6,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_606b213bf79637001587fcad-00002_42.wav",
+  "rule": "ranker",
+  "branch": "case4",
+  "leaf_line": 1248,
+  "class": "fric>fric",
+  "gold": 3.6630000000000003,
+  "live": 3.6645000000000003,
+  "cand": 3.6445000000000003,
+  "options": {
+   "A": {
+    "t": 3.6445000000000003,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 3.6630000000000003,
+    "cues": [
+     "yours",
+     "live"
+    ]
+   }
+  }
+ },
+ "old14-11-44": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "11",
+  "pair": 44,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_606b213bf79637001587fcad-00002_42.wav",
+  "rule": "ranker",
+  "branch": "case10",
+  "leaf_line": 1429,
+  "class": "vowel>vowel",
+  "gold": 16.0995,
+  "live": 16.121699999999997,
+  "cand": 16.095699999999997,
+  "options": {
+   "A": {
+    "t": 16.095699999999997,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 16.121699999999997,
+    "cues": [
+     "live"
+    ]
+   },
+   "C": {
+    "t": 16.0995,
+    "cues": [
+     "yours"
+    ]
+   }
+  }
+ },
+ "old14-11-46": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "11",
+  "pair": 46,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_606b213bf79637001587fcad-00002_42.wav",
+  "rule": "ranker",
+  "branch": "case1",
+  "leaf_line": 1112,
+  "class": "fric>fric",
+  "gold": 16.664,
+  "live": 16.712899999999998,
+  "cand": 16.656899999999997,
+  "options": {
+   "A": {
+    "t": 16.656899999999997,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 16.664,
+    "cues": [
+     "yours"
+    ]
+   },
+   "C": {
+    "t": 16.712899999999998,
+    "cues": [
+     "live"
+    ]
+   }
+  }
+ },
+ "old14-13-18": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "13",
+  "pair": 18,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_606b213bf79637001587fcad-00003_50.wav",
+  "rule": "ranker",
+  "branch": "case1",
+  "leaf_line": 1112,
+  "class": "fric>fric",
+  "gold": 5.840999999999999,
+  "live": 5.758100000000001,
+  "cand": 5.710100000000001,
+  "options": {
+   "A": {
+    "t": 5.840999999999999,
+    "cues": [
+     "yours"
+    ]
+   },
+   "B": {
+    "t": 5.758100000000001,
+    "cues": [
+     "live"
+    ]
+   },
+   "C": {
+    "t": 5.710100000000001,
+    "cues": [
+     "candidate"
+    ]
+   }
+  }
+ },
+ "old14-13-32": {
+  "set": "old14",
+  "kind": "accepted/accepted",
+  "clip": "13",
+  "pair": 32,
+  "wav": "F:\\BB\\ETN-SC\\pulsar_auto_audio_restore\\zencastr-en_606b213bf79637001587fcad-00003_50.wav",
+  "rule": "ranker",
+  "branch": "case1",
+  "leaf_line": 1112,
+  "class": "fric>fric",
+  "gold": 11.152999999999999,
+  "live": 11.1157,
+  "cand": 11.0957,
+  "options": {
+   "A": {
+    "t": 11.0957,
+    "cues": [
+     "candidate"
+    ]
+   },
+   "B": {
+    "t": 11.152999999999999,
+    "cues": [
+     "yours"
+    ]
+   },
+   "C": {
+    "t": 11.1157,
+    "cues": [
+     "live"
+    ]
+   }
+  }
+ }
+}

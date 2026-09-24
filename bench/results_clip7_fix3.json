@@ -1,0 +1,442 @@
+{
+  "overall": {
+    "n_boundaries": 90,
+    "mae_ms": 17.971,
+    "median_ms": 10.9,
+    "p90_ms": 46.05,
+    "p99_ms": 79.91,
+    "max_ms": 80.8,
+    "mean_signed_bias_ms": 8.393,
+    "pct_within_5ms": 31.11,
+    "pct_within_7ms": 41.11,
+    "pct_within_10ms": 44.44,
+    "pct_within_20ms": 67.78
+  },
+  "per_clip": {
+    "7": {
+      "filename": "zencastr-en_6049f1bff79637001585bcfa-00000_29.wav",
+      "n_tokens": 45,
+      "align_time_sec": 4.38,
+      "summary": {
+        "n_boundaries": 90,
+        "mae_ms": 17.971,
+        "median_ms": 10.9,
+        "p90_ms": 46.05,
+        "p99_ms": 79.91,
+        "max_ms": 80.8,
+        "mean_signed_bias_ms": 8.393,
+        "pct_within_5ms": 31.11,
+        "pct_within_7ms": 41.11,
+        "pct_within_10ms": 44.44,
+        "pct_within_20ms": 67.78
+      },
+      "rows": [
+        {
+          "text": "yes",
+          "gt_start": 0.015,
+          "gt_end": 0.5482,
+          "pred_start": 0.0294,
+          "pred_end": 0.5078,
+          "start_err_ms": 14.4,
+          "end_err_ms": -40.4
+        },
+        {
+          "text": "yeah",
+          "gt_start": 0.704,
+          "gt_end": 1.0441,
+          "pred_start": 0.6925,
+          "pred_end": 1.0178,
+          "start_err_ms": -11.5,
+          "end_err_ms": -26.3
+        },
+        {
+          "text": "indeed",
+          "gt_start": 1.0825,
+          "gt_end": 1.5861,
+          "pred_start": 1.1532,
+          "pred_end": 1.5406,
+          "start_err_ms": 70.7,
+          "end_err_ms": -45.5
+        },
+        {
+          "text": "yeah",
+          "gt_start": 2.065,
+          "gt_end": 2.4359,
+          "pred_start": 2.0709,
+          "pred_end": 2.4509,
+          "start_err_ms": 5.9,
+          "end_err_ms": 15.0
+        },
+        {
+          "text": "y-",
+          "gt_start": 2.4369,
+          "gt_end": 2.6082,
+          "pred_start": 2.4529,
+          "pred_end": 2.5651,
+          "start_err_ms": 16.0,
+          "end_err_ms": -43.1
+        },
+        {
+          "text": "this",
+          "gt_start": 4.8165,
+          "gt_end": 5.0517,
+          "pred_start": 4.8097,
+          "pred_end": 4.9909,
+          "start_err_ms": -6.8,
+          "end_err_ms": -60.8
+        },
+        {
+          "text": "pe-",
+          "gt_start": 5.0527,
+          "gt_end": 5.3201,
+          "pred_start": 5.128,
+          "pred_end": 5.3309,
+          "start_err_ms": 75.3,
+          "end_err_ms": 10.8
+        },
+        {
+          "text": "uh",
+          "gt_start": 5.3211,
+          "gt_end": 5.6346,
+          "pred_start": 5.3329,
+          "pred_end": 5.6316,
+          "start_err_ms": 11.8,
+          "end_err_ms": -3.0
+        },
+        {
+          "text": "pe-",
+          "gt_start": 5.6356,
+          "gt_end": 5.9046,
+          "pred_start": 5.672,
+          "pred_end": 5.9236,
+          "start_err_ms": 36.4,
+          "end_err_ms": 19.0
+        },
+        {
+          "text": "perfect",
+          "gt_start": 5.9056,
+          "gt_end": 6.4484,
+          "pred_start": 5.9256,
+          "pred_end": 6.464,
+          "start_err_ms": 20.0,
+          "end_err_ms": 15.6
+        },
+        {
+          "text": "perfect",
+          "gt_start": 6.475,
+          "gt_end": 7.0858,
+          "pred_start": 6.466,
+          "pred_end": 7.0844,
+          "start_err_ms": -9.0,
+          "end_err_ms": -1.4
+        },
+        {
+          "text": "yeah",
+          "gt_start": 7.0868,
+          "gt_end": 7.344,
+          "pred_start": 7.0864,
+          "pred_end": 7.3547,
+          "start_err_ms": -0.4,
+          "end_err_ms": 10.7
+        },
+        {
+          "text": "uh",
+          "gt_start": 7.346,
+          "gt_end": 7.5469,
+          "pred_start": 7.3567,
+          "pred_end": 7.5367,
+          "start_err_ms": 10.7,
+          "end_err_ms": -10.2
+        },
+        {
+          "text": "i",
+          "gt_start": 7.8025,
+          "gt_end": 7.9943,
+          "pred_start": 7.8135,
+          "pred_end": 8.0252,
+          "start_err_ms": 11.0,
+          "end_err_ms": 30.9
+        },
+        {
+          "text": "read",
+          "gt_start": 7.9953,
+          "gt_end": 8.177,
+          "pred_start": 8.0272,
+          "pred_end": 8.2253,
+          "start_err_ms": 31.9,
+          "end_err_ms": 48.3
+        },
+        {
+          "text": "when",
+          "gt_start": 8.239,
+          "gt_end": 8.406,
+          "pred_start": 8.2273,
+          "pred_end": 8.4055,
+          "start_err_ms": -11.7,
+          "end_err_ms": -0.5
+        },
+        {
+          "text": "when",
+          "gt_start": 8.407,
+          "gt_end": 8.511,
+          "pred_start": 8.4075,
+          "pred_end": 8.5256,
+          "start_err_ms": 0.5,
+          "end_err_ms": 14.6
+        },
+        {
+          "text": "he",
+          "gt_start": 8.512,
+          "gt_end": 8.5646,
+          "pred_start": 8.5276,
+          "pred_end": 8.5583,
+          "start_err_ms": 15.6,
+          "end_err_ms": -6.3
+        },
+        {
+          "text": "signed",
+          "gt_start": 8.5656,
+          "gt_end": 8.841,
+          "pred_start": 8.5603,
+          "pred_end": 8.8858,
+          "start_err_ms": -5.3,
+          "end_err_ms": 44.8
+        },
+        {
+          "text": "for",
+          "gt_start": 8.842,
+          "gt_end": 8.992,
+          "pred_start": 8.8878,
+          "pred_end": 8.9918,
+          "start_err_ms": 45.8,
+          "end_err_ms": -0.2
+        },
+        {
+          "text": "borough",
+          "gt_start": 8.994,
+          "gt_end": 9.286,
+          "pred_start": 8.9938,
+          "pred_end": 9.2861,
+          "start_err_ms": -0.2,
+          "end_err_ms": 0.1
+        },
+        {
+          "text": "the",
+          "gt_start": 9.288,
+          "gt_end": 9.4771,
+          "pred_start": 9.2881,
+          "pred_end": 9.4716,
+          "start_err_ms": 0.1,
+          "end_err_ms": -5.5
+        },
+        {
+          "text": "uh",
+          "gt_start": 9.4781,
+          "gt_end": 9.7736,
+          "pred_start": 9.4801,
+          "pred_end": 9.7634,
+          "start_err_ms": 2.0,
+          "end_err_ms": -10.2
+        },
+        {
+          "text": "coach",
+          "gt_start": 9.907,
+          "gt_end": 10.357,
+          "pred_start": 9.9115,
+          "pred_end": 10.3505,
+          "start_err_ms": 4.5,
+          "end_err_ms": -6.5
+        },
+        {
+          "text": "loads",
+          "gt_start": 10.359,
+          "gt_end": 10.6525,
+          "pred_start": 10.3525,
+          "pred_end": 10.6518,
+          "start_err_ms": -6.5,
+          "end_err_ms": -0.7
+        },
+        {
+          "text": "of",
+          "gt_start": 10.6535,
+          "gt_end": 10.767,
+          "pred_start": 10.6538,
+          "pred_end": 10.7742,
+          "start_err_ms": 0.3,
+          "end_err_ms": 7.2
+        },
+        {
+          "text": "falkirk",
+          "gt_start": 10.769,
+          "gt_end": 11.219,
+          "pred_start": 10.7762,
+          "pred_end": 11.2677,
+          "start_err_ms": 7.2,
+          "end_err_ms": 48.7
+        },
+        {
+          "text": "fans",
+          "gt_start": 11.2301,
+          "gt_end": 11.559,
+          "pred_start": 11.2697,
+          "pred_end": 11.5585,
+          "start_err_ms": 39.6,
+          "end_err_ms": -0.5
+        },
+        {
+          "text": "came",
+          "gt_start": 11.561,
+          "gt_end": 11.773,
+          "pred_start": 11.5605,
+          "pred_end": 11.7727,
+          "start_err_ms": -0.5,
+          "end_err_ms": -0.3
+        },
+        {
+          "text": "to",
+          "gt_start": 11.775,
+          "gt_end": 11.8328,
+          "pred_start": 11.7747,
+          "pred_end": 11.8081,
+          "start_err_ms": -0.3,
+          "end_err_ms": -24.7
+        },
+        {
+          "text": "see",
+          "gt_start": 11.8338,
+          "gt_end": 12.0565,
+          "pred_start": 11.8101,
+          "pred_end": 12.0683,
+          "start_err_ms": -23.7,
+          "end_err_ms": 11.8
+        },
+        {
+          "text": "his",
+          "gt_start": 12.0575,
+          "gt_end": 12.2145,
+          "pred_start": 12.0703,
+          "pred_end": 12.2268,
+          "start_err_ms": 12.8,
+          "end_err_ms": 12.3
+        },
+        {
+          "text": "debut",
+          "gt_start": 12.229,
+          "gt_end": 12.682,
+          "pred_start": 12.2288,
+          "pred_end": 12.7155,
+          "start_err_ms": -0.2,
+          "end_err_ms": 33.5
+        },
+        {
+          "text": "which",
+          "gt_start": 12.753,
+          "gt_end": 12.943,
+          "pred_start": 12.7334,
+          "pred_end": 12.9486,
+          "start_err_ms": -19.6,
+          "end_err_ms": 5.6
+        },
+        {
+          "text": "is",
+          "gt_start": 12.945,
+          "gt_end": 13.0563,
+          "pred_start": 12.9506,
+          "pred_end": 13.1141,
+          "start_err_ms": 5.6,
+          "end_err_ms": 57.8
+        },
+        {
+          "text": "a",
+          "gt_start": 13.0573,
+          "gt_end": 13.0892,
+          "pred_start": 13.1161,
+          "pred_end": 13.169,
+          "start_err_ms": 58.8,
+          "end_err_ms": 79.8
+        },
+        {
+          "text": "fine",
+          "gt_start": 13.0902,
+          "gt_end": 13.427,
+          "pred_start": 13.171,
+          "pred_end": 13.4266,
+          "start_err_ms": 80.8,
+          "end_err_ms": -0.4
+        },
+        {
+          "text": "thing",
+          "gt_start": 13.429,
+          "gt_end": 13.61,
+          "pred_start": 13.4286,
+          "pred_end": 13.6323,
+          "start_err_ms": -0.4,
+          "end_err_ms": 22.3
+        },
+        {
+          "text": "travelling",
+          "gt_start": 13.849,
+          "gt_end": 14.201,
+          "pred_start": 13.8501,
+          "pred_end": 14.2036,
+          "start_err_ms": 1.1,
+          "end_err_ms": 2.6
+        },
+        {
+          "text": "to",
+          "gt_start": 14.206,
+          "gt_end": 14.2579,
+          "pred_start": 14.2056,
+          "pred_end": 14.29,
+          "start_err_ms": -0.4,
+          "end_err_ms": 32.1
+        },
+        {
+          "text": "watch",
+          "gt_start": 14.2589,
+          "gt_end": 14.474,
+          "pred_start": 14.292,
+          "pred_end": 14.4763,
+          "start_err_ms": 33.1,
+          "end_err_ms": 2.3
+        },
+        {
+          "text": "a",
+          "gt_start": 14.476,
+          "gt_end": 14.534,
+          "pred_start": 14.4783,
+          "pred_end": 14.5572,
+          "start_err_ms": 2.3,
+          "end_err_ms": 23.2
+        },
+        {
+          "text": "goalkeeper",
+          "gt_start": 14.536,
+          "gt_end": 15.071,
+          "pred_start": 14.5592,
+          "pred_end": 15.0706,
+          "start_err_ms": 23.2,
+          "end_err_ms": -0.4
+        },
+        {
+          "text": "in",
+          "gt_start": 15.073,
+          "gt_end": 15.114,
+          "pred_start": 15.0726,
+          "pred_end": 15.0899,
+          "start_err_ms": -0.4,
+          "end_err_ms": -24.1
+        },
+        {
+          "text": "action",
+          "gt_start": 15.1147,
+          "gt_end": 15.45,
+          "pred_start": 15.0919,
+          "pred_end": 15.4497,
+          "start_err_ms": -22.8,
+          "end_err_ms": -0.3
+        }
+      ]
+    }
+  }
+}

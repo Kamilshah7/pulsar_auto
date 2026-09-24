@@ -1,0 +1,4565 @@
+[
+  {
+    "clip_index": 0,
+    "clip_id": "clip_0",
+    "filename": "syndigate_podcasts_29567fe75c525ab69423b057a86708a7_930.0_1230.0-sortformer-14.wav",
+    "duration_sec": 27.68,
+    "raw_acoustic_text": "WE DIDN'T SAY IT ON THE POTCAST SO MUCH BUT LATER IN A WEEK A I'VE SAID THIS ON OU KN TALKED ABOUT AN ONSIDE A LITTLE BIT AN AND AND SET IT ELSEWHERELY THOUNHLY CHANCE I THOUGHT BAILER REALLY HAD WAS MAYBE THEY COULD TAKE SOME SHOTS DOWN THE FIELD CAUSE THEY THEY DO TAKE SHOTS THAT'S ONE OF THE THINGS THAT THEY ARE KOND OF A SIGNATURE IN THEIR OFFINCE LIKE THEY WILL THROW THE BALL DEED MORE OFTEN THAN THE KNOT TO THOROWGLY THEY DON'T HAVE MUCH OF AN INTERMEDIATE GAME LIKE THEY ARE USUALY EITHER IT'S UALLY SCRANGE OR THEY'RE TAKIN SOME KIND OF INTERMEDIATE A DEEP SHOT",
+    "acoustic_words": [
+      {
+        "word": "we",
+        "start": 0.24,
+        "end": 0.3
+      },
+      {
+        "word": "didn't",
+        "start": 0.34,
+        "end": 0.52
+      },
+      {
+        "word": "say",
+        "start": 0.56,
+        "end": 0.68
+      },
+      {
+        "word": "it",
+        "start": 0.7,
+        "end": 0.76
+      },
+      {
+        "word": "on",
+        "start": 0.8,
+        "end": 0.84
+      },
+      {
+        "word": "the",
+        "start": 0.86,
+        "end": 0.92
+      },
+      {
+        "word": "potcast",
+        "start": 0.98,
+        "end": 1.5
+      },
+      {
+        "word": "so",
+        "start": 1.54,
+        "end": 1.7
+      },
+      {
+        "word": "much",
+        "start": 1.76,
+        "end": 2.0
+      },
+      {
+        "word": "but",
+        "start": 2.1,
+        "end": 2.26
+      },
+      {
+        "word": "later",
+        "start": 2.36,
+        "end": 2.62
+      },
+      {
+        "word": "in",
+        "start": 2.68,
+        "end": 2.72
+      },
+      {
+        "word": "a",
+        "start": 2.8,
+        "end": 2.82
+      },
+      {
+        "word": "week",
+        "start": 2.94,
+        "end": 3.26
+      },
+      {
+        "word": "a",
+        "start": 4.0,
+        "end": 4.08
+      },
+      {
+        "word": "i've",
+        "start": 4.28,
+        "end": 4.42
+      },
+      {
+        "word": "said",
+        "start": 4.46,
+        "end": 4.62
+      },
+      {
+        "word": "this",
+        "start": 4.66,
+        "end": 4.84
+      },
+      {
+        "word": "on",
+        "start": 5.0,
+        "end": 5.14
+      },
+      {
+        "word": "ou",
+        "start": 5.22,
+        "end": 5.28
+      },
+      {
+        "word": "kn",
+        "start": 5.3,
+        "end": 5.42
+      },
+      {
+        "word": "talked",
+        "start": 5.48,
+        "end": 5.66
+      },
+      {
+        "word": "about",
+        "start": 5.68,
+        "end": 5.82
+      },
+      {
+        "word": "an",
+        "start": 5.84,
+        "end": 5.88
+      },
+      {
+        "word": "onside",
+        "start": 5.94,
+        "end": 6.3
+      },
+      {
+        "word": "a",
+        "start": 6.32,
+        "end": 6.34
+      },
+      {
+        "word": "little",
+        "start": 6.36,
+        "end": 6.52
+      },
+      {
+        "word": "bit",
+        "start": 6.54,
+        "end": 6.7
+      },
+      {
+        "word": "an",
+        "start": 6.76,
+        "end": 6.86
+      },
+      {
+        "word": "and",
+        "start": 6.98,
+        "end": 7.08
+      },
+      {
+        "word": "and",
+        "start": 7.18,
+        "end": 7.28
+      },
+      {
+        "word": "set",
+        "start": 7.32,
+        "end": 7.48
+      },
+      {
+        "word": "it",
+        "start": 7.52,
+        "end": 7.56
+      },
+      {
+        "word": "elsewherely",
+        "start": 7.62,
+        "end": 8.08
+      },
+      {
+        "word": "thounhly",
+        "start": 9.26,
+        "end": 9.48
+      },
+      {
+        "word": "chance",
+        "start": 9.54,
+        "end": 9.74
+      },
+      {
+        "word": "i",
+        "start": 9.92,
+        "end": 10.04
+      },
+      {
+        "word": "thought",
+        "start": 10.06,
+        "end": 10.24
+      },
+      {
+        "word": "bailer",
+        "start": 10.3,
+        "end": 10.6
+      },
+      {
+        "word": "really",
+        "start": 10.64,
+        "end": 10.86
+      },
+      {
+        "word": "had",
+        "start": 10.94,
+        "end": 11.22
+      },
+      {
+        "word": "was",
+        "start": 11.3,
+        "end": 11.58
+      },
+      {
+        "word": "maybe",
+        "start": 12.28,
+        "end": 12.5
+      },
+      {
+        "word": "they",
+        "start": 12.52,
+        "end": 12.62
+      },
+      {
+        "word": "could",
+        "start": 12.66,
+        "end": 12.78
+      },
+      {
+        "word": "take",
+        "start": 12.82,
+        "end": 12.96
+      },
+      {
+        "word": "some",
+        "start": 13.02,
+        "end": 13.14
+      },
+      {
+        "word": "shots",
+        "start": 13.2,
+        "end": 13.48
+      },
+      {
+        "word": "down",
+        "start": 13.52,
+        "end": 13.64
+      },
+      {
+        "word": "the",
+        "start": 13.7,
+        "end": 13.78
+      },
+      {
+        "word": "field",
+        "start": 13.82,
+        "end": 14.02
+      },
+      {
+        "word": "cause",
+        "start": 14.06,
+        "end": 14.18
+      },
+      {
+        "word": "they",
+        "start": 14.2,
+        "end": 14.36
+      },
+      {
+        "word": "they",
+        "start": 14.56,
+        "end": 14.72
+      },
+      {
+        "word": "do",
+        "start": 14.82,
+        "end": 15.0
+      },
+      {
+        "word": "take",
+        "start": 15.06,
+        "end": 15.26
+      },
+      {
+        "word": "shots",
+        "start": 15.36,
+        "end": 15.74
+      },
+      {
+        "word": "that's",
+        "start": 15.8,
+        "end": 15.98
+      },
+      {
+        "word": "one",
+        "start": 16.04,
+        "end": 16.12
+      },
+      {
+        "word": "of",
+        "start": 16.16,
+        "end": 16.2
+      },
+      {
+        "word": "the",
+        "start": 16.22,
+        "end": 16.3
+      },
+      {
+        "word": "things",
+        "start": 16.36,
+        "end": 16.6
+      },
+      {
+        "word": "that",
+        "start": 16.64,
+        "end": 16.76
+      },
+      {
+        "word": "they",
+        "start": 16.82,
+        "end": 17.02
+      },
+      {
+        "word": "are",
+        "start": 17.12,
+        "end": 17.22
+      },
+      {
+        "word": "kond",
+        "start": 17.54,
+        "end": 17.66
+      },
+      {
+        "word": "of",
+        "start": 17.7,
+        "end": 17.74
+      },
+      {
+        "word": "a",
+        "start": 17.8,
+        "end": 17.82
+      },
+      {
+        "word": "signature",
+        "start": 17.88,
+        "end": 18.26
+      },
+      {
+        "word": "in",
+        "start": 18.28,
+        "end": 18.36
+      },
+      {
+        "word": "their",
+        "start": 18.38,
+        "end": 18.52
+      },
+      {
+        "word": "offince",
+        "start": 18.58,
+        "end": 18.82
+      },
+      {
+        "word": "like",
+        "start": 18.84,
+        "end": 18.96
+      },
+      {
+        "word": "they",
+        "start": 18.98,
+        "end": 19.08
+      },
+      {
+        "word": "will",
+        "start": 19.12,
+        "end": 19.28
+      },
+      {
+        "word": "throw",
+        "start": 19.32,
+        "end": 19.46
+      },
+      {
+        "word": "the",
+        "start": 19.5,
+        "end": 19.56
+      },
+      {
+        "word": "ball",
+        "start": 19.6,
+        "end": 19.76
+      },
+      {
+        "word": "deed",
+        "start": 19.8,
+        "end": 20.06
+      },
+      {
+        "word": "more",
+        "start": 20.24,
+        "end": 20.36
+      },
+      {
+        "word": "often",
+        "start": 20.4,
+        "end": 20.56
+      },
+      {
+        "word": "than",
+        "start": 20.58,
+        "end": 20.66
+      },
+      {
+        "word": "the",
+        "start": 20.7,
+        "end": 20.76
+      },
+      {
+        "word": "knot",
+        "start": 20.8,
+        "end": 20.96
+      },
+      {
+        "word": "to",
+        "start": 20.98,
+        "end": 21.06
+      },
+      {
+        "word": "thorowgly",
+        "start": 21.08,
+        "end": 21.34
+      },
+      {
+        "word": "they",
+        "start": 21.64,
+        "end": 21.74
+      },
+      {
+        "word": "don't",
+        "start": 21.76,
+        "end": 21.88
+      },
+      {
+        "word": "have",
+        "start": 21.92,
+        "end": 22.02
+      },
+      {
+        "word": "much",
+        "start": 22.08,
+        "end": 22.22
+      },
+      {
+        "word": "of",
+        "start": 22.28,
+        "end": 22.32
+      },
+      {
+        "word": "an",
+        "start": 22.38,
+        "end": 22.42
+      },
+      {
+        "word": "intermediate",
+        "start": 22.46,
+        "end": 22.94
+      },
+      {
+        "word": "game",
+        "start": 22.96,
+        "end": 23.14
+      },
+      {
+        "word": "like",
+        "start": 23.16,
+        "end": 23.26
+      },
+      {
+        "word": "they",
+        "start": 23.3,
+        "end": 23.38
+      },
+      {
+        "word": "are",
+        "start": 23.4,
+        "end": 23.48
+      },
+      {
+        "word": "usualy",
+        "start": 23.52,
+        "end": 23.74
+      },
+      {
+        "word": "either",
+        "start": 23.76,
+        "end": 23.96
+      },
+      {
+        "word": "it's",
+        "start": 24.36,
+        "end": 24.44
+      },
+      {
+        "word": "ually",
+        "start": 24.48,
+        "end": 24.66
+      },
+      {
+        "word": "scrange",
+        "start": 24.86,
+        "end": 25.24
+      },
+      {
+        "word": "or",
+        "start": 25.28,
+        "end": 25.32
+      },
+      {
+        "word": "they're",
+        "start": 25.36,
+        "end": 25.52
+      },
+      {
+        "word": "takin",
+        "start": 25.54,
+        "end": 25.76
+      },
+      {
+        "word": "some",
+        "start": 25.82,
+        "end": 25.96
+      },
+      {
+        "word": "kind",
+        "start": 26.0,
+        "end": 26.16
+      },
+      {
+        "word": "of",
+        "start": 26.22,
+        "end": 26.26
+      },
+      {
+        "word": "intermediate",
+        "start": 26.4,
+        "end": 26.82
+      },
+      {
+        "word": "a",
+        "start": 26.86,
+        "end": 26.88
+      },
+      {
+        "word": "deep",
+        "start": 26.92,
+        "end": 27.1
+      },
+      {
+        "word": "shot",
+        "start": 27.2,
+        "end": 27.5
+      }
+    ]
+  },
+  {
+    "clip_index": 1,
+    "clip_id": "clip_1",
+    "filename": "syndigate_podcasts_295fa16570105103b5706e4f2195985d_1840.0_2030.0-sortformer-8.wav",
+    "duration_sec": 21.19,
+    "raw_acoustic_text": "A ZO PLEASE TO OUR OBDIENCELY JOIN US A AGAIN ON MONDAY SENIOR A BARONSEER MANAGING EDITOR BOREN RUBLEN AND DEPUTY EDITOR BAN LEVISON WILL TALK WITH THOMAS KENNEDY CHIAP INVESTMENT STRATEGIST OF BOBL WEALTH MANAGEMENT AT J P MORGAN ABOUT THE OUTLOOK FOR THE ECONOMY AND FINANCIAL MARKETS AND INVESTMENT STRATEGIES THANK YOU FOR LISTENING ALL HAVE A GREAT WEEK AN",
+    "acoustic_words": [
+      {
+        "word": "a",
+        "start": 0.3,
+        "end": 0.42
+      },
+      {
+        "word": "zo",
+        "start": 0.48,
+        "end": 0.62
+      },
+      {
+        "word": "please",
+        "start": 0.68,
+        "end": 0.98
+      },
+      {
+        "word": "to",
+        "start": 1.08,
+        "end": 1.18
+      },
+      {
+        "word": "our",
+        "start": 1.26,
+        "end": 1.34
+      },
+      {
+        "word": "obdiencely",
+        "start": 1.4,
+        "end": 1.82
+      },
+      {
+        "word": "join",
+        "start": 1.88,
+        "end": 2.12
+      },
+      {
+        "word": "us",
+        "start": 2.22,
+        "end": 2.34
+      },
+      {
+        "word": "a",
+        "start": 2.64,
+        "end": 2.7
+      },
+      {
+        "word": "again",
+        "start": 2.76,
+        "end": 2.94
+      },
+      {
+        "word": "on",
+        "start": 3.0,
+        "end": 3.04
+      },
+      {
+        "word": "monday",
+        "start": 3.1,
+        "end": 3.48
+      },
+      {
+        "word": "senior",
+        "start": 3.74,
+        "end": 4.16
+      },
+      {
+        "word": "a",
+        "start": 4.32,
+        "end": 4.36
+      },
+      {
+        "word": "baronseer",
+        "start": 4.4,
+        "end": 4.9
+      },
+      {
+        "word": "managing",
+        "start": 4.94,
+        "end": 5.24
+      },
+      {
+        "word": "editor",
+        "start": 5.32,
+        "end": 5.56
+      },
+      {
+        "word": "boren",
+        "start": 5.68,
+        "end": 6.0
+      },
+      {
+        "word": "rublen",
+        "start": 6.06,
+        "end": 6.5
+      },
+      {
+        "word": "and",
+        "start": 6.86,
+        "end": 6.94
+      },
+      {
+        "word": "deputy",
+        "start": 6.98,
+        "end": 7.38
+      },
+      {
+        "word": "editor",
+        "start": 7.5,
+        "end": 7.82
+      },
+      {
+        "word": "ban",
+        "start": 7.94,
+        "end": 8.16
+      },
+      {
+        "word": "levison",
+        "start": 8.18,
+        "end": 8.68
+      },
+      {
+        "word": "will",
+        "start": 8.76,
+        "end": 9.0
+      },
+      {
+        "word": "talk",
+        "start": 9.04,
+        "end": 9.34
+      },
+      {
+        "word": "with",
+        "start": 9.52,
+        "end": 9.76
+      },
+      {
+        "word": "thomas",
+        "start": 9.96,
+        "end": 10.28
+      },
+      {
+        "word": "kennedy",
+        "start": 10.34,
+        "end": 10.7
+      },
+      {
+        "word": "chiap",
+        "start": 10.78,
+        "end": 10.98
+      },
+      {
+        "word": "investment",
+        "start": 11.02,
+        "end": 11.42
+      },
+      {
+        "word": "strategist",
+        "start": 11.46,
+        "end": 12.0
+      },
+      {
+        "word": "of",
+        "start": 12.08,
+        "end": 12.14
+      },
+      {
+        "word": "bobl",
+        "start": 12.22,
+        "end": 12.52
+      },
+      {
+        "word": "wealth",
+        "start": 12.56,
+        "end": 12.76
+      },
+      {
+        "word": "management",
+        "start": 12.82,
+        "end": 13.24
+      },
+      {
+        "word": "at",
+        "start": 13.34,
+        "end": 13.4
+      },
+      {
+        "word": "j",
+        "start": 13.44,
+        "end": 13.6
+      },
+      {
+        "word": "p",
+        "start": 13.64,
+        "end": 13.8
+      },
+      {
+        "word": "morgan",
+        "start": 13.86,
+        "end": 14.24
+      },
+      {
+        "word": "about",
+        "start": 14.6,
+        "end": 14.78
+      },
+      {
+        "word": "the",
+        "start": 14.8,
+        "end": 14.9
+      },
+      {
+        "word": "outlook",
+        "start": 15.0,
+        "end": 15.32
+      },
+      {
+        "word": "for",
+        "start": 15.38,
+        "end": 15.54
+      },
+      {
+        "word": "the",
+        "start": 15.58,
+        "end": 15.68
+      },
+      {
+        "word": "economy",
+        "start": 15.76,
+        "end": 16.22
+      },
+      {
+        "word": "and",
+        "start": 16.32,
+        "end": 16.4
+      },
+      {
+        "word": "financial",
+        "start": 16.46,
+        "end": 16.86
+      },
+      {
+        "word": "markets",
+        "start": 16.92,
+        "end": 17.26
+      },
+      {
+        "word": "and",
+        "start": 17.66,
+        "end": 17.76
+      },
+      {
+        "word": "investment",
+        "start": 17.82,
+        "end": 18.24
+      },
+      {
+        "word": "strategies",
+        "start": 18.26,
+        "end": 18.82
+      },
+      {
+        "word": "thank",
+        "start": 19.14,
+        "end": 19.28
+      },
+      {
+        "word": "you",
+        "start": 19.3,
+        "end": 19.4
+      },
+      {
+        "word": "for",
+        "start": 19.44,
+        "end": 19.54
+      },
+      {
+        "word": "listening",
+        "start": 19.58,
+        "end": 19.94
+      },
+      {
+        "word": "all",
+        "start": 20.14,
+        "end": 20.28
+      },
+      {
+        "word": "have",
+        "start": 20.36,
+        "end": 20.5
+      },
+      {
+        "word": "a",
+        "start": 20.54,
+        "end": 20.56
+      },
+      {
+        "word": "great",
+        "start": 20.6,
+        "end": 20.76
+      },
+      {
+        "word": "week",
+        "start": 20.8,
+        "end": 20.98
+      },
+      {
+        "word": "an",
+        "start": 21.04,
+        "end": 21.12
+      }
+    ]
+  },
+  {
+    "clip_index": 2,
+    "clip_id": "clip_2",
+    "filename": "syndigate_podcasts_2b4fac71b9a5572f850cc34f4df5d740_1670.0_1970.0-sortformer-23.wav",
+    "duration_sec": 25.68,
+    "raw_acoustic_text": "YUESS HE'S COULD BE LEFT BEHIND UNLESS PEOPLE THE BOOSTERS GET BEHIND THIS AND A SO THERE'S ANOTHER OPTION AND AH AIN'T O I LIKE THOSE GUISES LIKE THE GUISE THAT RUN THIS ONE AM SO LITTLE DIFVER FEEL LITTLE DIFFERENT APPROACH AND THE LISWAS HAT A PRIVATE HOME IN MHATTON BEACH MAN DID A SUSHI BAR TO DIE FOR THET SUSHI SHEFF THERE WAS REALLY GOOD A HUGE TOWER LIKE A CHARCOOTERY BOARD TOWER GREAT DESERTS OPEN BAR",
+    "acoustic_words": [
+      {
+        "word": "yuess",
+        "start": 0.2,
+        "end": 0.38
+      },
+      {
+        "word": "he's",
+        "start": 0.4,
+        "end": 0.5
+      },
+      {
+        "word": "could",
+        "start": 0.52,
+        "end": 0.64
+      },
+      {
+        "word": "be",
+        "start": 0.66,
+        "end": 0.72
+      },
+      {
+        "word": "left",
+        "start": 0.76,
+        "end": 0.88
+      },
+      {
+        "word": "behind",
+        "start": 0.94,
+        "end": 1.28
+      },
+      {
+        "word": "unless",
+        "start": 1.36,
+        "end": 1.58
+      },
+      {
+        "word": "people",
+        "start": 1.64,
+        "end": 1.96
+      },
+      {
+        "word": "the",
+        "start": 2.42,
+        "end": 2.52
+      },
+      {
+        "word": "boosters",
+        "start": 2.56,
+        "end": 2.86
+      },
+      {
+        "word": "get",
+        "start": 2.9,
+        "end": 3.02
+      },
+      {
+        "word": "behind",
+        "start": 3.06,
+        "end": 3.44
+      },
+      {
+        "word": "this",
+        "start": 3.52,
+        "end": 3.72
+      },
+      {
+        "word": "and",
+        "start": 4.06,
+        "end": 4.18
+      },
+      {
+        "word": "a",
+        "start": 4.4,
+        "end": 4.46
+      },
+      {
+        "word": "so",
+        "start": 5.18,
+        "end": 5.3
+      },
+      {
+        "word": "there's",
+        "start": 5.32,
+        "end": 5.48
+      },
+      {
+        "word": "another",
+        "start": 5.52,
+        "end": 5.72
+      },
+      {
+        "word": "option",
+        "start": 5.82,
+        "end": 6.08
+      },
+      {
+        "word": "and",
+        "start": 6.62,
+        "end": 6.76
+      },
+      {
+        "word": "ah",
+        "start": 7.08,
+        "end": 7.16
+      },
+      {
+        "word": "ain't",
+        "start": 7.3,
+        "end": 7.42
+      },
+      {
+        "word": "o",
+        "start": 7.46,
+        "end": 7.56
+      },
+      {
+        "word": "i",
+        "start": 8.18,
+        "end": 8.24
+      },
+      {
+        "word": "like",
+        "start": 8.28,
+        "end": 8.4
+      },
+      {
+        "word": "those",
+        "start": 8.42,
+        "end": 8.56
+      },
+      {
+        "word": "guises",
+        "start": 8.6,
+        "end": 8.8
+      },
+      {
+        "word": "like",
+        "start": 8.88,
+        "end": 8.98
+      },
+      {
+        "word": "the",
+        "start": 9.0,
+        "end": 9.06
+      },
+      {
+        "word": "guise",
+        "start": 9.1,
+        "end": 9.24
+      },
+      {
+        "word": "that",
+        "start": 9.28,
+        "end": 9.36
+      },
+      {
+        "word": "run",
+        "start": 9.4,
+        "end": 9.52
+      },
+      {
+        "word": "this",
+        "start": 9.54,
+        "end": 9.66
+      },
+      {
+        "word": "one",
+        "start": 9.76,
+        "end": 9.88
+      },
+      {
+        "word": "am",
+        "start": 10.32,
+        "end": 10.48
+      },
+      {
+        "word": "so",
+        "start": 10.58,
+        "end": 10.7
+      },
+      {
+        "word": "little",
+        "start": 10.76,
+        "end": 10.92
+      },
+      {
+        "word": "difver",
+        "start": 10.94,
+        "end": 11.12
+      },
+      {
+        "word": "feel",
+        "start": 11.18,
+        "end": 11.42
+      },
+      {
+        "word": "little",
+        "start": 11.52,
+        "end": 11.7
+      },
+      {
+        "word": "different",
+        "start": 11.74,
+        "end": 11.96
+      },
+      {
+        "word": "approach",
+        "start": 12.0,
+        "end": 12.36
+      },
+      {
+        "word": "and",
+        "start": 13.22,
+        "end": 13.3
+      },
+      {
+        "word": "the",
+        "start": 13.32,
+        "end": 13.52
+      },
+      {
+        "word": "liswas",
+        "start": 13.6,
+        "end": 13.96
+      },
+      {
+        "word": "hat",
+        "start": 14.02,
+        "end": 14.2
+      },
+      {
+        "word": "a",
+        "start": 14.34,
+        "end": 14.4
+      },
+      {
+        "word": "private",
+        "start": 14.54,
+        "end": 14.84
+      },
+      {
+        "word": "home",
+        "start": 14.88,
+        "end": 15.0
+      },
+      {
+        "word": "in",
+        "start": 15.06,
+        "end": 15.1
+      },
+      {
+        "word": "mhatton",
+        "start": 15.14,
+        "end": 15.44
+      },
+      {
+        "word": "beach",
+        "start": 15.46,
+        "end": 15.68
+      },
+      {
+        "word": "man",
+        "start": 15.88,
+        "end": 16.14
+      },
+      {
+        "word": "did",
+        "start": 16.16,
+        "end": 16.32
+      },
+      {
+        "word": "a",
+        "start": 16.4,
+        "end": 16.44
+      },
+      {
+        "word": "sushi",
+        "start": 16.5,
+        "end": 16.84
+      },
+      {
+        "word": "bar",
+        "start": 16.86,
+        "end": 17.12
+      },
+      {
+        "word": "to",
+        "start": 17.18,
+        "end": 17.3
+      },
+      {
+        "word": "die",
+        "start": 17.34,
+        "end": 17.54
+      },
+      {
+        "word": "for",
+        "start": 17.6,
+        "end": 17.74
+      },
+      {
+        "word": "thet",
+        "start": 17.78,
+        "end": 17.88
+      },
+      {
+        "word": "sushi",
+        "start": 18.0,
+        "end": 18.4
+      },
+      {
+        "word": "sheff",
+        "start": 18.44,
+        "end": 18.68
+      },
+      {
+        "word": "there",
+        "start": 18.72,
+        "end": 18.98
+      },
+      {
+        "word": "was",
+        "start": 19.12,
+        "end": 19.22
+      },
+      {
+        "word": "really",
+        "start": 19.28,
+        "end": 19.5
+      },
+      {
+        "word": "good",
+        "start": 19.52,
+        "end": 19.74
+      },
+      {
+        "word": "a",
+        "start": 20.5,
+        "end": 20.54
+      },
+      {
+        "word": "huge",
+        "start": 20.66,
+        "end": 20.9
+      },
+      {
+        "word": "tower",
+        "start": 20.96,
+        "end": 21.24
+      },
+      {
+        "word": "like",
+        "start": 21.32,
+        "end": 21.44
+      },
+      {
+        "word": "a",
+        "start": 21.52,
+        "end": 21.54
+      },
+      {
+        "word": "charcootery",
+        "start": 21.6,
+        "end": 22.1
+      },
+      {
+        "word": "board",
+        "start": 22.14,
+        "end": 22.34
+      },
+      {
+        "word": "tower",
+        "start": 22.4,
+        "end": 22.76
+      },
+      {
+        "word": "great",
+        "start": 23.4,
+        "end": 23.58
+      },
+      {
+        "word": "deserts",
+        "start": 23.62,
+        "end": 24.06
+      },
+      {
+        "word": "open",
+        "start": 24.88,
+        "end": 25.08
+      },
+      {
+        "word": "bar",
+        "start": 25.12,
+        "end": 25.36
+      }
+    ]
+  },
+  {
+    "clip_index": 3,
+    "clip_id": "clip_3",
+    "filename": "syndigate_podcasts_2c10481a206e59efaa1a72adcf7cc3d1_820.0_1070.0-sortformer-11.wav",
+    "duration_sec": 26.64,
+    "raw_acoustic_text": "AND YET THEY STILL DIDN'T REPORT THAT TO THE PARENTS THEY DIDN'T THINK THEY HAD A RESPONSIBILITY TO SAY OH BY THE WAY YOUR KID PASSED OUT TO DAY AT P E THAT'S BECAUSE WE ALLOWED THEM TO DO SOMETHING THAT YOU DIDN'T KNOW ANYTHING ABOUT WHICH WAS BASELY WERE OF A NOA COURSE IT AROUND THEIR CHESTS ITHIS IS JIS INSANE AS A PARENT II DON'T UNDERSTAND IT AT ALL A LAURA'S ONLINE TOO LARE WHAT YOUR TAKE",
+    "acoustic_words": [
+      {
+        "word": "and",
+        "start": 0.0,
+        "end": 0.08
+      },
+      {
+        "word": "yet",
+        "start": 0.14,
+        "end": 0.28
+      },
+      {
+        "word": "they",
+        "start": 0.32,
+        "end": 0.46
+      },
+      {
+        "word": "still",
+        "start": 0.6,
+        "end": 0.9
+      },
+      {
+        "word": "didn't",
+        "start": 0.98,
+        "end": 1.26
+      },
+      {
+        "word": "report",
+        "start": 1.56,
+        "end": 1.94
+      },
+      {
+        "word": "that",
+        "start": 2.0,
+        "end": 2.2
+      },
+      {
+        "word": "to",
+        "start": 2.3,
+        "end": 2.42
+      },
+      {
+        "word": "the",
+        "start": 2.44,
+        "end": 2.52
+      },
+      {
+        "word": "parents",
+        "start": 2.62,
+        "end": 3.0
+      },
+      {
+        "word": "they",
+        "start": 3.04,
+        "end": 3.14
+      },
+      {
+        "word": "didn't",
+        "start": 3.18,
+        "end": 3.38
+      },
+      {
+        "word": "think",
+        "start": 3.4,
+        "end": 3.54
+      },
+      {
+        "word": "they",
+        "start": 3.58,
+        "end": 3.7
+      },
+      {
+        "word": "had",
+        "start": 3.74,
+        "end": 3.86
+      },
+      {
+        "word": "a",
+        "start": 3.96,
+        "end": 4.0
+      },
+      {
+        "word": "responsibility",
+        "start": 4.48,
+        "end": 5.4
+      },
+      {
+        "word": "to",
+        "start": 5.44,
+        "end": 5.54
+      },
+      {
+        "word": "say",
+        "start": 5.6,
+        "end": 5.76
+      },
+      {
+        "word": "oh",
+        "start": 5.88,
+        "end": 5.96
+      },
+      {
+        "word": "by",
+        "start": 6.0,
+        "end": 6.1
+      },
+      {
+        "word": "the",
+        "start": 6.14,
+        "end": 6.2
+      },
+      {
+        "word": "way",
+        "start": 6.24,
+        "end": 6.36
+      },
+      {
+        "word": "your",
+        "start": 6.78,
+        "end": 6.92
+      },
+      {
+        "word": "kid",
+        "start": 7.0,
+        "end": 7.2
+      },
+      {
+        "word": "passed",
+        "start": 7.28,
+        "end": 7.56
+      },
+      {
+        "word": "out",
+        "start": 7.66,
+        "end": 7.78
+      },
+      {
+        "word": "to",
+        "start": 7.82,
+        "end": 7.92
+      },
+      {
+        "word": "day",
+        "start": 7.94,
+        "end": 8.14
+      },
+      {
+        "word": "at",
+        "start": 8.34,
+        "end": 8.4
+      },
+      {
+        "word": "p",
+        "start": 8.5,
+        "end": 8.68
+      },
+      {
+        "word": "e",
+        "start": 8.82,
+        "end": 9.06
+      },
+      {
+        "word": "that's",
+        "start": 9.84,
+        "end": 10.06
+      },
+      {
+        "word": "because",
+        "start": 10.12,
+        "end": 10.56
+      },
+      {
+        "word": "we",
+        "start": 11.08,
+        "end": 11.24
+      },
+      {
+        "word": "allowed",
+        "start": 11.28,
+        "end": 11.56
+      },
+      {
+        "word": "them",
+        "start": 11.6,
+        "end": 11.74
+      },
+      {
+        "word": "to",
+        "start": 11.78,
+        "end": 11.84
+      },
+      {
+        "word": "do",
+        "start": 11.9,
+        "end": 12.02
+      },
+      {
+        "word": "something",
+        "start": 12.1,
+        "end": 12.4
+      },
+      {
+        "word": "that",
+        "start": 12.42,
+        "end": 12.52
+      },
+      {
+        "word": "you",
+        "start": 12.54,
+        "end": 12.64
+      },
+      {
+        "word": "didn't",
+        "start": 12.68,
+        "end": 12.88
+      },
+      {
+        "word": "know",
+        "start": 12.92,
+        "end": 13.02
+      },
+      {
+        "word": "anything",
+        "start": 13.08,
+        "end": 13.38
+      },
+      {
+        "word": "about",
+        "start": 13.46,
+        "end": 13.78
+      },
+      {
+        "word": "which",
+        "start": 13.94,
+        "end": 14.12
+      },
+      {
+        "word": "was",
+        "start": 14.22,
+        "end": 14.4
+      },
+      {
+        "word": "basely",
+        "start": 14.92,
+        "end": 15.3
+      },
+      {
+        "word": "were",
+        "start": 15.68,
+        "end": 15.94
+      },
+      {
+        "word": "of",
+        "start": 16.06,
+        "end": 16.16
+      },
+      {
+        "word": "a",
+        "start": 16.48,
+        "end": 16.6
+      },
+      {
+        "word": "noa",
+        "start": 17.0,
+        "end": 17.28
+      },
+      {
+        "word": "course",
+        "start": 17.78,
+        "end": 18.08
+      },
+      {
+        "word": "it",
+        "start": 18.14,
+        "end": 18.2
+      },
+      {
+        "word": "around",
+        "start": 18.26,
+        "end": 18.5
+      },
+      {
+        "word": "their",
+        "start": 18.54,
+        "end": 18.7
+      },
+      {
+        "word": "chests",
+        "start": 18.76,
+        "end": 19.16
+      },
+      {
+        "word": "ithis",
+        "start": 19.68,
+        "end": 20.62
+      },
+      {
+        "word": "is",
+        "start": 20.7,
+        "end": 20.78
+      },
+      {
+        "word": "jis",
+        "start": 21.26,
+        "end": 21.46
+      },
+      {
+        "word": "insane",
+        "start": 21.52,
+        "end": 21.88
+      },
+      {
+        "word": "as",
+        "start": 21.94,
+        "end": 22.02
+      },
+      {
+        "word": "a",
+        "start": 22.08,
+        "end": 22.1
+      },
+      {
+        "word": "parent",
+        "start": 22.14,
+        "end": 22.46
+      },
+      {
+        "word": "ii",
+        "start": 22.64,
+        "end": 22.84
+      },
+      {
+        "word": "don't",
+        "start": 22.88,
+        "end": 23.06
+      },
+      {
+        "word": "understand",
+        "start": 23.14,
+        "end": 23.64
+      },
+      {
+        "word": "it",
+        "start": 23.72,
+        "end": 23.76
+      },
+      {
+        "word": "at",
+        "start": 23.88,
+        "end": 23.94
+      },
+      {
+        "word": "all",
+        "start": 24.1,
+        "end": 24.24
+      },
+      {
+        "word": "a",
+        "start": 24.68,
+        "end": 24.72
+      },
+      {
+        "word": "laura's",
+        "start": 24.76,
+        "end": 25.1
+      },
+      {
+        "word": "online",
+        "start": 25.16,
+        "end": 25.5
+      },
+      {
+        "word": "too",
+        "start": 25.54,
+        "end": 25.7
+      },
+      {
+        "word": "lare",
+        "start": 25.74,
+        "end": 25.94
+      },
+      {
+        "word": "what",
+        "start": 25.98,
+        "end": 26.08
+      },
+      {
+        "word": "your",
+        "start": 26.12,
+        "end": 26.26
+      },
+      {
+        "word": "take",
+        "start": 26.3,
+        "end": 26.48
+      }
+    ]
+  },
+  {
+    "clip_index": 4,
+    "clip_id": "clip_4",
+    "filename": "syndigate_podcasts_2c7fd69a289d57378d163db7b602f510_2340.0_2590.0-sortformer-12.wav",
+    "duration_sec": 22.8,
+    "raw_acoustic_text": "AND SO TIOSES REALLY QUICK THERE IS KIND OF A CONCERN THOUGH AMONGT SOME PEOPLE THAT AREN'T BIG MERKOWSKY FANS AND I KNOW THEM AND THEY THEY DON'T LIKE MERKOWSKY THAT THE REPUBLICANS ARE GOING TO DIVIDE THEMSELVES AND THAT THE DEMOCRAT WILL WIN BECAUSE ALASKA HAS SOME DEMOCRAT SYMPATHIES IS THERE ANY TRUTH TO THAT WHAT WHAT IS YOUR WHAT IS YOUR OPINION OF THAT",
+    "acoustic_words": [
+      {
+        "word": "and",
+        "start": 0.08,
+        "end": 0.16
+      },
+      {
+        "word": "so",
+        "start": 0.32,
+        "end": 0.54
+      },
+      {
+        "word": "tioses",
+        "start": 0.9,
+        "end": 1.28
+      },
+      {
+        "word": "really",
+        "start": 1.32,
+        "end": 1.52
+      },
+      {
+        "word": "quick",
+        "start": 1.56,
+        "end": 1.76
+      },
+      {
+        "word": "there",
+        "start": 2.26,
+        "end": 2.42
+      },
+      {
+        "word": "is",
+        "start": 2.7,
+        "end": 2.8
+      },
+      {
+        "word": "kind",
+        "start": 2.92,
+        "end": 3.14
+      },
+      {
+        "word": "of",
+        "start": 3.18,
+        "end": 3.24
+      },
+      {
+        "word": "a",
+        "start": 3.32,
+        "end": 3.34
+      },
+      {
+        "word": "concern",
+        "start": 3.52,
+        "end": 4.02
+      },
+      {
+        "word": "though",
+        "start": 4.08,
+        "end": 4.3
+      },
+      {
+        "word": "amongt",
+        "start": 4.48,
+        "end": 4.8
+      },
+      {
+        "word": "some",
+        "start": 4.9,
+        "end": 5.1
+      },
+      {
+        "word": "people",
+        "start": 5.18,
+        "end": 5.52
+      },
+      {
+        "word": "that",
+        "start": 5.6,
+        "end": 5.76
+      },
+      {
+        "word": "aren't",
+        "start": 6.2,
+        "end": 6.44
+      },
+      {
+        "word": "big",
+        "start": 6.48,
+        "end": 6.64
+      },
+      {
+        "word": "merkowsky",
+        "start": 6.7,
+        "end": 7.3
+      },
+      {
+        "word": "fans",
+        "start": 7.34,
+        "end": 7.64
+      },
+      {
+        "word": "and",
+        "start": 7.86,
+        "end": 7.94
+      },
+      {
+        "word": "i",
+        "start": 8.02,
+        "end": 8.08
+      },
+      {
+        "word": "know",
+        "start": 8.14,
+        "end": 8.3
+      },
+      {
+        "word": "them",
+        "start": 8.38,
+        "end": 8.56
+      },
+      {
+        "word": "and",
+        "start": 8.6,
+        "end": 8.68
+      },
+      {
+        "word": "they",
+        "start": 8.7,
+        "end": 8.84
+      },
+      {
+        "word": "they",
+        "start": 8.98,
+        "end": 9.06
+      },
+      {
+        "word": "don't",
+        "start": 9.1,
+        "end": 9.22
+      },
+      {
+        "word": "like",
+        "start": 9.26,
+        "end": 9.36
+      },
+      {
+        "word": "merkowsky",
+        "start": 9.42,
+        "end": 10.02
+      },
+      {
+        "word": "that",
+        "start": 10.54,
+        "end": 10.78
+      },
+      {
+        "word": "the",
+        "start": 11.06,
+        "end": 11.2
+      },
+      {
+        "word": "republicans",
+        "start": 11.28,
+        "end": 11.86
+      },
+      {
+        "word": "are",
+        "start": 11.92,
+        "end": 11.98
+      },
+      {
+        "word": "going",
+        "start": 12.0,
+        "end": 12.1
+      },
+      {
+        "word": "to",
+        "start": 12.12,
+        "end": 12.16
+      },
+      {
+        "word": "divide",
+        "start": 12.22,
+        "end": 12.56
+      },
+      {
+        "word": "themselves",
+        "start": 12.6,
+        "end": 13.34
+      },
+      {
+        "word": "and",
+        "start": 13.48,
+        "end": 13.58
+      },
+      {
+        "word": "that",
+        "start": 13.62,
+        "end": 13.82
+      },
+      {
+        "word": "the",
+        "start": 14.24,
+        "end": 14.34
+      },
+      {
+        "word": "democrat",
+        "start": 14.38,
+        "end": 14.9
+      },
+      {
+        "word": "will",
+        "start": 14.94,
+        "end": 15.12
+      },
+      {
+        "word": "win",
+        "start": 15.2,
+        "end": 15.6
+      },
+      {
+        "word": "because",
+        "start": 16.1,
+        "end": 16.42
+      },
+      {
+        "word": "alaska",
+        "start": 16.72,
+        "end": 17.18
+      },
+      {
+        "word": "has",
+        "start": 17.24,
+        "end": 17.44
+      },
+      {
+        "word": "some",
+        "start": 17.52,
+        "end": 17.66
+      },
+      {
+        "word": "democrat",
+        "start": 17.72,
+        "end": 18.24
+      },
+      {
+        "word": "sympathies",
+        "start": 18.28,
+        "end": 18.84
+      },
+      {
+        "word": "is",
+        "start": 19.6,
+        "end": 19.68
+      },
+      {
+        "word": "there",
+        "start": 19.7,
+        "end": 19.82
+      },
+      {
+        "word": "any",
+        "start": 19.88,
+        "end": 19.98
+      },
+      {
+        "word": "truth",
+        "start": 20.08,
+        "end": 20.34
+      },
+      {
+        "word": "to",
+        "start": 20.38,
+        "end": 20.44
+      },
+      {
+        "word": "that",
+        "start": 20.48,
+        "end": 20.66
+      },
+      {
+        "word": "what",
+        "start": 20.7,
+        "end": 20.84
+      },
+      {
+        "word": "what",
+        "start": 20.94,
+        "end": 21.06
+      },
+      {
+        "word": "is",
+        "start": 21.1,
+        "end": 21.16
+      },
+      {
+        "word": "your",
+        "start": 21.18,
+        "end": 21.32
+      },
+      {
+        "word": "what",
+        "start": 21.4,
+        "end": 21.52
+      },
+      {
+        "word": "is",
+        "start": 21.56,
+        "end": 21.62
+      },
+      {
+        "word": "your",
+        "start": 21.64,
+        "end": 21.8
+      },
+      {
+        "word": "opinion",
+        "start": 21.98,
+        "end": 22.32
+      },
+      {
+        "word": "of",
+        "start": 22.36,
+        "end": 22.4
+      },
+      {
+        "word": "that",
+        "start": 22.46,
+        "end": 22.6
+      }
+    ]
+  },
+  {
+    "clip_index": 5,
+    "clip_id": "clip_5",
+    "filename": "syndigate_podcasts_2cd0712bd71e5e119d198f372bb34663_2330.0_2630.0-sortformer-20.wav",
+    "duration_sec": 21.52,
+    "raw_acoustic_text": "IT'S TIME TO FAR ON HERE THA THERE'S NO SAVE IN THIS THAT GUYSES HORRIBLE THAT WOMAN IS AWFUL AND WE ALL KNOW LIKE THE SHREW WOMAN THAT JUST DESTROYING A MAN'S PSYCHE INSIDE AND OT JUST DESTROYING HIM FROM TOP TILE YOU SEE IT HE USED TO BE FUN HE'S CONTILESSE ONE NOW HE'S JUST MISERABLE I AN ITS AND YU EVERY TIME YOU HEAR HER YOUR",
+    "acoustic_words": [
+      {
+        "word": "it's",
+        "start": 0.28,
+        "end": 0.42
+      },
+      {
+        "word": "time",
+        "start": 0.5,
+        "end": 0.7
+      },
+      {
+        "word": "to",
+        "start": 0.74,
+        "end": 0.82
+      },
+      {
+        "word": "far",
+        "start": 0.98,
+        "end": 1.4
+      },
+      {
+        "word": "on",
+        "start": 1.5,
+        "end": 1.58
+      },
+      {
+        "word": "here",
+        "start": 1.64,
+        "end": 1.78
+      },
+      {
+        "word": "tha",
+        "start": 1.98,
+        "end": 2.16
+      },
+      {
+        "word": "there's",
+        "start": 2.82,
+        "end": 3.04
+      },
+      {
+        "word": "no",
+        "start": 3.12,
+        "end": 3.28
+      },
+      {
+        "word": "save",
+        "start": 3.4,
+        "end": 3.68
+      },
+      {
+        "word": "in",
+        "start": 3.72,
+        "end": 3.8
+      },
+      {
+        "word": "this",
+        "start": 4.0,
+        "end": 4.28
+      },
+      {
+        "word": "that",
+        "start": 4.42,
+        "end": 4.6
+      },
+      {
+        "word": "guyses",
+        "start": 4.66,
+        "end": 4.94
+      },
+      {
+        "word": "horrible",
+        "start": 5.4,
+        "end": 5.92
+      },
+      {
+        "word": "that",
+        "start": 6.28,
+        "end": 6.4
+      },
+      {
+        "word": "woman",
+        "start": 6.46,
+        "end": 6.7
+      },
+      {
+        "word": "is",
+        "start": 6.78,
+        "end": 6.86
+      },
+      {
+        "word": "awful",
+        "start": 7.14,
+        "end": 7.36
+      },
+      {
+        "word": "and",
+        "start": 7.7,
+        "end": 7.84
+      },
+      {
+        "word": "we",
+        "start": 7.88,
+        "end": 8.02
+      },
+      {
+        "word": "all",
+        "start": 8.1,
+        "end": 8.24
+      },
+      {
+        "word": "know",
+        "start": 8.28,
+        "end": 8.48
+      },
+      {
+        "word": "like",
+        "start": 8.56,
+        "end": 8.72
+      },
+      {
+        "word": "the",
+        "start": 8.78,
+        "end": 8.88
+      },
+      {
+        "word": "shrew",
+        "start": 8.94,
+        "end": 9.32
+      },
+      {
+        "word": "woman",
+        "start": 9.4,
+        "end": 9.64
+      },
+      {
+        "word": "that",
+        "start": 10.28,
+        "end": 10.42
+      },
+      {
+        "word": "just",
+        "start": 10.44,
+        "end": 10.56
+      },
+      {
+        "word": "destroying",
+        "start": 10.68,
+        "end": 11.24
+      },
+      {
+        "word": "a",
+        "start": 11.28,
+        "end": 11.32
+      },
+      {
+        "word": "man's",
+        "start": 11.36,
+        "end": 11.62
+      },
+      {
+        "word": "psyche",
+        "start": 12.16,
+        "end": 12.56
+      },
+      {
+        "word": "inside",
+        "start": 12.64,
+        "end": 13.0
+      },
+      {
+        "word": "and",
+        "start": 13.06,
+        "end": 13.12
+      },
+      {
+        "word": "ot",
+        "start": 13.18,
+        "end": 13.28
+      },
+      {
+        "word": "just",
+        "start": 13.3,
+        "end": 13.44
+      },
+      {
+        "word": "destroying",
+        "start": 13.48,
+        "end": 14.0
+      },
+      {
+        "word": "him",
+        "start": 14.04,
+        "end": 14.14
+      },
+      {
+        "word": "from",
+        "start": 14.2,
+        "end": 14.34
+      },
+      {
+        "word": "top",
+        "start": 14.4,
+        "end": 14.6
+      },
+      {
+        "word": "tile",
+        "start": 14.62,
+        "end": 14.76
+      },
+      {
+        "word": "you",
+        "start": 14.78,
+        "end": 14.9
+      },
+      {
+        "word": "see",
+        "start": 14.94,
+        "end": 15.12
+      },
+      {
+        "word": "it",
+        "start": 15.18,
+        "end": 15.24
+      },
+      {
+        "word": "he",
+        "start": 15.3,
+        "end": 15.38
+      },
+      {
+        "word": "used",
+        "start": 15.46,
+        "end": 15.6
+      },
+      {
+        "word": "to",
+        "start": 15.64,
+        "end": 15.68
+      },
+      {
+        "word": "be",
+        "start": 15.74,
+        "end": 15.84
+      },
+      {
+        "word": "fun",
+        "start": 15.9,
+        "end": 16.16
+      },
+      {
+        "word": "he's",
+        "start": 16.2,
+        "end": 16.34
+      },
+      {
+        "word": "contilesse",
+        "start": 16.42,
+        "end": 16.86
+      },
+      {
+        "word": "one",
+        "start": 16.94,
+        "end": 17.02
+      },
+      {
+        "word": "now",
+        "start": 17.34,
+        "end": 17.5
+      },
+      {
+        "word": "he's",
+        "start": 17.54,
+        "end": 17.68
+      },
+      {
+        "word": "just",
+        "start": 17.72,
+        "end": 17.88
+      },
+      {
+        "word": "miserable",
+        "start": 18.0,
+        "end": 18.44
+      },
+      {
+        "word": "i",
+        "start": 18.9,
+        "end": 18.98
+      },
+      {
+        "word": "an",
+        "start": 19.04,
+        "end": 19.14
+      },
+      {
+        "word": "its",
+        "start": 19.18,
+        "end": 19.28
+      },
+      {
+        "word": "and",
+        "start": 19.34,
+        "end": 19.42
+      },
+      {
+        "word": "yu",
+        "start": 19.46,
+        "end": 19.56
+      },
+      {
+        "word": "every",
+        "start": 19.62,
+        "end": 19.78
+      },
+      {
+        "word": "time",
+        "start": 19.8,
+        "end": 19.94
+      },
+      {
+        "word": "you",
+        "start": 19.98,
+        "end": 20.12
+      },
+      {
+        "word": "hear",
+        "start": 20.26,
+        "end": 20.54
+      },
+      {
+        "word": "her",
+        "start": 20.64,
+        "end": 20.8
+      },
+      {
+        "word": "your",
+        "start": 20.88,
+        "end": 21.04
+      }
+    ]
+  },
+  {
+    "clip_index": 6,
+    "clip_id": "clip_6",
+    "filename": "syndigate_podcasts_2cded1b3f58156aa9ab264c213bc832a_1660.0_1890.0-sortformer-16.wav",
+    "duration_sec": 25.76,
+    "raw_acoustic_text": "SHYOUHOW YOU GO TO SUMEBODY SWEBSIGHTAN AND SAYS THIS BIRSAND SO TELL OR SWIFT YA NEED TO SAY A MILLION NUMBER ONE GOLD RECORDS OR STIO PLATNUM THINGS AND THIS MAN E SOLD AND ONSPOTIFIED TOPTEN SONGS ON SPOTIFID FOR THIS MANY YEARS IN BLAVA BLAND BLAVA BLA AND BLAVBA AND CAUSE THE SENATE TO FORM A COMMITTEE TO INVESTIGATE TICKET MASTER BECAUSE OF THE WAY TICKET MASTER HANDLED",
+    "acoustic_words": [
+      {
+        "word": "shyouhow",
+        "start": 0.2,
+        "end": 0.68
+      },
+      {
+        "word": "you",
+        "start": 0.72,
+        "end": 0.82
+      },
+      {
+        "word": "go",
+        "start": 0.86,
+        "end": 0.92
+      },
+      {
+        "word": "to",
+        "start": 0.96,
+        "end": 1.0
+      },
+      {
+        "word": "sumebody",
+        "start": 1.06,
+        "end": 1.3
+      },
+      {
+        "word": "swebsightan",
+        "start": 1.34,
+        "end": 1.82
+      },
+      {
+        "word": "and",
+        "start": 1.88,
+        "end": 1.94
+      },
+      {
+        "word": "says",
+        "start": 2.0,
+        "end": 2.3
+      },
+      {
+        "word": "this",
+        "start": 3.08,
+        "end": 3.26
+      },
+      {
+        "word": "birsand",
+        "start": 3.3,
+        "end": 3.62
+      },
+      {
+        "word": "so",
+        "start": 3.64,
+        "end": 3.78
+      },
+      {
+        "word": "tell",
+        "start": 3.82,
+        "end": 4.0
+      },
+      {
+        "word": "or",
+        "start": 4.04,
+        "end": 4.12
+      },
+      {
+        "word": "swift",
+        "start": 4.16,
+        "end": 4.52
+      },
+      {
+        "word": "ya",
+        "start": 5.06,
+        "end": 5.28
+      },
+      {
+        "word": "need",
+        "start": 5.32,
+        "end": 5.48
+      },
+      {
+        "word": "to",
+        "start": 5.52,
+        "end": 5.6
+      },
+      {
+        "word": "say",
+        "start": 5.62,
+        "end": 5.8
+      },
+      {
+        "word": "a",
+        "start": 6.38,
+        "end": 6.4
+      },
+      {
+        "word": "million",
+        "start": 6.52,
+        "end": 6.92
+      },
+      {
+        "word": "number",
+        "start": 6.96,
+        "end": 7.18
+      },
+      {
+        "word": "one",
+        "start": 7.24,
+        "end": 7.36
+      },
+      {
+        "word": "gold",
+        "start": 7.42,
+        "end": 7.64
+      },
+      {
+        "word": "records",
+        "start": 7.7,
+        "end": 8.12
+      },
+      {
+        "word": "or",
+        "start": 8.2,
+        "end": 8.32
+      },
+      {
+        "word": "stio",
+        "start": 8.42,
+        "end": 8.86
+      },
+      {
+        "word": "platnum",
+        "start": 8.9,
+        "end": 9.28
+      },
+      {
+        "word": "things",
+        "start": 9.74,
+        "end": 10.04
+      },
+      {
+        "word": "and",
+        "start": 10.1,
+        "end": 10.18
+      },
+      {
+        "word": "this",
+        "start": 10.22,
+        "end": 10.36
+      },
+      {
+        "word": "man",
+        "start": 10.4,
+        "end": 10.52
+      },
+      {
+        "word": "e",
+        "start": 10.58,
+        "end": 10.64
+      },
+      {
+        "word": "sold",
+        "start": 10.68,
+        "end": 10.98
+      },
+      {
+        "word": "and",
+        "start": 11.02,
+        "end": 11.12
+      },
+      {
+        "word": "onspotified",
+        "start": 11.22,
+        "end": 12.02
+      },
+      {
+        "word": "topten",
+        "start": 12.06,
+        "end": 12.6
+      },
+      {
+        "word": "songs",
+        "start": 13.16,
+        "end": 13.42
+      },
+      {
+        "word": "on",
+        "start": 13.5,
+        "end": 13.58
+      },
+      {
+        "word": "spotifid",
+        "start": 13.62,
+        "end": 14.12
+      },
+      {
+        "word": "for",
+        "start": 14.14,
+        "end": 14.22
+      },
+      {
+        "word": "this",
+        "start": 14.26,
+        "end": 14.38
+      },
+      {
+        "word": "many",
+        "start": 14.42,
+        "end": 14.6
+      },
+      {
+        "word": "years",
+        "start": 14.66,
+        "end": 14.92
+      },
+      {
+        "word": "in",
+        "start": 15.02,
+        "end": 15.08
+      },
+      {
+        "word": "blava",
+        "start": 15.12,
+        "end": 15.42
+      },
+      {
+        "word": "bland",
+        "start": 15.44,
+        "end": 15.7
+      },
+      {
+        "word": "blava",
+        "start": 15.74,
+        "end": 16.02
+      },
+      {
+        "word": "bla",
+        "start": 16.04,
+        "end": 16.26
+      },
+      {
+        "word": "and",
+        "start": 16.32,
+        "end": 16.38
+      },
+      {
+        "word": "blavba",
+        "start": 16.42,
+        "end": 16.88
+      },
+      {
+        "word": "and",
+        "start": 17.5,
+        "end": 17.64
+      },
+      {
+        "word": "cause",
+        "start": 18.16,
+        "end": 18.54
+      },
+      {
+        "word": "the",
+        "start": 18.6,
+        "end": 18.72
+      },
+      {
+        "word": "senate",
+        "start": 18.92,
+        "end": 19.26
+      },
+      {
+        "word": "to",
+        "start": 19.36,
+        "end": 19.58
+      },
+      {
+        "word": "form",
+        "start": 20.04,
+        "end": 20.34
+      },
+      {
+        "word": "a",
+        "start": 20.46,
+        "end": 20.5
+      },
+      {
+        "word": "committee",
+        "start": 20.56,
+        "end": 21.04
+      },
+      {
+        "word": "to",
+        "start": 21.14,
+        "end": 21.24
+      },
+      {
+        "word": "investigate",
+        "start": 21.34,
+        "end": 22.02
+      },
+      {
+        "word": "ticket",
+        "start": 22.1,
+        "end": 22.38
+      },
+      {
+        "word": "master",
+        "start": 22.4,
+        "end": 22.82
+      },
+      {
+        "word": "because",
+        "start": 23.28,
+        "end": 23.62
+      },
+      {
+        "word": "of",
+        "start": 23.68,
+        "end": 23.72
+      },
+      {
+        "word": "the",
+        "start": 23.8,
+        "end": 23.88
+      },
+      {
+        "word": "way",
+        "start": 23.92,
+        "end": 24.22
+      },
+      {
+        "word": "ticket",
+        "start": 24.32,
+        "end": 24.56
+      },
+      {
+        "word": "master",
+        "start": 24.58,
+        "end": 24.98
+      },
+      {
+        "word": "handled",
+        "start": 25.08,
+        "end": 25.48
+      }
+    ]
+  },
+  {
+    "clip_index": 7,
+    "clip_id": "clip_7",
+    "filename": "syndigate_podcasts_2d03cf22a5825a07a90b1189565b5ecb_710.0_850.0-sortformer-7.wav",
+    "duration_sec": 21.12,
+    "raw_acoustic_text": "AND CONGRESS ONBLE WHEN I'VE SPOKEN TO PEOPLE OVER THE PAST WEEK THERE WAS SOME LERE TO SAY THE CANYON FORCES AND BENEAN ACTUALLY WAS ALSO ERE POINTED OUT THAT THEY WOULD NOT BE ABLE TO DO WHAT IS NECESSARY IN HATY THAT IT IS ONLY A FORCE LIKE THE U S MILITARY THAT WILL BE ABLE TO OVERTAKE EHE THE GANGS THAT ARE THERE AND RESTORE LAW AND ORDER",
+    "acoustic_words": [
+      {
+        "word": "and",
+        "start": 0.34,
+        "end": 0.44
+      },
+      {
+        "word": "congress",
+        "start": 0.5,
+        "end": 0.78
+      },
+      {
+        "word": "onble",
+        "start": 0.8,
+        "end": 1.08
+      },
+      {
+        "word": "when",
+        "start": 1.1,
+        "end": 1.22
+      },
+      {
+        "word": "i've",
+        "start": 1.26,
+        "end": 1.38
+      },
+      {
+        "word": "spoken",
+        "start": 1.4,
+        "end": 1.68
+      },
+      {
+        "word": "to",
+        "start": 1.72,
+        "end": 1.78
+      },
+      {
+        "word": "people",
+        "start": 1.82,
+        "end": 2.04
+      },
+      {
+        "word": "over",
+        "start": 2.16,
+        "end": 2.3
+      },
+      {
+        "word": "the",
+        "start": 2.36,
+        "end": 2.42
+      },
+      {
+        "word": "past",
+        "start": 2.46,
+        "end": 2.7
+      },
+      {
+        "word": "week",
+        "start": 2.74,
+        "end": 2.88
+      },
+      {
+        "word": "there",
+        "start": 3.26,
+        "end": 3.4
+      },
+      {
+        "word": "was",
+        "start": 3.44,
+        "end": 3.54
+      },
+      {
+        "word": "some",
+        "start": 3.58,
+        "end": 3.76
+      },
+      {
+        "word": "lere",
+        "start": 3.78,
+        "end": 3.96
+      },
+      {
+        "word": "to",
+        "start": 3.98,
+        "end": 4.06
+      },
+      {
+        "word": "say",
+        "start": 4.1,
+        "end": 4.28
+      },
+      {
+        "word": "the",
+        "start": 4.62,
+        "end": 4.72
+      },
+      {
+        "word": "canyon",
+        "start": 4.76,
+        "end": 5.12
+      },
+      {
+        "word": "forces",
+        "start": 5.16,
+        "end": 5.66
+      },
+      {
+        "word": "and",
+        "start": 5.88,
+        "end": 5.96
+      },
+      {
+        "word": "benean",
+        "start": 6.0,
+        "end": 6.32
+      },
+      {
+        "word": "actually",
+        "start": 6.38,
+        "end": 6.6
+      },
+      {
+        "word": "was",
+        "start": 6.84,
+        "end": 7.02
+      },
+      {
+        "word": "also",
+        "start": 7.22,
+        "end": 7.5
+      },
+      {
+        "word": "ere",
+        "start": 8.1,
+        "end": 8.24
+      },
+      {
+        "word": "pointed",
+        "start": 8.34,
+        "end": 8.66
+      },
+      {
+        "word": "out",
+        "start": 8.74,
+        "end": 8.82
+      },
+      {
+        "word": "that",
+        "start": 9.12,
+        "end": 9.24
+      },
+      {
+        "word": "they",
+        "start": 9.26,
+        "end": 9.38
+      },
+      {
+        "word": "would",
+        "start": 9.44,
+        "end": 9.62
+      },
+      {
+        "word": "not",
+        "start": 9.68,
+        "end": 9.82
+      },
+      {
+        "word": "be",
+        "start": 9.88,
+        "end": 10.0
+      },
+      {
+        "word": "able",
+        "start": 10.14,
+        "end": 10.34
+      },
+      {
+        "word": "to",
+        "start": 10.4,
+        "end": 10.5
+      },
+      {
+        "word": "do",
+        "start": 10.56,
+        "end": 10.72
+      },
+      {
+        "word": "what",
+        "start": 10.94,
+        "end": 11.12
+      },
+      {
+        "word": "is",
+        "start": 11.28,
+        "end": 11.36
+      },
+      {
+        "word": "necessary",
+        "start": 11.46,
+        "end": 12.12
+      },
+      {
+        "word": "in",
+        "start": 12.24,
+        "end": 12.32
+      },
+      {
+        "word": "haty",
+        "start": 12.38,
+        "end": 12.78
+      },
+      {
+        "word": "that",
+        "start": 13.06,
+        "end": 13.2
+      },
+      {
+        "word": "it",
+        "start": 13.26,
+        "end": 13.3
+      },
+      {
+        "word": "is",
+        "start": 13.38,
+        "end": 13.44
+      },
+      {
+        "word": "only",
+        "start": 13.58,
+        "end": 13.76
+      },
+      {
+        "word": "a",
+        "start": 13.82,
+        "end": 13.84
+      },
+      {
+        "word": "force",
+        "start": 13.9,
+        "end": 14.2
+      },
+      {
+        "word": "like",
+        "start": 14.24,
+        "end": 14.38
+      },
+      {
+        "word": "the",
+        "start": 14.42,
+        "end": 14.5
+      },
+      {
+        "word": "u",
+        "start": 14.62,
+        "end": 14.68
+      },
+      {
+        "word": "s",
+        "start": 14.8,
+        "end": 14.84
+      },
+      {
+        "word": "military",
+        "start": 14.9,
+        "end": 15.36
+      },
+      {
+        "word": "that",
+        "start": 15.42,
+        "end": 15.54
+      },
+      {
+        "word": "will",
+        "start": 15.58,
+        "end": 15.74
+      },
+      {
+        "word": "be",
+        "start": 15.78,
+        "end": 15.88
+      },
+      {
+        "word": "able",
+        "start": 16.08,
+        "end": 16.38
+      },
+      {
+        "word": "to",
+        "start": 16.98,
+        "end": 17.14
+      },
+      {
+        "word": "overtake",
+        "start": 17.38,
+        "end": 17.98
+      },
+      {
+        "word": "ehe",
+        "start": 18.54,
+        "end": 18.64
+      },
+      {
+        "word": "the",
+        "start": 18.7,
+        "end": 18.76
+      },
+      {
+        "word": "gangs",
+        "start": 18.8,
+        "end": 19.08
+      },
+      {
+        "word": "that",
+        "start": 19.12,
+        "end": 19.22
+      },
+      {
+        "word": "are",
+        "start": 19.26,
+        "end": 19.34
+      },
+      {
+        "word": "there",
+        "start": 19.38,
+        "end": 19.6
+      },
+      {
+        "word": "and",
+        "start": 19.72,
+        "end": 19.8
+      },
+      {
+        "word": "restore",
+        "start": 19.84,
+        "end": 20.2
+      },
+      {
+        "word": "law",
+        "start": 20.28,
+        "end": 20.46
+      },
+      {
+        "word": "and",
+        "start": 20.52,
+        "end": 20.6
+      },
+      {
+        "word": "order",
+        "start": 20.68,
+        "end": 20.9
+      }
+    ]
+  },
+  {
+    "clip_index": 8,
+    "clip_id": "clip_8",
+    "filename": "syndigate_podcasts_2d602371169b5aa89510bc9ed85ef8a5_1720.0_2020.0-sortformer-0.wav",
+    "duration_sec": 20.8,
+    "raw_acoustic_text": "SAID THE NEWGLERFREEZE MOVEMENT UM A HUGE GROUND SWELL OF POPULOUS SUPPORT EVERY ONE WAS ALREADY CONVINCED THAT WE HAD TO STOP THIS ARMS RACE BUT NO ONE COULD IMAGINE HOW TO GO ABOUT IT UM IN PART OF THIS FILM WAS ABLE TO IMAGINE PARTICULARLY FOR ONE PERSON",
+    "acoustic_words": [
+      {
+        "word": "said",
+        "start": 0.02,
+        "end": 0.18
+      },
+      {
+        "word": "the",
+        "start": 0.22,
+        "end": 0.3
+      },
+      {
+        "word": "newglerfreeze",
+        "start": 0.36,
+        "end": 1.0
+      },
+      {
+        "word": "movement",
+        "start": 1.06,
+        "end": 1.42
+      },
+      {
+        "word": "um",
+        "start": 2.48,
+        "end": 2.68
+      },
+      {
+        "word": "a",
+        "start": 3.32,
+        "end": 3.36
+      },
+      {
+        "word": "huge",
+        "start": 3.52,
+        "end": 3.88
+      },
+      {
+        "word": "ground",
+        "start": 3.96,
+        "end": 4.28
+      },
+      {
+        "word": "swell",
+        "start": 4.34,
+        "end": 4.66
+      },
+      {
+        "word": "of",
+        "start": 4.7,
+        "end": 4.74
+      },
+      {
+        "word": "populous",
+        "start": 4.86,
+        "end": 5.38
+      },
+      {
+        "word": "support",
+        "start": 5.42,
+        "end": 5.88
+      },
+      {
+        "word": "every",
+        "start": 6.08,
+        "end": 6.3
+      },
+      {
+        "word": "one",
+        "start": 6.46,
+        "end": 6.56
+      },
+      {
+        "word": "was",
+        "start": 6.96,
+        "end": 7.1
+      },
+      {
+        "word": "already",
+        "start": 7.24,
+        "end": 7.66
+      },
+      {
+        "word": "convinced",
+        "start": 7.72,
+        "end": 8.1
+      },
+      {
+        "word": "that",
+        "start": 8.14,
+        "end": 8.24
+      },
+      {
+        "word": "we",
+        "start": 8.28,
+        "end": 8.36
+      },
+      {
+        "word": "had",
+        "start": 8.42,
+        "end": 8.56
+      },
+      {
+        "word": "to",
+        "start": 8.62,
+        "end": 8.66
+      },
+      {
+        "word": "stop",
+        "start": 8.76,
+        "end": 9.12
+      },
+      {
+        "word": "this",
+        "start": 9.58,
+        "end": 9.8
+      },
+      {
+        "word": "arms",
+        "start": 9.98,
+        "end": 10.2
+      },
+      {
+        "word": "race",
+        "start": 10.26,
+        "end": 10.52
+      },
+      {
+        "word": "but",
+        "start": 11.04,
+        "end": 11.16
+      },
+      {
+        "word": "no",
+        "start": 11.26,
+        "end": 11.4
+      },
+      {
+        "word": "one",
+        "start": 11.5,
+        "end": 11.6
+      },
+      {
+        "word": "could",
+        "start": 11.64,
+        "end": 11.8
+      },
+      {
+        "word": "imagine",
+        "start": 11.88,
+        "end": 12.4
+      },
+      {
+        "word": "how",
+        "start": 12.64,
+        "end": 12.82
+      },
+      {
+        "word": "to",
+        "start": 12.86,
+        "end": 12.9
+      },
+      {
+        "word": "go",
+        "start": 12.96,
+        "end": 13.08
+      },
+      {
+        "word": "about",
+        "start": 13.14,
+        "end": 13.42
+      },
+      {
+        "word": "it",
+        "start": 13.48,
+        "end": 13.52
+      },
+      {
+        "word": "um",
+        "start": 14.46,
+        "end": 14.6
+      },
+      {
+        "word": "in",
+        "start": 15.12,
+        "end": 15.2
+      },
+      {
+        "word": "part",
+        "start": 15.46,
+        "end": 15.74
+      },
+      {
+        "word": "of",
+        "start": 15.8,
+        "end": 15.84
+      },
+      {
+        "word": "this",
+        "start": 15.9,
+        "end": 16.04
+      },
+      {
+        "word": "film",
+        "start": 16.14,
+        "end": 16.48
+      },
+      {
+        "word": "was",
+        "start": 17.0,
+        "end": 17.14
+      },
+      {
+        "word": "able",
+        "start": 17.32,
+        "end": 17.5
+      },
+      {
+        "word": "to",
+        "start": 17.54,
+        "end": 17.62
+      },
+      {
+        "word": "imagine",
+        "start": 17.7,
+        "end": 18.26
+      },
+      {
+        "word": "particularly",
+        "start": 18.94,
+        "end": 19.56
+      },
+      {
+        "word": "for",
+        "start": 19.64,
+        "end": 19.76
+      },
+      {
+        "word": "one",
+        "start": 19.9,
+        "end": 20.02
+      },
+      {
+        "word": "person",
+        "start": 20.1,
+        "end": 20.54
+      }
+    ]
+  },
+  {
+    "clip_index": 9,
+    "clip_id": "clip_9",
+    "filename": "syndigate_podcasts_2ddf18f8f34759728fa8e0406d9ddfde_560.0_650.0-sortformer-14.wav",
+    "duration_sec": 20.0,
+    "raw_acoustic_text": "WHAT THEY'RE THINKING IN THAT ROOM AND AGAIN IF YOU REALLY DO THINK THE ORGAN'S GOING TO BE WASHED AN THAT'S FINE BUT PUT EM AT NUMBER EIGHT AND WHEN THEY WIN PUT EM UP A NUMBER FOLT LIKE IT'S FINE IF YOU WANT TO REWARD THEM FOR GETTING THAT WIN WHEN THEY GET THE WIN BUT IT'S LIKE THEY IT SEEMS LIKE THEY'E BEEN REWARDING THEM BECAUSE THEY THINK THEY'RE GOING TO WIN A GAME IN THE FUTURE",
+    "acoustic_words": [
+      {
+        "word": "what",
+        "start": 0.3,
+        "end": 0.46
+      },
+      {
+        "word": "they're",
+        "start": 0.5,
+        "end": 0.7
+      },
+      {
+        "word": "thinking",
+        "start": 0.74,
+        "end": 1.08
+      },
+      {
+        "word": "in",
+        "start": 1.12,
+        "end": 1.18
+      },
+      {
+        "word": "that",
+        "start": 1.24,
+        "end": 1.38
+      },
+      {
+        "word": "room",
+        "start": 1.44,
+        "end": 1.62
+      },
+      {
+        "word": "and",
+        "start": 1.7,
+        "end": 1.78
+      },
+      {
+        "word": "again",
+        "start": 1.82,
+        "end": 2.02
+      },
+      {
+        "word": "if",
+        "start": 2.52,
+        "end": 2.58
+      },
+      {
+        "word": "you",
+        "start": 2.62,
+        "end": 2.74
+      },
+      {
+        "word": "really",
+        "start": 2.78,
+        "end": 3.0
+      },
+      {
+        "word": "do",
+        "start": 3.04,
+        "end": 3.16
+      },
+      {
+        "word": "think",
+        "start": 3.2,
+        "end": 3.36
+      },
+      {
+        "word": "the",
+        "start": 3.4,
+        "end": 3.46
+      },
+      {
+        "word": "organ's",
+        "start": 3.56,
+        "end": 3.86
+      },
+      {
+        "word": "going",
+        "start": 3.88,
+        "end": 3.98
+      },
+      {
+        "word": "to",
+        "start": 4.02,
+        "end": 4.06
+      },
+      {
+        "word": "be",
+        "start": 4.1,
+        "end": 4.22
+      },
+      {
+        "word": "washed",
+        "start": 4.26,
+        "end": 4.54
+      },
+      {
+        "word": "an",
+        "start": 4.58,
+        "end": 4.64
+      },
+      {
+        "word": "that's",
+        "start": 4.68,
+        "end": 4.84
+      },
+      {
+        "word": "fine",
+        "start": 4.9,
+        "end": 5.16
+      },
+      {
+        "word": "but",
+        "start": 5.8,
+        "end": 5.9
+      },
+      {
+        "word": "put",
+        "start": 5.96,
+        "end": 6.06
+      },
+      {
+        "word": "em",
+        "start": 6.12,
+        "end": 6.18
+      },
+      {
+        "word": "at",
+        "start": 6.22,
+        "end": 6.26
+      },
+      {
+        "word": "number",
+        "start": 6.32,
+        "end": 6.54
+      },
+      {
+        "word": "eight",
+        "start": 6.6,
+        "end": 6.72
+      },
+      {
+        "word": "and",
+        "start": 6.74,
+        "end": 6.8
+      },
+      {
+        "word": "when",
+        "start": 6.82,
+        "end": 6.92
+      },
+      {
+        "word": "they",
+        "start": 6.94,
+        "end": 7.08
+      },
+      {
+        "word": "win",
+        "start": 7.12,
+        "end": 7.3
+      },
+      {
+        "word": "put",
+        "start": 7.34,
+        "end": 7.44
+      },
+      {
+        "word": "em",
+        "start": 7.5,
+        "end": 7.56
+      },
+      {
+        "word": "up",
+        "start": 7.62,
+        "end": 7.68
+      },
+      {
+        "word": "a",
+        "start": 7.72,
+        "end": 7.74
+      },
+      {
+        "word": "number",
+        "start": 7.82,
+        "end": 8.04
+      },
+      {
+        "word": "folt",
+        "start": 8.08,
+        "end": 8.28
+      },
+      {
+        "word": "like",
+        "start": 8.32,
+        "end": 8.48
+      },
+      {
+        "word": "it's",
+        "start": 9.42,
+        "end": 9.56
+      },
+      {
+        "word": "fine",
+        "start": 9.74,
+        "end": 10.16
+      },
+      {
+        "word": "if",
+        "start": 10.6,
+        "end": 10.7
+      },
+      {
+        "word": "you",
+        "start": 10.78,
+        "end": 10.96
+      },
+      {
+        "word": "want",
+        "start": 11.0,
+        "end": 11.16
+      },
+      {
+        "word": "to",
+        "start": 11.2,
+        "end": 11.28
+      },
+      {
+        "word": "reward",
+        "start": 11.36,
+        "end": 11.76
+      },
+      {
+        "word": "them",
+        "start": 11.82,
+        "end": 11.94
+      },
+      {
+        "word": "for",
+        "start": 12.06,
+        "end": 12.26
+      },
+      {
+        "word": "getting",
+        "start": 12.32,
+        "end": 12.56
+      },
+      {
+        "word": "that",
+        "start": 12.62,
+        "end": 12.78
+      },
+      {
+        "word": "win",
+        "start": 12.86,
+        "end": 13.14
+      },
+      {
+        "word": "when",
+        "start": 13.44,
+        "end": 13.62
+      },
+      {
+        "word": "they",
+        "start": 13.66,
+        "end": 13.82
+      },
+      {
+        "word": "get",
+        "start": 13.84,
+        "end": 13.98
+      },
+      {
+        "word": "the",
+        "start": 14.04,
+        "end": 14.1
+      },
+      {
+        "word": "win",
+        "start": 14.16,
+        "end": 14.42
+      },
+      {
+        "word": "but",
+        "start": 14.48,
+        "end": 14.58
+      },
+      {
+        "word": "it's",
+        "start": 14.64,
+        "end": 14.74
+      },
+      {
+        "word": "like",
+        "start": 14.78,
+        "end": 14.9
+      },
+      {
+        "word": "they",
+        "start": 14.94,
+        "end": 15.1
+      },
+      {
+        "word": "it",
+        "start": 15.24,
+        "end": 15.32
+      },
+      {
+        "word": "seems",
+        "start": 15.34,
+        "end": 15.54
+      },
+      {
+        "word": "like",
+        "start": 15.58,
+        "end": 15.68
+      },
+      {
+        "word": "they'e",
+        "start": 15.72,
+        "end": 15.88
+      },
+      {
+        "word": "been",
+        "start": 15.9,
+        "end": 16.02
+      },
+      {
+        "word": "rewarding",
+        "start": 16.1,
+        "end": 16.62
+      },
+      {
+        "word": "them",
+        "start": 16.68,
+        "end": 16.84
+      },
+      {
+        "word": "because",
+        "start": 17.34,
+        "end": 17.62
+      },
+      {
+        "word": "they",
+        "start": 17.68,
+        "end": 17.88
+      },
+      {
+        "word": "think",
+        "start": 18.02,
+        "end": 18.24
+      },
+      {
+        "word": "they're",
+        "start": 18.3,
+        "end": 18.48
+      },
+      {
+        "word": "going",
+        "start": 18.5,
+        "end": 18.68
+      },
+      {
+        "word": "to",
+        "start": 18.72,
+        "end": 18.78
+      },
+      {
+        "word": "win",
+        "start": 18.82,
+        "end": 18.94
+      },
+      {
+        "word": "a",
+        "start": 18.98,
+        "end": 19.0
+      },
+      {
+        "word": "game",
+        "start": 19.04,
+        "end": 19.2
+      },
+      {
+        "word": "in",
+        "start": 19.24,
+        "end": 19.28
+      },
+      {
+        "word": "the",
+        "start": 19.32,
+        "end": 19.38
+      },
+      {
+        "word": "future",
+        "start": 19.44,
+        "end": 19.76
+      }
+    ]
+  },
+  {
+    "clip_index": 10,
+    "clip_id": "clip_10",
+    "filename": "syndigate_podcasts_2e49527d6a8b596d98ea5439a58fe024_1280.0_1580.0-sortformer-17.wav",
+    "duration_sec": 25.6,
+    "raw_acoustic_text": "LEATHER BLAZER AND LIKE LEAN MORE MATRIX THEN YOU CAN GET LITTLE BITE SIZED PIECES UT LIKE J CREW FROM THAT AIR A WER MAYBE IT'S LIKE A KITTEN HEELS SLING BACK KITTEN HEEL WITH YOUR STRAIGHT LEG PANT YOU KNOW I MEAN SO IT KIND OF DEPENDS HOW FAR YOU WANT TO GO WITH IT BUT I I DON'T KNOW I LIKE REFERENCE SINK BACK IT'S NASTALGIC AND IT'S KIND OF FUN AND I'M ALWAYS REALLY OPEN TO",
+    "acoustic_words": [
+      {
+        "word": "leather",
+        "start": 0.12,
+        "end": 0.46
+      },
+      {
+        "word": "blazer",
+        "start": 0.68,
+        "end": 1.24
+      },
+      {
+        "word": "and",
+        "start": 1.38,
+        "end": 1.48
+      },
+      {
+        "word": "like",
+        "start": 1.52,
+        "end": 1.68
+      },
+      {
+        "word": "lean",
+        "start": 1.8,
+        "end": 2.0
+      },
+      {
+        "word": "more",
+        "start": 2.04,
+        "end": 2.2
+      },
+      {
+        "word": "matrix",
+        "start": 2.24,
+        "end": 2.72
+      },
+      {
+        "word": "then",
+        "start": 2.78,
+        "end": 2.9
+      },
+      {
+        "word": "you",
+        "start": 2.96,
+        "end": 3.08
+      },
+      {
+        "word": "can",
+        "start": 3.12,
+        "end": 3.24
+      },
+      {
+        "word": "get",
+        "start": 3.26,
+        "end": 3.38
+      },
+      {
+        "word": "little",
+        "start": 3.42,
+        "end": 3.6
+      },
+      {
+        "word": "bite",
+        "start": 3.7,
+        "end": 3.94
+      },
+      {
+        "word": "sized",
+        "start": 4.0,
+        "end": 4.3
+      },
+      {
+        "word": "pieces",
+        "start": 4.36,
+        "end": 4.74
+      },
+      {
+        "word": "ut",
+        "start": 4.84,
+        "end": 4.92
+      },
+      {
+        "word": "like",
+        "start": 4.96,
+        "end": 5.1
+      },
+      {
+        "word": "j",
+        "start": 5.66,
+        "end": 5.88
+      },
+      {
+        "word": "crew",
+        "start": 5.94,
+        "end": 6.18
+      },
+      {
+        "word": "from",
+        "start": 6.24,
+        "end": 6.36
+      },
+      {
+        "word": "that",
+        "start": 6.4,
+        "end": 6.56
+      },
+      {
+        "word": "air",
+        "start": 6.74,
+        "end": 6.88
+      },
+      {
+        "word": "a",
+        "start": 7.14,
+        "end": 7.22
+      },
+      {
+        "word": "wer",
+        "start": 7.86,
+        "end": 8.36
+      },
+      {
+        "word": "maybe",
+        "start": 8.82,
+        "end": 9.0
+      },
+      {
+        "word": "it's",
+        "start": 9.04,
+        "end": 9.12
+      },
+      {
+        "word": "like",
+        "start": 9.14,
+        "end": 9.26
+      },
+      {
+        "word": "a",
+        "start": 9.3,
+        "end": 9.32
+      },
+      {
+        "word": "kitten",
+        "start": 9.42,
+        "end": 9.82
+      },
+      {
+        "word": "heels",
+        "start": 9.88,
+        "end": 10.26
+      },
+      {
+        "word": "sling",
+        "start": 10.34,
+        "end": 10.56
+      },
+      {
+        "word": "back",
+        "start": 10.6,
+        "end": 10.76
+      },
+      {
+        "word": "kitten",
+        "start": 10.84,
+        "end": 11.18
+      },
+      {
+        "word": "heel",
+        "start": 11.22,
+        "end": 11.44
+      },
+      {
+        "word": "with",
+        "start": 11.48,
+        "end": 11.58
+      },
+      {
+        "word": "your",
+        "start": 11.62,
+        "end": 11.74
+      },
+      {
+        "word": "straight",
+        "start": 11.8,
+        "end": 12.06
+      },
+      {
+        "word": "leg",
+        "start": 12.12,
+        "end": 12.34
+      },
+      {
+        "word": "pant",
+        "start": 12.4,
+        "end": 12.74
+      },
+      {
+        "word": "you",
+        "start": 12.78,
+        "end": 12.88
+      },
+      {
+        "word": "know",
+        "start": 12.92,
+        "end": 13.08
+      },
+      {
+        "word": "i",
+        "start": 13.18,
+        "end": 13.22
+      },
+      {
+        "word": "mean",
+        "start": 13.28,
+        "end": 13.44
+      },
+      {
+        "word": "so",
+        "start": 13.86,
+        "end": 14.0
+      },
+      {
+        "word": "it",
+        "start": 14.08,
+        "end": 14.14
+      },
+      {
+        "word": "kind",
+        "start": 14.18,
+        "end": 14.38
+      },
+      {
+        "word": "of",
+        "start": 14.44,
+        "end": 14.48
+      },
+      {
+        "word": "depends",
+        "start": 14.54,
+        "end": 15.18
+      },
+      {
+        "word": "how",
+        "start": 15.32,
+        "end": 15.56
+      },
+      {
+        "word": "far",
+        "start": 15.72,
+        "end": 15.96
+      },
+      {
+        "word": "you",
+        "start": 16.04,
+        "end": 16.14
+      },
+      {
+        "word": "want",
+        "start": 16.18,
+        "end": 16.3
+      },
+      {
+        "word": "to",
+        "start": 16.32,
+        "end": 16.4
+      },
+      {
+        "word": "go",
+        "start": 16.46,
+        "end": 16.7
+      },
+      {
+        "word": "with",
+        "start": 16.82,
+        "end": 17.06
+      },
+      {
+        "word": "it",
+        "start": 17.24,
+        "end": 17.32
+      },
+      {
+        "word": "but",
+        "start": 17.48,
+        "end": 17.64
+      },
+      {
+        "word": "i",
+        "start": 17.74,
+        "end": 17.84
+      },
+      {
+        "word": "i",
+        "start": 18.5,
+        "end": 18.54
+      },
+      {
+        "word": "don't",
+        "start": 18.58,
+        "end": 18.76
+      },
+      {
+        "word": "know",
+        "start": 18.8,
+        "end": 18.98
+      },
+      {
+        "word": "i",
+        "start": 19.2,
+        "end": 19.3
+      },
+      {
+        "word": "like",
+        "start": 19.4,
+        "end": 19.78
+      },
+      {
+        "word": "reference",
+        "start": 20.54,
+        "end": 20.88
+      },
+      {
+        "word": "sink",
+        "start": 20.9,
+        "end": 21.14
+      },
+      {
+        "word": "back",
+        "start": 21.2,
+        "end": 21.52
+      },
+      {
+        "word": "it's",
+        "start": 21.78,
+        "end": 21.9
+      },
+      {
+        "word": "nastalgic",
+        "start": 21.96,
+        "end": 22.64
+      },
+      {
+        "word": "and",
+        "start": 22.68,
+        "end": 22.76
+      },
+      {
+        "word": "it's",
+        "start": 22.82,
+        "end": 22.92
+      },
+      {
+        "word": "kind",
+        "start": 22.96,
+        "end": 23.14
+      },
+      {
+        "word": "of",
+        "start": 23.18,
+        "end": 23.22
+      },
+      {
+        "word": "fun",
+        "start": 23.3,
+        "end": 23.58
+      },
+      {
+        "word": "and",
+        "start": 23.64,
+        "end": 23.72
+      },
+      {
+        "word": "i'm",
+        "start": 23.82,
+        "end": 23.94
+      },
+      {
+        "word": "always",
+        "start": 23.98,
+        "end": 24.2
+      },
+      {
+        "word": "really",
+        "start": 24.24,
+        "end": 24.46
+      },
+      {
+        "word": "open",
+        "start": 24.58,
+        "end": 24.86
+      },
+      {
+        "word": "to",
+        "start": 24.94,
+        "end": 25.16
+      }
+    ]
+  },
+  {
+    "clip_index": 11,
+    "clip_id": "clip_11",
+    "filename": "syndigate_podcasts_2eb8e17f398651f8abfa0b1c6ba1c3cd_3060.0_3360.0-sortformer-15.wav",
+    "duration_sec": 28.64,
+    "raw_acoustic_text": "EITHER YOU SEE IT A LOT ON IN SOCIAL MEDIA WHERE IT'S LIKEY AT THEY DID THIS TO THEMSELVES OR OR A YOU KNOW THIS THIS IDEA THAT YOU'RE KNOWINGLY DOING SOMETHING I WASN'T IT WAS VERY MUCH SUBCONSCIOUS AND THAT THE I DO THINK GETTING OUT OF IT IT TAKES PERSONAL RESPONSIBILITY AND IS TAKES THAT A INTENTION AND KIND OF YOU HAVE TO KNOWINGLY GET OUT OF IT I DON'T KNOW A LOT OF PEOPLE WHO JUST",
+    "acoustic_words": [
+      {
+        "word": "either",
+        "start": 0.06,
+        "end": 0.36
+      },
+      {
+        "word": "you",
+        "start": 0.44,
+        "end": 0.6
+      },
+      {
+        "word": "see",
+        "start": 0.64,
+        "end": 0.78
+      },
+      {
+        "word": "it",
+        "start": 0.82,
+        "end": 0.86
+      },
+      {
+        "word": "a",
+        "start": 0.92,
+        "end": 0.94
+      },
+      {
+        "word": "lot",
+        "start": 1.0,
+        "end": 1.22
+      },
+      {
+        "word": "on",
+        "start": 1.36,
+        "end": 1.46
+      },
+      {
+        "word": "in",
+        "start": 2.12,
+        "end": 2.2
+      },
+      {
+        "word": "social",
+        "start": 2.28,
+        "end": 2.62
+      },
+      {
+        "word": "media",
+        "start": 2.66,
+        "end": 2.94
+      },
+      {
+        "word": "where",
+        "start": 2.98,
+        "end": 3.14
+      },
+      {
+        "word": "it's",
+        "start": 3.18,
+        "end": 3.3
+      },
+      {
+        "word": "likey",
+        "start": 3.36,
+        "end": 3.66
+      },
+      {
+        "word": "at",
+        "start": 3.8,
+        "end": 3.88
+      },
+      {
+        "word": "they",
+        "start": 4.0,
+        "end": 4.2
+      },
+      {
+        "word": "did",
+        "start": 4.3,
+        "end": 4.48
+      },
+      {
+        "word": "this",
+        "start": 4.52,
+        "end": 4.68
+      },
+      {
+        "word": "to",
+        "start": 4.72,
+        "end": 4.76
+      },
+      {
+        "word": "themselves",
+        "start": 4.86,
+        "end": 5.36
+      },
+      {
+        "word": "or",
+        "start": 5.5,
+        "end": 5.58
+      },
+      {
+        "word": "or",
+        "start": 5.76,
+        "end": 5.92
+      },
+      {
+        "word": "a",
+        "start": 6.28,
+        "end": 6.36
+      },
+      {
+        "word": "you",
+        "start": 7.08,
+        "end": 7.18
+      },
+      {
+        "word": "know",
+        "start": 7.22,
+        "end": 7.38
+      },
+      {
+        "word": "this",
+        "start": 7.52,
+        "end": 7.7
+      },
+      {
+        "word": "this",
+        "start": 7.78,
+        "end": 7.94
+      },
+      {
+        "word": "idea",
+        "start": 8.06,
+        "end": 8.46
+      },
+      {
+        "word": "that",
+        "start": 8.58,
+        "end": 8.74
+      },
+      {
+        "word": "you're",
+        "start": 8.84,
+        "end": 9.08
+      },
+      {
+        "word": "knowingly",
+        "start": 9.26,
+        "end": 9.8
+      },
+      {
+        "word": "doing",
+        "start": 9.88,
+        "end": 10.14
+      },
+      {
+        "word": "something",
+        "start": 10.22,
+        "end": 10.58
+      },
+      {
+        "word": "i",
+        "start": 10.72,
+        "end": 10.76
+      },
+      {
+        "word": "wasn't",
+        "start": 10.82,
+        "end": 11.18
+      },
+      {
+        "word": "it",
+        "start": 11.54,
+        "end": 11.6
+      },
+      {
+        "word": "was",
+        "start": 11.66,
+        "end": 11.84
+      },
+      {
+        "word": "very",
+        "start": 12.0,
+        "end": 12.32
+      },
+      {
+        "word": "much",
+        "start": 12.44,
+        "end": 12.68
+      },
+      {
+        "word": "subconscious",
+        "start": 12.88,
+        "end": 13.68
+      },
+      {
+        "word": "and",
+        "start": 13.94,
+        "end": 14.06
+      },
+      {
+        "word": "that",
+        "start": 14.12,
+        "end": 14.34
+      },
+      {
+        "word": "the",
+        "start": 15.32,
+        "end": 15.48
+      },
+      {
+        "word": "i",
+        "start": 16.02,
+        "end": 16.08
+      },
+      {
+        "word": "do",
+        "start": 16.14,
+        "end": 16.3
+      },
+      {
+        "word": "think",
+        "start": 16.36,
+        "end": 16.56
+      },
+      {
+        "word": "getting",
+        "start": 16.76,
+        "end": 17.06
+      },
+      {
+        "word": "out",
+        "start": 17.22,
+        "end": 17.32
+      },
+      {
+        "word": "of",
+        "start": 17.38,
+        "end": 17.44
+      },
+      {
+        "word": "it",
+        "start": 17.54,
+        "end": 17.6
+      },
+      {
+        "word": "it",
+        "start": 18.04,
+        "end": 18.1
+      },
+      {
+        "word": "takes",
+        "start": 18.22,
+        "end": 18.52
+      },
+      {
+        "word": "personal",
+        "start": 18.64,
+        "end": 19.06
+      },
+      {
+        "word": "responsibility",
+        "start": 19.1,
+        "end": 19.88
+      },
+      {
+        "word": "and",
+        "start": 20.06,
+        "end": 20.18
+      },
+      {
+        "word": "is",
+        "start": 20.42,
+        "end": 20.56
+      },
+      {
+        "word": "takes",
+        "start": 20.88,
+        "end": 21.2
+      },
+      {
+        "word": "that",
+        "start": 21.34,
+        "end": 21.62
+      },
+      {
+        "word": "a",
+        "start": 22.0,
+        "end": 22.06
+      },
+      {
+        "word": "intention",
+        "start": 22.24,
+        "end": 22.9
+      },
+      {
+        "word": "and",
+        "start": 23.18,
+        "end": 23.32
+      },
+      {
+        "word": "kind",
+        "start": 23.88,
+        "end": 24.14
+      },
+      {
+        "word": "of",
+        "start": 24.2,
+        "end": 24.26
+      },
+      {
+        "word": "you",
+        "start": 24.3,
+        "end": 24.46
+      },
+      {
+        "word": "have",
+        "start": 24.5,
+        "end": 24.7
+      },
+      {
+        "word": "to",
+        "start": 24.74,
+        "end": 24.86
+      },
+      {
+        "word": "knowingly",
+        "start": 24.94,
+        "end": 25.42
+      },
+      {
+        "word": "get",
+        "start": 25.48,
+        "end": 25.62
+      },
+      {
+        "word": "out",
+        "start": 25.78,
+        "end": 25.88
+      },
+      {
+        "word": "of",
+        "start": 25.94,
+        "end": 25.98
+      },
+      {
+        "word": "it",
+        "start": 26.08,
+        "end": 26.14
+      },
+      {
+        "word": "i",
+        "start": 26.52,
+        "end": 26.56
+      },
+      {
+        "word": "don't",
+        "start": 26.64,
+        "end": 26.82
+      },
+      {
+        "word": "know",
+        "start": 26.86,
+        "end": 26.98
+      },
+      {
+        "word": "a",
+        "start": 27.04,
+        "end": 27.06
+      },
+      {
+        "word": "lot",
+        "start": 27.1,
+        "end": 27.24
+      },
+      {
+        "word": "of",
+        "start": 27.28,
+        "end": 27.32
+      },
+      {
+        "word": "people",
+        "start": 27.34,
+        "end": 27.6
+      },
+      {
+        "word": "who",
+        "start": 27.66,
+        "end": 27.78
+      },
+      {
+        "word": "just",
+        "start": 27.84,
+        "end": 28.12
+      }
+    ]
+  }
+]

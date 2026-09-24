@@ -1,0 +1,59 @@
+✓ Initialized. View run at 
+https://modal.com/apps/alinarohannes777/main/ap-xnoQmWLFyAjEp0LoasgDEk
+✓ Created objects.
+├── 🔨 Created mount F:\BB\ETN-SC\pulsar_auto\modal_crisperwhisper.py
+└── 🔨 Created function CrisperWhisperService.*.
+clip 0: forced_align on 68 gold words...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+[1AFetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]
+[1AFetching 11 files: 100%|██████████| 11/11 [00:00<00:00, 1093.66it/s]
+
+[1ALoading weights:   0%|          | 0/1259 [00:00<?, ?it/s]
+[1ALoading weights:   8%|▊         | 105/1259 [00:00<00:01, 1018.61it/s]
+[1ALoading weights:  20%|██        | 255/1259 [00:00<00:00, 1283.42it/s]
+[1ALoading weights:  33%|███▎      | 410/1259 [00:00<00:00, 1374.98it/s]
+[1ALoading weights:  46%|████▌     | 576/1259 [00:00<00:00, 1483.44it/s]
+[1ALoading weights:  58%|█████▊    | 734/1259 [00:00<00:00, 1517.43it/s]
+[1ALoading weights:  70%|███████   | 886/1259 [00:00<00:00, 1326.92it/s]
+[1ALoading weights:  81%|████████▏ | 1023/1259 [00:00<00:00, 1339.42it/s]
+[1ALoading weights:  92%|█████████▏| 1160/1259 [00:00<00:00, 1264.79it/s]Loading weights: 100%|██████████| 1259/1259 [00:00<00:00, 1354.91it/s]
+[transformers] [1mWhisperForConditionalGeneration LOAD REPORT[0m from: /__modal/volumes/vo-AUV8IE5e0IAcZtNpMbQG33/hf/hub/models--nyralabs--CrisperWhisper2.0_large/snapshots/f4334f6e8193f2691212d49b20fa12d370e13896
+Key                       | Status     |  | 
+--------------------------+------------+--+-
+encoder_blank_head.bias   | UNEXPECTED |  | 
+encoder_blank_head.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:   can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  -> 68 words returned
+clip 1: forced_align on 88 gold words...
+  -> 88 words returned
+clip 2: forced_align on 109 gold words...
+  -> 109 words returned
+clip 3: forced_align on 74 gold words...
+  -> 74 words returned
+clip 4: forced_align on 51 gold words...
+  -> 51 words returned
+clip 5: forced_align on 54 gold words...
+  -> 54 words returned
+clip 6: forced_align on 54 gold words...
+  -> 54 words returned
+clip 7: forced_align on 45 gold words...
+  -> 45 words returned
+clip 8: forced_align on 69 gold words...
+  -> 69 words returned
+clip 9: forced_align on 38 gold words...
+  -> 38 words returned
+clip 10: forced_align on 28 gold words...
+  -> 28 words returned
+clip 11: forced_align on 62 gold words...
+  -> 62 words returned
+clip 12: forced_align on 74 gold words...
+  -> 74 words returned
+clip 13: forced_align on 44 gold words...
+  -> 44 words returned
+Wrote output/crisperwhisper_forced_align.json
+Stopping app - local entrypoint completed.
+✓ App completed. View run at 
+https://modal.com/apps/alinarohannes777/main/ap-xnoQmWLFyAjEp0LoasgDEk

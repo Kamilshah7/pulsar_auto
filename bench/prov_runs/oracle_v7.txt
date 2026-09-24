@@ -1,0 +1,68 @@
+(38s)  continuous joins between different manner classes
+
+ALL  n=2140
+    lexical median                       MAE  22.0  med  16.0  w5   17%  w10   35%
+    split @ lexical +-20                 MAE  20.4  med  16.0  w5   19%  w10   38%
+    split @ GOLD +-20 (oracle)           MAE  14.4  med  20.0  w5   17%  w10   32%
+    split @ GOLD +-40 (oracle)           MAE  24.8  med  28.0  w5   15%  w10   28%
+    loudness min @ GOLD +-20 (oracle)    MAE  10.9  med  10.0  w5   27%  w10   50%
+vowel>fric  n=266
+    lexical median                       MAE  29.6  med  26.0  w5   12%  w10   24%
+    split @ lexical +-20                 MAE  24.1  med  19.0  w5   15%  w10   31%
+    split @ GOLD +-20 (oracle)           MAE  14.3  med  20.0  w5   17%  w10   33%
+    split @ GOLD +-40 (oracle)           MAE  25.2  med  32.0  w5   15%  w10   30%
+    loudness min @ GOLD +-20 (oracle)    MAE  11.9  med  14.0  w5   20%  w10   44%
+stop>vowel  n=219
+    lexical median                       MAE  23.1  med  20.0  w5   12%  w10   30%
+    split @ lexical +-20                 MAE  18.0  med  12.0  w5   25%  w10   49%
+    split @ GOLD +-20 (oracle)           MAE  13.7  med  18.0  w5   22%  w10   36%
+    split @ GOLD +-40 (oracle)           MAE  25.3  med  34.0  w5   18%  w10   29%
+    loudness min @ GOLD +-20 (oracle)    MAE  11.7  med  12.0  w5   21%  w10   45%
+vowel>stop  n=209
+    lexical median                       MAE  18.8  med  14.0  w5   19%  w10   41%
+    split @ lexical +-20                 MAE  21.1  med  14.0  w5   19%  w10   36%
+    split @ GOLD +-20 (oracle)           MAE  14.6  med  20.0  w5   17%  w10   30%
+    split @ GOLD +-40 (oracle)           MAE  28.1  med  40.0  w5   11%  w10   20%
+    loudness min @ GOLD +-20 (oracle)    MAE   8.0  med   6.0  w5   48%  w10   71%
+stop>fric  n=175
+    lexical median                       MAE  22.1  med  16.0  w5   21%  w10   39%
+    split @ lexical +-20                 MAE  24.5  med  20.0  w5   12%  w10   25%
+    split @ GOLD +-20 (oracle)           MAE  16.2  med  20.0  w5   10%  w10   21%
+    split @ GOLD +-40 (oracle)           MAE  30.6  med  40.0  w5    8%  w10   17%
+    loudness min @ GOLD +-20 (oracle)    MAE  10.5  med  10.0  w5   29%  w10   53%
+fric>vowel  n=149
+    lexical median                       MAE  20.9  med  16.0  w5   19%  w10   37%
+    split @ lexical +-20                 MAE  14.8  med  10.0  w5   28%  w10   53%
+    split @ GOLD +-20 (oracle)           MAE  10.4  med   8.0  w5   33%  w10   56%
+    split @ GOLD +-40 (oracle)           MAE  15.5  med   8.0  w5   32%  w10   55%
+    loudness min @ GOLD +-20 (oracle)    MAE  12.1  med  12.0  w5   14%  w10   44%
+vowel>glide  n=136
+    lexical median                       MAE  21.2  med  16.0  w5   15%  w10   38%
+    split @ lexical +-20                 MAE  26.8  med  22.0  w5   11%  w10   24%
+    split @ GOLD +-20 (oracle)           MAE  17.6  med  20.0  w5    4%  w10   12%
+    split @ GOLD +-40 (oracle)           MAE  31.1  med  40.0  w5    4%  w10   10%
+    loudness min @ GOLD +-20 (oracle)    MAE  12.6  med  14.0  w5   20%  w10   39%
+nasal>vowel  n=135
+    lexical median                       MAE  27.5  med  20.0  w5    4%  w10   19%
+    split @ lexical +-20                 MAE  17.8  med  10.0  w5   25%  w10   50%
+    split @ GOLD +-20 (oracle)           MAE  11.6  med  12.0  w5   27%  w10   49%
+    split @ GOLD +-40 (oracle)           MAE  19.0  med  14.0  w5   23%  w10   44%
+    loudness min @ GOLD +-20 (oracle)    MAE  13.1  med  14.0  w5   18%  w10   37%
+nasal>fric  n=132
+    lexical median                       MAE  20.4  med  16.0  w5   18%  w10   37%
+    split @ lexical +-20                 MAE  15.8  med  10.0  w5   20%  w10   53%
+    split @ GOLD +-20 (oracle)           MAE  13.0  med  14.0  w5   20%  w10   41%
+    split @ GOLD +-40 (oracle)           MAE  19.9  med  15.0  w5   18%  w10   39%
+    loudness min @ GOLD +-20 (oracle)    MAE  11.4  med  12.0  w5   18%  w10   46%
+vowel>nasal  n=93
+    lexical median                       MAE  18.7  med  14.0  w5   22%  w10   43%
+    split @ lexical +-20                 MAE  19.9  med  16.0  w5   15%  w10   39%
+    split @ GOLD +-20 (oracle)           MAE  15.1  med  20.0  w5   12%  w10   31%
+    split @ GOLD +-40 (oracle)           MAE  25.5  med  32.0  w5   12%  w10   28%
+    loudness min @ GOLD +-20 (oracle)    MAE  10.3  med  10.0  w5   31%  w10   56%
+vowel>liquid  n=91
+    lexical median                       MAE  24.0  med  18.0  w5   14%  w10   32%
+    split @ lexical +-20                 MAE  26.6  med  22.0  w5   10%  w10   20%
+    split @ GOLD +-20 (oracle)           MAE  17.2  med  20.0  w5    7%  w10   14%
+    split @ GOLD +-40 (oracle)           MAE  29.0  med  34.0  w5    7%  w10   12%
+    loudness min @ GOLD +-20 (oracle)    MAE  10.8  med  10.0  w5   24%  w10   51%

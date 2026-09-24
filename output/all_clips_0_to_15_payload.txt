@@ -1,0 +1,184 @@
+=== CLIPS TO PROCESS ===
+
+--- CLIP 0 (zencastr-en_66589d8247eb9800139a4b85-00000_41.wav) ---
+1. Whisper Full Text:
+   "the one thing I will say is that had the war begun because of this popular scenario for Irish news readers Neil it would have been it would have been a bumper day because obviously all around the world people like to do terrible impersonations of Irish accents and say oh sure look World War 3 has begun but it actually would have been World War 3"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "THE THE ON THE OTHE MONING I WILL SAY IS THAT HAD THE WAR BEGUN BECAUSE OF THIS POPULAR SCENARIO FOR IRISH NEWSREADERS NEEL IT WOULD HAVE BEEN IT WOULD HAVE BEEN A BUMPER DAY CAUSE OBVIOUSLY ALL AROUND THE WORLD PEOPLE LIKE TO DO TERRIBLE IN PERSONATIONS OF OUR SAXONS AND SAY AH SHURLOOK WORLDWAR TREE HAS BEGUN BUT AN ACTUALLY WOULD HAVE BEEN WORLD WORCHREE"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'the' [0.00s - 1.92s] -> Acoustic CTC heard: ['the']
+   - Whisper 'one' [1.92s - 2.82s] -> Acoustic CTC heard: ['the', 'the', 'on', 'the', 'othe']
+   - Whisper 'because' [4.90s - 6.26s] -> Acoustic CTC heard: ['begun']
+   - Whisper 'for' [7.94s - 9.18s] -> Acoustic CTC heard: ['scenario', 'for']
+   - Whisper 'it' [10.26s - 11.22s] -> Acoustic CTC heard: ['neel', 'it']
+   - Whisper 'it' [11.44s - 12.16s] -> Acoustic CTC heard: ['would', 'have', 'been', 'it', 'would']
+   - Whisper 'and' [17.36s - 18.14s] -> Acoustic CTC heard: ['of', 'our', 'saxons', 'and']
+4. Targeted Micro-Slice detected 77 words (vs Whisper's 67 words).
+============================================================
+
+--- CLIP 1 (zencastr-en_66589d8247eb9800139a4b85-00000_57.wav) ---
+1. Whisper Full Text:
+   "Wow, the longest border in the world. That's an incredible question. Russia and Mongolia."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "WOW THE LONGEST BORDER IN THE WORLD THAT'S THE CREDIBLE QUESTION A ROSHA AND MONGOLIA"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'and' [5.32s - 6.36s] -> Acoustic CTC heard: ['and']
+   - Whisper 'Mongolia.' [6.36s - 8.00s] -> Acoustic CTC heard: ['and', 'mongolia']
+============================================================
+
+--- CLIP 2 (zencastr-en_6668ae42d0c186248b5496d7-00005_16.wav) ---
+1. Whisper Full Text:
+   "Mm-hmm. It's so true. Yeah. And I like what you said earlier too, about just like the little wins, right? Like if you can reduce something that you know might have that potential, then that's great. But like even Jeanette was saying, like sometimes like you walk out of your apartment in Toronto and it's like, oh gosh, like what am I even breathing in today? So there's like the modifiable things and then there's the-"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "M IT'S SO TRUE YE AND I LIKE WHAT YOU SAID EARLY OR TWO ABOUT JUST LIKE THE LITTLE WINDS RIGHT LIKE IF YOU CAN REDUCE SOMETHING THAT YOU KNOW MIGHT HAVE THAT POTENTIAL THAN THAT'S CREAT BUT LIKE EVEN GEANETT WAS SAYING LIKE SOMETIMES LIKE YOU YOU WALK OUT OF YOUR APARTMENT IN CHIRONO AND IT'S LIKE OH GOSH LIKE WHAT AM I EVEN BREATHING IN TO DAY S THERE'S LIKE THE MOTOFIABLE THINGS AND THEN THERE'S THE"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'It's' [0.28s - 2.54s] -> Acoustic CTC heard: ['m', "it's"]
+   - Whisper 'true.' [2.76s - 4.42s] -> Acoustic CTC heard: ['so', 'true']
+   - Whisper 'wins,' [7.48s - 8.60s] -> Acoustic CTC heard: ['little', 'winds']
+   - Whisper 'today?' [20.98s - 22.36s] -> Acoustic CTC heard: ['in', 'to', 'day']
+4. Targeted Micro-Slice detected 78 words (vs Whisper's 76 words).
+============================================================
+
+--- CLIP 3 (zencastr-en_66971c93200e233516a91b55-00004_0.wav) ---
+1. Whisper Full Text:
+   "or not. So, uh, that was mostly just a call out to Nick Allen. Hey, Nick. Hey,"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "OR NOT SO A THOU'S MOSTLY JUST CALL OUT TO NICKALLAN HEYNICK"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'Hey,' [3.86s - 6.88s] -> Acoustic CTC heard: ['heynick']
+4. Targeted Micro-Slice detected 21 words (vs Whisper's 17 words).
+============================================================
+
+--- CLIP 4 (zencastr-en_66971c93200e233516a91b55-00004_15.wav) ---
+1. Whisper Full Text:
+   "Did you guys ever see Battlestar Galactica, the new one? It was kind of fun. It's very dated. I don't think I could possibly enjoy it now. But it was a really big thing way back when. And every single episode did this. Pretty much every single episode. And it was just kind of a trick to hook you with the exciting part of the movie. I think that's why it did it. I don't necessarily know why Werner Herzog did it this way. Because I..."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "DID YOU EVER SEE LIKE BATTLE STARGALATKA THE NEW ONE UM IT WAS KIND OF FUN IT'S VERY DATED I DON'T THINK I COULD POSSIBLY ENJOY IT NOW BUT IT WAS A REALLY BIG THING WAY BACK WHEN AND EVERY SINGLE EPISODE DID THIS LIKE PRETTY MUCH EVERY SINGLE EPISODE AND IT WAS JUST KIND OF A TRICK TO LIKE TO HOOK YOU WITH THE EXCITING PART OF THE MOVY I THINK THAT'S WHY IT WOULD IT I DON'T KNOW I DON'T NECESSARILY KNOW WHY VERNAR HERTSOK DID IT THIS WAX I"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'one?' [2.80s - 3.48s] -> Acoustic CTC heard: ['new', 'one']
+   - Whisper 'It' [4.80s - 5.48s] -> Acoustic CTC heard: ['um']
+   - Whisper 'fun.' [6.28s - 7.28s] -> Acoustic CTC heard: ['of', 'fun', "it's"]
+   - Whisper 'And' [12.68s - 13.82s] -> Acoustic CTC heard: ['back', 'when', 'and']
+   - Whisper 'hook' [19.54s - 20.94s] -> Acoustic CTC heard: ['to', 'like', 'to', 'hook']
+4. Targeted Micro-Slice detected 91 words (vs Whisper's 86 words).
+============================================================
+
+--- CLIP 5 (zencastr-en_66971c93200e233516a91b55-00004_50.wav) ---
+1. Whisper Full Text:
+   "Yes. That was my favorite. Okay, I'm just gonna say now, my favorite part of the movie is that Gael Garcia Bernal is, like, even in the movie, like, considered in the movie, when he's just kind of like this guy who wandered onto the set pretty much for one scene."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "YES THAT WAS MY FIT I OOKAM JUST GOINGTO SAY NOW MY FAVOURITE PART OF THE MOVI IS THAT GALGARSIA BARNAL IS LIKE EVEN IN THE MOVI LIKE CONSIDERED IN THE MOVI WHEN HE'S JUST KIND OF LIKE THIS GUY HE WANDERED ONTO THE SAT PRETTY MUCH FOR ONE SCENE"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'Yes.' [0.00s - 2.06s] -> Acoustic CTC heard: ['yes', 'that']
+   - Whisper 'Gael' [6.04s - 7.10s] -> Acoustic CTC heard: []
+============================================================
+
+--- CLIP 6 (zencastr-en_66a91dcbd392b8434b26caf7-00001_34.wav) ---
+1. Whisper Full Text:
+   "I love that. I would say then, just to kind of recap the second episode, again, it kind of encapsulates what happens later in the season. Because I didn't even think about him being the asshole and then Richie being actually more mature throughout. So that's a really good observation. Mm-hmm. Yeah."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "I LOVE THAT II WOULD SAY THEN JUST A KIND OF RECAPT THE SECOND EPISODE AGAIN IT A KIND OF INCAPISATES WHAT HAPPENS LATER IN THE THE SEASON CAUSE I DIDN'T THINK ABOUT HIM BEING THE ASSHOLE AND THEN IN THEN RICHY BEING ACTUALLY MORE MATURED THROUGHOUT SO THAT'S UT ERALLY GOOD OBSERVATION  YEH"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'and' [9.52s - 10.26s] -> Acoustic CTC heard: ['and', 'then']
+4. Targeted Micro-Slice detected 53 words (vs Whisper's 52 words).
+============================================================
+
+--- CLIP 7 (zencastr-en_66a91dcbd392b8434b26caf7-00002_37.wav) ---
+1. Whisper Full Text:
+   "Oh, no, why? I mean, you know what it is? It's the book people that are like, oh, they were enemies at first, and then they become lovers. And I'm like, we don't need that here. We don't need that here. He's also more of a mentor figure than a love interest figure."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "OH AH NO WHY I MEAN YOU KNOW WHAT IT IS IT'S THE IT'S THE BOOK PEOPLE THAT ARE LIKE OH THEY WERE ENEMIES AT FIRST AND THEN THEY BECOME LOVERS AND U'LIKE WE DON'T NEED THO HEAR WE DON'T NEED TO HEAR SHES HE'S ALSO LIKE MORE BIKEAMENTOR FIGURE THAN ANASIN A THEN A THEN A LOVE INTEREST"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'Oh,' [0.00s - 1.86s] -> Acoustic CTC heard: ['oh']
+   - Whisper 'why?' [2.54s - 3.62s] -> Acoustic CTC heard: ['no', 'why']
+   - Whisper 'mean,' [4.08s - 5.64s] -> Acoustic CTC heard: ['i', 'mean', 'you']
+   - Whisper 'book' [7.78s - 9.46s] -> Acoustic CTC heard: ["it's", 'the', 'book']
+   - Whisper 'than' [19.30s - 20.22s] -> Acoustic CTC heard: ['than']
+   - Whisper 'a' [20.22s - 23.22s] -> Acoustic CTC heard: ['anasin', 'a', 'then', 'a', 'then', 'a']
+4. Targeted Micro-Slice detected 66 words (vs Whisper's 53 words).
+============================================================
+
+--- CLIP 8 (zencastr-en_66a91dcbd392b8434b26caf7-00002_49.wav) ---
+1. Whisper Full Text:
+   "I think I think I think Sydney and Marcus should get together that's where it should be they have a little bit of history a little bit of reluctancy from Sydney but ultimately I think they get along really well but that's only if we really wanted to have them together they're great as friends"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "I THINK I THINK I I THINK SIDNEY AND MARCUS SHOULD GET TOGETHER THAT'S WHERE IT SHOULD BE UT THEY HAVE A LITTLE BIT OF HISTORY LITTLE BIT OF A RELUCTANCY FROM SYDNEY BUT ALTIRNATELY I THINK THEY GET ALONG REALLY WELL BUT THAT'S ONLY IF WE REALLY WANTED TO HAVE THEM TOGETHER  THEY'RE GREATEST FRIENDS"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'think' [1.00s - 3.62s] -> Acoustic CTC heard: ['i', 'think']
+   - Whisper 'think' [5.24s - 7.54s] -> Acoustic CTC heard: ['i', 'think', 'i', 'i', 'think']
+   - Whisper 'and' [7.74s - 8.96s] -> Acoustic CTC heard: ['sidney', 'and']
+   - Whisper 'that's' [9.56s - 10.74s] -> Acoustic CTC heard: ['should', 'get', 'together', "that's"]
+   - Whisper 'they' [11.28s - 12.84s] -> Acoustic CTC heard: ['it', 'should', 'be', 'ut', 'they']
+   - Whisper 'a' [13.86s - 14.90s] -> Acoustic CTC heard: ['bit', 'of', 'history', 'little']
+   - Whisper 'reluctancy' [15.48s - 16.58s] -> Acoustic CTC heard: ['of', 'a', 'reluctancy']
+   - Whisper 'ultimately' [17.82s - 18.90s] -> Acoustic CTC heard: ['but', 'altirnately', 'i']
+   - Whisper 'to' [21.80s - 22.58s] -> Acoustic CTC heard: ['really', 'wanted', 'to']
+4. Targeted Micro-Slice detected 71 words (vs Whisper's 55 words).
+============================================================
+
+--- CLIP 9 (zencastr-en_66a91dcbd392b8434b26caf7-00002_75.wav) ---
+1. Whisper Full Text:
+   "Oh, there is a word for it, isn't there? I think there is. Or was that... Brendan Fraser... The Fraser Sons or something. Brendan Fraser..."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "OH THERE IS A WORD FOR IT ISN'T THERE I THINK THERE IS OR WAS THAT BRENDON FRASIER MY CONNISTHAN THE FRASIER SONS FOR SOMETHING BRENDON FRASIER"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'The' [7.30s - 8.26s] -> Acoustic CTC heard: ['my', 'connisthan', 'the']
+============================================================
+
+--- CLIP 10 (zencastr-en_66a91dcbd392b8434b26caf7-00003_32.wav) ---
+1. Whisper Full Text:
+   "Well, first of all, I think I need to do some Weezer research because I never really listened to them. I know. Blew up. All right. So to kind of rewind a little bit, Abby Elliott, I think, has really turned it around because I remember when I saw the first season..."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "WELL FIRST OF ALL I THINK I NEED TO DO SOME WEEZER RESEARCH CAUSE I I NEVER REALLY LISTENED TO THEM A I KNOW BLEW UP ALL RIGHT SO A CONTARY WINED A LITTLE BABBEY ALLEY I THINK HAS REALLY TURNED IT AROUND BECAUSE I REMEMBER WHEN I SAW THE FIRST SEASON"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'Well,' [0.00s - 2.12s] -> Acoustic CTC heard: ['well', 'first', 'of']
+4. Targeted Micro-Slice detected 55 words (vs Whisper's 52 words).
+============================================================
+
+--- CLIP 11 (zencastr-en_66a91dcbd392b8434b26caf7-00003_38.wav) ---
+1. Whisper Full Text:
+   "And like there are like she was told it was going to be a comedy. And she's like, I see some of it, but it's not quite what I expected."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "AND LIKE THER ARS LIKE SHE WAS TOLD IT WAS GOING TO BE A COMEDY AND SHE'S LIKE I SEE SOME OF IT BUT IT'S NOT QUITE WHAT I EXPECTED"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'it's' [4.70s - 5.70s] -> Acoustic CTC heard: ['but', "it's", 'not']
+============================================================
+
+--- CLIP 12 (zencastr-en_66a91dcbd392b8434b26caf7-00003_77.wav) ---
+1. Whisper Full Text:
+   "Oh, yeah. She's like, oh, this is stale brownie. Or this is bland ice cream. Mm-hmm. Mm-hmm."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "OH YAH JIS LIKE ALL THIS IS STALE BROWNIE OR THIS IS BLAND ICE CREAM MM M"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'yeah.' [0.30s - 1.32s] -> Acoustic CTC heard: ['oh', 'yah', 'jis']
+   - Whisper 'bland' [3.60s - 4.78s] -> Acoustic CTC heard: ['is']
+============================================================
+
+--- CLIP 13 (zencastr-en_66a91dcbd392b8434b26caf7-00003_84.wav) ---
+1. Whisper Full Text:
+   "You know, I wouldn't be surprised if they do it like the banana. It's at the end of the season, at the end of the show. Like, he makes the perfect donut. You know he's happy."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "YOU KNOW II WOULD BE I WOULDN'T BE SURPRISED IF THEY'D DO IT LIKE THE BANANA IT'S AT THAT END OF THE SEASON AT THE END OF THE SHOW LIKE HE MAKES THE PERFECT DOUGHNA AND YOU KNOW HE'S HAPPY"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'surprised' [0.90s - 3.60s] -> Acoustic CTC heard: ['be', 'i', "wouldn't", 'be']
+4. Targeted Micro-Slice detected 39 words (vs Whisper's 36 words).
+============================================================
+
+--- CLIP 14 (zencastr-en_66a91dcbd392b8434b26caf7-00004_19.wav) ---
+1. Whisper Full Text:
+   "And I think it was because also Mikey was the one that gave her that chance. And so, like, we don't know how long she was there before Carmi came in."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "AND I THINK IT WAS BECAUSE ALSO MIKEY WAS THE ONE THAT GAVE HER THAT CHANCE AND OH LIKE WE DON'T KNOW HOW LONG SHE WAS THERE BEFORE A A CARMICEMAN"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'Carmi' [7.08s - 8.44s] -> Acoustic CTC heard: ['a', 'a']
+============================================================
+
+--- CLIP 15 (zencastr-en_66a91dcbd392b8434b26caf7-00004_6.wav) ---
+1. Whisper Full Text:
+   "Oh, man. Also, as a photographer, I was kind of offended by how badly they portrayed the photographer in this. It's like, why is he so close to the table? Like, maybe you'll get one photograph of the centerpiece. You're going to get a photo of the entire room. Everyone should leave the room and this should be just the photographer and the person with him. It's just so annoying to see photographers portrayed poorly. Yeah."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "OMENT ALSO AS A PHOTOGRAPHER I WAS A KIND OF OFFENDED BY HOW BADLY THEY PORTRAYED THE PHOTOGRAPHER IN THIS IT'S LIKE WHY'S HE SO CLOSE TO THE TABLE LIKE MAYBE YOU'LL GET ONE PHOTOGRAPH OF THE CENTRE PIECE YOU'RE GOING TO GET A PHOTO OF THE ENTIRE ROOM EVERY ONE SHOULD LEAVE THE ROOM AND THERE SHOULD BE JUST A PHOTOGRAPHER AND THE PERSON WITH HIM IT IT'S SO ANNOYING TO SEE PHOTOGRAPHERS PORTRAYED POORLY"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'maybe' [10.92s - 12.42s] -> Acoustic CTC heard: ['maybe']
+4. Targeted Micro-Slice detected 77 words (vs Whisper's 76 words).
+============================================================

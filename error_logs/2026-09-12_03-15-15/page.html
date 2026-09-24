@@ -1,0 +1,451 @@
+<!-- 
+  NOTE: Our Content Security Policy does not permit inline scripts.
+  Please keep scripts in the `public/scripts` directory and use them as a src.
+--><!DOCTYPE html><html lang="en" data-dark=""><head><style type="text/css">.swal-icon--error{border-color:#f27474;-webkit-animation:animateErrorIcon .5s;animation:animateErrorIcon .5s}.swal-icon--error__x-mark{position:relative;display:block;-webkit-animation:animateXMark .5s;animation:animateXMark .5s}.swal-icon--error__line{position:absolute;height:5px;width:47px;background-color:#f27474;display:block;top:37px;border-radius:2px}.swal-icon--error__line--left{-webkit-transform:rotate(45deg);transform:rotate(45deg);left:17px}.swal-icon--error__line--right{-webkit-transform:rotate(-45deg);transform:rotate(-45deg);right:16px}@-webkit-keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@-webkit-keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}@keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}.swal-icon--warning{border-color:#f8bb86;-webkit-animation:pulseWarning .75s infinite alternate;animation:pulseWarning .75s infinite alternate}.swal-icon--warning__body{width:5px;height:47px;top:10px;border-radius:2px;margin-left:-2px}.swal-icon--warning__body,.swal-icon--warning__dot{position:absolute;left:50%;background-color:#f8bb86}.swal-icon--warning__dot{width:7px;height:7px;border-radius:50%;margin-left:-4px;bottom:-11px}@-webkit-keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}@keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}.swal-icon--success{border-color:#a5dc86}.swal-icon--success:after,.swal-icon--success:before{content:"";border-radius:50%;position:absolute;width:60px;height:120px;background:#fff;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.swal-icon--success:before{border-radius:120px 0 0 120px;top:-7px;left:-33px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:60px 60px;transform-origin:60px 60px}.swal-icon--success:after{border-radius:0 120px 120px 0;top:-11px;left:30px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:0 60px;transform-origin:0 60px;-webkit-animation:rotatePlaceholder 4.25s ease-in;animation:rotatePlaceholder 4.25s ease-in}.swal-icon--success__ring{width:80px;height:80px;border:4px solid hsla(98,55%,69%,.2);border-radius:50%;box-sizing:content-box;position:absolute;left:-4px;top:-4px;z-index:2}.swal-icon--success__hide-corners{width:5px;height:90px;background-color:#fff;padding:1px;position:absolute;left:28px;top:8px;z-index:1;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.swal-icon--success__line{height:5px;background-color:#a5dc86;display:block;border-radius:2px;position:absolute;z-index:2}.swal-icon--success__line--tip{width:25px;left:14px;top:46px;-webkit-transform:rotate(45deg);transform:rotate(45deg);-webkit-animation:animateSuccessTip .75s;animation:animateSuccessTip .75s}.swal-icon--success__line--long{width:47px;right:8px;top:38px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-animation:animateSuccessLong .75s;animation:animateSuccessLong .75s}@-webkit-keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@-webkit-keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@-webkit-keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}@keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}.swal-icon--info{border-color:#c9dae1}.swal-icon--info:before{width:5px;height:29px;bottom:17px;border-radius:2px;margin-left:-2px}.swal-icon--info:after,.swal-icon--info:before{content:"";position:absolute;left:50%;background-color:#c9dae1}.swal-icon--info:after{width:7px;height:7px;border-radius:50%;margin-left:-3px;top:19px}.swal-icon{width:80px;height:80px;border-width:4px;border-style:solid;border-radius:50%;padding:0;position:relative;box-sizing:content-box;margin:20px auto}.swal-icon:first-child{margin-top:32px}.swal-icon--custom{width:auto;height:auto;max-width:100%;border:none;border-radius:0}.swal-icon img{max-width:100%;max-height:100%}.swal-title{color:rgba(0,0,0,.65);font-weight:600;text-transform:none;position:relative;display:block;padding:13px 16px;font-size:27px;line-height:normal;text-align:center;margin-bottom:0}.swal-title:first-child{margin-top:26px}.swal-title:not(:first-child){padding-bottom:0}.swal-title:not(:last-child){margin-bottom:13px}.swal-text{font-size:16px;position:relative;float:none;line-height:normal;vertical-align:top;text-align:left;display:inline-block;margin:0;padding:0 10px;font-weight:400;color:rgba(0,0,0,.64);max-width:calc(100% - 20px);overflow-wrap:break-word;box-sizing:border-box}.swal-text:first-child{margin-top:45px}.swal-text:last-child{margin-bottom:45px}.swal-footer{text-align:right;padding-top:13px;margin-top:13px;padding:13px 16px;border-radius:inherit;border-top-left-radius:0;border-top-right-radius:0}.swal-button-container{margin:5px;display:inline-block;position:relative}.swal-button{background-color:#7cd1f9;color:#fff;border:none;box-shadow:none;border-radius:5px;font-weight:600;font-size:14px;padding:10px 24px;margin:0;cursor:pointer}.swal-button:not([disabled]):hover{background-color:#78cbf2}.swal-button:active{background-color:#70bce0}.swal-button:focus{outline:none;box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(43,114,165,.29)}.swal-button[disabled]{opacity:.5;cursor:default}.swal-button::-moz-focus-inner{border:0}.swal-button--cancel{color:#555;background-color:#efefef}.swal-button--cancel:not([disabled]):hover{background-color:#e8e8e8}.swal-button--cancel:active{background-color:#d7d7d7}.swal-button--cancel:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(116,136,150,.29)}.swal-button--danger{background-color:#e64942}.swal-button--danger:not([disabled]):hover{background-color:#df4740}.swal-button--danger:active{background-color:#cf423b}.swal-button--danger:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(165,43,43,.29)}.swal-content{padding:0 20px;margin-top:20px;font-size:medium}.swal-content:last-child{margin-bottom:20px}.swal-content__input,.swal-content__textarea{-webkit-appearance:none;background-color:#fff;border:none;font-size:14px;display:block;box-sizing:border-box;width:100%;border:1px solid rgba(0,0,0,.14);padding:10px 13px;border-radius:2px;transition:border-color .2s}.swal-content__input:focus,.swal-content__textarea:focus{outline:none;border-color:#6db8ff}.swal-content__textarea{resize:vertical}.swal-button--loading{color:transparent}.swal-button--loading~.swal-button__loader{opacity:1}.swal-button__loader{position:absolute;height:auto;width:43px;z-index:2;left:50%;top:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);text-align:center;pointer-events:none;opacity:0}.swal-button__loader div{display:inline-block;float:none;vertical-align:baseline;width:9px;height:9px;padding:0;border:none;margin:2px;opacity:.4;border-radius:7px;background-color:hsla(0,0%,100%,.9);transition:background .2s;-webkit-animation:swal-loading-anim 1s infinite;animation:swal-loading-anim 1s infinite}.swal-button__loader div:nth-child(3n+2){-webkit-animation-delay:.15s;animation-delay:.15s}.swal-button__loader div:nth-child(3n+3){-webkit-animation-delay:.3s;animation-delay:.3s}@-webkit-keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}@keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}.swal-overlay{position:fixed;top:0;bottom:0;left:0;right:0;text-align:center;font-size:0;overflow-y:auto;background-color:rgba(0,0,0,.4);z-index:10000;pointer-events:none;opacity:0;transition:opacity .3s}.swal-overlay:before{content:" ";display:inline-block;vertical-align:middle;height:100%}.swal-overlay--show-modal{opacity:1;pointer-events:auto}.swal-overlay--show-modal .swal-modal{opacity:1;pointer-events:auto;box-sizing:border-box;-webkit-animation:showSweetAlert .3s;animation:showSweetAlert .3s;will-change:transform}.swal-modal{width:478px;opacity:0;pointer-events:none;background-color:#fff;text-align:center;border-radius:5px;position:static;margin:20px auto;display:inline-block;vertical-align:middle;-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;z-index:10001;transition:opacity .2s,-webkit-transform .3s;transition:transform .3s,opacity .2s;transition:transform .3s,opacity .2s,-webkit-transform .3s}@media (max-width:500px){.swal-modal{width:calc(100% - 20px)}}@-webkit-keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}@keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}</style><style id="autocompletion.css">.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {    background-color: #CAD6FA;    z-index: 1;}.ace_dark.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {    background-color: #3a674e;}.ace_editor.ace_autocomplete .ace_line-hover {    border: 1px solid #abbffe;    margin-top: -1px;    background: rgba(233,233,253,0.4);    position: absolute;    z-index: 2;}.ace_dark.ace_editor.ace_autocomplete .ace_line-hover {    border: 1px solid rgba(109, 150, 13, 0.8);    background: rgba(58, 103, 78, 0.62);}.ace_completion-meta {    opacity: 0.5;    margin: 0.9em;}.ace_completion-message {    color: blue;}.ace_editor.ace_autocomplete .ace_completion-highlight{    color: #2d69c7;}.ace_dark.ace_editor.ace_autocomplete .ace_completion-highlight{    color: #93ca12;}.ace_editor.ace_autocomplete {    width: 300px;    z-index: 200000;    border: 1px lightgray solid;    position: fixed;    box-shadow: 2px 3px 5px rgba(0,0,0,.2);    line-height: 1.4;    background: #fefefe;    color: #111;}.ace_dark.ace_editor.ace_autocomplete {    border: 1px #484747 solid;    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.51);    line-height: 1.4;    background: #25282c;    color: #c1c1c1;}
+/*# sourceURL=ace/css/autocompletion.css */</style><style>.ace_snippet-marker {    -moz-box-sizing: border-box;    box-sizing: border-box;    background: rgba(194, 193, 208, 0.09);    border: 1px dotted rgba(211, 208, 235, 0.62);    position: absolute;}</style><style id="ace-github">.ace-github .ace_gutter {background: #e8e8e8;color: #AAA;}.ace-github  {background: #fff;color: #000;}.ace-github .ace_keyword {font-weight: bold;}.ace-github .ace_string {color: #D14;}.ace-github .ace_variable.ace_class {color: teal;}.ace-github .ace_constant.ace_numeric {color: #099;}.ace-github .ace_constant.ace_buildin {color: #0086B3;}.ace-github .ace_support.ace_function {color: #0086B3;}.ace-github .ace_comment {color: #998;font-style: italic;}.ace-github .ace_variable.ace_language  {color: #0086B3;}.ace-github .ace_paren {font-weight: bold;}.ace-github .ace_boolean {font-weight: bold;}.ace-github .ace_string.ace_regexp {color: #009926;font-weight: normal;}.ace-github .ace_variable.ace_instance {color: teal;}.ace-github .ace_constant.ace_language {font-weight: bold;}.ace-github .ace_cursor {color: black;}.ace-github.ace_focus .ace_marker-layer .ace_active-line {background: rgb(255, 255, 204);}.ace-github .ace_marker-layer .ace_active-line {background: rgb(245, 245, 245);}.ace-github .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-github.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-github.ace_nobold .ace_line > span {font-weight: normal !important;}.ace-github .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-github .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-github .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-github .ace_gutter-active-line {background-color : rgba(0, 0, 0, 0.07);}.ace-github .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-github .ace_invisible {color: #BFBFBF}.ace-github .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-github .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-github */</style><style data-emotion="css-global" data-s=""></style><style data-emotion="css-global" data-s=""></style><style data-emotion="css-global" data-s=""></style><meta name="emotion-insertion-point" content=""><style data-emotion="css" data-s=""></style><script type="text/javascript" async="" src="https://widget.intercom.io/widget/pvt8f1fs"></script><script type="text/javascript" async="" src="//munchkin.marketo.net/165/munchkin.js"></script><base href="https://app.labelbox.com/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Sign in to your Labelbox account or create a free account">
+    <link rel="shortcut icon" href="./favicon.ico?v=2">
+    
+
+    <!--
+    manifest.json provides metadata used when your web app is added to the
+    homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+  -->
+    <link rel="manifest" href="/manifest.json">
+    <!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+    <!--
+    Notice the use of  in the tags above.
+    It will be replaced with the URL of the `public` folder during the build.
+    Only files inside the `public` folder can be referenced from the HTML.
+
+    Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+    work correctly both with client-side routing and a non-root public URL.
+    Learn how to configure a non-root public URL by running `npm run build`.
+  -->
+    
+    <script async="" src="https://snap.licdn.com/li.lms-analytics/insight.beta.min.js"></script><script type="text/javascript" async="" src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script><script src="https://connect.facebook.net/signals/config/461781907826795?v=2.9.398&amp;r=stable&amp;domain=app.labelbox.com&amp;hme=457e068698591ac437afb4b2e5fbe0266b08712615b8792436a91385ebda0da3&amp;ex_m=115%2C227%2C166%2C26%2C80%2C81%2C158%2C76%2C75%2C11%2C176%2C100%2C20%2C150%2C138%2C45%2C83%2C88%2C146%2C171%2C178%2C31%2C17%2C30%2C18%2C32%2C33%2C34%2C36%2C54%2C159%2C85%2C123%2C22%2C24%2C50%2C46%2C48%2C47%2C93%2C102%2C106%2C121%2C157%2C160%2C52%2C122%2C28%2C25%2C130%2C77%2C42%2C162%2C161%2C163%2C154%2C152%2C29%2C41%2C65%2C120%2C173%2C78%2C21%2C125%2C91%2C74%2C23%2C95%2C96%2C127%2C94%2C148%2C147%2C151%2C107%2C172%2C175%2C40%2C55%2C124%2C53%2C8%2C4%2C5%2C7%2C6%2C3%2C101%2C112%2C180%2C179%2C194%2C241%2C82%2C255%2C254%2C253%2C14%2C27%2C39%2C61%2C114%2C67%2C10%2C71%2C108%2C109%2C110%2C116%2C141%2C37%2C35%2C143%2C144%2C145%2C140%2C139%2C167%2C84%2C170%2C168%2C169%2C56%2C66%2C134%2C19%2C174%2C51%2C305%2C306%2C307%2C304%2C320%2C344%2C234%2C223%2C68%2C224%2C222%2C347%2C338%2C58%2C235%2C118%2C142%2C90%2C132%2C60%2C131%2C137%2C136%2C64%2C72%2C70%2C164%2C86%2C87%2C126%2C43%2C38%2C59%2C62%2C111%2C177%2C1%2C135%2C16%2C133%2C12%2C2%2C63%2C103%2C15%2C73%2C69%2C129%2C99%2C98%2C182%2C183%2C104%2C105%2C9%2C113%2C181%2C57%2C155%2C97%2C89%2C79%2C128%2C117%2C49%2C156%2C0%2C92%2C149%2C153%2C165%2C44%2C119%2C13%2C184" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="https://hubspot.clearbit.com/v1/forms/pk_4e001a557e48e39e76672bf4d78691e1/forms.js"></script><script type="text/javascript" async="" src="https://www.redditstatic.com/ads/pixel.js"></script><script type="text/javascript" async="" src="https://a.quora.com/qevents.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZEM3391M8H&amp;cx=c&amp;gtm=4e69a0h2"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-1FZYYW6NYV&amp;cx=c&amp;gtm=4e69a0h2"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/linkid.js"></script><script async="" src="https://snap.licdn.com/li.lms-analytics/insight.old.min.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NXF2T87&amp;l=dataLayer"></script><script type="text/javascript" async="" src="https://cdn.heapanalytics.com/js/heap-3649444639.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script><script type="text/javascript" src="https://cdn.segment.com/next-integrations/integrations/vendor/commons.1b78f84a8c1751144d06.js.gz" async="" status="loaded"></script><script type="text/javascript" src="https://cdn.segment.com/next-integrations/integrations/google-tag-manager/2.5.3/google-tag-manager.dynamic.js.gz" async="" status="loaded"></script><script type="text/javascript" src="https://cdn.segment.com/next-integrations/integrations/visual-tagger/0.3.5/visual-tagger.dynamic.js.gz" async="" status="loaded"></script><script type="text/javascript" src="https://cdn.segment.com/next-integrations/integrations/heap/2.1.2/heap.dynamic.js.gz" async="" status="loaded"></script><script type="text/javascript" src="https://cdn.segment.com/next-integrations/integrations/google-analytics/2.18.6/google-analytics.dynamic.js.gz" async="" status="loaded"></script><script type="text/javascript" src="https://cdn.segment.com/next-integrations/integrations/linkedin-insight-tag/1.0.1/linkedin-insight-tag.dynamic.js.gz" async="" status="loaded"></script><script type="text/javascript" async="" src="https://cdn.segment.com/analytics.js/v1/3vHiVTp9i7vXMi0CvSjyioSvoa9ROeXW/analytics.min.js"></script><script src="./env.js"></script>
+
+    <script src="/scripts/log-rocket-noop.js"></script>
+
+    <script type="text/javascript" src="https://cdn.bizible.com/scripts/bizible.js" async=""></script>
+
+    <title>Labelbox</title>
+  <script defer="" src="/static/js/lib-axios.323a7a2d.js"></script><script defer="" src="/static/js/lib-react.1f83fa08.js"></script><script defer="" src="/static/js/lib-router.ebc8eb34.js"></script><script defer="" src="/static/js/3783.c7878252.js"></script><script defer="" src="/static/js/index.ce1b9639.js"></script><link href="/static/css/3783.00677d48.css" rel="stylesheet"><link href="/static/css/index.d28af0c9.css" rel="stylesheet"><style type="text/css">.TransformComponent-module_container__3NwNd {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  overflow: hidden;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  margin: 0;
+  padding: 0;
+}
+.TransformComponent-module_content__TZU5O {
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  transform-origin: 0% 0%;
+}
+.TransformComponent-module_content__TZU5O img {
+  pointer-events: none;
+}
+</style><style type="text/css">.transform-component-module_wrapper__1_Fgj {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  margin: 0;
+  padding: 0;
+}
+.transform-component-module_content__2jYgh {
+  display: flex;
+  flex-wrap: wrap;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  transform-origin: 0% 0%;
+}
+.transform-component-module_content__2jYgh img {
+  pointer-events: none;
+}
+</style><script src="https://js.stripe.com/v3"></script><link id="mktoForms2BaseStyle" rel="stylesheet" type="text/css" href="https://discover.labelbox.com/js/forms2/css/forms2.css" nonce=""><link id="mktoForms2ThemeStyle" rel="stylesheet" type="text/css" href="https://discover.labelbox.com/js/forms2/css/forms2-theme-simple.css" nonce=""><script type="text/javascript" async="" src="//munchkin.marketo.net/munchkin.js"></script></head>
+  <body>
+    <noscript> You need to enable JavaScript to run this app. </noscript>
+    <div id="root"><script nonce="">(function() {
+try {
+  let colorScheme = '';
+  const mode = localStorage.getItem('lb-color-mode') || 'dark';
+  const dark = localStorage.getItem('mui-color-scheme-dark') || 'dark';
+  const light = localStorage.getItem('mui-color-scheme-light') || 'light';
+  if (mode === 'system') {
+    // handle system mode
+    const mql = window.matchMedia('(prefers-color-scheme: dark)');
+    if (mql.matches) {
+      colorScheme = dark
+    } else {
+      colorScheme = light
+    }
+  }
+  if (mode === 'light') {
+    colorScheme = light;
+  }
+  if (mode === 'dark') {
+    colorScheme = dark;
+  }
+  if (colorScheme) {
+    document.documentElement.removeAttribute('data-%s'.replace('%s', light));
+      document.documentElement.removeAttribute('data-%s'.replace('%s', dark));
+      document.documentElement.setAttribute('data-%s'.replace('%s', colorScheme), "");
+  }
+} catch(e){}})();</script><div class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-14uwpky"><div class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-7 css-1tn0d4a"><div class="MuiBox-root css-1jzptze-outerWrapper"><div aria-hidden="true" class="css-hy1r8k-gradientRegion"><canvas width="2240" height="1897" style="display: block; width: 1792px; height: 1518px; filter: blur(12px);"></canvas></div><div class="MuiBox-root css-1vj85sz-wrapper"><div class="MuiBox-root css-j8v3zy-logo"><svg width="120" height="28" viewBox="0 0 120 28" fill="none" xmlns="http://www.w3.org/2000/svg"><title>Labelbox Logo</title><path d="M14.717 26.0005V13.7741L4.46448 7.62264L13.5849 2.15039L23.7736 8.2636V20.5666L14.717 26.0005Z" fill="currentColor"></path><path d="M3.39624 20.5665V9.62207L6.79247 11.6598V18.4523L12.4528 21.8485V26.0005L3.39624 20.5665Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M39.8165 6.49047V18.8961H44.6059V21.2064H37.3585V6.49047H39.8165ZM53.1879 10.9314H55.5721V21.2064H53.1879V20.1304C52.2103 21.0447 51.1589 21.5018 50.0337 21.5018C48.613 21.5018 47.4385 20.9884 46.5102 19.9616C45.5889 18.9137 45.1282 17.6056 45.1282 16.0372C45.1282 14.497 45.5889 13.2135 46.5102 12.1867C47.4315 11.1599 48.5849 10.6465 49.9704 10.6465C51.166 10.6465 52.2385 11.1388 53.1879 12.1234V10.9314ZM47.5546 16.0372C47.5546 17.0219 47.8183 17.8236 48.3458 18.4425C48.8873 19.0684 49.5695 19.3814 50.3923 19.3814C51.2715 19.3814 51.9818 19.079 52.5233 18.4741C53.0648 17.8482 53.3356 17.0535 53.3356 16.09C53.3356 15.1265 53.0648 14.3318 52.5233 13.7058C51.9818 13.094 51.2785 12.788 50.4134 12.788C49.5976 12.788 48.9154 13.0975 48.3669 13.7164C47.8253 14.3423 47.5546 15.1159 47.5546 16.0372ZM60.0715 5.3584V12.1234C61.0209 11.1388 62.0969 10.6465 63.2996 10.6465C64.6851 10.6465 65.8384 11.1634 66.7598 12.1973C67.6811 13.2241 68.1417 14.5041 68.1417 16.0372C68.1417 17.6196 67.6775 18.9278 66.7492 19.9616C65.8279 20.9884 64.664 21.5018 63.2574 21.5018C62.0688 21.5018 61.0069 21.0447 60.0715 20.1304V21.2064H57.6979V5.3584H60.0715ZM65.7154 16.1427C65.7154 15.1581 65.4481 14.3564 64.9136 13.7375C64.3721 13.1045 63.6934 12.788 62.8776 12.788C62.0055 12.788 61.2952 13.094 60.7466 13.7058C60.2051 14.3107 59.9343 15.0983 59.9343 16.0689C59.9343 17.0676 60.2016 17.8658 60.7361 18.4636C61.2706 19.0755 61.9739 19.3814 62.8459 19.3814C63.6688 19.3814 64.351 19.0755 64.8925 18.4636C65.4411 17.8447 65.7154 17.0711 65.7154 16.1427ZM79.1395 16.628H71.7761C71.8394 17.472 72.1137 18.1436 72.5989 18.6429C73.0842 19.1352 73.7066 19.3814 74.4662 19.3814C75.0569 19.3814 75.5457 19.2407 75.9325 18.9594C76.3123 18.6781 76.7448 18.1577 77.2301 17.3981L79.2345 18.5163C78.925 19.0438 78.598 19.4957 78.2534 19.8719C77.9088 20.2482 77.5395 20.5576 77.1457 20.8003C76.7519 21.0429 76.3264 21.2205 75.8692 21.333C75.4121 21.4455 74.9163 21.5018 74.3818 21.5018C72.8486 21.5018 71.6178 21.0095 70.6895 20.0249C69.7612 19.0332 69.297 17.7181 69.297 16.0794C69.297 14.4548 69.7471 13.1397 70.6473 12.134C71.5546 11.1423 72.7572 10.6465 74.2552 10.6465C75.7673 10.6465 76.9628 11.1283 77.8419 12.0918C78.714 13.0483 79.1501 14.374 79.1501 16.0689L79.1395 16.628ZM76.7026 14.6869C76.3721 13.421 75.5739 12.788 74.3079 12.788C74.0196 12.788 73.7488 12.832 73.4956 12.9199C73.2424 13.0078 73.0121 13.1344 72.8046 13.2997C72.5972 13.465 72.4196 13.6636 72.2719 13.8957C72.1242 14.1278 72.0117 14.3915 71.9343 14.6869H76.7026ZM83.2381 5.3584V21.2064H80.8644V5.3584H83.2381ZM87.748 5.3584V12.1234C88.6975 11.1388 89.7735 10.6465 90.9761 10.6465C92.3616 10.6465 93.515 11.1634 94.4363 12.1973C95.3576 13.2241 95.8183 14.5041 95.8183 16.0372C95.8183 17.6196 95.3541 18.9278 94.4257 19.9616C93.5044 20.9884 92.3405 21.5018 90.9339 21.5018C89.7453 21.5018 88.6834 21.0447 87.748 20.1304V21.2064H85.3744V5.3584H87.748ZM93.3919 16.1427C93.3919 15.1581 93.1247 14.3564 92.5902 13.7375C92.0486 13.1045 91.37 12.788 90.5541 12.788C89.682 12.788 88.9717 13.094 88.4232 13.7058C87.8816 14.3107 87.6109 15.0983 87.6109 16.0689C87.6109 17.0676 87.8781 17.8658 88.4126 18.4636C88.9471 19.0755 89.6504 19.3814 90.5225 19.3814C91.3453 19.3814 92.0275 19.0755 92.5691 18.4636C93.1176 17.8447 93.3919 17.0711 93.3919 16.1427ZM96.9735 15.995C96.9735 14.5111 97.5045 13.2487 98.5665 12.2078C99.6284 11.167 100.922 10.6465 102.449 10.6465C103.982 10.6465 105.283 11.1705 106.352 12.2184C107.407 13.2663 107.934 14.5533 107.934 16.0794C107.934 17.6196 107.403 18.9102 106.341 19.951C105.272 20.9849 103.961 21.5018 102.406 21.5018C100.866 21.5018 99.5757 20.9743 98.5348 19.9194C97.494 18.8785 96.9735 17.5704 96.9735 15.995ZM99.3999 16.0372C99.3999 17.064 99.6741 17.8763 100.223 18.4741C100.785 19.079 101.527 19.3814 102.449 19.3814C103.377 19.3814 104.119 19.0825 104.675 18.4847C105.23 17.8869 105.508 17.0887 105.508 16.09C105.508 15.0913 105.23 14.2931 104.675 13.6953C104.112 13.0905 103.37 12.788 102.449 12.788C101.541 12.788 100.806 13.0905 100.244 13.6953C99.6812 14.3001 99.3999 15.0808 99.3999 16.0372ZM112.244 15.6469L108.552 10.9314H111.379L113.668 13.9274L115.999 10.9314H118.911L115.113 15.6469L119.512 21.2064H116.685L113.668 17.3665L110.577 21.2064H107.676L112.244 15.6469Z" fill="currentColor"></path></svg></div><h1 class="MuiTypography-root MuiTypography-h1 css-1v3b9qh-title">Welcome back</h1><div class="MuiBox-root css-wo7lt-card"><h2 class="MuiTypography-root MuiTypography-h2 MuiTypography-gutterBottom css-vxk6br-panelText">The RL data engine for AI teams</h2><div class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1sumcx6"><div class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-dwku5u"><div class="MuiBox-root css-1yr31q8-feature"><div class="MuiBox-root css-bbgy8q-root"><svg focusable="false" preserveAspectRatio="xMidYMid meet" fill="currentColor" width="20" height="20" viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M12,4H6A2,2,0,0,0,4,6v6a2,2,0,0,0,2,2h6a2,2,0,0,0,2-2V6A2,2,0,0,0,12,4Zm0,8H6V6h6Z"></path><path d="M26,4H20a2,2,0,0,0-2,2v6a2,2,0,0,0,2,2h6a2,2,0,0,0,2-2V6A2,2,0,0,0,26,4Zm0,8H20V6h6Z"></path><path d="M12,18H6a2,2,0,0,0-2,2v6a2,2,0,0,0,2,2h6a2,2,0,0,0,2-2V20A2,2,0,0,0,12,18Zm0,8H6V20h6Z"></path><path d="M26,18H20a2,2,0,0,0-2,2v6a2,2,0,0,0,2,2h6a2,2,0,0,0,2-2V20A2,2,0,0,0,26,18Zm0,8H20V20h6Z"></path></svg></div><p class="MuiTypography-root MuiTypography-body1 css-13bfll9-panelText">Build datasets for AI training and fine-tuning</p></div></div><div class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-dwku5u"><div class="MuiBox-root css-1yr31q8-feature"><div class="MuiBox-root css-bbgy8q-root"><svg focusable="false" preserveAspectRatio="xMidYMid meet" fill="currentColor" width="20" height="20" viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M30,8h-4.1c-0.5-2.3-2.5-4-4.9-4s-4.4,1.7-4.9,4H2v2h14.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H30V8z M21,12c-1.7,0-3-1.3-3-3 s1.3-3,3-3s3,1.3,3,3S22.7,12,21,12z"></path><path d="M2,24h4.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H30v-2H15.9c-0.5-2.3-2.5-4-4.9-4s-4.4,1.7-4.9,4H2V24z M11,20c1.7,0,3,1.3,3,3 s-1.3,3-3,3s-3-1.3-3-3S9.3,20,11,20z"></path></svg></div><p class="MuiTypography-root MuiTypography-body1 css-13bfll9-panelText">Integrate with your existing data solutions</p></div></div><div class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-dwku5u"><div class="MuiBox-root css-1yr31q8-feature"><div class="MuiBox-root css-bbgy8q-root"><svg focusable="false" preserveAspectRatio="xMidYMid meet" fill="currentColor" width="20" height="20" viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M30,30H28V25a5.0057,5.0057,0,0,0-5-5V18a7.0078,7.0078,0,0,1,7,7Z"></path><path d="M22,30H20V25a5.0059,5.0059,0,0,0-5-5H9a5.0059,5.0059,0,0,0-5,5v5H2V25a7.0082,7.0082,0,0,1,7-7h6a7.0082,7.0082,0,0,1,7,7Z"></path><path d="M20,2V4a5,5,0,0,1,0,10v2A7,7,0,0,0,20,2Z"></path><path d="M12,4A5,5,0,1,1,7,9a5,5,0,0,1,5-5m0-2a7,7,0,1,0,7,7A7,7,0,0,0,12,2Z"></path></svg></div><p class="MuiTypography-root MuiTypography-body1 css-13bfll9-panelText">Access on-demand experts for alignment</p></div></div></div></div></div></div></div><div class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-19ynww8"><div class="MuiBox-root css-v174r1"><div class="MuiBox-root css-1hjq20a"><div class="MuiBox-root css-1w3ufwa"><h5 class="MuiTypography-root MuiTypography-h5 css-krsbt2">Sign in</h5><p class="MuiTypography-root MuiTypography-body2 css-ywg5xg">Welcome back. Sign in to your Labelbox workspace.</p></div><div class="MuiBox-root css-bly4bm"><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-sizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-1o4b9iy" tabindex="0" type="button" data-cy="sign-in-google-button"><span class="MuiButton-icon MuiButton-startIcon css-18ja5cu"><div class="MuiBox-root css-14fhphk"><svg viewBox="0 0 32 32" width="32" height="32"><title>Google Logo</title><clipPath id="g"><path d="M29.667 13.333H16v5.667h7.867C23.133 22.6 20.067 24.667 16 24.667c-4.8 0 -8.667 -3.867 -8.667 -8.667s3.867 -8.667 8.667 -8.667c2.067 0 3.933 0.733 5.4 1.933l4.267 -4.267C23.067 2.733 19.733 1.333 16 1.333 7.867 1.333 1.333 7.867 1.333 16s6.533 14.667 14.667 14.667c7.333 0 14 -5.333 14 -14.667 0 -0.867 -0.133 -1.8 -0.333 -2.667"></path></clipPath><g class="colors" clip-path="url(#g)"><path fill="#FBBC05" d="M0 24.667V7.333l11.333 8.667z"></path><path fill="#EA4335" d="m0 7.333 11.333 8.667 4.667 -4.067L32 9.333V0H0z"></path><path fill="#34A853" d="m0 24.667 20 -15.333 5.267 0.667L32 0v32H0z"></path><path fill="#4285F4" d="M32 32 11.333 16l-2.667 -2 23.333 -6.667z"></path></g></svg></div></span><span class="MuiBox-root css-17ls7xt">Continue with Google</span></button><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-sizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-1o4b9iy" tabindex="0" type="button" data-cy="sign-in-github-button"><span class="MuiButton-icon MuiButton-startIcon css-18ja5cu"><div class="MuiBox-root css-14fhphk"><svg focusable="false" preserveAspectRatio="xMidYMid meet" fill="currentColor" width="18" height="18" viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16,2a14,14,0,0,0-4.43,27.28c.7.13,1-.3,1-.67s0-1.21,0-2.38c-3.89.84-4.71-1.88-4.71-1.88A3.71,3.71,0,0,0,6.24,22.3c-1.27-.86.1-.85.1-.85A2.94,2.94,0,0,1,8.48,22.9a3,3,0,0,0,4.08,1.16,2.93,2.93,0,0,1,.88-1.87c-3.1-.36-6.37-1.56-6.37-6.92a5.4,5.4,0,0,1,1.44-3.76,5,5,0,0,1,.14-3.7s1.17-.38,3.85,1.43a13.3,13.3,0,0,1,7,0c2.67-1.81,3.84-1.43,3.84-1.43a5,5,0,0,1,.14,3.7,5.4,5.4,0,0,1,1.44,3.76c0,5.38-3.27,6.56-6.39,6.91a3.33,3.33,0,0,1,.95,2.59c0,1.87,0,3.38,0,3.84s.25.81,1,.67A14,14,0,0,0,16,2Z"></path></svg></div></span><span class="MuiBox-root css-17ls7xt">Continue with GitHub</span></button><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-sizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-1o4b9iy" tabindex="0" type="button" data-cy="sign-in-linkedin-button"><span class="MuiButton-icon MuiButton-startIcon css-18ja5cu"><div class="MuiBox-root css-14fhphk"><svg height="32" viewBox="0 0 72 72" width="32" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z" fill="#007EBB"></path><path d="M62,62 L51.315625,62 L51.315625,43.8021149 C51.315625,38.8127542 49.4197917,36.0245323 45.4707031,36.0245323 C41.1746094,36.0245323 38.9300781,38.9261103 38.9300781,43.8021149 L38.9300781,62 L28.6333333,62 L28.6333333,27.3333333 L38.9300781,27.3333333 L38.9300781,32.0029283 C38.9300781,32.0029283 42.0260417,26.2742151 49.3825521,26.2742151 C56.7356771,26.2742151 62,30.7644705 62,40.051212 L62,62 Z M16.349349,22.7940133 C12.8420573,22.7940133 10,19.9296567 10,16.3970067 C10,12.8643566 12.8420573,10 16.349349,10 C19.8566406,10 22.6970052,12.8643566 22.6970052,16.3970067 C22.6970052,19.9296567 19.8566406,22.7940133 16.349349,22.7940133 Z M11.0325521,62 L21.769401,62 L21.769401,27.3333333 L11.0325521,27.3333333 L11.0325521,62 Z" fill="#FFF"></path></g></svg></div></span><span class="MuiBox-root css-17ls7xt">Continue with LinkedIn</span></button><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-sizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-1o4b9iy" tabindex="0" type="button" data-cy="sign-in-alignerr-button"><span class="MuiButton-icon MuiButton-startIcon css-18ja5cu"><div class="MuiBox-root css-14fhphk"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-iguwhy" focusable="false" aria-hidden="true" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.22688 1.75736C6.31503 1.59853 6.4824 1.5 6.66406 1.5H9.33606C9.51772 1.5 9.68509 1.59853 9.77324 1.75736L15.1012 11.3574C15.1849 11.5081 15.185 11.6913 15.1016 11.8421L13.7736 14.2421C13.6855 14.4012 13.5179 14.5 13.3361 14.5H2.66406C2.48217 14.5 2.31463 14.4012 2.22657 14.2421L0.898569 11.8421C0.815113 11.6913 0.81523 11.5081 0.898878 11.3574L6.22688 1.75736ZM6.9584 2.5L2.18541 11.1H8.48549L7.70616 9.7H5.36807C4.98491 9.7 4.74414 9.28671 4.93311 8.95339L6.52266 6.14972L8.4971 2.5H6.9584ZM2.95883 13.5L2.18416 12.1H9.33607C9.7175 12.1 9.95847 11.6901 9.77294 11.3568L8.57229 9.19994L9.33556 7.82879L12.4862 13.5H2.95883ZM13.3351 12.9689L14.0924 11.6004L9.34167 3.04046L7.39512 6.63864L6.22632 8.69999H7.70609L8.89912 6.55683C9.08982 6.21425 9.58266 6.21446 9.77308 6.5572L13.3351 12.9689Z" fill="currentcolor"></path></svg></div></span><span class="MuiBox-root css-17ls7xt">Continue with Alignerr</span></button></div><div class="MuiDivider-root MuiDivider-fullWidth MuiDivider-withChildren css-11bomcn" role="separator" aria-orientation="horizontal"><span class="MuiDivider-wrapper css-152d87l">or</span></div><form class="MuiBox-root css-187ln2c" __bizdiag="0" __biza="W___"><div class="MuiFormControl-root MuiTextField-root css-1pv2xcc"><label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-1ecmm75-labelRoot-labelRoot" data-shrink="false" for="_r_5_" id="_r_5_-label">Email</label><div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-fqs5qb"><input aria-invalid="false" id="_r_5_" class="MuiInputBase-input MuiOutlinedInput-input css-4vgogf-fieldInput" data-cy="sign-in-email-input" type="email" value=""><fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-1tqyz3e-border"><legend class="css-81qg8w"><span>Email</span></legend></fieldset></div></div><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-popkhw" tabindex="0" type="submit" data-cy="sign-in-email-button">Continue</button></form><p class="MuiTypography-root MuiTypography-body2 css-1rjqunj">Don't have an account? <a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-117jj87" href="/signup">Sign up.</a></p></div></div></div></div></div>
+    
+    <script src="/scripts/marketing-integrations.js"></script><script src="//discover.labelbox.com/js/forms2/js/forms2.min.js"></script><script src="//discover.labelbox.com/rs/622-PVG-762/images/dpi-ppc-tracking-script.js"></script>
+    <form id="mktoForm_1156" style="display: none; font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: rgb(51, 51, 51); width: 1px;" __bizdiag="196352707" __biza="W___" novalidate="novalidate" class="mktoForm mktoHasWidth mktoLayoutLeft"><style type="text/css" nonce="">.mktoForm .mktoButtonWrap.mktoSimple .mktoButton {
+color:#fff;
+border:1px solid #75ae4c;
+padding:0.4em 1em;
+font-size:1em;
+background-color:#99c47c;
+background-image: -webkit-gradient(linear, left top, left bottom, from(#99c47c), to(#75ae4c));
+background-image: -webkit-linear-gradient(top, #99c47c, #75ae4c);
+background-image: -moz-linear-gradient(top, #99c47c, #75ae4c);
+background-image: linear-gradient(to bottom, #99c47c, #75ae4c);
+}
+.mktoForm .mktoButtonWrap.mktoSimple .mktoButton:hover {
+border:1px solid #447f19;
+}
+.mktoForm .mktoButtonWrap.mktoSimple .mktoButton:focus {
+outline:none;
+border:1px solid #447f19;
+}
+.mktoForm .mktoButtonWrap.mktoSimple .mktoButton:active{
+background-color:#75ae4c;
+background-image: -webkit-gradient(linear, left top, left bottom, from(#75ae4c), to(#99c47c));
+background-image: -webkit-linear-gradient(top, #75ae4c, #99c47c);
+background-image: -moz-linear-gradient(top, #75ae4c, #99c47c);
+background-image: linear-gradient(to bottom, #75ae4c, #99c47c);
+}
+</style><div class="mktoFormRow"><input type="hidden" name="utm_source__c" class="mktoField mktoFieldDescriptor mktoFormCol" value="" style="margin-bottom: 10px;"><div class="mktoClear"></div></div><div class="mktoFormRow"><input type="hidden" name="utm_medium__c" class="mktoField mktoFieldDescriptor mktoFormCol" value="" style="margin-bottom: 10px;"><div class="mktoClear"></div></div><div class="mktoFormRow"><input type="hidden" name="utm_campaign__c" class="mktoField mktoFieldDescriptor mktoFormCol" value="" style="margin-bottom: 10px;"><div class="mktoClear"></div></div><div class="mktoFormRow"><input type="hidden" name="utm_content__c" class="mktoField mktoFieldDescriptor mktoFormCol" value="" style="margin-bottom: 10px;"><div class="mktoClear"></div></div><div class="mktoFormRow"><input type="hidden" name="utm_term__c" class="mktoField mktoFieldDescriptor mktoFormCol" value="" style="margin-bottom: 10px;"><div class="mktoClear"></div></div><div class="mktoButtonRow"><span class="mktoButtonWrap mktoSimple" style="margin-left: 120px;"><button type="submit" class="mktoButton">Submit</button></span></div><input type="hidden" name="formid" class="mktoField mktoFieldDescriptor" value="1156"><input type="hidden" name="munchkinId" class="mktoField mktoFieldDescriptor" value="622-PVG-762"></form>
+
+    <script>
+      window.intercomSettings = {
+        api_base: 'https://api-iam.intercom.io',
+        app_id: 'pvt8f1fs',
+      };
+    </script>
+
+    <script>
+      // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/pvt8f1fs'
+      (function () {
+        var w = window;
+        var ic = w.Intercom;
+        if (typeof ic === 'function') {
+          ic('reattach_activator');
+          ic('update', w.intercomSettings);
+        } else {
+          var d = document;
+          var i = function () {
+            i.c(arguments);
+          };
+          i.q = [];
+          i.c = function (args) {
+            i.q.push(args);
+          };
+          w.Intercom = i;
+          var l = function () {
+            var s = d.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'https://widget.intercom.io/widget/pvt8f1fs';
+            var x = d.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+          };
+          if (document.readyState === 'complete') {
+            l();
+          } else if (w.attachEvent) {
+            w.attachEvent('onload', l);
+          } else {
+            w.addEventListener('load', l, false);
+          }
+        }
+      })();
+    </script>
+    
+  
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;940f0902d04d4592bee7ec2f579fefea&quot;,&quot;spa&quot;:2}" crossorigin="anonymous"></script>
+<img alt="" src="https://cdn.bizible.com/ipv?_biz_r=https%3A%2F%2Fapp.labelbox.com%2Fprojects%2Fcmpg3omk40diw07tn3fnrbghx%2Fdata-rows%2Fcmtwqdpe60h2b0767l1wksy18&amp;_biz_h=805002629&amp;_biz_u=21f61068a4124d70e0b322e1a423ed21&amp;_biz_l=https%3A%2F%2Fapp.labelbox.com%2Fsignin&amp;_biz_t=1789162998754&amp;_biz_i=Labelbox&amp;_biz_n=1&amp;rnd=951957&amp;cdn_o=a&amp;_biz_z=1789163001583" style="display: none;"><div id="mktoStyleLoaded" style="display: none; border-top-color: rgb(18, 52, 86);"></div><form style="display: none; font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: rgb(51, 51, 51); visibility: hidden; position: absolute; top: -500px; left: -1000px; width: 1536px;" __bizdiag="1885304043" __biza="W___" novalidate="novalidate" class="mktoForm mktoHasWidth mktoLayoutLeft"></form><script type="text/javascript" id="" charset="">!function(a){var d=document.getElementsByTagName("script")[0];if("object"==typeof a.ClearbitForHubspot)return console.log("Clearbit For HubSpot included more than once"),!1;a.ClearbitForHubspot={};a.ClearbitForHubspot.forms=[];a.ClearbitForHubspot.addForm=function(b){b=b[0];"function"==typeof a.ClearbitForHubspot.onFormReady?a.ClearbitForHubspot.onFormReady(b):a.ClearbitForHubspot.forms.push(b)};var c=document.createElement("script");c.async=!0;c.src="https://hubspot.clearbit.com/v1/forms/pk_4e001a557e48e39e76672bf4d78691e1/forms.js";
+d.parentNode.insertBefore(c,d)}(window);</script>
+<script type="text/javascript" id="" charset="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","461781907826795");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=461781907826795&amp;ev=PageView&amp;noscript=1"></noscript>
+<script id="" text="" charset="" type="text/javascript" src="//nexus.ensighten.com/choozle/10072/Bootstrap.js"></script><script type="text/javascript" id="" charset="">function getParam(a){return(a=RegExp("[?\x26]"+a+"\x3d([^\x26]*)").exec(window.location.search))&&decodeURIComponent(a[1].replace(/\+/g," "))}function getExpiryRecord(a){var b=7776E6;b=(new Date).getTime()+b;return{value:a,expiryDate:b}}
+function addGclid(){var a=getParam("gclid"),b=["field-5b7049d246d2b010d6b3321c4fcd10b7-6","GCLID__c"],d=null,e,c=getParam("gclsrc");c=!c||-1!==c.indexOf("aw");b.forEach(function(f){document.getElementById(f)&&(e=document.getElementById(f))});a&&c&&(d=getExpiryRecord(a),localStorage.setItem("gclid",JSON.stringify(d)));b=(a=d||JSON.parse(localStorage.getItem("gclid")))&&(new Date).getTime()<a.expiryDate;e&&b&&(e.value=a.value)}window.addEventListener("load",addGclid);</script><script type="text/javascript" id="" charset="">(function(){function b(){!1===c&&(c=!0,Munchkin.init("622-PVG-762"))}var c=!1,a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="//munchkin.marketo.net/munchkin.js";a.onreadystatechange=function(){"complete"!=this.readyState&&"loaded"!=this.readyState||b()};a.onload=b;document.getElementsByTagName("head")[0].appendChild(a)})();</script><meta name="facebook-domain-verification" content="c0wfzwlu0c525zhr05zopxljobl7kg"><img style="display:none!important" src="https://tracking.g2crowd.com/attribution_tracking/conversions/1006667.gif?e="><script type="text/javascript" id="" charset="">_linkedin_partner_id="1666306";window._linkedin_data_partner_ids=window._linkedin_data_partner_ids||[];window._linkedin_data_partner_ids.push(_linkedin_partner_id);</script><script type="text/javascript" id="" charset="">(function(a){a||(window.lintrk=function(c,d){window.lintrk.q.push([c,d])},window.lintrk.q=[]);a=document.getElementsByTagName("script")[0];var b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src="https://snap.licdn.com/li.lms-analytics/insight.min.js";a.parentNode.insertBefore(b,a)})(window.lintrk);</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=1666306&amp;fmt=gif">
+</noscript><script type="text/javascript" id="" charset="">function getParam(a){return(a=RegExp("[?\x26]"+a+"\x3d([^\x26]*)").exec(window.location.search))&&decodeURIComponent(a[1])}function getExpiryRecord(a){var b=7776E6;b=(new Date).getTime()+b;return{value:a,expiryDate:b}}
+function addGclid(){var a=getParam("gclid"),b=["field-5b7049d246d2b010d6b3321c4fcd10b7-6","GCLID__c"],c=null,e,f=getParam("gclsrc"),h=!f||-1!==f.indexOf("aw");setTimeout(function(){b.forEach(function(g){document.querySelector('[name\x3d"'+g+'"]')&&(e=document.querySelector('[name\x3d"'+g+'"]'))});if(a&&h){c=getExpiryRecord(a);localStorage.setItem("gclid",JSON.stringify(c));var d="; expires\x3d"+new Date(c.expiryDate);document.cookie="gclid\x3d"+c.value+d+";path\x3d/"}var k=(d=c||JSON.parse(localStorage.getItem("gclid")))&&
+(new Date).getTime()<d.expiryDate;e&&k&&(e.value=d.value)},800)}window.addEventListener("load",addGclid);</script><iframe name="mktoFormsXDIframe0.043367067682086535" id="MktoForms2XDIframe" style="display: none;" src="https://discover.labelbox.com/index.php/form/XDFrame"></iframe><img alt="" style="display: none;" src="https://cdn.bizible.com/u?mapType=mkto&amp;mapValue=id%3A622-PVG-762%26token%3A_mch-labelbox.com-3b9c97a6a5191c7b518e465504c64a5c&amp;_biz_u=21f61068a4124d70e0b322e1a423ed21&amp;_biz_l=https%3A%2F%2Fapp.labelbox.com%2Fsignin&amp;_biz_t=1789163005392&amp;_biz_i=Labelbox&amp;_biz_n=2&amp;rnd=896125&amp;cdn_o=a&amp;_biz_z=1789163005393"><iframe name="__privateStripeMetricsController1880" frameborder="0" allowtransparency="true" scrolling="no" role="presentation" allow="payment *" src="https://js.stripe.com/v3/m-outer-3437aaddcdf6922d623e172c2d6f9278.html#url=https%3A%2F%2Fapp.labelbox.com%2Fsignin&amp;title=Labelbox&amp;referrer=https%3A%2F%2Fapp.labelbox.com%2Fprojects%2Fcmpg3omk40diw07tn3fnrbghx%2Fdata-rows%2Fcmtwqdpe60h2b0767l1wksy18&amp;muid=NA&amp;sid=NA&amp;version=6&amp;preview=false&amp;__shared_params__[version]=v3" aria-hidden="true" tabindex="-1" style="border-width: medium !important; border-style: none !important; border-color: currentcolor !important; border-image: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe><iframe id="intercom-frame" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important; pointer-events: none;" aria-hidden="true" tabindex="-1" title="Intercom"></iframe><div class="intercom-lightweight-app"><style id="intercom-lightweight-app-style" type="text/css">
+  @keyframes intercom-lightweight-app-launcher {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes intercom-lightweight-app-gradient {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes intercom-lightweight-app-messenger {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    40% {
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .intercom-lightweight-app {
+    position: fixed;
+    z-index: 2147483001;
+    width: 0;
+    height: 0;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+
+  .intercom-lightweight-app-gradient {
+    position: fixed;
+    z-index: 2147483002;
+    width: 500px;
+    height: 500px;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    background: radial-gradient(
+      ellipse at bottom right,
+      rgba(29, 39, 54, 0.16) 0%,
+      rgba(29, 39, 54, 0) 72%);
+    animation: intercom-lightweight-app-gradient 200ms ease-out;
+  }
+
+  .intercom-lightweight-app-launcher {
+    position: fixed;
+    z-index: 2147483003;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none;
+    bottom: 100px;
+    right: 25px;
+    max-width: 48px;
+    width: 48px;
+    max-height: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #2876D4;
+    cursor: pointer;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.06), 0 2px 32px 0 rgba(0, 0, 0, 0.16);
+    transition: transform 167ms cubic-bezier(0.33, 0.00, 0.00, 1.00);
+    box-sizing: content-box;
+  }
+
+
+  .intercom-lightweight-app-launcher:hover {
+    transition: transform 250ms cubic-bezier(0.33, 0.00, 0.00, 1.00);
+    transform: scale(1.1)
+  }
+
+  .intercom-lightweight-app-launcher:active {
+    transform: scale(0.85);
+    transition: transform 134ms cubic-bezier(0.45, 0, 0.2, 1);
+  }
+
+
+  .intercom-lightweight-app-launcher:focus {
+    outline: none;
+
+    
+  }
+
+  .intercom-lightweight-app-launcher-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    transition: transform 100ms linear, opacity 80ms linear;
+  }
+
+  .intercom-lightweight-app-launcher-icon-open {
+    
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      
+  }
+
+  .intercom-lightweight-app-launcher-icon-open svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .intercom-lightweight-app-launcher-icon-open svg path {
+    fill: rgb(255, 255, 255);
+  }
+
+  .intercom-lightweight-app-launcher-icon-self-serve {
+    
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      
+  }
+
+  .intercom-lightweight-app-launcher-icon-self-serve svg {
+    height: 44px;
+  }
+
+  .intercom-lightweight-app-launcher-icon-self-serve svg path {
+    fill: rgb(255, 255, 255);
+  }
+
+  .intercom-lightweight-app-launcher-custom-icon-open {
+    max-height: 24px;
+    max-width: 24px;
+
+    
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      
+  }
+
+  .intercom-lightweight-app-launcher-icon-minimize {
+    
+        opacity: 0;
+        transform: rotate(-60deg) scale(0);
+      
+  }
+
+  .intercom-lightweight-app-launcher-icon-minimize svg path {
+    fill: rgb(255, 255, 255);
+  }
+
+  /* Extended launcher styles */
+  .intercom-lightweight-app-launcher.intercom-launcher-extended {
+    width: calc(180px - 30px);
+    max-width: calc(180px - 30px);
+    height: calc(45px - 26px);
+    max-height: calc(45px - 26px);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 16px 12px 12px !important;
+    gap: 6px;
+    /* Use theme background instead of hardcoded gradient */
+    background: #2876D4;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0px -2px 50px rgba(0, 0, 0, 0.1);
+    
+  }
+
+  .intercom-lightweight-app-launcher.intercom-launcher-extended .intercom-lightweight-app-launcher-icon {
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+
+  .intercom-lightweight-app-launcher-text {
+    /* Match text color with launcher icon */
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 140px;
+    opacity: 1;
+    transition: opacity 80ms linear;
+  }
+
+  .intercom-lightweight-app-messenger {
+    position: fixed;
+    z-index: 2147483003;
+    overflow: hidden;
+    background-color: #ffffff;
+    animation: intercom-lightweight-app-messenger 250ms cubic-bezier(0, 1, 1, 1);
+    transform-origin: bottom right;
+
+    
+        width: 400px;
+        height: calc(100% - 120px);
+        max-height: 704px;
+        min-height: 250px;
+        right: 25px;
+        bottom: 100px;
+        box-shadow: 0 5px 40px rgba(0,0,0,0.16);
+      
+
+    border-radius: 24px;
+  }
+
+  .intercom-lightweight-app-messenger-header {
+    height: 64px;
+    border-bottom: none;
+    background: #ffffff;
+  }
+
+  .intercom-lightweight-app-messenger-footer{
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    height: 80px;
+    background: #ffffff;
+    font-size: 14px;
+    line-height: 21px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+  }
+
+  @media print {
+    .intercom-lightweight-app {
+      display: none;
+    }
+  }
+</style></div></body></html>

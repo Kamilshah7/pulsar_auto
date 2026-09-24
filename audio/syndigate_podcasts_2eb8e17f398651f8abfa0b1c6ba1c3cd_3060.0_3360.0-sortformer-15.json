@@ -1,0 +1,635 @@
+{
+  "version": 1,
+  "tool": "pulsar-pipeline",
+  "audioFilename": "syndigate_podcasts_2eb8e17f398651f8abfa0b1c6ba1c3cd_3060.0_3360.0-sortformer-15.wav",
+  "audioDurationSec": 28.64,
+  "sourceBatch": "word_alignment_production_2026-09-16_SO-70802-b22",
+  "sourceClipSegmentId": "syndigate_podcasts:2eb8e17f398651f8abfa0b1c6ba1c3cd:3060.0:3360.0-sortformer-15",
+  "nSegments": 78,
+  "segments": [
+    {
+      "segmentId": 1,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:00.000",
+      "endTime": "00:00:00.320",
+      "refTranscript": "either"
+    },
+    {
+      "segmentId": 2,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:00.320",
+      "endTime": "00:00:00.560",
+      "refTranscript": "you"
+    },
+    {
+      "segmentId": 3,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:00.560",
+      "endTime": "00:00:00.800",
+      "refTranscript": "see"
+    },
+    {
+      "segmentId": 4,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:00.800",
+      "endTime": "00:00:00.880",
+      "refTranscript": "it"
+    },
+    {
+      "segmentId": 5,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:00.880",
+      "endTime": "00:00:00.880",
+      "refTranscript": "a"
+    },
+    {
+      "segmentId": 6,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:00.880",
+      "endTime": "00:00:01.200",
+      "refTranscript": "lot"
+    },
+    {
+      "segmentId": 7,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:01.200",
+      "endTime": "00:00:01.680",
+      "refTranscript": "on"
+    },
+    {
+      "segmentId": 8,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:02.000",
+      "endTime": "00:00:02.160",
+      "refTranscript": "in"
+    },
+    {
+      "segmentId": 9,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:02.160",
+      "endTime": "00:00:02.560",
+      "refTranscript": "social"
+    },
+    {
+      "segmentId": 10,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:02.560",
+      "endTime": "00:00:02.960",
+      "refTranscript": "media"
+    },
+    {
+      "segmentId": 11,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:02.960",
+      "endTime": "00:00:03.120",
+      "refTranscript": "where"
+    },
+    {
+      "segmentId": 12,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:03.120",
+      "endTime": "00:00:03.360",
+      "refTranscript": "it's"
+    },
+    {
+      "segmentId": 13,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:03.360",
+      "endTime": "00:00:03.600",
+      "refTranscript": "like"
+    },
+    {
+      "segmentId": 14,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:03.920",
+      "endTime": "00:00:04.160",
+      "refTranscript": "they"
+    },
+    {
+      "segmentId": 15,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:04.160",
+      "endTime": "00:00:04.480",
+      "refTranscript": "did"
+    },
+    {
+      "segmentId": 16,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:04.480",
+      "endTime": "00:00:04.720",
+      "refTranscript": "this"
+    },
+    {
+      "segmentId": 17,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:04.720",
+      "endTime": "00:00:04.800",
+      "refTranscript": "to"
+    },
+    {
+      "segmentId": 18,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:04.800",
+      "endTime": "00:00:05.360",
+      "refTranscript": "themselves"
+    },
+    {
+      "segmentId": 19,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:05.360",
+      "endTime": "00:00:06.000",
+      "refTranscript": "or"
+    },
+    {
+      "segmentId": 20,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:06.080",
+      "endTime": "00:00:06.720",
+      "refTranscript": "um"
+    },
+    {
+      "segmentId": 21,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:06.960",
+      "endTime": "00:00:07.200",
+      "refTranscript": "you"
+    },
+    {
+      "segmentId": 22,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:07.200",
+      "endTime": "00:00:07.440",
+      "refTranscript": "know"
+    },
+    {
+      "segmentId": 23,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:07.440",
+      "endTime": "00:00:07.680",
+      "refTranscript": "this"
+    },
+    {
+      "segmentId": 24,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:07.760",
+      "endTime": "00:00:07.920",
+      "refTranscript": "this"
+    },
+    {
+      "segmentId": 25,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:07.920",
+      "endTime": "00:00:08.480",
+      "refTranscript": "idea"
+    },
+    {
+      "segmentId": 26,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:08.480",
+      "endTime": "00:00:08.720",
+      "refTranscript": "that"
+    },
+    {
+      "segmentId": 27,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:08.800",
+      "endTime": "00:00:08.960",
+      "refTranscript": "you"
+    },
+    {
+      "segmentId": 28,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:08.960",
+      "endTime": "00:00:09.040",
+      "refTranscript": "are"
+    },
+    {
+      "segmentId": 29,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:09.040",
+      "endTime": "00:00:09.760",
+      "refTranscript": "knowingly"
+    },
+    {
+      "segmentId": 30,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:09.760",
+      "endTime": "00:00:10.160",
+      "refTranscript": "doing"
+    },
+    {
+      "segmentId": 31,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:10.160",
+      "endTime": "00:00:10.560",
+      "refTranscript": "something"
+    },
+    {
+      "segmentId": 32,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:10.640",
+      "endTime": "00:00:10.720",
+      "refTranscript": "i"
+    },
+    {
+      "segmentId": 33,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:10.720",
+      "endTime": "00:00:11.120",
+      "refTranscript": "wasn't"
+    },
+    {
+      "segmentId": 34,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:11.440",
+      "endTime": "00:00:11.600",
+      "refTranscript": "it"
+    },
+    {
+      "segmentId": 35,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:11.600",
+      "endTime": "00:00:11.920",
+      "refTranscript": "was"
+    },
+    {
+      "segmentId": 36,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:11.920",
+      "endTime": "00:00:12.320",
+      "refTranscript": "very"
+    },
+    {
+      "segmentId": 37,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:12.320",
+      "endTime": "00:00:12.800",
+      "refTranscript": "much"
+    },
+    {
+      "segmentId": 38,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:12.800",
+      "endTime": "00:00:13.840",
+      "refTranscript": "subconscious"
+    },
+    {
+      "segmentId": 39,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:13.920",
+      "endTime": "00:00:14.080",
+      "refTranscript": "and"
+    },
+    {
+      "segmentId": 40,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:14.080",
+      "endTime": "00:00:14.320",
+      "refTranscript": "then"
+    },
+    {
+      "segmentId": 41,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:15.280",
+      "endTime": "00:00:15.520",
+      "refTranscript": "the"
+    },
+    {
+      "segmentId": 42,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:15.920",
+      "endTime": "00:00:16.080",
+      "refTranscript": "i"
+    },
+    {
+      "segmentId": 43,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:16.080",
+      "endTime": "00:00:16.320",
+      "refTranscript": "do"
+    },
+    {
+      "segmentId": 44,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:16.320",
+      "endTime": "00:00:16.560",
+      "refTranscript": "think"
+    },
+    {
+      "segmentId": 45,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:16.640",
+      "endTime": "00:00:17.040",
+      "refTranscript": "getting"
+    },
+    {
+      "segmentId": 46,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:17.040",
+      "endTime": "00:00:17.360",
+      "refTranscript": "out"
+    },
+    {
+      "segmentId": 47,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:17.360",
+      "endTime": "00:00:17.440",
+      "refTranscript": "of"
+    },
+    {
+      "segmentId": 48,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:17.440",
+      "endTime": "00:00:17.600",
+      "refTranscript": "it"
+    },
+    {
+      "segmentId": 49,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:17.920",
+      "endTime": "00:00:18.080",
+      "refTranscript": "it"
+    },
+    {
+      "segmentId": 50,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:18.160",
+      "endTime": "00:00:18.560",
+      "refTranscript": "takes"
+    },
+    {
+      "segmentId": 51,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:18.560",
+      "endTime": "00:00:19.040",
+      "refTranscript": "personal"
+    },
+    {
+      "segmentId": 52,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:19.040",
+      "endTime": "00:00:19.920",
+      "refTranscript": "responsibility"
+    },
+    {
+      "segmentId": 53,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:19.920",
+      "endTime": "00:00:20.240",
+      "refTranscript": "and"
+    },
+    {
+      "segmentId": 54,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:20.240",
+      "endTime": "00:00:20.720",
+      "refTranscript": "is"
+    },
+    {
+      "segmentId": 55,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:20.880",
+      "endTime": "00:00:21.280",
+      "refTranscript": "takes"
+    },
+    {
+      "segmentId": 56,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:21.280",
+      "endTime": "00:00:21.760",
+      "refTranscript": "that"
+    },
+    {
+      "segmentId": 57,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:21.840",
+      "endTime": "00:00:22.080",
+      "refTranscript": "uh"
+    },
+    {
+      "segmentId": 58,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:22.160",
+      "endTime": "00:00:22.960",
+      "refTranscript": "intention"
+    },
+    {
+      "segmentId": 59,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:23.040",
+      "endTime": "00:00:23.520",
+      "refTranscript": "and"
+    },
+    {
+      "segmentId": 60,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:23.840",
+      "endTime": "00:00:24.160",
+      "refTranscript": "kind"
+    },
+    {
+      "segmentId": 61,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:24.160",
+      "endTime": "00:00:24.240",
+      "refTranscript": "of"
+    },
+    {
+      "segmentId": 62,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:24.240",
+      "endTime": "00:00:24.400",
+      "refTranscript": "you"
+    },
+    {
+      "segmentId": 63,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:24.400",
+      "endTime": "00:00:24.640",
+      "refTranscript": "have"
+    },
+    {
+      "segmentId": 64,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:24.720",
+      "endTime": "00:00:24.800",
+      "refTranscript": "to"
+    },
+    {
+      "segmentId": 65,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:24.800",
+      "endTime": "00:00:25.440",
+      "refTranscript": "knowingly"
+    },
+    {
+      "segmentId": 66,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:25.440",
+      "endTime": "00:00:25.600",
+      "refTranscript": "get"
+    },
+    {
+      "segmentId": 67,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:25.600",
+      "endTime": "00:00:25.840",
+      "refTranscript": "out"
+    },
+    {
+      "segmentId": 68,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:25.840",
+      "endTime": "00:00:26.000",
+      "refTranscript": "of"
+    },
+    {
+      "segmentId": 69,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:26.000",
+      "endTime": "00:00:26.160",
+      "refTranscript": "it"
+    },
+    {
+      "segmentId": 70,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:26.480",
+      "endTime": "00:00:26.560",
+      "refTranscript": "i"
+    },
+    {
+      "segmentId": 71,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:26.560",
+      "endTime": "00:00:26.880",
+      "refTranscript": "don't"
+    },
+    {
+      "segmentId": 72,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:26.880",
+      "endTime": "00:00:27.040",
+      "refTranscript": "know"
+    },
+    {
+      "segmentId": 73,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:27.040",
+      "endTime": "00:00:27.040",
+      "refTranscript": "a"
+    },
+    {
+      "segmentId": 74,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:27.040",
+      "endTime": "00:00:27.200",
+      "refTranscript": "lot"
+    },
+    {
+      "segmentId": 75,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:27.200",
+      "endTime": "00:00:27.280",
+      "refTranscript": "of"
+    },
+    {
+      "segmentId": 76,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:27.280",
+      "endTime": "00:00:27.600",
+      "refTranscript": "people"
+    },
+    {
+      "segmentId": 77,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:27.600",
+      "endTime": "00:00:27.760",
+      "refTranscript": "who"
+    },
+    {
+      "segmentId": 78,
+      "speaker": "S1",
+      "type": "lexical",
+      "startTime": "00:00:27.760",
+      "endTime": "00:00:28.240",
+      "refTranscript": "just"
+    }
+  ]
+}

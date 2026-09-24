@@ -1,0 +1,110 @@
+[
+  {
+    "index": 0,
+    "id": "clip_0",
+    "filename": "syndigate_podcasts_f656b2823256589f9ce90f687859b141_1820.0_2120.0-sortformer-20.wav",
+    "duration_sec": 20.72,
+    "start_sec": 0.0,
+    "end_sec": 20.72,
+    "token_count": 56
+  },
+  {
+    "index": 1,
+    "id": "clip_1",
+    "filename": "syndigate_podcasts_f6930880bdb45dd386e60a699ec4f9f3_2390.0_2690.0-sortformer-8.wav",
+    "duration_sec": 23.2,
+    "start_sec": 20.72,
+    "end_sec": 43.92,
+    "token_count": 65
+  },
+  {
+    "index": 2,
+    "id": "clip_2",
+    "filename": "syndigate_podcasts_f6e6176ee7f054b1a1924bb85a1211c5_440.0_740.0-sortformer-6.wav",
+    "duration_sec": 26.0,
+    "start_sec": 43.92,
+    "end_sec": 69.92,
+    "token_count": 90
+  },
+  {
+    "index": 3,
+    "id": "clip_3",
+    "filename": "syndigate_podcasts_f77228af80395de3a5b569486bf50f2c_360.0_660.0-sortformer-32.wav",
+    "duration_sec": 26.96,
+    "start_sec": 69.92,
+    "end_sec": 96.88,
+    "token_count": 88
+  },
+  {
+    "index": 4,
+    "id": "clip_4",
+    "filename": "syndigate_podcasts_f79a4632276d55b495289ad57aaa2b3d_2740.0_3040.0-sortformer-31.wav",
+    "duration_sec": 21.84,
+    "start_sec": 96.88,
+    "end_sec": 118.72,
+    "token_count": 56
+  },
+  {
+    "index": 5,
+    "id": "clip_5",
+    "filename": "syndigate_podcasts_f81e71c59850566b95141e52c65c208c_610.0_910.0-sortformer-9.wav",
+    "duration_sec": 26.4,
+    "start_sec": 118.72,
+    "end_sec": 145.12,
+    "token_count": 72
+  },
+  {
+    "index": 6,
+    "id": "clip_6",
+    "filename": "syndigate_podcasts_f850878ca0f25094b1d0aa4b246afb19_3080.0_3360.0-sortformer-31.wav",
+    "duration_sec": 26.56,
+    "start_sec": 145.12,
+    "end_sec": 171.68,
+    "token_count": 82
+  },
+  {
+    "index": 7,
+    "id": "clip_7",
+    "filename": "syndigate_podcasts_f86683b91527598da4d1ad52aa94fbce_2510.0_2700.0-sortformer-0.wav",
+    "duration_sec": 21.76,
+    "start_sec": 171.68,
+    "end_sec": 193.44,
+    "token_count": 43
+  },
+  {
+    "index": 8,
+    "id": "clip_8",
+    "filename": "syndigate_podcasts_f8c8e77a069c5faba3e235e99cf93874_360.0_660.0-sortformer-10.wav",
+    "duration_sec": 25.44,
+    "start_sec": 193.44,
+    "end_sec": 218.88,
+    "token_count": 71
+  },
+  {
+    "index": 9,
+    "id": "clip_9",
+    "filename": "syndigate_podcasts_f8e17213c56855e1983a3b626d74abc8_4000.0_4300.0-sortformer-8.wav",
+    "duration_sec": 25.6,
+    "start_sec": 218.88,
+    "end_sec": 244.48,
+    "token_count": 73
+  },
+  {
+    "index": 10,
+    "id": "clip_10",
+    "filename": "syndigate_podcasts_f8e31611f2a651869d0895ddad0521ce_2120.0_2420.0-sortformer-27.wav",
+    "duration_sec": 22.32,
+    "start_sec": 244.48,
+    "end_sec": 266.8,
+    "token_count": 63
+  },
+  {
+    "index": 11,
+    "id": "clip_11",
+    "filename": "syndigate_podcasts_fa07d94b1ffe5b68b89a70b142be688c_940.0_1240.0-sortformer-17.wav",
+    "duration_sec": 28.96,
+    "start_sec": 266.8,
+    "end_sec": 295.76,
+    "token_count": 75
+  }
+]

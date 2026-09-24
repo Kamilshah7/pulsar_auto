@@ -1,0 +1,649 @@
+{
+  "overall": {
+    "n_boundaries": 136,
+    "mae_ms": 10.657,
+    "median_ms": 5.3,
+    "p90_ms": 25.3,
+    "p99_ms": 63.28,
+    "max_ms": 64.7,
+    "mean_signed_bias_ms": 1.148,
+    "pct_within_5ms": 50.0,
+    "pct_within_7ms": 54.41,
+    "pct_within_10ms": 61.76,
+    "pct_within_20ms": 86.76
+  },
+  "per_clip": {
+    "0": {
+      "filename": "zencastr-en_603c4aa5c3e46e0013dcece4-00005_68.wav",
+      "n_tokens": 68,
+      "align_time_sec": 8.81,
+      "summary": {
+        "n_boundaries": 136,
+        "mae_ms": 10.657,
+        "median_ms": 5.3,
+        "p90_ms": 25.3,
+        "p99_ms": 63.28,
+        "max_ms": 64.7,
+        "mean_signed_bias_ms": 1.148,
+        "pct_within_5ms": 50.0,
+        "pct_within_7ms": 54.41,
+        "pct_within_10ms": 61.76,
+        "pct_within_20ms": 86.76
+      },
+      "rows": [
+        {
+          "text": "surprisingly",
+          "gt_start": 0.895,
+          "gt_end": 2.082,
+          "pred_start": 0.8947,
+          "pred_end": 2.1363,
+          "start_err_ms": -0.3,
+          "end_err_ms": 54.3
+        },
+        {
+          "text": "s-",
+          "gt_start": 2.45,
+          "gt_end": 2.813,
+          "pred_start": 2.4452,
+          "pred_end": 2.8644,
+          "start_err_ms": -4.8,
+          "end_err_ms": 51.4
+        },
+        {
+          "text": "surprisingly",
+          "gt_start": 2.869,
+          "gt_end": 3.72,
+          "pred_start": 2.8664,
+          "pred_end": 3.7201,
+          "start_err_ms": -2.6,
+          "end_err_ms": 0.1
+        },
+        {
+          "text": "restrained",
+          "gt_start": 3.721,
+          "gt_end": 4.268,
+          "pred_start": 3.7221,
+          "pred_end": 4.2789,
+          "start_err_ms": 1.1,
+          "end_err_ms": 10.9
+        },
+        {
+          "text": "and",
+          "gt_start": 4.27,
+          "gt_end": 4.3884,
+          "pred_start": 4.2809,
+          "pred_end": 4.3776,
+          "start_err_ms": 10.9,
+          "end_err_ms": -10.8
+        },
+        {
+          "text": "i",
+          "gt_start": 4.3894,
+          "gt_end": 4.53,
+          "pred_start": 4.3796,
+          "pred_end": 4.5403,
+          "start_err_ms": -9.8,
+          "end_err_ms": 10.3
+        },
+        {
+          "text": "think",
+          "gt_start": 4.571,
+          "gt_end": 4.92,
+          "pred_start": 4.5423,
+          "pred_end": 4.9387,
+          "start_err_ms": -28.7,
+          "end_err_ms": 18.7
+        },
+        {
+          "text": "it",
+          "gt_start": 5.06,
+          "gt_end": 5.16,
+          "pred_start": 5.0641,
+          "pred_end": 5.1605,
+          "start_err_ms": 4.1,
+          "end_err_ms": 0.5
+        },
+        {
+          "text": "doesn't",
+          "gt_start": 5.162,
+          "gt_end": 5.4044,
+          "pred_start": 5.1625,
+          "pred_end": 5.4211,
+          "start_err_ms": 0.5,
+          "end_err_ms": 16.7
+        },
+        {
+          "text": "show",
+          "gt_start": 5.4054,
+          "gt_end": 5.94,
+          "pred_start": 5.4231,
+          "pred_end": 5.9381,
+          "start_err_ms": 17.7,
+          "end_err_ms": -1.9
+        },
+        {
+          "text": "that",
+          "gt_start": 5.942,
+          "gt_end": 6.213,
+          "pred_start": 5.9401,
+          "pred_end": 6.2312,
+          "start_err_ms": -1.9,
+          "end_err_ms": 18.2
+        },
+        {
+          "text": "much",
+          "gt_start": 6.231,
+          "gt_end": 6.6,
+          "pred_start": 6.2332,
+          "pred_end": 6.5405,
+          "start_err_ms": 2.2,
+          "end_err_ms": -59.5
+        },
+        {
+          "text": "and",
+          "gt_start": 6.605,
+          "gt_end": 6.691,
+          "pred_start": 6.5425,
+          "pred_end": 6.6909,
+          "start_err_ms": -62.5,
+          "end_err_ms": -0.1
+        },
+        {
+          "text": "i",
+          "gt_start": 6.693,
+          "gt_end": 6.768,
+          "pred_start": 6.6929,
+          "pred_end": 6.7809,
+          "start_err_ms": -0.1,
+          "end_err_ms": 12.9
+        },
+        {
+          "text": "think",
+          "gt_start": 6.77,
+          "gt_end": 6.945,
+          "pred_start": 6.7829,
+          "pred_end": 6.9406,
+          "start_err_ms": 12.9,
+          "end_err_ms": -4.4
+        },
+        {
+          "text": "that's",
+          "gt_start": 6.947,
+          "gt_end": 7.213,
+          "pred_start": 6.9426,
+          "pred_end": 7.218,
+          "start_err_ms": -4.4,
+          "end_err_ms": 5.0
+        },
+        {
+          "text": "pretty",
+          "gt_start": 8.114,
+          "gt_end": 8.339,
+          "pred_start": 8.1145,
+          "pred_end": 8.3553,
+          "start_err_ms": 0.5,
+          "end_err_ms": 16.3
+        },
+        {
+          "text": "cool",
+          "gt_start": 8.383,
+          "gt_end": 8.712,
+          "pred_start": 8.4272,
+          "pred_end": 8.7305,
+          "start_err_ms": 44.2,
+          "end_err_ms": 18.5
+        },
+        {
+          "text": "um",
+          "gt_start": 9.512,
+          "gt_end": 10.16,
+          "pred_start": 9.51,
+          "pred_end": 10.1606,
+          "start_err_ms": -2.0,
+          "end_err_ms": 0.6
+        },
+        {
+          "text": "i",
+          "gt_start": 10.233,
+          "gt_end": 10.393,
+          "pred_start": 10.2375,
+          "pred_end": 10.3792,
+          "start_err_ms": 4.5,
+          "end_err_ms": -13.8
+        },
+        {
+          "text": "think",
+          "gt_start": 10.414,
+          "gt_end": 10.7057,
+          "pred_start": 10.3812,
+          "pred_end": 10.641,
+          "start_err_ms": -32.8,
+          "end_err_ms": -64.7
+        },
+        {
+          "text": "uh",
+          "gt_start": 10.7067,
+          "gt_end": 11.214,
+          "pred_start": 10.643,
+          "pred_end": 11.2497,
+          "start_err_ms": -63.7,
+          "end_err_ms": 35.7
+        },
+        {
+          "text": "you",
+          "gt_start": 11.982,
+          "gt_end": 12.062,
+          "pred_start": 11.9801,
+          "pred_end": 12.0622,
+          "start_err_ms": -1.9,
+          "end_err_ms": 0.2
+        },
+        {
+          "text": "don't",
+          "gt_start": 12.064,
+          "gt_end": 12.213,
+          "pred_start": 12.0642,
+          "pred_end": 12.2125,
+          "start_err_ms": 0.2,
+          "end_err_ms": -0.5
+        },
+        {
+          "text": "really",
+          "gt_start": 12.214,
+          "gt_end": 12.453,
+          "pred_start": 12.2145,
+          "pred_end": 12.4686,
+          "start_err_ms": 0.5,
+          "end_err_ms": 15.6
+        },
+        {
+          "text": "get",
+          "gt_start": 12.454,
+          "gt_end": 12.735,
+          "pred_start": 12.4706,
+          "pred_end": 12.783,
+          "start_err_ms": 16.6,
+          "end_err_ms": 48.0
+        },
+        {
+          "text": "any",
+          "gt_start": 13.63,
+          "gt_end": 14.006,
+          "pred_start": 13.6281,
+          "pred_end": 14.0301,
+          "start_err_ms": -1.9,
+          "end_err_ms": 24.1
+        },
+        {
+          "text": "shots",
+          "gt_start": 14.634,
+          "gt_end": 15.033,
+          "pred_start": 14.6382,
+          "pred_end": 15.0462,
+          "start_err_ms": 4.2,
+          "end_err_ms": 13.2
+        },
+        {
+          "text": "of",
+          "gt_start": 15.035,
+          "gt_end": 15.138,
+          "pred_start": 15.0482,
+          "pred_end": 15.1633,
+          "start_err_ms": 13.2,
+          "end_err_ms": 25.3
+        },
+        {
+          "text": "like",
+          "gt_start": 15.14,
+          "gt_end": 15.336,
+          "pred_start": 15.1653,
+          "pred_end": 15.3359,
+          "start_err_ms": 25.3,
+          "end_err_ms": -0.1
+        },
+        {
+          "text": "the",
+          "gt_start": 15.338,
+          "gt_end": 15.4775,
+          "pred_start": 15.3379,
+          "pred_end": 15.4939,
+          "start_err_ms": -0.1,
+          "end_err_ms": 16.4
+        },
+        {
+          "text": "villains",
+          "gt_start": 15.4785,
+          "gt_end": 16.25,
+          "pred_start": 15.4959,
+          "pred_end": 16.2697,
+          "start_err_ms": 17.4,
+          "end_err_ms": 19.7
+        },
+        {
+          "text": "um",
+          "gt_start": 16.325,
+          "gt_end": 17.037,
+          "pred_start": 16.2854,
+          "pred_end": 17.0433,
+          "start_err_ms": -39.6,
+          "end_err_ms": 6.3
+        },
+        {
+          "text": "you",
+          "gt_start": 17.134,
+          "gt_end": 17.224,
+          "pred_start": 17.1177,
+          "pred_end": 17.2239,
+          "start_err_ms": -16.3,
+          "end_err_ms": -0.1
+        },
+        {
+          "text": "only",
+          "gt_start": 17.226,
+          "gt_end": 17.402,
+          "pred_start": 17.2259,
+          "pred_end": 17.4019,
+          "start_err_ms": -0.1,
+          "end_err_ms": -0.1
+        },
+        {
+          "text": "get",
+          "gt_start": 17.404,
+          "gt_end": 17.5122,
+          "pred_start": 17.4039,
+          "pred_end": 17.534,
+          "start_err_ms": -0.1,
+          "end_err_ms": 21.8
+        },
+        {
+          "text": "like",
+          "gt_start": 17.5132,
+          "gt_end": 17.69,
+          "pred_start": 17.536,
+          "pred_end": 17.6936,
+          "start_err_ms": 22.8,
+          "end_err_ms": 3.6
+        },
+        {
+          "text": "glimpses",
+          "gt_start": 17.692,
+          "gt_end": 18.222,
+          "pred_start": 17.6956,
+          "pred_end": 18.2195,
+          "start_err_ms": 3.6,
+          "end_err_ms": -2.5
+        },
+        {
+          "text": "of",
+          "gt_start": 18.224,
+          "gt_end": 18.319,
+          "pred_start": 18.2215,
+          "pred_end": 18.3134,
+          "start_err_ms": -2.5,
+          "end_err_ms": -5.6
+        },
+        {
+          "text": "the",
+          "gt_start": 18.321,
+          "gt_end": 18.476,
+          "pred_start": 18.3154,
+          "pred_end": 18.4633,
+          "start_err_ms": -5.6,
+          "end_err_ms": -12.7
+        },
+        {
+          "text": "bat",
+          "gt_start": 18.478,
+          "gt_end": 18.735,
+          "pred_start": 18.4653,
+          "pred_end": 18.7443,
+          "start_err_ms": -12.7,
+          "end_err_ms": 9.3
+        },
+        {
+          "text": "suit",
+          "gt_start": 18.738,
+          "gt_end": 19.22,
+          "pred_start": 18.7463,
+          "pred_end": 19.2456,
+          "start_err_ms": 8.3,
+          "end_err_ms": 25.6
+        },
+        {
+          "text": "you",
+          "gt_start": 19.654,
+          "gt_end": 19.735,
+          "pred_start": 19.6543,
+          "pred_end": 19.7321,
+          "start_err_ms": 0.3,
+          "end_err_ms": -2.9
+        },
+        {
+          "text": "don't",
+          "gt_start": 19.737,
+          "gt_end": 19.855,
+          "pred_start": 19.7341,
+          "pred_end": 19.8546,
+          "start_err_ms": -2.9,
+          "end_err_ms": -0.4
+        },
+        {
+          "text": "even",
+          "gt_start": 19.857,
+          "gt_end": 19.9782,
+          "pred_start": 19.8566,
+          "pred_end": 19.9759,
+          "start_err_ms": -0.4,
+          "end_err_ms": -2.3
+        },
+        {
+          "text": "see",
+          "gt_start": 19.9792,
+          "gt_end": 20.177,
+          "pred_start": 19.9779,
+          "pred_end": 20.1774,
+          "start_err_ms": -1.3,
+          "end_err_ms": 0.4
+        },
+        {
+          "text": "cat",
+          "gt_start": 20.179,
+          "gt_end": 20.435,
+          "pred_start": 20.1794,
+          "pred_end": 20.4348,
+          "start_err_ms": 0.4,
+          "end_err_ms": -0.2
+        },
+        {
+          "text": "woman",
+          "gt_start": 20.437,
+          "gt_end": 20.6543,
+          "pred_start": 20.4368,
+          "pred_end": 20.6506,
+          "start_err_ms": -0.2,
+          "end_err_ms": -3.7
+        },
+        {
+          "text": "in",
+          "gt_start": 20.6553,
+          "gt_end": 20.814,
+          "pred_start": 20.6526,
+          "pred_end": 20.8127,
+          "start_err_ms": -2.7,
+          "end_err_ms": -1.3
+        },
+        {
+          "text": "costume",
+          "gt_start": 20.833,
+          "gt_end": 21.5687,
+          "pred_start": 20.8148,
+          "pred_end": 21.5671,
+          "start_err_ms": -18.2,
+          "end_err_ms": -1.6
+        },
+        {
+          "text": "i",
+          "gt_start": 21.5697,
+          "gt_end": 21.6949,
+          "pred_start": 21.5691,
+          "pred_end": 21.6852,
+          "start_err_ms": -0.6,
+          "end_err_ms": -9.7
+        },
+        {
+          "text": "think",
+          "gt_start": 21.6959,
+          "gt_end": 21.805,
+          "pred_start": 21.6872,
+          "pred_end": 21.8052,
+          "start_err_ms": -8.7,
+          "end_err_ms": 0.2
+        },
+        {
+          "text": "it's",
+          "gt_start": 21.807,
+          "gt_end": 21.939,
+          "pred_start": 21.8072,
+          "pred_end": 21.9386,
+          "start_err_ms": 0.2,
+          "end_err_ms": -0.4
+        },
+        {
+          "text": "good",
+          "gt_start": 21.941,
+          "gt_end": 22.232,
+          "pred_start": 21.9406,
+          "pred_end": 22.2501,
+          "start_err_ms": -0.4,
+          "end_err_ms": 18.1
+        },
+        {
+          "text": "i",
+          "gt_start": 22.855,
+          "gt_end": 22.9323,
+          "pred_start": 22.8587,
+          "pred_end": 22.9255,
+          "start_err_ms": 3.7,
+          "end_err_ms": -6.8
+        },
+        {
+          "text": "think",
+          "gt_start": 22.9333,
+          "gt_end": 23.102,
+          "pred_start": 22.9275,
+          "pred_end": 23.0941,
+          "start_err_ms": -5.8,
+          "end_err_ms": -7.9
+        },
+        {
+          "text": "((it's))",
+          "gt_start": 23.103,
+          "gt_end": 23.304,
+          "pred_start": 23.0961,
+          "pred_end": 23.3198,
+          "start_err_ms": -6.9,
+          "end_err_ms": 15.8
+        },
+        {
+          "text": "i",
+          "gt_start": 23.883,
+          "gt_end": 23.9259,
+          "pred_start": 23.8722,
+          "pred_end": 23.9258,
+          "start_err_ms": -10.8,
+          "end_err_ms": -0.1
+        },
+        {
+          "text": "think",
+          "gt_start": 23.9269,
+          "gt_end": 24.169,
+          "pred_start": 23.9278,
+          "pred_end": 24.1601,
+          "start_err_ms": 0.9,
+          "end_err_ms": -8.9
+        },
+        {
+          "text": "it",
+          "gt_start": 24.172,
+          "gt_end": 24.298,
+          "pred_start": 24.1621,
+          "pred_end": 24.2952,
+          "start_err_ms": -9.9,
+          "end_err_ms": -2.8
+        },
+        {
+          "text": "does",
+          "gt_start": 24.3,
+          "gt_end": 24.4787,
+          "pred_start": 24.2972,
+          "pred_end": 24.4665,
+          "start_err_ms": -2.8,
+          "end_err_ms": -12.2
+        },
+        {
+          "text": "exactly",
+          "gt_start": 24.4797,
+          "gt_end": 24.886,
+          "pred_start": 24.4685,
+          "pred_end": 24.8861,
+          "start_err_ms": -11.2,
+          "end_err_ms": 0.1
+        },
+        {
+          "text": "what",
+          "gt_start": 24.888,
+          "gt_end": 24.9795,
+          "pred_start": 24.8881,
+          "pred_end": 24.9869,
+          "start_err_ms": 0.1,
+          "end_err_ms": 7.4
+        },
+        {
+          "text": "a",
+          "gt_start": 24.9805,
+          "gt_end": 25.265,
+          "pred_start": 24.9889,
+          "pred_end": 25.277,
+          "start_err_ms": 8.4,
+          "end_err_ms": 12.0
+        },
+        {
+          "text": "trailer",
+          "gt_start": 25.57,
+          "gt_end": 26.029,
+          "pred_start": 25.5555,
+          "pred_end": 26.0435,
+          "start_err_ms": -14.5,
+          "end_err_ms": 14.5
+        },
+        {
+          "text": "should",
+          "gt_start": 26.226,
+          "gt_end": 26.436,
+          "pred_start": 26.2153,
+          "pred_end": 26.4343,
+          "start_err_ms": -10.7,
+          "end_err_ms": -1.7
+        },
+        {
+          "text": "do",
+          "gt_start": 26.438,
+          "gt_end": 26.639,
+          "pred_start": 26.4363,
+          "pred_end": 26.6493,
+          "start_err_ms": -1.7,
+          "end_err_ms": 10.3
+        },
+        {
+          "text": "um",
+          "gt_start": 27.693,
+          "gt_end": 28.066,
+          "pred_start": 27.6904,
+          "pred_end": 28.0658,
+          "start_err_ms": -2.6,
+          "end_err_ms": -0.2
+        }
+      ]
+    }
+  }
+}

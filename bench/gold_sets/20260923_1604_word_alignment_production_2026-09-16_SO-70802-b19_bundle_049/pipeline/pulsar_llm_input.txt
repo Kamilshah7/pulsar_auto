@@ -1,0 +1,168 @@
+=== CLIPS TO PROCESS ===
+
+--- CLIP 0 (syndigate_podcasts_f656b2823256589f9ce90f687859b141_1820.0_2120.0-sortformer-20.wav) ---
+1. Whisper Full Text:
+   "that needs medical attention seeing a vet. The other thing is it could be an endoparasite, like a worm or a part of a worm tries to come out and that's quite an itchy condition as well. If you think you wormed your dog regularly or recently just keep in mind that deworming is only a"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "THAT NEEDS MEDICAL ITTENTION SEEING OF IT AND THE OTHER THING IS IT COULD BE AN END OF PARASITE A LIKE A WORM OR A PART OF A VORM TRIES TO COME OUT AND THAT'S QUITE AN ISH ICI CONDITION AS WELL IF YOU THINK YOU WORM TH A DAK A REGULARY OR RECENTLY A JUST KEEP IN MIND THAT TE WORMING IS ONLY A"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'vet.' [2.26s - 3.28s] -> Acoustic CTC heard: ['of', 'it', 'and', 'the']
+   - Whisper 'endoparasite,' [5.38s - 6.94s] -> Acoustic CTC heard: ['end', 'of', 'parasite', 'a', 'like']
+   - Whisper 'and' [10.00s - 10.76s] -> Acoustic CTC heard: ['and', "that's"]
+   - Whisper 'regularly' [14.42s - 15.76s] -> Acoustic CTC heard: ['dak', 'a', 'regulary']
+   - Whisper 'a' [19.94s - 21.20s] -> Acoustic CTC heard: ['a']
+4. Targeted Micro-Slice detected 58 words (vs Whisper's 56 words).
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "that needs medical attention seeing a vet the other thing is it could be an endoparasite like a worm or a part of a worm tries to come out and that's quite an itchy condition as well if you think you wormed your dog regularly or recently just keep in mind that deworming is only a"
+============================================================
+
+--- CLIP 1 (syndigate_podcasts_f6930880bdb45dd386e60a699ec4f9f3_2390.0_2690.0-sortformer-8.wav) ---
+1. Whisper Full Text:
+   "if he said it was a conspiracy theory to believe that the, that the gain of function had escaped the lab, he's, you know, he's, he said that he said it was a conspiracy theory when people started to say, this probably came from the lab, right? He had, he, what was it? You know, how would you say prompted people to come up with a, Nope, it was a,"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "IF HE SAID IT WAS A CONSPIRACY THEORY TO BELIEVE THAT THE THAT THE GAIN OF FUNCTION HAD ESCAPED THE LAB HE NOW HE HE SAID THAT HE SAID IT WAS A CONSPIRACY THEORY WHEN PEOPLE STARTED TO SAY THIS PROBABLY CAME FROM THE LAB RIGHT HE HAD HE WHAT WAS IT NEW HOW IT JUST IT PROMPTED PEOPLE TO COME UP WITH A NOPE IT WAS A"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'escaped' [5.74s - 6.82s] -> Acoustic CTC heard: ['had', 'escaped', 'the']
+   - Whisper 'had,' [16.54s - 18.20s] -> Acoustic CTC heard: ['he', 'had', 'he']
+   - Whisper 'a,' [22.42s - 23.68s] -> Acoustic CTC heard: ['a']
+4. Targeted Micro-Slice detected 71 words (vs Whisper's 70 words).
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "if he said it was a conspiracy theory to believe that the gain of function had escaped the lab you know he said that he said it was a conspiracy theory when people started to say this probably came from the lab right he had he what was it you know how would you say prompted people to come up with nope it was a"
+============================================================
+
+--- CLIP 2 (syndigate_podcasts_f6e6176ee7f054b1a1924bb85a1211c5_440.0_740.0-sortformer-6.wav) ---
+1. Whisper Full Text:
+   "Yeah, absolutely. I guess to your point about rising multiples, I mean, we're certainly seeing that across the board as the industry becomes more mature. And then one thing that we've been talking about a lot recently is there's a good chance that content becomes a future gold rush. In the same way that FBA all of a sudden matured really fast and billions of capital started flooding in, those aggregators are needing to stay competitive and they're looking at"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "YA ABSOLUTELY YOU KNOW IT GUESS TO YOUR POINT ABOUT RISING MULTIPLES AND WE WERE CERTAINLY SEEING THAT ACROSS AFVORD IS THE INDUSTRY BECOMES MORE MATURE AND THEN YOU KNOW ONE THING THAT WE HAVE BEEN TALKING ABOUT A LOT RECENTLY IS THERE'S A GOOD CHANCE THAT CONTENT BECOMES E FUTURE BOLRUSH IN THE SAME WAY THAT FIE IN ALL THE SUDDEN MATURED REALLY FAST AND BILLIONS OF CAPITALS STARTED FLOODING IN YOU KNOW THOSE AGGREGATORS ARE NEEDING TO STAY COMPETITIVE AND THEIR LOOKING AT"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'absolutely.' [0.26s - 1.72s] -> Acoustic CTC heard: ['absolutely', 'you', 'know', 'it']
+   - Whisper 'in,' [20.80s - 21.66s] -> Acoustic CTC heard: ['in', 'you', 'know']
+4. Targeted Micro-Slice detected 81 words (vs Whisper's 80 words).
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "yeah absolutely you know i guess to your point about rising multiples i mean we're certainly seeing that across the board as the industry becomes more mature and then you know one thing that we've been talking about a lot recently is t here is a good chance that content becomes a future gold rush in the same way that fba you know all of a sudden matured really fast and billions of capital started flooding in you know those aggregators are needing to stay competitive and they're looking at"
+============================================================
+
+--- CLIP 3 (syndigate_podcasts_f77228af80395de3a5b569486bf50f2c_360.0_660.0-sortformer-32.wav) ---
+1. Whisper Full Text:
+   "I think it's very encouraging for all of us to hear that, all of us who are thinking of writing a book based on their PhD thesis. So it is possible and people can be interested in these projects. But why don't we talk a little bit about L.A.? Like what makes it an interesting city? I mean, there's a lot of research on L.A., right? But like what makes it an interesting city for your particular project? What's it like? What are the neighborhoods where you worked?"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "I THINK IT'S A VERY ENCOURAGING FOR ALL OF US ARE TO HEAR THAT ALL OF US WHO ARE THINKING OF WRITING OF BOOKFAST ON THEIR FEET ETIT SO IT IS POSSIBLE AND PEOPLE CAN BE INTERESTED IN THESE PROJECTS BUT WHY DON'T WE TALK A LITTLE BIT ABOUT ALAY LIKE WHAT MAKES IT AN INTERESTING CITY I MEAN THERE'S A LOT OF RESEARCH ON A ALAT WRITE BUT LIKE WHAT MAKES IT AN INTERESTING CITY FOR YOUR PARTICULAR PROJECT WHAT'D IT LIKE WHATARE THE NEIGHBORHOODS A WHERE YOU WORKED"
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "i think it's very encouraging for all of us to hear that all of us who are thinking of writing a book based on their phd thesis so it is possible and people can be interested in these projects but why don't we talk a little bit about la like what makes it an interesting city i mean there's a lot of research on la right but like what makes it an interesting city for your particular project what's it like what are the neighborhoods where you worked"
+============================================================
+
+--- CLIP 4 (syndigate_podcasts_f79a4632276d55b495289ad57aaa2b3d_2740.0_3040.0-sortformer-31.wav) ---
+1. Whisper Full Text:
+   "Interesting. But then, you know, Tim Eccles, a Georgia regulator, electricity system regulator, says that was brutal. We're not doing that again unless the feds step in with a cost overrun guarantee. Basically, unless the costs are backstopped by the federal government, we're not doing that again. It's what he's been saying. Be."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "INTERESTING BUT THEN YOU KNOW TIM EKELS A A GEORGIA REGULATOR ELECTRICITY SYSTEM REGULATOR SAYS THAT WAS BRUTAL WE'RE NOT DOING THAT AGAIN UNLESS UNLESS THE FEDS STEP IN WITH A COST OVERRUN GUARANTEE BASELY UNLESS THE COSTS ARE BACK STOPPED BY THE FEDERAL GOVERNMENT WE'RE NOT DOING THAT AGAINST WHAT HE IS WHAT HE HAS BEEN SAYING"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'Interesting.' [0.00s - 1.28s] -> Acoustic CTC heard: ['interesting', 'but', 'then']
+   - Whisper 'regulator,' [3.32s - 5.24s] -> Acoustic CTC heard: ['regulator']
+   - Whisper 'brutal.' [8.76s - 9.88s] -> Acoustic CTC heard: ['brutal', "we're", 'not']
+   - Whisper 'the' [11.44s - 12.20s] -> Acoustic CTC heard: ['unless', 'the']
+4. Targeted Micro-Slice detected 56 words (vs Whisper's 53 words).
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "interesting but then you know tim eccles a georgia regulator electricity system regulator says that was brutal we're not doing that again unless unless the feds step in with a cost overrun guarantee basically unless the costs are backstopped by the federal government we're not doing that again is what he is what he's been saying"
+============================================================
+
+--- CLIP 5 (syndigate_podcasts_f81e71c59850566b95141e52c65c208c_610.0_910.0-sortformer-9.wav) ---
+1. Whisper Full Text:
+   "If I mention or talk about anything that's related to the Western world, then our entire family would end up in gulags in Siberia. Now, I had lots of friends who disappeared overnight and never saw them again. And of course, there is no way of proving or disproving what happened to them. But people were saying that that family ended up in a gulag in Siberia, which is a work"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "I MENTION OR TALK ABOUT ANYTHING THAT'S RELATED TO THE BESTERN WORLD THEN OUR ENTIRE FAMILY WOULD IN AND UP IN GULEGS IN SIR BE M S A SIBERIA NOW I HAD LOTS OF FRIENDS WHO DISAPPEARED OVERNIGHT AND NEVER SAW THEM AGAIN AND OF COURSE THERE IS NO WAY OF PROVING OR DISAPPROVING WHAT HAPPENED TO THEM BUT PEOPLE WERE SAYING THAT THAT FAMILY LANDED UP IN A GULG IN SIBERIAN WHICH TO THE WORK CAMP"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'family' [5.32s - 6.42s] -> Acoustic CTC heard: ['our', 'entire', 'family']
+   - Whisper 'Siberia.' [8.36s - 10.44s] -> Acoustic CTC heard: ['in', 'sir', 'be', 'm', 's', 'a', 'siberia']
+4. Targeted Micro-Slice detected 72 words (vs Whisper's 71 words).
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "if i mention or talk about anything that's related to the western world then our entire family would end up in gulags in siberia now i had lots of friends who disappeared overnight and never saw them again and of course there is no way of proving or disproving what happened to them but people were saying that that family ended up in a gulag in siberia which is a work camp"
+============================================================
+
+--- CLIP 6 (syndigate_podcasts_f850878ca0f25094b1d0aa4b246afb19_3080.0_3360.0-sortformer-31.wav) ---
+1. Whisper Full Text:
+   "Rookie drafts are all NFL draft style because it's a dynasty and you've got like the entire roster together. When you're doing a redraft, like a startup, if you're doing a dynasty startup, then it's snake to make it even. But once these rosters are established and, you know, you've got to build it year after year after year, the worst team gets the best pick in each round, you know, in reverse order all the way through the 12th pick, right?"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "ROOKY DRAUGHTS ARE ALL IN A FELLDRAUGHT STYLE A BECAUSE IT'S A DYNASTY ANE YOU'VE GOT LIKE THE ENTIRE ROSTER TOGETHER WHEN YOU'RE DOING A REDRAUHT LIKE A START UP IF YOU'RE DONG A DYNASTY START UP THEN IT SNAKE AM TO MAKE IT EVEN BUT ONCE THESE ROSTERS ARE ESTABLISHED AND YOU KNOW YOU'VE GOT TO BUILD IT YEAR AFTER YEAR AFTER YEAR THE WORST TEAM GETS THE BEST PICK IN EACH ROUND YOU KNOW ITIN IN REVERSE ORDER ALL THE WAY THROUGH THE TWELFTH PICK AM"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'startup,' [8.94s - 10.02s] -> Acoustic CTC heard: ['start', 'up', 'then', 'it']
+   - Whisper 'to' [10.44s - 11.98s] -> Acoustic CTC heard: ['am', 'to', 'make']
+   - Whisper 'and,' [14.74s - 15.78s] -> Acoustic CTC heard: ['and']
+   - Whisper 'you' [20.60s - 21.84s] -> Acoustic CTC heard: ['you', 'know']
+   - Whisper 'pick,' [25.34s - 26.70s] -> Acoustic CTC heard: ['pick', 'am']
+4. Targeted Micro-Slice detected 83 words (vs Whisper's 82 words).
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "rookie drafts are all nfl draft style because it's a dynasty and you've got like the entire roster together when you're doing a redraft like a startup if you are doing a dynasty startup then it's snake to make it even but once these rosters are established and you know you've got to build it year after year after year the worst team gets the best pick in each round you know in reverse order all the way through the twelfth pick"
+============================================================
+
+--- CLIP 7 (syndigate_podcasts_f86683b91527598da4d1ad52aa94fbce_2510.0_2700.0-sortformer-0.wav) ---
+1. Whisper Full Text:
+   "Altimetry is our flagship publication. Altimetry is our flagship brand. And Altimetry, we're launching a newsletter, which is a newsletter and a strategy with specific recommendations for a credit-based strategy, which historically has done very well. I'm saying well."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "TRY ISARA SAR UNAL FLAGSHIP PUBLICATIONAL TEMETRIES OR OR FLAGSHIP BRAND A AND A ALTIMATRY A WERE LAUNCHING A NEWS LETTER WHICH IS A NEWS LETTER AND ASTRATEGY WITH SPECIFIC RECOMMENDATIONS FOR A A CREDIT BASE STRATEGY WHICH HISTORICALLY HAS DONE VERY WELL I I'M SAYING"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'brand.' [4.58s - 6.58s] -> Acoustic CTC heard: ['brand', 'a', 'and']
+   - Whisper 'Altimetry,' [6.60s - 9.48s] -> Acoustic CTC heard: ['and', 'a', 'altimatry', 'a', 'were']
+   - Whisper 'newsletter,' [10.60s - 11.94s] -> Acoustic CTC heard: ['a', 'news', 'letter', 'which']
+   - Whisper 'strategy,' [17.30s - 18.50s] -> Acoustic CTC heard: ['base', 'strategy', 'which']
+4. Targeted Micro-Slice detected 44 words (vs Whisper's 39 words).
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "is our is our you know flagship publication altimetry is our flagship brand and altimetry we're launching a newsletter which is a newsletter and a strategy with specific recommendations for a credit based strategy which historically has done very well i am saying"
+============================================================
+
+--- CLIP 8 (syndigate_podcasts_f8c8e77a069c5faba3e235e99cf93874_360.0_660.0-sortformer-10.wav) ---
+1. Whisper Full Text:
+   "compatible and required. So MFP is required for WPA3 personal network. So you will see that you'll have two bits in the beacon. Same thing under the RSN information element. We'll go back to the beacons and show you. But these two bits, the capable, the MFP capable and MFP required will have to be set to one if you set up a WPA3 personal network."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "COMPATIBLE AND REQUIRED SO M F PIS REQUIRED FOR W P THREE PERSONAL NETWORKS YOU WILL SEE THAT YOU'LL HAVE TWO BITS IN THE BEACON SIMPTHING UNDER THE ARSENDING FORMISSION ELEMENT WILL GO BACK TO THE BEACONS AND SHOW YOU BUT THESE TO BITS THE CAPABLE THE M F B CAPABLE M F B A REQUIRED WILL HAVE TO BE SET TO ONE IF YOU ARE IF YOU SET UP A W P THREE PERSONAL NETWORK"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'and' [0.60s - 1.64s] -> Acoustic CTC heard: ['and']
+   - Whisper 'capable,' [15.96s - 16.96s] -> Acoustic CTC heard: ['the', 'capable', 'the', 'm']
+   - Whisper 'required' [18.52s - 19.84s] -> Acoustic CTC heard: ['f', 'b', 'a', 'required']
+   - Whisper 'if' [20.92s - 22.10s] -> Acoustic CTC heard: ['to', 'one', 'if']
+4. Targeted Micro-Slice detected 67 words (vs Whisper's 66 words).
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "compatible and required so mfp is required for wpa three personal networks so you will see that you'll have two bits in the beacon same thing under the rsn information element we'll go back to the beacons and show you but these two bits the capable the mfp capable and mfp required will have to be set to one if you uh if you set up a wpa three personal network"
+============================================================
+
+--- CLIP 9 (syndigate_podcasts_f8e17213c56855e1983a3b626d74abc8_4000.0_4300.0-sortformer-8.wav) ---
+1. Whisper Full Text:
+   "So I have a book recommendation. If you are a David Graham fan, this book will not be new to you. But his most recent book is called The Wager. So folks may be familiar with David Graham as the author of Killers of the Flower Moon, a book whose movie adaptation was nominated for several Oscars this week. But The Wager, which is his most recent book, is a book about..."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "SI'VE A BOOK RECOMMENDATION I IF YOU ARE I A DAVID GRAND FAN YOU THIS BUTPLE NOT BE NEW TO YOU U BUT A HIS MOST RECENT BOOK IS CALLED THE WAGER UM SO FOLKS MAY BE FAMILIAR WITH DEVID GRAN UM AS THE AUTHOR OF KILLERS OF THE FLOWERMAN UM A BOOK WHOSE MOVY ADAPTATION WAS NOMINATED FOR SOV ALL OSCARS THIS WEEK A BUT THE WAGER ON WHICH IS HIS MOST RESENT BOOK IS A BOOK ABOUT A"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'recommendation.' [0.72s - 1.74s] -> Acoustic CTC heard: ['book', 'recommendation']
+   - Whisper 'a' [2.92s - 3.92s] -> Acoustic CTC heard: ['are', 'i', 'a']
+   - Whisper 'fan,' [4.52s - 6.04s] -> Acoustic CTC heard: ['grand', 'fan', 'you', 'this']
+4. Targeted Micro-Slice detected 79 words (vs Whisper's 72 words).
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "so i have a book recommendation if you are a david gran fan you this book will not be new to you but his most recent book is called the wager so folks may be familiar with david gran as the author of killers of the flower moon a book whose movie adaptation was nominated for several oscars this week but the wager which is his most recent book is a book about"
+============================================================
+
+--- CLIP 10 (syndigate_podcasts_f8e31611f2a651869d0895ddad0521ce_2120.0_2420.0-sortformer-27.wav) ---
+1. Whisper Full Text:
+   "Like, they're getting – once again, we're getting guys who have been good basketball players underperform their talent level to start a season. Like, it's just – it's kind of very similar to the last couple years. And maybe that's just how it's going to be with Trae Young's team because he's so – Trae Young's such an offensive-reliant basketball player. If the offense isn't clicking –"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "LIKE THEIR GETTING THE WERE ONCE AGAIN WE'RE GETTING GUYES WHO HAV BEEN GOOD BASWALL PLAYERS ARM O PERFORM THEIR TALENT LEVEL WITH STARTOSES AND LIGISIOUS IT'S CONNOBERY SIMILAR TO THE LAST COUPLE YEARS AND MAYE THAT'S JUST HOW IS GOING TO BE WITH TROYONTENS BECAUSE A SOUL TURN ON SUCH A OFFENCE OF RELYIN BASMAL PLAYER IF THE OFFENCE ISN'T CLICKING"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'underperform' [5.32s - 6.68s] -> Acoustic CTC heard: ['arm', 'o', 'perform']
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "like they're getting once again we're getting guys who have been good basketball players underperform their talent level to start a season like it's just it's kind of very similar to the last couple years and maybe that's just how it's going to be with trae young teams because he's so traeyoung such an offensive reliant basketball player if the offense isn't clicking"
+============================================================
+
+--- CLIP 11 (syndigate_podcasts_fa07d94b1ffe5b68b89a70b142be688c_940.0_1240.0-sortformer-17.wav) ---
+1. Whisper Full Text:
+   "Thank you. So first of all, let me just say that, you know, I was trained as an economist at MIT. Now, MIT was not the University of Chicago. The University of Chicago had a very well-defined tradition of, you know, a classical liberal thought in a number of fields, but especially in economics, influenced by people like Friedrich von Hayek and his one of his influencees, one of his protégés, Milton Friedman."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "THANK YOU SO THAT THE FIRST WONE OF ME TO SAY THAT YOU KNOW I WAS TRAINED AS AN ECONOMIST A AM I TE NOW AM I TOO WAS NOT THE UNIVERSITY OF CHICAGO TE ADVRST IV CHICAGO HAD A VERY WELL DEFINED TRADITION OF YOU NOW A CLASSICAL LIBERAL FOUGHT IN A NUMBER OF FIELDS BUT ESPECIALLY IN ECONOMICS INFLUENCED BY PEOPLE LIKE FREET PHONHIAK AND HIS ONE OF HIS IN IN INFLUENCEESE ONE OF HIS PROTEGES MILTON FREEDMEN"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'Chicago.' [8.22s - 9.36s] -> Acoustic CTC heard: ['of', 'chicago', 'te']
+   - Whisper 'well-defined' [11.60s - 12.82s] -> Acoustic CTC heard: ['well', 'defined']
+   - Whisper 'of,' [13.36s - 14.24s] -> Acoustic CTC heard: ['of']
+   - Whisper 'economics,' [19.98s - 20.98s] -> Acoustic CTC heard: ['in', 'economics']
+   - Whisper 'influencees,' [24.96s - 26.70s] -> Acoustic CTC heard: ['in', 'in', 'influenceese', 'one', 'of']
+4. Targeted Micro-Slice detected 76 words (vs Whisper's 73 words).
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "thank you so first of all let me just say that you know i was trained as an economist at mit now mit was not the university of chicago the university of chicago had a very well defined tradition of you know a classical liberal thought in a number of fields but especially in economics influenced by people like friedrich von hayek and his one of his influenc ees one of his proteges milton friedman"
+============================================================

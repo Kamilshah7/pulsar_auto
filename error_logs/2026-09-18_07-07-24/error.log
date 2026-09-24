@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\botasaurus\browser_decorator.py", line 199, in run_task
+    result = func(driver, data)
+  File "F:\BB\ETN-SC\pulsar_auto\pipeline.py", line 294, in run_browser
+    raise RuntimeError(f"Failed to download audio bundle: {download_result}")
+RuntimeError: Failed to download audio bundle: {'ok': False, 'error': 'Failed to fetch'}

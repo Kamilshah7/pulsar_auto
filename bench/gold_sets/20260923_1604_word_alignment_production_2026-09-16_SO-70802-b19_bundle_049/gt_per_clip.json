@@ -1,0 +1,6477 @@
+{
+ "0": {
+  "filename": "syndigate_podcasts_f656b2823256589f9ce90f687859b141_1820.0_2120.0-sortformer-20.wav",
+  "n_tokens": 61,
+  "reviewed": false,
+  "tokens": [
+   {
+    "text": "that",
+    "start": 0.0,
+    "end": 0.13,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "needs",
+    "start": 0.171,
+    "end": 0.538,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "medical",
+    "start": 0.54,
+    "end": 0.92,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "attention",
+    "start": 0.922,
+    "end": 1.638,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "seeing",
+    "start": 1.752,
+    "end": 2.0454,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 2.0464,
+    "end": 2.124,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "vet",
+    "start": 2.126,
+    "end": 2.292,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "and",
+    "start": 2.747,
+    "end": 3.26,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 3.346,
+    "end": 3.432,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "other",
+    "start": 3.434,
+    "end": 3.612,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "thing",
+    "start": 3.614,
+    "end": 3.997,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "is",
+    "start": 3.999,
+    "end": 4.37,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "it",
+    "start": 4.387,
+    "end": 4.549,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "could",
+    "start": 4.551,
+    "end": 4.743,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "be",
+    "start": 4.8,
+    "end": 5.039,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "an",
+    "start": 5.041,
+    "end": 5.424,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "endoparasite",
+    "start": 5.533,
+    "end": 6.336,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "uh",
+    "start": 6.722,
+    "end": 6.901,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "like",
+    "start": 6.903,
+    "end": 7.086,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "a",
+    "start": 7.088,
+    "end": 7.1681,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "worm",
+    "start": 7.1691,
+    "end": 7.651,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "or",
+    "start": 7.889,
+    "end": 8.0454,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 8.0464,
+    "end": 8.132,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "part",
+    "start": 8.134,
+    "end": 8.444,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "of",
+    "start": 8.445,
+    "end": 8.568,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "a",
+    "start": 8.57,
+    "end": 8.676,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "worm",
+    "start": 8.678,
+    "end": 8.983,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "tries",
+    "start": 9.006,
+    "end": 9.316,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "to",
+    "start": 9.318,
+    "end": 9.43,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "come",
+    "start": 9.432,
+    "end": 9.6158,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "out",
+    "start": 9.6168,
+    "end": 10.0147,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "and",
+    "start": 10.594,
+    "end": 10.782,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "that's",
+    "start": 10.784,
+    "end": 10.973,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "quite",
+    "start": 10.975,
+    "end": 11.177,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "an",
+    "start": 11.179,
+    "end": 11.293,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "((itchy))",
+    "start": 11.313,
+    "end": 11.953,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "condition",
+    "start": 11.955,
+    "end": 12.368,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "as",
+    "start": 12.37,
+    "end": 12.539,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "well",
+    "start": 12.541,
+    "end": 12.743,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "if",
+    "start": 12.942,
+    "end": 13.0821,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "you",
+    "start": 13.0831,
+    "end": 13.192,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "think",
+    "start": 13.194,
+    "end": 13.392,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "you",
+    "start": 13.394,
+    "end": 13.532,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "wormed",
+    "start": 13.534,
+    "end": 13.796,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "your",
+    "start": 13.797,
+    "end": 14.082,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "dog",
+    "start": 14.404,
+    "end": 14.717,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "uh",
+    "start": 14.933,
+    "end": 15.1623,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "regularly",
+    "start": 15.1633,
+    "end": 15.9084,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "or",
+    "start": 15.9094,
+    "end": 16.1225,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "or",
+    "start": 16.1235,
+    "end": 16.252,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "recently",
+    "start": 16.253,
+    "end": 16.868,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "uh",
+    "start": 17.315,
+    "end": 17.552,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "just",
+    "start": 17.554,
+    "end": 17.756,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "keep",
+    "start": 17.758,
+    "end": 17.9401,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "in",
+    "start": 17.9411,
+    "end": 18.066,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "mind",
+    "start": 18.068,
+    "end": 18.426,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "that",
+    "start": 18.483,
+    "end": 18.648,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "deworming",
+    "start": 18.888,
+    "end": 19.3435,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "is",
+    "start": 19.3445,
+    "end": 19.45,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "only",
+    "start": 19.452,
+    "end": 19.997,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "a",
+    "start": 19.999,
+    "end": 20.36,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   }
+  ]
+ },
+ "1": {
+  "filename": "syndigate_podcasts_f6930880bdb45dd386e60a699ec4f9f3_2390.0_2690.0-sortformer-8.wav",
+  "n_tokens": 72,
+  "reviewed": false,
+  "tokens": [
+   {
+    "text": "if",
+    "start": 0.003,
+    "end": 0.12,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "he",
+    "start": 0.122,
+    "end": 0.264,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "said",
+    "start": 0.266,
+    "end": 0.762,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "it",
+    "start": 0.764,
+    "end": 0.864,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "was",
+    "start": 0.866,
+    "end": 0.993,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "a",
+    "start": 0.995,
+    "end": 1.073,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "conspiracy",
+    "start": 1.075,
+    "end": 1.778,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "theory",
+    "start": 1.78,
+    "end": 2.21,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "to",
+    "start": 2.319,
+    "end": 2.439,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "believe",
+    "start": 2.441,
+    "end": 2.817,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "that",
+    "start": 2.819,
+    "end": 2.965,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 3.106,
+    "end": 3.329,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "that",
+    "start": 3.699,
+    "end": 3.913,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 4.088,
+    "end": 4.484,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "gain",
+    "start": 4.58,
+    "end": 4.7233,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "of",
+    "start": 4.7243,
+    "end": 4.827,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "functioning",
+    "start": 4.829,
+    "end": 5.4993,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "had",
+    "start": 5.5003,
+    "end": 5.7274,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "to",
+    "start": 5.7284,
+    "end": 5.8474,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "escaped",
+    "start": 6.485,
+    "end": 6.911,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 6.913,
+    "end": 6.9869,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "lab",
+    "start": 6.9879,
+    "end": 7.437,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "he's",
+    "start": 7.776,
+    "end": 8.124,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "you",
+    "start": 8.151,
+    "end": 8.2169,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "know",
+    "start": 8.2179,
+    "end": 8.3151,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "he",
+    "start": 8.3161,
+    "end": 8.4643,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "s-",
+    "start": 8.4653,
+    "end": 8.6936,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "he",
+    "start": 8.815,
+    "end": 8.942,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "said",
+    "start": 8.944,
+    "end": 9.167,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "that",
+    "start": 9.343,
+    "end": 9.5844,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "he",
+    "start": 9.5854,
+    "end": 9.712,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "said",
+    "start": 9.714,
+    "end": 10.343,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "it",
+    "start": 10.372,
+    "end": 10.479,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "was",
+    "start": 10.481,
+    "end": 10.5796,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 10.5806,
+    "end": 10.6701,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "conspiracy",
+    "start": 10.6711,
+    "end": 11.218,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "theory",
+    "start": 11.22,
+    "end": 11.5241,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "when",
+    "start": 11.983,
+    "end": 12.217,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "people",
+    "start": 12.24,
+    "end": 12.83,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "started",
+    "start": 13.215,
+    "end": 13.657,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "to",
+    "start": 13.681,
+    "end": 13.956,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "say",
+    "start": 13.958,
+    "end": 14.376,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "this",
+    "start": 14.682,
+    "end": 14.849,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "probably",
+    "start": 14.851,
+    "end": 15.142,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "came",
+    "start": 15.144,
+    "end": 15.353,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "from",
+    "start": 15.355,
+    "end": 15.4821,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "the",
+    "start": 15.4831,
+    "end": 15.5668,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "lab",
+    "start": 15.5678,
+    "end": 15.9436,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "right",
+    "start": 15.9446,
+    "end": 16.239,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "he",
+    "start": 16.2558,
+    "end": 16.684,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "had",
+    "start": 16.723,
+    "end": 17.235,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "he",
+    "start": 17.949,
+    "end": 18.3647,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "what",
+    "start": 18.676,
+    "end": 18.779,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "was",
+    "start": 18.781,
+    "end": 18.919,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "it",
+    "start": 18.921,
+    "end": 18.9958,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "you",
+    "start": 19.0863,
+    "end": 19.1841,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "know",
+    "start": 19.1851,
+    "end": 19.231,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "how",
+    "start": 19.232,
+    "end": 19.326,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "would",
+    "start": 19.328,
+    "end": 19.4017,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "you",
+    "start": 19.4027,
+    "end": 19.4652,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "say",
+    "start": 19.4662,
+    "end": 19.642,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "prompted",
+    "start": 19.7122,
+    "end": 20.237,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "people",
+    "start": 20.239,
+    "end": 20.533,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "to",
+    "start": 20.535,
+    "end": 20.619,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "come",
+    "start": 20.621,
+    "end": 20.762,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "up",
+    "start": 20.764,
+    "end": 20.9096,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "with",
+    "start": 20.9106,
+    "end": 21.2235,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 21.282,
+    "end": 21.665,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "nope",
+    "start": 21.678,
+    "end": 22.036,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "it",
+    "start": 22.038,
+    "end": 22.1962,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "was",
+    "start": 22.1972,
+    "end": 22.3884,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 22.3894,
+    "end": 22.7188,
+    "start_status": "moved",
+    "end_status": "moved"
+   }
+  ]
+ },
+ "2": {
+  "filename": "syndigate_podcasts_f6e6176ee7f054b1a1924bb85a1211c5_440.0_740.0-sortformer-6.wav",
+  "n_tokens": 91,
+  "reviewed": false,
+  "tokens": [
+   {
+    "text": "yeah",
+    "start": 0.029,
+    "end": 0.4877,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "absolutely",
+    "start": 0.526,
+    "end": 1.3773,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "you",
+    "start": 1.424,
+    "end": 1.514,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "know",
+    "start": 1.516,
+    "end": 1.683,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "i",
+    "start": 1.685,
+    "end": 1.85,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "guess",
+    "start": 1.852,
+    "end": 2.107,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "to",
+    "start": 2.109,
+    "end": 2.211,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "your",
+    "start": 2.213,
+    "end": 2.345,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "point",
+    "start": 2.346,
+    "end": 2.572,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "about",
+    "start": 2.574,
+    "end": 2.978,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "rising",
+    "start": 3.002,
+    "end": 3.382,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "multiples",
+    "start": 3.384,
+    "end": 3.977,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "i",
+    "start": 3.979,
+    "end": 4.049,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "mean",
+    "start": 4.05,
+    "end": 4.189,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "we're",
+    "start": 4.191,
+    "end": 4.2642,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "certainly",
+    "start": 4.2652,
+    "end": 4.656,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "seeing",
+    "start": 4.658,
+    "end": 4.913,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "that",
+    "start": 4.915,
+    "end": 5.073,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "across",
+    "start": 5.075,
+    "end": 5.4208,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "the",
+    "start": 5.4218,
+    "end": 5.487,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "board",
+    "start": 5.489,
+    "end": 5.781,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "as",
+    "start": 5.783,
+    "end": 6.101,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 6.2741,
+    "end": 6.604,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "industry",
+    "start": 6.855,
+    "end": 7.292,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "becomes",
+    "start": 7.294,
+    "end": 7.754,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "more",
+    "start": 7.756,
+    "end": 7.905,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "mature",
+    "start": 7.907,
+    "end": 8.4007,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "and",
+    "start": 8.4017,
+    "end": 8.559,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "then",
+    "start": 8.561,
+    "end": 8.785,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "you",
+    "start": 9.16,
+    "end": 9.2076,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "know",
+    "start": 9.2086,
+    "end": 9.2864,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "one",
+    "start": 9.2874,
+    "end": 9.467,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "thing",
+    "start": 9.469,
+    "end": 9.599,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "that",
+    "start": 9.601,
+    "end": 9.756,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "we've",
+    "start": 9.758,
+    "end": 9.956,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "been",
+    "start": 9.958,
+    "end": 10.0718,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "talking",
+    "start": 10.0728,
+    "end": 10.383,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "about",
+    "start": 10.385,
+    "end": 10.655,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "a",
+    "start": 10.657,
+    "end": 10.7206,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "lot",
+    "start": 10.7216,
+    "end": 10.8859,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "recently",
+    "start": 10.8869,
+    "end": 11.379,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "is",
+    "start": 11.381,
+    "end": 11.7861,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "there's",
+    "start": 12.161,
+    "end": 12.3235,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 12.3245,
+    "end": 12.401,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "good",
+    "start": 12.403,
+    "end": 12.512,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "chance",
+    "start": 12.514,
+    "end": 12.902,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "that",
+    "start": 12.904,
+    "end": 13.044,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "content",
+    "start": 13.046,
+    "end": 13.585,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "becomes",
+    "start": 13.587,
+    "end": 14.374,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "a",
+    "start": 14.381,
+    "end": 14.546,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "future",
+    "start": 14.548,
+    "end": 14.811,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "gold",
+    "start": 14.813,
+    "end": 14.9784,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "rush",
+    "start": 14.9794,
+    "end": 15.3696,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "in",
+    "start": 15.3706,
+    "end": 15.4429,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "the",
+    "start": 15.4439,
+    "end": 15.491,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "same",
+    "start": 15.493,
+    "end": 15.771,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "way",
+    "start": 15.773,
+    "end": 15.948,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "that",
+    "start": 15.95,
+    "end": 16.082,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "f",
+    "start": 16.084,
+    "end": 16.2582,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "b",
+    "start": 16.2592,
+    "end": 16.3573,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 16.3583,
+    "end": 16.73,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "you",
+    "start": 17.099,
+    "end": 17.16,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "know",
+    "start": 17.162,
+    "end": 17.243,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "all",
+    "start": 17.245,
+    "end": 17.4079,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "of",
+    "start": 17.4089,
+    "end": 17.454,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "sudden",
+    "start": 17.455,
+    "end": 18.009,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "matured",
+    "start": 18.217,
+    "end": 18.593,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "really",
+    "start": 18.594,
+    "end": 18.867,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "fast",
+    "start": 18.869,
+    "end": 19.2905,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "and",
+    "start": 19.2915,
+    "end": 19.453,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "billions",
+    "start": 19.4896,
+    "end": 19.8309,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "of",
+    "start": 19.8319,
+    "end": 19.9098,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "capital",
+    "start": 19.9108,
+    "end": 20.265,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "started",
+    "start": 20.267,
+    "end": 20.568,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "flooding",
+    "start": 20.57,
+    "end": 20.817,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "in",
+    "start": 20.819,
+    "end": 21.187,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "mm",
+    "start": 21.2394,
+    "end": 21.3365,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "hm",
+    "start": 21.3375,
+    "end": 21.609,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "you",
+    "start": 21.61,
+    "end": 21.679,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "know",
+    "start": 21.681,
+    "end": 21.966,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "those",
+    "start": 22.206,
+    "end": 22.4211,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "aggregators",
+    "start": 22.4221,
+    "end": 23.0472,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "are",
+    "start": 23.0482,
+    "end": 23.1367,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "needing",
+    "start": 23.1377,
+    "end": 23.3703,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "to",
+    "start": 23.3713,
+    "end": 23.4349,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "stay",
+    "start": 23.4359,
+    "end": 23.7274,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "competitive",
+    "start": 23.7284,
+    "end": 24.291,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "and",
+    "start": 24.5086,
+    "end": 24.929,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "they're",
+    "start": 24.9571,
+    "end": 25.086,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "looking",
+    "start": 25.09,
+    "end": 25.4416,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "at",
+    "start": 25.4426,
+    "end": 25.771,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   }
+  ]
+ },
+ "3": {
+  "filename": "syndigate_podcasts_f77228af80395de3a5b569486bf50f2c_360.0_660.0-sortformer-32.wav",
+  "n_tokens": 96,
+  "reviewed": false,
+  "tokens": [
+   {
+    "text": "i",
+    "start": 0.308,
+    "end": 0.459,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "think",
+    "start": 0.461,
+    "end": 0.6372,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "it's",
+    "start": 0.6382,
+    "end": 0.8272,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "uh",
+    "start": 0.8282,
+    "end": 1.2241,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "very",
+    "start": 1.2251,
+    "end": 1.58,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "encouraging",
+    "start": 1.582,
+    "end": 2.328,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "for",
+    "start": 2.378,
+    "end": 2.897,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "all",
+    "start": 3.103,
+    "end": 3.2571,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "of",
+    "start": 3.2581,
+    "end": 3.3723,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "us",
+    "start": 3.3733,
+    "end": 3.56,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "uh",
+    "start": 3.7352,
+    "end": 3.9824,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "to",
+    "start": 3.9834,
+    "end": 4.133,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "hear",
+    "start": 4.135,
+    "end": 4.408,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "that",
+    "start": 4.409,
+    "end": 4.7801,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "all",
+    "start": 4.7811,
+    "end": 4.909,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "of",
+    "start": 4.911,
+    "end": 5.0137,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "us",
+    "start": 5.0147,
+    "end": 5.165,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "who",
+    "start": 5.167,
+    "end": 5.337,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "are",
+    "start": 5.338,
+    "end": 5.625,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "thinking",
+    "start": 5.67,
+    "end": 5.9496,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "of",
+    "start": 5.9506,
+    "end": 6.086,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "writing",
+    "start": 6.088,
+    "end": 6.4918,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 6.4928,
+    "end": 6.632,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "book",
+    "start": 6.634,
+    "end": 6.832,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "based",
+    "start": 6.834,
+    "end": 7.1114,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "on",
+    "start": 7.1124,
+    "end": 7.264,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "their",
+    "start": 7.266,
+    "end": 7.527,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "p",
+    "start": 7.59,
+    "end": 7.675,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "h",
+    "start": 7.677,
+    "end": 7.864,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "d",
+    "start": 7.866,
+    "end": 8.057,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "thesis",
+    "start": 8.059,
+    "end": 8.395,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "so",
+    "start": 8.397,
+    "end": 8.5627,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "it",
+    "start": 8.5637,
+    "end": 8.6202,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "is",
+    "start": 8.6212,
+    "end": 8.796,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "possible",
+    "start": 8.798,
+    "end": 9.3841,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "and",
+    "start": 9.3851,
+    "end": 9.551,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "people",
+    "start": 9.553,
+    "end": 10.024,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "can",
+    "start": 10.153,
+    "end": 10.414,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "be",
+    "start": 10.416,
+    "end": 10.536,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "interested",
+    "start": 10.542,
+    "end": 11.192,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "in",
+    "start": 11.194,
+    "end": 11.387,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "these",
+    "start": 11.389,
+    "end": 11.643,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "projects",
+    "start": 11.645,
+    "end": 12.194,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "but",
+    "start": 12.752,
+    "end": 12.975,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "why",
+    "start": 12.977,
+    "end": 13.135,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "don't",
+    "start": 13.137,
+    "end": 13.279,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "we",
+    "start": 13.281,
+    "end": 13.726,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "talk",
+    "start": 13.863,
+    "end": 14.1012,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 14.1022,
+    "end": 14.1776,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "little",
+    "start": 14.1786,
+    "end": 14.3464,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "bit",
+    "start": 14.3474,
+    "end": 14.479,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "about",
+    "start": 14.481,
+    "end": 14.7139,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "l",
+    "start": 14.7149,
+    "end": 14.9203,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 14.9213,
+    "end": 15.237,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "like",
+    "start": 15.239,
+    "end": 15.451,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "what",
+    "start": 15.453,
+    "end": 15.638,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "makes",
+    "start": 15.64,
+    "end": 15.95,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "it",
+    "start": 15.952,
+    "end": 16.0496,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "an",
+    "start": 16.0506,
+    "end": 16.1697,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "interesting",
+    "start": 16.1707,
+    "end": 16.757,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "city",
+    "start": 16.759,
+    "end": 17.188,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "i",
+    "start": 17.238,
+    "end": 17.382,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "mean",
+    "start": 17.384,
+    "end": 17.622,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "there's",
+    "start": 17.772,
+    "end": 18.0688,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 18.108,
+    "end": 18.2152,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "lot",
+    "start": 18.2162,
+    "end": 18.3734,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "of",
+    "start": 18.3744,
+    "end": 18.523,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "research",
+    "start": 18.525,
+    "end": 19.0833,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "on",
+    "start": 19.0843,
+    "end": 19.352,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "uh",
+    "start": 19.3906,
+    "end": 19.5697,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "l",
+    "start": 19.5707,
+    "end": 19.7716,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 19.7726,
+    "end": 19.994,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "right",
+    "start": 19.996,
+    "end": 20.226,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "but",
+    "start": 20.228,
+    "end": 20.36,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "like",
+    "start": 20.362,
+    "end": 20.586,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "what",
+    "start": 20.588,
+    "end": 20.7374,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "makes",
+    "start": 20.7384,
+    "end": 20.9539,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "it",
+    "start": 21.025,
+    "end": 21.132,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "an",
+    "start": 21.134,
+    "end": 21.2492,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "interesting",
+    "start": 21.2502,
+    "end": 21.71,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "city",
+    "start": 21.712,
+    "end": 21.974,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "for",
+    "start": 21.976,
+    "end": 22.1569,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "your",
+    "start": 22.1579,
+    "end": 22.383,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "particular",
+    "start": 22.45,
+    "end": 22.861,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "project",
+    "start": 22.863,
+    "end": 23.301,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "what's",
+    "start": 23.303,
+    "end": 23.5268,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "it",
+    "start": 23.5278,
+    "end": 23.65,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "like",
+    "start": 23.652,
+    "end": 23.946,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "what",
+    "start": 23.988,
+    "end": 24.1058,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "are",
+    "start": 24.1068,
+    "end": 24.301,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 24.303,
+    "end": 24.534,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "neighborhoods",
+    "start": 24.922,
+    "end": 25.564,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "uh",
+    "start": 25.714,
+    "end": 26.008,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "where",
+    "start": 26.01,
+    "end": 26.1748,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "you",
+    "start": 26.1758,
+    "end": 26.359,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "worked",
+    "start": 26.361,
+    "end": 26.668,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   }
+  ]
+ },
+ "4": {
+  "filename": "syndigate_podcasts_f79a4632276d55b495289ad57aaa2b3d_2740.0_3040.0-sortformer-31.wav",
+  "n_tokens": 58,
+  "reviewed": false,
+  "tokens": [
+   {
+    "text": "hm",
+    "start": 0.002,
+    "end": 0.296,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "interesting",
+    "start": 0.533,
+    "end": 0.934,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "but",
+    "start": 0.936,
+    "end": 1.074,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "then",
+    "start": 1.076,
+    "end": 1.3589,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "you",
+    "start": 1.3599,
+    "end": 1.538,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "know",
+    "start": 1.54,
+    "end": 1.76,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "tim",
+    "start": 1.781,
+    "end": 1.953,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "eccles",
+    "start": 1.955,
+    "end": 2.427,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "uh",
+    "start": 2.428,
+    "end": 2.665,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "a",
+    "start": 2.692,
+    "end": 2.847,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "georgia",
+    "start": 2.849,
+    "end": 3.47,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "regulator",
+    "start": 4.216,
+    "end": 4.867,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "electricity",
+    "start": 4.879,
+    "end": 5.591,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "system",
+    "start": 5.747,
+    "end": 6.216,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "regulator",
+    "start": 6.379,
+    "end": 6.944,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "says",
+    "start": 6.979,
+    "end": 7.6721,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "that",
+    "start": 8.271,
+    "end": 8.479,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "was",
+    "start": 8.481,
+    "end": 8.845,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "brutal",
+    "start": 9.056,
+    "end": 9.557,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "we're",
+    "start": 9.559,
+    "end": 9.7458,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "not",
+    "start": 9.7468,
+    "end": 9.89,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "doing",
+    "start": 9.892,
+    "end": 10.159,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "that",
+    "start": 10.161,
+    "end": 10.3197,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "again",
+    "start": 10.3207,
+    "end": 10.5935,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "unless",
+    "start": 10.94,
+    "end": 11.609,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "unless",
+    "start": 11.657,
+    "end": 12.113,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 12.115,
+    "end": 12.256,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "feds",
+    "start": 12.258,
+    "end": 12.7937,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "step",
+    "start": 12.979,
+    "end": 13.3578,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "in",
+    "start": 13.3588,
+    "end": 13.754,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "with",
+    "start": 14.087,
+    "end": 14.293,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "a",
+    "start": 14.295,
+    "end": 14.404,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "cost",
+    "start": 14.406,
+    "end": 14.798,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "overrun",
+    "start": 14.809,
+    "end": 15.315,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "guarantee",
+    "start": 15.317,
+    "end": 15.798,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "basically",
+    "start": 15.8,
+    "end": 16.1055,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "unless",
+    "start": 16.1065,
+    "end": 16.44,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 16.442,
+    "end": 16.565,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "costs",
+    "start": 16.567,
+    "end": 17.009,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "are",
+    "start": 17.011,
+    "end": 17.153,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "backstopped",
+    "start": 17.225,
+    "end": 17.812,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "by",
+    "start": 17.814,
+    "end": 17.969,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 17.971,
+    "end": 18.09,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "federal",
+    "start": 18.092,
+    "end": 18.361,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "government",
+    "start": 18.363,
+    "end": 18.747,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "we're",
+    "start": 19.205,
+    "end": 19.3075,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "not",
+    "start": 19.3085,
+    "end": 19.461,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "doing",
+    "start": 19.463,
+    "end": 19.6054,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "that",
+    "start": 19.6064,
+    "end": 19.748,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "again",
+    "start": 19.75,
+    "end": 19.909,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "is",
+    "start": 19.911,
+    "end": 20.0254,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "what",
+    "start": 20.0264,
+    "end": 20.193,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "he",
+    "start": 20.195,
+    "end": 20.31,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "is",
+    "start": 20.389,
+    "end": 20.5205,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "what",
+    "start": 20.5215,
+    "end": 20.6412,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "he's",
+    "start": 20.6422,
+    "end": 20.799,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "been",
+    "start": 20.801,
+    "end": 20.993,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "saying",
+    "start": 20.995,
+    "end": 21.561,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   }
+  ]
+ },
+ "5": {
+  "filename": "syndigate_podcasts_f81e71c59850566b95141e52c65c208c_610.0_910.0-sortformer-9.wav",
+  "n_tokens": 77,
+  "reviewed": false,
+  "tokens": [
+   {
+    "text": "uh",
+    "start": 0.5535,
+    "end": 0.7636,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "i",
+    "start": 0.7646,
+    "end": 1.051,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "mentioned",
+    "start": 1.053,
+    "end": 1.5628,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "or",
+    "start": 1.5638,
+    "end": 1.774,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "talk",
+    "start": 1.812,
+    "end": 2.0348,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "about",
+    "start": 2.0358,
+    "end": 2.4036,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "anything",
+    "start": 2.4046,
+    "end": 2.811,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "that's",
+    "start": 2.813,
+    "end": 3.06,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "related",
+    "start": 3.062,
+    "end": 3.466,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "to",
+    "start": 3.468,
+    "end": 3.568,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 3.57,
+    "end": 3.687,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "western",
+    "start": 3.689,
+    "end": 4.092,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "world",
+    "start": 4.094,
+    "end": 4.406,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "then",
+    "start": 4.838,
+    "end": 4.991,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "our",
+    "start": 4.993,
+    "end": 5.268,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "entire",
+    "start": 5.341,
+    "end": 5.8827,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "family",
+    "start": 5.8837,
+    "end": 6.464,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "would",
+    "start": 6.466,
+    "end": 6.756,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "end",
+    "start": 6.8189,
+    "end": 7.0514,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "end",
+    "start": 7.099,
+    "end": 7.2508,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "up",
+    "start": 7.2518,
+    "end": 7.397,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "in",
+    "start": 7.445,
+    "end": 7.64,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "gulags",
+    "start": 7.642,
+    "end": 8.086,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "in",
+    "start": 8.119,
+    "end": 8.268,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "si-",
+    "start": 8.27,
+    "end": 8.571,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "uh",
+    "start": 8.572,
+    "end": 8.7868,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "um",
+    "start": 8.8269,
+    "end": 9.0594,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "s-",
+    "start": 9.1128,
+    "end": 9.3052,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "siberia",
+    "start": 9.329,
+    "end": 10.103,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "now",
+    "start": 10.72,
+    "end": 11.118,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "i",
+    "start": 11.24,
+    "end": 11.359,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "had",
+    "start": 11.361,
+    "end": 11.492,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "lots",
+    "start": 11.494,
+    "end": 11.745,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "of",
+    "start": 11.747,
+    "end": 11.841,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "friends",
+    "start": 11.843,
+    "end": 12.476,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "who",
+    "start": 12.586,
+    "end": 12.809,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "disappeared",
+    "start": 12.81,
+    "end": 13.613,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "overnight",
+    "start": 13.775,
+    "end": 14.35,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "and",
+    "start": 14.351,
+    "end": 14.5,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "never",
+    "start": 14.502,
+    "end": 14.649,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "saw",
+    "start": 14.651,
+    "end": 14.9,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "them",
+    "start": 14.902,
+    "end": 15.017,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "again",
+    "start": 15.018,
+    "end": 15.381,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "and",
+    "start": 15.382,
+    "end": 15.4805,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "of",
+    "start": 15.4815,
+    "end": 15.615,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "course",
+    "start": 15.677,
+    "end": 16.058,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "there",
+    "start": 16.147,
+    "end": 16.34,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "is",
+    "start": 16.342,
+    "end": 16.479,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "no",
+    "start": 16.481,
+    "end": 16.675,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "way",
+    "start": 16.676,
+    "end": 16.9,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "proving",
+    "start": 17.055,
+    "end": 17.524,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "or",
+    "start": 17.526,
+    "end": 17.646,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "disproving",
+    "start": 17.648,
+    "end": 18.326,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "what",
+    "start": 18.328,
+    "end": 18.465,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "happened",
+    "start": 18.467,
+    "end": 18.84,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "to",
+    "start": 18.842,
+    "end": 18.934,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "them",
+    "start": 18.936,
+    "end": 19.175,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "but",
+    "start": 19.863,
+    "end": 20.1991,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "people",
+    "start": 20.228,
+    "end": 20.6589,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "were",
+    "start": 20.6599,
+    "end": 20.909,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "saying",
+    "start": 20.911,
+    "end": 21.66,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "that",
+    "start": 21.662,
+    "end": 22.2323,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "that",
+    "start": 22.492,
+    "end": 22.645,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "family",
+    "start": 22.646,
+    "end": 23.117,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "ended",
+    "start": 23.119,
+    "end": 23.337,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "up",
+    "start": 23.339,
+    "end": 23.49,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "in",
+    "start": 23.492,
+    "end": 23.5856,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 23.5866,
+    "end": 23.703,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "gulag",
+    "start": 23.705,
+    "end": 24.1484,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "in",
+    "start": 24.1494,
+    "end": 24.287,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "siberia",
+    "start": 24.289,
+    "end": 24.8976,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "and",
+    "start": 24.8986,
+    "end": 25.099,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "which",
+    "start": 25.1,
+    "end": 25.346,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "is",
+    "start": 25.348,
+    "end": 25.419,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "a",
+    "start": 25.421,
+    "end": 25.4771,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "work",
+    "start": 25.4781,
+    "end": 25.689,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "camp",
+    "start": 25.759,
+    "end": 26.2057,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   }
+  ]
+ },
+ "6": {
+  "filename": "syndigate_podcasts_f850878ca0f25094b1d0aa4b246afb19_3080.0_3360.0-sortformer-31.wav",
+  "n_tokens": 93,
+  "reviewed": false,
+  "tokens": [
+   {
+    "text": "rookie",
+    "start": 0.0,
+    "end": 0.297,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "drafts",
+    "start": 0.299,
+    "end": 0.591,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "are",
+    "start": 0.593,
+    "end": 0.6733,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "all",
+    "start": 0.6743,
+    "end": 0.85,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "n",
+    "start": 0.852,
+    "end": 0.9465,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "f",
+    "start": 0.9475,
+    "end": 1.0782,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "l",
+    "start": 1.0792,
+    "end": 1.252,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "draft",
+    "start": 1.254,
+    "end": 1.423,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "style",
+    "start": 1.425,
+    "end": 1.807,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "um",
+    "start": 2.071,
+    "end": 2.358,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "because",
+    "start": 2.36,
+    "end": 2.6138,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "it's",
+    "start": 2.6148,
+    "end": 2.7505,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 2.7515,
+    "end": 2.847,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "dynasty",
+    "start": 2.849,
+    "end": 3.339,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "and",
+    "start": 3.341,
+    "end": 3.431,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "you've",
+    "start": 3.433,
+    "end": 3.629,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "got",
+    "start": 3.631,
+    "end": 3.866,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "like",
+    "start": 3.868,
+    "end": 4.067,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 4.069,
+    "end": 4.212,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "entire",
+    "start": 4.214,
+    "end": 4.763,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "roster",
+    "start": 4.765,
+    "end": 5.193,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "together",
+    "start": 5.195,
+    "end": 5.593,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "when",
+    "start": 5.83,
+    "end": 5.9782,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "you're",
+    "start": 5.9792,
+    "end": 6.13,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "doing",
+    "start": 6.132,
+    "end": 6.3717,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 6.3727,
+    "end": 6.584,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "redraft",
+    "start": 6.586,
+    "end": 7.029,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "like",
+    "start": 7.031,
+    "end": 7.138,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 7.139,
+    "end": 7.1851,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "startup",
+    "start": 7.1861,
+    "end": 7.8191,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "it",
+    "start": 7.9139,
+    "end": 8.0389,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "if",
+    "start": 8.11,
+    "end": 8.262,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "you're",
+    "start": 8.264,
+    "end": 8.3909,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "doing",
+    "start": 8.3919,
+    "end": 8.5337,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 8.5347,
+    "end": 8.63,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "dynasty",
+    "start": 8.632,
+    "end": 8.966,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "startup",
+    "start": 8.968,
+    "end": 9.457,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "then",
+    "start": 9.889,
+    "end": 10.0029,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "it's",
+    "start": 10.0039,
+    "end": 10.167,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "snake",
+    "start": 10.169,
+    "end": 10.438,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "um",
+    "start": 11.057,
+    "end": 11.462,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "to",
+    "start": 11.906,
+    "end": 12.028,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "make",
+    "start": 12.03,
+    "end": 12.194,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "it",
+    "start": 12.196,
+    "end": 12.243,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "even",
+    "start": 12.245,
+    "end": 12.61,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "but",
+    "start": 12.612,
+    "end": 12.77,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "once",
+    "start": 12.772,
+    "end": 13.044,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "these",
+    "start": 13.046,
+    "end": 13.238,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "rosters",
+    "start": 13.24,
+    "end": 13.7193,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "are",
+    "start": 13.7203,
+    "end": 13.9679,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "established",
+    "start": 13.9689,
+    "end": 14.8322,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "and",
+    "start": 15.346,
+    "end": 15.89,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "you",
+    "start": 15.891,
+    "end": 16.0342,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "know",
+    "start": 16.0352,
+    "end": 16.1609,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "you",
+    "start": 16.1619,
+    "end": 16.328,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "know",
+    "start": 16.33,
+    "end": 16.461,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "you've",
+    "start": 16.463,
+    "end": 16.631,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "got",
+    "start": 16.634,
+    "end": 16.7312,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "to",
+    "start": 16.7322,
+    "end": 16.856,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "build",
+    "start": 16.858,
+    "end": 17.036,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "it",
+    "start": 17.038,
+    "end": 17.156,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "year",
+    "start": 17.158,
+    "end": 17.332,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "after",
+    "start": 17.334,
+    "end": 17.532,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "year",
+    "start": 17.534,
+    "end": 17.672,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "after",
+    "start": 17.674,
+    "end": 17.8589,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "year",
+    "start": 17.8599,
+    "end": 18.121,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 18.123,
+    "end": 18.26,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "worst",
+    "start": 18.262,
+    "end": 18.508,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "team",
+    "start": 18.5427,
+    "end": 18.768,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "gets",
+    "start": 18.77,
+    "end": 18.969,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 18.971,
+    "end": 19.094,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "best",
+    "start": 19.096,
+    "end": 19.286,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "pick",
+    "start": 19.367,
+    "end": 19.545,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "in",
+    "start": 19.789,
+    "end": 19.954,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "each",
+    "start": 20.015,
+    "end": 20.288,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "round",
+    "start": 20.309,
+    "end": 20.675,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "uh",
+    "start": 21.2584,
+    "end": 21.7318,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "you",
+    "start": 21.7328,
+    "end": 21.841,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "know",
+    "start": 21.843,
+    "end": 22.093,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "uh",
+    "start": 22.094,
+    "end": 22.3267,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "in",
+    "start": 22.378,
+    "end": 22.632,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "in",
+    "start": 22.785,
+    "end": 23.031,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "reverse",
+    "start": 23.033,
+    "end": 23.412,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "order",
+    "start": 23.414,
+    "end": 23.792,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "uh",
+    "start": 24.1984,
+    "end": 24.4277,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "all",
+    "start": 24.4287,
+    "end": 24.5916,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "the",
+    "start": 24.5926,
+    "end": 24.6618,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "way",
+    "start": 24.6628,
+    "end": 24.818,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "through",
+    "start": 24.82,
+    "end": 24.9638,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "the",
+    "start": 24.9648,
+    "end": 25.0697,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "twelfth",
+    "start": 25.0707,
+    "end": 25.302,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "pick",
+    "start": 25.304,
+    "end": 25.509,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "um",
+    "start": 25.92,
+    "end": 26.44,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   }
+  ]
+ },
+ "7": {
+  "filename": "syndigate_podcasts_f86683b91527598da4d1ad52aa94fbce_2510.0_2700.0-sortformer-0.wav",
+  "n_tokens": 50,
+  "reviewed": false,
+  "tokens": [
+   {
+    "text": "tree",
+    "start": 0.0,
+    "end": 0.339,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "is",
+    "start": 0.448,
+    "end": 0.6388,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "our",
+    "start": 0.6398,
+    "end": 0.9103,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "uh",
+    "start": 0.9113,
+    "end": 1.245,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "is",
+    "start": 1.246,
+    "end": 1.4039,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "our",
+    "start": 1.4049,
+    "end": 1.602,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "you",
+    "start": 1.912,
+    "end": 1.958,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "know",
+    "start": 1.96,
+    "end": 2.106,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "flagship",
+    "start": 2.212,
+    "end": 2.621,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "publication",
+    "start": 2.623,
+    "end": 3.13,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "altimetry",
+    "start": 3.132,
+    "end": 3.632,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "is",
+    "start": 3.634,
+    "end": 3.752,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "our",
+    "start": 3.754,
+    "end": 3.833,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "our",
+    "start": 3.835,
+    "end": 4.007,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "flagship",
+    "start": 4.314,
+    "end": 4.777,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "brand",
+    "start": 4.779,
+    "end": 5.128,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "um",
+    "start": 5.583,
+    "end": 6.093,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "and",
+    "start": 6.216,
+    "end": 6.6724,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "uh",
+    "start": 6.6734,
+    "end": 7.035,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "altimetry",
+    "start": 7.468,
+    "end": 8.36,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "um",
+    "start": 8.822,
+    "end": 9.283,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "we're",
+    "start": 9.366,
+    "end": 9.5307,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "launching",
+    "start": 9.5317,
+    "end": 10.294,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "a",
+    "start": 10.416,
+    "end": 10.659,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "newsletter",
+    "start": 10.661,
+    "end": 11.386,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "which",
+    "start": 11.835,
+    "end": 12.0584,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "is",
+    "start": 12.0594,
+    "end": 12.324,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "a",
+    "start": 12.326,
+    "end": 12.39,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "newsletter",
+    "start": 12.391,
+    "end": 12.893,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "and",
+    "start": 12.895,
+    "end": 13.0548,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 13.0558,
+    "end": 13.1002,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "strategy",
+    "start": 13.1012,
+    "end": 13.787,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "with",
+    "start": 14.117,
+    "end": 14.2179,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "specific",
+    "start": 14.2189,
+    "end": 14.761,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "recommendations",
+    "start": 14.763,
+    "end": 15.72,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "for",
+    "start": 16.0785,
+    "end": 16.401,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 16.402,
+    "end": 16.541,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "a",
+    "start": 16.543,
+    "end": 16.68,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "credit",
+    "start": 16.7168,
+    "end": 17.095,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "based",
+    "start": 17.097,
+    "end": 17.315,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "strategy",
+    "start": 17.317,
+    "end": 17.957,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "which",
+    "start": 18.347,
+    "end": 18.63,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "historically",
+    "start": 18.632,
+    "end": 19.489,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "has",
+    "start": 19.916,
+    "end": 20.144,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "done",
+    "start": 20.146,
+    "end": 20.348,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "very",
+    "start": 20.35,
+    "end": 20.559,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "well",
+    "start": 20.561,
+    "end": 20.773,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "i'm",
+    "start": 20.775,
+    "end": 20.913,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "i'm",
+    "start": 20.915,
+    "end": 21.063,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "saying",
+    "start": 21.065,
+    "end": 21.433,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   }
+  ]
+ },
+ "8": {
+  "filename": "syndigate_podcasts_f8c8e77a069c5faba3e235e99cf93874_360.0_660.0-sortformer-10.wav",
+  "n_tokens": 84,
+  "reviewed": false,
+  "tokens": [
+   {
+    "text": "compatible",
+    "start": 0.338,
+    "end": 1.202,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "and",
+    "start": 1.335,
+    "end": 1.738,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "required",
+    "start": 1.779,
+    "end": 2.439,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "so",
+    "start": 2.461,
+    "end": 2.631,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "m",
+    "start": 2.633,
+    "end": 2.7855,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "f",
+    "start": 2.7865,
+    "end": 2.941,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "p",
+    "start": 2.943,
+    "end": 3.051,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "is",
+    "start": 3.053,
+    "end": 3.263,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "required",
+    "start": 3.286,
+    "end": 4.128,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "for",
+    "start": 4.359,
+    "end": 4.653,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "w",
+    "start": 4.655,
+    "end": 5.079,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "p",
+    "start": 5.081,
+    "end": 5.2147,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 5.2157,
+    "end": 5.349,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "three",
+    "start": 5.351,
+    "end": 5.803,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "personal",
+    "start": 5.995,
+    "end": 6.484,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "networks",
+    "start": 6.486,
+    "end": 6.995,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "so",
+    "start": 6.996,
+    "end": 7.0877,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "you",
+    "start": 7.0887,
+    "end": 7.185,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "will",
+    "start": 7.187,
+    "end": 7.305,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "see",
+    "start": 7.307,
+    "end": 7.545,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "that",
+    "start": 7.547,
+    "end": 7.7688,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "you'll",
+    "start": 7.7698,
+    "end": 7.894,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "have",
+    "start": 7.895,
+    "end": 8.132,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "two",
+    "start": 8.134,
+    "end": 8.382,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "bits",
+    "start": 8.385,
+    "end": 8.727,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "in",
+    "start": 9.104,
+    "end": 9.199,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 9.201,
+    "end": 9.35,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "beacon",
+    "start": 9.352,
+    "end": 9.8812,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "same",
+    "start": 9.8822,
+    "end": 10.14,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "thing",
+    "start": 10.142,
+    "end": 10.3231,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "under",
+    "start": 10.3241,
+    "end": 10.5704,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "the",
+    "start": 10.5714,
+    "end": 10.748,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "r",
+    "start": 10.75,
+    "end": 10.938,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "s",
+    "start": 10.94,
+    "end": 11.066,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "n",
+    "start": 11.068,
+    "end": 11.1938,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "information",
+    "start": 11.1948,
+    "end": 11.7261,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "element",
+    "start": 11.7271,
+    "end": 12.146,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "we'll",
+    "start": 12.148,
+    "end": 12.316,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "go",
+    "start": 12.317,
+    "end": 12.464,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "back",
+    "start": 12.466,
+    "end": 12.654,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "to",
+    "start": 12.656,
+    "end": 12.906,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 13.338,
+    "end": 13.489,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "beacons",
+    "start": 13.491,
+    "end": 13.868,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "and",
+    "start": 13.869,
+    "end": 13.976,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "show",
+    "start": 13.978,
+    "end": 14.1941,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "you",
+    "start": 14.1951,
+    "end": 14.402,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "but",
+    "start": 14.739,
+    "end": 14.891,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "these",
+    "start": 14.893,
+    "end": 15.111,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "two",
+    "start": 15.113,
+    "end": 15.27,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "bits",
+    "start": 15.272,
+    "end": 15.585,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 15.814,
+    "end": 15.935,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "capable",
+    "start": 15.937,
+    "end": 16.607,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 16.873,
+    "end": 16.982,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "m",
+    "start": 16.984,
+    "end": 17.106,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "f",
+    "start": 17.107,
+    "end": 17.29,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "p",
+    "start": 17.292,
+    "end": 17.41,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "capable",
+    "start": 17.412,
+    "end": 17.854,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "and",
+    "start": 17.856,
+    "end": 18.079,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "m",
+    "start": 18.099,
+    "end": 18.293,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "f",
+    "start": 18.295,
+    "end": 18.492,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "p",
+    "start": 18.494,
+    "end": 18.8154,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "uh",
+    "start": 19.1864,
+    "end": 19.515,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "required",
+    "start": 19.516,
+    "end": 20.075,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "will",
+    "start": 20.077,
+    "end": 20.2121,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "have",
+    "start": 20.2131,
+    "end": 20.427,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "to",
+    "start": 20.429,
+    "end": 20.5508,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "be",
+    "start": 20.5518,
+    "end": 20.6171,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "set",
+    "start": 20.6181,
+    "end": 20.905,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "to",
+    "start": 20.907,
+    "end": 21.036,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "one",
+    "start": 21.037,
+    "end": 21.492,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "if",
+    "start": 21.941,
+    "end": 22.161,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "you",
+    "start": 22.162,
+    "end": 22.4212,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "uh",
+    "start": 22.4222,
+    "end": 22.863,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "if",
+    "start": 22.871,
+    "end": 23.029,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "you",
+    "start": 23.031,
+    "end": 23.102,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "set",
+    "start": 23.104,
+    "end": 23.2961,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "up",
+    "start": 23.2971,
+    "end": 23.464,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "a",
+    "start": 23.466,
+    "end": 23.578,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "w",
+    "start": 23.579,
+    "end": 23.899,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "p",
+    "start": 23.901,
+    "end": 24.0028,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 24.0038,
+    "end": 24.15,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "three",
+    "start": 24.152,
+    "end": 24.387,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "personal",
+    "start": 24.389,
+    "end": 24.865,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "network",
+    "start": 24.868,
+    "end": 25.194,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   }
+  ]
+ },
+ "9": {
+  "filename": "syndigate_podcasts_f8e17213c56855e1983a3b626d74abc8_4000.0_4300.0-sortformer-8.wav",
+  "n_tokens": 83,
+  "reviewed": false,
+  "tokens": [
+   {
+    "text": "so",
+    "start": 0.072,
+    "end": 0.129,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "i",
+    "start": 0.131,
+    "end": 0.189,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "have",
+    "start": 0.191,
+    "end": 0.2618,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 0.2628,
+    "end": 0.52,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "book",
+    "start": 0.536,
+    "end": 0.727,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "recommendation",
+    "start": 0.728,
+    "end": 1.746,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "uh",
+    "start": 1.875,
+    "end": 2.188,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "if",
+    "start": 2.218,
+    "end": 2.313,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "you",
+    "start": 2.315,
+    "end": 2.459,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "are",
+    "start": 2.512,
+    "end": 3.205,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "uh",
+    "start": 3.289,
+    "end": 3.8887,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 3.9,
+    "end": 4.012,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "david",
+    "start": 4.036,
+    "end": 4.321,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "grann",
+    "start": 4.323,
+    "end": 4.633,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "fan",
+    "start": 4.635,
+    "end": 5.41,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "you",
+    "start": 5.4293,
+    "end": 5.811,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "this",
+    "start": 6.007,
+    "end": 6.176,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "book",
+    "start": 6.251,
+    "end": 6.377,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "will",
+    "start": 6.379,
+    "end": 6.524,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "not",
+    "start": 6.526,
+    "end": 6.635,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "be",
+    "start": 6.637,
+    "end": 6.729,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "new",
+    "start": 6.731,
+    "end": 7.019,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "to",
+    "start": 7.032,
+    "end": 7.225,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "you",
+    "start": 7.227,
+    "end": 7.669,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "um",
+    "start": 7.691,
+    "end": 8.074,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "but",
+    "start": 8.251,
+    "end": 8.522,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "uh",
+    "start": 8.59,
+    "end": 8.799,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "his",
+    "start": 8.801,
+    "end": 8.934,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "most",
+    "start": 8.936,
+    "end": 9.134,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "recent",
+    "start": 9.136,
+    "end": 9.426,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "book",
+    "start": 9.428,
+    "end": 9.665,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "is",
+    "start": 9.667,
+    "end": 9.903,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "called",
+    "start": 9.905,
+    "end": 10.164,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 10.251,
+    "end": 10.467,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "wager",
+    "start": 10.469,
+    "end": 11.21,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "um",
+    "start": 11.272,
+    "end": 11.558,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "so",
+    "start": 11.56,
+    "end": 11.897,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "folks",
+    "start": 11.923,
+    "end": 12.139,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "may",
+    "start": 12.142,
+    "end": 12.338,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "be",
+    "start": 12.672,
+    "end": 12.7457,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "familiar",
+    "start": 12.7467,
+    "end": 13.109,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "with",
+    "start": 13.111,
+    "end": 13.232,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "david",
+    "start": 13.234,
+    "end": 13.495,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "grann",
+    "start": 13.497,
+    "end": 13.894,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "um",
+    "start": 13.896,
+    "end": 14.131,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "as",
+    "start": 14.133,
+    "end": 14.284,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 14.286,
+    "end": 14.38,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "author",
+    "start": 14.382,
+    "end": 14.669,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "of",
+    "start": 14.671,
+    "end": 14.749,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "killers",
+    "start": 14.751,
+    "end": 15.156,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "of",
+    "start": 15.158,
+    "end": 15.2132,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "the",
+    "start": 15.2142,
+    "end": 15.292,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "flower",
+    "start": 15.2936,
+    "end": 15.7073,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "moon",
+    "start": 15.7083,
+    "end": 16.196,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "um",
+    "start": 16.198,
+    "end": 16.529,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "uh",
+    "start": 16.531,
+    "end": 16.903,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "book",
+    "start": 17.541,
+    "end": 17.695,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "whose",
+    "start": 17.697,
+    "end": 17.896,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "movie",
+    "start": 17.898,
+    "end": 18.1096,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "adaptation",
+    "start": 18.1106,
+    "end": 18.654,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "was",
+    "start": 18.656,
+    "end": 18.803,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "nominated",
+    "start": 18.805,
+    "end": 19.174,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "for",
+    "start": 19.176,
+    "end": 19.253,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "several",
+    "start": 19.255,
+    "end": 19.525,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "oscars",
+    "start": 19.578,
+    "end": 20.081,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "this",
+    "start": 20.083,
+    "end": 20.274,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "week",
+    "start": 20.276,
+    "end": 20.6659,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "um",
+    "start": 20.6669,
+    "end": 20.969,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "but",
+    "start": 21.214,
+    "end": 21.319,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 21.321,
+    "end": 21.496,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "wager",
+    "start": 21.498,
+    "end": 22.249,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "uh",
+    "start": 22.251,
+    "end": 22.373,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "which",
+    "start": 22.375,
+    "end": 22.515,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "is",
+    "start": 22.516,
+    "end": 22.648,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "his",
+    "start": 22.65,
+    "end": 22.763,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "most",
+    "start": 22.812,
+    "end": 23.005,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "recent",
+    "start": 23.007,
+    "end": 23.309,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "book",
+    "start": 23.311,
+    "end": 23.488,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "is",
+    "start": 23.536,
+    "end": 23.665,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 23.666,
+    "end": 23.925,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "book",
+    "start": 24.161,
+    "end": 24.2904,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "about",
+    "start": 24.3552,
+    "end": 24.766,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "um",
+    "start": 24.814,
+    "end": 25.1315,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   }
+  ]
+ },
+ "10": {
+  "filename": "syndigate_podcasts_f8e31611f2a651869d0895ddad0521ce_2120.0_2420.0-sortformer-27.wav",
+  "n_tokens": 67,
+  "reviewed": false,
+  "tokens": [
+   {
+    "text": "like",
+    "start": 0.074,
+    "end": 0.314,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "they're",
+    "start": 0.316,
+    "end": 0.529,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "getting",
+    "start": 0.531,
+    "end": 0.924,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "they're",
+    "start": 1.0255,
+    "end": 1.2781,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "we're",
+    "start": 1.2791,
+    "end": 1.59,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "once",
+    "start": 1.592,
+    "end": 1.8848,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "again",
+    "start": 1.8858,
+    "end": 2.151,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "we're",
+    "start": 2.153,
+    "end": 2.324,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "getting",
+    "start": 2.326,
+    "end": 2.653,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "guys",
+    "start": 2.655,
+    "end": 3.077,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "who",
+    "start": 3.079,
+    "end": 3.252,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "have",
+    "start": 3.254,
+    "end": 3.473,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "been",
+    "start": 3.476,
+    "end": 3.853,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "good",
+    "start": 4.186,
+    "end": 4.423,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "basketball",
+    "start": 4.425,
+    "end": 4.878,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "players",
+    "start": 4.88,
+    "end": 5.449,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "underperform",
+    "start": 6.015,
+    "end": 6.825,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "their",
+    "start": 6.827,
+    "end": 6.979,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "talent",
+    "start": 6.981,
+    "end": 7.323,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "level",
+    "start": 7.325,
+    "end": 7.6068,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "at",
+    "start": 7.6078,
+    "end": 7.6594,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "start",
+    "start": 7.6604,
+    "end": 7.9269,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "of",
+    "start": 7.9279,
+    "end": 7.9692,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "the",
+    "start": 7.9702,
+    "end": 8.0123,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "season",
+    "start": 8.0133,
+    "end": 8.444,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "like",
+    "start": 8.446,
+    "end": 8.777,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "it's",
+    "start": 8.779,
+    "end": 8.905,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "just",
+    "start": 8.907,
+    "end": 9.1094,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "it's",
+    "start": 9.544,
+    "end": 9.724,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "kind",
+    "start": 9.803,
+    "end": 10.1032,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "of",
+    "start": 10.1042,
+    "end": 10.239,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "very",
+    "start": 10.241,
+    "end": 10.662,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "similar",
+    "start": 10.663,
+    "end": 11.248,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "to",
+    "start": 11.263,
+    "end": 11.681,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 12.005,
+    "end": 12.0831,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "last",
+    "start": 12.0841,
+    "end": 12.374,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "couple",
+    "start": 12.376,
+    "end": 12.5798,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "years",
+    "start": 12.5808,
+    "end": 12.93,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "and",
+    "start": 12.931,
+    "end": 13.0607,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "and",
+    "start": 13.081,
+    "end": 13.331,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "maybe",
+    "start": 13.333,
+    "end": 13.604,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "that's",
+    "start": 13.606,
+    "end": 13.7868,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "just",
+    "start": 13.7878,
+    "end": 13.984,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "how",
+    "start": 13.986,
+    "end": 14.369,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "it's",
+    "start": 14.674,
+    "end": 14.808,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "gonna",
+    "start": 14.81,
+    "end": 15.0406,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "be",
+    "start": 15.0416,
+    "end": 15.164,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "with",
+    "start": 15.166,
+    "end": 15.3007,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "trae",
+    "start": 15.3017,
+    "end": 15.518,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "young",
+    "start": 15.52,
+    "end": 15.775,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "teams",
+    "start": 15.777,
+    "end": 16.393,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "because",
+    "start": 16.425,
+    "end": 16.639,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "he's",
+    "start": 16.641,
+    "end": 16.764,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "so",
+    "start": 16.766,
+    "end": 17.153,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "trae",
+    "start": 17.55,
+    "end": 17.7263,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "young's",
+    "start": 17.7273,
+    "end": 17.935,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "such",
+    "start": 17.937,
+    "end": 18.1046,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 18.1056,
+    "end": 18.245,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "offensive",
+    "start": 18.273,
+    "end": 18.836,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "reliant",
+    "start": 18.838,
+    "end": 19.322,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "basketball",
+    "start": 19.324,
+    "end": 19.8337,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "player",
+    "start": 19.8347,
+    "end": 20.1587,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "if",
+    "start": 20.494,
+    "end": 20.619,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 20.621,
+    "end": 20.783,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "offense",
+    "start": 20.835,
+    "end": 21.311,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "isn't",
+    "start": 21.313,
+    "end": 21.569,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "clicking",
+    "start": 21.6001,
+    "end": 22.176,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   }
+  ]
+ },
+ "11": {
+  "filename": "syndigate_podcasts_fa07d94b1ffe5b68b89a70b142be688c_940.0_1240.0-sortformer-17.wav",
+  "n_tokens": 81,
+  "reviewed": false,
+  "tokens": [
+   {
+    "text": "thank",
+    "start": 0.355,
+    "end": 0.579,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "you",
+    "start": 0.581,
+    "end": 0.734,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "so",
+    "start": 0.802,
+    "end": 1.05,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "(())",
+    "start": 1.051,
+    "end": 1.5928,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "first",
+    "start": 1.5938,
+    "end": 1.7824,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "of",
+    "start": 1.7834,
+    "end": 1.834,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "all",
+    "start": 1.835,
+    "end": 1.919,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "let",
+    "start": 1.921,
+    "end": 2.061,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "me",
+    "start": 2.063,
+    "end": 2.165,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "just",
+    "start": 2.167,
+    "end": 2.321,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "say",
+    "start": 2.323,
+    "end": 2.529,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "that",
+    "start": 2.531,
+    "end": 2.748,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "you",
+    "start": 3.183,
+    "end": 3.304,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "know",
+    "start": 3.306,
+    "end": 3.577,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "i",
+    "start": 3.858,
+    "end": 4.002,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "was",
+    "start": 4.004,
+    "end": 4.276,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "trained",
+    "start": 4.343,
+    "end": 4.672,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "as",
+    "start": 4.674,
+    "end": 4.7955,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "an",
+    "start": 4.7965,
+    "end": 4.8644,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "economist",
+    "start": 4.8654,
+    "end": 5.686,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "at",
+    "start": 5.791,
+    "end": 5.963,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "m",
+    "start": 5.965,
+    "end": 6.0892,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "i",
+    "start": 6.0902,
+    "end": 6.3,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "t",
+    "start": 6.302,
+    "end": 6.63,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "now",
+    "start": 6.74,
+    "end": 6.964,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "m",
+    "start": 6.966,
+    "end": 7.0875,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "i",
+    "start": 7.0885,
+    "end": 7.232,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "t",
+    "start": 7.234,
+    "end": 7.3661,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "was",
+    "start": 7.3671,
+    "end": 7.489,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "not",
+    "start": 7.491,
+    "end": 7.645,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 7.647,
+    "end": 7.744,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "university",
+    "start": 7.746,
+    "end": 8.1402,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "of",
+    "start": 8.1412,
+    "end": 8.1897,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "chicago",
+    "start": 8.1907,
+    "end": 8.77,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "the",
+    "start": 9.226,
+    "end": 9.3533,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "university",
+    "start": 9.3543,
+    "end": 9.7141,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "of",
+    "start": 9.7151,
+    "end": 9.7859,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "chicago",
+    "start": 9.7869,
+    "end": 10.416,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "had",
+    "start": 10.418,
+    "end": 10.809,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "a",
+    "start": 10.811,
+    "end": 11.132,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "very",
+    "start": 11.253,
+    "end": 11.812,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "well",
+    "start": 12.03,
+    "end": 12.347,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "defined",
+    "start": 12.349,
+    "end": 12.907,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "tradition",
+    "start": 12.909,
+    "end": 13.771,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "of",
+    "start": 13.892,
+    "end": 14.29,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "you",
+    "start": 14.55,
+    "end": 14.666,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "know",
+    "start": 14.668,
+    "end": 15.104,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "a",
+    "start": 15.575,
+    "end": 15.679,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "classical",
+    "start": 15.758,
+    "end": 16.29,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "liberal",
+    "start": 16.292,
+    "end": 16.865,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "thought",
+    "start": 17.328,
+    "end": 17.682,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "in",
+    "start": 17.866,
+    "end": 18.0006,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 18.0016,
+    "end": 18.079,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "number",
+    "start": 18.081,
+    "end": 18.415,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "of",
+    "start": 18.417,
+    "end": 18.493,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "fields",
+    "start": 18.495,
+    "end": 18.932,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "but",
+    "start": 19.0086,
+    "end": 19.1667,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "especially",
+    "start": 19.315,
+    "end": 19.802,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "in",
+    "start": 19.804,
+    "end": 19.908,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "economics",
+    "start": 19.91,
+    "end": 20.701,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "influenced",
+    "start": 20.736,
+    "end": 21.223,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "by",
+    "start": 21.225,
+    "end": 21.388,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "people",
+    "start": 21.417,
+    "end": 21.625,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "like",
+    "start": 21.627,
+    "end": 21.762,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "friedrich",
+    "start": 21.764,
+    "end": 22.095,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "von",
+    "start": 22.097,
+    "end": 22.3296,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "hayek",
+    "start": 22.3306,
+    "end": 22.786,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "and",
+    "start": 22.887,
+    "end": 23.447,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "his",
+    "start": 23.566,
+    "end": 23.99,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "one",
+    "start": 24.004,
+    "end": 24.1728,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "of",
+    "start": 24.1738,
+    "end": 24.263,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "his",
+    "start": 24.265,
+    "end": 24.5835,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "in-",
+    "start": 25.04,
+    "end": 25.2733,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "inf-",
+    "start": 25.5151,
+    "end": 25.7532,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "influencees",
+    "start": 25.7542,
+    "end": 26.6466,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "one",
+    "start": 26.6476,
+    "end": 26.799,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "of",
+    "start": 26.801,
+    "end": 26.885,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "his",
+    "start": 26.887,
+    "end": 27.146,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "proteges",
+    "start": 27.227,
+    "end": 27.832,
+    "start_status": "unreviewed",
+    "end_status": "unreviewed"
+   },
+   {
+    "text": "milton",
+    "start": 27.912,
+    "end": 28.2762,
+    "start_status": "unreviewed",
+    "end_status": "moved"
+   },
+   {
+    "text": "friedman",
+    "start": 28.2772,
+    "end": 28.842,
+    "start_status": "moved",
+    "end_status": "unreviewed"
+   }
+  ]
+ }
+}

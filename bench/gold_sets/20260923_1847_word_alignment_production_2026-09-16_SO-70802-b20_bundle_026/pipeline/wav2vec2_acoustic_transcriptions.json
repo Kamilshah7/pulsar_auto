@@ -1,0 +1,4830 @@
+[
+  {
+    "clip_index": 0,
+    "clip_id": "clip_0",
+    "filename": "syndigate_podcasts_81d4c1dd26575dee829ccf417736f226_1900.0_2200.0-sortformer-16.wav",
+    "duration_sec": 29.44,
+    "raw_acoustic_text": "AND SO WHY NOT HAVE ALL THIS ADVICE AN SUPPORT THROUGH THE PROCESS I AM FREQUENTLY THE FIRST ONE TO TELL CLYAN SAYS THEY'RE GOIN THROUGH IS THE RED FLAGLES LET'S WALK AWAY IM NO SO I GUESS I GUESS IT WOULD ADD THAT USE A BROKER OR USE A GOOD BRANCH AS CONSULTIN WE ALL USE DIFFERENT NAMES COACH CONSULTAN BROKER THAT'S THE SAME ANIMAL IM AND IF YOU DON'T COMMUNICATE WELL OR LIKE THE ONE YOU'RE WORKIN WILL FIND ANOTHER ONE",
+    "acoustic_words": [
+      {
+        "word": "and",
+        "start": 0.16,
+        "end": 0.28
+      },
+      {
+        "word": "so",
+        "start": 0.36,
+        "end": 0.52
+      },
+      {
+        "word": "why",
+        "start": 0.64,
+        "end": 0.98
+      },
+      {
+        "word": "not",
+        "start": 1.04,
+        "end": 1.36
+      },
+      {
+        "word": "have",
+        "start": 2.48,
+        "end": 2.82
+      },
+      {
+        "word": "all",
+        "start": 2.88,
+        "end": 3.0
+      },
+      {
+        "word": "this",
+        "start": 3.06,
+        "end": 3.24
+      },
+      {
+        "word": "advice",
+        "start": 3.6,
+        "end": 4.08
+      },
+      {
+        "word": "an",
+        "start": 4.4,
+        "end": 4.48
+      },
+      {
+        "word": "support",
+        "start": 4.56,
+        "end": 5.18
+      },
+      {
+        "word": "through",
+        "start": 5.52,
+        "end": 5.7
+      },
+      {
+        "word": "the",
+        "start": 5.74,
+        "end": 5.8
+      },
+      {
+        "word": "process",
+        "start": 5.84,
+        "end": 6.42
+      },
+      {
+        "word": "i",
+        "start": 7.12,
+        "end": 7.2
+      },
+      {
+        "word": "am",
+        "start": 7.28,
+        "end": 7.34
+      },
+      {
+        "word": "frequently",
+        "start": 7.48,
+        "end": 7.94
+      },
+      {
+        "word": "the",
+        "start": 8.0,
+        "end": 8.08
+      },
+      {
+        "word": "first",
+        "start": 8.12,
+        "end": 8.36
+      },
+      {
+        "word": "one",
+        "start": 8.46,
+        "end": 8.56
+      },
+      {
+        "word": "to",
+        "start": 8.6,
+        "end": 8.72
+      },
+      {
+        "word": "tell",
+        "start": 8.76,
+        "end": 8.98
+      },
+      {
+        "word": "clyan",
+        "start": 9.0,
+        "end": 9.36
+      },
+      {
+        "word": "says",
+        "start": 9.38,
+        "end": 9.58
+      },
+      {
+        "word": "they're",
+        "start": 9.6,
+        "end": 9.78
+      },
+      {
+        "word": "goin",
+        "start": 9.82,
+        "end": 10.0
+      },
+      {
+        "word": "through",
+        "start": 10.04,
+        "end": 10.28
+      },
+      {
+        "word": "is",
+        "start": 11.0,
+        "end": 11.14
+      },
+      {
+        "word": "the",
+        "start": 11.22,
+        "end": 11.32
+      },
+      {
+        "word": "red",
+        "start": 11.36,
+        "end": 11.56
+      },
+      {
+        "word": "flagles",
+        "start": 11.62,
+        "end": 12.1
+      },
+      {
+        "word": "let's",
+        "start": 12.26,
+        "end": 12.44
+      },
+      {
+        "word": "walk",
+        "start": 12.48,
+        "end": 12.68
+      },
+      {
+        "word": "away",
+        "start": 12.74,
+        "end": 12.96
+      },
+      {
+        "word": "im",
+        "start": 13.7,
+        "end": 13.86
+      },
+      {
+        "word": "no",
+        "start": 14.68,
+        "end": 14.88
+      },
+      {
+        "word": "so",
+        "start": 15.08,
+        "end": 15.2
+      },
+      {
+        "word": "i",
+        "start": 15.24,
+        "end": 15.28
+      },
+      {
+        "word": "guess",
+        "start": 15.32,
+        "end": 15.5
+      },
+      {
+        "word": "i",
+        "start": 15.82,
+        "end": 15.86
+      },
+      {
+        "word": "guess",
+        "start": 15.9,
+        "end": 16.06
+      },
+      {
+        "word": "it",
+        "start": 16.14,
+        "end": 16.18
+      },
+      {
+        "word": "would",
+        "start": 16.22,
+        "end": 16.34
+      },
+      {
+        "word": "add",
+        "start": 16.4,
+        "end": 16.5
+      },
+      {
+        "word": "that",
+        "start": 16.54,
+        "end": 16.7
+      },
+      {
+        "word": "use",
+        "start": 16.82,
+        "end": 16.94
+      },
+      {
+        "word": "a",
+        "start": 17.0,
+        "end": 17.02
+      },
+      {
+        "word": "broker",
+        "start": 17.06,
+        "end": 17.42
+      },
+      {
+        "word": "or",
+        "start": 17.46,
+        "end": 17.5
+      },
+      {
+        "word": "use",
+        "start": 17.58,
+        "end": 17.7
+      },
+      {
+        "word": "a",
+        "start": 17.76,
+        "end": 17.78
+      },
+      {
+        "word": "good",
+        "start": 17.82,
+        "end": 17.98
+      },
+      {
+        "word": "branch",
+        "start": 18.02,
+        "end": 18.28
+      },
+      {
+        "word": "as",
+        "start": 18.36,
+        "end": 18.48
+      },
+      {
+        "word": "consultin",
+        "start": 18.54,
+        "end": 19.14
+      },
+      {
+        "word": "we",
+        "start": 19.48,
+        "end": 19.6
+      },
+      {
+        "word": "all",
+        "start": 19.66,
+        "end": 19.8
+      },
+      {
+        "word": "use",
+        "start": 19.88,
+        "end": 20.0
+      },
+      {
+        "word": "different",
+        "start": 20.06,
+        "end": 20.36
+      },
+      {
+        "word": "names",
+        "start": 20.42,
+        "end": 20.74
+      },
+      {
+        "word": "coach",
+        "start": 20.86,
+        "end": 21.16
+      },
+      {
+        "word": "consultan",
+        "start": 21.22,
+        "end": 21.82
+      },
+      {
+        "word": "broker",
+        "start": 21.86,
+        "end": 22.3
+      },
+      {
+        "word": "that's",
+        "start": 22.82,
+        "end": 23.06
+      },
+      {
+        "word": "the",
+        "start": 23.14,
+        "end": 23.24
+      },
+      {
+        "word": "same",
+        "start": 23.3,
+        "end": 23.56
+      },
+      {
+        "word": "animal",
+        "start": 23.7,
+        "end": 24.08
+      },
+      {
+        "word": "im",
+        "start": 24.74,
+        "end": 24.88
+      },
+      {
+        "word": "and",
+        "start": 25.16,
+        "end": 25.24
+      },
+      {
+        "word": "if",
+        "start": 25.26,
+        "end": 25.3
+      },
+      {
+        "word": "you",
+        "start": 25.34,
+        "end": 25.42
+      },
+      {
+        "word": "don't",
+        "start": 25.44,
+        "end": 25.62
+      },
+      {
+        "word": "communicate",
+        "start": 26.12,
+        "end": 26.66
+      },
+      {
+        "word": "well",
+        "start": 26.74,
+        "end": 27.08
+      },
+      {
+        "word": "or",
+        "start": 27.18,
+        "end": 27.24
+      },
+      {
+        "word": "like",
+        "start": 27.34,
+        "end": 27.56
+      },
+      {
+        "word": "the",
+        "start": 27.64,
+        "end": 27.72
+      },
+      {
+        "word": "one",
+        "start": 27.82,
+        "end": 27.88
+      },
+      {
+        "word": "you're",
+        "start": 27.92,
+        "end": 28.08
+      },
+      {
+        "word": "workin",
+        "start": 28.12,
+        "end": 28.38
+      },
+      {
+        "word": "will",
+        "start": 28.4,
+        "end": 28.56
+      },
+      {
+        "word": "find",
+        "start": 28.58,
+        "end": 28.82
+      },
+      {
+        "word": "another",
+        "start": 28.88,
+        "end": 29.14
+      },
+      {
+        "word": "one",
+        "start": 29.22,
+        "end": 29.28
+      }
+    ]
+  },
+  {
+    "clip_index": 1,
+    "clip_id": "clip_1",
+    "filename": "syndigate_podcasts_823b7c8ee60759c3ae58b4cda02e3c00_1180.0_1480.0-sortformer-34.wav",
+    "duration_sec": 20.48,
+    "raw_acoustic_text": "A YOU KNOW BEFORE THAT DAY WERE THIRD AND TWELVE THEY WERE THIRD AND NIGHT THEY WERE IN TOUGH TOUGH SITUATIONS AND SO HE'S REALLY GOOD ACROSS THE BOARD IN THAT AND IN THAT DRIVE SO IT WAS RUNNING AND THROWING THAT HE DID AND THAT'S WHAT THAT'S WHAT'S MADE CAMRISING SO EFFECTIVE IS HIS ABILITY TO RUN HIS ABILITY TO CONVERT THIRD DOWNS AND KEEP THE CHAINS MOVING",
+    "acoustic_words": [
+      {
+        "word": "a",
+        "start": 0.16,
+        "end": 0.26
+      },
+      {
+        "word": "you",
+        "start": 0.44,
+        "end": 0.52
+      },
+      {
+        "word": "know",
+        "start": 0.56,
+        "end": 0.68
+      },
+      {
+        "word": "before",
+        "start": 0.8,
+        "end": 1.04
+      },
+      {
+        "word": "that",
+        "start": 1.1,
+        "end": 1.22
+      },
+      {
+        "word": "day",
+        "start": 1.28,
+        "end": 1.38
+      },
+      {
+        "word": "were",
+        "start": 1.42,
+        "end": 1.54
+      },
+      {
+        "word": "third",
+        "start": 1.58,
+        "end": 1.76
+      },
+      {
+        "word": "and",
+        "start": 1.8,
+        "end": 1.86
+      },
+      {
+        "word": "twelve",
+        "start": 1.9,
+        "end": 2.22
+      },
+      {
+        "word": "they",
+        "start": 2.24,
+        "end": 2.36
+      },
+      {
+        "word": "were",
+        "start": 2.38,
+        "end": 2.5
+      },
+      {
+        "word": "third",
+        "start": 2.54,
+        "end": 2.74
+      },
+      {
+        "word": "and",
+        "start": 2.78,
+        "end": 2.86
+      },
+      {
+        "word": "night",
+        "start": 2.9,
+        "end": 3.1
+      },
+      {
+        "word": "they",
+        "start": 3.14,
+        "end": 3.24
+      },
+      {
+        "word": "were",
+        "start": 3.26,
+        "end": 3.36
+      },
+      {
+        "word": "in",
+        "start": 3.42,
+        "end": 3.46
+      },
+      {
+        "word": "tough",
+        "start": 3.56,
+        "end": 3.86
+      },
+      {
+        "word": "tough",
+        "start": 4.0,
+        "end": 4.26
+      },
+      {
+        "word": "situations",
+        "start": 4.8,
+        "end": 5.42
+      },
+      {
+        "word": "and",
+        "start": 5.52,
+        "end": 5.6
+      },
+      {
+        "word": "so",
+        "start": 5.64,
+        "end": 5.74
+      },
+      {
+        "word": "he's",
+        "start": 5.8,
+        "end": 5.92
+      },
+      {
+        "word": "really",
+        "start": 5.96,
+        "end": 6.16
+      },
+      {
+        "word": "good",
+        "start": 6.2,
+        "end": 6.42
+      },
+      {
+        "word": "across",
+        "start": 6.78,
+        "end": 7.1
+      },
+      {
+        "word": "the",
+        "start": 7.14,
+        "end": 7.22
+      },
+      {
+        "word": "board",
+        "start": 7.26,
+        "end": 7.5
+      },
+      {
+        "word": "in",
+        "start": 7.62,
+        "end": 7.68
+      },
+      {
+        "word": "that",
+        "start": 7.74,
+        "end": 7.92
+      },
+      {
+        "word": "and",
+        "start": 8.2,
+        "end": 8.28
+      },
+      {
+        "word": "in",
+        "start": 8.42,
+        "end": 8.5
+      },
+      {
+        "word": "that",
+        "start": 8.56,
+        "end": 8.72
+      },
+      {
+        "word": "drive",
+        "start": 8.96,
+        "end": 9.24
+      },
+      {
+        "word": "so",
+        "start": 9.3,
+        "end": 9.42
+      },
+      {
+        "word": "it",
+        "start": 9.46,
+        "end": 9.5
+      },
+      {
+        "word": "was",
+        "start": 9.54,
+        "end": 9.64
+      },
+      {
+        "word": "running",
+        "start": 9.72,
+        "end": 10.0
+      },
+      {
+        "word": "and",
+        "start": 10.2,
+        "end": 10.3
+      },
+      {
+        "word": "throwing",
+        "start": 10.36,
+        "end": 10.74
+      },
+      {
+        "word": "that",
+        "start": 11.38,
+        "end": 11.5
+      },
+      {
+        "word": "he",
+        "start": 11.54,
+        "end": 11.6
+      },
+      {
+        "word": "did",
+        "start": 11.64,
+        "end": 11.78
+      },
+      {
+        "word": "and",
+        "start": 11.84,
+        "end": 11.92
+      },
+      {
+        "word": "that's",
+        "start": 11.96,
+        "end": 12.16
+      },
+      {
+        "word": "what",
+        "start": 12.22,
+        "end": 12.4
+      },
+      {
+        "word": "that's",
+        "start": 12.54,
+        "end": 12.7
+      },
+      {
+        "word": "what's",
+        "start": 12.74,
+        "end": 12.92
+      },
+      {
+        "word": "made",
+        "start": 12.98,
+        "end": 13.2
+      },
+      {
+        "word": "camrising",
+        "start": 13.24,
+        "end": 13.84
+      },
+      {
+        "word": "so",
+        "start": 13.9,
+        "end": 14.04
+      },
+      {
+        "word": "effective",
+        "start": 14.08,
+        "end": 14.5
+      },
+      {
+        "word": "is",
+        "start": 14.56,
+        "end": 14.62
+      },
+      {
+        "word": "his",
+        "start": 14.66,
+        "end": 14.78
+      },
+      {
+        "word": "ability",
+        "start": 14.84,
+        "end": 15.22
+      },
+      {
+        "word": "to",
+        "start": 15.26,
+        "end": 15.34
+      },
+      {
+        "word": "run",
+        "start": 15.42,
+        "end": 15.62
+      },
+      {
+        "word": "his",
+        "start": 16.18,
+        "end": 16.32
+      },
+      {
+        "word": "ability",
+        "start": 16.38,
+        "end": 16.8
+      },
+      {
+        "word": "to",
+        "start": 16.86,
+        "end": 16.96
+      },
+      {
+        "word": "convert",
+        "start": 17.02,
+        "end": 17.5
+      },
+      {
+        "word": "third",
+        "start": 17.8,
+        "end": 18.06
+      },
+      {
+        "word": "downs",
+        "start": 18.12,
+        "end": 18.52
+      },
+      {
+        "word": "and",
+        "start": 18.74,
+        "end": 18.82
+      },
+      {
+        "word": "keep",
+        "start": 18.92,
+        "end": 19.16
+      },
+      {
+        "word": "the",
+        "start": 19.24,
+        "end": 19.32
+      },
+      {
+        "word": "chains",
+        "start": 19.38,
+        "end": 19.7
+      },
+      {
+        "word": "moving",
+        "start": 19.78,
+        "end": 20.16
+      }
+    ]
+  },
+  {
+    "clip_index": 2,
+    "clip_id": "clip_2",
+    "filename": "syndigate_podcasts_83151db80f2e582182a71428443f5b68_2440.0_2740.0-sortformer-20.wav",
+    "duration_sec": 26.08,
+    "raw_acoustic_text": "THIS IS THIS THE CHALLENGE OF BEING AT THE TOP OF THE COTDINGER PORTHOUGH LIKE WHEN YOUR PRECEES MALL AMERICAN TEAMS ARE GOING TO SELL OUT TO TRY AND STOP YOU MAYBE JACKSONDART IS TAT OF PLACE IN HIS CAREER WHERE HE IS ABLE TO BENEFIT FROM THAT IN THIS OLD MISS IN RECEIVING ROOM WHICH LOST TRAY HAIRS UNFORTUNATELY IN THIS ONE WHO NONT LIKE HOPEFULLY HE'S JUST BANGED UP AND HE'S GOINGT BE COMING BACK KID WADE MADE A RIDICULOUS LIKE OB J LIKE CATCH AH ON THE SIDE THAT WAS INCREDIBLE BUT",
+    "acoustic_words": [
+      {
+        "word": "this",
+        "start": 0.0,
+        "end": 0.18
+      },
+      {
+        "word": "is",
+        "start": 0.26,
+        "end": 0.34
+      },
+      {
+        "word": "this",
+        "start": 0.54,
+        "end": 0.68
+      },
+      {
+        "word": "the",
+        "start": 0.72,
+        "end": 0.82
+      },
+      {
+        "word": "challenge",
+        "start": 0.86,
+        "end": 1.12
+      },
+      {
+        "word": "of",
+        "start": 1.16,
+        "end": 1.2
+      },
+      {
+        "word": "being",
+        "start": 1.24,
+        "end": 1.38
+      },
+      {
+        "word": "at",
+        "start": 1.42,
+        "end": 1.46
+      },
+      {
+        "word": "the",
+        "start": 1.5,
+        "end": 1.58
+      },
+      {
+        "word": "top",
+        "start": 1.62,
+        "end": 1.74
+      },
+      {
+        "word": "of",
+        "start": 1.76,
+        "end": 1.8
+      },
+      {
+        "word": "the",
+        "start": 1.82,
+        "end": 1.88
+      },
+      {
+        "word": "cotdinger",
+        "start": 1.92,
+        "end": 2.22
+      },
+      {
+        "word": "porthough",
+        "start": 2.24,
+        "end": 2.58
+      },
+      {
+        "word": "like",
+        "start": 2.76,
+        "end": 2.88
+      },
+      {
+        "word": "when",
+        "start": 2.92,
+        "end": 3.02
+      },
+      {
+        "word": "your",
+        "start": 3.04,
+        "end": 3.16
+      },
+      {
+        "word": "precees",
+        "start": 3.24,
+        "end": 3.54
+      },
+      {
+        "word": "mall",
+        "start": 3.58,
+        "end": 3.7
+      },
+      {
+        "word": "american",
+        "start": 3.74,
+        "end": 4.1
+      },
+      {
+        "word": "teams",
+        "start": 4.56,
+        "end": 4.88
+      },
+      {
+        "word": "are",
+        "start": 4.92,
+        "end": 5.0
+      },
+      {
+        "word": "going",
+        "start": 5.04,
+        "end": 5.2
+      },
+      {
+        "word": "to",
+        "start": 5.24,
+        "end": 5.34
+      },
+      {
+        "word": "sell",
+        "start": 5.52,
+        "end": 5.72
+      },
+      {
+        "word": "out",
+        "start": 5.86,
+        "end": 5.98
+      },
+      {
+        "word": "to",
+        "start": 6.1,
+        "end": 6.2
+      },
+      {
+        "word": "try",
+        "start": 6.32,
+        "end": 6.72
+      },
+      {
+        "word": "and",
+        "start": 6.82,
+        "end": 6.9
+      },
+      {
+        "word": "stop",
+        "start": 6.94,
+        "end": 7.12
+      },
+      {
+        "word": "you",
+        "start": 7.16,
+        "end": 7.26
+      },
+      {
+        "word": "maybe",
+        "start": 7.42,
+        "end": 7.74
+      },
+      {
+        "word": "jacksondart",
+        "start": 8.0,
+        "end": 8.44
+      },
+      {
+        "word": "is",
+        "start": 8.48,
+        "end": 8.54
+      },
+      {
+        "word": "tat",
+        "start": 8.56,
+        "end": 8.66
+      },
+      {
+        "word": "of",
+        "start": 8.7,
+        "end": 8.74
+      },
+      {
+        "word": "place",
+        "start": 8.8,
+        "end": 9.0
+      },
+      {
+        "word": "in",
+        "start": 9.04,
+        "end": 9.08
+      },
+      {
+        "word": "his",
+        "start": 9.14,
+        "end": 9.22
+      },
+      {
+        "word": "career",
+        "start": 9.26,
+        "end": 9.54
+      },
+      {
+        "word": "where",
+        "start": 9.56,
+        "end": 9.72
+      },
+      {
+        "word": "he",
+        "start": 9.76,
+        "end": 9.9
+      },
+      {
+        "word": "is",
+        "start": 10.06,
+        "end": 10.14
+      },
+      {
+        "word": "able",
+        "start": 10.6,
+        "end": 10.76
+      },
+      {
+        "word": "to",
+        "start": 10.8,
+        "end": 10.88
+      },
+      {
+        "word": "benefit",
+        "start": 10.98,
+        "end": 11.36
+      },
+      {
+        "word": "from",
+        "start": 11.48,
+        "end": 11.66
+      },
+      {
+        "word": "that",
+        "start": 11.72,
+        "end": 11.94
+      },
+      {
+        "word": "in",
+        "start": 12.12,
+        "end": 12.2
+      },
+      {
+        "word": "this",
+        "start": 12.24,
+        "end": 12.38
+      },
+      {
+        "word": "old",
+        "start": 12.52,
+        "end": 12.64
+      },
+      {
+        "word": "miss",
+        "start": 12.68,
+        "end": 12.9
+      },
+      {
+        "word": "in",
+        "start": 13.12,
+        "end": 13.2
+      },
+      {
+        "word": "receiving",
+        "start": 13.36,
+        "end": 13.78
+      },
+      {
+        "word": "room",
+        "start": 13.84,
+        "end": 14.0
+      },
+      {
+        "word": "which",
+        "start": 14.06,
+        "end": 14.2
+      },
+      {
+        "word": "lost",
+        "start": 14.42,
+        "end": 14.68
+      },
+      {
+        "word": "tray",
+        "start": 14.72,
+        "end": 14.9
+      },
+      {
+        "word": "hairs",
+        "start": 14.94,
+        "end": 15.18
+      },
+      {
+        "word": "unfortunately",
+        "start": 15.24,
+        "end": 15.7
+      },
+      {
+        "word": "in",
+        "start": 15.74,
+        "end": 15.78
+      },
+      {
+        "word": "this",
+        "start": 15.82,
+        "end": 15.96
+      },
+      {
+        "word": "one",
+        "start": 16.1,
+        "end": 16.2
+      },
+      {
+        "word": "who",
+        "start": 16.24,
+        "end": 16.34
+      },
+      {
+        "word": "nont",
+        "start": 16.38,
+        "end": 16.52
+      },
+      {
+        "word": "like",
+        "start": 16.58,
+        "end": 16.72
+      },
+      {
+        "word": "hopefully",
+        "start": 16.78,
+        "end": 17.06
+      },
+      {
+        "word": "he's",
+        "start": 17.1,
+        "end": 17.2
+      },
+      {
+        "word": "just",
+        "start": 17.22,
+        "end": 17.38
+      },
+      {
+        "word": "banged",
+        "start": 17.42,
+        "end": 17.62
+      },
+      {
+        "word": "up",
+        "start": 17.7,
+        "end": 17.76
+      },
+      {
+        "word": "and",
+        "start": 17.8,
+        "end": 17.86
+      },
+      {
+        "word": "he's",
+        "start": 17.88,
+        "end": 17.96
+      },
+      {
+        "word": "goingt",
+        "start": 17.98,
+        "end": 18.1
+      },
+      {
+        "word": "be",
+        "start": 18.12,
+        "end": 18.18
+      },
+      {
+        "word": "coming",
+        "start": 18.22,
+        "end": 18.4
+      },
+      {
+        "word": "back",
+        "start": 18.44,
+        "end": 18.64
+      },
+      {
+        "word": "kid",
+        "start": 19.18,
+        "end": 19.36
+      },
+      {
+        "word": "wade",
+        "start": 19.4,
+        "end": 19.66
+      },
+      {
+        "word": "made",
+        "start": 19.7,
+        "end": 19.84
+      },
+      {
+        "word": "a",
+        "start": 19.88,
+        "end": 19.9
+      },
+      {
+        "word": "ridiculous",
+        "start": 19.98,
+        "end": 20.68
+      },
+      {
+        "word": "like",
+        "start": 20.86,
+        "end": 21.0
+      },
+      {
+        "word": "ob",
+        "start": 21.26,
+        "end": 21.48
+      },
+      {
+        "word": "j",
+        "start": 21.54,
+        "end": 21.78
+      },
+      {
+        "word": "like",
+        "start": 21.84,
+        "end": 22.02
+      },
+      {
+        "word": "catch",
+        "start": 22.06,
+        "end": 22.36
+      },
+      {
+        "word": "ah",
+        "start": 23.22,
+        "end": 23.32
+      },
+      {
+        "word": "on",
+        "start": 23.82,
+        "end": 23.88
+      },
+      {
+        "word": "the",
+        "start": 23.92,
+        "end": 24.0
+      },
+      {
+        "word": "side",
+        "start": 24.04,
+        "end": 24.16
+      },
+      {
+        "word": "that",
+        "start": 24.22,
+        "end": 24.32
+      },
+      {
+        "word": "was",
+        "start": 24.36,
+        "end": 24.46
+      },
+      {
+        "word": "incredible",
+        "start": 24.6,
+        "end": 25.26
+      },
+      {
+        "word": "but",
+        "start": 25.66,
+        "end": 25.84
+      }
+    ]
+  },
+  {
+    "clip_index": 3,
+    "clip_id": "clip_3",
+    "filename": "syndigate_podcasts_83b8e1159f6d5a328c7067f4b23b3fca_390.0_690.0-sortformer-11.wav",
+    "duration_sec": 26.0,
+    "raw_acoustic_text": "ERE GOOD RESULTS SA ASELL VERY SIMILAR A COVERD RECOVERY STORY MORE PEOPLE BEING DIAGNIZED WITH MORE AILMENTS AND THERE'VE GOT MORE PLASHMA TO TURN INT TREATMENTS FOR THOSE PEOPLE SO LONG TERM GROWTH STORY THAT THE TRAIN IS NOT STOPPING A ETHNE YO MENTION THE DAN MURPHYES A RESUT A LOYALTY PROGRAMM THERE TELL US A LITTLE ABOUT LITTLE BIT ABOUT IN THE RETILE SECTAR HOW ENDEAVOUR GROUPS RESULTS WOR MORE BROADLY",
+    "acoustic_words": [
+      {
+        "word": "ere",
+        "start": 0.08,
+        "end": 0.2
+      },
+      {
+        "word": "good",
+        "start": 0.34,
+        "end": 0.5
+      },
+      {
+        "word": "results",
+        "start": 0.52,
+        "end": 0.86
+      },
+      {
+        "word": "sa",
+        "start": 0.9,
+        "end": 1.04
+      },
+      {
+        "word": "asell",
+        "start": 1.08,
+        "end": 1.48
+      },
+      {
+        "word": "very",
+        "start": 1.52,
+        "end": 1.74
+      },
+      {
+        "word": "similar",
+        "start": 1.8,
+        "end": 2.16
+      },
+      {
+        "word": "a",
+        "start": 2.34,
+        "end": 2.38
+      },
+      {
+        "word": "coverd",
+        "start": 2.48,
+        "end": 2.84
+      },
+      {
+        "word": "recovery",
+        "start": 2.88,
+        "end": 3.38
+      },
+      {
+        "word": "story",
+        "start": 3.44,
+        "end": 3.84
+      },
+      {
+        "word": "more",
+        "start": 4.22,
+        "end": 4.44
+      },
+      {
+        "word": "people",
+        "start": 4.48,
+        "end": 4.78
+      },
+      {
+        "word": "being",
+        "start": 4.86,
+        "end": 5.06
+      },
+      {
+        "word": "diagnized",
+        "start": 5.12,
+        "end": 5.78
+      },
+      {
+        "word": "with",
+        "start": 5.84,
+        "end": 5.98
+      },
+      {
+        "word": "more",
+        "start": 6.08,
+        "end": 6.38
+      },
+      {
+        "word": "ailments",
+        "start": 6.88,
+        "end": 7.3
+      },
+      {
+        "word": "and",
+        "start": 7.74,
+        "end": 7.8
+      },
+      {
+        "word": "there've",
+        "start": 7.84,
+        "end": 8.04
+      },
+      {
+        "word": "got",
+        "start": 8.08,
+        "end": 8.22
+      },
+      {
+        "word": "more",
+        "start": 8.4,
+        "end": 8.64
+      },
+      {
+        "word": "plashma",
+        "start": 8.7,
+        "end": 9.16
+      },
+      {
+        "word": "to",
+        "start": 9.22,
+        "end": 9.42
+      },
+      {
+        "word": "turn",
+        "start": 9.52,
+        "end": 9.74
+      },
+      {
+        "word": "int",
+        "start": 9.8,
+        "end": 10.1
+      },
+      {
+        "word": "treatments",
+        "start": 10.22,
+        "end": 10.62
+      },
+      {
+        "word": "for",
+        "start": 10.66,
+        "end": 10.76
+      },
+      {
+        "word": "those",
+        "start": 10.8,
+        "end": 10.98
+      },
+      {
+        "word": "people",
+        "start": 11.06,
+        "end": 11.38
+      },
+      {
+        "word": "so",
+        "start": 11.46,
+        "end": 11.64
+      },
+      {
+        "word": "long",
+        "start": 12.58,
+        "end": 12.8
+      },
+      {
+        "word": "term",
+        "start": 12.84,
+        "end": 13.08
+      },
+      {
+        "word": "growth",
+        "start": 13.12,
+        "end": 13.34
+      },
+      {
+        "word": "story",
+        "start": 13.38,
+        "end": 13.72
+      },
+      {
+        "word": "that",
+        "start": 13.76,
+        "end": 13.92
+      },
+      {
+        "word": "the",
+        "start": 14.0,
+        "end": 14.1
+      },
+      {
+        "word": "train",
+        "start": 14.16,
+        "end": 14.42
+      },
+      {
+        "word": "is",
+        "start": 14.48,
+        "end": 14.56
+      },
+      {
+        "word": "not",
+        "start": 14.62,
+        "end": 14.74
+      },
+      {
+        "word": "stopping",
+        "start": 14.8,
+        "end": 15.14
+      },
+      {
+        "word": "a",
+        "start": 15.98,
+        "end": 16.08
+      },
+      {
+        "word": "ethne",
+        "start": 16.48,
+        "end": 16.72
+      },
+      {
+        "word": "yo",
+        "start": 16.74,
+        "end": 16.82
+      },
+      {
+        "word": "mention",
+        "start": 16.86,
+        "end": 17.14
+      },
+      {
+        "word": "the",
+        "start": 17.16,
+        "end": 17.22
+      },
+      {
+        "word": "dan",
+        "start": 17.28,
+        "end": 17.54
+      },
+      {
+        "word": "murphyes",
+        "start": 17.58,
+        "end": 18.1
+      },
+      {
+        "word": "a",
+        "start": 18.56,
+        "end": 18.68
+      },
+      {
+        "word": "resut",
+        "start": 18.84,
+        "end": 19.22
+      },
+      {
+        "word": "a",
+        "start": 19.3,
+        "end": 19.38
+      },
+      {
+        "word": "loyalty",
+        "start": 19.52,
+        "end": 19.88
+      },
+      {
+        "word": "programm",
+        "start": 19.94,
+        "end": 20.38
+      },
+      {
+        "word": "there",
+        "start": 20.4,
+        "end": 20.56
+      },
+      {
+        "word": "tell",
+        "start": 21.0,
+        "end": 21.18
+      },
+      {
+        "word": "us",
+        "start": 21.24,
+        "end": 21.32
+      },
+      {
+        "word": "a",
+        "start": 21.36,
+        "end": 21.38
+      },
+      {
+        "word": "little",
+        "start": 21.42,
+        "end": 21.6
+      },
+      {
+        "word": "about",
+        "start": 21.62,
+        "end": 21.82
+      },
+      {
+        "word": "little",
+        "start": 22.1,
+        "end": 22.28
+      },
+      {
+        "word": "bit",
+        "start": 22.32,
+        "end": 22.42
+      },
+      {
+        "word": "about",
+        "start": 22.48,
+        "end": 22.66
+      },
+      {
+        "word": "in",
+        "start": 22.72,
+        "end": 22.76
+      },
+      {
+        "word": "the",
+        "start": 22.82,
+        "end": 22.88
+      },
+      {
+        "word": "retile",
+        "start": 22.96,
+        "end": 23.36
+      },
+      {
+        "word": "sectar",
+        "start": 23.4,
+        "end": 23.7
+      },
+      {
+        "word": "how",
+        "start": 23.74,
+        "end": 23.9
+      },
+      {
+        "word": "endeavour",
+        "start": 24.0,
+        "end": 24.42
+      },
+      {
+        "word": "groups",
+        "start": 24.46,
+        "end": 24.7
+      },
+      {
+        "word": "results",
+        "start": 24.74,
+        "end": 25.08
+      },
+      {
+        "word": "wor",
+        "start": 25.14,
+        "end": 25.34
+      },
+      {
+        "word": "more",
+        "start": 25.36,
+        "end": 25.5
+      },
+      {
+        "word": "broadly",
+        "start": 25.54,
+        "end": 25.88
+      }
+    ]
+  },
+  {
+    "clip_index": 4,
+    "clip_id": "clip_4",
+    "filename": "syndigate_podcasts_83f1f7b625ba5908a57986310ba2b318_50.0_335.490563-sortformer-7.wav",
+    "duration_sec": 21.12,
+    "raw_acoustic_text": "AND THEN AH SO THAT I WILLIDED THAT ON A TUESDAY I THINK AND THET ON WEDNESDAY AND THURSDAY WE DO ACENNTERVIEWS AND ON BEFORE THAT IN IN THAT GROUPE MEETING WE HAVE EM FELL OUT RANKINGS WE HAVE THEM FILL OUS THINGS THAT THEY WERE HAPPY ABOUT THINGS THAT THEY WEREN'T HAPPY ABOUT THINGS THAT THEY THINK THEY NEED TO WORK ON THINGS THEY DON'T TOLD PAGES",
+    "acoustic_words": [
+      {
+        "word": "and",
+        "start": 0.0,
+        "end": 0.08
+      },
+      {
+        "word": "then",
+        "start": 0.12,
+        "end": 0.38
+      },
+      {
+        "word": "ah",
+        "start": 1.14,
+        "end": 1.22
+      },
+      {
+        "word": "so",
+        "start": 1.44,
+        "end": 1.54
+      },
+      {
+        "word": "that",
+        "start": 1.58,
+        "end": 1.74
+      },
+      {
+        "word": "i",
+        "start": 1.96,
+        "end": 2.06
+      },
+      {
+        "word": "willided",
+        "start": 2.14,
+        "end": 2.56
+      },
+      {
+        "word": "that",
+        "start": 2.6,
+        "end": 2.72
+      },
+      {
+        "word": "on",
+        "start": 2.8,
+        "end": 2.88
+      },
+      {
+        "word": "a",
+        "start": 2.92,
+        "end": 2.96
+      },
+      {
+        "word": "tuesday",
+        "start": 3.04,
+        "end": 3.42
+      },
+      {
+        "word": "i",
+        "start": 3.48,
+        "end": 3.52
+      },
+      {
+        "word": "think",
+        "start": 3.56,
+        "end": 3.76
+      },
+      {
+        "word": "and",
+        "start": 3.82,
+        "end": 3.88
+      },
+      {
+        "word": "thet",
+        "start": 3.92,
+        "end": 4.04
+      },
+      {
+        "word": "on",
+        "start": 4.16,
+        "end": 4.24
+      },
+      {
+        "word": "wednesday",
+        "start": 4.3,
+        "end": 4.66
+      },
+      {
+        "word": "and",
+        "start": 4.7,
+        "end": 4.78
+      },
+      {
+        "word": "thursday",
+        "start": 4.86,
+        "end": 5.3
+      },
+      {
+        "word": "we",
+        "start": 5.38,
+        "end": 5.58
+      },
+      {
+        "word": "do",
+        "start": 5.68,
+        "end": 5.94
+      },
+      {
+        "word": "acennterviews",
+        "start": 6.16,
+        "end": 6.9
+      },
+      {
+        "word": "and",
+        "start": 7.18,
+        "end": 7.32
+      },
+      {
+        "word": "on",
+        "start": 7.52,
+        "end": 7.6
+      },
+      {
+        "word": "before",
+        "start": 7.64,
+        "end": 7.98
+      },
+      {
+        "word": "that",
+        "start": 8.02,
+        "end": 8.22
+      },
+      {
+        "word": "in",
+        "start": 8.4,
+        "end": 8.5
+      },
+      {
+        "word": "in",
+        "start": 8.68,
+        "end": 8.74
+      },
+      {
+        "word": "that",
+        "start": 8.78,
+        "end": 8.94
+      },
+      {
+        "word": "groupe",
+        "start": 9.16,
+        "end": 9.42
+      },
+      {
+        "word": "meeting",
+        "start": 9.46,
+        "end": 9.74
+      },
+      {
+        "word": "we",
+        "start": 10.38,
+        "end": 10.5
+      },
+      {
+        "word": "have",
+        "start": 10.54,
+        "end": 10.7
+      },
+      {
+        "word": "em",
+        "start": 10.78,
+        "end": 10.86
+      },
+      {
+        "word": "fell",
+        "start": 10.94,
+        "end": 11.16
+      },
+      {
+        "word": "out",
+        "start": 11.28,
+        "end": 11.4
+      },
+      {
+        "word": "rankings",
+        "start": 11.54,
+        "end": 12.0
+      },
+      {
+        "word": "we",
+        "start": 12.04,
+        "end": 12.14
+      },
+      {
+        "word": "have",
+        "start": 12.18,
+        "end": 12.3
+      },
+      {
+        "word": "them",
+        "start": 12.34,
+        "end": 12.48
+      },
+      {
+        "word": "fill",
+        "start": 12.56,
+        "end": 12.8
+      },
+      {
+        "word": "ous",
+        "start": 12.92,
+        "end": 13.24
+      },
+      {
+        "word": "things",
+        "start": 13.84,
+        "end": 14.08
+      },
+      {
+        "word": "that",
+        "start": 14.12,
+        "end": 14.26
+      },
+      {
+        "word": "they",
+        "start": 14.6,
+        "end": 14.7
+      },
+      {
+        "word": "were",
+        "start": 14.72,
+        "end": 14.82
+      },
+      {
+        "word": "happy",
+        "start": 14.88,
+        "end": 15.08
+      },
+      {
+        "word": "about",
+        "start": 15.12,
+        "end": 15.32
+      },
+      {
+        "word": "things",
+        "start": 15.4,
+        "end": 15.62
+      },
+      {
+        "word": "that",
+        "start": 15.66,
+        "end": 15.78
+      },
+      {
+        "word": "they",
+        "start": 15.82,
+        "end": 16.04
+      },
+      {
+        "word": "weren't",
+        "start": 16.32,
+        "end": 16.54
+      },
+      {
+        "word": "happy",
+        "start": 16.58,
+        "end": 16.82
+      },
+      {
+        "word": "about",
+        "start": 16.86,
+        "end": 17.12
+      },
+      {
+        "word": "things",
+        "start": 17.22,
+        "end": 17.44
+      },
+      {
+        "word": "that",
+        "start": 17.48,
+        "end": 17.58
+      },
+      {
+        "word": "they",
+        "start": 17.62,
+        "end": 17.74
+      },
+      {
+        "word": "think",
+        "start": 17.78,
+        "end": 17.92
+      },
+      {
+        "word": "they",
+        "start": 17.96,
+        "end": 18.06
+      },
+      {
+        "word": "need",
+        "start": 18.1,
+        "end": 18.22
+      },
+      {
+        "word": "to",
+        "start": 18.26,
+        "end": 18.3
+      },
+      {
+        "word": "work",
+        "start": 18.36,
+        "end": 18.56
+      },
+      {
+        "word": "on",
+        "start": 18.64,
+        "end": 18.72
+      },
+      {
+        "word": "things",
+        "start": 18.76,
+        "end": 18.94
+      },
+      {
+        "word": "they",
+        "start": 18.98,
+        "end": 19.1
+      },
+      {
+        "word": "don't",
+        "start": 19.16,
+        "end": 19.46
+      },
+      {
+        "word": "told",
+        "start": 20.2,
+        "end": 20.44
+      },
+      {
+        "word": "pages",
+        "start": 20.48,
+        "end": 20.84
+      }
+    ]
+  },
+  {
+    "clip_index": 5,
+    "clip_id": "clip_5",
+    "filename": "syndigate_podcasts_84597de21f045361971a495f3bad029a_100.0_400.0-sortformer-42.wav",
+    "duration_sec": 23.76,
+    "raw_acoustic_text": "TO MY ORIGINAL JOINING OF THE MILITARY WAS I THINK MORE THE STEREOTYPE WHICH IS THAT MY FATHER WAS WORRIED BUT VERY PROUD I THINK HIS HIS PRIDE OVERTOOK ANY FEAR OF SOMETHING HAPPENING AND MY MOTHER A JUST CRIED SE SHE CRIED ENDLESSLY AH LEADING UP TO TO THAT FIRST TIME SHE WATCHED ME LEAVE ON THE BUS AM AND THAT CHANGED A",
+    "acoustic_words": [
+      {
+        "word": "to",
+        "start": 0.1,
+        "end": 0.32
+      },
+      {
+        "word": "my",
+        "start": 0.94,
+        "end": 1.1
+      },
+      {
+        "word": "original",
+        "start": 1.18,
+        "end": 1.64
+      },
+      {
+        "word": "joining",
+        "start": 1.74,
+        "end": 2.06
+      },
+      {
+        "word": "of",
+        "start": 2.1,
+        "end": 2.14
+      },
+      {
+        "word": "the",
+        "start": 2.2,
+        "end": 2.26
+      },
+      {
+        "word": "military",
+        "start": 2.3,
+        "end": 2.86
+      },
+      {
+        "word": "was",
+        "start": 3.36,
+        "end": 3.54
+      },
+      {
+        "word": "i",
+        "start": 3.68,
+        "end": 3.72
+      },
+      {
+        "word": "think",
+        "start": 3.76,
+        "end": 3.94
+      },
+      {
+        "word": "more",
+        "start": 4.02,
+        "end": 4.16
+      },
+      {
+        "word": "the",
+        "start": 4.26,
+        "end": 4.32
+      },
+      {
+        "word": "stereotype",
+        "start": 4.36,
+        "end": 5.04
+      },
+      {
+        "word": "which",
+        "start": 5.08,
+        "end": 5.22
+      },
+      {
+        "word": "is",
+        "start": 5.28,
+        "end": 5.32
+      },
+      {
+        "word": "that",
+        "start": 5.36,
+        "end": 5.46
+      },
+      {
+        "word": "my",
+        "start": 5.5,
+        "end": 5.6
+      },
+      {
+        "word": "father",
+        "start": 5.7,
+        "end": 6.06
+      },
+      {
+        "word": "was",
+        "start": 6.7,
+        "end": 7.0
+      },
+      {
+        "word": "worried",
+        "start": 7.54,
+        "end": 7.86
+      },
+      {
+        "word": "but",
+        "start": 7.92,
+        "end": 8.0
+      },
+      {
+        "word": "very",
+        "start": 8.08,
+        "end": 8.28
+      },
+      {
+        "word": "proud",
+        "start": 8.38,
+        "end": 8.7
+      },
+      {
+        "word": "i",
+        "start": 8.8,
+        "end": 8.82
+      },
+      {
+        "word": "think",
+        "start": 8.86,
+        "end": 9.02
+      },
+      {
+        "word": "his",
+        "start": 9.04,
+        "end": 9.14
+      },
+      {
+        "word": "his",
+        "start": 9.34,
+        "end": 9.48
+      },
+      {
+        "word": "pride",
+        "start": 9.6,
+        "end": 9.96
+      },
+      {
+        "word": "overtook",
+        "start": 10.12,
+        "end": 10.58
+      },
+      {
+        "word": "any",
+        "start": 10.68,
+        "end": 10.8
+      },
+      {
+        "word": "fear",
+        "start": 10.94,
+        "end": 11.22
+      },
+      {
+        "word": "of",
+        "start": 11.58,
+        "end": 11.66
+      },
+      {
+        "word": "something",
+        "start": 11.72,
+        "end": 12.04
+      },
+      {
+        "word": "happening",
+        "start": 12.1,
+        "end": 12.46
+      },
+      {
+        "word": "and",
+        "start": 13.08,
+        "end": 13.16
+      },
+      {
+        "word": "my",
+        "start": 13.22,
+        "end": 13.32
+      },
+      {
+        "word": "mother",
+        "start": 13.38,
+        "end": 13.66
+      },
+      {
+        "word": "a",
+        "start": 14.32,
+        "end": 14.44
+      },
+      {
+        "word": "just",
+        "start": 14.62,
+        "end": 14.78
+      },
+      {
+        "word": "cried",
+        "start": 14.82,
+        "end": 15.1
+      },
+      {
+        "word": "se",
+        "start": 15.58,
+        "end": 15.78
+      },
+      {
+        "word": "she",
+        "start": 15.84,
+        "end": 15.96
+      },
+      {
+        "word": "cried",
+        "start": 16.0,
+        "end": 16.24
+      },
+      {
+        "word": "endlessly",
+        "start": 16.3,
+        "end": 16.72
+      },
+      {
+        "word": "ah",
+        "start": 17.54,
+        "end": 17.62
+      },
+      {
+        "word": "leading",
+        "start": 17.68,
+        "end": 17.94
+      },
+      {
+        "word": "up",
+        "start": 18.12,
+        "end": 18.2
+      },
+      {
+        "word": "to",
+        "start": 18.26,
+        "end": 18.44
+      },
+      {
+        "word": "to",
+        "start": 18.58,
+        "end": 18.62
+      },
+      {
+        "word": "that",
+        "start": 18.66,
+        "end": 18.78
+      },
+      {
+        "word": "first",
+        "start": 18.84,
+        "end": 19.04
+      },
+      {
+        "word": "time",
+        "start": 19.08,
+        "end": 19.26
+      },
+      {
+        "word": "she",
+        "start": 19.3,
+        "end": 19.4
+      },
+      {
+        "word": "watched",
+        "start": 19.46,
+        "end": 19.68
+      },
+      {
+        "word": "me",
+        "start": 19.72,
+        "end": 19.78
+      },
+      {
+        "word": "leave",
+        "start": 19.84,
+        "end": 20.0
+      },
+      {
+        "word": "on",
+        "start": 20.06,
+        "end": 20.12
+      },
+      {
+        "word": "the",
+        "start": 20.16,
+        "end": 20.22
+      },
+      {
+        "word": "bus",
+        "start": 20.26,
+        "end": 20.52
+      },
+      {
+        "word": "am",
+        "start": 21.22,
+        "end": 21.34
+      },
+      {
+        "word": "and",
+        "start": 21.84,
+        "end": 21.92
+      },
+      {
+        "word": "that",
+        "start": 21.96,
+        "end": 22.14
+      },
+      {
+        "word": "changed",
+        "start": 22.24,
+        "end": 22.7
+      },
+      {
+        "word": "a",
+        "start": 23.28,
+        "end": 23.38
+      }
+    ]
+  },
+  {
+    "clip_index": 6,
+    "clip_id": "clip_6",
+    "filename": "syndigate_podcasts_860cc11fd6945943813db1466e083fdc_740.0_810.0-sortformer-1.wav",
+    "duration_sec": 22.8,
+    "raw_acoustic_text": "DID THEY HAVE BEEN YOU KNOW I THINK OPEN WITH HIS PEOPLE THAT THEY WANTED TO GET SOMETHING DONE ON THROUGHOUT THIS OFF SEASON SO MY GUESTS WOULD BE GEORG AN LOVE WOULD BE THE NEXT ONE BUT TWO T COULD CERTAINLY HAPPEN FIRST AND THE INTERESTING THING ABOUT TWO HAS THEY'VE BEEN PLANNING FOR TWO AND IF YOU LOOK AT LIKE SOME OF THE THINGS THEY'VE DONE LETTING CHRISTIAN WILKINS WALK CUTTINGS YOUR OWN BAKER CUTTING SAVIEN HOWARD",
+    "acoustic_words": [
+      {
+        "word": "did",
+        "start": 0.4,
+        "end": 0.52
+      },
+      {
+        "word": "they",
+        "start": 0.56,
+        "end": 0.7
+      },
+      {
+        "word": "have",
+        "start": 0.76,
+        "end": 0.98
+      },
+      {
+        "word": "been",
+        "start": 1.06,
+        "end": 1.28
+      },
+      {
+        "word": "you",
+        "start": 1.58,
+        "end": 1.66
+      },
+      {
+        "word": "know",
+        "start": 1.7,
+        "end": 1.82
+      },
+      {
+        "word": "i",
+        "start": 1.88,
+        "end": 1.92
+      },
+      {
+        "word": "think",
+        "start": 1.96,
+        "end": 2.1
+      },
+      {
+        "word": "open",
+        "start": 2.2,
+        "end": 2.44
+      },
+      {
+        "word": "with",
+        "start": 2.5,
+        "end": 2.7
+      },
+      {
+        "word": "his",
+        "start": 2.78,
+        "end": 2.94
+      },
+      {
+        "word": "people",
+        "start": 2.98,
+        "end": 3.24
+      },
+      {
+        "word": "that",
+        "start": 3.28,
+        "end": 3.4
+      },
+      {
+        "word": "they",
+        "start": 3.42,
+        "end": 3.54
+      },
+      {
+        "word": "wanted",
+        "start": 3.58,
+        "end": 3.78
+      },
+      {
+        "word": "to",
+        "start": 3.82,
+        "end": 3.86
+      },
+      {
+        "word": "get",
+        "start": 3.88,
+        "end": 3.98
+      },
+      {
+        "word": "something",
+        "start": 4.04,
+        "end": 4.34
+      },
+      {
+        "word": "done",
+        "start": 4.4,
+        "end": 4.66
+      },
+      {
+        "word": "on",
+        "start": 5.38,
+        "end": 5.48
+      },
+      {
+        "word": "throughout",
+        "start": 5.52,
+        "end": 5.84
+      },
+      {
+        "word": "this",
+        "start": 5.88,
+        "end": 6.04
+      },
+      {
+        "word": "off",
+        "start": 6.14,
+        "end": 6.3
+      },
+      {
+        "word": "season",
+        "start": 6.34,
+        "end": 6.72
+      },
+      {
+        "word": "so",
+        "start": 6.8,
+        "end": 7.06
+      },
+      {
+        "word": "my",
+        "start": 7.68,
+        "end": 7.82
+      },
+      {
+        "word": "guests",
+        "start": 7.88,
+        "end": 8.14
+      },
+      {
+        "word": "would",
+        "start": 8.16,
+        "end": 8.3
+      },
+      {
+        "word": "be",
+        "start": 8.34,
+        "end": 8.44
+      },
+      {
+        "word": "georg",
+        "start": 8.48,
+        "end": 8.7
+      },
+      {
+        "word": "an",
+        "start": 8.74,
+        "end": 8.82
+      },
+      {
+        "word": "love",
+        "start": 8.86,
+        "end": 9.06
+      },
+      {
+        "word": "would",
+        "start": 9.1,
+        "end": 9.24
+      },
+      {
+        "word": "be",
+        "start": 9.28,
+        "end": 9.34
+      },
+      {
+        "word": "the",
+        "start": 9.4,
+        "end": 9.46
+      },
+      {
+        "word": "next",
+        "start": 9.72,
+        "end": 9.96
+      },
+      {
+        "word": "one",
+        "start": 10.22,
+        "end": 10.34
+      },
+      {
+        "word": "but",
+        "start": 10.74,
+        "end": 10.86
+      },
+      {
+        "word": "two",
+        "start": 10.92,
+        "end": 11.04
+      },
+      {
+        "word": "t",
+        "start": 11.12,
+        "end": 11.14
+      },
+      {
+        "word": "could",
+        "start": 11.18,
+        "end": 11.3
+      },
+      {
+        "word": "certainly",
+        "start": 11.32,
+        "end": 11.64
+      },
+      {
+        "word": "happen",
+        "start": 11.68,
+        "end": 11.94
+      },
+      {
+        "word": "first",
+        "start": 12.06,
+        "end": 12.52
+      },
+      {
+        "word": "and",
+        "start": 13.26,
+        "end": 13.34
+      },
+      {
+        "word": "the",
+        "start": 13.36,
+        "end": 13.44
+      },
+      {
+        "word": "interesting",
+        "start": 13.5,
+        "end": 13.82
+      },
+      {
+        "word": "thing",
+        "start": 13.84,
+        "end": 13.94
+      },
+      {
+        "word": "about",
+        "start": 13.98,
+        "end": 14.14
+      },
+      {
+        "word": "two",
+        "start": 14.18,
+        "end": 14.32
+      },
+      {
+        "word": "has",
+        "start": 14.34,
+        "end": 14.44
+      },
+      {
+        "word": "they've",
+        "start": 14.48,
+        "end": 14.66
+      },
+      {
+        "word": "been",
+        "start": 14.68,
+        "end": 14.8
+      },
+      {
+        "word": "planning",
+        "start": 14.84,
+        "end": 15.14
+      },
+      {
+        "word": "for",
+        "start": 15.18,
+        "end": 15.32
+      },
+      {
+        "word": "two",
+        "start": 15.42,
+        "end": 15.66
+      },
+      {
+        "word": "and",
+        "start": 15.74,
+        "end": 15.82
+      },
+      {
+        "word": "if",
+        "start": 15.86,
+        "end": 15.9
+      },
+      {
+        "word": "you",
+        "start": 15.94,
+        "end": 16.04
+      },
+      {
+        "word": "look",
+        "start": 16.08,
+        "end": 16.24
+      },
+      {
+        "word": "at",
+        "start": 16.28,
+        "end": 16.32
+      },
+      {
+        "word": "like",
+        "start": 16.38,
+        "end": 16.52
+      },
+      {
+        "word": "some",
+        "start": 16.56,
+        "end": 16.66
+      },
+      {
+        "word": "of",
+        "start": 16.7,
+        "end": 16.74
+      },
+      {
+        "word": "the",
+        "start": 16.78,
+        "end": 16.84
+      },
+      {
+        "word": "things",
+        "start": 16.88,
+        "end": 17.04
+      },
+      {
+        "word": "they've",
+        "start": 17.06,
+        "end": 17.24
+      },
+      {
+        "word": "done",
+        "start": 17.26,
+        "end": 17.52
+      },
+      {
+        "word": "letting",
+        "start": 17.88,
+        "end": 18.1
+      },
+      {
+        "word": "christian",
+        "start": 18.12,
+        "end": 18.44
+      },
+      {
+        "word": "wilkins",
+        "start": 18.46,
+        "end": 18.8
+      },
+      {
+        "word": "walk",
+        "start": 18.88,
+        "end": 19.22
+      },
+      {
+        "word": "cuttings",
+        "start": 19.84,
+        "end": 20.1
+      },
+      {
+        "word": "your",
+        "start": 20.14,
+        "end": 20.26
+      },
+      {
+        "word": "own",
+        "start": 20.3,
+        "end": 20.4
+      },
+      {
+        "word": "baker",
+        "start": 20.46,
+        "end": 20.86
+      },
+      {
+        "word": "cutting",
+        "start": 21.02,
+        "end": 21.3
+      },
+      {
+        "word": "savien",
+        "start": 21.34,
+        "end": 21.74
+      },
+      {
+        "word": "howard",
+        "start": 21.8,
+        "end": 22.3
+      }
+    ]
+  },
+  {
+    "clip_index": 7,
+    "clip_id": "clip_7",
+    "filename": "syndigate_podcasts_8637895cca045d9c90cc9228e58078f7_1130.0_1390.0-sortformer-25.wav",
+    "duration_sec": 24.16,
+    "raw_acoustic_text": "TO SAY CHAIR PERSON INSTEAD OF CHAIRMAN THE VERY FIRST A WOMAN I WRITE ABOUT ON THE BOOK IS THIS NAME RUTH HALE WHO AM WAS THE PRESIDENT OF TWO LEAGUES AND THIS IS IN THE NINETEENTEENTHS THE REAL HIGH TIME FOR LEAGUES IN AMERICAN CULTURE SHE WAS THE A PRESIDENT OF WHAT'S CALLED THE LUCY STONE LEAGUE WHICH WAS ADVOCATING FOR A WOMAN'S RIGHT TO KEEP HER LAST NAME",
+    "acoustic_words": [
+      {
+        "word": "to",
+        "start": 0.24,
+        "end": 0.42
+      },
+      {
+        "word": "say",
+        "start": 0.56,
+        "end": 0.78
+      },
+      {
+        "word": "chair",
+        "start": 0.9,
+        "end": 1.12
+      },
+      {
+        "word": "person",
+        "start": 1.18,
+        "end": 1.58
+      },
+      {
+        "word": "instead",
+        "start": 1.7,
+        "end": 1.96
+      },
+      {
+        "word": "of",
+        "start": 2.0,
+        "end": 2.04
+      },
+      {
+        "word": "chairman",
+        "start": 2.12,
+        "end": 2.56
+      },
+      {
+        "word": "the",
+        "start": 3.18,
+        "end": 3.28
+      },
+      {
+        "word": "very",
+        "start": 3.36,
+        "end": 3.68
+      },
+      {
+        "word": "first",
+        "start": 3.82,
+        "end": 4.26
+      },
+      {
+        "word": "a",
+        "start": 4.82,
+        "end": 4.9
+      },
+      {
+        "word": "woman",
+        "start": 5.22,
+        "end": 5.44
+      },
+      {
+        "word": "i",
+        "start": 5.48,
+        "end": 5.54
+      },
+      {
+        "word": "write",
+        "start": 5.56,
+        "end": 5.74
+      },
+      {
+        "word": "about",
+        "start": 5.76,
+        "end": 5.92
+      },
+      {
+        "word": "on",
+        "start": 5.98,
+        "end": 6.02
+      },
+      {
+        "word": "the",
+        "start": 6.08,
+        "end": 6.16
+      },
+      {
+        "word": "book",
+        "start": 6.2,
+        "end": 6.36
+      },
+      {
+        "word": "is",
+        "start": 6.42,
+        "end": 6.48
+      },
+      {
+        "word": "this",
+        "start": 6.52,
+        "end": 6.64
+      },
+      {
+        "word": "name",
+        "start": 6.68,
+        "end": 6.84
+      },
+      {
+        "word": "ruth",
+        "start": 6.92,
+        "end": 7.14
+      },
+      {
+        "word": "hale",
+        "start": 7.2,
+        "end": 7.5
+      },
+      {
+        "word": "who",
+        "start": 8.14,
+        "end": 8.38
+      },
+      {
+        "word": "am",
+        "start": 8.92,
+        "end": 9.06
+      },
+      {
+        "word": "was",
+        "start": 9.24,
+        "end": 9.36
+      },
+      {
+        "word": "the",
+        "start": 9.42,
+        "end": 9.48
+      },
+      {
+        "word": "president",
+        "start": 9.52,
+        "end": 9.84
+      },
+      {
+        "word": "of",
+        "start": 9.88,
+        "end": 9.92
+      },
+      {
+        "word": "two",
+        "start": 10.0,
+        "end": 10.2
+      },
+      {
+        "word": "leagues",
+        "start": 10.3,
+        "end": 10.62
+      },
+      {
+        "word": "and",
+        "start": 10.66,
+        "end": 10.72
+      },
+      {
+        "word": "this",
+        "start": 10.74,
+        "end": 10.84
+      },
+      {
+        "word": "is",
+        "start": 10.9,
+        "end": 10.96
+      },
+      {
+        "word": "in",
+        "start": 11.0,
+        "end": 11.04
+      },
+      {
+        "word": "the",
+        "start": 11.1,
+        "end": 11.16
+      },
+      {
+        "word": "nineteenteenths",
+        "start": 11.2,
+        "end": 11.9
+      },
+      {
+        "word": "the",
+        "start": 11.94,
+        "end": 12.04
+      },
+      {
+        "word": "real",
+        "start": 12.06,
+        "end": 12.24
+      },
+      {
+        "word": "high",
+        "start": 12.56,
+        "end": 12.78
+      },
+      {
+        "word": "time",
+        "start": 12.84,
+        "end": 13.06
+      },
+      {
+        "word": "for",
+        "start": 13.12,
+        "end": 13.22
+      },
+      {
+        "word": "leagues",
+        "start": 13.32,
+        "end": 13.68
+      },
+      {
+        "word": "in",
+        "start": 14.24,
+        "end": 14.3
+      },
+      {
+        "word": "american",
+        "start": 14.34,
+        "end": 14.66
+      },
+      {
+        "word": "culture",
+        "start": 14.7,
+        "end": 15.0
+      },
+      {
+        "word": "she",
+        "start": 15.6,
+        "end": 15.76
+      },
+      {
+        "word": "was",
+        "start": 15.8,
+        "end": 15.96
+      },
+      {
+        "word": "the",
+        "start": 16.06,
+        "end": 16.3
+      },
+      {
+        "word": "a",
+        "start": 16.7,
+        "end": 16.78
+      },
+      {
+        "word": "president",
+        "start": 17.36,
+        "end": 17.8
+      },
+      {
+        "word": "of",
+        "start": 18.0,
+        "end": 18.08
+      },
+      {
+        "word": "what's",
+        "start": 18.28,
+        "end": 18.44
+      },
+      {
+        "word": "called",
+        "start": 18.46,
+        "end": 18.64
+      },
+      {
+        "word": "the",
+        "start": 18.74,
+        "end": 18.9
+      },
+      {
+        "word": "lucy",
+        "start": 19.38,
+        "end": 19.7
+      },
+      {
+        "word": "stone",
+        "start": 19.78,
+        "end": 20.12
+      },
+      {
+        "word": "league",
+        "start": 20.14,
+        "end": 20.42
+      },
+      {
+        "word": "which",
+        "start": 20.88,
+        "end": 21.04
+      },
+      {
+        "word": "was",
+        "start": 21.16,
+        "end": 21.34
+      },
+      {
+        "word": "advocating",
+        "start": 21.56,
+        "end": 22.04
+      },
+      {
+        "word": "for",
+        "start": 22.08,
+        "end": 22.22
+      },
+      {
+        "word": "a",
+        "start": 22.28,
+        "end": 22.3
+      },
+      {
+        "word": "woman's",
+        "start": 22.34,
+        "end": 22.62
+      },
+      {
+        "word": "right",
+        "start": 22.66,
+        "end": 22.82
+      },
+      {
+        "word": "to",
+        "start": 22.86,
+        "end": 22.92
+      },
+      {
+        "word": "keep",
+        "start": 22.96,
+        "end": 23.12
+      },
+      {
+        "word": "her",
+        "start": 23.18,
+        "end": 23.26
+      },
+      {
+        "word": "last",
+        "start": 23.32,
+        "end": 23.56
+      },
+      {
+        "word": "name",
+        "start": 23.64,
+        "end": 23.88
+      }
+    ]
+  },
+  {
+    "clip_index": 8,
+    "clip_id": "clip_8",
+    "filename": "syndigate_podcasts_8637895cca045d9c90cc9228e58078f7_2250.0_2320.0-sortformer-2.wav",
+    "duration_sec": 29.12,
+    "raw_acoustic_text": "IA I SHOULD SAY YOU KNOW THERE'S THIS INTERESTING GENDER HISTORY OF THE CROSS WORD RIGHT IT WAS LARGELY WOMEN'S WORK AND NOW AS LARGELY I MEAN ON WON A VERY FEW WOMEN WHO WRITE CROSS WORD PUZZLES BUT THIS IS A HISTORY THAT'S PRETTY WHITE ALL THE WAY DOWN A AND THAT THATS JUST A INTERESTING QUESTION FOR ME AND I I'VE HAD SOME WONDERFUL CONVERSATIONS WITH PORTIA AND ALSO A WOMAN NAMED SOLI SINCER A ABOUT WHY THAT IS ABOUT WHY A CONSTRUCTORS TEN TO BE WHITE EM",
+    "acoustic_words": [
+      {
+        "word": "ia",
+        "start": 0.02,
+        "end": 0.34
+      },
+      {
+        "word": "i",
+        "start": 0.84,
+        "end": 0.9
+      },
+      {
+        "word": "should",
+        "start": 0.94,
+        "end": 1.14
+      },
+      {
+        "word": "say",
+        "start": 1.18,
+        "end": 1.3
+      },
+      {
+        "word": "you",
+        "start": 1.66,
+        "end": 1.74
+      },
+      {
+        "word": "know",
+        "start": 1.78,
+        "end": 1.94
+      },
+      {
+        "word": "there's",
+        "start": 2.54,
+        "end": 2.74
+      },
+      {
+        "word": "this",
+        "start": 2.76,
+        "end": 2.86
+      },
+      {
+        "word": "interesting",
+        "start": 2.98,
+        "end": 3.38
+      },
+      {
+        "word": "gender",
+        "start": 3.44,
+        "end": 3.74
+      },
+      {
+        "word": "history",
+        "start": 3.78,
+        "end": 4.06
+      },
+      {
+        "word": "of",
+        "start": 4.08,
+        "end": 4.12
+      },
+      {
+        "word": "the",
+        "start": 4.18,
+        "end": 4.24
+      },
+      {
+        "word": "cross",
+        "start": 4.28,
+        "end": 4.52
+      },
+      {
+        "word": "word",
+        "start": 4.54,
+        "end": 4.74
+      },
+      {
+        "word": "right",
+        "start": 4.8,
+        "end": 5.0
+      },
+      {
+        "word": "it",
+        "start": 5.06,
+        "end": 5.1
+      },
+      {
+        "word": "was",
+        "start": 5.14,
+        "end": 5.24
+      },
+      {
+        "word": "largely",
+        "start": 5.42,
+        "end": 5.88
+      },
+      {
+        "word": "women's",
+        "start": 5.92,
+        "end": 6.24
+      },
+      {
+        "word": "work",
+        "start": 6.3,
+        "end": 6.54
+      },
+      {
+        "word": "and",
+        "start": 6.7,
+        "end": 6.78
+      },
+      {
+        "word": "now",
+        "start": 6.84,
+        "end": 7.04
+      },
+      {
+        "word": "as",
+        "start": 7.12,
+        "end": 7.2
+      },
+      {
+        "word": "largely",
+        "start": 7.28,
+        "end": 7.78
+      },
+      {
+        "word": "i",
+        "start": 7.96,
+        "end": 8.06
+      },
+      {
+        "word": "mean",
+        "start": 8.12,
+        "end": 8.26
+      },
+      {
+        "word": "on",
+        "start": 8.32,
+        "end": 8.42
+      },
+      {
+        "word": "won",
+        "start": 8.5,
+        "end": 8.64
+      },
+      {
+        "word": "a",
+        "start": 8.68,
+        "end": 8.7
+      },
+      {
+        "word": "very",
+        "start": 8.74,
+        "end": 8.9
+      },
+      {
+        "word": "few",
+        "start": 8.96,
+        "end": 9.08
+      },
+      {
+        "word": "women",
+        "start": 9.14,
+        "end": 9.36
+      },
+      {
+        "word": "who",
+        "start": 9.4,
+        "end": 9.5
+      },
+      {
+        "word": "write",
+        "start": 9.54,
+        "end": 9.68
+      },
+      {
+        "word": "cross",
+        "start": 9.74,
+        "end": 9.96
+      },
+      {
+        "word": "word",
+        "start": 9.98,
+        "end": 10.12
+      },
+      {
+        "word": "puzzles",
+        "start": 10.14,
+        "end": 10.44
+      },
+      {
+        "word": "but",
+        "start": 10.88,
+        "end": 10.98
+      },
+      {
+        "word": "this",
+        "start": 11.02,
+        "end": 11.16
+      },
+      {
+        "word": "is",
+        "start": 11.22,
+        "end": 11.28
+      },
+      {
+        "word": "a",
+        "start": 11.34,
+        "end": 11.36
+      },
+      {
+        "word": "history",
+        "start": 11.42,
+        "end": 11.68
+      },
+      {
+        "word": "that's",
+        "start": 11.72,
+        "end": 11.88
+      },
+      {
+        "word": "pretty",
+        "start": 11.94,
+        "end": 12.18
+      },
+      {
+        "word": "white",
+        "start": 12.24,
+        "end": 12.46
+      },
+      {
+        "word": "all",
+        "start": 12.6,
+        "end": 12.72
+      },
+      {
+        "word": "the",
+        "start": 12.78,
+        "end": 12.84
+      },
+      {
+        "word": "way",
+        "start": 12.9,
+        "end": 13.0
+      },
+      {
+        "word": "down",
+        "start": 13.06,
+        "end": 13.36
+      },
+      {
+        "word": "a",
+        "start": 14.24,
+        "end": 14.34
+      },
+      {
+        "word": "and",
+        "start": 14.44,
+        "end": 14.52
+      },
+      {
+        "word": "that",
+        "start": 14.58,
+        "end": 14.76
+      },
+      {
+        "word": "thats",
+        "start": 14.82,
+        "end": 14.98
+      },
+      {
+        "word": "just",
+        "start": 15.02,
+        "end": 15.28
+      },
+      {
+        "word": "a",
+        "start": 15.3,
+        "end": 15.32
+      },
+      {
+        "word": "interesting",
+        "start": 15.48,
+        "end": 15.84
+      },
+      {
+        "word": "question",
+        "start": 15.88,
+        "end": 16.3
+      },
+      {
+        "word": "for",
+        "start": 16.38,
+        "end": 16.48
+      },
+      {
+        "word": "me",
+        "start": 16.52,
+        "end": 16.66
+      },
+      {
+        "word": "and",
+        "start": 16.68,
+        "end": 16.76
+      },
+      {
+        "word": "i",
+        "start": 16.82,
+        "end": 16.84
+      },
+      {
+        "word": "i've",
+        "start": 17.06,
+        "end": 17.24
+      },
+      {
+        "word": "had",
+        "start": 17.3,
+        "end": 17.42
+      },
+      {
+        "word": "some",
+        "start": 17.48,
+        "end": 17.62
+      },
+      {
+        "word": "wonderful",
+        "start": 17.72,
+        "end": 18.14
+      },
+      {
+        "word": "conversations",
+        "start": 18.2,
+        "end": 18.8
+      },
+      {
+        "word": "with",
+        "start": 18.84,
+        "end": 18.96
+      },
+      {
+        "word": "portia",
+        "start": 19.02,
+        "end": 19.44
+      },
+      {
+        "word": "and",
+        "start": 19.9,
+        "end": 19.98
+      },
+      {
+        "word": "also",
+        "start": 20.02,
+        "end": 20.2
+      },
+      {
+        "word": "a",
+        "start": 20.26,
+        "end": 20.28
+      },
+      {
+        "word": "woman",
+        "start": 20.32,
+        "end": 20.58
+      },
+      {
+        "word": "named",
+        "start": 20.62,
+        "end": 20.82
+      },
+      {
+        "word": "soli",
+        "start": 20.9,
+        "end": 21.24
+      },
+      {
+        "word": "sincer",
+        "start": 21.28,
+        "end": 21.88
+      },
+      {
+        "word": "a",
+        "start": 22.8,
+        "end": 22.88
+      },
+      {
+        "word": "about",
+        "start": 23.06,
+        "end": 23.46
+      },
+      {
+        "word": "why",
+        "start": 23.92,
+        "end": 24.08
+      },
+      {
+        "word": "that",
+        "start": 24.14,
+        "end": 24.28
+      },
+      {
+        "word": "is",
+        "start": 24.4,
+        "end": 24.54
+      },
+      {
+        "word": "about",
+        "start": 24.66,
+        "end": 24.84
+      },
+      {
+        "word": "why",
+        "start": 24.92,
+        "end": 25.26
+      },
+      {
+        "word": "a",
+        "start": 25.7,
+        "end": 25.8
+      },
+      {
+        "word": "constructors",
+        "start": 26.3,
+        "end": 26.88
+      },
+      {
+        "word": "ten",
+        "start": 26.96,
+        "end": 27.24
+      },
+      {
+        "word": "to",
+        "start": 27.3,
+        "end": 27.38
+      },
+      {
+        "word": "be",
+        "start": 27.42,
+        "end": 27.54
+      },
+      {
+        "word": "white",
+        "start": 27.6,
+        "end": 27.86
+      },
+      {
+        "word": "em",
+        "start": 28.74,
+        "end": 28.86
+      }
+    ]
+  },
+  {
+    "clip_index": 9,
+    "clip_id": "clip_9",
+    "filename": "syndigate_podcasts_863aeaa3833956358847e3be43a887c6_3020.0_3320.0-sortformer-27.wav",
+    "duration_sec": 20.88,
+    "raw_acoustic_text": "BUDSA BUT LEGSAT IF YOU TRADE BACK AND GET THIS GUY CAUSE HE'S STILL YOUNG HE STILL HAS SOME ROOM TO TO GROW IM BUT THERE'S A LOT OF GAMES WHERE YOU LOOK AND TEAMS ARE DEAFLY KEYING IN ON HIM AND WE HAVE TO STOP THIS GUY BECAUSE HE'S THE ONE GUTIC AND CAN WRECK OUR GAME IM BELEG SAID THERE'S JUST A FEW THINGS IN HIS GAME THAT I'M JUST NOT",
+    "acoustic_words": [
+      {
+        "word": "budsa",
+        "start": 0.06,
+        "end": 0.62
+      },
+      {
+        "word": "but",
+        "start": 0.66,
+        "end": 0.8
+      },
+      {
+        "word": "legsat",
+        "start": 1.18,
+        "end": 1.46
+      },
+      {
+        "word": "if",
+        "start": 1.5,
+        "end": 1.54
+      },
+      {
+        "word": "you",
+        "start": 1.58,
+        "end": 1.7
+      },
+      {
+        "word": "trade",
+        "start": 1.72,
+        "end": 1.94
+      },
+      {
+        "word": "back",
+        "start": 2.0,
+        "end": 2.22
+      },
+      {
+        "word": "and",
+        "start": 2.28,
+        "end": 2.36
+      },
+      {
+        "word": "get",
+        "start": 2.4,
+        "end": 2.5
+      },
+      {
+        "word": "this",
+        "start": 2.54,
+        "end": 2.68
+      },
+      {
+        "word": "guy",
+        "start": 2.72,
+        "end": 2.9
+      },
+      {
+        "word": "cause",
+        "start": 2.92,
+        "end": 3.04
+      },
+      {
+        "word": "he's",
+        "start": 3.08,
+        "end": 3.16
+      },
+      {
+        "word": "still",
+        "start": 3.2,
+        "end": 3.4
+      },
+      {
+        "word": "young",
+        "start": 3.46,
+        "end": 3.68
+      },
+      {
+        "word": "he",
+        "start": 4.28,
+        "end": 4.36
+      },
+      {
+        "word": "still",
+        "start": 4.4,
+        "end": 4.58
+      },
+      {
+        "word": "has",
+        "start": 4.62,
+        "end": 4.74
+      },
+      {
+        "word": "some",
+        "start": 4.78,
+        "end": 4.92
+      },
+      {
+        "word": "room",
+        "start": 4.98,
+        "end": 5.16
+      },
+      {
+        "word": "to",
+        "start": 5.2,
+        "end": 5.38
+      },
+      {
+        "word": "to",
+        "start": 5.44,
+        "end": 5.52
+      },
+      {
+        "word": "grow",
+        "start": 5.58,
+        "end": 5.86
+      },
+      {
+        "word": "im",
+        "start": 6.6,
+        "end": 6.76
+      },
+      {
+        "word": "but",
+        "start": 7.24,
+        "end": 7.4
+      },
+      {
+        "word": "there's",
+        "start": 8.24,
+        "end": 8.44
+      },
+      {
+        "word": "a",
+        "start": 8.48,
+        "end": 8.5
+      },
+      {
+        "word": "lot",
+        "start": 8.56,
+        "end": 8.7
+      },
+      {
+        "word": "of",
+        "start": 8.74,
+        "end": 8.78
+      },
+      {
+        "word": "games",
+        "start": 8.82,
+        "end": 9.06
+      },
+      {
+        "word": "where",
+        "start": 9.08,
+        "end": 9.22
+      },
+      {
+        "word": "you",
+        "start": 9.24,
+        "end": 9.36
+      },
+      {
+        "word": "look",
+        "start": 9.4,
+        "end": 9.6
+      },
+      {
+        "word": "and",
+        "start": 9.64,
+        "end": 9.72
+      },
+      {
+        "word": "teams",
+        "start": 9.98,
+        "end": 10.22
+      },
+      {
+        "word": "are",
+        "start": 10.28,
+        "end": 10.38
+      },
+      {
+        "word": "deafly",
+        "start": 10.56,
+        "end": 10.94
+      },
+      {
+        "word": "keying",
+        "start": 11.02,
+        "end": 11.32
+      },
+      {
+        "word": "in",
+        "start": 11.4,
+        "end": 11.48
+      },
+      {
+        "word": "on",
+        "start": 11.58,
+        "end": 11.64
+      },
+      {
+        "word": "him",
+        "start": 11.68,
+        "end": 11.88
+      },
+      {
+        "word": "and",
+        "start": 11.98,
+        "end": 12.08
+      },
+      {
+        "word": "we",
+        "start": 12.12,
+        "end": 12.32
+      },
+      {
+        "word": "have",
+        "start": 12.4,
+        "end": 12.56
+      },
+      {
+        "word": "to",
+        "start": 12.6,
+        "end": 12.66
+      },
+      {
+        "word": "stop",
+        "start": 12.7,
+        "end": 12.92
+      },
+      {
+        "word": "this",
+        "start": 12.96,
+        "end": 13.1
+      },
+      {
+        "word": "guy",
+        "start": 13.14,
+        "end": 13.36
+      },
+      {
+        "word": "because",
+        "start": 13.42,
+        "end": 13.64
+      },
+      {
+        "word": "he's",
+        "start": 13.7,
+        "end": 13.86
+      },
+      {
+        "word": "the",
+        "start": 13.92,
+        "end": 14.0
+      },
+      {
+        "word": "one",
+        "start": 14.14,
+        "end": 14.24
+      },
+      {
+        "word": "gutic",
+        "start": 14.3,
+        "end": 14.62
+      },
+      {
+        "word": "and",
+        "start": 14.66,
+        "end": 14.74
+      },
+      {
+        "word": "can",
+        "start": 15.1,
+        "end": 15.24
+      },
+      {
+        "word": "wreck",
+        "start": 15.36,
+        "end": 15.56
+      },
+      {
+        "word": "our",
+        "start": 15.62,
+        "end": 15.72
+      },
+      {
+        "word": "game",
+        "start": 15.78,
+        "end": 16.02
+      },
+      {
+        "word": "im",
+        "start": 16.78,
+        "end": 16.92
+      },
+      {
+        "word": "beleg",
+        "start": 17.4,
+        "end": 17.64
+      },
+      {
+        "word": "said",
+        "start": 17.68,
+        "end": 17.82
+      },
+      {
+        "word": "there's",
+        "start": 17.96,
+        "end": 18.14
+      },
+      {
+        "word": "just",
+        "start": 18.18,
+        "end": 18.32
+      },
+      {
+        "word": "a",
+        "start": 18.52,
+        "end": 18.54
+      },
+      {
+        "word": "few",
+        "start": 18.6,
+        "end": 18.76
+      },
+      {
+        "word": "things",
+        "start": 18.82,
+        "end": 19.04
+      },
+      {
+        "word": "in",
+        "start": 19.1,
+        "end": 19.16
+      },
+      {
+        "word": "his",
+        "start": 19.2,
+        "end": 19.32
+      },
+      {
+        "word": "game",
+        "start": 19.38,
+        "end": 19.6
+      },
+      {
+        "word": "that",
+        "start": 19.66,
+        "end": 19.78
+      },
+      {
+        "word": "i'm",
+        "start": 19.8,
+        "end": 19.92
+      },
+      {
+        "word": "just",
+        "start": 19.96,
+        "end": 20.16
+      },
+      {
+        "word": "not",
+        "start": 20.2,
+        "end": 20.42
+      }
+    ]
+  },
+  {
+    "clip_index": 10,
+    "clip_id": "clip_10",
+    "filename": "syndigate_podcasts_86f4c7a7102c51c5bd2f5f3b66920bd8_300.0_600.0-sortformer-14.wav",
+    "duration_sec": 28.16,
+    "raw_acoustic_text": "BEFORE THE BAND THE SHIFT LIKE IF YOU HAVE THREE DECENDERS ON THE RIGHT SIDE OF SECOND BASE THERE WAS REALLY NO INSENNEVEOR OR NEED TO TO MAKE A DIVING PLAY FOR ANYBODY OVER THERE BECAUSE YOU KNOW YOU'R CROWDED THAT THE GROUNDERS BROUTEN BE SCOOPED UP BY JUST OF TAKING A COUPLE O STEPS SO YOU WANT TO BE ABLE TO GET THINGS LIKE THE TRIPLE AND SCORING FROM FOREST ON A DOUBLE AND AN DIVING PLAYS BACK INTO THE GAME THAT THEY'VE THEY'VE NOW MADE SOME TWIGS THAT WILL HELP WOT THAT",
+    "acoustic_words": [
+      {
+        "word": "before",
+        "start": 0.06,
+        "end": 0.32
+      },
+      {
+        "word": "the",
+        "start": 0.38,
+        "end": 0.46
+      },
+      {
+        "word": "band",
+        "start": 0.52,
+        "end": 0.7
+      },
+      {
+        "word": "the",
+        "start": 0.78,
+        "end": 0.84
+      },
+      {
+        "word": "shift",
+        "start": 0.9,
+        "end": 1.24
+      },
+      {
+        "word": "like",
+        "start": 1.44,
+        "end": 1.6
+      },
+      {
+        "word": "if",
+        "start": 2.18,
+        "end": 2.24
+      },
+      {
+        "word": "you",
+        "start": 2.28,
+        "end": 2.4
+      },
+      {
+        "word": "have",
+        "start": 2.42,
+        "end": 2.52
+      },
+      {
+        "word": "three",
+        "start": 2.64,
+        "end": 2.92
+      },
+      {
+        "word": "decenders",
+        "start": 3.32,
+        "end": 3.78
+      },
+      {
+        "word": "on",
+        "start": 3.84,
+        "end": 3.88
+      },
+      {
+        "word": "the",
+        "start": 3.92,
+        "end": 3.98
+      },
+      {
+        "word": "right",
+        "start": 4.04,
+        "end": 4.2
+      },
+      {
+        "word": "side",
+        "start": 4.24,
+        "end": 4.4
+      },
+      {
+        "word": "of",
+        "start": 4.44,
+        "end": 4.48
+      },
+      {
+        "word": "second",
+        "start": 4.54,
+        "end": 4.8
+      },
+      {
+        "word": "base",
+        "start": 4.84,
+        "end": 5.16
+      },
+      {
+        "word": "there",
+        "start": 5.7,
+        "end": 5.82
+      },
+      {
+        "word": "was",
+        "start": 5.84,
+        "end": 5.92
+      },
+      {
+        "word": "really",
+        "start": 5.94,
+        "end": 6.1
+      },
+      {
+        "word": "no",
+        "start": 6.16,
+        "end": 6.26
+      },
+      {
+        "word": "insenneveor",
+        "start": 6.58,
+        "end": 7.32
+      },
+      {
+        "word": "or",
+        "start": 7.56,
+        "end": 7.68
+      },
+      {
+        "word": "need",
+        "start": 7.8,
+        "end": 8.16
+      },
+      {
+        "word": "to",
+        "start": 8.22,
+        "end": 8.44
+      },
+      {
+        "word": "to",
+        "start": 8.54,
+        "end": 8.62
+      },
+      {
+        "word": "make",
+        "start": 8.68,
+        "end": 8.84
+      },
+      {
+        "word": "a",
+        "start": 8.9,
+        "end": 8.92
+      },
+      {
+        "word": "diving",
+        "start": 9.0,
+        "end": 9.44
+      },
+      {
+        "word": "play",
+        "start": 9.54,
+        "end": 9.84
+      },
+      {
+        "word": "for",
+        "start": 9.9,
+        "end": 10.02
+      },
+      {
+        "word": "anybody",
+        "start": 10.1,
+        "end": 10.38
+      },
+      {
+        "word": "over",
+        "start": 10.44,
+        "end": 10.56
+      },
+      {
+        "word": "there",
+        "start": 10.6,
+        "end": 10.74
+      },
+      {
+        "word": "because",
+        "start": 10.8,
+        "end": 11.02
+      },
+      {
+        "word": "you",
+        "start": 11.44,
+        "end": 11.52
+      },
+      {
+        "word": "know",
+        "start": 11.56,
+        "end": 11.66
+      },
+      {
+        "word": "you'r",
+        "start": 11.7,
+        "end": 11.86
+      },
+      {
+        "word": "crowded",
+        "start": 11.96,
+        "end": 12.28
+      },
+      {
+        "word": "that",
+        "start": 12.32,
+        "end": 12.44
+      },
+      {
+        "word": "the",
+        "start": 12.58,
+        "end": 12.66
+      },
+      {
+        "word": "grounders",
+        "start": 12.7,
+        "end": 13.06
+      },
+      {
+        "word": "brouten",
+        "start": 13.1,
+        "end": 13.42
+      },
+      {
+        "word": "be",
+        "start": 13.46,
+        "end": 13.54
+      },
+      {
+        "word": "scooped",
+        "start": 13.62,
+        "end": 13.98
+      },
+      {
+        "word": "up",
+        "start": 14.04,
+        "end": 14.1
+      },
+      {
+        "word": "by",
+        "start": 14.16,
+        "end": 14.26
+      },
+      {
+        "word": "just",
+        "start": 14.3,
+        "end": 14.46
+      },
+      {
+        "word": "of",
+        "start": 14.52,
+        "end": 14.56
+      },
+      {
+        "word": "taking",
+        "start": 14.82,
+        "end": 15.06
+      },
+      {
+        "word": "a",
+        "start": 15.1,
+        "end": 15.12
+      },
+      {
+        "word": "couple",
+        "start": 15.16,
+        "end": 15.36
+      },
+      {
+        "word": "o",
+        "start": 15.38,
+        "end": 15.4
+      },
+      {
+        "word": "steps",
+        "start": 15.46,
+        "end": 15.78
+      },
+      {
+        "word": "so",
+        "start": 15.88,
+        "end": 16.06
+      },
+      {
+        "word": "you",
+        "start": 16.96,
+        "end": 17.1
+      },
+      {
+        "word": "want",
+        "start": 17.14,
+        "end": 17.32
+      },
+      {
+        "word": "to",
+        "start": 17.34,
+        "end": 17.42
+      },
+      {
+        "word": "be",
+        "start": 17.44,
+        "end": 17.52
+      },
+      {
+        "word": "able",
+        "start": 17.56,
+        "end": 17.72
+      },
+      {
+        "word": "to",
+        "start": 17.76,
+        "end": 17.8
+      },
+      {
+        "word": "get",
+        "start": 17.86,
+        "end": 18.04
+      },
+      {
+        "word": "things",
+        "start": 18.66,
+        "end": 18.9
+      },
+      {
+        "word": "like",
+        "start": 18.96,
+        "end": 19.1
+      },
+      {
+        "word": "the",
+        "start": 19.14,
+        "end": 19.22
+      },
+      {
+        "word": "triple",
+        "start": 19.32,
+        "end": 19.78
+      },
+      {
+        "word": "and",
+        "start": 20.08,
+        "end": 20.18
+      },
+      {
+        "word": "scoring",
+        "start": 20.38,
+        "end": 20.72
+      },
+      {
+        "word": "from",
+        "start": 20.76,
+        "end": 20.88
+      },
+      {
+        "word": "forest",
+        "start": 21.0,
+        "end": 21.38
+      },
+      {
+        "word": "on",
+        "start": 21.46,
+        "end": 21.52
+      },
+      {
+        "word": "a",
+        "start": 21.58,
+        "end": 21.6
+      },
+      {
+        "word": "double",
+        "start": 21.68,
+        "end": 22.12
+      },
+      {
+        "word": "and",
+        "start": 22.3,
+        "end": 22.4
+      },
+      {
+        "word": "an",
+        "start": 22.64,
+        "end": 22.76
+      },
+      {
+        "word": "diving",
+        "start": 23.12,
+        "end": 23.46
+      },
+      {
+        "word": "plays",
+        "start": 23.54,
+        "end": 23.92
+      },
+      {
+        "word": "back",
+        "start": 24.04,
+        "end": 24.24
+      },
+      {
+        "word": "into",
+        "start": 24.28,
+        "end": 24.42
+      },
+      {
+        "word": "the",
+        "start": 24.46,
+        "end": 24.52
+      },
+      {
+        "word": "game",
+        "start": 24.58,
+        "end": 24.84
+      },
+      {
+        "word": "that",
+        "start": 24.9,
+        "end": 25.06
+      },
+      {
+        "word": "they've",
+        "start": 25.12,
+        "end": 25.32
+      },
+      {
+        "word": "they've",
+        "start": 25.56,
+        "end": 25.74
+      },
+      {
+        "word": "now",
+        "start": 26.06,
+        "end": 26.26
+      },
+      {
+        "word": "made",
+        "start": 26.34,
+        "end": 26.54
+      },
+      {
+        "word": "some",
+        "start": 26.6,
+        "end": 26.74
+      },
+      {
+        "word": "twigs",
+        "start": 26.78,
+        "end": 27.08
+      },
+      {
+        "word": "that",
+        "start": 27.12,
+        "end": 27.22
+      },
+      {
+        "word": "will",
+        "start": 27.26,
+        "end": 27.4
+      },
+      {
+        "word": "help",
+        "start": 27.44,
+        "end": 27.6
+      },
+      {
+        "word": "wot",
+        "start": 27.64,
+        "end": 27.76
+      },
+      {
+        "word": "that",
+        "start": 27.8,
+        "end": 28.0
+      }
+    ]
+  },
+  {
+    "clip_index": 11,
+    "clip_id": "clip_11",
+    "filename": "syndigate_podcasts_8718c6fa16375bce8bd1c65d79e36440_40.0_340.0-sortformer-12.wav",
+    "duration_sec": 22.64,
+    "raw_acoustic_text": "THAT'S A GOOD NOBLE CAUSE FOR SHORE WE DON'T WANT THAT BUT OFTEN THIS DOING IT SO SLOW IN A FEAR OF RATCHETING UP I THINK IT'S ACTUALLY CAUSED THINGS TO RATCH IT UP MORAN AS YOU SAID THAA WERE NOW A WELL OVER YEAR AND A HALF INTO THIS AND A NOT A LOT OF GREAT END IN SIGHT ANYTHING YOURE SEEING ON THE HORIZON THAT MIGHT SHIFT THAT OR CHANGE THAT THE DYNAMIC AS IT RELATES TO RUSSIAN THEN WE'LL MOVE ON TO CHINA",
+    "acoustic_words": [
+      {
+        "word": "that's",
+        "start": 0.14,
+        "end": 0.3
+      },
+      {
+        "word": "a",
+        "start": 0.32,
+        "end": 0.36
+      },
+      {
+        "word": "good",
+        "start": 0.38,
+        "end": 0.54
+      },
+      {
+        "word": "noble",
+        "start": 0.7,
+        "end": 0.92
+      },
+      {
+        "word": "cause",
+        "start": 0.94,
+        "end": 1.22
+      },
+      {
+        "word": "for",
+        "start": 1.26,
+        "end": 1.36
+      },
+      {
+        "word": "shore",
+        "start": 1.42,
+        "end": 1.6
+      },
+      {
+        "word": "we",
+        "start": 1.7,
+        "end": 1.74
+      },
+      {
+        "word": "don't",
+        "start": 1.78,
+        "end": 1.9
+      },
+      {
+        "word": "want",
+        "start": 1.92,
+        "end": 2.04
+      },
+      {
+        "word": "that",
+        "start": 2.08,
+        "end": 2.24
+      },
+      {
+        "word": "but",
+        "start": 3.1,
+        "end": 3.22
+      },
+      {
+        "word": "often",
+        "start": 3.3,
+        "end": 3.56
+      },
+      {
+        "word": "this",
+        "start": 3.58,
+        "end": 3.72
+      },
+      {
+        "word": "doing",
+        "start": 3.76,
+        "end": 3.98
+      },
+      {
+        "word": "it",
+        "start": 4.06,
+        "end": 4.12
+      },
+      {
+        "word": "so",
+        "start": 4.24,
+        "end": 4.42
+      },
+      {
+        "word": "slow",
+        "start": 4.52,
+        "end": 4.86
+      },
+      {
+        "word": "in",
+        "start": 5.1,
+        "end": 5.18
+      },
+      {
+        "word": "a",
+        "start": 5.26,
+        "end": 5.32
+      },
+      {
+        "word": "fear",
+        "start": 5.5,
+        "end": 5.8
+      },
+      {
+        "word": "of",
+        "start": 5.9,
+        "end": 5.96
+      },
+      {
+        "word": "ratcheting",
+        "start": 6.14,
+        "end": 6.62
+      },
+      {
+        "word": "up",
+        "start": 6.88,
+        "end": 6.94
+      },
+      {
+        "word": "i",
+        "start": 7.66,
+        "end": 7.7
+      },
+      {
+        "word": "think",
+        "start": 7.74,
+        "end": 7.84
+      },
+      {
+        "word": "it's",
+        "start": 7.88,
+        "end": 7.98
+      },
+      {
+        "word": "actually",
+        "start": 8.0,
+        "end": 8.2
+      },
+      {
+        "word": "caused",
+        "start": 8.26,
+        "end": 8.54
+      },
+      {
+        "word": "things",
+        "start": 8.7,
+        "end": 8.92
+      },
+      {
+        "word": "to",
+        "start": 8.96,
+        "end": 9.06
+      },
+      {
+        "word": "ratch",
+        "start": 9.46,
+        "end": 9.68
+      },
+      {
+        "word": "it",
+        "start": 9.72,
+        "end": 9.76
+      },
+      {
+        "word": "up",
+        "start": 9.84,
+        "end": 9.9
+      },
+      {
+        "word": "moran",
+        "start": 9.98,
+        "end": 10.34
+      },
+      {
+        "word": "as",
+        "start": 10.42,
+        "end": 10.48
+      },
+      {
+        "word": "you",
+        "start": 10.52,
+        "end": 10.66
+      },
+      {
+        "word": "said",
+        "start": 10.7,
+        "end": 10.92
+      },
+      {
+        "word": "thaa",
+        "start": 11.04,
+        "end": 11.62
+      },
+      {
+        "word": "were",
+        "start": 11.68,
+        "end": 11.8
+      },
+      {
+        "word": "now",
+        "start": 11.84,
+        "end": 12.04
+      },
+      {
+        "word": "a",
+        "start": 12.18,
+        "end": 12.2
+      },
+      {
+        "word": "well",
+        "start": 12.28,
+        "end": 12.42
+      },
+      {
+        "word": "over",
+        "start": 12.46,
+        "end": 12.62
+      },
+      {
+        "word": "year",
+        "start": 12.66,
+        "end": 12.78
+      },
+      {
+        "word": "and",
+        "start": 12.82,
+        "end": 12.88
+      },
+      {
+        "word": "a",
+        "start": 12.92,
+        "end": 12.94
+      },
+      {
+        "word": "half",
+        "start": 12.98,
+        "end": 13.14
+      },
+      {
+        "word": "into",
+        "start": 13.18,
+        "end": 13.34
+      },
+      {
+        "word": "this",
+        "start": 13.38,
+        "end": 13.54
+      },
+      {
+        "word": "and",
+        "start": 13.86,
+        "end": 14.0
+      },
+      {
+        "word": "a",
+        "start": 14.22,
+        "end": 14.3
+      },
+      {
+        "word": "not",
+        "start": 14.44,
+        "end": 14.6
+      },
+      {
+        "word": "a",
+        "start": 14.64,
+        "end": 14.66
+      },
+      {
+        "word": "lot",
+        "start": 14.72,
+        "end": 14.88
+      },
+      {
+        "word": "of",
+        "start": 14.92,
+        "end": 14.96
+      },
+      {
+        "word": "great",
+        "start": 15.2,
+        "end": 15.4
+      },
+      {
+        "word": "end",
+        "start": 15.5,
+        "end": 15.64
+      },
+      {
+        "word": "in",
+        "start": 15.7,
+        "end": 15.82
+      },
+      {
+        "word": "sight",
+        "start": 15.9,
+        "end": 16.16
+      },
+      {
+        "word": "anything",
+        "start": 16.78,
+        "end": 17.06
+      },
+      {
+        "word": "youre",
+        "start": 17.08,
+        "end": 17.22
+      },
+      {
+        "word": "seeing",
+        "start": 17.24,
+        "end": 17.4
+      },
+      {
+        "word": "on",
+        "start": 17.44,
+        "end": 17.48
+      },
+      {
+        "word": "the",
+        "start": 17.52,
+        "end": 17.58
+      },
+      {
+        "word": "horizon",
+        "start": 17.62,
+        "end": 17.94
+      },
+      {
+        "word": "that",
+        "start": 17.96,
+        "end": 18.08
+      },
+      {
+        "word": "might",
+        "start": 18.12,
+        "end": 18.32
+      },
+      {
+        "word": "shift",
+        "start": 18.42,
+        "end": 18.68
+      },
+      {
+        "word": "that",
+        "start": 18.72,
+        "end": 18.9
+      },
+      {
+        "word": "or",
+        "start": 18.96,
+        "end": 19.04
+      },
+      {
+        "word": "change",
+        "start": 19.08,
+        "end": 19.34
+      },
+      {
+        "word": "that",
+        "start": 19.38,
+        "end": 19.56
+      },
+      {
+        "word": "the",
+        "start": 19.68,
+        "end": 19.8
+      },
+      {
+        "word": "dynamic",
+        "start": 19.86,
+        "end": 20.34
+      },
+      {
+        "word": "as",
+        "start": 20.52,
+        "end": 20.6
+      },
+      {
+        "word": "it",
+        "start": 20.66,
+        "end": 20.7
+      },
+      {
+        "word": "relates",
+        "start": 20.74,
+        "end": 20.98
+      },
+      {
+        "word": "to",
+        "start": 21.02,
+        "end": 21.1
+      },
+      {
+        "word": "russian",
+        "start": 21.14,
+        "end": 21.4
+      },
+      {
+        "word": "then",
+        "start": 21.44,
+        "end": 21.54
+      },
+      {
+        "word": "we'll",
+        "start": 21.58,
+        "end": 21.74
+      },
+      {
+        "word": "move",
+        "start": 21.76,
+        "end": 21.9
+      },
+      {
+        "word": "on",
+        "start": 21.96,
+        "end": 22.04
+      },
+      {
+        "word": "to",
+        "start": 22.08,
+        "end": 22.14
+      },
+      {
+        "word": "china",
+        "start": 22.2,
+        "end": 22.48
+      }
+    ]
+  }
+]

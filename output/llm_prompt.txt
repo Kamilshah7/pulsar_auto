@@ -1,0 +1,74 @@
+Merge the following transcriptions. Transcript 1 is from manual pre-labels (contains correct stutters and filler words but might have spelling errors). Transcript 2 is from Whisper (has correct spelling but might miss stutters/fillers). For each clip, output ONLY the merged text that keeps the verbatim stutters from T1 but the correct spelling from T2. Format your response as a JSON dictionary mapping clip index (string, e.g. "0") to the merged text string.
+
+--- Clip 0 ---
+T1 (Pre-labels): i saw it i saw it on hbo when i was like i guess i was it was right when it came out so it wouldn't have been yeah so i was in i was i guess i was in high school yeah anyway and it was uh yeah ha ha ha
+T2 (Whisper): I saw it. I saw it on HBO when I was like, I guess I was, it was right when it came out. So it would have been, yeah. So I was in, I was, I guess I was in high school. Yeah. Anyway. And it was, uh, yeah.
+
+--- Clip 1 ---
+T1 (Pre-labels): i really like blumhouse i like blumhouse's whole thing about um i think it's like five million for original screenplays or something like that's their budget and then if they do a sequel it's like ten or whatever yeah yeah yeah i like them that's cool because that's tiny money
+T2 (Whisper): I really like Blumhouse. I like Blumhouse's whole thing about I think it's like $5 million for original screenplays or something. That's their budget. And then if they do a sequel, it's like $10 or whatever. Yeah. Yeah. I like that. That's cool. Because that's tiny money.
+
+--- Clip 2 ---
+T1 (Pre-labels): yeah yeah and like that scene has a great ending too where she's like he's like can you close the closet and she tries to close the door and michael myers is behind it god that was great um basically the idea of this one is it's okay go ahead mike sorry
+T2 (Whisper): Yeah. Yeah. And like that scene has a great ending to where she's like, he's like, can you close the closet? And she tries to close the door and Michael Myers is behind it. God, that was great. Basically, the idea of this one is it's okay. Go ahead, Mike. Sorry.
+
+--- Clip 3 ---
+T1 (Pre-labels): yeah yeah yeah a trap that laurie's been working on for forty years but yeah i think that's the best part is that michael myers is not an idiot and laurie still outsmarted him i think that's wonderful yeah
+T2 (Whisper): Yeah. Yeah. Yeah. A trap that Laurie's been working on for 40 years. But yeah, I think that's the best part is that Michael Myers is not an idiot and Laurie still outsmarted him. I think that's wonderful. Yeah.
+
+--- Clip 4 ---
+T1 (Pre-labels): oh yeah and that's such a beautiful that's a beautiful sort of tribute to the seventies movies anyway um
+T2 (Whisper): Oh yeah. And that's such a beautiful, uh, that's a beautiful sort of tribute to the seventies movies anyway. Um,
+
+--- Clip 5 ---
+T1 (Pre-labels): agreed but for me nah i can't do brunch without a mimosa or bloody mary well you you are you are a bloody mary connoisseur i would say because you one you make really good bloody marys but also you go you go to those places that serve like a fucking meal on top of your bloody mary and it's a lot of meat stuff that i don't eat but describe describe one of your bloody marys that you've had that has the fucking
+T2 (Whisper): Agreed. But for me, nah. I can't do brunch without a mimosa. Or a Bloody Mary. Well, you're a Bloody Mary connoisseur, I would say, because one, you make really good Bloody Marys, but also you go to those places that serve like a fucking meal on top of your Bloody Mary. And it's a lot of meat stuff that I don't eat, but describe one of your Bloody Marys that you've had that has the fucking...
+
+--- Clip 6 ---
+T1 (Pre-labels): exactly and that's the problem i find with bloody marys is you it's different every place you go or or even the same place with different bartenders like those are drinks that you just it's like a risk every time you get it like oh i hope this is a good one it's not just like a yeah it's not like a vodka cranberry or you know rum and coke it's like you
+T2 (Whisper): Exactly. And that's the problem I find with Bloody Marys is it's different every place you go or even the same place with different bartenders. Like those are drinks that you just – it's like a risk every time you get it. Like, oh, I hope this is a good one. It's not just like a – yeah, it's not like a vodka cranberry or rum and coke. It's like you –
+
+--- Clip 7 ---
+T1 (Pre-labels): aww i love you thank you so much i i don't want to get all teary eyed because i'd like our podcast to be a little light a little lighter but um well you are kind of making me yeah you are kind of making me tear up but thank you so yeah it's it's good it'll be it'll be all good thank you cheers speaking of cheers let's talk about what we're drinking today um yeah mm hmm
+T2 (Whisper): I love you. Thank you so much. I don't want to get all teary-eyed because I like our podcast to be a little lighter. But you're kind of making me tear up. But thank you. So, yeah, it's good. It'll be all good. Thank you. Cheers. Speaking of cheers, let's talk about what we're drinking today. Yeah. Yeah. Mm-hmm. Mm-hmm.
+
+--- Clip 8 ---
+T1 (Pre-labels): but i think the intent of the tweet changes depending on the context you know like megan amram tweets every day saying today's the day that donald trump became president and it sort of it takes on a different tone depending on what's happened like whether he's done something really dumb or like he's done something really horrible it takes on this sort of like a haunting seriousness it's such a great tweet well done megan amram
+T2 (Whisper): But I think the intent of the tweet changes depending on the context. You know, like Megan Amram tweets every day saying, today's the day that Donald Trump became president. And it sort of takes on a different tone depending on what's happened. Like whether he's done something really dumb or like he's done something really horrible, it takes on this sort of like a haunting seriousness. It's such a great tweet. Well done, Megan Amram.
+
+--- Clip 9 ---
+T1 (Pre-labels): yeah monday to friday i am licking those granny smiths like you can't stop me it's how i get my kicks and my calories
+T2 (Whisper): yeah monday to friday i'm licking those granny smiths like you can't stop me it's how i get my kicks and my calories
+
+--- Clip 10 ---
+T1 (Pre-labels): uh yeah are you recording at forty eight thousand hertz yeah nice okay mile high club
+T2 (Whisper): Yeah, are you recording at 48,000 hertz? Yeah. Nice. Okay. Mile high club.
+
+--- Clip 11 ---
+T1 (Pre-labels): are you getting waveforms on zencastr nice you should only be able to see your own one i think yeah that's what that threw me first time
+T2 (Whisper): Are you getting waveforms on Zencaster? Nice. You should only be able to see your own one, I think. Yeah. That threw me first time.
+
+--- Clip 12 ---
+T1 (Pre-labels): just for the rest of the day they're like what is it oh shit am i so out of touch
+T2 (Whisper): just for the rest of the day they're like what is it oh shit am i so out of touch
+
+--- Clip 13 ---
+T1 (Pre-labels): if i had a giant baby i would call her lady gaga
+T2 (Whisper): If I had a giant baby, I would call her Lady Gaga.
+
+--- Clip 14 ---
+T1 (Pre-labels): totally more productive here yeah for sure definitely i am also busier but still more productive even though it's still a lot of and layla is the opposite because you know moms are different like guys don't have boobies and so we can't provide the milk right so and babies want mommy so i can only be holding her for so long she's just kind of like no fuck you it's time for mommy and so then that goes that way so it's harder for her no doubt but
+T2 (Whisper): Totally more productive here. Yeah, for sure. Definitely. I'm also busier, but still more productive. Even though it's still a lot of... And Layla is the opposite because, you know, moms are different. Like, guys don't have boobies, and so we can't provide the milk, right? So... And babies want mommy. So I can only be holding her for so long, and she's just kind of like, no, fuck you. It's time for mommy. And so then that goes that way. So it's harder for her, no doubt. But...
+
+--- Clip 15 ---
+T1 (Pre-labels): like really frustrated you know like kind of what you were saying yvette like you feel like oh i don't have a right to feel like this because so and so over here is actually in the hospital or this person over here and sometimes i struggle with how do i process these feelings with against the backdrop of who that i know who god is you know and have you guys figured out a way to do that in a way that still glorifies god but it's
+T2 (Whisper): like really frustrated, you know, like kind of what you were saying, Yvette, like you feel like, oh, I don't have a right to feel like this because so-and-so over here is actually in the hospital or this person over here. And, um, and sometimes I struggle with how do I process these feelings with, um, against the backdrop of who, that I know who God is, you know, and have you guys figured out a way to do that in a way that still glorifies God, but it's,
+
+--- Clip 16 ---
+T1 (Pre-labels): yeah in the past i have you know felt like i shouldn't a good christian wouldn't feel like this right now
+T2 (Whisper): Yeah, in the past I have, you know, felt like I shouldn't, a good Christian wouldn't feel like this right now.
+
+--- Clip 17 ---
+T1 (Pre-labels): yeah we were lucky we got a couple minutes to talk about a couple of the things that are coming up that are going to kill jill
+T2 (Whisper): Yeah, we were lucky we got a couple minutes to talk about a couple of the things that are coming up that are going to kill Jill. Yeah.
+

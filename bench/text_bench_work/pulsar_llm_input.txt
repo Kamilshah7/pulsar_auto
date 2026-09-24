@@ -1,0 +1,165 @@
+=== CLIPS TO PROCESS ===
+
+--- CLIP 0 (zencastr-en_603c4aa5c3e46e0013dcece4-00005_68.wav) ---
+1. Whisper Full Text:
+   "surprisingly, surprisingly restrained. And I think it doesn't show that much. And I think that's pretty cool. Um, I think, uh, you don't really get any shots of like the villains. Um, you only get like glimpses of the bat suit. You don't even see cat woman in costume. I think it's good. I think, I think it does exactly what a trailer should do. Um,"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "SURPRISINGLY SSURPRISINGLY RESTRAINED AND I THINK IT DOESN'T SHOW THAT MUCH AND I THINK THAT'S PRETTY COOL U I THINK A YOU DON'T REALLY GET ANDHY SHOTS UP LIKE THE VILLAINS A YOU ONLY GET LIKE GLIMPSES OF THE BAT SUITE YOU ONLY CEN SEE CAT WOMEN IN COSTUME I THINK IT'S GOOD I THINK YOU ITHINK IT DOES EXACTLY WHAT A TRELLER SHOULD DO U"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'surprisingly,' [0.00s - 1.54s] -> Acoustic CTC heard: []
+   - Whisper 'restrained.' [3.36s - 4.74s] -> Acoustic CTC heard: ['restrained', 'and', 'i', 'think']
+   - Whisper 'pretty' [7.22s - 8.26s] -> Acoustic CTC heard: ['pretty']
+   - Whisper 'any' [12.72s - 13.82s] -> Acoustic CTC heard: ['andhy']
+   - Whisper 'shots' [13.82s - 15.00s] -> Acoustic CTC heard: ['andhy', 'shots', 'up']
+   - Whisper 'I' [22.74s - 23.92s] -> Acoustic CTC heard: ['i', 'think', 'you', 'ithink']
+============================================================
+
+--- CLIP 1 (zencastr-en_6044eb9db82b030014de5da5-00004_16.wav) ---
+1. Whisper Full Text:
+   "The thing is, Rami, is that the thing that I think most, like in Jordan, definitely, when you manage to trick someone into buying something more expensive than what it actually is, then you become a kharouf, literally a sheep. They will call you a sheep. And there's like this inherent fear that's happening in everybody's mind at the same time. It's like, I don't care really about the money, but I don't want to be a sheep."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "THE THING IS FROM ME IS THAT DA DA THAT THE THINK THAT THEM I THINK AMOST A I CAN JORGEIM DEFINITELY AH WHEN YOU MANAGE TO TRICK SOMEONE INTO BUYING SOMETHING MORE EXPENSIVE THAN WHAT IT ACTUALLY IS AN THEN YOU BECOME A A CARUF LITERALLY A SHEEP THEY W'LL CALL YO A SHEEP AND THERE'S LIKE THIS INHERENT FEAR THAT'S HAPPENED IN EVERYBODY'S MIND AT THE SAME TIME WAS LIKE I DON'T CARE REALLY ABOUT THE MONEY BUT I DON'T WANT TO BE A SHEEP"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'most,' [3.08s - 4.50s] -> Acoustic CTC heard: ['think', 'amost', 'a', 'i', 'can']
+   - Whisper 'And' [18.34s - 19.28s] -> Acoustic CTC heard: ['yo', 'a', 'sheep', 'and', "there's"]
+4. Targeted Micro-Slice detected 84 words (vs Whisper's 78 words).
+============================================================
+
+--- CLIP 2 (zencastr-en_6044eb9db82b030014de5da5-00004_35.wav) ---
+1. Whisper Full Text:
+   "The haggling used to happen even with like, it's kind of sad because you have those kids in those markets and stuff like that. They come from like, you know, really poor areas. Yeah, and like, you know, I walk into that area sometimes and go like, oh, this kid like is selling gum or something like that. And I go like, all right, I want to give him some money. So I go over and I give him the money. And then he starts haggling. I go like, what? Five bucks? Can't you give me 20?"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "THE HAGLINK HE'S TAP AND EVEN LIKE AM AT IS LIKE HE'S GOT A SAD CAUSE HE HAT THOSE GID ZAMMA AN TOSE EMARK ETS IN STUFF LIKE THAT THAT COME FROM LIKE YOU TO REALLY POOR AREAS YEH A LIKE HE NI WE WELL WALK INTO THAT AREA SOMETHIES AGOT I GOT HIS KID LIKE THE SELLING GUM OR SOMETHING LIKE THAT THON AGO I GO I GOIN TA GIVE HIM OON O IVE HIM SOME MONEY SI GO OVER AND A GIVE HIM THE MONEY AND THEN HE STARTS HAGGLING EGOLI WHAT LIVE BUKS CAN'T YE GIVE ME TWENTY AND A LIKE"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'The' [0.00s - 1.36s] -> Acoustic CTC heard: ['the']
+   - Whisper 'areas.' [10.04s - 11.24s] -> Acoustic CTC heard: ['areas']
+   - Whisper 'And' [16.02s - 16.68s] -> Acoustic CTC heard: ['or', 'something', 'like', 'that', 'thon', 'ago']
+   - Whisper 'money.' [20.84s - 22.08s] -> Acoustic CTC heard: ['the', 'money', 'and', 'then', 'he', 'starts']
+   - Whisper 'what?' [23.90s - 25.08s] -> Acoustic CTC heard: ['what', 'live', 'buks']
+   - Whisper 'bucks?' [24.82s - 26.08s] -> Acoustic CTC heard: ['buks', "can't"]
+   - Whisper 'Can't' [25.10s - 26.26s] -> Acoustic CTC heard: ["can't", 'ye']
+4. Targeted Micro-Slice detected 104 words (vs Whisper's 97 words).
+============================================================
+
+--- CLIP 3 (zencastr-en_6044eb9db82b030014de5da5-00004_71.wav) ---
+1. Whisper Full Text:
+   "I mean, like you tie it to the system, right? Like imagine that when you're pricing the items in the game, you're actually pricing them a little bit more expensive so that you're keeping like a little room for people to come in and haggle and like get the price, get the item cheaper and go like, well, I got this at a deal. Share, tell your friends. Yeah."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "A MA LIKE YE YOU TIETO TO ASSYSTEMRAT I CAN MAGINE THAT WHEN YOU'RE PRICING THE ITEMS IN A GAME YOU'RE ACTUALLY PRICING THEM A LITTLE BITH MORE EXPENSIVE SO THAT YYOU KEEPING LIKE A LITTLE ROOM FOR FOR PEOPLE TO COME IN AND HAGGLE AND I GET THE PRICE I GET THE ITEM CHEAPERING GALL IKE WELL I GOT THIS A AT A DEAL I CHAIR TELL YOUR FRIENDS"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'so' [7.02s - 7.80s] -> Acoustic CTC heard: ['more', 'expensive', 'so', 'that']
+   - Whisper 'you're' [7.94s - 9.10s] -> Acoustic CTC heard: ['that', 'yyou']
+   - Whisper 'and' [11.66s - 12.40s] -> Acoustic CTC heard: ['in', 'and', 'haggle', 'and', 'i']
+   - Whisper 'Yeah.' [17.78s - 19.74s] -> Acoustic CTC heard: ['tell', 'your', 'friends']
+4. Targeted Micro-Slice detected 76 words (vs Whisper's 69 words).
+============================================================
+
+--- CLIP 4 (zencastr-en_6044eb9db82b030014de5da5-00004_90.wav) ---
+1. Whisper Full Text:
+   "It'd be like L.A. Noire, but for haggling. You start to read the character and go, oh, I got an N. What about my kid? Would you want to make my kid sad? And then see what they're going to react to that."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "BE LIKE ELLA ENOIR BUT FOR HAGGLING YOU STOP TO LIKE READ READ THE READ THE CAK TO THE GOLICO I GOT AN N WHAT ABOUT MY KIT WOULD YOU WANT TO MAKE MY KID SAB AND THE SE HE HE WET THEYE GOING TA REACT TO THAT"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'the' [3.22s - 4.60s] -> Acoustic CTC heard: ['read', 'read', 'the', 'read', 'the']
+4. Targeted Micro-Slice detected 44 words (vs Whisper's 43 words).
+============================================================
+
+--- CLIP 5 (zencastr-en_6044eb9db82b030014de5da5-00004_96.wav) ---
+1. Whisper Full Text:
+   "Well, the mechanic is going to be basically different ways of making an offer. And then another mechanic that needs to signify tone, right? So, like, this offer friendly, this offer aggressive. And, like, based on the tone of the conversation, those kind of, like, even out."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "WAT THE MECHANIC IS THE MECHANIC IS GOIN TO BE BASICALLY ME A DIFFERENT WAYS OF MAKING AN OFFER AND THEN ANOTHER MECHANIC THATTHA NITA SIMPLE SIGNIFY TONE WRIGHT SO LIKE A THIS OFFER FRIENDLY THIS OFFER AGGRESSIVE AND LIKE BASED ON A TONE OF THE CONVERSATION N THOSE KANDA LIKE EVEN OUT"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'is' [0.60s - 1.82s] -> Acoustic CTC heard: ['is', 'the', 'mechanic', 'is', 'goin', 'to']
+   - Whisper 'different' [2.42s - 3.52s] -> Acoustic CTC heard: ['me', 'a', 'different']
+   - Whisper 'signify' [9.04s - 10.38s] -> Acoustic CTC heard: ['simple']
+   - Whisper 'friendly,' [13.74s - 14.92s] -> Acoustic CTC heard: ['friendly', 'this']
+============================================================
+
+--- CLIP 6 (zencastr-en_6049f1bff79637001585bcfa-00000_21.wav) ---
+1. Whisper Full Text:
+   "There was sad news last week among this hilarity of Lady Gaga that ex-borough keeper Willie Wiggum has died. Was there any truth in those stories that he used to take a drag on cigarettes offered to him by fans behind the goal, do you think?"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "THERE IS SAD NEWS LAST WEEK AMONG THIS HILERATY OF HLORATIVE LADY GARGA THE EXBOROUGH KEEPER WILLYE WIGHAM HAS DIED WAS THERE ANY TRUTH IN THOSE STORIES THAT USED TO TAKE A DRAG ON CIGARETTES OFFERED TO HIM BY FANDS BEHIND THE GOLD YOU THINK"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'Lady' [3.68s - 4.78s] -> Acoustic CTC heard: ['of', 'hlorative', 'lady']
+============================================================
+
+--- CLIP 7 (zencastr-en_6049f1bff79637001585bcfa-00000_29.wav) ---
+1. Whisper Full Text:
+   "Yes, yeah, indeed. Yeah, perfect, perfect. Yeah, I read when he signed for Borough that coach loads of Falkirk fans came to see his debut, which is a fine thing, travelling to watch a goalkeeper in action."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "YES YES INDEED YE THIS PAPER PERFECT PERFECT YO A I READ WET WHEN HE SIGND FOR BOROUGH THE COCHLOADS OF FALKIRK FANS CAME TO SEE HIS DEBUW WHICH IS A FINE THING TRAVELLING TO WATCH A GULL KEEPER IN ACTION"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'Yeah,' [2.16s - 4.86s] -> Acoustic CTC heard: ['ye', 'this']
+   - Whisper 'perfect,' [4.86s - 6.48s] -> Acoustic CTC heard: ['this', 'paper', 'perfect']
+4. Targeted Micro-Slice detected 39 words (vs Whisper's 37 words).
+============================================================
+
+--- CLIP 8 (zencastr-en_6049f1bff79637001585bcfa-00000_32.wav) ---
+1. Whisper Full Text:
+   "Yeah, as per an old Harry Pearson column in When Saturday Comes. We had a plasterer who really looked like Willie Wiggum, and I never plucked up the courage to say, and before I did manage to say anything to him, he was taken off the job by the gaffer, because in his words, he'd grown too fond of opening cans in the morning. Which I'm out of touch."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "YE ASPAR AN OLD HURRYPEERCE AND COLUMNY WHEN SUTTURDAY COMES WE HAD A PLASTERE WHO REALLY LOOKED LIKE WILLY WIGHAM AND I NEVER PLOOKED UP THE COURAGE THE COURAGE TO SAY AND BEFORE I DID MANAGE TO SAY ANYTHING TO HIM HE WAS TAKEN OFF THE JOB BY THE EAR THE GAFFER EM BECAUSE IN HIS WORDS HE'D GROWN TOO FOND OF OPENING CANS IN THE MORNING"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'Yeah,' [0.00s - 1.26s] -> Acoustic CTC heard: ['ye']
+   - Whisper 'to' [12.66s - 13.48s] -> Acoustic CTC heard: ['the', 'courage', 'to']
+   - Whisper 'the' [17.86s - 18.58s] -> Acoustic CTC heard: ['by', 'the', 'ear', 'the']
+4. Targeted Micro-Slice detected 73 words (vs Whisper's 69 words).
+============================================================
+
+--- CLIP 9 (zencastr-en_6049f1bff79637001585bcfa-00001_53.wav) ---
+1. Whisper Full Text:
+   "I feel like that, Harry, and I'm glad you took your turn in saying it because Andy can pronounce it and proudly does on regular occasions, but I don't dare go..."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "I'VE II FEEL LIKE THAT HURRY AND I'M GLAD YOU TOOK YOUR TURN IN SINCAS ANDECAN PRONOUNCE IT AND PROUDLY DOES ON REGULAR OCCASIONS BUT I I DON'T DARE GO YE"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'feel' [0.32s - 1.38s] -> Acoustic CTC heard: ["i've", 'ii', 'feel']
+   - Whisper 'I' [7.80s - 9.02s] -> Acoustic CTC heard: ['but', 'i', 'i', "don't"]
+============================================================
+
+--- CLIP 10 (zencastr-en_6062e18ef796370015878d9f-00001_33.wav) ---
+1. Whisper Full Text:
+   "Oh, that's insane. Yeah, I forget about that. Who is, in terms of, there's three teams in this trade. Who came first? Who came second? Who came last?"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "UOH THAT'S INSANE HERE I FORGET ABOUT THAT WHO IS IN TERMS OF THERE'S THREE TAMES IN THIS TRADE WHO CAME FIRST WHO CAME SECOND WHO CAME LAST"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'Oh,' [0.00s - 1.40s] -> Acoustic CTC heard: ['uoh', "that's"]
+============================================================
+
+--- CLIP 11 (zencastr-en_606b213bf79637001587fcad-00002_42.wav) ---
+1. Whisper Full Text:
+   "So time in, oh, sorry. I was just going to say, so time in front of the TV was sort of specific and, you know, watched while watching over your shoulder. But then I imagine rest of your time awake was spent thinking about when you could be in front of the television again. Is that?"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "SO TIME AN OAKS ICE I WAV JUSTCAN TO SAY SO TIME IN FRONT OF THE T V WAS SORT OF SSPECIFIC N AND YOU KNOW WATCH T LIN WHILE WATCHING OVER YOUR SHOULDER BUT THEN I IMAGINE REST OF YOUR TIME AWAKE WAS SPENT THINKING ABOUT WHEN YOU COULD BE IN FRONT OF THE TELEVISION AGAIN ZA"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'specific' [6.66s - 8.60s] -> Acoustic CTC heard: ['of']
+   - Whisper 'and,' [8.60s - 9.36s] -> Acoustic CTC heard: ['n']
+   - Whisper 'you' [9.36s - 10.72s] -> Acoustic CTC heard: ['n', 'and', 'you', 'know']
+   - Whisper 'know,' [10.72s - 11.94s] -> Acoustic CTC heard: ['you', 'know']
+4. Targeted Micro-Slice detected 57 words (vs Whisper's 56 words).
+============================================================
+
+--- CLIP 12 (zencastr-en_606b213bf79637001587fcad-00002_53.wav) ---
+1. Whisper Full Text:
+   "that she or to like insinuate that a girl is also doing it it's like they're all doing it but it's this cloak right that we live under that's like no no girls aren't allowed to do anything for themselves but you're like watching women again not too young too young to know this but you're getting an idea that like no I can see that this is something that happens too"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "THAT SHE OUGHT TO LIKE INSINUATE THAT A GIRL IS ALLSO DU AG AIN IT'S LIKE THEY'RE ALL DOING IT BUT IT'S THIS CLOAK RIGT THAT WE LIVE UNDER THAT'S LIKE NONO GIRLS AREN'T ALLOWED TO EV DO ANYTHING FOR THEMSELVES BUT YOU'RE LIKE WATCHING WOMEN AGAIN NOT YOU'RE TOO YOUNG TOO YOUNG TO KNOW THIS BUT YOU'RE GETTING AN IDEA THAT LIKE NO I CAN SEE THAT THIS IS SOMETHING THAT HAPPENS TOO"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'but' [4.36s - 5.44s] -> Acoustic CTC heard: ['doing', 'it', 'but']
+   - Whisper 'do' [8.98s - 10.82s] -> Acoustic CTC heard: ['allowed', 'to', 'ev', 'do']
+   - Whisper 'to' [16.88s - 17.70s] -> Acoustic CTC heard: ['too', 'young', 'to', 'know']
+   - Whisper 'too' [22.98s - 24.26s] -> Acoustic CTC heard: ['that', 'happens', 'too']
+4. Targeted Micro-Slice detected 78 words (vs Whisper's 72 words).
+============================================================
+
+--- CLIP 13 (zencastr-en_606b213bf79637001587fcad-00003_50.wav) ---
+1. Whisper Full Text:
+   "So you beat something that felt like it was consuming your life and it was still – you didn't even get to share the joy of, like, beating something with someone. Like, it was all just still internal? Yeah."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "SO YOU BEAT SOMETHING THAT THAT FELT LIKE IT WAS CONSUMING YOUR LIFE AND IT WAS AND IT WAS STILL YOU DIDN'T EVEN GET TO SHARE THE JOY OF LIKE BEATING SOMETHING WITH SOME ONE LIKE IT WAS IT WAS ALL JUST STILL INTERNAL"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'felt' [1.64s - 2.64s] -> Acoustic CTC heard: ['that', 'that', 'felt']
+   - Whisper 'you' [6.60s - 7.80s] -> Acoustic CTC heard: ['you']
+   - Whisper 'Yeah.' [13.32s - 14.62s] -> Acoustic CTC heard: ['internal']
+============================================================

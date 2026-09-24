@@ -1,0 +1,31 @@
+== aligner2 v11 -- leave-one-set-out; params per held-out set: {'009': {'theta_db': 20.0, 'min_pause': 0.03, 'unit': 'letter', 'pause_model': 'word_ref', 'lam': 1000.0, 'cont_model': 'class', 'radius_ms': 20, 'onset_ms': 10, 'ref_mode': 'word', 'anchor_ms': 0, 'clip_anchor_ms': 150}, '026': {'theta_db': 20.0, 'min_pause': 0.03, 'unit': 'letter', 'pause_model': 'word_ref', 'lam': 1000.0, 'cont_model': 'class', 'radius_ms': 20, 'onset_ms': 10, 'ref_mode': 'word', 'anchor_ms': 0, 'clip_anchor_ms': 150}, '049': {'theta_db': 20.0, 'min_pause': 0.03, 'unit': 'letter', 'pause_model': 'word_ref', 'lam': 1000.0, 'cont_model': 'class', 'radius_ms': 20, 'onset_ms': 10, 'ref_mode': 'word', 'anchor_ms': 0, 'clip_anchor_ms': 150}, 'old14': {'theta_db': 20.0, 'min_pause': 0.03, 'unit': 'letter', 'pause_model': 'word_ref', 'lam': 1000.0, 'cont_model': 'class', 'radius_ms': 20, 'onset_ms': 10, 'ref_mode': 'word', 'anchor_ms': 0, 'clip_anchor_ms': 150}}
+set   kind            n     MAE    med     w5    w10    w20   bias
+009   all          1876    23.7   14.6    22%    38%    60%   +0.8
+009   cont         1456    22.0   16.5    18%    34%    57%   +2.6
+009   pause         396    30.0    9.4    35%    51%    69%   -6.5
+009   human         596    29.6   16.6    19%    34%    55%   +4.1
+009   cont_human    499    24.2   16.5    19%    35%    55%   +6.2
+026   all          1946    20.8   13.4    22%    42%    64%   -0.3
+026   cont         1476    20.8   15.5    17%    35%    60%   -0.0
+026   pause         446    20.5    7.0    40%    62%    79%   -1.8
+026   human         432    25.8   15.0    20%    36%    60%   -1.1
+026   cont_human    367    23.5   14.2    19%    36%    61%   -0.2
+026   ear-hit       468   27.1%
+049   all          1826    25.2   15.0    21%    38%    60%   -1.3
+049   cont         1342    24.4   17.0    17%    32%    56%   -0.0
+049   pause         460    27.1    8.5    34%    54%    71%   -4.1
+049   human         546    29.0   18.6    18%    34%    52%   +7.0
+049   cont_human    461    27.0   18.6    17%    33%    52%   +8.3
+049   ear-hit       314   26.4%
+old14 all          1716    26.9   14.6    20%    38%    61%   -6.2
+old14 cont         1210    23.5   16.5    17%    34%    58%   -3.6
+old14 pause         478    34.8   10.0    28%    49%    68%  -14.1
+old14 human         513    28.2   15.2    18%    37%    61%   +0.1
+old14 cont_human    439    23.4   14.2    19%    39%    64%   +3.3
+old14 ear-hit       284   30.6%
+ALL   all          7364    24.0   14.5    21%    39%    61%   -1.6
+ALL   cont         5484    22.6   16.5    17%    34%    57%   -0.1
+ALL   pause        1780    28.1    9.0    34%    54%    72%   -6.7
+ALL   human        2087    28.3   16.4    19%    35%    57%   +2.8
+ALL   cont_human   1766    24.6   15.9    18%    36%    58%   +4.7
+ALL   ear-hit      1066   27.9%

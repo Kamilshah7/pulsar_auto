@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "boundary-review",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["bench/review_server.py"],
+      "port": 8765
+    }
+  ]
+}

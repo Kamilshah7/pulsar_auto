@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Boundary Review</title>
+<style>
+:root{--bg:#f7f6f3;--fg:#1c1b19;--mut:#6c6962;--card:#fff;--bd:#e4e0d9;--acc:#b5532c;--ok:#2f7d5b;--okbg:#e6f3ec;
+      --wave:#8a857c;--view:#fbfaf8;--man:#2458c9;--hl:#fff4d6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171614;--fg:#ecebe8;--mut:#a29f99;--card:#211f1d;
+      --bd:#34322f;--acc:#e08a63;--ok:#6fc49b;--okbg:#1f3329;--wave:#8f8a82;--view:#1c1b19;--man:#7aa2ff;--hl:#3a3220}}
+:root[data-theme="dark"]{--bg:#171614;--fg:#ecebe8;--mut:#a29f99;--card:#211f1d;--bd:#34322f;--acc:#e08a63;--ok:#6fc49b;
+      --okbg:#1f3329;--wave:#8f8a82;--view:#1c1b19;--man:#7aa2ff;--hl:#3a3220}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.45 system-ui,sans-serif;margin:0;padding:18px 16px 40px}
+.wrap{max-width:900px;margin:0 auto}
+header{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+h1{font-size:19px;margin:0}
+.prog{color:var(--mut);font-size:13px}
+.bar{height:6px;background:var(--bd);border-radius:9px;margin:8px 0 16px;overflow:hidden}
+.bar>div{height:100%;background:var(--ok);width:0}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 16px}
+.words{font-size:24px;font-weight:600;letter-spacing:.2px;margin:2px 0 4px}
+.words .sep{color:var(--acc);padding:0 10px}
+.meta{color:var(--mut);font-size:12.5px;margin-bottom:10px}
+.badge{display:inline-block;font-size:11.5px;padding:1px 8px;border-radius:99px;border:1px solid var(--bd);margin-right:6px}
+canvas{width:100%;height:150px;display:block;border-radius:8px;background:var(--view);border:1px solid var(--bd);cursor:crosshair;touch-action:none}
+.hint{color:var(--mut);font-size:12.5px;margin:6px 0 12px}
+.opts{display:grid;gap:8px}
+.opt{display:flex;align-items:center;gap:10px;padding:8px 10px;border:1px solid var(--bd);border-radius:10px;cursor:pointer}
+.opt.ok{background:var(--okbg);border-color:var(--ok)}
+.opt.playing,.man.playing{outline:2px solid var(--acc)}
+.key{font-weight:700;width:22px;text-align:center}
+button{font:inherit;border:1px solid var(--bd);background:var(--card);color:var(--fg);border-radius:8px;padding:6px 12px;cursor:pointer}
+button:hover{border-color:var(--mut)}
+button.primary{background:var(--ok);border-color:var(--ok);color:#fff}
+.tog{min-width:118px}
+.opt.ok .tog{background:var(--ok);border-color:var(--ok);color:#fff}
+.sc{color:var(--mut);font-size:11.5px;margin-left:auto}
+.man{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:10px;padding:8px 10px;border:1px dashed var(--man);border-radius:10px}
+.man .lbl{color:var(--man);font-weight:600}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:14px}
+input[type=text]{flex:1;min-width:160px;font:inherit;padding:6px 10px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--fg)}
+.warn{color:var(--acc);font-size:13px;min-height:18px;margin-top:8px}
+.keys{color:var(--mut);font-size:12px;margin-top:16px;line-height:1.7}
+kbd{border:1px solid var(--bd);border-bottom-width:2px;border-radius:5px;padding:0 5px;font-size:11px;background:var(--card)}
+.done{text-align:center;padding:40px 10px}
+@media (max-width:560px){.words{font-size:20px}.sc{display:none}.tog{min-width:92px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><h1>Boundary review</h1><div class="prog" id="prog">loading…</div></header>
+  <div class="bar"><div id="barfill"></div></div>
+  <div class="card" id="card">
+    <div class="words" id="words"></div>
+    <div class="meta" id="meta"></div>
+    <canvas id="wave"></canvas>
+    <div class="hint">Click or drag on the waveform to place <b style="color:var(--man)">your own</b> cut. Lettered marks are the blind options.</div>
+    <div class="opts" id="opts"></div>
+    <div class="man" id="man">
+      <span class="lbl">Your own cut</span>
+      <button id="manPlay">▶ play</button>
+      <button data-n="-5">−5</button><button data-n="-1">−1</button><button data-n="1">+1</button><button data-n="5">+5</button><span class="sc">ms</span>
+      <button id="manClear">clear</button>
+      <span class="sc" id="manState">not placed</span>
+    </div>
+    <div class="row">
+      <input type="text" id="note" placeholder="optional note (e.g. sounds like “proud di”)">
+    </div>
+    <div class="row">
+      <button id="back">◀ Back</button>
+      <button id="ctx">▶ Context</button>
+      <button id="skip">Skip</button>
+      <button class="primary" id="submit">Submit &amp; next ▸</button>
+    </div>
+    <div class="warn" id="warn"></div>
+  </div>
+  <div class="keys">
+    <kbd>1</kbd>–<kbd>6</kbd> play option · <kbd>Q</kbd><kbd>W</kbd><kbd>E</kbd><kbd>R</kbd><kbd>T</kbd><kbd>Y</kbd> tick A–F acceptable (or click the row) ·
+    <kbd>M</kbd> play your cut · <kbd>←</kbd>/<kbd>→</kbd> nudge 1&nbsp;ms (<kbd>Shift</kbd> 5&nbsp;ms) · <kbd>Space</kbd> replay ·
+    <kbd>C</kbd> context · <kbd>Enter</kbd> submit · <kbd>Backspace</kbd> back<br>
+    Each play = word 1, a short silence, word 2 — cut at that option. A cut is right when word 1 keeps nothing of word 2 and word 2 is missing nothing.
+    Mark <b>every</b> option that sounds acceptable. If none do, place your own cut.
+  </div>
+</div>
+<script>
+const GAP = 0.30, PAD = 0.60, KEYS = "ABCDEF", TOGGLE = ["KeyQ","KeyW","KeyE","KeyR","KeyT","KeyY"];
+let items = [], answers = {}, idx = 0, cur = null, buf = null, ctx = null, playing = [], lastPlay = null;
+let state = {ok: {}, manual: null};
+const $ = id => document.getElementById(id);
+
+async function init(){
+  items = await (await fetch("/api/items")).json();
+  answers = await (await fetch("/api/answers")).json();
+  await flushPending();  // answers kept in the browser during a server outage
+  idx = items.findIndex(it => !(it.id in answers)); if (idx < 0) idx = items.length;
+  show();
+}
+function progress(){
+  const n = Object.keys(answers).length;
+  $("prog").textContent = `${n} / ${items.length} answered` + (idx < items.length ? ` · item ${idx + 1}` : "");
+  $("barfill").style.width = (100 * n / items.length) + "%";
+}
+async function show(){
+  stop(); progress(); $("warn").textContent = "";
+  if (idx >= items.length){
+    $("card").innerHTML = `<div class="done"><h2>All ${items.length} items answered</h2><p>Your answers are saved. Tell Claude you're done.</p></div>`;
+    return;
+  }
+  cur = items[idx]; const prev = answers[cur.id];
+  state = {ok: Object.assign({}, prev ? prev.ok : {}), manual: prev ? prev.manual : null};
+  $("note").value = prev ? (prev.note || "") : "";
+  $("words").innerHTML = `${esc(cur.w1)}<span class="sep">|</span>${esc(cur.w2)}`;
+  const setName = {"026": "new project", "049": "bundle 049", "old14": "older clips"}[cur.set] || cur.set;
+  $("meta").innerHTML = `<span class="badge">${setName}</span><span class="badge">${cur.badge ? esc(cur.badge) : (cur.kind === "verified" ? "you verified this pair" : "you corrected this pair")}</span>` +
+                        (prev ? `<span class="badge" style="border-color:var(--ok)">answered — editing</span>` : "");
+  $("opts").innerHTML = cur.options.map((o, i) =>
+    `<div class="opt" id="opt${o.key}"><span class="key">${o.key}</span><button data-play="${i}">▶ play</button>` +
+    `<button class="tog" data-tog="${o.key}">☐ Acceptable</button><span class="sc">${i + 1} / ${"QWERTY"[i]}</span></div>`).join("");
+  document.querySelectorAll("[data-play]").forEach(b => b.onclick = () => playOpt(+b.dataset.play));
+  document.querySelectorAll("[data-tog]").forEach(b => b.onclick = ev => { ev.stopPropagation(); toggle(b.dataset.tog); });
+  // the whole row (anything but its play button) toggles "acceptable"
+  cur.options.forEach(o => { $("opt" + o.key).onclick = ev => { if (!ev.target.closest("[data-play]")) toggle(o.key); }; });
+  buf = null; drawWave();
+  try {
+    ensureCtx();
+    const ab = await (await fetch(`/api/audio/${encodeURIComponent(cur.id)}.wav`)).arrayBuffer();
+    if (items[idx] !== cur) return;
+    buf = await ctx.decodeAudioData(ab);
+  } catch (e) { $("warn").textContent = "Audio failed to load: " + e; }
+  refresh(); drawWave();
+}
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function refresh(){
+  cur.options.forEach(o => {
+    const on = !!state.ok[o.key], el = $("opt" + o.key);
+    el.classList.toggle("ok", on); el.querySelector(".tog").textContent = on ? "☑ Acceptable" : "☐ Acceptable";
+  });
+  $("manState").textContent = state.manual == null ? "not placed" : "placed";
+  drawWave();
+}
+function toggle(k){ state.ok[k] = !state.ok[k]; refresh(); }
+
+/* ---------- audio ---------- */
+function ensureCtx(){ if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)(); if (ctx.state === "suspended") ctx.resume(); }
+function stop(){ playing.forEach(s => { try { s.stop(); } catch(e){} }); playing = [];
+  document.querySelectorAll(".playing").forEach(e => e.classList.remove("playing")); }
+function seg(when, a, b){
+  const off = a - cur.win_start, dur = b - a; if (dur <= 0.002) return;
+  const src = ctx.createBufferSource(), g = ctx.createGain(); src.buffer = buf; src.connect(g); g.connect(ctx.destination);
+  const f = 0.002; g.gain.setValueAtTime(0, when); g.gain.linearRampToValueAtTime(1, when + f);
+  g.gain.setValueAtTime(1, when + dur - f); g.gain.linearRampToValueAtTime(0, when + dur);
+  src.start(when, Math.max(0, off), dur); playing.push(src);
+}
+function playCut(t, el){
+  if (!buf) return; ensureCtx(); stop(); lastPlay = () => playCut(t, el);
+  const a = Math.max(cur.w1_start, t - PAD, cur.win_start), b = Math.min(cur.w2_end, t + PAD, cur.win_start + buf.duration);
+  const now = ctx.currentTime + 0.05; seg(now, a, t); seg(now + (t - a) + GAP, t, b);
+  if (el){ el.classList.add("playing"); setTimeout(() => el.classList.remove("playing"), ((t - a) + GAP + (b - t)) * 1000 + 100); }
+}
+function playOpt(i){ const o = cur.options[i]; if (o) playCut(o.t, $("opt" + o.key)); }
+function playManual(){ if (state.manual == null){ $("warn").textContent = "Place your cut on the waveform first."; return; } playCut(state.manual, $("man")); }
+function playContext(){
+  if (!buf) return; ensureCtx(); stop(); lastPlay = playContext;
+  const a = Math.max(cur.win_start, cur.w1_start), b = Math.min(cur.win_start + buf.duration, cur.w2_end);
+  seg(ctx.currentTime + 0.05, a, b);
+}
+
+/* ---------- waveform ---------- */
+function view(){
+  const ts = cur.options.map(o => o.t).concat(state.manual != null ? [state.manual] : []);
+  let v0 = Math.min(...ts) - 0.18, v1 = Math.max(...ts) + 0.18;
+  v0 = Math.max(v0, cur.win_start); v1 = Math.min(v1, cur.win_end); return [v0, v1];
+}
+function drawWave(){
+  const c = $("wave"), dpr = window.devicePixelRatio || 1, W = c.clientWidth, H = c.clientHeight;
+  c.width = W * dpr; c.height = H * dpr; const g = c.getContext("2d"); g.scale(dpr, dpr); g.clearRect(0, 0, W, H);
+  if (!cur) return; const css = getComputedStyle(document.documentElement), col = n => css.getPropertyValue(n).trim();
+  const [v0, v1] = view(), x = t => (t - v0) / (v1 - v0) * W;
+  if (buf){
+    const d = buf.getChannelData(0), sr = buf.sampleRate, s0 = (v0 - cur.win_start) * sr, s1 = (v1 - cur.win_start) * sr;
+    let peak = 1e-4; for (let i = Math.max(0, s0 | 0); i < Math.min(d.length, s1 | 0); i++) peak = Math.max(peak, Math.abs(d[i]));
+    g.fillStyle = col("--wave");
+    for (let px = 0; px < W; px++){
+      const a = Math.max(0, (s0 + (s1 - s0) * px / W) | 0), b = Math.min(d.length, (s0 + (s1 - s0) * (px + 1) / W) | 0);
+      let mn = 0, mx = 0; for (let i = a; i < b; i++){ if (d[i] < mn) mn = d[i]; if (d[i] > mx) mx = d[i]; }
+      const y0 = H / 2 - mx / peak * (H / 2 - 18), y1 = H / 2 - mn / peak * (H / 2 - 18);
+      g.fillRect(px, y0, 1, Math.max(1, y1 - y0));
+    }
+  } else { g.fillStyle = col("--mut"); g.font = "13px system-ui"; g.fillText("loading audio…", 12, 22); }
+  g.font = "bold 12px system-ui"; g.textAlign = "center";
+  // marks a few ms apart land on the same pixels: stagger their letters into rows so each stays readable
+  const rowsX = [];
+  cur.options.slice().sort((p, q) => p.t - q.t).forEach(o => {
+    const X = x(o.t), on = !!state.ok[o.key];
+    let row = 0; while (rowsX[row] !== undefined && X - rowsX[row] < 14) row++;
+    rowsX[row] = X; const ty = 12 + row * 13;
+    g.strokeStyle = on ? col("--ok") : col("--acc"); g.lineWidth = on ? 2 : 1.3; g.beginPath(); g.moveTo(X, ty + 4); g.lineTo(X, H); g.stroke();
+    g.fillStyle = on ? col("--ok") : col("--acc"); g.fillText(o.key, X, ty);
+  });
+  if (state.manual != null){
+    const X = x(state.manual); g.strokeStyle = col("--man"); g.lineWidth = 2; g.setLineDash([5, 4]);
+    g.beginPath(); g.moveTo(X, 0); g.lineTo(X, H); g.stroke(); g.setLineDash([]);
+  }
+  g.fillStyle = col("--mut"); g.font = "11px system-ui"; g.textAlign = "left"; g.fillText(`${((v1 - v0) * 1000) | 0} ms shown`, 8, H - 6);
+}
+function tAt(ev){ const c = $("wave"), r = c.getBoundingClientRect(), [v0, v1] = view(); return v0 + (ev.clientX - r.left) / r.width * (v1 - v0); }
+let dragging = false;
+$("wave").addEventListener("pointerdown", ev => { dragging = true; $("wave").setPointerCapture(ev.pointerId); state.manual = tAt(ev); refresh(); });
+$("wave").addEventListener("pointermove", ev => { if (dragging){ state.manual = tAt(ev); refresh(); } });
+$("wave").addEventListener("pointerup", () => { if (dragging){ dragging = false; playManual(); } });
+window.addEventListener("resize", drawWave);
+
+/* ---------- navigation ---------- */
+async function submit(){
+  const anyOk = cur.options.some(o => state.ok[o.key]);
+  if (!anyOk && state.manual == null){ $("warn").textContent = "Nothing marked acceptable — place your own cut, or press Skip."; return; }
+  const body = {id: cur.id, ok: Object.fromEntries(cur.options.map(o => [o.key, !!state.ok[o.key]])), manual: state.manual, note: $("note").value};
+  try {
+    await post(body);
+    answers[cur.id] = {ok: body.ok, manual: body.manual, note: body.note};
+  } catch (e){
+    // Keep the answer in this browser too; it is re-sent automatically when the server is back.
+    pend(body);
+    $("warn").textContent = "Server not reachable — this answer is NOT saved to disk yet (kept in the browser). " +
+      "Start the server again (python bench/review_server.py), then press Submit again or reload.";
+    return;
+  }
+  next();
+}
+async function post(body){
+  const r = await (await fetch("/api/answer", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)})).json();
+  if (!r.saved) throw new Error(r.error || "not saved");
+}
+function pend(body){ try { const p = JSON.parse(localStorage.getItem("br_pending") || "{}"); p[body.id] = body; localStorage.setItem("br_pending", JSON.stringify(p)); } catch (e) {} }
+async function flushPending(){
+  let p = {}; try { p = JSON.parse(localStorage.getItem("br_pending") || "{}"); } catch (e) { return; }
+  for (const [id, body] of Object.entries(p)){
+    try { await post(body); answers[id] = {ok: body.ok, manual: body.manual, note: body.note}; delete p[id]; } catch (e) { break; }
+  }
+  try { localStorage.setItem("br_pending", JSON.stringify(p)); } catch (e) {}
+}
+function next(){ const j = items.findIndex((it, k) => k > idx && !(it.id in answers)); idx = j < 0 ? (idx + 1) : j; show(); }
+$("submit").onclick = submit; $("skip").onclick = () => { idx++; show(); };
+$("back").onclick = () => { if (idx > 0){ idx--; show(); } };
+$("ctx").onclick = playContext; $("manPlay").onclick = playManual;
+$("manClear").onclick = () => { state.manual = null; refresh(); };
+document.querySelectorAll("#man [data-n]").forEach(b => b.onclick = () => nudge(+b.dataset.n));
+function nudge(ms){ if (state.manual == null){ $("warn").textContent = "Place your cut on the waveform first."; return; }
+  state.manual += ms / 1000; refresh(); playManual(); }
+document.addEventListener("keydown", ev => {
+  if (ev.target.tagName === "INPUT") { if (ev.key === "Enter") { ev.preventDefault(); submit(); } return; }
+  if (!cur || idx >= items.length) return;
+  const d = /^Digit([1-6])$/.exec(ev.code), t = TOGGLE.indexOf(ev.code);
+  if (d && !ev.shiftKey){ ev.preventDefault(); playOpt(+d[1] - 1); }
+  else if (t >= 0 && cur.options[t]){ ev.preventDefault(); toggle(cur.options[t].key); }
+  else if (ev.code === "KeyM"){ ev.preventDefault(); playManual(); }
+  else if (ev.code === "KeyC"){ ev.preventDefault(); playContext(); }
+  else if (ev.code === "ArrowLeft" || ev.code === "ArrowRight"){ ev.preventDefault(); nudge((ev.code === "ArrowLeft" ? -1 : 1) * (ev.shiftKey ? 5 : 1)); }
+  else if (ev.code === "Space"){ ev.preventDefault(); if (lastPlay) lastPlay(); }
+  else if (ev.code === "Enter"){ ev.preventDefault(); submit(); }
+  else if (ev.code === "Backspace"){ ev.preventDefault(); if (idx > 0){ idx--; show(); } }
+});
+init();
+</script>
+</body>
+</html>

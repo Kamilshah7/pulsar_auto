@@ -1,0 +1,17 @@
+(11s) event position vs gold at 1 ms resolution, +-40 ms window [chance: 11% within 5 ms, 26% within 10 ms]
+
+ALL            n=2742 loud3 min 27%/42% (med +1)   loud10 min 26%/40% (med +0)   loud5 min 26%/41% (med +0)
+vowel>fric     n=266  loud10 fall 24%/37% (med -8)   loud3 min 23%/35% (med +7)   loud5 fall 22%/36% (med -9)
+stop>vowel     n=219  loud5 rise 37%/53% (med -1)   lf5 (<500Hz) rise 37%/56% (med -1)   loud10 rise 32%/53% (med -2)
+vowel>stop     n=209  loud3 min 47%/63% (med +1)   loud5 min 47%/63% (med +2)   loud10 min 44%/57% (med +3)
+vowel>vowel    n=199  loud3 rise 20%/31% (med +4)   loud5 min 19%/30% (med +3)   loud10 min 19%/29% (med +1)
+stop>fric      n=175  loud10 min 29%/43% (med +6)   loud3 min 29%/45% (med +5)   loud5 min 25%/43% (med +7)
+fric>vowel     n=149  loud10 rise 47%/66% (med -2)   loud5 rise 43%/68% (med +0)   loud3 rise 37%/59% (med +2)
+vowel>glide    n=136  hf5 (>3kHz) min 18%/35% (med +2)   lf5 (<500Hz) min 17%/26% (med +3)   loud10 fall 16%/32% (med -15)
+nasal>vowel    n=135  hf5 (>3kHz) rise 36%/54% (med +2)   mid5 (0.5-3kHz) rise 33%/56% (med +3)   loud10 rise 31%/49% (med +4)
+nasal>fric     n=132  loud10 fall 27%/35% (med -2)   hf5 (>3kHz) rise 26%/45% (med +6)   mid5 (0.5-3kHz) min 20%/36% (med -4)
+fric>fric      n=129  loud3 min 39%/51% (med +1)   loud5 min 32%/47% (med +0)   loud10 min 29%/42% (med +0)
+stop>stop      n=94   loud5 min 36%/55% (med +4)   loud10 min 33%/51% (med +5)   loud3 min 31%/54% (med +4)
+vowel>nasal    n=93   loud3 min 28%/46% (med -5)   loud10 min 28%/41% (med -6)   mid5 (0.5-3kHz) fall 25%/34% (med -14)
+vowel>liquid   n=91   loud3 min 29%/46% (med +0)   loud5 min 26%/40% (med +0)   loud3 fall 26%/40% (med -7)
+stop>glide     n=80   loud3 min 30%/46% (med +1)   loud10 min 30%/42% (med -2)   loud5 min 26%/49% (med -2)

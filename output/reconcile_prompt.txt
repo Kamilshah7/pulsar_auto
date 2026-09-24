@@ -1,0 +1,123 @@
+
+PULSAR TOKENIZATION RULES (verbatim word-level transcription):
+- Lowercase, no punctuation except: apostrophes in real contractions (don't, it's), and
+  a hyphen at the exact point of truncation in a cut-off word (elev-, see-).
+- Hyphenated words/numbers/backchannels are split into separate tokens with hyphens
+  stripped: "eighty-seven" -> "eighty" "seven"; "coca-cola" -> "coca" "cola";
+  "part-time" -> "part" "time"; "uh-huh" -> "uh" "huh"; "mm-mm" -> "mm" "mm".
+- Backchannels/filled pauses use ONLY these standard spellings (never substitute a
+  similar-sounding one): "mm hm" (agree, mouth closed), "uh huh" (agree, mouth open),
+  "hmm" (thinking -- even if it sounds like "mmm"), "uh" (open hesitation), "um"
+  (closed/nasal hesitation), "mm mm" (disagree, mouth closed), "nuh huh" (disagree,
+  mouth open), "oh" (realization), "ooh" (impressed). Each component is its own token.
+- STUTTERS AND REPETITIONS ARE TRANSCRIBED VERBATIM, EVERY TIME -- never collapsed to
+  one occurrence. A cut-off restart keeps a hyphen on every truncated attempt except the
+  final complete word: "el-" "el-" "elevator". A repeated whole word gets no hyphen and
+  every repetition is its own token: "the" "the" "the" (three tokens, not one).
+- Letter sequences (each letter its own token: "a" "b" "c") vs acronyms pronounced as a
+  word (one token: "opec", "nasa") -- do not confuse the two.
+- Informal contractions transcribed as written when that's how they're said: gonna,
+  wanna, gotta, gimme, lemme, whatcha, dunno, gotcha, kinda, y'all, 'til, 'er, 'em,
+  c'mon, 'cause. Anything else not a standard contraction: spell out the full words
+  ("there're" -> "there" "are").
+- Mispronunciations: transcribe the speaker's clearly INTENDED word, not a phonetic
+  spelling of the slip (intended "visit", said "vitis" -> write "visit").
+- Guessable-but-unclear word -> "((word))" (its own token). Fully unintelligible
+  stretch -> "(())" (its own token). Never invent words that aren't audible.
+- Proper names (people, places, brands, teams) are not dictionary words -- an ASR system
+  will frequently mishear/misspell them; use context to recover the intended spelling.
+
+
+WHY YOU ARE GIVEN TWO DIFFERENT DRAFT TRANSCRIPTS, AND HOW THEY TYPICALLY FAIL:
+
+1. PRE-LABEL DRAFT: an earlier ASR pass tuned for verbatim segmentation. It usually gets
+   the WORD COUNT / disfluency structure close to correct (stutters, restarts, filler
+   words, and repeated words are usually present as separate tokens), but it frequently
+   MISHEARS the actual word -- especially proper nouns, short function words, and
+   contractions -- producing garbled or wrong text even though the segment boundaries
+   are roughly in the right place.
+
+2. WHISPER TRANSCRIPT: a general-purpose ASR model trained to produce clean, readable
+   text. It is usually far more accurate on WORD CHOICE AND SPELLING, but it is trained
+   to smooth speech and will systematically DROP disfluencies it treats as noise:
+   stutters, restarts, repeated words, filler words (um/uh), and truncated fragments
+   often vanish entirely rather than being transcribed. It also silently normalizes
+   informal speech into its written-standard form (e.g. a dropped-g "-in'" becomes
+   "-ing", or a contraction gets expanded), which Pulsar's tokenization rules do not
+   want -- Pulsar wants the verbatim spoken form.
+
+YOUR JOB: reconstruct the single, correct, verbatim, Pulsar-compliant token sequence for
+each clip. As a general rule: trust the pre-label draft for WHETHER a disfluency, cut-off
+restart, repeated word, or filler token exists at all (don't silently drop something the
+pre-label has just because Whisper dropped it); trust Whisper for the correct SPELLING of
+a word when the two drafts clearly refer to the same word in the same position. When the
+two drafts disagree about a name or an uncommon word and you can't be sure which is
+right, prefer whichever candidate is an actual attested word/name over a nonsense
+fragment, and use the surrounding sentence context to judge plausibility.
+
+
+CLIPS TO RECONCILE:
+
+--- Clip 0 ---
+Pre-label draft: (()) surprisingly sup- surprisingly restrained and i think it doesn't show that much and i think that's pretty cool um i think uh you don't really get any shots of like the villains um you only get like glimpses of the batsuit you don't even see catwoman in costume i think it's good i think it's i think it does exactly what a trailer should do um
+Whisper transcript: surprisingly, surprisingly restrained. And I think it doesn't show that much. And I think that's pretty cool. Um, I think, uh, you don't really get any shots of like the villains. Um, you only get like glimpses of the bat suit. You don't even see cat woman in costume. I think it's good. I think, I think it does exactly what a trailer should do. Um,
+
+--- Clip 1 ---
+Pre-label draft: the thing is rami is that the the the the thing that um i think of of most uh like in jordan definitely um when you managed to trick someone into buying something more expensive than what it actually is and um then you become um a haruf literally a sheep they will call you a sheep and there's like this inherent fear that's happened in everybody's mind at the same time it's like i don't care really about the money but i don't want to be a sheep
+Whisper transcript: The thing is, Rami, is that the thing that I think most, like in Jordan, definitely, when you manage to trick someone into buying something more expensive than what it actually is, then you become a kharouf, literally a sheep. They will call you a sheep. And there's like this inherent fear that's happening in everybody's mind at the same time. It's like, I don't care really about the money, but I don't want to be a sheep.
+
+--- Clip 2 ---
+Pre-label draft: but i don't the haggling used to happen even with like um and it's like it's kind of sad 'cause you have those kids um uh and those uh markets and stuff like that they come from like you know really poor areas yeah and like you know i we i walk into that area sometimes ago like oh this kid like is selling gum or something like that then i go like all right i want to give him i want to give him some money so i go over and i give him the money and then he starts haggling you know like what five bucks can't you give me twenty and i like
+Whisper transcript: The haggling used to happen even with like, it's kind of sad because you have those kids in those markets and stuff like that. They come from like, you know, really poor areas. Yeah, and like, you know, I walk into that area sometimes and go like, oh, this kid like is selling gum or something like that. And I go like, all right, I want to give him some money. So I go over and I give him the money. And then he starts haggling. I go like, what? Five bucks? Can't you give me 20?
+
+--- Clip 3 ---
+Pre-label draft: i mean like you could tie it to the system right like imagine that when you are pricing the items in the game you're actually pricing them a little bit more expensive so that's you you keeping like a little room for for people to come in and haggle and like get the price like get the item cheaper and go like well i got this uh at a deal uh share tell your friends
+Whisper transcript: I mean, like you tie it to the system, right? Like imagine that when you're pricing the items in the game, you're actually pricing them a little bit more expensive so that you're keeping like a little room for people to come in and haggle and like get the price, get the item cheaper and go like, well, I got this at a deal. Share, tell your friends. Yeah.
+
+--- Clip 4 ---
+Pre-label draft: it'd be like e- ellen war but for haggling you start to like uh read r- read the uh the read the characters go like oh i got an n what about my kid would you want to make my kid sad and then see what they gonna react to that
+Whisper transcript: It'd be like L.A. Noire, but for haggling. You start to read the character and go, oh, I got an N. What about my kid? Would you want to make my kid sad? And then see what they're going to react to that.
+
+--- Clip 5 ---
+Pre-label draft: well the mechanic is the mechanic is gonna be basically ma- uh the different ways of making an offer and then another mechanic that uh need to simply uh signify tone right so like uh this offer friendly this offer aggressive and like based on the tone of the conversation those kind of like even out
+Whisper transcript: Well, the mechanic is going to be basically different ways of making an offer. And then another mechanic that needs to signify tone, right? So, like, this offer friendly, this offer aggressive. And, like, based on the tone of the conversation, those kind of, like, even out.
+
+--- Clip 6 ---
+Pre-label draft: there was s- yeah it is sad news last week among this hilarity of uh uh hilarity of lady gaga but ex borough keeper willie whigham has died was there any truth in those stories that he used to take a drag on cigarettes offered to him by fans behind the goal do you think
+Whisper transcript: There was sad news last week among this hilarity of Lady Gaga that ex-borough keeper Willie Wiggum has died. Was there any truth in those stories that he used to take a drag on cigarettes offered to him by fans behind the goal, do you think?
+
+--- Clip 7 ---
+Pre-label draft: yes yeah indeed yeah (()) this per- uh per- perfect perfect yeah i i read f- when when he signed for borough the uh coachloads of falkirk fans came to see his debut which is a fine thing traveling to watch your goalkeeper in action
+Whisper transcript: Yes, yeah, indeed. Yeah, perfect, perfect. Yeah, I read when he signed for Borough that coach loads of Falkirk fans came to see his debut, which is a fine thing, travelling to watch a goalkeeper in action.
+
+--- Clip 8 ---
+Pre-label draft: yeah uh as per an old harry pearson column in when saturday comes we had a plasterer who really looked like willie whigham and i never plucked up the courage the courage to say and before i did manage to say anything to him he was taken off the job by the uh the gaffer um because in his words he'd grown too fond of opening cans in the morning ((which)) ((all)) ((right))
+Whisper transcript: Yeah, as per an old Harry Pearson column in When Saturday Comes. We had a plasterer who really looked like Willie Wiggum, and I never plucked up the courage to say, and before I did manage to say anything to him, he was taken off the job by the gaffer, because in his words, he'd grown too fond of opening cans in the morning. Which I'm out of touch.
+
+--- Clip 9 ---
+Pre-label draft: i i f- uh i i feel like that harry and i'm glad you took your turn in saying 'cause andy can pronounce it and um proudly does on regular occasions but i i d- i don't dare go yeah
+Whisper transcript: I feel like that, Harry, and I'm glad you took your turn in saying it because Andy can pronounce it and proudly does on regular occasions, but I don't dare go...
+
+--- Clip 10 ---
+Pre-label draft: hmm oh that's insane yeah i forget about that who is in terms of this three teams in this trade who came first who came second who came last
+Whisper transcript: Oh, that's insane. Yeah, I forget about that. Who is, in terms of, there's three teams in this trade. Who came first? Who came second? Who came last?
+
+--- Clip 11 ---
+Pre-label draft: so time in oh sorry i was just gonna say so time in front of the t v was sort of s- specific a and and b- you know watched to let and while watching over your shoulder but then i imagine rest of your time awake was spent thinking about when you could be in front of the television again is that
+Whisper transcript: So time in, oh, sorry. I was just going to say, so time in front of the TV was sort of specific and, you know, watched while watching over your shoulder. But then I imagine rest of your time awake was spent thinking about when you could be in front of the television again. Is that?
+
+--- Clip 12 ---
+Pre-label draft: that she or to like insinuate that a girl is also doing it it's like they're all doing it but it's this cloak right that we live under that's like no no girls aren't allowed to uh do anything for themselves but you are like watching women again not uh too young too young to know this but you're getting an idea that like no i can see that this is something that happens too
+Whisper transcript: that she or to like insinuate that a girl is also doing it it's like they're all doing it but it's this cloak right that we live under that's like no no girls aren't allowed to do anything for themselves but you're like watching women again not too young too young to know this but you're getting an idea that like no I can see that this is something that happens too
+
+--- Clip 13 ---
+Pre-label draft: so you beat something that f- that felt like it was consuming your life and it was and it was still you didn't even get to share the joy of like beating something with someone like it was shu- it was all just still internal
+Whisper transcript: So you beat something that felt like it was consuming your life and it was still – you didn't even get to share the joy of, like, beating something with someone. Like, it was all just still internal? Yeah.
+
+
+OUTPUT: For each clip, output ONLY the corrected sequence of word tokens, in speaking
+order, as a JSON list of lowercase strings (no timestamps -- those are re-computed by a
+separate forced-alignment step from the audio, so do not spend effort estimating them).
+Format your entire response as a single JSON object mapping clip index (as a string) to
+that list, and nothing else -- no prose, no markdown fences.
+Example: {"0": ["i", "um", "think", "uh", "yes"], "1": ["the", "the", "cat", "ran"]}

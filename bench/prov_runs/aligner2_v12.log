@@ -1,0 +1,150 @@
+[08:16:57] asking the engine which of 50 clips need signals (starts a container if none is warm)
+[08:16:57] source changed -> redeploying GPU engine (deploy output follows)
+    Building image im-yeeSFAbnWAOE4a98WMQ28I
+    => Step 0: FROM base
+    => Step 1: COPY . /
+    Saving image...
+    Image saved, took 1.47s
+    Built image im-yeeSFAbnWAOE4a98WMQ28I in 3.08s
+[08:17:34] stopped 4 running engine container(s) so no call reaches old code
+[08:17:34] deployed; the first call starts a fresh container that loads the models (~30-60 s)
+[08:18:04] engine code verified (4ace267a, loaded from /root/aligner2)
+[08:18:06] 50 clips need signals
+[08:18:19] signals 1/50  (13s)
+[08:19:31] signals 2/50  (84s)
+[08:19:31] signals 3/50  (85s)
+[08:19:32] signals 4/50  (86s)
+[08:19:35] signals 5/50  (88s)
+[08:19:36] signals 6/50  (89s)
+[08:19:37] signals 7/50  (90s)
+[08:19:37] signals 8/50  (91s)
+[08:19:38] signals 9/50  (92s)
+[08:19:40] signals 10/50  (94s)
+[08:19:42] signals 11/50  (96s)
+[08:19:43] signals 12/50  (97s)
+[08:19:43] signals 13/50  (97s)
+[08:19:46] signals 14/50  (99s)
+[08:19:47] signals 15/50  (101s)
+[08:19:47] signals 16/50  (101s)
+[08:19:48] signals 17/50  (102s)
+[08:19:51] signals 18/50  (105s)
+[08:19:52] signals 19/50  (105s)
+[08:19:53] signals 20/50  (107s)
+[08:19:53] signals 21/50  (107s)
+[08:19:56] signals 22/50  (109s)
+[08:19:57] signals 23/50  (110s)
+[08:19:57] signals 24/50  (111s)
+[08:19:58] signals 25/50  (112s)
+[08:20:01] signals 26/50  (114s)
+[08:20:01] signals 27/50  (115s)
+[08:20:02] signals 28/50  (116s)
+[08:20:03] signals 29/50  (117s)
+[08:20:06] signals 30/50  (120s)
+[08:20:07] signals 31/50  (121s)
+[08:20:08] signals 32/50  (122s)
+[08:20:08] signals 33/50  (122s)
+[08:20:10] signals 34/50  (124s)
+[08:20:11] signals 35/50  (124s)
+[08:20:12] signals 36/50  (126s)
+[08:20:14] signals 37/50  (127s)
+[08:20:15] signals 38/50  (128s)
+[08:20:15] signals 39/50  (129s)
+[08:20:16] signals 40/50  (130s)
+[08:20:17] signals 41/50  (131s)
+[08:20:18] signals 42/50  (132s)
+[08:20:19] signals 43/50  (133s)
+[08:20:21] signals 44/50  (134s)
+[08:20:21] signals 45/50  (135s)
+[08:20:22] signals 46/50  (135s)
+[08:20:22] signals 47/50  (136s)
+[08:20:24] signals 48/50  (138s)
+[08:20:25] signals 49/50  (139s)
+[08:20:26] signals 50/50  (139s)
+Traceback (most recent call last):
+signals: 50 clips computed on the GPU (209s)
+[08:20:26] aligning 50 clips x 10 settings
+[08:20:34] aligned 1/50  (8s)
+[08:20:35] aligned 2/50  (9s)
+[08:20:35] aligned 3/50  (9s)
+[08:20:35] aligned 4/50  (9s)
+[08:20:35] aligned 5/50  (10s)
+[08:20:36] aligned 6/50  (10s)
+[08:20:38] aligned 7/50  (12s)
+[08:20:38] aligned 8/50  (12s)
+[08:20:38] aligned 9/50  (13s)
+[08:20:38] aligned 10/50  (13s)
+[08:20:39] aligned 11/50  (13s)
+[08:20:39] aligned 12/50  (13s)
+[08:20:40] aligned 13/50  (14s)
+[08:20:40] aligned 14/50  (14s)
+[08:20:41] aligned 15/50  (15s)
+[08:20:41] aligned 16/50  (16s)
+[08:20:42] aligned 17/50  (16s)
+[08:20:42] aligned 18/50  (17s)
+[08:20:43] aligned 19/50  (17s)
+[08:20:44] aligned 20/50  (18s)
+[08:20:44] aligned 21/50  (18s)
+[08:20:45] aligned 22/50  (19s)
+[08:20:46] aligned 23/50  (20s)
+[08:20:47] aligned 24/50  (21s)
+[08:20:47] aligned 25/50  (21s)
+[08:20:47] aligned 26/50  (22s)
+[08:20:48] aligned 27/50  (22s)
+[08:20:49] aligned 28/50  (23s)
+[08:20:49] aligned 29/50  (23s)
+[08:20:50] aligned 30/50  (24s)
+[08:20:51] aligned 31/50  (25s)
+[08:20:51] aligned 32/50  (26s)
+[08:20:52] aligned 33/50  (26s)
+[08:20:53] aligned 34/50  (27s)
+[08:20:53] aligned 35/50  (28s)
+[08:20:54] aligned 36/50  (28s)
+[08:20:55] aligned 37/50  (29s)
+[08:20:55] aligned 38/50  (29s)
+[08:20:56] aligned 39/50  (30s)
+[08:20:57] aligned 40/50  (31s)
+[08:20:57] aligned 41/50  (32s)
+[08:20:57] aligned 42/50  (32s)
+[08:20:58] aligned 43/50  (32s)
+[08:20:58] aligned 44/50  (32s)
+[08:20:58] aligned 45/50  (32s)
+[08:20:59] aligned 46/50  (33s)
+[08:20:59] aligned 47/50  (33s)
+[08:21:00] aligned 48/50  (34s)
+[08:21:00] aligned 49/50  (34s)
+[08:21:01] aligned 50/50  (35s)
+Traceback (most recent call last):
+aligned 50 clips x 10 settings on the GPU (35s)
+== aligner2 v12 -- leave-one-set-out; params per held-out set: {'009': {'min_pause': 0.03, 'pause_model': 'word_ref', 'lam': 1000.0, 'cont_model': 'class', 'radius_ms': 10, 'onset_ms': 10, 'ref_mode': 'word', 'theta_db': 20.0, 'clip_anchor_ms': 150, 'unit': 'letter4'}, '026': {'min_pause': 0.03, 'pause_model': 'word_ref', 'lam': 1000.0, 'cont_model': 'class', 'radius_ms': 20, 'onset_ms': 10, 'ref_mode': 'word', 'theta_db': 20.0, 'clip_anchor_ms': 150, 'unit': 'letter4'}, '049': {'min_pause': 0.03, 'pause_model': 'word_ref', 'lam': 1000.0, 'cont_model': 'class', 'radius_ms': 10, 'onset_ms': 10, 'ref_mode': 'word', 'theta_db': 20.0, 'clip_anchor_ms': 150, 'unit': 'letter4'}, 'old14': {'min_pause': 0.03, 'pause_model': 'word_ref', 'lam': 1000.0, 'cont_model': 'class', 'radius_ms': 10, 'onset_ms': 10, 'ref_mode': 'word', 'theta_db': 20.0, 'clip_anchor_ms': 150, 'unit': 'letter4'}}
+set   kind            n     MAE    med     w5    w10    w20   bias
+009   all          1876    23.5   14.0    21%    37%    62%   +1.0
+009   cont         1456    21.4   15.4    18%    34%    60%   +2.9
+009   pause         396    30.6   10.0    33%    50%    68%   -7.0
+009   human         596    30.9   17.4    17%    31%    55%   +3.6
+009   cont_human    499    25.2   15.9    17%    31%    56%   +6.1
+026   all          1946    20.6   13.5    23%    41%    64%   -0.5
+026   cont         1476    20.7   15.5    18%    34%    59%   -0.2
+026   pause         446    20.2    7.0    39%    63%    79%   -2.1
+026   human         432    25.4   15.0    23%    40%    59%   -1.0
+026   cont_human    367    23.1   15.0    22%    40%    59%   -0.2
+026   ear-hit       468   29.1%
+049   all          1826    24.9   15.5    20%    36%    59%   -0.8
+049   cont         1342    24.4   18.1    14%    30%    54%   -0.3
+049   pause         460    26.3    8.8    35%    54%    71%   -1.8
+049   human         546    28.7   19.9    15%    27%    50%   +7.4
+049   cont_human    461    27.2   20.2    13%    25%    50%   +8.6
+049   ear-hit       314   26.4%
+old14 all          1716    26.5   14.5    21%    38%    60%   -5.4
+old14 cont         1210    23.2   16.5    17%    33%    56%   -2.8
+old14 pause         478    34.1   10.0    28%    51%    70%  -13.5
+old14 human         513    28.9   16.6    19%    33%    55%   +3.3
+old14 cont_human    439    24.6   15.9    20%    35%    56%   +6.7
+old14 ear-hit       284   25.4%
+ALL   all          7364    23.8   14.5    21%    38%    61%   -1.3
+ALL   cont         5484    22.4   16.0    17%    33%    57%   +0.1
+ALL   pause        1780    27.8    9.0    34%    54%    72%   -6.2
+ALL   human        2087    28.7   17.6    18%    32%    54%   +3.6
+ALL   cont_human   1766    25.1   16.8    18%    32%    55%   +5.6
+ALL   ear-hit      1066   27.3%
+
+(best single setting on everything, for reference: {'min_pause': 0.03, 'pause_model': 'word_ref', 'lam': 1000.0, 'cont_model': 'class', 'radius_ms': 10, 'onset_ms': 10, 'ref_mode': 'word', 'theta_db': 20.0, 'clip_anchor_ms': 150, 'unit': 'letter4'} -> MAE 23.7, w5 21%)

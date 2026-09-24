@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 290px;
+      margin: 0;
+      padding: 16px;
+      background: #0f1422;
+      color: #e2e8f0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 13px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .title {
+      font-weight: 700;
+      font-size: 14px;
+      color: #00d4ff;
+    }
+    .status-badge {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 7px;
+      border-radius: 4px;
+      background: rgba(0, 255, 136, 0.15);
+      color: #00ff88;
+      border: 1px solid rgba(0, 255, 136, 0.3);
+    }
+    .control-group {
+      margin-bottom: 12px;
+    }
+    label {
+      display: block;
+      font-size: 11px;
+      color: #94a3b8;
+      margin-bottom: 4px;
+    }
+    .slider-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    input[type="range"] {
+      flex: 1;
+      accent-color: #00d4ff;
+    }
+    .value-display {
+      font-weight: 600;
+      color: #00d4ff;
+      width: 32px;
+      text-align: right;
+    }
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #cbd5e1;
+      cursor: pointer;
+      margin-top: 6px;
+    }
+    .checkbox-label input {
+      accent-color: #00d4ff;
+    }
+    .btn-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    button {
+      flex: 1;
+      background: #1e2640;
+      border: 1px solid #334155;
+      color: #ffffff;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    button:hover {
+      background: #2d3748;
+      border-color: #00d4ff;
+      color: #00d4ff;
+    }
+    .btn-danger {
+      background: #451a24;
+      border-color: #f43f5e;
+      color: #fda4af;
+    }
+    .btn-danger:hover {
+      background: #5c1d2e;
+      color: #ffffff;
+    }
+    .footer-note {
+      font-size: 10px;
+      color: #64748b;
+      margin-top: 12px;
+      text-align: center;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="title">🎯 Task Sniper</div>
+    <div class="status-badge" id="badge-status">ARMED</div>
+  </div>
+
+  <div class="control-group">
+    <label>Auto-Reload Frequency</label>
+    <div class="slider-container">
+      <input type="range" id="reload-slider" min="5" max="60" step="1" value="10">
+      <span class="value-display" id="reload-val">10s</span>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="checkbox-label">
+      <input type="checkbox" id="autoreload-toggle" checked>
+      Enable periodic auto-reload
+    </label>
+    <label class="checkbox-label">
+      <input type="checkbox" id="sniper-toggle" checked>
+      Sniper auto-click enabled
+    </label>
+  </div>
+
+  <div class="btn-row">
+    <button id="test-siren-btn">🔊 Test Siren</button>
+    <button id="stop-siren-btn" class="btn-danger">⏹️ Stop Sound</button>
+  </div>
+
+  <div class="footer-note">
+    Active on Labelbox project overview pages. Automatically snipes tasks & plays siren on reload.
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

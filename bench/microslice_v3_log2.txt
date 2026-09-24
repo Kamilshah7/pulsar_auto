@@ -1,0 +1,145 @@
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+clip  0: 9 corroborated-flagged words -> 6 cluster(s)
+  cluster [2,2] 'restrained.' (1 words) -> 4 words: restrained and I think.
+  cluster [10,10] 'much.' (1 words) -> 5 words: much and I think that's.
+  cluster [19,20] 'think, uh,' (2 words) -> 2 words: think [UH]
+  cluster [31,31] 'Um,' (1 words) -> 1 words: [UM]
+  cluster [48,48] 'costume.' (1 words) -> 5 words: And costume. I think it's.
+  cluster [53,55] 'I think, I' (3 words) -> 6 words: I think you I think you.
+clip  1: 15 corroborated-flagged words -> 12 cluster(s)
+  cluster [2,2] 'is,' (1 words) -> 1 words: Isrami.
+  cluster [6,7] 'the thing' (2 words) -> 4 words: The the the thing.
+  cluster [9,9] 'I' (1 words) -> 1 words: [UM]
+  cluster [11,11] 'most,' (1 words) -> 6 words: [UH] [UH] most [UH] I can.
+  cluster [16,16] 'when' (1 words) -> 2 words: [UM] When
+  cluster [32,32] 'then' (1 words) -> 3 words: [UH] [UM] then.
+  cluster [35,35] 'a' (1 words) -> 1 words: [UM]
+  cluster [45,46] 'sheep. And' (2 words) -> 3 words: Sheep. And the.
+  cluster [52,52] 'that's' (1 words) -> 2 words: The top.
+  cluster [57,57] 'at' (1 words) -> 1 words: [UH]
+  cluster [60,61] 'time. It's' (2 words) -> 1 words: [UM]
+  cluster [75,75] 'be' (1 words) -> 1 words: [UH]
+clip  2: 29 corroborated-flagged words -> 20 cluster(s)
+  cluster [0,2] 'The haggling used' (3 words) -> 7 words: Well [UH] the the haggling is the.
+  cluster [6,8] 'with like, it's' (3 words) -> 6 words: And it's like it's kind of.
+  cluster [12,12] 'because' (1 words) -> 1 words: [UH]
+  cluster [17,17] 'in' (1 words) -> 2 words: [UM] [UH]
+  cluster [19,19] 'markets' (1 words) -> 2 words: [UH] markets.
+  cluster [23,24] 'that. They' (2 words) -> 1 words: [UH]
+  cluster [33,33] 'Yeah,' (1 words) -> 2 words: Yeah [UM]
+  cluster [35,35] 'like,' (1 words) -> 3 words: Like you know.
+  cluster [39,39] 'walk' (1 words) -> 6 words: w- I w- I work in.
+  cluster [46,46] 'like,' (1 words) -> 1 words: [UH]
+  cluster [51,51] 'is' (1 words) -> 5 words: This kid like a s-
+  cluster [56,58] 'like that. And' (3 words) -> 1 words: [UH]
+  cluster [61,61] 'like,' (1 words) -> 3 words: So look right.
+  cluster [68,68] 'him' (1 words) -> 1 words: [UM]
+  cluster [70,71] 'money. So' (2 words) -> 1 words: money.
+  cluster [80,81] 'money. And' (2 words) -> 1 words: And
+  cluster [86,86] 'I' (1 words) -> 1 words: [UH]
+  cluster [89,89] 'what?' (1 words) -> 3 words: What my books?
+  cluster [92,92] 'Can't' (1 words) -> 1 words: S-
+  cluster [96,96] '20?' (1 words) -> 4 words: Twenty? I don't like.
+clip  3: 17 corroborated-flagged words -> 15 cluster(s)
+  cluster [1,1] 'mean,' (1 words) -> 1 words: mean
+  cluster [4,5] 'tie it' (2 words) -> 3 words: You're tired today.
+  cluster [11,11] 'imagine' (1 words) -> 3 words: You can imagine.
+  cluster [20,20] 'game,' (1 words) -> 1 words: Game.
+  cluster [30,30] 'so' (1 words) -> 3 words: More expensive so
+  cluster [32,32] 'you're' (1 words) -> 3 words: You you can.
+  cluster [38,39] 'for people' (2 words) -> 6 words: A little room for for people
+  cluster [45,45] 'and' (1 words) -> 1 words: And
+  cluster [49,49] 'price,' (1 words) -> 1 words: [UH]
+  cluster [54,54] 'and' (1 words) -> 4 words: The item cheaper and
+  cluster [56,56] 'like,' (1 words) -> 3 words: Well, like what?
+  cluster [59,59] 'got' (1 words) -> 1 words: got.
+  cluster [61,61] 'at' (1 words) -> 3 words: [UH] I don't.
+  cluster [64,64] 'Share,' (1 words) -> 2 words: Share to.
+  cluster [68,68] 'Yeah.' (1 words) -> 3 words: Tell your friends.
+clip  4: 12 corroborated-flagged words -> 7 cluster(s)
+  cluster [0,0] 'It'd' (1 words) -> 1 words: [UH]
+  cluster [4,4] 'Noire,' (1 words) -> 2 words: In war.
+  cluster [7,7] 'haggling.' (1 words) -> 3 words: You start to.
+  cluster [11,13] 'read the character' (3 words) -> 8 words: Like [UH] read read the read the characters.
+  cluster [16,16] 'oh,' (1 words) -> 2 words: Like, oh.
+  cluster [32,32] 'sad?' (1 words) -> 4 words: It's sad and it's.
+  cluster [34,37] 'then see what they're' (4 words) -> 5 words: Let's see what they're gonna.
+clip  5: 7 corroborated-flagged words -> 7 cluster(s)
+  cluster [3,3] 'is' (1 words) -> 7 words: The mechanic is the mechanic is gonna.
+  cluster [8,8] 'different' (1 words) -> 5 words: The m- [UH] the difference.
+  cluster [19,19] 'needs' (1 words) -> 1 words: [UH]
+  cluster [21,21] 'signify' (1 words) -> 3 words: Simple [UH] signify.
+  cluster [26,26] 'this' (1 words) -> 2 words: [UH] this.
+  cluster [32,32] 'And,' (1 words) -> 1 words: And
+  cluster [40,40] 'conversation,' (1 words) -> 1 words: conversation.
+clip  6: 5 corroborated-flagged words -> 4 cluster(s)
+  cluster [0,0] 'There' (1 words) -> 1 words: [laughter]
+  cluster [2,2] 'sad' (1 words) -> 5 words: [UH] [UH] s- s- s-
+  cluster [10,10] 'Lady' (1 words) -> 7 words: [UH] [UH] a hilarity of Lady G-
+  cluster [18,19] 'died. Was' (2 words) -> 1 words: [UH]
+clip  7: 13 corroborated-flagged words -> 10 cluster(s)
+  cluster [3,5] 'Yeah, perfect, perfect.' (3 words) -> 6 words: Yeah. This per- per- perfect, perfect,
+  cluster [7,7] 'I' (1 words) -> 2 words: I I.
+  cluster [9,9] 'when' (1 words) -> 1 words: [UH]
+  cluster [11,11] 'signed' (1 words) -> 2 words: Any sign?
+  cluster [14,15] 'that coach' (2 words) -> 2 words: The coach.
+  cluster [21,21] 'to' (1 words) -> 1 words: [UM]
+  cluster [24,24] 'debut,' (1 words) -> 4 words: debut, which is a.
+  cluster [26,26] 'is' (1 words) -> 1 words: is
+  [warn] reslice failed: 'NoneType' object is not iterable
+  cluster [34,34] 'goalkeeper' (1 words) -> 1 words: Goalkeeper.
+clip  8: 13 corroborated-flagged words -> 11 cluster(s)
+  cluster [0,0] 'Yeah,' (1 words) -> 3 words: Yeah. I I
+  cluster [7,7] 'column' (1 words) -> 2 words: And column
+  cluster [16,16] 'who' (1 words) -> 1 words: [UH]
+  cluster [22,22] 'and' (1 words) -> 1 words: And
+  cluster [25,25] 'plucked' (1 words) -> 5 words: Have you ever looked at.
+  cluster [29,31] 'to say, and' (3 words) -> 5 words: The courage to say and.
+  cluster [40,40] 'him,' (1 words) -> 1 words: him.
+  cluster [48,48] 'the' (1 words) -> 1 words: [UH]
+  cluster [50,50] 'because' (1 words) -> 3 words: [UM] because of.
+  cluster [53,53] 'words,' (1 words) -> 3 words: These words each.
+  cluster [64,64] 'Which' (1 words) -> 1 words: We've.
+clip  9: 8 corroborated-flagged words -> 6 cluster(s)
+  cluster [0,1] 'I feel' (2 words) -> 5 words: I I I I feel.
+  cluster [9,9] 'took' (1 words) -> 1 words: took.
+  cluster [11,11] 'turn' (1 words) -> 1 words: turn.
+  cluster [15,16] 'because Andy' (2 words) -> 4 words: And saying, cause Andy.
+  cluster [20,20] 'and' (1 words) -> 1 words: [UM]
+  cluster [27,27] 'I' (1 words) -> 3 words: I I I
+clip 10: 4 corroborated-flagged words -> 4 cluster(s)
+  cluster [0,0] 'Oh,' (1 words) -> 3 words: [UH] Oh, that.
+  cluster [9,9] 'is,' (1 words) -> 1 words: is
+  cluster [21,21] 'first?' (1 words) -> 6 words: Who came first, who came second?
+  cluster [24,24] 'second?' (1 words) -> 3 words: Second became last.
+clip 11: 10 corroborated-flagged words -> 8 cluster(s)
+  cluster [1,1] 'time' (1 words) -> 1 words: time.
+  cluster [4,4] 'sorry.' (1 words) -> 1 words: sorry.
+  cluster [10,10] 'say,' (1 words) -> 1 words: [UM]
+  cluster [18,18] 'was' (1 words) -> 1 words: was.
+  cluster [21,23] 'specific and, you' (3 words) -> 4 words: Specific and and you
+  cluster [26,26] 'while' (1 words) -> 2 words: And while.
+  cluster [30,30] 'shoulder.' (1 words) -> 4 words: shoulder, but then I.
+  cluster [46,46] 'could' (1 words) -> 1 words: could
+clip 12: 10 corroborated-flagged words -> 10 cluster(s)
+  cluster [1,1] 'she' (1 words) -> 1 words: She.
+  cluster [11,11] 'doing' (1 words) -> 2 words: So dur-
+  cluster [19,19] 'but' (1 words) -> 3 words: Doing it, but.
+  cluster [36,36] 'do' (1 words) -> 5 words: Allowed to [UH] [UH] do.
+  cluster [45,45] 'again' (1 words) -> 2 words: In again.
+  cluster [47,47] 'too' (1 words) -> 2 words: [UH] two.
+  cluster [51,51] 'to' (1 words) -> 3 words: Too young to
+  cluster [60,60] 'like' (1 words) -> 2 words: But like.
+  cluster [63,63] 'can' (1 words) -> 1 words: can.
+  cluster [71,71] 'too' (1 words) -> 3 words: That happens too.
+clip 13: 5 corroborated-flagged words -> 4 cluster(s)
+  cluster [5,5] 'felt' (1 words) -> 3 words: F- that felt.
+  cluster [14,14] 'was' (1 words) -> 6 words: And it was and it was.
+  cluster [30,30] 'someone.' (1 words) -> 1 words: [UM]
+  cluster [32,33] 'it was' (2 words) -> 5 words: It was sh- it was
+
+Total flagged words across all clips: 157
+Wrote output/microslice_v3.json

@@ -1,0 +1,6652 @@
+{
+ "0": {
+  "filename": "syndigate_podcasts_29567fe75c525ab69423b057a86708a7_930.0_1230.0-sortformer-14.wav",
+  "n_tokens": 117,
+  "reviewed": true,
+  "tokens": [
+   {
+    "text": "uh",
+    "start": 0.002,
+    "end": 0.125,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "we",
+    "start": 0.126,
+    "end": 0.301,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "didn't",
+    "start": 0.303,
+    "end": 0.476,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "say",
+    "start": 0.478,
+    "end": 0.632,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "it",
+    "start": 0.634,
+    "end": 0.741,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "on",
+    "start": 0.743,
+    "end": 0.85,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "the",
+    "start": 0.852,
+    "end": 0.931,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "podcast",
+    "start": 0.933,
+    "end": 1.54,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "so",
+    "start": 1.542,
+    "end": 1.7,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "much",
+    "start": 1.702,
+    "end": 2.031,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "but",
+    "start": 2.05,
+    "end": 2.274,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "later",
+    "start": 2.276,
+    "end": 2.603,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "in",
+    "start": 2.605,
+    "end": 2.719,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "the",
+    "start": 2.721,
+    "end": 2.941,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "week",
+    "start": 2.943,
+    "end": 3.212,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "uh",
+    "start": 3.793,
+    "end": 4.125,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "i've",
+    "start": 4.26,
+    "end": 4.3872,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "said",
+    "start": 4.3882,
+    "end": 4.642,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "this",
+    "start": 4.644,
+    "end": 4.872,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "on",
+    "start": 4.874,
+    "end": 5.199,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "you",
+    "start": 5.201,
+    "end": 5.279,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "know",
+    "start": 5.281,
+    "end": 5.424,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "talked",
+    "start": 5.455,
+    "end": 5.6513,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "about",
+    "start": 5.6523,
+    "end": 5.798,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "it",
+    "start": 5.801,
+    "end": 5.928,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "on",
+    "start": 5.93,
+    "end": 5.9899,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "the",
+    "start": 5.9909,
+    "end": 6.031,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "site",
+    "start": 6.032,
+    "end": 6.279,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "a",
+    "start": 6.281,
+    "end": 6.3219,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "little",
+    "start": 6.3229,
+    "end": 6.515,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "bit",
+    "start": 6.517,
+    "end": 6.6846,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "and",
+    "start": 6.6856,
+    "end": 6.9104,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "and",
+    "start": 6.9114,
+    "end": 7.094,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 7.095,
+    "end": 7.2602,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "said",
+    "start": 7.2612,
+    "end": 7.465,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "it",
+    "start": 7.467,
+    "end": 7.565,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "elsewhere",
+    "start": 7.567,
+    "end": 7.957,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "like",
+    "start": 7.96,
+    "end": 8.136,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "(())",
+    "start": 8.771,
+    "end": 9.13,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "only",
+    "start": 9.168,
+    "end": 9.489,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "chance",
+    "start": 9.491,
+    "end": 9.866,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "i",
+    "start": 9.868,
+    "end": 10.04,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "thought",
+    "start": 10.0766,
+    "end": 10.256,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "baylor",
+    "start": 10.258,
+    "end": 10.607,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "really",
+    "start": 10.609,
+    "end": 10.879,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "had",
+    "start": 10.881,
+    "end": 11.199,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "was",
+    "start": 11.201,
+    "end": 11.668,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "maybe",
+    "start": 12.101,
+    "end": 12.518,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "they",
+    "start": 12.52,
+    "end": 12.63,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "could",
+    "start": 12.632,
+    "end": 12.79,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "take",
+    "start": 12.792,
+    "end": 12.9709,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "some",
+    "start": 12.9719,
+    "end": 13.131,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "shots",
+    "start": 13.133,
+    "end": 13.491,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "down",
+    "start": 13.493,
+    "end": 13.679,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "the",
+    "start": 13.681,
+    "end": 13.7537,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "field",
+    "start": 13.7547,
+    "end": 14.037,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "cause",
+    "start": 14.038,
+    "end": 14.1864,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "((they))",
+    "start": 14.1874,
+    "end": 14.5802,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "they",
+    "start": 14.5812,
+    "end": 14.79,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "do",
+    "start": 14.822,
+    "end": 15.033,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "take",
+    "start": 15.039,
+    "end": 15.256,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "shots",
+    "start": 15.258,
+    "end": 15.778,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that's",
+    "start": 15.78,
+    "end": 15.975,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "one",
+    "start": 15.977,
+    "end": 16.163,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "of",
+    "start": 16.165,
+    "end": 16.211,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "the",
+    "start": 16.213,
+    "end": 16.346,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "things",
+    "start": 16.348,
+    "end": 16.617,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that",
+    "start": 16.619,
+    "end": 16.792,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "they",
+    "start": 16.794,
+    "end": 17.0266,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "are",
+    "start": 17.0276,
+    "end": 17.2435,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "kind",
+    "start": 17.554,
+    "end": 17.6686,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "of",
+    "start": 17.6696,
+    "end": 17.7364,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 17.7374,
+    "end": 17.7792,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "signature",
+    "start": 17.7802,
+    "end": 18.2746,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "in",
+    "start": 18.2756,
+    "end": 18.3389,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "their",
+    "start": 18.3399,
+    "end": 18.5053,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "offense",
+    "start": 18.5063,
+    "end": 18.849,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "like",
+    "start": 18.851,
+    "end": 18.974,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "they",
+    "start": 18.976,
+    "end": 19.093,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "will",
+    "start": 19.095,
+    "end": 19.304,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "throw",
+    "start": 19.306,
+    "end": 19.4797,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "the",
+    "start": 19.4807,
+    "end": 19.5305,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "ball",
+    "start": 19.5315,
+    "end": 19.792,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "deep",
+    "start": 19.794,
+    "end": 20.065,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "more",
+    "start": 20.201,
+    "end": 20.3962,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "often",
+    "start": 20.3972,
+    "end": 20.574,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "than",
+    "start": 20.576,
+    "end": 20.679,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "they're",
+    "start": 20.681,
+    "end": 20.7996,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "not",
+    "start": 20.8006,
+    "end": 20.965,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "to",
+    "start": 20.967,
+    "end": 21.0724,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "throw",
+    "start": 21.0734,
+    "end": 21.254,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "like",
+    "start": 21.256,
+    "end": 21.3656,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "they",
+    "start": 21.669,
+    "end": 21.7634,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "don't",
+    "start": 21.7644,
+    "end": 21.865,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "have",
+    "start": 21.866,
+    "end": 22.0302,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "much",
+    "start": 22.0312,
+    "end": 22.251,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "of",
+    "start": 22.253,
+    "end": 22.3371,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "an",
+    "start": 22.3381,
+    "end": 22.428,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "intermediate",
+    "start": 22.43,
+    "end": 22.957,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "game",
+    "start": 22.959,
+    "end": 23.156,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "like",
+    "start": 23.158,
+    "end": 23.285,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "they're",
+    "start": 23.3163,
+    "end": 23.4482,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "usually",
+    "start": 23.4492,
+    "end": 23.756,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "either",
+    "start": 23.758,
+    "end": 24.064,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "it's",
+    "start": 24.342,
+    "end": 24.468,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "usually",
+    "start": 24.47,
+    "end": 24.6389,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "either",
+    "start": 24.6399,
+    "end": 24.757,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "screens",
+    "start": 24.759,
+    "end": 25.268,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "or",
+    "start": 25.27,
+    "end": 25.362,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "they're",
+    "start": 25.364,
+    "end": 25.5086,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "taking",
+    "start": 25.5096,
+    "end": 25.76,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "some",
+    "start": 25.762,
+    "end": 25.988,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "kinda",
+    "start": 25.99,
+    "end": 26.3097,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "intermediate",
+    "start": 26.3429,
+    "end": 26.8072,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "to",
+    "start": 26.8082,
+    "end": 26.9,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "deep",
+    "start": 26.902,
+    "end": 27.075,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "shot",
+    "start": 27.076,
+    "end": 27.5423,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   }
+  ]
+ },
+ "1": {
+  "filename": "syndigate_podcasts_295fa16570105103b5706e4f2195985d_1840.0_2030.0-sortformer-8.wav",
+  "n_tokens": 63,
+  "reviewed": true,
+  "tokens": [
+   {
+    "text": "uh",
+    "start": 0.1215,
+    "end": 0.4527,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "so",
+    "start": 0.4537,
+    "end": 0.6251,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "please",
+    "start": 0.6261,
+    "end": 0.999,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "to",
+    "start": 1.079,
+    "end": 1.1848,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "our",
+    "start": 1.1858,
+    "end": 1.34,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "audience",
+    "start": 1.342,
+    "end": 1.677,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "please",
+    "start": 1.679,
+    "end": 1.8423,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "join",
+    "start": 1.8433,
+    "end": 2.126,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "us",
+    "start": 2.127,
+    "end": 2.447,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "uh",
+    "start": 2.448,
+    "end": 2.6828,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "again",
+    "start": 2.6838,
+    "end": 2.922,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "on",
+    "start": 2.924,
+    "end": 3.04,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "monday",
+    "start": 3.042,
+    "end": 3.6057,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "senior",
+    "start": 3.793,
+    "end": 4.2565,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "uh",
+    "start": 4.2575,
+    "end": 4.393,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "barron's",
+    "start": 4.394,
+    "end": 4.671,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "senior",
+    "start": 4.673,
+    "end": 4.8868,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "managing",
+    "start": 4.8878,
+    "end": 5.239,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "editor",
+    "start": 5.241,
+    "end": 5.642,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "lauren",
+    "start": 5.694,
+    "end": 6.013,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "rublin",
+    "start": 6.015,
+    "end": 6.579,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 6.837,
+    "end": 6.954,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "deputy",
+    "start": 6.956,
+    "end": 7.419,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "editor",
+    "start": 7.431,
+    "end": 7.925,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "ben",
+    "start": 7.966,
+    "end": 8.163,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "levisohn",
+    "start": 8.165,
+    "end": 8.723,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "will",
+    "start": 8.725,
+    "end": 8.9966,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "talk",
+    "start": 8.9976,
+    "end": 9.3791,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "with",
+    "start": 9.4663,
+    "end": 9.775,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "thomas",
+    "start": 9.933,
+    "end": 10.308,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "kennedy",
+    "start": 10.31,
+    "end": 10.7038,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "chief",
+    "start": 10.7048,
+    "end": 10.9798,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "investment",
+    "start": 10.9808,
+    "end": 11.401,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "strategist",
+    "start": 11.403,
+    "end": 11.976,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "of",
+    "start": 12.019,
+    "end": 12.132,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "global",
+    "start": 12.253,
+    "end": 12.516,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "wealth",
+    "start": 12.517,
+    "end": 12.771,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "management",
+    "start": 12.773,
+    "end": 13.271,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "at",
+    "start": 13.273,
+    "end": 13.417,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "j",
+    "start": 13.419,
+    "end": 13.613,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "p",
+    "start": 13.615,
+    "end": 13.7958,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "morgan",
+    "start": 13.7968,
+    "end": 14.319,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "about",
+    "start": 14.583,
+    "end": 14.793,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "the",
+    "start": 14.795,
+    "end": 14.906,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "outlook",
+    "start": 14.908,
+    "end": 15.297,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "for",
+    "start": 15.416,
+    "end": 15.593,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "the",
+    "start": 15.595,
+    "end": 15.696,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "economy",
+    "start": 15.698,
+    "end": 16.251,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 16.254,
+    "end": 16.425,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "financial",
+    "start": 16.427,
+    "end": 16.867,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "markets",
+    "start": 16.869,
+    "end": 17.273,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 17.615,
+    "end": 17.778,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "investment",
+    "start": 17.78,
+    "end": 18.21,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "strategies",
+    "start": 18.212,
+    "end": 18.834,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "thank",
+    "start": 19.162,
+    "end": 19.308,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "you",
+    "start": 19.31,
+    "end": 19.425,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "for",
+    "start": 19.427,
+    "end": 19.548,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "listening",
+    "start": 19.55,
+    "end": 19.948,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "all",
+    "start": 19.95,
+    "end": 20.299,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "have",
+    "start": 20.301,
+    "end": 20.4795,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 20.4805,
+    "end": 20.5453,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "great",
+    "start": 20.5463,
+    "end": 20.769,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "weekend",
+    "start": 20.771,
+    "end": 21.176,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   }
+  ]
+ },
+ "2": {
+  "filename": "syndigate_podcasts_2b4fac71b9a5572f850cc34f4df5d740_1670.0_1970.0-sortformer-23.wav",
+  "n_tokens": 93,
+  "reviewed": true,
+  "tokens": [
+   {
+    "text": "u",
+    "start": 0.164,
+    "end": 0.2601,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "f",
+    "start": 0.2611,
+    "end": 0.3279,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "c",
+    "start": 0.3289,
+    "end": 0.452,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "is",
+    "start": 0.453,
+    "end": 0.5072,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "gon'",
+    "start": 0.5082,
+    "end": 0.6346,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "be",
+    "start": 0.6356,
+    "end": 0.712,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "left",
+    "start": 0.714,
+    "end": 0.882,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "behind",
+    "start": 0.884,
+    "end": 1.3183,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "unless",
+    "start": 1.3193,
+    "end": 1.623,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "people",
+    "start": 1.625,
+    "end": 2.119,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "like",
+    "start": 2.153,
+    "end": 2.3533,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "the",
+    "start": 2.3543,
+    "end": 2.512,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "boosters",
+    "start": 2.514,
+    "end": 2.883,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "get",
+    "start": 2.885,
+    "end": 3.033,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "behind",
+    "start": 3.034,
+    "end": 3.47,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "this",
+    "start": 3.472,
+    "end": 3.874,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 3.954,
+    "end": 4.2216,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "uh",
+    "start": 4.2226,
+    "end": 4.505,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "so",
+    "start": 5.155,
+    "end": 5.303,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "there's",
+    "start": 5.305,
+    "end": 5.459,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "another",
+    "start": 5.46,
+    "end": 5.7296,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "option",
+    "start": 5.7306,
+    "end": 6.143,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 6.491,
+    "end": 6.776,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "uh",
+    "start": 6.777,
+    "end": 7.194,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "uh",
+    "start": 7.2771,
+    "end": 7.3253,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "you",
+    "start": 7.3263,
+    "end": 7.3872,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "know",
+    "start": 7.3882,
+    "end": 7.4529,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "i",
+    "start": 7.4539,
+    "end": 7.6599,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "i",
+    "start": 8.141,
+    "end": 8.2464,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "like",
+    "start": 8.2474,
+    "end": 8.405,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "those",
+    "start": 8.407,
+    "end": 8.5674,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "guys",
+    "start": 8.5684,
+    "end": 8.826,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "i",
+    "start": 8.828,
+    "end": 8.8757,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "like",
+    "start": 8.8767,
+    "end": 8.988,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "the",
+    "start": 8.99,
+    "end": 9.068,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "guys",
+    "start": 9.07,
+    "end": 9.272,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that",
+    "start": 9.274,
+    "end": 9.3424,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "run",
+    "start": 9.3434,
+    "end": 9.543,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "this",
+    "start": 9.545,
+    "end": 9.693,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "one",
+    "start": 9.696,
+    "end": 10.0,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "um",
+    "start": 10.156,
+    "end": 10.543,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "so",
+    "start": 10.567,
+    "end": 10.675,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "a",
+    "start": 10.677,
+    "end": 10.72,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "little",
+    "start": 10.722,
+    "end": 10.919,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "different",
+    "start": 10.921,
+    "end": 11.127,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "feel",
+    "start": 11.128,
+    "end": 11.4283,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 11.4293,
+    "end": 11.481,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "little",
+    "start": 11.483,
+    "end": 11.71,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "different",
+    "start": 11.711,
+    "end": 11.9405,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "approach",
+    "start": 11.9415,
+    "end": 12.5229,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "and",
+    "start": 13.192,
+    "end": 13.319,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that",
+    "start": 13.32,
+    "end": 13.5249,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "it",
+    "start": 13.5259,
+    "end": 13.6127,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "was",
+    "start": 13.6137,
+    "end": 13.8121,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "a",
+    "start": 13.8131,
+    "end": 13.8553,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "was",
+    "start": 13.8563,
+    "end": 13.9905,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "at",
+    "start": 13.9915,
+    "end": 14.208,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "a",
+    "start": 14.267,
+    "end": 14.495,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "private",
+    "start": 14.525,
+    "end": 14.825,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "home",
+    "start": 14.826,
+    "end": 15.027,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "in",
+    "start": 15.028,
+    "end": 15.113,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "manhattan",
+    "start": 15.115,
+    "end": 15.45,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "beach",
+    "start": 15.452,
+    "end": 15.717,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "man",
+    "start": 15.847,
+    "end": 16.139,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "they",
+    "start": 16.141,
+    "end": 16.2398,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "had",
+    "start": 16.2408,
+    "end": 16.3146,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 16.3233,
+    "end": 16.4266,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "sushi",
+    "start": 16.4276,
+    "end": 16.849,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "bar",
+    "start": 16.851,
+    "end": 17.148,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "to",
+    "start": 17.187,
+    "end": 17.314,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "die",
+    "start": 17.316,
+    "end": 17.5433,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "for",
+    "start": 17.5443,
+    "end": 17.786,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "they",
+    "start": 17.788,
+    "end": 17.895,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "had",
+    "start": 17.897,
+    "end": 17.949,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "sushi",
+    "start": 17.951,
+    "end": 18.343,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "chef",
+    "start": 18.345,
+    "end": 18.694,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "there",
+    "start": 18.696,
+    "end": 19.022,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "it",
+    "start": 19.024,
+    "end": 19.098,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "was",
+    "start": 19.099,
+    "end": 19.252,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "really",
+    "start": 19.254,
+    "end": 19.506,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "good",
+    "start": 19.508,
+    "end": 19.772,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "uh",
+    "start": 20.342,
+    "end": 20.6,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "huge",
+    "start": 20.601,
+    "end": 20.916,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "tower",
+    "start": 20.918,
+    "end": 21.263,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "like",
+    "start": 21.264,
+    "end": 21.4725,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 21.4735,
+    "end": 21.548,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "charcuterie",
+    "start": 21.55,
+    "end": 22.108,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "board",
+    "start": 22.11,
+    "end": 22.352,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "tower",
+    "start": 22.354,
+    "end": 22.875,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "great",
+    "start": 23.385,
+    "end": 23.588,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "desserts",
+    "start": 23.59,
+    "end": 24.2774,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "open",
+    "start": 24.83,
+    "end": 25.103,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "bar",
+    "start": 25.105,
+    "end": 25.492,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   }
+  ]
+ },
+ "3": {
+  "filename": "syndigate_podcasts_2c10481a206e59efaa1a72adcf7cc3d1_820.0_1070.0-sortformer-11.wav",
+  "n_tokens": 85,
+  "reviewed": true,
+  "tokens": [
+   {
+    "text": "and",
+    "start": 0.0,
+    "end": 0.089,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "yet",
+    "start": 0.091,
+    "end": 0.297,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "they",
+    "start": 0.299,
+    "end": 0.4793,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "still",
+    "start": 0.4803,
+    "end": 0.91,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "didn't",
+    "start": 0.912,
+    "end": 1.287,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "report",
+    "start": 1.525,
+    "end": 1.963,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that",
+    "start": 1.965,
+    "end": 2.237,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "to",
+    "start": 2.239,
+    "end": 2.428,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "the",
+    "start": 2.43,
+    "end": 2.535,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "parents",
+    "start": 2.624,
+    "end": 3.0359,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "they",
+    "start": 3.0369,
+    "end": 3.143,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "didn't",
+    "start": 3.145,
+    "end": 3.389,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "think",
+    "start": 3.391,
+    "end": 3.552,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "they",
+    "start": 3.554,
+    "end": 3.702,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "had",
+    "start": 3.704,
+    "end": 3.8687,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 3.8697,
+    "end": 4.113,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "responsibility",
+    "start": 4.468,
+    "end": 5.404,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "to",
+    "start": 5.407,
+    "end": 5.55,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "say",
+    "start": 5.552,
+    "end": 5.8183,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "oh",
+    "start": 5.8193,
+    "end": 5.963,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "by",
+    "start": 5.966,
+    "end": 6.1211,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "the",
+    "start": 6.1221,
+    "end": 6.1855,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "way",
+    "start": 6.1865,
+    "end": 6.401,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "your",
+    "start": 6.775,
+    "end": 6.943,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "kid",
+    "start": 6.9793,
+    "end": 7.223,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "passed",
+    "start": 7.277,
+    "end": 7.589,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "out",
+    "start": 7.591,
+    "end": 7.789,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "today",
+    "start": 7.8121,
+    "end": 8.271,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "at",
+    "start": 8.272,
+    "end": 8.409,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "p",
+    "start": 8.491,
+    "end": 8.685,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "e",
+    "start": 8.687,
+    "end": 9.148,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that's",
+    "start": 9.776,
+    "end": 10.093,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "because",
+    "start": 10.095,
+    "end": 10.756,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "uh",
+    "start": 10.8079,
+    "end": 11.0139,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "we",
+    "start": 11.0149,
+    "end": 11.2268,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "allowed",
+    "start": 11.2278,
+    "end": 11.58,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "them",
+    "start": 11.582,
+    "end": 11.747,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "to",
+    "start": 11.749,
+    "end": 11.839,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "do",
+    "start": 11.841,
+    "end": 12.024,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "something",
+    "start": 12.026,
+    "end": 12.418,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that",
+    "start": 12.42,
+    "end": 12.528,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "you",
+    "start": 12.53,
+    "end": 12.65,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "didn't",
+    "start": 12.652,
+    "end": 12.889,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "know",
+    "start": 12.891,
+    "end": 13.0488,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "anything",
+    "start": 13.0498,
+    "end": 13.394,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "about",
+    "start": 13.396,
+    "end": 13.834,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "which",
+    "start": 13.878,
+    "end": 14.167,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "was",
+    "start": 14.169,
+    "end": 14.556,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "basically",
+    "start": 14.943,
+    "end": 15.411,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "wear",
+    "start": 15.629,
+    "end": 15.9539,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 15.9549,
+    "end": 16.222,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "a",
+    "start": 16.3111,
+    "end": 16.6316,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "the",
+    "start": 16.8147,
+    "end": 16.8956,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "you",
+    "start": 16.8966,
+    "end": 16.9786,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "know",
+    "start": 16.9796,
+    "end": 17.1633,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "a",
+    "start": 17.1643,
+    "end": 17.296,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "corset",
+    "start": 17.751,
+    "end": 18.188,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "around",
+    "start": 18.19,
+    "end": 18.513,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "their",
+    "start": 18.515,
+    "end": 18.74,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "chest",
+    "start": 18.741,
+    "end": 19.2753,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "i",
+    "start": 19.6073,
+    "end": 19.8185,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "it",
+    "start": 19.8195,
+    "end": 20.0311,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "i-",
+    "start": 20.1513,
+    "end": 20.266,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "this",
+    "start": 20.346,
+    "end": 20.651,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "is",
+    "start": 20.653,
+    "end": 20.844,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "just",
+    "start": 21.197,
+    "end": 21.4713,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "insane",
+    "start": 21.4723,
+    "end": 21.8806,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "as",
+    "start": 21.8816,
+    "end": 22.0418,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 22.0418,
+    "end": 22.107,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "parent",
+    "start": 22.1341,
+    "end": 22.491,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "i",
+    "start": 22.592,
+    "end": 22.749,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "i",
+    "start": 22.764,
+    "end": 22.848,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "don't",
+    "start": 22.85,
+    "end": 23.064,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "understand",
+    "start": 23.066,
+    "end": 23.6699,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "it",
+    "start": 23.6709,
+    "end": 23.788,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "at",
+    "start": 23.79,
+    "end": 23.9429,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "all",
+    "start": 23.9439,
+    "end": 24.308,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "uh",
+    "start": 24.624,
+    "end": 24.7164,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "laura's",
+    "start": 24.7174,
+    "end": 25.119,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "online",
+    "start": 25.121,
+    "end": 25.528,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "too",
+    "start": 25.53,
+    "end": 25.6717,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "laura",
+    "start": 25.6727,
+    "end": 25.958,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "what's",
+    "start": 25.96,
+    "end": 26.124,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "your",
+    "start": 26.126,
+    "end": 26.249,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "take",
+    "start": 26.25,
+    "end": 26.425,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   }
+  ]
+ },
+ "4": {
+  "filename": "syndigate_podcasts_2c7fd69a289d57378d163db7b602f510_2340.0_2590.0-sortformer-12.wav",
+  "n_tokens": 71,
+  "reviewed": true,
+  "tokens": [
+   {
+    "text": "and",
+    "start": 0.028,
+    "end": 0.115,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "so",
+    "start": 0.117,
+    "end": 0.676,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "so",
+    "start": 0.8235,
+    "end": 1.0129,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "i",
+    "start": 1.0139,
+    "end": 1.0608,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "was",
+    "start": 1.0618,
+    "end": 1.1118,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "just",
+    "start": 1.1128,
+    "end": 1.292,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "really",
+    "start": 1.294,
+    "end": 1.534,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "quick",
+    "start": 1.536,
+    "end": 1.8165,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "uh",
+    "start": 1.9195,
+    "end": 2.0778,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "there",
+    "start": 2.141,
+    "end": 2.4681,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "h-",
+    "start": 2.4691,
+    "end": 2.566,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "is",
+    "start": 2.582,
+    "end": 2.862,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "kind",
+    "start": 2.897,
+    "end": 3.1426,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "of",
+    "start": 3.1436,
+    "end": 3.2665,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 3.2675,
+    "end": 3.404,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "concern",
+    "start": 3.48,
+    "end": 4.103,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "though",
+    "start": 4.104,
+    "end": 4.369,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "amongst",
+    "start": 4.4,
+    "end": 4.903,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "some",
+    "start": 4.905,
+    "end": 5.138,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "people",
+    "start": 5.139,
+    "end": 5.5679,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "that",
+    "start": 5.5689,
+    "end": 5.769,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "aren't",
+    "start": 6.122,
+    "end": 6.463,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "big",
+    "start": 6.464,
+    "end": 6.636,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "murkowski",
+    "start": 6.638,
+    "end": 7.298,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "fans",
+    "start": 7.3,
+    "end": 7.7736,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "and",
+    "start": 7.7746,
+    "end": 7.968,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "i",
+    "start": 7.97,
+    "end": 8.085,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "know",
+    "start": 8.087,
+    "end": 8.3409,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "them",
+    "start": 8.3419,
+    "end": 8.583,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 8.585,
+    "end": 8.697,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "they",
+    "start": 8.699,
+    "end": 8.89,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "they",
+    "start": 8.9883,
+    "end": 9.0986,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "don't",
+    "start": 9.0996,
+    "end": 9.227,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "like",
+    "start": 9.229,
+    "end": 9.369,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "murkowski",
+    "start": 9.371,
+    "end": 10.043,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that",
+    "start": 10.505,
+    "end": 10.838,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "the",
+    "start": 10.993,
+    "end": 11.269,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "republicans",
+    "start": 11.271,
+    "end": 11.907,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "are",
+    "start": 11.909,
+    "end": 11.999,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "gonna",
+    "start": 12.001,
+    "end": 12.1839,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "divide",
+    "start": 12.1849,
+    "end": 12.563,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "themselves",
+    "start": 12.565,
+    "end": 13.439,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 13.441,
+    "end": 13.611,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that",
+    "start": 13.613,
+    "end": 13.842,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "the",
+    "start": 14.257,
+    "end": 14.353,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "democrat",
+    "start": 14.355,
+    "end": 14.916,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "will",
+    "start": 14.918,
+    "end": 15.141,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "win",
+    "start": 15.143,
+    "end": 15.807,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "because",
+    "start": 16.111,
+    "end": 16.5368,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "alaska",
+    "start": 16.665,
+    "end": 17.1936,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "has",
+    "start": 17.1946,
+    "end": 17.484,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "some",
+    "start": 17.486,
+    "end": 17.69,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "democrat",
+    "start": 17.692,
+    "end": 18.186,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "sympathies",
+    "start": 18.204,
+    "end": 18.975,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "is",
+    "start": 19.565,
+    "end": 19.706,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "there",
+    "start": 19.708,
+    "end": 19.8204,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "any",
+    "start": 19.8214,
+    "end": 20.002,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "truth",
+    "start": 20.034,
+    "end": 20.367,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "to",
+    "start": 20.369,
+    "end": 20.477,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that",
+    "start": 20.479,
+    "end": 20.677,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "what",
+    "start": 20.679,
+    "end": 20.872,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "what",
+    "start": 20.878,
+    "end": 21.053,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "is",
+    "start": 21.055,
+    "end": 21.178,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "your",
+    "start": 21.18,
+    "end": 21.343,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "what",
+    "start": 21.354,
+    "end": 21.515,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "is",
+    "start": 21.517,
+    "end": 21.653,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "your",
+    "start": 21.655,
+    "end": 21.849,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "uh",
+    "start": 21.8885,
+    "end": 21.9717,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "opinion",
+    "start": 22.029,
+    "end": 22.3215,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "of",
+    "start": 22.3225,
+    "end": 22.423,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that",
+    "start": 22.425,
+    "end": 22.614,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   }
+  ]
+ },
+ "5": {
+  "filename": "syndigate_podcasts_2cd0712bd71e5e119d198f372bb34663_2330.0_2630.0-sortformer-20.wav",
+  "n_tokens": 75,
+  "reviewed": true,
+  "tokens": [
+   {
+    "text": "uh",
+    "start": 0.002,
+    "end": 0.18,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "it's",
+    "start": 0.181,
+    "end": 0.459,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "time",
+    "start": 0.461,
+    "end": 0.711,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "to",
+    "start": 0.713,
+    "end": 0.7943,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "f-",
+    "start": 0.7953,
+    "end": 0.979,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "(())",
+    "start": 0.98,
+    "end": 1.576,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "here",
+    "start": 1.577,
+    "end": 1.816,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "((there's))",
+    "start": 1.8542,
+    "end": 2.2928,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "a",
+    "start": 2.3183,
+    "end": 2.4442,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "a",
+    "start": 2.4452,
+    "end": 2.6172,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "a",
+    "start": 2.6182,
+    "end": 2.765,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "there's",
+    "start": 2.766,
+    "end": 3.047,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "no",
+    "start": 3.049,
+    "end": 3.259,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "saving",
+    "start": 3.261,
+    "end": 3.87,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "this",
+    "start": 3.8729,
+    "end": 4.369,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that",
+    "start": 4.421,
+    "end": 4.619,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "guy's",
+    "start": 4.622,
+    "end": 4.98,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "horrible",
+    "start": 4.982,
+    "end": 5.928,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that",
+    "start": 6.29,
+    "end": 6.409,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "woman",
+    "start": 6.411,
+    "end": 6.7203,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "is",
+    "start": 6.7213,
+    "end": 6.92,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "awful",
+    "start": 7.025,
+    "end": 7.369,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 7.692,
+    "end": 7.846,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "we",
+    "start": 7.848,
+    "end": 8.0261,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "all",
+    "start": 8.0271,
+    "end": 8.258,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "know",
+    "start": 8.26,
+    "end": 8.497,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "like",
+    "start": 8.499,
+    "end": 8.743,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "the",
+    "start": 8.745,
+    "end": 8.827,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "shrew",
+    "start": 8.829,
+    "end": 9.361,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "woman",
+    "start": 9.363,
+    "end": 9.706,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that's",
+    "start": 10.3,
+    "end": 10.443,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "just",
+    "start": 10.445,
+    "end": 10.58,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "destroying",
+    "start": 10.6,
+    "end": 11.2275,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 11.2285,
+    "end": 11.33,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "man's",
+    "start": 11.331,
+    "end": 11.6994,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "uh",
+    "start": 11.8096,
+    "end": 12.016,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "his",
+    "start": 12.017,
+    "end": 12.1242,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "psyche",
+    "start": 12.1252,
+    "end": 12.571,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "inside",
+    "start": 12.573,
+    "end": 13.027,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 13.029,
+    "end": 13.121,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "out",
+    "start": 13.123,
+    "end": 13.291,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "just",
+    "start": 13.293,
+    "end": 13.452,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "destroying",
+    "start": 13.454,
+    "end": 14.012,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "him",
+    "start": 14.014,
+    "end": 14.145,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "from",
+    "start": 14.147,
+    "end": 14.37,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "top",
+    "start": 14.372,
+    "end": 14.562,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "to",
+    "start": 14.564,
+    "end": 14.6794,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "b",
+    "start": 14.6804,
+    "end": 14.773,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "you",
+    "start": 14.775,
+    "end": 14.8362,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "see",
+    "start": 14.8372,
+    "end": 15.11,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "it",
+    "start": 15.112,
+    "end": 15.2979,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "he",
+    "start": 15.2989,
+    "end": 15.393,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "used",
+    "start": 15.395,
+    "end": 15.616,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "to",
+    "start": 15.618,
+    "end": 15.705,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "be",
+    "start": 15.707,
+    "end": 15.806,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "fun",
+    "start": 15.807,
+    "end": 16.1974,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "he's",
+    "start": 16.1984,
+    "end": 16.375,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "kinda",
+    "start": 16.3965,
+    "end": 16.6246,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "less",
+    "start": 16.6256,
+    "end": 16.891,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "fun",
+    "start": 16.893,
+    "end": 17.046,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "now",
+    "start": 17.303,
+    "end": 17.5621,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "he's",
+    "start": 17.5631,
+    "end": 17.703,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "just",
+    "start": 17.705,
+    "end": 17.896,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "miserable",
+    "start": 17.898,
+    "end": 18.482,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "i",
+    "start": 18.8481,
+    "end": 19.001,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "and",
+    "start": 19.002,
+    "end": 19.132,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "it's",
+    "start": 19.134,
+    "end": 19.3161,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "and",
+    "start": 19.3171,
+    "end": 19.4415,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "you",
+    "start": 19.4425,
+    "end": 19.533,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "every",
+    "start": 19.534,
+    "end": 19.7571,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "time",
+    "start": 19.7581,
+    "end": 19.957,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "you",
+    "start": 19.96,
+    "end": 20.0993,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "hear",
+    "start": 20.1003,
+    "end": 20.568,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "her",
+    "start": 20.57,
+    "end": 20.828,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "you're",
+    "start": 20.83,
+    "end": 21.151,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   }
+  ]
+ },
+ "6": {
+  "filename": "syndigate_podcasts_2cded1b3f58156aa9ab264c213bc832a_1660.0_1890.0-sortformer-16.wav",
+  "n_tokens": 78,
+  "reviewed": true,
+  "tokens": [
+   {
+    "text": "you",
+    "start": 0.3261,
+    "end": 0.479,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "know",
+    "start": 0.481,
+    "end": 0.559,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "how",
+    "start": 0.561,
+    "end": 0.6713,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "you",
+    "start": 0.6723,
+    "end": 0.799,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "go",
+    "start": 0.801,
+    "end": 0.9156,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "to",
+    "start": 0.9166,
+    "end": 1.008,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "somebody's",
+    "start": 1.01,
+    "end": 1.359,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "website",
+    "start": 1.361,
+    "end": 1.736,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 1.738,
+    "end": 1.8221,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "it",
+    "start": 1.8231,
+    "end": 1.9184,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "says",
+    "start": 1.9194,
+    "end": 2.426,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "this",
+    "start": 2.933,
+    "end": 3.281,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "person",
+    "start": 3.283,
+    "end": 3.614,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "so",
+    "start": 3.616,
+    "end": 3.787,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "taylor",
+    "start": 3.793,
+    "end": 4.089,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "swift's",
+    "start": 4.091,
+    "end": 4.544,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "you",
+    "start": 5.059,
+    "end": 5.134,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "know",
+    "start": 5.136,
+    "end": 5.286,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "needs",
+    "start": 5.288,
+    "end": 5.507,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "to",
+    "start": 5.508,
+    "end": 5.5485,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "say",
+    "start": 5.5495,
+    "end": 5.844,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "a",
+    "start": 6.302,
+    "end": 6.3906,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "million",
+    "start": 6.3916,
+    "end": 6.921,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "number",
+    "start": 6.923,
+    "end": 7.169,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "one",
+    "start": 7.17,
+    "end": 7.38,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "gold",
+    "start": 7.382,
+    "end": 7.642,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "records",
+    "start": 7.644,
+    "end": 8.1794,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "or",
+    "start": 8.1804,
+    "end": 8.3236,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "you",
+    "start": 8.6536,
+    "end": 8.7323,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "know",
+    "start": 8.7333,
+    "end": 8.873,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "platinum",
+    "start": 8.8873,
+    "end": 9.3394,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "and",
+    "start": 9.4686,
+    "end": 9.703,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "things",
+    "start": 9.704,
+    "end": 10.083,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 10.085,
+    "end": 10.197,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "this",
+    "start": 10.199,
+    "end": 10.383,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "many",
+    "start": 10.385,
+    "end": 10.606,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "sold",
+    "start": 10.608,
+    "end": 10.9846,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "in",
+    "start": 10.9856,
+    "end": 11.1138,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "and",
+    "start": 11.1148,
+    "end": 11.31,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "spotify",
+    "start": 11.311,
+    "end": 12.014,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "top",
+    "start": 12.064,
+    "end": 12.297,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "ten",
+    "start": 12.299,
+    "end": 12.639,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "songs",
+    "start": 13.107,
+    "end": 13.4271,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "on",
+    "start": 13.4281,
+    "end": 13.568,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "spotify",
+    "start": 13.57,
+    "end": 14.118,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "for",
+    "start": 14.165,
+    "end": 14.2432,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "this",
+    "start": 14.2442,
+    "end": 14.414,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "many",
+    "start": 14.416,
+    "end": 14.64,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "years",
+    "start": 14.642,
+    "end": 14.992,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 14.994,
+    "end": 15.108,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "blah",
+    "start": 15.109,
+    "end": 15.311,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "blah",
+    "start": 15.313,
+    "end": 15.438,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "blah",
+    "start": 15.44,
+    "end": 15.638,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 15.639,
+    "end": 15.717,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "blah",
+    "start": 15.719,
+    "end": 15.911,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "blah",
+    "start": 15.913,
+    "end": 16.038,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "blah",
+    "start": 16.04,
+    "end": 16.265,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 16.267,
+    "end": 16.405,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "blah",
+    "start": 16.407,
+    "end": 16.612,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "blah",
+    "start": 16.614,
+    "end": 16.72,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "blah",
+    "start": 16.722,
+    "end": 16.898,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 17.315,
+    "end": 17.756,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "caused",
+    "start": 18.136,
+    "end": 18.563,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "the",
+    "start": 18.565,
+    "end": 18.755,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "senate",
+    "start": 18.757,
+    "end": 19.285,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "to",
+    "start": 19.331,
+    "end": 19.853,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "form",
+    "start": 20.067,
+    "end": 20.367,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "a",
+    "start": 20.369,
+    "end": 20.516,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "committee",
+    "start": 20.518,
+    "end": 21.113,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "to",
+    "start": 21.131,
+    "end": 21.2771,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "investigate",
+    "start": 21.2781,
+    "end": 22.057,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "ticketmaster",
+    "start": 22.059,
+    "end": 22.883,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "because",
+    "start": 23.272,
+    "end": 23.662,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "of",
+    "start": 23.664,
+    "end": 23.77,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "the",
+    "start": 23.772,
+    "end": 23.898,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "way",
+    "start": 23.9,
+    "end": 24.259,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "ticketmaster",
+    "start": 24.316,
+    "end": 25.057,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "handled",
+    "start": 25.087,
+    "end": 25.545,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   }
+  ]
+ },
+ "7": {
+  "filename": "syndigate_podcasts_2d03cf22a5825a07a90b1189565b5ecb_710.0_850.0-sortformer-7.wav",
+  "n_tokens": 73,
+  "reviewed": true,
+  "tokens": [
+   {
+    "text": "uh",
+    "start": 0.002,
+    "end": 0.237,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "and",
+    "start": 0.238,
+    "end": 0.456,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "congresswoman",
+    "start": 0.458,
+    "end": 0.922,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "but",
+    "start": 0.924,
+    "end": 1.0617,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "when",
+    "start": 1.0627,
+    "end": 1.216,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "i've",
+    "start": 1.218,
+    "end": 1.3455,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "spoken",
+    "start": 1.3465,
+    "end": 1.6997,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "to",
+    "start": 1.7007,
+    "end": 1.782,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "people",
+    "start": 1.784,
+    "end": 2.0376,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "over",
+    "start": 2.0386,
+    "end": 2.353,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "the",
+    "start": 2.355,
+    "end": 2.423,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "past",
+    "start": 2.425,
+    "end": 2.7287,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "week",
+    "start": 2.7297,
+    "end": 2.8985,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "there",
+    "start": 3.274,
+    "end": 3.402,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "was",
+    "start": 3.404,
+    "end": 3.562,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "some",
+    "start": 3.564,
+    "end": 3.773,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "they",
+    "start": 3.775,
+    "end": 3.863,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "were",
+    "start": 3.865,
+    "end": 3.963,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "just",
+    "start": 3.965,
+    "end": 4.103,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "saying",
+    "start": 4.105,
+    "end": 4.319,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "the",
+    "start": 4.622,
+    "end": 4.715,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "kenyan",
+    "start": 4.717,
+    "end": 5.124,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "forces",
+    "start": 5.126,
+    "end": 5.773,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 5.841,
+    "end": 5.965,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "benin",
+    "start": 5.967,
+    "end": 6.319,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "actually",
+    "start": 6.321,
+    "end": 6.5895,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "was",
+    "start": 6.5905,
+    "end": 6.7459,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "was",
+    "start": 6.799,
+    "end": 7.088,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "also",
+    "start": 7.101,
+    "end": 7.55,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "uh",
+    "start": 7.9408,
+    "end": 8.2709,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "pointed",
+    "start": 8.333,
+    "end": 8.672,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "out",
+    "start": 8.674,
+    "end": 8.904,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that",
+    "start": 9.123,
+    "end": 9.257,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "they",
+    "start": 9.259,
+    "end": 9.448,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "would",
+    "start": 9.45,
+    "end": 9.629,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "not",
+    "start": 9.631,
+    "end": 9.848,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "be",
+    "start": 9.85,
+    "end": 10.033,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "able",
+    "start": 10.035,
+    "end": 10.35,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "to",
+    "start": 10.352,
+    "end": 10.5,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "do",
+    "start": 10.502,
+    "end": 10.829,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "what",
+    "start": 10.946,
+    "end": 11.149,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "is",
+    "start": 11.203,
+    "end": 11.375,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "necessary",
+    "start": 11.377,
+    "end": 12.158,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "in",
+    "start": 12.16,
+    "end": 12.331,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "haiti",
+    "start": 12.333,
+    "end": 12.814,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that",
+    "start": 13.073,
+    "end": 13.197,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "it",
+    "start": 13.199,
+    "end": 13.315,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "is",
+    "start": 13.317,
+    "end": 13.439,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "only",
+    "start": 13.441,
+    "end": 13.753,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "a",
+    "start": 13.755,
+    "end": 13.8102,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "force",
+    "start": 13.8112,
+    "end": 14.23,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "like",
+    "start": 14.232,
+    "end": 14.398,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "the",
+    "start": 14.4,
+    "end": 14.533,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "u",
+    "start": 14.535,
+    "end": 14.6905,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "s",
+    "start": 14.6915,
+    "end": 14.881,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "military",
+    "start": 14.883,
+    "end": 15.397,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that",
+    "start": 15.399,
+    "end": 15.559,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "will",
+    "start": 15.561,
+    "end": 15.751,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "be",
+    "start": 15.753,
+    "end": 15.869,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "able",
+    "start": 15.871,
+    "end": 16.446,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "to",
+    "start": 16.958,
+    "end": 17.236,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "overtake",
+    "start": 17.279,
+    "end": 18.1122,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "uh",
+    "start": 18.4211,
+    "end": 18.694,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "the",
+    "start": 18.695,
+    "end": 18.778,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "gangs",
+    "start": 18.78,
+    "end": 19.125,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that",
+    "start": 19.127,
+    "end": 19.221,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "are",
+    "start": 19.223,
+    "end": 19.368,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "there",
+    "start": 19.37,
+    "end": 19.639,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 19.641,
+    "end": 19.818,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "restore",
+    "start": 19.82,
+    "end": 20.251,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "law",
+    "start": 20.253,
+    "end": 20.49,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 20.493,
+    "end": 20.594,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "order",
+    "start": 20.596,
+    "end": 20.95,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   }
+  ]
+ },
+ "8": {
+  "filename": "syndigate_podcasts_2d602371169b5aa89510bc9ed85ef8a5_1720.0_2020.0-sortformer-0.wav",
+  "n_tokens": 47,
+  "reviewed": true,
+  "tokens": [
+   {
+    "text": "said",
+    "start": 0.0,
+    "end": 0.199,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "the",
+    "start": 0.201,
+    "end": 0.3252,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "nuclear",
+    "start": 0.3262,
+    "end": 0.6598,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "freeze",
+    "start": 0.6608,
+    "end": 1.015,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "movement",
+    "start": 1.017,
+    "end": 1.547,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "um",
+    "start": 2.012,
+    "end": 3.023,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "huge",
+    "start": 3.2432,
+    "end": 3.901,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "groundswell",
+    "start": 3.903,
+    "end": 4.662,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "of",
+    "start": 4.664,
+    "end": 4.795,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "populist",
+    "start": 4.826,
+    "end": 5.424,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "support",
+    "start": 5.426,
+    "end": 5.989,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "everyone",
+    "start": 6.003,
+    "end": 6.684,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "was",
+    "start": 6.954,
+    "end": 7.144,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "already",
+    "start": 7.146,
+    "end": 7.668,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "convinced",
+    "start": 7.67,
+    "end": 8.125,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that",
+    "start": 8.127,
+    "end": 8.247,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "we",
+    "start": 8.249,
+    "end": 8.36,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "had",
+    "start": 8.362,
+    "end": 8.577,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "to",
+    "start": 8.579,
+    "end": 8.6361,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "stop",
+    "start": 8.6371,
+    "end": 9.2265,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "this",
+    "start": 9.428,
+    "end": 9.86,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "arms",
+    "start": 9.886,
+    "end": 10.228,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "race",
+    "start": 10.23,
+    "end": 10.587,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "but",
+    "start": 11.054,
+    "end": 11.181,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "no",
+    "start": 11.183,
+    "end": 11.41,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "one",
+    "start": 11.412,
+    "end": 11.603,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "could've",
+    "start": 11.605,
+    "end": 11.8269,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "imagined",
+    "start": 11.8279,
+    "end": 12.57,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "how",
+    "start": 12.581,
+    "end": 12.831,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "to",
+    "start": 12.833,
+    "end": 12.923,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "go",
+    "start": 12.925,
+    "end": 13.092,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "about",
+    "start": 13.094,
+    "end": 13.455,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "it",
+    "start": 13.457,
+    "end": 13.543,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "um",
+    "start": 14.245,
+    "end": 14.711,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 15.051,
+    "end": 15.31,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "part",
+    "start": 15.312,
+    "end": 15.751,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "of",
+    "start": 15.753,
+    "end": 15.888,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "this",
+    "start": 15.89,
+    "end": 16.129,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "film",
+    "start": 16.172,
+    "end": 16.602,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "was",
+    "start": 16.962,
+    "end": 17.243,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "able",
+    "start": 17.245,
+    "end": 17.517,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "to",
+    "start": 17.519,
+    "end": 17.646,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "imagine",
+    "start": 17.648,
+    "end": 18.49,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "particularly",
+    "start": 18.925,
+    "end": 19.5616,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "for",
+    "start": 19.5626,
+    "end": 19.821,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "one",
+    "start": 19.823,
+    "end": 20.069,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "person",
+    "start": 20.071,
+    "end": 20.614,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   }
+  ]
+ },
+ "9": {
+  "filename": "syndigate_podcasts_2ddf18f8f34759728fa8e0406d9ddfde_560.0_650.0-sortformer-14.wav",
+  "n_tokens": 79,
+  "reviewed": true,
+  "tokens": [
+   {
+    "text": "what",
+    "start": 0.151,
+    "end": 0.479,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "they're",
+    "start": 0.481,
+    "end": 0.6818,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "thinking",
+    "start": 0.6828,
+    "end": 1.0798,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "in",
+    "start": 1.0808,
+    "end": 1.21,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that",
+    "start": 1.212,
+    "end": 1.384,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "room",
+    "start": 1.386,
+    "end": 1.634,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 1.636,
+    "end": 1.757,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "again",
+    "start": 1.759,
+    "end": 2.079,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "if",
+    "start": 2.482,
+    "end": 2.591,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "you",
+    "start": 2.593,
+    "end": 2.719,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "really",
+    "start": 2.721,
+    "end": 3.003,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "do",
+    "start": 3.005,
+    "end": 3.202,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "think",
+    "start": 3.204,
+    "end": 3.373,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that",
+    "start": 3.375,
+    "end": 3.481,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "oregon's",
+    "start": 3.483,
+    "end": 3.867,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "gonna",
+    "start": 3.869,
+    "end": 4.0692,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "beat",
+    "start": 4.0702,
+    "end": 4.229,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "washington",
+    "start": 4.231,
+    "end": 4.644,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that's",
+    "start": 4.646,
+    "end": 4.881,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "fine",
+    "start": 4.883,
+    "end": 5.18,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "but",
+    "start": 5.809,
+    "end": 5.922,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "put",
+    "start": 5.924,
+    "end": 6.075,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "em",
+    "start": 6.077,
+    "end": 6.1776,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "at",
+    "start": 6.1786,
+    "end": 6.2581,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "number",
+    "start": 6.2591,
+    "end": 6.5591,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "eight",
+    "start": 6.5601,
+    "end": 6.701,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 6.703,
+    "end": 6.806,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "when",
+    "start": 6.808,
+    "end": 6.946,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "they",
+    "start": 6.947,
+    "end": 7.086,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "win",
+    "start": 7.089,
+    "end": 7.318,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "put",
+    "start": 7.32,
+    "end": 7.457,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "em",
+    "start": 7.459,
+    "end": 7.549,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "up",
+    "start": 7.551,
+    "end": 7.6841,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "at",
+    "start": 7.6851,
+    "end": 7.767,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "number",
+    "start": 7.768,
+    "end": 8.0185,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "four",
+    "start": 8.0195,
+    "end": 8.238,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "like",
+    "start": 8.272,
+    "end": 8.498,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "it-",
+    "start": 9.1154,
+    "end": 9.2416,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "it's",
+    "start": 9.347,
+    "end": 9.585,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "fine",
+    "start": 9.5855,
+    "end": 10.275,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "if",
+    "start": 10.483,
+    "end": 10.738,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "you",
+    "start": 10.739,
+    "end": 10.97,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "want",
+    "start": 10.972,
+    "end": 11.178,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "to",
+    "start": 11.18,
+    "end": 11.2986,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "reward",
+    "start": 11.2996,
+    "end": 11.786,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "them",
+    "start": 11.788,
+    "end": 11.9554,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "for",
+    "start": 11.9564,
+    "end": 12.294,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "getting",
+    "start": 12.296,
+    "end": 12.59,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that",
+    "start": 12.592,
+    "end": 12.807,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "win",
+    "start": 12.809,
+    "end": 13.246,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "when",
+    "start": 13.377,
+    "end": 13.642,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "they",
+    "start": 13.644,
+    "end": 13.797,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "get",
+    "start": 13.799,
+    "end": 13.994,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "the",
+    "start": 13.996,
+    "end": 14.1334,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "win",
+    "start": 14.1344,
+    "end": 14.462,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "but",
+    "start": 14.464,
+    "end": 14.575,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "it's",
+    "start": 14.577,
+    "end": 14.755,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "like",
+    "start": 14.757,
+    "end": 14.929,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "they",
+    "start": 14.931,
+    "end": 15.126,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "b-",
+    "start": 15.1435,
+    "end": 15.1964,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "it",
+    "start": 15.1974,
+    "end": 15.274,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "seems",
+    "start": 15.276,
+    "end": 15.56,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "like",
+    "start": 15.562,
+    "end": 15.697,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "they've",
+    "start": 15.698,
+    "end": 15.897,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "been",
+    "start": 15.899,
+    "end": 16.048,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "rewarding",
+    "start": 16.05,
+    "end": 16.663,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "them",
+    "start": 16.665,
+    "end": 16.915,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "because",
+    "start": 17.339,
+    "end": 17.683,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "they",
+    "start": 17.685,
+    "end": 17.839,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "think",
+    "start": 18.031,
+    "end": 18.2179,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "they're",
+    "start": 18.3286,
+    "end": 18.4739,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "going",
+    "start": 18.4749,
+    "end": 18.708,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "to",
+    "start": 18.71,
+    "end": 18.798,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "win",
+    "start": 18.8,
+    "end": 18.936,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "a",
+    "start": 18.938,
+    "end": 19.019,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "game",
+    "start": 19.021,
+    "end": 19.2213,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "in",
+    "start": 19.2223,
+    "end": 19.3,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "the",
+    "start": 19.302,
+    "end": 19.3603,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "future",
+    "start": 19.3613,
+    "end": 19.8566,
+    "start_status": "moved",
+    "end_status": "moved"
+   }
+  ]
+ },
+ "10": {
+  "filename": "syndigate_podcasts_2e49527d6a8b596d98ea5439a58fe024_1280.0_1580.0-sortformer-17.wav",
+  "n_tokens": 75,
+  "reviewed": true,
+  "tokens": [
+   {
+    "text": "leather",
+    "start": 0.038,
+    "end": 0.65,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "blazer",
+    "start": 0.675,
+    "end": 1.3261,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "and",
+    "start": 1.3271,
+    "end": 1.48,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "like",
+    "start": 1.482,
+    "end": 1.7043,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "lean",
+    "start": 1.7053,
+    "end": 2.001,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "more",
+    "start": 2.003,
+    "end": 2.201,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "matrix",
+    "start": 2.203,
+    "end": 2.739,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "then",
+    "start": 2.782,
+    "end": 2.901,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "you",
+    "start": 2.903,
+    "end": 3.077,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "can",
+    "start": 3.079,
+    "end": 3.241,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "get",
+    "start": 3.244,
+    "end": 3.384,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "little",
+    "start": 3.386,
+    "end": 3.647,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "bite",
+    "start": 3.702,
+    "end": 3.913,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "sized",
+    "start": 3.915,
+    "end": 4.318,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "pieces",
+    "start": 4.32,
+    "end": 4.78,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "of",
+    "start": 4.782,
+    "end": 4.933,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "like",
+    "start": 4.935,
+    "end": 5.101,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "j",
+    "start": 5.641,
+    "end": 5.896,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "crew",
+    "start": 5.898,
+    "end": 6.1802,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "from",
+    "start": 6.1812,
+    "end": 6.384,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that",
+    "start": 6.386,
+    "end": 6.633,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "era",
+    "start": 6.644,
+    "end": 7.355,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "where",
+    "start": 7.824,
+    "end": 8.571,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "maybe",
+    "start": 8.812,
+    "end": 8.9999,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "it's",
+    "start": 9.0009,
+    "end": 9.134,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "like",
+    "start": 9.136,
+    "end": 9.245,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "a",
+    "start": 9.247,
+    "end": 9.332,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "kitten",
+    "start": 9.387,
+    "end": 9.827,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "heel",
+    "start": 9.829,
+    "end": 10.266,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "slingback",
+    "start": 10.268,
+    "end": 10.758,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "kitten",
+    "start": 10.808,
+    "end": 11.205,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "heel",
+    "start": 11.207,
+    "end": 11.448,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "with",
+    "start": 11.45,
+    "end": 11.59,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "your",
+    "start": 11.592,
+    "end": 11.693,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "straight",
+    "start": 11.695,
+    "end": 12.069,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "leg",
+    "start": 12.071,
+    "end": 12.303,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "pant",
+    "start": 12.391,
+    "end": 12.749,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "you",
+    "start": 12.751,
+    "end": 12.878,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "know",
+    "start": 12.879,
+    "end": 13.119,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "i",
+    "start": 13.121,
+    "end": 13.2304,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "mean",
+    "start": 13.2314,
+    "end": 13.565,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "so",
+    "start": 13.78,
+    "end": 14.0184,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "it",
+    "start": 14.0194,
+    "end": 14.155,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "kinda",
+    "start": 14.157,
+    "end": 14.5095,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "depends",
+    "start": 14.5105,
+    "end": 15.2331,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "how",
+    "start": 15.2341,
+    "end": 15.629,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "far",
+    "start": 15.63,
+    "end": 15.9721,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "you",
+    "start": 15.9731,
+    "end": 16.136,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "wanna",
+    "start": 16.138,
+    "end": 16.4142,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "go",
+    "start": 16.415,
+    "end": 16.832,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "with",
+    "start": 16.834,
+    "end": 17.0971,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "it",
+    "start": 17.0981,
+    "end": 17.455,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "but",
+    "start": 17.508,
+    "end": 17.6807,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "i",
+    "start": 17.6817,
+    "end": 17.933,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "i",
+    "start": 18.422,
+    "end": 18.606,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "don't",
+    "start": 18.607,
+    "end": 18.774,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "know",
+    "start": 18.776,
+    "end": 19.1069,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "i",
+    "start": 19.1079,
+    "end": 19.3053,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "like",
+    "start": 19.3063,
+    "end": 19.9972,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "referencing",
+    "start": 20.514,
+    "end": 21.175,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "back",
+    "start": 21.177,
+    "end": 21.5121,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "i",
+    "start": 21.5131,
+    "end": 21.6475,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "th-",
+    "start": 21.6485,
+    "end": 21.749,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "it's",
+    "start": 21.75,
+    "end": 21.942,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "nostalgic",
+    "start": 21.944,
+    "end": 22.667,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 22.669,
+    "end": 22.753,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "it's",
+    "start": 22.755,
+    "end": 22.956,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "kinda",
+    "start": 22.957,
+    "end": 23.208,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "fun",
+    "start": 23.209,
+    "end": 23.6058,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "and",
+    "start": 23.6068,
+    "end": 23.7565,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "i'm",
+    "start": 23.7575,
+    "end": 23.9409,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "always",
+    "start": 23.9419,
+    "end": 24.2403,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "really",
+    "start": 24.2413,
+    "end": 24.486,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "open",
+    "start": 24.488,
+    "end": 24.906,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "to",
+    "start": 24.922,
+    "end": 25.378,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   }
+  ]
+ },
+ "11": {
+  "filename": "syndigate_podcasts_2eb8e17f398651f8abfa0b1c6ba1c3cd_3060.0_3360.0-sortformer-15.wav",
+  "n_tokens": 82,
+  "reviewed": true,
+  "tokens": [
+   {
+    "text": "either",
+    "start": 0.001,
+    "end": 0.4161,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "you",
+    "start": 0.4171,
+    "end": 0.5397,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "see",
+    "start": 0.5407,
+    "end": 0.756,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "it",
+    "start": 0.757,
+    "end": 0.8485,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "a",
+    "start": 0.8495,
+    "end": 0.9558,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "lot",
+    "start": 0.9568,
+    "end": 1.22,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "on",
+    "start": 1.222,
+    "end": 1.658,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "s-",
+    "start": 1.8614,
+    "end": 2.0222,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "in",
+    "start": 2.058,
+    "end": 2.1977,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "social",
+    "start": 2.1987,
+    "end": 2.5894,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "media",
+    "start": 2.5904,
+    "end": 2.959,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "where",
+    "start": 2.961,
+    "end": 3.1794,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "it's",
+    "start": 3.1804,
+    "end": 3.329,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "like",
+    "start": 3.331,
+    "end": 3.6257,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "the",
+    "start": 3.6708,
+    "end": 3.924,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "they",
+    "start": 3.925,
+    "end": 4.261,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "did",
+    "start": 4.305,
+    "end": 4.505,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "this",
+    "start": 4.507,
+    "end": 4.711,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "to",
+    "start": 4.713,
+    "end": 4.8156,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "themselves",
+    "start": 4.8166,
+    "end": 5.4069,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "or",
+    "start": 5.4079,
+    "end": 5.583,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "or",
+    "start": 5.585,
+    "end": 6.039,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "um",
+    "start": 6.041,
+    "end": 6.67,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "you",
+    "start": 7.018,
+    "end": 7.199,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "know",
+    "start": 7.201,
+    "end": 7.505,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "this",
+    "start": 7.507,
+    "end": 7.725,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "this",
+    "start": 7.727,
+    "end": 7.947,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "idea",
+    "start": 7.949,
+    "end": 8.505,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "that",
+    "start": 8.507,
+    "end": 8.736,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "you're",
+    "start": 8.812,
+    "end": 9.0942,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "knowingly",
+    "start": 9.0952,
+    "end": 9.807,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "doing",
+    "start": 9.809,
+    "end": 10.155,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "something",
+    "start": 10.157,
+    "end": 10.581,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "i",
+    "start": 10.641,
+    "end": 10.7817,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "wasn't",
+    "start": 10.7827,
+    "end": 11.3616,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "it",
+    "start": 11.477,
+    "end": 11.607,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "was",
+    "start": 11.609,
+    "end": 11.893,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "very",
+    "start": 11.895,
+    "end": 12.338,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "much",
+    "start": 12.34,
+    "end": 12.8217,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "subconscious",
+    "start": 12.8227,
+    "end": 13.796,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 13.895,
+    "end": 14.089,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "then",
+    "start": 14.091,
+    "end": 14.5795,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "the",
+    "start": 15.26,
+    "end": 15.4357,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "m-",
+    "start": 15.4367,
+    "end": 15.5564,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "i",
+    "start": 15.937,
+    "end": 16.077,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "do",
+    "start": 16.079,
+    "end": 16.3273,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "think",
+    "start": 16.3283,
+    "end": 16.564,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "getting",
+    "start": 16.751,
+    "end": 17.0626,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "out",
+    "start": 17.0636,
+    "end": 17.3298,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "of",
+    "start": 17.3308,
+    "end": 17.4741,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "it",
+    "start": 17.4751,
+    "end": 17.622,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "it",
+    "start": 17.972,
+    "end": 18.123,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "takes",
+    "start": 18.201,
+    "end": 18.573,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "personal",
+    "start": 18.63,
+    "end": 19.072,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "responsibility",
+    "start": 19.074,
+    "end": 19.914,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 19.964,
+    "end": 20.2429,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "is",
+    "start": 20.2439,
+    "end": 20.7035,
+    "start_status": "moved",
+    "end_status": "moved"
+   },
+   {
+    "text": "takes",
+    "start": 20.874,
+    "end": 21.286,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "that",
+    "start": 21.287,
+    "end": 21.605,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "th-",
+    "start": 21.6362,
+    "end": 21.7673,
+    "start_status": "no_injection_match",
+    "end_status": "no_injection_match"
+   },
+   {
+    "text": "uh",
+    "start": 21.825,
+    "end": 22.098,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "intention",
+    "start": 22.175,
+    "end": 22.992,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "and",
+    "start": 22.994,
+    "end": 23.497,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "kind",
+    "start": 23.867,
+    "end": 24.161,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "of",
+    "start": 24.163,
+    "end": 24.298,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "you",
+    "start": 24.3,
+    "end": 24.4076,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "have",
+    "start": 24.4086,
+    "end": 24.727,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "to",
+    "start": 24.729,
+    "end": 24.8214,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "knowingly",
+    "start": 24.8224,
+    "end": 25.438,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "get",
+    "start": 25.44,
+    "end": 25.637,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "out",
+    "start": 25.639,
+    "end": 25.857,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "of",
+    "start": 25.859,
+    "end": 26.0111,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "it",
+    "start": 26.0121,
+    "end": 26.168,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "i",
+    "start": 26.482,
+    "end": 26.579,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "don't",
+    "start": 26.581,
+    "end": 26.84,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "know",
+    "start": 26.842,
+    "end": 26.982,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "a",
+    "start": 26.984,
+    "end": 27.071,
+    "start_status": "reviewed_accepted",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "lot",
+    "start": 27.073,
+    "end": 27.2202,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "of",
+    "start": 27.2212,
+    "end": 27.342,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "people",
+    "start": 27.344,
+    "end": 27.5948,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   },
+   {
+    "text": "who",
+    "start": 27.5958,
+    "end": 27.804,
+    "start_status": "moved",
+    "end_status": "reviewed_accepted"
+   },
+   {
+    "text": "just",
+    "start": 27.806,
+    "end": 28.1771,
+    "start_status": "reviewed_accepted",
+    "end_status": "moved"
+   }
+  ]
+ }
+}

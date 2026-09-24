@@ -1,0 +1,57 @@
+Traceback (most recent call last):
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\botasaurus\browser_decorator.py", line 199, in run_task
+    result = func(driver, data)
+  File "F:\BB\ETN-SC\pulsar_auto\deep_extract.py", line 121, in deep_extract
+    download_result = driver.run_js("""
+        const bundleName = new URLSearchParams(window.location.search).get('bundle');
+    ...<33 lines>...
+        }
+    """)
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\botasaurus_driver\driver.py", line 746, in run_js
+    return self._tab.evaluate(script,args=args,await_promise=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\botasaurus_driver\core\tab.py", line 1024, in evaluate
+    handle_exception(core, errors.exception)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\botasaurus_driver\exceptions.py", line 177, in handle_exception
+    raise SyntaxError(core)
+botasaurus_driver.exceptions.SyntaxError: Syntax Error in the following code:
+
+
+        const bundleName = new URLSearchParams(window.location.search).get('bundle');
+        const sig = new URLSearchParams(window.location.search).get('sig');
+        const url = `/api/dl/pulsar-chunk/${bundleName}?sig=${sig}`;
+        
+        try {
+            const resp = await fetch(url);
+            const contentType = resp.headers.get('content-type');
+            const contentLength = resp.headers.get('content-length');
+            const contentDisp = resp.headers.get('content-disposition');
+            
+            if (resp.ok) {
+                const blob = await resp.blob();
+                // Convert blob to base64 for transfer
+                const reader = new FileReader();
+                const base64 = await new Promise((resolve, reject) => {
+                    reader.onload = () => resolve(reader.result);
+                    reader.onerror = reject;
+                    reader.readAsDataURL(blob);
+                });
+                return {
+                    ok: true,
+                    status: resp.status,
+                    contentType: contentType,
+                    contentLength: contentLength,
+                    contentDisposition: contentDisp,
+                    size: blob.size,
+                    base64: base64,
+                };
+            } else {
+                const text = await resp.text();
+                return { ok: false, status: resp.status, body: text.substring(0, 500) };
+            }
+        } catch (e) {
+            return { ok: false, error: e.message };
+        }
+    
+Please review the syntax and run again.

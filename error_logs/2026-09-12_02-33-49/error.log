@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\botasaurus\browser_decorator.py", line 199, in run_task
+    result = func(driver, data)
+  File "F:\BB\ETN-SC\pulsar_auto\pipeline.py", line 174, in run_browser
+    all_storage = driver.run_js("""
+        const result = {};
+    ...<4 lines>...
+        return result;
+    """)
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\botasaurus_driver\driver.py", line 746, in run_js
+    return self._tab.evaluate(script,args=args,await_promise=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\botasaurus_driver\core\tab.py", line 1010, in evaluate
+    response = self.send(
+        cdp.runtime.evaluate(
+    ...<4 lines>...
+        )
+    )
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\botasaurus_driver\core\connection.py", line 286, in send
+    self.open()
+    ~~~~~~~~~^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\botasaurus_driver\core\connection.py", line 167, in open
+    self.wait_for_socket_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\botasaurus_driver\core\connection.py", line 190, in wait_for_socket_connection
+    self.raise_connection_failure_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\botasaurus_driver\core\connection.py", line 182, in raise_connection_failure_exception
+    raise Exception(self._connection_failure_message)
+Exception: [WinError 10061] No connection could be made because the target machine actively refused it

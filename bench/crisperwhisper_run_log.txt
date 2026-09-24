@@ -1,0 +1,61 @@
+✓ Initialized. View run at 
+https://modal.com/apps/alinarohannes777/main/ap-4VTCFLjSCei8vpMW4hEZJa
+✓ Created objects.
+├── 🔨 Created mount F:\BB\ETN-SC\pulsar_auto\modal_crisperwhisper.py
+└── 🔨 Created function CrisperWhisperService.*.
+clip 0: transcribing verbatim...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+[1AFetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files: 100%|██████████| 11/11 [00:00<00:00, 1075.76it/s]
+
+[1ALoading weights:   0%|          | 0/1259 [00:00<?, ?it/s]
+[1ALoading weights:   3%|▎         | 39/1259 [00:00<00:04, 299.37it/s]
+[1ALoading weights:   5%|▌         | 69/1259 [00:00<00:04, 243.59it/s]
+[1ALoading weights:   7%|▋         | 94/1259 [00:02<00:46, 25.10it/s] 
+[1ALoading weights:  24%|██▎       | 297/1259 [00:02<00:07, 129.62it/s]
+[1ALoading weights:  36%|███▌      | 449/1259 [00:02<00:03, 225.18it/s]
+[1ALoading weights:  49%|████▉     | 617/1259 [00:03<00:01, 353.29it/s]
+[1ALoading weights:  62%|██████▏   | 776/1259 [00:03<00:00, 492.02it/s]
+[1ALoading weights:  72%|███████▏  | 911/1259 [00:03<00:00, 582.75it/s]
+[1ALoading weights:  82%|████████▏ | 1036/1259 [00:03<00:00, 681.73it/s]
+[1ALoading weights:  94%|█████████▎| 1180/1259 [00:03<00:00, 819.09it/s]
+[1ALoading weights: 100%|██████████| 1259/1259 [00:03<00:00, 359.71it/s]
+[transformers] [1mWhisperForConditionalGeneration LOAD REPORT[0m from: /__modal/volumes/vo-AUV8IE5e0IAcZtNpMbQG33/hf/hub/models--nyralabs--CrisperWhisper2.0_large/snapshots/f4334f6e8193f2691212d49b20fa12d370e13896
+Key                       | Status     |  | 
+--------------------------+------------+--+-
+encoder_blank_head.weight | UNEXPECTED |  | 
+encoder_blank_head.bias   | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:   can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  -> 66 words
+clip 1: transcribing verbatim...
+  -> 88 words
+clip 2: transcribing verbatim...
+  -> 116 words
+clip 3: transcribing verbatim...
+  -> 76 words
+clip 4: transcribing verbatim...
+  -> 51 words
+clip 5: transcribing verbatim...
+  -> 55 words
+clip 6: transcribing verbatim...
+  -> 52 words
+clip 7: transcribing verbatim...
+  -> 43 words
+clip 8: transcribing verbatim...
+  -> 74 words
+clip 9: transcribing verbatim...
+  -> 37 words
+clip 10: transcribing verbatim...
+  -> 29 words
+clip 11: transcribing verbatim...
+  -> 63 words
+clip 12: transcribing verbatim...
+  -> 75 words
+clip 13: transcribing verbatim...
+  -> 45 words
+Wrote output/crisperwhisper_verbatim.json
+Stopping app - local entrypoint completed.
+✓ App completed. View run at 
+https://modal.com/apps/alinarohannes777/main/ap-4VTCFLjSCei8vpMW4hEZJa

@@ -1,0 +1,213 @@
+{
+  "cases": [
+    {
+      "id": "clip2_unclear_marker_onset",
+      "clip": "2",
+      "token_idx": 0,
+      "text": "(())",
+      "description": "First-word onset backward-walk stopped at a single noisy dip inside the murmur itself instead of walking through to true silence. Fixed by requiring a sustained (15ms) dip.",
+      "fix_commit": "sustained-dip backward walk in first-word-onset edge case",
+      "error_before_ms": 291.7,
+      "error_after_ms": 12.7,
+      "max_acceptable_error_ms": 40.0
+    },
+    {
+      "id": "clip11_spelled_letter_t",
+      "clip": "11",
+      "token_idx": 16,
+      "text": "t",
+      "description": "Spelled-out single-letter word ('t' from 'TV') was force-aligned against the bare grapheme target instead of its spoken letter-name ('TEE'), causing massive time under-allocation.",
+      "fix_commit": "LETTER_NAME_MAP for single-letter tokens (general, mirrors existing NUM_MAP)",
+      "error_before_ms": 202.9,
+      "error_after_ms": 5.0,
+      "max_acceptable_error_ms": 40.0
+    },
+    {
+      "id": "clip11_spelled_letter_v",
+      "clip": "11",
+      "token_idx": 17,
+      "text": "v",
+      "description": "Same root cause as clip11_spelled_letter_t, other side of the shared boundary.",
+      "fix_commit": "LETTER_NAME_MAP for single-letter tokens",
+      "error_before_ms": 202.9,
+      "error_after_ms": 10.1,
+      "max_acceptable_error_ms": 40.0
+    },
+    {
+      "id": "clip4_ambiguous_letter_l",
+      "clip": "4",
+      "token_idx": 4,
+      "text": "l",
+      "description": "Same grapheme-vs-letter-name issue as t/v, but for 'l' in 'l a noire' (spelling L.A.).",
+      "fix_commit": "LETTER_NAME_MAP",
+      "error_before_ms": 81.6,
+      "error_after_ms": 26.7,
+      "max_acceptable_error_ms": 45.0
+    },
+    {
+      "id": "clip4_ambiguous_letter_a",
+      "clip": "4",
+      "token_idx": 5,
+      "text": "a",
+      "description": "'a' next to 'l' (spelling L.A.) needed letter-name treatment despite 'a' normally being the article and excluded from the base letter map -- fixed via one-hop neighbor context detection.",
+      "fix_commit": "AMBIGUOUS_LETTER_MAP with neighbor-context disambiguation",
+      "error_before_ms": 80.6,
+      "error_after_ms": 60.3,
+      "max_acceptable_error_ms": 70.0
+    },
+    {
+      "id": "clip0_murmur_onset_um",
+      "clip": "0",
+      "token_idx": 67,
+      "text": "um",
+      "description": "Backward murmur-onset scan for um/uh/ah/er stopped at a brief noise blip within the pre-onset pause instead of the true silence-to-speech boundary; the nasal vowel-to-nasal internal energy dip compounded this. Fixed by requiring a longer (75ms) sustained silence run.",
+      "fix_commit": "increased sil_lim 45ms->75ms in um/uh/ah/er backward scan",
+      "error_before_ms": 185.4,
+      "error_after_ms": 0.1,
+      "max_acceptable_error_ms": 30.0
+    },
+    {
+      "id": "clip5_sibilant_frication_onset_signify",
+      "clip": "5",
+      "token_idx": 28,
+      "text": "signify",
+      "description": "Sibilant-word onset backward-scan used plain RMS to define silence, but a quiet sibilant frication (the /s/ itself) has low RMS -- indistinguishable from true silence -- so the scan stopped almost immediately instead of walking back through the frication to the real pre-word pause. Fixed with a combined RMS+ZCR silence test (frication is low-RMS but high-ZCR); ZCR itself is gated to only be trusted when RMS is at least 30% of trail_thresh, since ZCR (like voicing) becomes spuriously noisy at near-total silence.",
+      "fix_commit": "is_true_silence() RMS+ZCR combined test (ZCR_GATE_RMS_FRAC) applied to starts_with_sibilant onset branch",
+      "error_before_ms": 97.9,
+      "error_after_ms": 10.3,
+      "max_acceptable_error_ms": 30.0
+    },
+    {
+      "id": "clip12_burst_train_trailing_it",
+      "clip": "12",
+      "token_idx": 18,
+      "text": "it",
+      "description": "Trailing-stop burst detection after a word ending in a stop consonant only looked for a single burst within a fixed 130ms window and stopped there, missing a second later blip (voiced re-articulation) that gold includes as part of the word. Fixed by iterating burst-then-drop detection across a 'burst train', using voicing (periodicity) to corroborate marginal RMS crossings the old speech_thresh-only check missed. Burst acceptance requires ~8ms of sustained qualification (not a single sample) because voicing, like ZCR, becomes spuriously elevated at near-zero RMS -- without the sustain gate this caused false extensions into incidental voiced murmur in unrelated word-final pauses (regression-tested against clip12 'young'x2, clip2 'like', clip8 'and', clip4 'sad').",
+      "fix_commit": "iterative burst-train detection with voicing corroboration + 8ms sustain gate in ends_in_stop trailing-boundary branch",
+      "error_before_ms": 124.7,
+      "error_after_ms": 1.0,
+      "max_acceptable_error_ms": 20.0
+    },
+    {
+      "id": "clip5_voiced_dental_fricative_onset_and_then",
+      "clip": "5",
+      "token_idx": 19,
+      "text": "and",
+      "description": "Connected speech into a voiced dental fricative /dh/ onset (the/that/this/there/they/them/then/those/these -- excluded from the voiceless /th/ branch since their 'th' is voiced, not voiceless) had no dedicated handling unless w1 ended in a rhotic, so it fell through to the raw CTC pipe midpoint with no acoustic basis. Fixed by detecting the voiced-frication signature directly: spectral flatness rises (noise) while voicing stays high (periodicity) simultaneously, unlike a plain vowel-to-vowel transition. Threshold tuned to 0.30 (not 0.20) because gold consistently sits near the flatness peak, not the initial threshold-crossing -- a lower threshold fixed this case but introduced two new regressions elsewhere (clip5 'on'->'the' 0.5ms->40.0ms, clip5 'well'->'the' 0.1ms->14.3ms) where the flatness rise is more gradual and crosses a low threshold well before the true transition. At 0.30 the 'on'->'the' regression fully resolves; 'well'->'the' keeps a small residual (0.1ms->12.3ms), accepted as a net-positive tradeoff (confirmed via full benchmark: MAE 13.247->13.161ms, all pct-within-X metrics equal or better, zero regression-suite breaks).",
+      "fix_commit": "voiced-dental-fricative-onset case using spectral_flatness (>=0.30) + voicing (>=0.4) combined signal",
+      "error_before_ms": 87.6,
+      "error_after_ms": 1.6,
+      "max_acceptable_error_ms": 25.0
+    },
+    {
+      "id": "clip12_burst_train_gap_threshold_not",
+      "clip": "12",
+      "token_idx": 47,
+      "text": "not",
+      "description": "The burst-train trailing-boundary logic (clip12_burst_train_trailing_it) is gated on the raw gap being under 400ms, but 'not'->\"you're\" measured 400.3ms -- a razor-thin miss that skipped the whole mechanism despite a genuine voiced release burst (RMS rising to 0.013, voicing 0.6-0.84) sitting well within it. Widened the gate to 450ms. This alone caused a new overshoot (voicing stayed spuriously high at near-zero RMS past the burst, so the drop-detection's 'voicing[k]<0.5' condition never fired, walking all the way to noise): fixed by also gating that condition -- trust RMS alone once it drops below 0.3*trail_thresh, since voicing (like ZCR) is unreliable that deep into silence. Net effect confirmed via full benchmark: MAE 13.161ms->13.121ms, only one collateral regression (clip11 'spent' end 6.7ms->-8.3ms) against the 71.8ms fix on 'not'.",
+      "fix_commit": "widened ends_in_stop burst-train gap gate 400ms->450ms; added RMS-depth gate to drop-detection's voicing check",
+      "error_before_ms": 81.8,
+      "error_after_ms": 10.0,
+      "max_acceptable_error_ms": 20.0
+    },
+    {
+      "id": "ends_in_fricative_ce_suffix_gap",
+      "clip": "9",
+      "token_idx": 22,
+      "text": "pronounce",
+      "description": "ends_in_fricative() was missing the '-ce' suffix (pronounce, price, since, twice, etc. -- phonetically ending in /s/) even though ends_in_sibilant() already recognized it, so '-ce' words fell through case-4's sibilant/fricative-into-vowel branch (which uses a proven ZCR-drop scan, exactly the right tool -- confirmed via signal trace: HF-ratio drops from 0.5-0.97 to near-zero right at gold's boundary) into the generic case-11 valley/argmin fallback, which can't distinguish the true frication-end transition from incidental low-RMS dips inside the following word's own vowel. Fixed by adding 'ce' to ends_in_fricative()'s suffix list, consistent with ends_in_sibilant(). Purely a definitional-consistency fix, not new heuristic logic. Confirmed via full benchmark: MAE 13.121ms->12.963ms, all pct-within-X metrics improved, zero regressions (4 changed cases, all fixed: 'pronounce'/'it' and a bonus 'price'/'like').",
+      "fix_commit": "added 'ce' to ends_in_fricative() suffix list",
+      "error_before_ms": 84.3,
+      "error_after_ms": 0.1,
+      "max_acceptable_error_ms": 15.0
+    },
+    {
+      "id": "burst_train_sustain_5ms_took",
+      "clip": "9",
+      "token_idx": 13,
+      "text": "took",
+      "description": "The burst-train trailing-boundary mechanism (clip12_burst_train_trailing_it) requires 8ms of sustained qualification before accepting a burst, to filter isolated noise blips. 'took''s /k/ release burst is genuine but weakly modulated (RMS/voicing dip below threshold every few ms even while the burst is ongoing), so it never sustains a full 8ms run and the mechanism found nothing, falling back to a worse heuristic (end_err -73.4ms). Reduced the sustain requirement to 5ms -- long enough to still filter single-sample noise, short enough to tolerate this burst's natural modulation. Confirmed via full benchmark: MAE 12.963ms->12.923ms, all pct-within-X metrics improved, exactly one changed case in the whole benchmark (this one), zero regressions. NOTE: 'took' also has a separate, pre-existing, unrelated start_err of -21.6ms (never touched by this fix or any other this session) -- max_acceptable_error_ms is set above that value because check_regressions.py takes max(start_err, end_err); only end_err (4.8ms) reflects this specific fix.",
+      "fix_commit": "reduced burst_sustain_lim from 8ms to 5ms in ends_in_stop trailing-boundary burst-train",
+      "error_before_ms": 73.4,
+      "error_after_ms": 4.8,
+      "max_acceptable_error_ms": 25.0
+    },
+    {
+      "id": "stop_to_stop_frication_ramp_midpoint",
+      "clip": "6",
+      "token_idx": 43,
+      "text": "offered",
+      "description": "Resolves stop_to_stop_frication_boundary_unresolvable (previously logged as unfixable). Root-cause dig into why 3 earlier attempts (fixed threshold, decoupling alone, first-dip-vs-deepest-dip) all caused small regressions on already-good cases revealed: the HF-ratio VALUE at gold's boundary varies wildly across cases (0.005 to 0.78, no usable fixed threshold), but the HF ramp's rising edge (near-baseline ~0.02 to near-saturation ~0.5) has a consistent DURATION, and gold sits close to its TEMPORAL MIDPOINT regardless of the absolute values. Final design needed 4 layered discriminators, each found by investigating a specific regression: (1) require w2 to start with stop/sibilant AND w1 to end in stop/nasal (excludes rhotic-ending w1 like 'your', which has non-trivial baseline HF of its own from the rhotic itself); (2) require a genuine sustained (>=8ms) LOW-HF run immediately before the detected rise, not just the first hf>=0.02 sample (excludes w1 words ending in their own frication, e.g. 'used' ending in voiced /z/, which have high HF throughout with no baseline to rise from); (3) require hf_ratio at the ORIGINAL bnd to already be >=0.3 before intervening at all (excludes cases like 'start'->'to' where the original estimate already sits correctly in genuine low-HF silence -- a long natural stop-closure VOT, not a case of being stuck in frication); (4) decouple w1.end/w2.start when the original bnd sat meaningfully later than the new midpoint, using the original bnd for w2.start instead of forcing 2ms adjacency (gold sometimes splits one continuous frication event into w1-early-frication + real-gap + w2-late-frication, and the original estimate was often already correct for w2.start even when wrong for w1.end). Confirmed via full benchmark: MAE 12.923ms->12.921ms, within7/10/20 all matched or improved, within5 negligibly lower (-0.12pp), sum of all real per-case deltas net-negative (net improvement), no regression exceeding 9.3ms on any previously-good case.",
+      "fix_commit": "HF-ratio rising-edge midpoint (onset->plateau) with 4-part gating (w1/w2 phonetic class, sustained low-HF baseline, original-bnd-in-frication check, w1/w2 decoupling) in case-11 valley fallback",
+      "error_before_ms": 18.9,
+      "error_after_ms": 1.1,
+      "max_acceptable_error_ms": 15.0
+    },
+    {
+      "id": "filler_voiced_th_onset_um_then",
+      "clip": "1",
+      "token_idx": 41,
+      "text": "um",
+      "description": "Resolves voiced_th_onset_unreachable_after_valley_check (previously logged as unfixable without unsafe reordering). Applied the same root-cause methodology as stop_to_stop_frication_ramp_midpoint: instead of moving the existing case-13 voiced-th detector earlier (which caused 84 changed cases / 61 regressions when tried unconditionally), added a narrowly-gated re-invocation of it INSIDE case 11 itself. Three gates were needed, each found by investigating a specific regression: (1) restrict to w1 being a filler (um/uh/ah/er) specifically -- matches the diagnosed mechanism exactly (a filler's own internal murmur has low flatness and fools case 11's argmin), and excludes ordinary words like 'oh' that also have low baseline flatness but were already correctly placed (excludes 'oh'->'this', 'read'->'the', 'about'->'the' regressions); (2) require spectral_flatness at the current estimate to be <0.15 (confirms stuck before the transition); (3) cap the scan window to 80ms total span rather than reaching to w2['end'] like the original case-13 usage safely could -- this branch fires far more often, so an uncapped scan wandered deep into w2's own body and grabbed unrelated later matches (up to +173ms on some pairs) before this cap. One known residual: 'ah'->'this' regresses 0.1ms->17.3ms because 'ah' is a genuine filler but its original estimate was already correct (sitting at flatness's local minimum, not stuck deep inside a murmur like 'um') -- accepted as a net-positive tradeoff, confirmed via full benchmark: MAE 12.921ms->12.846ms, within20 78.96%->79.2%, within5/7/10 unchanged, only 4 total changed cases in the whole benchmark.",
+      "fix_commit": "narrowly-gated re-invocation of case-13's voiced-th flatness detector inside case-11, restricted to filler w1 + low-flatness-at-bnd + 80ms scan cap",
+      "error_before_ms": 83.0,
+      "error_after_ms": 0.5,
+      "max_acceptable_error_ms": 15.0
+    },
+    {
+      "id": "stop_closure_beyond_pmid_window_looked_like",
+      "clip": "8",
+      "token_idx": 18,
+      "text": "looked",
+      "description": "'looked' (ends in /kt/ stop cluster) into 'like' (starts with liquid /l/, not covered by any of the 13 specific cases -- not a vowel/sibilant/th/stop) falls all the way through to the final 'default: bnd=p_mid' fallback. Root-cause dig (initial tracer-based diagnosis was unreliable/wrong -- confirmed via direct print instrumentation instead) found the true problem: p_start/p_end/p_mid are derived from w1/w2's own RAW pre-refinement estimates, which were themselves already displaced ~53ms past the genuine stop closure, so case 11's valley/argmin window [si,ei] (also derived from those same raw estimates) never even contains the true closure -- every case from 1-13 is checked and fails to match or searches only within that already-bad window, landing on the blind pipe-midpoint fallback 72ms late. Fixed by searching up to 100ms further back from p_start (when w1 ends in a stop) for a genuine, sufficiently deep (< trail_thresh), sustained (>=10ms) low-RMS region, using it instead of p_mid when found. Confirmed via full benchmark: MAE 12.846ms->12.764ms, within20 79.2%->79.43%, within5/7/10 unchanged, exactly 4 changed cases in the whole benchmark, all improvements (bonus fix on 'could'->'be', same pattern).",
+      "fix_commit": "backward search (up to 100ms, gated on ends_in_stop(w1)) for a genuine sustained low-RMS closure in the final p_mid fallback case",
+      "error_before_ms": 72.1,
+      "error_after_ms": 15.2,
+      "max_acceptable_error_ms": 25.0
+    },
+    {
+      "id": "stop_closure_delayed_onset_forward_rise_think_uh",
+      "clip": "0",
+      "token_idx": 21,
+      "text": "uh",
+      "description": "think/uh (and 3rd pair based/on): case-6 (\"Delayed word onset in raw CTC\", w1 ends in stop and w2 starts with a vowel with a wide raw-CTC gap) did a blind argmin(rms) over the whole scan window to find the boundary. When w1 ends in a stop with a genuine closure, that closure (near-total silence) is almost always the deepest RMS point in the whole window, so argmin wrongly lands there instead of at w2 true onset -- confirmed on think->uh (raw CTC gap 340ms, argmin landed at the /k/ closure, 64ms before gold real uh onset). Fix: when the window genuinely starts in a closure (sustained dip below 50% of trail_thresh for >=10ms near the window start -- NOT just a momentary dip, which also fires on weak/incomplete stop closures within otherwise continuous voicing), search FORWARD for the first SUSTAINED (>=15ms) rise into real voiced content (rms>=speech_thresh, or rms>=trail_thresh with voicing>=0.35) instead of taking the window global minimum; fall back to the old argmin if no closure is detected or no rise is found. Investigated 2 regressions from an earlier looser version of this rule (think-> it with NO real closure at all -- weakly/unreleased stop with continuous loud voicing throughout the window; it->actually and fond->of with only a brief 2-sample dip barely under trail_thresh inside otherwise continuous voicing) -- both fixed by requiring the closure to be deep and sustained, not just present. (uh end_err 32.4ms is a pre-existing, unrelated error on the uh/you boundary, not touched by this fix -- the fixed boundary is uh start_err, 63.7ms->3.0ms.)",
+      "fix_commit": "stop_closure_delayed_onset_forward_rise_think_uh",
+      "error_before_ms": 64.7,
+      "error_after_ms": 32.4,
+      "max_acceptable_error_ms": 40.0
+    },
+    {
+      "id": "pipe_gap_mean_rms_gate_i_never",
+      "clip": "8",
+      "token_idx": 23,
+      "text": "i",
+      "description": "i/never: case-0 (\"Inter-word quiet gap inside pipe\", w1 ends in vowel, wide pipe span) treated the ENTIRE [p_start, p_end] pipe span as the true silence gap and split there directly, gated only on the single MINIMUM rms sample in the span being <0.0025. A brief coarticulation dip (vowel trailing into a nasal onset) can momentarily bottom out just as low while the span as a whole stays continuously voiced -- confirmed on i->never: min dips to 0.0016 but the spans mean RMS is 0.02-0.03 (RMS 0.007-0.09 throughout), so blindly splitting at p_start/p_end put i 76ms early and never 35ms late. Fix: also require the spans MEAN rms to be below trail_thresh, confirming it is quiet throughout, not just at one narrow notch, before treating the whole span as a genuine gap.",
+      "fix_commit": "pipe_gap_mean_rms_gate_i_never",
+      "error_before_ms": 76.4,
+      "error_after_ms": 1.2,
+      "max_acceptable_error_ms": 15.0
+    },
+    {
+      "id": "hesitation_filler_closure_scan_decoupled_that_um",
+      "clip": "1",
+      "token_idx": 11,
+      "text": "that",
+      "description": "that/um: the is_hesitation case (w1 ends in stop, w2 in um/uh, pause_dur<150ms, mean_gap_rms>=trail_thresh) blindly used bnd=p_end (the raw CTC pipe end), which can include a long quiet-but-voiced stretch that is really still w1s own trailing closure/release -- confirmed: p_end landed 70ms after golds \"that\" end, inside a region with sustained voicing 0.36-0.73 that gold treats as belonging to NEITHER word. Fix part 1: scan forward from w1s raw end for the first sustained (15ms) drop below 0.5*trail_thresh, marking where ws own audible content truly stops; fall back to p_end if none found. Fix part 2: since w1 end and w2 start were tied to the same split point, pulling w1 end back left w2 start artificially early too (first attempt regressed um from 31.9ms to 105.8ms error) -- decoupled them via the existing w2_start_override mechanism, scanning forward from the new closure point for w2s own confident (sustained >=15ms >=speech_thresh) onset, matching golds apparent preference for the fillers LOUD onset over its quiet lead-in.",
+      "fix_commit": "hesitation_filler_closure_scan_decoupled_that_um",
+      "error_before_ms": 69.1,
+      "error_after_ms": 5.2,
+      "max_acceptable_error_ms": 15.0
+    },
+    {
+      "id": "prelabel_corroboration_no_signal_gate_little_room",
+      "clip": "3",
+      "token_idx": 38,
+      "text": "little",
+      "description": "Added optional prelabel integration: forced_aligner.py now accepts an optional prelabel_segments param (align()/snap_boundaries_hybrid()), matched to our own word sequence via difflib sequence alignment (not positional indexing -- prelabel segmentation can differ slightly, e.g. repeated/truncated words). System remains fully prelabel-independent: this is purely additive corroboration, default None, zero effect when absent. Verified real prelabel quality on this project's own audio/*.json sidecars ('lexical' segments, from a prior independent automated pass): 91.4% coverage, combined MAE=17.8ms vs gold -- close to but worse than our own tuned output on average, but dramatically BETTER specifically on many of our declared acoustically-unrecoverable dead-end cases (16/24 known-hard-cases checked, several by 60-80ms, e.g. 'what' 82.6ms->1.1ms raw prelabel, 'gonna' 78.7ms->8.7ms). Two broader integration attempts were tried and reverted first: (1) trusting prelabel only in case-14's literal p_mid default -- missed most real dead-ends since they get caught by OTHER cases' own best-effort argmin logic first (not literally p_mid, but equally uninformed) -- net negative (MAE 12.491->12.623ms, 62 regressed vs 44 improved); (2) trusting prelabel whenever it disagreed with our own case-specific answer by >40ms, regardless of case -- broke 3 validated regression-suite cases by overriding already-well-tuned specific logic (e.g. hesitation_filler_closure_scan_decoupled_that_um: 5.2ms->107.0ms) -- also net negative (MAE->12.693ms). Final working version: only trust the prelabel when NEITHER of the two signals every other case relies on (a genuine RMS dip below trail_thresh, or an HF-ratio spike >=0.3 indicating frication) is present ANYWHERE in the window bounding the pair -- i.e. only when our own heuristics genuinely have nothing to go on, not just when they disagree. Clean net win: MAE 12.491ms->12.402ms, every within-Xms metric improved, all 18 (now 19) regression-suite cases still pass, 26 improved vs 24 regressed (improvements larger in aggregate). Confirmed fix on 'little'->'room' (sonorant-junction dead end): 80.3ms->29.9ms / 81.3ms->30.9ms.",
+      "fix_commit": "prelabel_corroboration_no_signal_gate",
+      "error_before_ms": 80.3,
+      "error_after_ms": 29.9,
+      "max_acceptable_error_ms": 45.0
+    }
+  ]
+}

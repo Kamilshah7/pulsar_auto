@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Labelbox Task Sniper & Siren Alert",
+  "version": "1.0",
+  "description": "Monitors Labelbox Start button, snipes tasks instantly when blue/active, and plays a loud siren.",
+  "permissions": [
+    "storage",
+    "notifications",
+    "offscreen"
+  ],
+  "host_permissions": [
+    "https://app.labelbox.com/*"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://app.labelbox.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["overlay.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Labelbox Task Sniper Settings",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }
+}

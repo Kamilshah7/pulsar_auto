@@ -1,0 +1,18 @@
+2026/09/12-03:27:43.834 28f4 Reusing MANIFEST F:\BB\ETN-SC\pulsar_auto\profiles\labelbox\Default\Local Storage\leveldb/MANIFEST-000001
+2026/09/12-03:27:43.847 28f4 Recovering log #13
+2026/09/12-03:27:43.851 28f4 Reusing old log F:\BB\ETN-SC\pulsar_auto\profiles\labelbox\Default\Local Storage\leveldb/000013.log 
+2026/09/12-03:28:00.954 1fd8 Level-0 table #17: started
+2026/09/12-03:28:00.959 1fd8 Level-0 table #17: 106814 bytes OK
+2026/09/12-03:28:00.961 1fd8 Delete type=0 #13
+2026/09/12-03:28:00.962 28f4 Compacting 4@0 + 1@1 files
+2026/09/12-03:28:00.970 28f4 Generated table #18@0: 69 keys, 207011 bytes
+2026/09/12-03:28:00.971 28f4 Compacted 4@0 + 1@1 files => 207011 bytes
+2026/09/12-03:28:00.971 28f4 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/09/12-03:28:00.972 28f4 Delete type=2 #7
+2026/09/12-03:28:00.972 28f4 Delete type=2 #9
+2026/09/12-03:28:00.972 28f4 Delete type=2 #12
+2026/09/12-03:28:00.972 28f4 Delete type=2 #14
+2026/09/12-03:28:00.972 28f4 Delete type=2 #17
+2026/09/12-03:28:36.150 28f4 Level-0 table #20: started
+2026/09/12-03:28:36.161 28f4 Level-0 table #20: 102207 bytes OK
+2026/09/12-03:28:36.164 28f4 Delete type=0 #16

@@ -1,0 +1,92 @@
+(39s)  continuous joins between different manner classes
+
+ALL  n=2140
+    lexical median                   MAE  22.0  med  16.0  w5   17%  w10   35%  w20   59%
+    dir peak @ GOLD +-20 (oracle)    MAE  10.5  med  10.0  w5   27%  w10   54%  w20  100%
+    dir peak @ GOLD +-40 (oracle)    MAE  16.5  med  14.0  w5   22%  w10   43%  w20   66%
+    dir peak @ lexical +-20          MAE  21.4  med  16.0  w5   19%  w10   39%  w20   62%
+    dir peak @ lexical +-30          MAE  21.7  med  16.0  w5   20%  w10   40%  w20   61%
+    dir peak @ lexical +-40          MAE  22.3  med  16.0  w5   21%  w10   39%  w20   61%
+    MAP prior+1*dir +-40             MAE  22.7  med  16.0  w5   21%  w10   39%  w20   60%
+    MAP prior+2*dir +-40             MAE  22.5  med  16.0  w5   21%  w10   39%  w20   60%
+    MAP prior+4*dir +-40             MAE  22.4  med  16.0  w5   21%  w10   39%  w20   60%
+vowel>fric  n=266
+    lexical median                   MAE  29.6  med  26.0  w5   12%  w10   24%  w20   44%
+    dir peak @ GOLD +-20 (oracle)    MAE  10.8  med  10.0  w5   23%  w10   51%  w20  100%
+    dir peak @ GOLD +-40 (oracle)    MAE  17.7  med  16.0  w5   16%  w10   39%  w20   61%
+    dir peak @ lexical +-20          MAE  29.9  med  24.0  w5   11%  w10   23%  w20   44%
+    dir peak @ lexical +-30          MAE  29.3  med  23.0  w5   12%  w10   27%  w20   47%
+    dir peak @ lexical +-40          MAE  28.2  med  22.0  w5   14%  w10   32%  w20   49%
+    MAP prior+1*dir +-40             MAE  29.0  med  22.0  w5   15%  w10   30%  w20   47%
+    MAP prior+2*dir +-40             MAE  28.2  med  22.0  w5   15%  w10   32%  w20   49%
+    MAP prior+4*dir +-40             MAE  28.0  med  22.0  w5   14%  w10   33%  w20   48%
+stop>vowel  n=219
+    lexical median                   MAE  23.1  med  20.0  w5   12%  w10   30%  w20   52%
+    dir peak @ GOLD +-20 (oracle)    MAE   9.4  med   8.0  w5   35%  w10   62%  w20  100%
+    dir peak @ GOLD +-40 (oracle)    MAE  13.5  med  10.0  w5   29%  w10   52%  w20   77%
+    dir peak @ lexical +-20          MAE  19.6  med  12.0  w5   25%  w10   44%  w20   68%
+    dir peak @ lexical +-30          MAE  19.0  med  12.0  w5   28%  w10   50%  w20   70%
+    dir peak @ lexical +-40          MAE  19.0  med  10.0  w5   28%  w10   51%  w20   72%
+    MAP prior+1*dir +-40             MAE  19.4  med  10.0  w5   28%  w10   51%  w20   73%
+    MAP prior+2*dir +-40             MAE  18.8  med  10.0  w5   28%  w10   52%  w20   72%
+    MAP prior+4*dir +-40             MAE  19.0  med  10.0  w5   28%  w10   51%  w20   72%
+vowel>stop  n=209
+    lexical median                   MAE  18.8  med  14.0  w5   19%  w10   41%  w20   66%
+    dir peak @ GOLD +-20 (oracle)    MAE   9.6  med   8.0  w5   30%  w10   60%  w20  100%
+    dir peak @ GOLD +-40 (oracle)    MAE  15.2  med  12.0  w5   26%  w10   48%  w20   74%
+    dir peak @ lexical +-20          MAE  18.9  med  12.0  w5   22%  w10   45%  w20   70%
+    dir peak @ lexical +-30          MAE  19.5  med  12.0  w5   26%  w10   47%  w20   70%
+    dir peak @ lexical +-40          MAE  20.4  med  12.0  w5   25%  w10   44%  w20   66%
+    MAP prior+1*dir +-40             MAE  20.5  med  12.0  w5   26%  w10   45%  w20   66%
+    MAP prior+2*dir +-40             MAE  20.5  med  12.0  w5   26%  w10   45%  w20   66%
+    MAP prior+4*dir +-40             MAE  20.3  med  12.0  w5   26%  w10   45%  w20   66%
+stop>fric  n=175
+    lexical median                   MAE  22.1  med  16.0  w5   21%  w10   39%  w20   59%
+    dir peak @ GOLD +-20 (oracle)    MAE  11.6  med  12.0  w5   19%  w10   46%  w20  100%
+    dir peak @ GOLD +-40 (oracle)    MAE  21.0  med  20.0  w5   14%  w10   31%  w20   50%
+    dir peak @ lexical +-20          MAE  24.7  med  20.0  w5   11%  w10   31%  w20   55%
+    dir peak @ lexical +-30          MAE  25.8  med  22.0  w5   11%  w10   27%  w20   48%
+    dir peak @ lexical +-40          MAE  26.3  med  22.0  w5   12%  w10   27%  w20   47%
+    MAP prior+1*dir +-40             MAE  26.3  med  22.0  w5   11%  w10   27%  w20   47%
+    MAP prior+2*dir +-40             MAE  26.4  med  22.0  w5   11%  w10   27%  w20   47%
+    MAP prior+4*dir +-40             MAE  26.9  med  22.0  w5   11%  w10   26%  w20   47%
+fric>vowel  n=149
+    lexical median                   MAE  20.9  med  16.0  w5   19%  w10   37%  w20   59%
+    dir peak @ GOLD +-20 (oracle)    MAE   8.5  med   8.0  w5   36%  w10   72%  w20  100%
+    dir peak @ GOLD +-40 (oracle)    MAE  11.0  med   8.0  w5   32%  w10   66%  w20   85%
+    dir peak @ lexical +-20          MAE  17.3  med  10.0  w5   24%  w10   55%  w20   71%
+    dir peak @ lexical +-30          MAE  15.7  med  10.0  w5   24%  w10   57%  w20   75%
+    dir peak @ lexical +-40          MAE  14.6  med   8.0  w5   31%  w10   62%  w20   79%
+    MAP prior+1*dir +-40             MAE  15.9  med  10.0  w5   30%  w10   60%  w20   78%
+    MAP prior+2*dir +-40             MAE  14.9  med   8.0  w5   31%  w10   62%  w20   79%
+    MAP prior+4*dir +-40             MAE  14.7  med   8.0  w5   31%  w10   62%  w20   79%
+vowel>glide  n=136
+    lexical median                   MAE  21.2  med  16.0  w5   15%  w10   38%  w20   61%
+    dir peak @ GOLD +-20 (oracle)    MAE  11.9  med  12.0  w5   21%  w10   44%  w20  100%
+    dir peak @ GOLD +-40 (oracle)    MAE  20.2  med  20.0  w5   15%  w10   27%  w20   51%
+    dir peak @ lexical +-20          MAE  24.0  med  20.0  w5   15%  w10   28%  w20   51%
+    dir peak @ lexical +-30          MAE  26.1  med  22.0  w5   10%  w10   24%  w20   48%
+    dir peak @ lexical +-40          MAE  28.0  med  22.0  w5   10%  w10   23%  w20   48%
+    MAP prior+1*dir +-40             MAE  27.8  med  22.0  w5   10%  w10   23%  w20   49%
+    MAP prior+2*dir +-40             MAE  27.9  med  22.0  w5    9%  w10   22%  w20   46%
+    MAP prior+4*dir +-40             MAE  27.9  med  22.0  w5    9%  w10   23%  w20   46%
+nasal>vowel  n=135
+    lexical median                   MAE  27.5  med  20.0  w5    4%  w10   19%  w20   52%
+    dir peak @ GOLD +-20 (oracle)    MAE   9.1  med   8.0  w5   33%  w10   65%  w20  100%
+    dir peak @ GOLD +-40 (oracle)    MAE  12.0  med   8.0  w5   30%  w10   60%  w20   80%
+    dir peak @ lexical +-20          MAE  22.1  med  14.0  w5   26%  w10   46%  w20   65%
+    dir peak @ lexical +-30          MAE  19.2  med  10.0  w5   29%  w10   55%  w20   70%
+    dir peak @ lexical +-40          MAE  19.1  med  10.0  w5   31%  w10   56%  w20   73%
+    MAP prior+1*dir +-40             MAE  22.0  med   8.0  w5   31%  w10   57%  w20   71%
+    MAP prior+2*dir +-40             MAE  20.9  med  10.0  w5   30%  w10   55%  w20   70%
+    MAP prior+4*dir +-40             MAE  19.8  med  10.0  w5   30%  w10   55%  w20   72%
+nasal>fric  n=132
+    lexical median                   MAE  20.4  med  16.0  w5   18%  w10   37%  w20   58%
+    dir peak @ GOLD +-20 (oracle)    MAE   9.5  med   8.0  w5   30%  w10   58%  w20  100%
+    dir peak @ GOLD +-40 (oracle)    MAE  12.7  med  10.0  w5   27%  w10   52%  w20   80%
+    dir peak @ lexical +-20          MAE  17.2  med  11.0  w5   22%  w10   50%  w20   75%
+    dir peak @ lexical +-30          MAE  16.5  med  11.0  w5   28%  w10   50%  w20   77%
+    dir peak @ lexical +-40          MAE  15.6  med  11.0  w5   27%  w10   50%  w20   77%
+    MAP prior+1*dir +-40             MAE  15.5  med  11.0  w5   27%  w10   50%  w20   77%
+    MAP prior+2*dir +-40             MAE  15.6  med  11.0  w5   28%  w10   50%  w20   77%
+    MAP prior+4*dir +-40             MAE  15.4  med  11.0  w5   27%  w10   50%  w20   77%

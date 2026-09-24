@@ -1,0 +1,150 @@
+=== CLIPS TO PROCESS ===
+
+--- CLIP 0 (syndigate_podcasts_29567fe75c525ab69423b057a86708a7_930.0_1230.0-sortformer-14.wav) ---
+1. Whisper Full Text:
+   "we didn't say it on the podcast so much, but later in the week, I've said this on, you know, talked about it on the site a little bit and said it elsewhere. Like the only chance I thought Baylor really had was maybe they could take some shots down the field. Cause they, they do take shots. That's one of the things that kind of a signature in their offense. Like they will throw the ball deep more often than they're not to throw. Like they don't have much of an intermediate game. Like they're usually either it's usually their screens or they're taking some kind of intermediate to deep shot."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "WE DIDN'T SAY IT ON THE POTCAST SO MUCH BUT LATER IN A WEEK A I'VE SAID THIS ON OU KN TALKED ABOUT AN ONSIDE A LITTLE BIT AN AND AND SET IT ELSEWHERELY THOUNHLY CHANCE I THOUGHT BAILER REALLY HAD WAS MAYBE THEY COULD TAKE SOME SHOTS DOWN THE FIELD CAUSE THEY THEY DO TAKE SHOTS THAT'S ONE OF THE THINGS THAT THEY ARE KOND OF A SIGNATURE IN THEIR OFFINCE LIKE THEY WILL THROW THE BALL DEED MORE OFTEN THAN THE KNOT TO THOROWGLY THEY DON'T HAVE MUCH OF AN INTERMEDIATE GAME LIKE THEY ARE USUALY EITHER IT'S UALLY SCRANGE OR THEY'RE TAKIN SOME KIND OF INTERMEDIATE A DEEP SHOT"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'the' [8.20s - 9.26s] -> Acoustic CTC heard: []
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "we didn't say it on the podcast so much but later in the week i've said this on you know talked about it on the site a little bit and set it elsewhere like only chance i thought baylor really had was maybe they could take some shots down the field because they do take shots that's one of the things that kind of a signature in their offense like they will throw the ball deep more often than they're not to throw like they don't have much of an intermediate game like they're usually either it's usually either screens or they're taking some kind of intermediate to deep shot"
+============================================================
+
+--- CLIP 1 (syndigate_podcasts_295fa16570105103b5706e4f2195985d_1840.0_2030.0-sortformer-8.wav) ---
+1. Whisper Full Text:
+   "So please, to our audience, please join us again on Monday. Barron Senior Managing Editor Lauren Rublin and Deputy Editor Ben Levison will talk with Thomas Kennedy, Chief Investment Strategist of Global Wealth Management at J.P. Morgan, about the outlook for the economy and financial markets and investment strategies. Thank you for listening all. Have a great weekend."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "A ZO PLEASE TO OUR OBDIENCELY JOIN US A AGAIN ON MONDAY SENIOR A BARONSEER MANAGING EDITOR BOREN RUBLEN AND DEPUTY EDITOR BAN LEVISON WILL TALK WITH THOMAS KENNEDY CHIAP INVESTMENT STRATEGIST OF BOBL WEALTH MANAGEMENT AT J P MORGAN ABOUT THE OUTLOOK FOR THE ECONOMY AND FINANCIAL MARKETS AND INVESTMENT STRATEGIES THANK YOU FOR LISTENING ALL HAVE A GREAT WEEK AN"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'strategies.' [18.18s - 19.18s] -> Acoustic CTC heard: ['strategies', 'thank']
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "so please to our audience please join us again on monday barron's senior managing editor lauren rublin and deputy editor ben levisohn will talk with thomas kennedy chief investment strategist of global wealth management at jpmorgan about the outlook for the economy and financial markets and investment strategies thank you for listening all have a great weekend"
+============================================================
+
+--- CLIP 2 (syndigate_podcasts_2b4fac71b9a5572f850cc34f4df5d740_1670.0_1970.0-sortformer-23.wav) ---
+1. Whisper Full Text:
+   "USC is going to be left behind unless people, the boosters get behind this. And so there's another option. And, you know, I like those guys. I like the guys that run this one. So a little different feel, a little different approach. And this was at a private home in Manhattan Beach. Man, they had a sushi bar to die for. They had sushi chef there. It was really good. Huge tower, like a charcuterie board tower. Great desserts. Open bar, great."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "YUESS HE'S COULD BE LEFT BEHIND UNLESS PEOPLE THE BOOSTERS GET BEHIND THIS AND A SO THERE'S ANOTHER OPTION AND AH AIN'T O I LIKE THOSE GUISES LIKE THE GUISE THAT RUN THIS ONE AM SO LITTLE DIFVER FEEL LITTLE DIFFERENT APPROACH AND THE LISWAS HAT A PRIVATE HOME IN MHATTON BEACH MAN DID A SUSHI BAR TO DIE FOR THET SUSHI SHEFF THERE WAS REALLY GOOD A HUGE TOWER LIKE A CHARCOOTERY BOARD TOWER GREAT DESERTS OPEN BAR"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'so' [4.22s - 5.26s] -> Acoustic CTC heard: ['and', 'a', 'so']
+4. Targeted Micro-Slice detected 85 words (vs Whisper's 83 words).
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "usc is going to be left behind unless people the boosters get behind this and so t here is another option and you know i i like those guys i like the guys that run this one so a little different feel a little different approach and they was at a private home in manhattan beach man they had a sushi bar to die for they had sushi chef there it was really good huge tower like a charcuterie board tower great desserts open bar"
+============================================================
+
+--- CLIP 3 (syndigate_podcasts_2c10481a206e59efaa1a72adcf7cc3d1_820.0_1070.0-sortformer-11.wav) ---
+1. Whisper Full Text:
+   "And yet they still didn't report that to the parents. They didn't think they had a responsibility to say, oh, by the way, your kid passed out today at P.E. That's because we allowed them to do something that you didn't know anything about, which was basically wear a corset around their chest. This is just insane. As a parent, I don't understand it at all. Laura's online, too. Laura, what's your take?"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "AND YET THEY STILL DIDN'T REPORT THAT TO THE PARENTS THEY DIDN'T THINK THEY HAD A RESPONSIBILITY TO SAY OH BY THE WAY YOUR KID PASSED OUT TO DAY AT P E THAT'S BECAUSE WE ALLOWED THEM TO DO SOMETHING THAT YOU DIDN'T KNOW ANYTHING ABOUT WHICH WAS BASELY WERE OF A NOA COURSE IT AROUND THEIR CHESTS ITHIS IS JIS INSANE AS A PARENT II DON'T UNDERSTAND IT AT ALL A LAURA'S ONLINE TOO LARE WHAT YOUR TAKE"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'corset' [16.54s - 18.12s] -> Acoustic CTC heard: ['a', 'noa', 'course', 'it']
+4. Targeted Micro-Slice detected 77 words (vs Whisper's 73 words).
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "and yet they still didn't report that to the parents they didn't think they had a responsibility to say oh by the way your kid passed out today at pe that's because we allowed them to do something that you didn't know anything about which was basically wear a corset around their chest this is just insane as a parent i don't understand it at all laura's online too laura what's your take"
+============================================================
+
+--- CLIP 4 (syndigate_podcasts_2c7fd69a289d57378d163db7b602f510_2340.0_2590.0-sortformer-12.wav) ---
+1. Whisper Full Text:
+   "And so just really quick, there is kind of a concern, though, among some people that aren't big Murkowski fans. And I know them and they don't like Murkowski, that the Republicans are going to divide themselves and that the Democrat will win because Alaska has some Democrat sympathies. Is there any truth to that? What is your what is your opinion of that?"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "AND SO TIOSES REALLY QUICK THERE IS KIND OF A CONCERN THOUGH AMONGT SOME PEOPLE THAT AREN'T BIG MERKOWSKY FANS AND I KNOW THEM AND THEY THEY DON'T LIKE MERKOWSKY THAT THE REPUBLICANS ARE GOING TO DIVIDE THEMSELVES AND THAT THE DEMOCRAT WILL WIN BECAUSE ALASKA HAS SOME DEMOCRAT SYMPATHIES IS THERE ANY TRUTH TO THAT WHAT WHAT IS YOUR WHAT IS YOUR OPINION OF THAT"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'Murkowski,' [9.38s - 10.62s] -> Acoustic CTC heard: ['like', 'merkowsky', 'that']
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "and so just really quick there is kind of a concern though amongst some people that aren't big murkowski fans and i know them and they don't like murkowski that the republicans are going to divide themselves and that the democrat will win because alaska has some democrat sympathies is there any truth to that what what is your opinion of that"
+============================================================
+
+--- CLIP 5 (syndigate_podcasts_2cd0712bd71e5e119d198f372bb34663_2330.0_2630.0-sortformer-20.wav) ---
+1. Whisper Full Text:
+   "It's time to f*** it out of here. There's no saving this. That guy's horrible. That woman is awful. And we all know, like the shrew woman, that's just destroying a man's psyche inside and out, just destroying him from top to bottom. You see it. He used to be fun. He's kind of less fun. Now he's just miserable. And every time you hear her, you're..."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "IT'S TIME TO FAR ON HERE THA THERE'S NO SAVE IN THIS THAT GUYSES HORRIBLE THAT WOMAN IS AWFUL AND WE ALL KNOW LIKE THE SHREW WOMAN THAT JUST DESTROYING A MAN'S PSYCHE INSIDE AND OT JUST DESTROYING HIM FROM TOP TILE YOU SEE IT HE USED TO BE FUN HE'S CONTILESSE ONE NOW HE'S JUST MISERABLE I AN ITS AND YU EVERY TIME YOU HEAR HER YOUR"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'this.' [3.72s - 4.78s] -> Acoustic CTC heard: ['in', 'this', 'that', 'guyses']
+   - Whisper 'horrible.' [4.96s - 6.34s] -> Acoustic CTC heard: ['horrible', 'that']
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "it's time to get out of here there is no saving this that guy's horrible that woman is awful and we all know like the shrew woman that's just destroying a man's psyche inside and out just destroying him from top to bottom you see it he used to be fun he's kind of less fun now he's just miserable and every time you hear her are"
+============================================================
+
+--- CLIP 6 (syndigate_podcasts_2cded1b3f58156aa9ab264c213bc832a_1660.0_1890.0-sortformer-16.wav) ---
+1. Whisper Full Text:
+   "You know how you go to somebody's website and it says this person. So Taylor Swift needs to say a million number one gold records or platinum things and this many sold on Spotify. Top ten songs on Spotify for this many years and blah, blah, blah, blah, blah, blah, blah. And caused the Senate to form a committee to investigate Ticketmaster because of the way Ticketmaster handled money."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "SHYOUHOW YOU GO TO SUMEBODY SWEBSIGHTAN AND SAYS THIS BIRSAND SO TELL OR SWIFT YA NEED TO SAY A MILLION NUMBER ONE GOLD RECORDS OR STIO PLATNUM THINGS AND THIS MAN E SOLD AND ONSPOTIFIED TOPTEN SONGS ON SPOTIFID FOR THIS MANY YEARS IN BLAVA BLAND BLAVA BLA AND BLAVBA AND CAUSE THE SENATE TO FORM A COMMITTEE TO INVESTIGATE TICKET MASTER BECAUSE OF THE WAY TICKET MASTER HANDLED"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'Spotify.' [11.28s - 12.34s] -> Acoustic CTC heard: ['onspotified']
+   - Whisper 'And' [16.26s - 17.62s] -> Acoustic CTC heard: ['and', 'blavba', 'and']
+   - Whisper 'because' [22.48s - 23.48s] -> Acoustic CTC heard: ['master', 'because']
+4. Targeted Micro-Slice detected 73 words (vs Whisper's 69 words).
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "you know how you go to somebody's website and it says this person so taylor swift you know needs to say a million number one gold records or you know platinum things and this many sold on spotify top ten songs on spotify for this many years and blah blah blah and blah blah blah and blah blah blah and caused the senate to form a committee to investigate ticketmaster because of the way ticketmaster handled"
+============================================================
+
+--- CLIP 7 (syndigate_podcasts_2d03cf22a5825a07a90b1189565b5ecb_710.0_850.0-sortformer-7.wav) ---
+1. Whisper Full Text:
+   "And Congresswoman, but when I've spoken to people over the past week, there was some that were just saying the Kenyan forces and Benin actually was also pointed out that they would not be able to do what is necessary in Haiti, that it is only a force like the US military that will be able to overtake the gangs that are there and restore law and order."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "AND CONGRESS ONBLE WHEN I'VE SPOKEN TO PEOPLE OVER THE PAST WEEK THERE WAS SOME LERE TO SAY THE CANYON FORCES AND BENEAN ACTUALLY WAS ALSO ERE POINTED OUT THAT THEY WOULD NOT BE ABLE TO DO WHAT IS NECESSARY IN HATY THAT IT IS ONLY A FORCE LIKE THE U S MILITARY THAT WILL BE ABLE TO OVERTAKE EHE THE GANGS THAT ARE THERE AND RESTORE LAW AND ORDER"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'pointed' [7.42s - 8.60s] -> Acoustic CTC heard: ['also', 'ere', 'pointed']
+   - Whisper 'to' [16.30s - 17.14s] -> Acoustic CTC heard: ['to']
+   - Whisper 'the' [18.00s - 18.78s] -> Acoustic CTC heard: ['ehe', 'the']
+4. Targeted Micro-Slice detected 70 words (vs Whisper's 68 words).
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "and congressman but when i've spoken to people over the past week there was some they were just saying the kenyan forces and benin actually was also pointed out that they would not be able to do what is necessary in haiti that it is only a force like the u s military that will be able to overtake the gangs that are there and restore law and order"
+============================================================
+
+--- CLIP 8 (syndigate_podcasts_2d602371169b5aa89510bc9ed85ef8a5_1720.0_2020.0-sortformer-0.wav) ---
+1. Whisper Full Text:
+   "said, the nuclear freeze movement, a huge groundswell of populist support. Everyone was already convinced that we had to stop this arms race, but no one could imagine how to go about it. And part of this film was able to imagine, particularly for one person,"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "SAID THE NEWGLERFREEZE MOVEMENT UM A HUGE GROUND SWELL OF POPULOUS SUPPORT EVERY ONE WAS ALREADY CONVINCED THAT WE HAD TO STOP THIS ARMS RACE BUT NO ONE COULD IMAGINE HOW TO GO ABOUT IT UM IN PART OF THIS FILM WAS ABLE TO IMAGINE PARTICULARLY FOR ONE PERSON"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'movement,' [0.98s - 3.30s] -> Acoustic CTC heard: ['movement', 'um', 'a']
+   - Whisper 'was' [6.08s - 7.12s] -> Acoustic CTC heard: ['every', 'one', 'was']
+   - Whisper 'it.' [13.42s - 15.06s] -> Acoustic CTC heard: ['it', 'um', 'in']
+   - Whisper 'imagine,' [17.68s - 19.02s] -> Acoustic CTC heard: ['to', 'imagine']
+4. Targeted Micro-Slice detected 48 words (vs Whisper's 46 words).
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "said the nuclear freeze movement um huge groundswell of populist support everyone was already convinced that we had to stop this arms race but no one could imagine how to go about it and part of this film was able to imagine particularly for one person"
+============================================================
+
+--- CLIP 9 (syndigate_podcasts_2ddf18f8f34759728fa8e0406d9ddfde_560.0_650.0-sortformer-14.wav) ---
+1. Whisper Full Text:
+   "What they're thinking in that room. And again, if you really do think that Oregon's going to beat Washington, that's fine. But put them at number eight and when they win, put them up at number four. It's fine if you want to reward them for getting that win when they get the win. But it seems like they've been rewarding them because they think they're going to win a game in the future."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "WHAT THEY'RE THINKING IN THAT ROOM AND AGAIN IF YOU REALLY DO THINK THE ORGAN'S GOING TO BE WASHED AN THAT'S FINE BUT PUT EM AT NUMBER EIGHT AND WHEN THEY WIN PUT EM UP A NUMBER FOLT LIKE IT'S FINE IF YOU WANT TO REWARD THEM FOR GETTING THAT WIN WHEN THEY GET THE WIN BUT IT'S LIKE THEY IT SEEMS LIKE THEY'E BEEN REWARDING THEM BECAUSE THEY THINK THEY'RE GOING TO WIN A GAME IN THE FUTURE"
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "what they're thinking in that room and again if you really do think that oregon's going to beat washington that's fine but put them at number eight and when they win put them up at number four like it's fine if you want to reward them for getting that win when they get the win but it's like they it seems like they've been rewarding them because they think they're going to win a game in the future"
+============================================================
+
+--- CLIP 10 (syndigate_podcasts_2e49527d6a8b596d98ea5439a58fe024_1280.0_1580.0-sortformer-17.wav) ---
+1. Whisper Full Text:
+   "leather blazer and like lean more matrix then you can get little bite-sized pieces of like j crew from that era where maybe it's like a kitten heel slingback kitten heel with your straight leg pant you know I mean so it kind of depends how far you want to go with it but I I don't know I like referencing back it's nostalgic and it's kind of fun and I'm always really open to"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "LEATHER BLAZER AND LIKE LEAN MORE MATRIX THEN YOU CAN GET LITTLE BITE SIZED PIECES UT LIKE J CREW FROM THAT AIR A WER MAYBE IT'S LIKE A KITTEN HEELS SLING BACK KITTEN HEEL WITH YOUR STRAIGHT LEG PANT YOU KNOW I MEAN SO IT KIND OF DEPENDS HOW FAR YOU WANT TO GO WITH IT BUT I I DON'T KNOW I LIKE REFERENCE SINK BACK IT'S NASTALGIC AND IT'S KIND OF FUN AND I'M ALWAYS REALLY OPEN TO"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'where' [7.04s - 8.16s] -> Acoustic CTC heard: ['a', 'wer']
+   - Whisper 'I' [17.50s - 18.60s] -> Acoustic CTC heard: ['but', 'i', 'i', "don't"]
+   - Whisper 'referencing' [19.90s - 21.02s] -> Acoustic CTC heard: ['reference', 'sink']
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "leather blazer and like lean more matrix then you can get little bite sized pieces of like j crew from that era where maybe it's like a kitten heel slingback kitten heel with your straight leg pant you know i mean so it kind of depends how far you want to go with it but i i don't know i like referencing back it's nostalgic and it's kind of fun and i am always really open to"
+============================================================
+
+--- CLIP 11 (syndigate_podcasts_2eb8e17f398651f8abfa0b1c6ba1c3cd_3060.0_3360.0-sortformer-15.wav) ---
+1. Whisper Full Text:
+   "either you see it a lot on in social media where it's like they did this to themselves or or um you know this this idea that you're knowingly doing something i wasn't it was very much subconscious and then the i do think getting out of it it takes personal responsibility and is takes that uh intention and kind of you have to knowingly get out of it i don't know a lot of people who just"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "EITHER YOU SEE IT A LOT ON IN SOCIAL MEDIA WHERE IT'S LIKEY AT THEY DID THIS TO THEMSELVES OR OR A YOU KNOW THIS THIS IDEA THAT YOU'RE KNOWINGLY DOING SOMETHING I WASN'T IT WAS VERY MUCH SUBCONSCIOUS AND THAT THE I DO THINK GETTING OUT OF IT IT TAKES PERSONAL RESPONSIBILITY AND IS TAKES THAT A INTENTION AND KIND OF YOU HAVE TO KNOWINGLY GET OUT OF IT I DON'T KNOW A LOT OF PEOPLE WHO JUST"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'in' [1.44s - 2.16s] -> Acoustic CTC heard: ['on', 'in']
+   - Whisper 'you' [6.08s - 7.22s] -> Acoustic CTC heard: ['a', 'you', 'know']
+   - Whisper 'subconscious' [12.40s - 13.66s] -> Acoustic CTC heard: ['much', 'subconscious']
+   - Whisper 'the' [14.74s - 15.48s] -> Acoustic CTC heard: ['the']
+   - Whisper 'that' [20.66s - 21.70s] -> Acoustic CTC heard: ['takes', 'that']
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "either you see it a lot on in social media where it's like they did this to themselves or um you know this this idea that you are knowingly doing something i wasn't it was very much subconscious and then the i do think getting out of it it takes personal responsibility and is takes that uh intention and kind of you have to knowingly get out of it i don't know a lot of people who just"
+============================================================

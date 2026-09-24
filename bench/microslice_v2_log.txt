@@ -1,0 +1,114 @@
+clip  0: 15 flagged words -> 10 cluster(s) (median_word_dur=230ms)
+  cluster [0,2] 'surprisingly, surprisingly restrained.' (3 words, 4740ms) -> 4 words: are surprisingly, surprisingly restrained.
+  cluster [10,10] 'much.' (1 words, 900ms) -> 1 words: much.
+  cluster [15,15] 'pretty' (1 words, 1040ms) -> 1 words: pretty,
+  cluster [19,20] 'think, uh,' (2 words, 700ms) -> 2 words: think, uh,
+  cluster [25,26] 'any shots' (2 words, 2280ms) -> 3 words: and he shots
+  cluster [31,31] 'Um,' (1 words, 660ms) -> 4 words: um, you only get
+  cluster [48,48] 'costume.' (1 words, 980ms) -> 2 words: and costume.
+  cluster [54,55] 'think, I' (2 words, 980ms) -> 3 words: and then you,
+  cluster [62,63] 'trailer should' (2 words, 1140ms) -> 2 words: trailer shit,
+  cluster [65,65] 'Um,' (1 words, 920ms) -> 1 words: um,
+clip  1: 11 flagged words -> 10 cluster(s) (median_word_dur=240ms)
+  cluster [7,7] 'thing' (1 words, 540ms) -> 3 words: the, the thing,
+  cluster [11,11] 'most,' (1 words, 1420ms) -> 6 words: that, uh, most, uh, I can
+  cluster [16,16] 'when' (1 words, 800ms) -> 2 words: um, when,
+  cluster [18,19] 'manage to' (2 words, 1100ms) -> 2 words: managed to
+  cluster [34,35] 'become a' (2 words, 1140ms) -> 4 words: become, um, a ha'udah.
+  cluster [37,37] 'literally' (1 words, 860ms) -> 1 words: Literally.
+  cluster [45,46] 'sheep. And' (2 words, 660ms) -> 2 words: sheep. And,
+  cluster [60,60] 'time.' (1 words, 660ms) -> 2 words: sometimes, like,
+  cluster [63,63] 'I' (1 words, 560ms) -> 0 words: 
+  cluster [69,69] 'money,' (1 words, 800ms) -> 1 words: about,
+clip  2: 24 flagged words -> 15 cluster(s) (median_word_dur=220ms)
+  cluster [0,1] 'The haggling' (2 words, 1820ms) -> 3 words: Well, the haggling
+  cluster [7,8] 'like, it's' (2 words, 1140ms) -> 6 words: like, um, and it's like, it's
+  cluster [17,17] 'in' (1 words, 580ms) -> 2 words: um, uh,
+  cluster [19,19] 'markets' (1 words, 620ms) -> 1 words: markets,
+  cluster [23,24] 'that. They' (2 words, 400ms) -> 1 words: because
+  cluster [32,32] 'areas.' (1 words, 1200ms) -> 3 words: in lower areas.
+  cluster [39,39] 'walk' (1 words, 540ms) -> 2 words: that, uh,
+  cluster [51,51] 'is' (1 words, 680ms) -> 4 words: this kid, like, this,
+  cluster [57,58] 'that. And' (2 words, 280ms) -> 3 words: that I thought
+  cluster [68,68] 'him' (1 words, 640ms) -> 5 words: I want to give him,
+  cluster [70,71] 'money. So' (2 words, 1000ms) -> 4 words: on money. It's like,
+  cluster [80,81] 'money. And' (2 words, 800ms) -> 1 words: and
+  cluster [85,85] 'haggling.' (1 words, 820ms) -> 1 words: haggling.
+  cluster [88,92] 'like, what? Five bucks? Can't' (5 words, 2880ms) -> 5 words: like, what? My book's catching
+  cluster [96,96] '20?' (1 words, 980ms) -> 3 words: and I'm like,
+clip  3: 9 flagged words -> 9 cluster(s) (median_word_dur=200ms)
+  cluster [8,8] 'system,' (1 words, 460ms) -> 3 words: in the system,
+  cluster [30,30] 'so' (1 words, 780ms) -> 4 words: more expensive, so that's...
+  cluster [32,32] 'you're' (1 words, 1160ms) -> 3 words: you, you, you
+  cluster [38,38] 'for' (1 words, 940ms) -> 4 words: a little room for,
+  cluster [45,45] 'and' (1 words, 740ms) -> 3 words: in haggle, and,
+  cluster [49,49] 'price,' (1 words, 600ms) -> 3 words: of the price.
+  cluster [54,54] 'and' (1 words, 620ms) -> 1 words: that.
+  cluster [61,61] 'at' (1 words, 460ms) -> 2 words: out of
+  cluster [68,68] 'Yeah.' (1 words, 1960ms) -> 3 words: of your friends.
+clip  4: 5 flagged words -> 4 cluster(s) (median_word_dur=180ms)
+  cluster [7,7] 'haggling.' (1 words, 900ms) -> 2 words: are haggling.
+  cluster [11,12] 'read the' (2 words, 1960ms) -> 3 words: like, read the
+  cluster [32,32] 'sad?' (1 words, 840ms) -> 4 words: said, and then said,
+  cluster [36,36] 'what' (1 words, 760ms) -> 2 words: with, with,
+clip  5: 9 flagged words -> 6 cluster(s) (median_word_dur=280ms)
+  cluster [3,3] 'is' (1 words, 1220ms) -> 3 words: of the word.
+  cluster [8,8] 'different' (1 words, 1100ms) -> 2 words: uh, different,
+  cluster [16,19] 'another mechanic that needs' (4 words, 2540ms) -> 5 words: and another mechanic that, uh,
+  cluster [21,23] 'signify tone, right?' (3 words, 2720ms) -> 5 words: that simply signify tone, right?
+  cluster [27,28] 'offer friendly,' (2 words, 1660ms) -> 5 words: of her friendly. This is
+  cluster [40,40] 'conversation,' (1 words, 880ms) -> 3 words: of the conversation,
+clip  6: 6 flagged words -> 6 cluster(s) (median_word_dur=260ms)
+  cluster [0,0] 'There' (1 words, 580ms) -> 1 words: there
+  cluster [2,2] 'sad' (1 words, 880ms) -> 1 words: something,
+  cluster [10,10] 'Lady' (1 words, 1100ms) -> 4 words: uh, a lyrative Lady
+  cluster [13,13] 'ex-borough' (1 words, 720ms) -> 1 words: expiration,
+  cluster [17,18] 'has died.' (2 words, 1300ms) -> 6 words: that, like, the kingdom has died.
+  cluster [45,45] 'think?' (1 words, 740ms) -> 1 words: think.
+clip  7: 10 flagged words -> 6 cluster(s) (median_word_dur=240ms)
+  cluster [0,0] 'Yes,' (1 words, 780ms) -> 1 words: Yes.
+  cluster [2,5] 'indeed. Yeah, perfect, perfect.' (4 words, 6180ms) -> 5 words: indeed. Yeah. This perfect, perfect.
+  cluster [7,7] 'I' (1 words, 580ms) -> 2 words: I, I,
+  cluster [14,15] 'that coach' (2 words, 1620ms) -> 4 words: in February that coached
+  cluster [24,24] 'debut,' (1 words, 840ms) -> 3 words: debut, which is,
+  cluster [29,29] 'thing,' (1 words, 680ms) -> 2 words: and traveling
+clip  8: 8 flagged words -> 6 cluster(s) (median_word_dur=260ms)
+  cluster [0,0] 'Yeah,' (1 words, 1260ms) -> 1 words: Yeah.
+  cluster [15,15] 'plasterer' (1 words, 600ms) -> 1 words: plasterer,
+  cluster [29,32] 'to say, and before' (4 words, 1760ms) -> 6 words: the courage to say, and before
+  cluster [48,48] 'the' (1 words, 720ms) -> 4 words: are, uh, the, uh,
+  cluster [50,50] 'because' (1 words, 700ms) -> 2 words: um, because
+  cluster [63,63] 'morning.' (1 words, 820ms) -> 3 words: in the morning.
+clip  9: 2 flagged words -> 2 cluster(s) (median_word_dur=260ms)
+  cluster [1,1] 'feel' (1 words, 1060ms) -> 1 words: feel
+  cluster [27,27] 'I' (1 words, 1220ms) -> 3 words: I, I, I,
+clip 10: 7 flagged words -> 7 cluster(s) (median_word_dur=210ms)
+  cluster [0,0] 'Oh,' (1 words, 1400ms) -> 1 words: Hmm.
+  cluster [2,2] 'insane.' (1 words, 620ms) -> 2 words: and saying,
+  cluster [9,9] 'is,' (1 words, 500ms) -> 1 words: is,
+  cluster [18,18] 'trade.' (1 words, 540ms) -> 1 words: trade,
+  cluster [21,21] 'first?' (1 words, 760ms) -> 4 words: first, two came second.
+  cluster [24,24] 'second?' (1 words, 740ms) -> 4 words: second, who came last.
+  cluster [27,27] 'last?' (1 words, 680ms) -> 3 words: that I'm lost.
+clip 11: 10 flagged words -> 6 cluster(s) (median_word_dur=240ms)
+  cluster [3,4] 'oh, sorry.' (2 words, 1440ms) -> 2 words: Oh, sorry.
+  cluster [21,24] 'specific and, you know,' (4 words, 5280ms) -> 5 words: specific and, you know, why
+  cluster [26,27] 'while watching' (2 words, 1020ms) -> 5 words: to the end while watching
+  cluster [30,30] 'shoulder.' (1 words, 860ms) -> 4 words: shoulder, but then I,
+  cluster [42,42] 'thinking' (1 words, 640ms) -> 1 words: thinking,
+  cluster [55,55] 'that?' (1 words, 760ms) -> 1 words: that,
+clip 12: 11 flagged words -> 7 cluster(s) (median_word_dur=280ms)
+  cluster [5,5] 'insinuate' (1 words, 640ms) -> 1 words: insinuate
+  cluster [19,20] 'but it's' (2 words, 1620ms) -> 3 words: that are, like,
+  cluster [36,36] 'do' (1 words, 1840ms) -> 4 words: allowed to, uh, do
+  cluster [39,40] 'themselves but' (2 words, 1380ms) -> 2 words: themselves, but,
+  cluster [43,47] 'watching women again not too' (5 words, 3140ms) -> 5 words: watching women, again, not, too,
+  cluster [51,51] 'to' (1 words, 820ms) -> 3 words: too young to
+  cluster [69,71] 'that happens too' (3 words, 2100ms) -> 3 words: that happens, too.
+clip 13: 4 flagged words -> 4 cluster(s) (median_word_dur=300ms)
+  cluster [5,5] 'felt' (1 words, 1000ms) -> 1 words: felt
+  cluster [14,14] 'was' (1 words, 820ms) -> 3 words: and it was,
+  cluster [16,17] '– you' (2 words, 1700ms) -> 1 words: you
+  cluster [37,38] 'internal? Yeah.' (2 words, 1260ms) -> 1 words: internal.
+
+Wrote output/microslice_v2.json

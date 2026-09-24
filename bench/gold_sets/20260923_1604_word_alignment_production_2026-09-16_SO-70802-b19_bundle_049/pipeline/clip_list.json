@@ -1,0 +1,74 @@
+[
+  {
+    "index": 0,
+    "label": "clip 1untouched",
+    "time": "0:00.000 \u00b7 20.72s \u00b7 56 words",
+    "classes": "clip-item active untouched"
+  },
+  {
+    "index": 1,
+    "label": "clip 2untouched",
+    "time": "0:20.720 \u00b7 23.20s \u00b7 65 words",
+    "classes": "clip-item untouched"
+  },
+  {
+    "index": 2,
+    "label": "clip 3untouched",
+    "time": "0:43.920 \u00b7 26.00s \u00b7 90 words",
+    "classes": "clip-item untouched"
+  },
+  {
+    "index": 3,
+    "label": "clip 4untouched",
+    "time": "1:09.920 \u00b7 26.96s \u00b7 88 words",
+    "classes": "clip-item untouched"
+  },
+  {
+    "index": 4,
+    "label": "clip 5untouched",
+    "time": "1:36.880 \u00b7 21.84s \u00b7 56 words",
+    "classes": "clip-item untouched"
+  },
+  {
+    "index": 5,
+    "label": "clip 6untouched",
+    "time": "1:58.720 \u00b7 26.40s \u00b7 72 words",
+    "classes": "clip-item untouched"
+  },
+  {
+    "index": 6,
+    "label": "clip 7untouched",
+    "time": "2:25.120 \u00b7 26.56s \u00b7 82 words",
+    "classes": "clip-item untouched"
+  },
+  {
+    "index": 7,
+    "label": "clip 8untouched",
+    "time": "2:51.680 \u00b7 21.76s \u00b7 43 words",
+    "classes": "clip-item untouched"
+  },
+  {
+    "index": 8,
+    "label": "clip 9untouched",
+    "time": "3:13.440 \u00b7 25.44s \u00b7 71 words",
+    "classes": "clip-item untouched"
+  },
+  {
+    "index": 9,
+    "label": "clip 10untouched",
+    "time": "3:38.880 \u00b7 25.60s \u00b7 73 words",
+    "classes": "clip-item untouched"
+  },
+  {
+    "index": 10,
+    "label": "clip 11untouched",
+    "time": "4:04.480 \u00b7 22.32s \u00b7 63 words",
+    "classes": "clip-item untouched"
+  },
+  {
+    "index": 11,
+    "label": "clip 12untouched",
+    "time": "4:26.800 \u00b7 28.96s \u00b7 75 words",
+    "classes": "clip-item untouched"
+  }
+]

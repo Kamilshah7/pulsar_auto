@@ -1,0 +1,55 @@
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+clip  0: 60 corroborated-flagged words -> 6 cluster(s)
+  cluster [0,0] 'surprisingly,' (1 words) -> 0 words: 
+  cluster [2,4] 'restrained. And I' (3 words) -> 1 words: [UH]
+  cluster [6,16] 'it doesn't show that much. And I think that's pretty cool.' (11 words) -> 11 words: It doesn't show that much and I think that's pretty cool.
+  cluster [18,38] 'I think, uh, you don't really get any shots of like the villains. Um, you only get like glimpses of the' (21 words) -> 22 words: I think [UH] you don't really get any shots of like the villains [UM] you only get like glimpses of the back.
+  cluster [40,61] 'suit. You don't even see cat woman in costume. I think it's good. I think, I think it does exactly what a' (22 words) -> 21 words: You don't even see Catwoman in costume. I think it's good. I think you I think it does exactly what a.
+  cluster [63,64] 'should do.' (2 words) -> 2 words: should do.
+clip  1: 74 corroborated-flagged words -> 4 cluster(s)
+  cluster [0,14] 'The thing is, Rami, is that the thing that I think most, like in Jordan,' (15 words) -> 22 words: The thing is, Rami, is that [UH] the the the thing that [UM] I think [UH] [UH] most [UH] like in Jordan,
+  cluster [16,35] 'when you manage to trick someone into buying something more expensive than what it actually is, then you become a' (20 words) -> 24 words: [UM] when you manage to trick someone into buying something more expensive than what it actually is [UH] [UM] then you become [UM] a
+  cluster [37,38] 'literally a' (2 words) -> 3 words: Literally, as she.
+  cluster [40,76] 'They will call you a sheep. And there's like this inherent fear that's happening in everybody's mind at the same time. It's like, I don't care really about the money, but I don't want to be a' (37 words) -> 37 words: They were calling you a sheep. And there's like this inherent fear that's happening in everybody's mind at the same time is like, I don't care really about the money, but I don't want to be a
+clip  2: 97 corroborated-flagged words -> 1 cluster(s)
+  cluster [0,96] 'The haggling used to happen even with like, it's kind of sad because you have those kids in those markets and stuff like that. They come from like, you know, really poor areas. Yeah, and like, you know, I walk into that area sometimes and go like, oh, this kid like is selling gum or something like that. And I go like, all right, I want to give him some money. So I go over and I give him the money. And then he starts haggling. I go like, what? Five bucks? Can't you give me 20?' (97 words) -> 116 words: But [UH] the the haggling used to happen even with like [UM] and it's like it's kind of sad cause you have those kids [UM] [UH] in those [UH] markets and stuff like that. They come from like you know really poor areas. Yeah and like you know I w- I walk into that area sometimes I go like oh this kid like is selling gum or something like that and I go like all right I wanna give him I wanna give him some money. So I go over and I give him the money and then he starts haggling. And I go like what? Five bucks? Can't you give me twenty? And I'm like
+clip  3: 68 corroborated-flagged words -> 2 cluster(s)
+  cluster [0,62] 'I mean, like you tie it to the system, right? Like imagine that when you're pricing the items in the game, you're actually pricing them a little bit more expensive so that you're keeping like a little room for people to come in and haggle and like get the price, get the item cheaper and go like, well, I got this at a' (63 words) -> 72 words: [laughter] I mean, like, you can tie it to the system, right? It's like, imagine that when you're pricing the items in the game, you're actually pricing them a little bit more expensive so that the [laughter] you're you're keeping like a little room for for people to come in and haggle and like get the price [UH] get the item cheaper and go like, well, I got this [UH] at a
+  cluster [64,68] 'Share, tell your friends. Yeah.' (5 words) -> 5 words: Share, tell your friends. [laughter]
+clip  4: 42 corroborated-flagged words -> 2 cluster(s)
+  cluster [0,19] 'It'd be like L.A. Noire, but for haggling. You start to read the character and go, oh, I got an' (20 words) -> 28 words: It'd be like L.A. Noire but for haggling. You start to like [UH] read [UH] read the g- read the characters go like, oh, I got an ending.
+  cluster [21,42] 'What about my kid? Would you want to make my kid sad? And then see what they're going to react to that.' (22 words) -> 21 words: What about my kid? Would you want to make my kid sad? And let's see what they're gonna react to that.
+clip  5: 46 corroborated-flagged words -> 2 cluster(s)
+  cluster [0,14] 'Well, the mechanic is going to be basically different ways of making an offer. And' (15 words) -> 20 words: Well, the mechanic is the mechanic is gonna be basically ma- [UH] the different ways of making an offer and
+  cluster [16,46] 'another mechanic that needs to signify tone, right? So, like, this offer friendly, this offer aggressive. And, like, based on the tone of the conversation, those kind of, like, even out.' (31 words) -> 35 words: And another mechanic that [UH] need to simpli- signify tone, right? So like [UH] this offer friendly, this offer aggressive, and like based on the tone of the conversation, those kind of like even out.
+clip  6: 45 corroborated-flagged words -> 2 cluster(s)
+  cluster [0,31] 'There was sad news last week among this hilarity of Lady Gaga that ex-borough keeper Willie Wiggum has died. Was there any truth in those stories that he used to take a' (32 words) -> 37 words: There was s- s- sad news last week among this hilarity of [UH] hilarity of Lady Gaga that ex-borough keeper Willie Wiggum has died. Was there any truth in those stories that it used to take a
+  cluster [33,45] 'on cigarettes offered to him by fans behind the goal, do you think?' (13 words) -> 13 words: On cigarettes offered to him by fans behind the goal, do you think?
+clip  7: 34 corroborated-flagged words -> 3 cluster(s)
+  cluster [0,0] 'Yes,' (1 words) -> 2 words: Yes, yes.
+  cluster [3,29] 'Yeah, perfect, perfect. Yeah, I read when he signed for Borough that coach loads of Falkirk fans came to see his debut, which is a fine thing,' (27 words) -> 35 words: Yeah. This per- per- perfect, perfect. Yeah, I I read whe- when he signed for Borough that [UH] coach loads of Falkirk fans came to see his debut, which is a fine thing traveling around
+  cluster [31,36] 'to watch a goalkeeper in action.' (6 words) -> 7 words: Traveling to watch your goalkeeper in action.
+clip  8: 64 corroborated-flagged words -> 2 cluster(s)
+  cluster [0,48] 'Yeah, as per an old Harry Pearson column in When Saturday Comes. We had a plasterer who really looked like Willie Wiggum, and I never plucked up the courage to say, and before I did manage to say anything to him, he was taken off the job by the' (49 words) -> 56 words: Yeah. A- as per an old Harry Pearson column in When Saturday Comes. [laughter] We had a plasterer who really looked like Willy Wiggum, and I never plucked up the courage the courage to say, and before I did manage to say anything to him, he was taken off the job by the [UH] the guy
+  cluster [50,64] 'because in his words, he'd grown too fond of opening cans in the morning. Which' (15 words) -> 17 words: [UM] because in his words, he'd grown too fond of opening cans in the morning, which I
+clip  9: 30 corroborated-flagged words -> 1 cluster(s)
+  cluster [0,29] 'I feel like that, Harry, and I'm glad you took your turn in saying it because Andy can pronounce it and proudly does on regular occasions, but I don't dare' (30 words) -> 35 words: I I I I feel like that, Harry, and I'm glad you took your turn in saying it, because Andy can pronounce it, and proudly does on regular occasions, but I I I don't dare
+clip 10: 26 corroborated-flagged words -> 3 cluster(s)
+  cluster [0,2] 'Oh, that's insane.' (3 words) -> 4 words: [UH] Oh, that's insane,
+  cluster [4,9] 'I forget about that. Who is,' (6 words) -> 6 words: I forget about that. Who is
+  cluster [11,27] 'terms of, there's three teams in this trade. Who came first? Who came second? Who came last?' (17 words) -> 17 words: terms of there's three teams in this trade, who came first, who came second, who came last.
+clip 11: 56 corroborated-flagged words -> 1 cluster(s)
+  cluster [0,55] 'So time in, oh, sorry. I was just going to say, so time in front of the TV was sort of specific and, you know, watched while watching over your shoulder. But then I imagine rest of your time awake was spent thinking about when you could be in front of the television again. Is that?' (56 words) -> 63 words: So time in f- oh, sorry. I was just gonna say, so time in front of the TV was sort of s- s- specific a- and and w- you know, watched li- and while watching over your shoulder, but then I imagine rest of your time awake was spent thinking about when you could be in front of the television again. Is that?
+clip 12: 70 corroborated-flagged words -> 3 cluster(s)
+  cluster [0,21] 'that she or to like insinuate that a girl is also doing it it's like they're all doing it but it's this' (22 words) -> 22 words: That she or to like insinuate that a girl is also doing it. It's like they're all doing it, but it's this.
+  cluster [23,38] 'right that we live under that's like no no girls aren't allowed to do anything for' (16 words) -> 19 words: Right, that we live under that's like no no girls aren't allowed to [UH] [UH] do anything for them.
+  cluster [40,71] 'but you're like watching women again not too young too young to know this but you're getting an idea that like no I can see that this is something that happens too' (32 words) -> 33 words: But you're like watching women, again, not g- too young, too young to know this, but you're getting an idea that like, no, I can see that this is something that happens too.
+clip 13: 38 corroborated-flagged words -> 2 cluster(s)
+  cluster [0,15] 'So you beat something that felt like it was consuming your life and it was still' (16 words) -> 21 words: So you beat something that f- that felt like it was consuming your life and it was and it was still.
+  cluster [17,38] 'you didn't even get to share the joy of, like, beating something with someone. Like, it was all just still internal? Yeah.' (22 words) -> 24 words: You didn't even get to share the joy of like beating something with someone, like it was j- it was all just still internal.
+
+Total flagged words across all clips: 750
+Wrote output/microslice_v3.json

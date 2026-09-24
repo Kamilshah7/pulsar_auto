@@ -1,0 +1,161 @@
+TASK: Find generalizable acoustic-signal rules for fixing word-boundary placement errors
+in a forced-alignment pipeline for audio transcription. Read the attached data file
+alongside this prompt.
+
+## About this batch
+
+The full dataset (14 short clips) was too large for one pass, so it has been split into
+5 batches of 2-4 clips each. You are receiving ONE batch — the attached file's own header
+tells you which clip indices it contains and which batch number it is (e.g. "BATCH 2 OF
+5"). The other 4 batches are being analyzed independently (by you, in separate calls) and
+all 5 sets of findings will be synthesized together afterward by someone else. Because of
+this:
+- Do all the cross-clip validation you can WITHIN this batch (most batches have 2-4 clips,
+  enough to check a rule against more than one example).
+- It is fine — expected, even — to propose a rule based on strong acoustic reasoning plus
+  only 1-2 supporting examples if that's all this batch contains, but say so explicitly
+  (mark it lower-confidence / "needs cross-batch confirmation") rather than overstating it.
+- Follow the exact output structure in "What to produce" below as closely as possible,
+  since the findings from all 5 batches need to be mergeable into one list afterward.
+
+## Background
+
+This is a word-level forced-alignment system for short (10-30s) clips of natural,
+conversational English speech (interview-style, contains disfluencies, false starts,
+fillers like "um"/"uh", truncated words like "s-", repeated words, etc.). The pipeline:
+
+1. A wav2vec2 CTC model does forced alignment against a known word sequence, producing
+   rough per-word start/end timestamps ("RAW CTC" in the data) at ~20ms frame resolution.
+   These are frequently off by tens of milliseconds, especially at word boundaries next
+   to silence, fillers, or disfluencies.
+2. A large hand-written heuristic post-processing layer ("snap_boundaries_hybrid" in
+   forced_aligner.py, not included here) refines these raw CTC boundaries using acoustic
+   signals -- but its current output is NOT included in this data export. You are working
+   from RAW CTC + the acoustic signal traces + gold labels, to find patterns the heuristic
+   layer should implement, independent of its current (imperfect) logic.
+3. "GOLD TOKENS" are hand-labeled ground-truth boundaries from a human annotator. The goal
+   is to get automated boundaries as close to these as practically possible.
+
+## IMPORTANT: gold labels are not perfect
+
+The human annotator's labels have their own imprecision -- they were placed by ear/eye in
+a labeling tool, not derived from a formal acoustic model. In earlier analysis, we found:
+- For some pairs, an independent multi-signal "consensus" boundary point disagreed with
+  BOTH the algorithm's prediction AND gold, suggesting gold itself was not exactly at the
+  acoustically "true" transition.
+- For some pairs (e.g. two adjacent instances of the same fricative merging, like "was
+  still", or "little room" where a liquid consonant flows into another liquid), there is
+  NO acoustically recoverable boundary at all -- the audio is genuinely continuous/uniform
+  across the whole span, and gold's specific split point appears arbitrary.
+- Do NOT try to build a rule that exactly reproduces every single gold boundary. Look for
+  the acoustically well-motivated general signal that explains the MAJORITY of cases in a
+  given phonetic category, and flag/set aside cases that look genuinely ambiguous (long
+  spans with completely flat, unchanging signals) rather than force-fitting them.
+
+## What "good" looks like
+
+We are NOT looking for a lookup table or per-clip/per-word special case. We want signal
+processing RULES of the form: "when word A ends in phonetic-class X and word B starts with
+phonetic-class Y, look for signal-condition Z in the region around the raw CTC boundary,
+and place the boundary there." Rules should be:
+- Expressed in terms of the 6 signals provided (see below), thresholds/relative comparisons
+  on them, and simple phonetic categories inferable from the word text (e.g. "ends in a
+  stop consonant", "starts with a sibilant") -- NOT specific words or specific clips.
+- Robust to the fact that ZCR and voicing (autocorrelation-based periodicity) become noisy
+  and spuriously elevated at near-total silence / near-zero RMS. Any rule using those two
+  signals should gate them behind a minimum-RMS floor (e.g. only trust ZCR/voicing once RMS
+  is some fraction of a local or clip-level energy threshold) -- this exact failure mode has
+  burned us multiple times already.
+- Validated by you checking the rule against MULTIPLE clips/word-pairs in the data, not
+  just the one example that inspired it, since the existing system has repeatedly found
+  fixes that work on one diagnosed case but regress many others sharing the same code path.
+
+## Data format
+
+The attached file has one block per clip in this batch, each containing:
+
+1. **GOLD TOKENS**: `idx  text  start_s  end_s` -- the ground-truth word boundaries you are
+   trying to explain/predict, in clip-local seconds.
+
+2. **RAW CTC**: `idx  ctc_word_text  word_start_s  word_end_s  word_score  pipe_start_s  pipe_end_s`
+   -- the wav2vec2 model's own raw per-word timestamps (idx aligned to GOLD TOKENS' idx),
+   BEFORE any heuristic refinement. `ctc_word_text` is the cleaned/uppercased text the CTC
+   decoder was forced to align against (may differ cosmetically from gold text, e.g. spelled
+   numbers, letter names for single letters like "t"->"TEE"). `pipe_start`/`pipe_end` mark
+   the CTC "blank"/silence span between this word and the next one. `word_score` is the
+   CTC's own per-word confidence (lower = more uncertain).
+
+3. **WHISPER (Groq) OUTPUT**: `word  start_s  end_s` -- an independent ASR pass (OpenAI
+   Whisper via Groq) over the same audio, with its OWN word segmentation (may split/merge
+   words differently than gold or CTC, may hallucinate/repeat words, has looser timestamp
+   precision). NOT index-aligned to gold/CTC -- match by approximate time/text if useful.
+   Provided as a second, independent opinion on word timing/content, for cases where CTC
+   and gold disagree and a third signal might help adjudicate.
+
+4. **SIGNAL TRACE**: `time_s  rms  zcr  voicing  spectral_flux  hf_ratio  spectral_flatness`
+   at 5ms resolution across the whole clip. Definitions:
+   - `rms`: short-time energy (2ms window). Silence/voiceless-stop-closures are near 0;
+     voiced speech and fricatives are elevated, though QUIET fricatives can have RMS not
+     much above silence -- this is precisely why RMS alone fails for fricative boundaries.
+   - `zcr`: zero-crossing rate (5ms window). High for fricatives/sibilants and unvoiced
+     noise, low for voiced speech/silence -- BUT becomes noisy/spuriously high at near-zero
+     RMS (silence), so must be gated by an RMS floor to be trustworthy.
+   - `voicing`: normalized autocorrelation peak in the human pitch range (70-400Hz), 20ms
+     frames. High (0.5-0.9) for genuinely voiced speech, low for silence/voiceless sounds --
+     but ALSO becomes spuriously elevated at near-zero RMS (same artifact as zcr). Must be
+     RMS-gated too.
+   - `spectral_flux`: frame-to-frame spectral-shape change (L2 norm of positive-diffs of the
+     normalized magnitude spectrum). Large values indicate a sudden timbral/onset change,
+     regardless of absolute energy level.
+   - `hf_ratio`: fraction of spectral energy above 4kHz. Near 0 for voiced speech/silence,
+     elevated (often 0.3-0.99) for frication/aspiration (sibilants /s,z,sh,ch/, non-sibilant
+     fricatives /f,v,th/, and stop-release aspiration) -- this has been our single most
+     useful signal for finding frication boundaries that RMS/ZCR miss, but it ALSO becomes
+     erratic at near-zero RMS, same gating caveat applies.
+   - `spectral_flatness`: geometric-mean/arithmetic-mean of the spectrum (noise-like vs.
+     tonal). Low (~0.02-0.1) for clean voiced/tonal content, higher (0.2-0.4+) for
+     noisy/breathy/fricative content. Empirically useful for voiced-fricative-like sounds
+     (e.g. the voiced "th" in "the/that/this/then/...") where periodicity (voicing) stays
+     high WHILE flatness also rises -- that simultaneous signature is a clean marker for
+     voiced-frication onsets, distinct from a plain vowel-to-vowel transition.
+
+   `trail_thresh` and `speech_thresh` (printed once per clip, near the top) are the current
+   system's own clip-calibrated RMS thresholds (roughly: below trail_thresh = "likely
+   silence", above speech_thresh = "confidently speech"), given as reference scale, not as
+   the only valid thresholds -- feel free to propose your own relative/absolute thresholds
+   if better ones are apparent from the data.
+
+## What to produce
+
+Go word-boundary by word-boundary through every clip in this batch (both the start and end
+of each gold token counts as one boundary), compare gold vs. raw CTC, and for every case
+where they differ by more than ~15ms, dig into the signal trace around it. Group what you
+find into general phonetic-transition categories (e.g. "stop consonant with weak/modulated
+release burst before a pause", "sibilant-into-vowel", "voiced dental fricative onset",
+"trailing non-sibilant fricative before a long pause", "liquid-to-liquid or vowel-to-liquid
+junctures", etc.) — do not just list individual word-pairs.
+
+Output using this exact structure:
+
+### RULE: <short name>
+- CATEGORY: <the phonetic-transition category, e.g. "sibilant onset in continuous speech">
+- PROCEDURE: <concrete signal-based steps: which signal(s), what threshold/comparison, what
+  search window relative to the raw CTC boundary or pipe span>
+- EVIDENCE: <bulleted list of (clip_idx, word_idx-or-text, gold vs. CTC error before, and
+  what the rule would produce) for every supporting example in THIS batch>
+- MISFIRE_RISK: <where else in this batch (or plausibly elsewhere) this same signal pattern
+  shows up for an unrelated reason, and how the rule should be scoped/gated to avoid firing
+  there>
+- CONFIDENCE: <high|medium|low, and why -- e.g. "medium: only 1 example in this batch,
+  should be confirmed against other batches">
+
+List every rule you find this way, most-evidence-first. Then close with:
+
+### AMBIGUOUS / NOT FIXABLE
+<bulleted list of (clip_idx, word_idx-or-text, description of why no signal distinguishes
+gold's boundary from nearby alternatives) for every large-error case in this batch where
+you looked but found nothing usable>
+
+General acoustic-phonetics knowledge (e.g. how stop bursts, aspiration, voiced fricatives,
+liquids, and nasals typically behave acoustically) is welcome and expected to inform your
+reasoning, not just what's visible in this one batch.

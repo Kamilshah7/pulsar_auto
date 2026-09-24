@@ -1,0 +1,164 @@
+# PULSAR VERBATIM TRANSCRIPTION & DISFLUENCY RECONSTRUCTION
+You are an expert audio transcription annotator for the Pulsar alignment project.
+Your mission is to reconstruct the 100% exact verbatim token sequence for conversational speech.
+
+## PULSAR GUIDELINES:
+1. Cut-off / false starts MUST end with a trailing hyphen: e.g. 'w-', 'g-', 's-', 'ye-', 'th-'.
+2. Whole-word repetitions do NOT have hyphens: e.g. 'i i i i i', 'wait wait', 'best best', 'like like', 'and and', 'to to', 'in the in the'.
+3. Disfluency fillers: 'uh', 'um', 'eh'.
+4. Unintelligible murmurings: '(())'.
+5. Compound words must be SPLIT into separate words: 'spider' 'verse', 'well' 'known', 'non' 'film'.
+6. All lowercase. NO punctuation (no commas, periods, question marks, quotes). Contractions retain apostrophes (e.g. 'that's', 'i'd', 'he's', 'i've', 'didn't').
+
+## SOURCE DATA PROVIDED FOR EACH CLIP:
+1. Pre-label Draft: Previous token baseline.
+2. Whisper Large-v3 Transcript: Lexical recognition with word timestamps.
+3. Wav2Vec2 CTC Acoustic Phonetic Stream: Pure frame-level character decoding without language model bias. Captures exact consonant bursts, cut-offs, repetitions, and stutters (e.g. 'WI WI' for 'wait wait', 'I WEL' for 'uh w- we', 'S S SE SSCO' for 'see s- scott').
+
+## OUTPUT FORMAT:
+Return ONLY a valid JSON object mapping clip number string ('9' to '23') to the array of token strings:
+{
+  "9": ["word1", "word2", ...],
+  "10": ["word1", "word2", ...],
+  ...
+  "23": ["word1", "word2", ...]
+}
+
+================================================================================
+## IN-CONTEXT GOLDEN EXAMPLES (CLIPS 1 TO 8)
+Below are 8 clips that were 100% hand-verified by a human annotator as the Gold Standard.
+Study how Whisper, Wav2Vec2 CTC, and the Golden output correspond:
+
+--- GOLDEN EXAMPLE: CLIP 1 (zencastr-en_65e4868db381382af6578686-00007_52.wav) ---
+Wav2Vec2 CTC Phonetic: WELL LEADING INTO BEST ACTION OVER ALL AT WOULD YOU GO WITH THAT OR WOULD YOU GO IN SPITE OF HERSEOR THAT'S WHAT I DID YES I MEAN COME ON
+EXACT GOLDEN TOKENS (28 words):
+["well", "leading", "into", "best", "action", "overall", "uh", "would", "you", "go", "with", "that", "or", "would", "you", "go", "spider", "verse", "or", "that's", "what", "i", "did", "yeah", "i", "mean", "come", "on"]
+
+--- GOLDEN EXAMPLE: CLIP 2 (zencastr-en_65e4868db381382af6578686-00007_98.wav) ---
+Wav2Vec2 CTC Phonetic: A BEST HORROR FILM FOR ME IS ITHE ONLY ONE THAT I WROTE WELL I MEAN I SAW A FEW BUT A NO ONE WILL SAVE YOU A THAT CATELAN DEAVER A ALIEN INVASION WENT OT DID IT FOR ME HAV I YALLD A
+EXACT GOLDEN TOKENS (46 words):
+["uh", "best", "horror", "film", "for", "me", "is", "the", "only", "one", "that", "i", "really", "well", "i", "mean", "i", "saw", "a", "few", "but", "uh", "no", "one", "will", "save", "you", "that", "so", "that", "caitlin", "deaver", "uh", "alien", "invasion", "one", "uh", "did", "it", "for", "me", "how", "about", "you", "all", "uh"]
+
+--- GOLDEN EXAMPLE: CLIP 3 (zencastr-en_65e4868db381382af6578686-00008_36.wav) ---
+Wav2Vec2 CTC Phonetic: A YOU NOLIC FIVE MINUTES SO IT WAS NOT AS BIG A DEAL AS IT LOOKED I WAS HOPE AND I WAS REALLY HOPE HOLD THOT HOPE FOR THAT YE A BET'S THAT'S MARKING CAN VAN ANYONE
+EXACT GOLDEN TOKENS (35 words):
+["uh", "you", "know", "like", "five", "minutes", "so", "it", "was", "not", "as", "big", "a", "deal", "as", "it", "looked", "i", "was", "hoping", "i", "was", "really", "hopeful", "that", "uh", "for", "that", "it", "uh", "best", "best", "marketing", "campaign", "anyone"]
+
+--- GOLDEN EXAMPLE: CLIP 4 (zencastr-en_65e4868db381382af6578686-00008_76.wav) ---
+Wav2Vec2 CTC Phonetic: NICELY DONE I WEL ET A I HAVE JUST A FEW MORE HERE BUT OT LIKE I DON WI WI O K WELL WE I'VE GOT BEST CELEBRITY CAMMEO
+EXACT GOLDEN TOKENS (32 words):
+["nicely", "done", "uh", "w-", "we", "get", "uh", "i", "have", "just", "a", "few", "more", "here", "but", "uh", "like", "i", "don't", "know", "wait", "wait", "okay", "what", "we", "g-", "i", "i've", "got", "best", "celebrity", "cameo"]
+
+--- GOLDEN EXAMPLE: CLIP 5 (zencastr-en_65e4868db381382af6578686-00008_90.wav) ---
+Wav2Vec2 CTC Phonetic: I BE A LION IF I SAID HE DIDN'T LOOK GOOD I MEAN I I I IYE YE A FOR ME I SO IT SHADEW TO DREW I KNOW HES NACKE
+EXACT GOLDEN TOKENS (35 words):
+["i'd", "be", "lying", "if", "i", "said", "he", "didn't", "look", "good", "i", "mean", "i", "i", "i", "i", "i", "yeah", "yep", "uh", "um", "for", "me", "uh", "so", "shout", "out", "to", "drew", "i", "know", "he's", "not", "here", "ye-"]
+
+--- GOLDEN EXAMPLE: CLIP 6 (zencastr-en_65e4868db381382af6578686-00009_2.wav) ---
+Wav2Vec2 CTC Phonetic: WELL KNOWN BUT A SELINDIAN BECOMES BASICALLY THE FAIRY GODMOTHER A S IN THE PROCESS IS PRETTY INTERESTING A  AND THEN A GEORGE CLINY IN THE FLASH A WAS THE A
+EXACT GOLDEN TOKENS (33 words):
+["well", "known", "but", "uh", "celine", "dion", "becomes", "basically", "the", "fairy", "godmother", "uh", "in", "the", "in", "the", "process", "is", "pretty", "interesting", "um", "and", "and", "then", "uh", "george", "clooney", "in", "the", "flash", "let's", "see", "it"]
+
+--- GOLDEN EXAMPLE: CLIP 7 (zencastr-en_65e4868db381382af6578686-00009_22.wav) ---
+Wav2Vec2 CTC Phonetic: HE A WE GOT BEST NON FILM A FOR ME IT WAS THE LAST OF US I I TRIED TO SEE IF SOMETHING WOULD BUMP THAT OFF BUT A E IBOUT YOU
+EXACT GOLDEN TOKENS (33 words):
+["yeah", "uh", "we", "got", "best", "non", "film", "uh", "for", "me", "it", "was", "the", "last", "of", "us", "i", "i", "tried", "to", "to", "see", "if", "something", "would", "bump", "that", "off", "but", "uh", "yeah", "how", "you"]
+
+--- GOLDEN EXAMPLE: CLIP 8 (zencastr-en_65e4868db381382af6578686-00009_39.wav) ---
+Wav2Vec2 CTC Phonetic: NO IT'S IPUT SERIES ON THERE IS A SUGGESTION BUT THE AVIDIO GAME A POD CASTLIKE WHATEVER ELSE YE WANTED YOU KNOW LIKE YOU KNOW LIKE LIKE IF YOU WENT TO A CONCERT THAT YOU RELIGIOUS WANTED TO LIKE HOLY CRAFT THAT WAS THAT WAS THE BEST THING O THE YEAR EH WELL YEIS S SE SSCO WAS A VERY NICE WEN WHEN SCOTT WAS PLAYING IN GUITAR WITHOU THAT WAS THIS YEAR SO MAYBE MAYBE T A THE
+EXACT GOLDEN TOKENS (84 words):
+["no", "it's", "i've", "i", "put", "series", "on", "there", "as", "suggestion", "but", "yeah", "video", "game", "uh", "podcast", "like", "whatever", "else", "you", "want", "you", "know", "like", "you", "know", "uh", "like", "like", "if", "you", "went", "to", "a", "concert", "that", "you", "really", "just", "wanted", "to", "like", "holy", "crap", "that", "was", "that", "was", "the", "best", "thing", "of", "the", "year", "uh", "eh", "well", "yeah", "(())", "see", "s-", "scott", "was", "uh", "very", "nice", "but", "when", "when", "scott", "was", "playing", "his", "guitar", "without", "that", "was", "this", "year", "so", "maybe", "maybe", "um", "the"]
+
+================================================================================
+## CLIPS TO TRANSCRIBE (CLIPS 9 TO 23)
+Apply the exact same standard to reconstruct the 100% verbatim token array for Clips 9 to 23:
+
+--- CLIP 9 (zencastr-en_65e4868db381382af6578686-00009_54.wav, duration=8.57s) ---
+Pre-label Draft: i mean i thought you were going to say when you watch stuff by yourself it is a little something called incognito mood but
+Whisper Transcript: you- you- i- i mean i was- i thought you were gonna say when you watch stuff by yourself it is a little something called incognito mood that uh
+Whisper Word Timestamps: you- [0.00-0.40], you- [0.40-0.74], i- [0.74-2.46], i [2.46-2.48], mean [2.48-2.58], i [2.58-2.78], was- [2.78-2.98], i [2.98-3.10], thought [3.10-3.24], you [3.24-3.34], were [3.34-3.40], gonna [3.40-3.50], say [3.50-3.66], when [3.66-3.80], you [3.80-3.94], watch [3.94-4.16], stuff [4.16-4.36], by [4.36-4.54], yourself [4.54-4.92], it [4.92-5.14], is [5.14-5.68], a [5.68-6.00], little [6.00-6.14], something [6.14-6.38], called [6.38-6.68], incognito [6.68-7.30], mood [7.30-8.04], that [8.04-8.22], uh [8.22-8.56]
+Wav2Vec2 CTC Phonetic Stream: H I I MEAN I WAS I THOGHT YO WE NESE WHEN YOU WATCHESTUFF BY YOURSELF IT IT IS O SOMETHING CALLED INCOGNITO MOOD ATE
+
+--- CLIP 10 (zencastr-en_65e4868db381382af6578686-00009_6.wav, duration=28.03s) ---
+Pre-label Draft: we got i got best funny random supporting character and for me in tetris t here is this character named sasha who is a translator and maybe more and she's played by sofia lebedeva and i don't know how funny she was but i thought she gave a stand up performance and i laughed a couple times but it was more just about how like she took a very little part and made it memorable
+Whisper Transcript: we got um i got uh best funny random supporting character and uh for me in tetris there's this character named sasha who is a translator and maybe more and she's uh played by sofia le- le- lebe- lebedeva and uh i don't know how funny she was but i thought she gave a stand-up performance and i laughed a couple times with her but it was more just about how like she took a very little part and made it memorable
+Whisper Word Timestamps: we [0.00-0.14], got [0.14-0.40], um [0.40-1.10], i [1.10-1.52], got [1.52-1.74], uh [1.74-2.08], best [2.08-2.40], funny [2.40-2.74], random [2.74-3.06], supporting [3.06-3.48], character [3.48-3.94], and [3.94-4.74], uh [4.74-5.06], for [5.06-5.30], me [5.30-5.62], in [5.62-6.44], tetris [6.44-6.92], there's [6.92-7.32], this [7.32-7.52], character [7.52-7.86], named [7.86-8.08], sasha [8.08-8.42], who [8.42-8.62], is [8.62-8.74], a [8.74-8.86], translator [8.86-9.34], and [9.34-9.60], maybe [9.60-9.90], more [9.90-10.22], and [10.22-10.38], she's [10.38-10.84], uh [10.84-11.10], played [11.10-11.66], by [11.66-11.98], sofia [11.98-12.52], le- [12.52-12.74], le- [12.74-13.08], lebe- [13.08-13.64], lebedeva [13.64-14.70], and [14.70-15.88], uh [15.88-16.18], i [16.18-16.40], don't [16.40-16.48], know [16.48-16.56], how [16.56-16.72], funny [16.72-17.10], she [17.10-17.30], was [17.30-17.60], but [17.60-17.78], i [17.78-18.00], thought [18.00-18.18], she [18.18-18.34], gave [18.34-18.60], a [18.60-18.82], stand-up [18.82-19.48], performance [19.48-19.94], and [19.94-20.10], i [20.10-20.38], laughed [20.38-20.60], a [20.60-20.80], couple [20.80-20.88], times [20.88-21.14], with [21.14-21.32], her [21.32-21.40], but [21.40-21.58], it [21.58-21.70], was [21.70-21.78], more [21.78-21.92], just [21.92-22.10], about [22.10-22.38], how [22.38-23.28], like [23.28-23.82], she [23.82-24.20], took [24.20-24.52], a [24.52-24.86], very [24.86-25.42], little [25.42-25.70], part [25.70-25.98], and [25.98-26.48], made [26.48-27.06], it [27.06-27.22], memorable [27.22-27.82]
+Wav2Vec2 CTC Phonetic Stream: WE GOT AM I GOT A BEST FUNNY RANDOM SUPPORTING CHARACTER AND A FOR ME IN TATRIS THERE'S THIS CHARACTER NAMED SACHA WHO IS A TRANSLATOR AND MAY BE MORE AND SHE'S A PLAYED BY SOPHIA LE LELEBET LEVEDEVA AND A I DON'TKNOW HOW FUNNY SHE WAS BUT I THOUGHT SHE GRIEVE A GAVE A STAND UP PERFORMANCE AND I I LAUGHED A COUPLE TIMES FORSTHAT RS MORE JUST ABOUT HOW LIKE SHE TOOK A OF A VERY LITTLE PART AND I WAS MADE IT MEMORABLE
+
+--- CLIP 11 (zencastr-en_65e4868db381382af6578686-00009_64.wav, duration=7.45s) ---
+Pre-label Draft: all good did i miss any because i think we already did the most anticipated film of twenty twenty four
+Whisper Transcript: all good uh did i did i miss any uh uh because i think we we already did the most anticipated film of 2024 uh
+Whisper Word Timestamps: all [0.00-0.18], good [0.18-0.48], uh [0.48-1.10], did [1.10-1.30], i [1.30-1.46], did [1.46-1.72], i [1.72-1.92], miss [1.92-2.12], any [2.12-2.48], uh [2.48-2.80], uh [2.80-3.26], because [3.26-3.38], i [3.38-3.48], think [3.48-3.60], we [3.60-3.76], we [3.76-3.92], already [3.92-4.12], did [4.12-4.30], the [4.30-4.44], most [4.44-4.66], anticipated [4.66-5.10], film [5.10-5.34], of [5.34-5.42], 2024 [5.42-6.24], uh [6.24-7.68]
+Wav2Vec2 CTC Phonetic Stream: AUGAN A DIDI DID I MISS ANY I BECAUSE I THINK WE REARY DID THE MOST ANTICIPATED OM TWENTY TWENTY FOUR A
+
+--- CLIP 12 (zencastr-en_65f0706e7d97a600138c5633-00004_6.wav, duration=13.05s) ---
+Pre-label Draft: same i used to guilt my the books that was always the hard one i started this book i have to finish it even though it's giving me anxiety not anymore
+Whisper Transcript: same i used to guilt my s- the books that was always the hard one i started this book i have to finish it even though it's giving me anxiety not anymore
+Whisper Word Timestamps: same [0.00-1.62], i [1.62-2.30], used [2.30-2.48], to [2.48-2.68], guilt [2.68-2.80], my [2.80-3.02], s- [3.02-3.28], the [3.28-4.22], books [4.22-4.68], that [4.68-5.38], was [5.38-5.54], always [5.54-5.70], the [5.70-5.86], hard [5.86-6.04], one [6.04-6.26], i [6.26-6.36], started [6.36-6.74], this [6.74-6.96], book [6.96-7.16], i [7.16-7.28], have [7.28-7.46], to [7.46-7.56], finish [7.56-7.82], it [7.82-8.26], even [8.26-8.58], though [8.58-8.70], it's [8.70-8.84], giving [8.84-9.06], me [9.06-9.26], anxiety [9.26-10.54], not [10.54-12.34], anymore [12.34-13.02]
+Wav2Vec2 CTC Phonetic Stream: SAME I USED TO GILT MY THE BOOKS THAT WAS ALWAYS THE HARD ONE I STARTED THIS BOOK I HAVE TO FINISH IT EVEN THOUGH IT'S GIVING ME ANXIETY NOT ANY MORE
+
+--- CLIP 13 (zencastr-en_65f10f0c005cf06640ffb116-00000_100.wav, duration=11.07s) ---
+Pre-label Draft: this is uh this is stray cat strut right right is that am i mistaking it that is brian setzer right or am i confusing him with some other rockabilly douchebag
+Whisper Transcript: this is uh uh this is stray cat strut right right is that- am i mistaking it that is brian setzer right or am i confusing him with some other rockabilly douchebag
+Whisper Word Timestamps: this [0.00-1.10], is [1.10-1.40], uh [1.40-1.84], uh [1.84-2.56], this [2.56-2.64], is [2.64-2.84], stray [2.84-3.04], cat [3.04-3.18], strut [3.18-3.48], right [3.48-3.88], right [3.88-4.36], is [4.36-4.50], that- [4.50-5.26], am [5.26-5.40], i [5.40-5.52], mistaking [5.52-6.12], it [6.12-6.34], that [6.34-6.88], is [6.88-7.06], brian [7.06-7.28], setzer [7.28-7.58], right [7.58-7.74], or [7.74-7.84], am [7.84-7.98], i [7.98-8.14], confusing [8.14-8.60], him [8.60-8.84], with [8.84-9.00], some [9.00-9.16], other [9.16-9.34], rockabilly [9.34-9.90], douchebag [9.90-10.94]
+Wav2Vec2 CTC Phonetic Stream: THIS ISIT WHA AH THIS IS STRAKAT STROT RIGHT RIGHT IS THAT RIGHT MISTAKING IT THAT HIS BRANSCUTS A WRITER AN MY CONFUSING HIM WITH SOME OTHER ROCKABILLY DUCHBAG
+
+--- CLIP 14 (zencastr-en_65f10f0c005cf06640ffb116-00000_110.wav, duration=7.58s) ---
+Pre-label Draft: adam ant really two shoes wow okay so it was a song it was a song that existed
+Whisper Transcript: adamant really two shoes wow okay so i i it was a song it was a song that existed uh
+Whisper Word Timestamps: adamant [0.00-0.60], really [0.60-0.90], two [0.90-1.16], shoes [1.16-1.58], wow [1.58-1.94], okay [1.94-2.20], so [2.20-3.68], i [3.68-4.58], i [4.58-4.78], it [4.78-4.88], was [4.88-5.06], a [5.06-5.18], song [5.18-5.46], it [5.46-5.82], was [5.82-5.92], a [5.92-6.06], song [6.06-6.22], that [6.22-6.36], existed [6.36-7.04], uh [7.04-29.64]
+Wav2Vec2 CTC Phonetic Stream: ADAMEN WILLY TWO SHOS WAW OKA SO AH I IT WAS A SONG IT WAS A SONG THAT REISTAID A
+
+--- CLIP 15 (zencastr-en_65f10f0c005cf06640ffb116-00000_24.wav, duration=11.48s) ---
+Pre-label Draft: wait it's the same as you know is named after your mother and grandmother that way if one of them's like i disowned this child like well i just meant my your grandmother basically
+Whisper Transcript: it's the same as you know it's named after your mother and grandmother that way if one of them's like i disowned this child like well i just bent your grandmother basically
+Whisper Word Timestamps: it's [0.00-2.04], the [2.04-2.14], same [2.14-2.36], as [2.36-2.62], you [2.62-2.68], know [2.68-2.92], it's [2.92-3.32], named [3.32-3.56], after [3.56-3.76], your [3.76-3.90], mother [3.90-4.30], and [4.30-4.50], grandmother [4.50-4.92], that [4.92-5.18], way [5.18-5.36], if [5.36-5.48], one [5.48-5.66], of [5.66-5.74], them's [5.74-5.94], like [5.94-6.58], i [6.58-6.70], disowned [6.70-7.08], this [7.08-7.30], child [7.30-7.64], like [7.64-7.96], well [7.96-8.22], i [8.22-8.44], just [8.44-8.70], bent [8.70-9.02], your [9.02-9.66], grandmother [9.66-10.50], basically [10.50-11.40]
+Wav2Vec2 CTC Phonetic Stream: A HAHA WY AS THE SAME AS INO YO IS NAMED AFTER YOUR MOTHER AND GRANDMOTHER THAT WAY OF ONE OMUM'S LAG I DISOWNED THIS CHILD LIKE WELL I JUST BEANT A YU MY YOUR GRANDMOTHER BASELY
+
+--- CLIP 16 (zencastr-en_65f10f0c005cf06640ffb116-00000_39.wav, duration=13.05s) ---
+Pre-label Draft: ooh oh no you got to go back to you got go to to dj because little delvin is like he can't that's not good for any kids psychology
+Whisper Transcript: ooh oh no you gotta go back to you gotta go to dj because lil delvin is uh like he can't that's not good for any kid's like psychology
+Whisper Word Timestamps: ooh [0.00-0.74], oh [0.74-1.90], no [1.90-2.92], you [2.92-3.32], gotta [3.32-3.46], go [3.46-3.64], back [3.64-3.86], to [3.86-4.24], you [4.24-4.60], gotta [4.60-4.94], go [4.94-5.10], to [5.10-5.20], dj [5.20-5.50], because [5.50-6.02], lil [6.02-6.56], delvin [6.56-6.92], is [6.92-7.22], uh [7.22-7.78], like [7.78-8.60], he [8.60-8.72], can't [8.72-9.28], that's [9.28-9.66], not [9.66-10.02], good [10.02-10.28], for [10.28-10.46], any [10.46-10.78], kid's [10.78-11.58], like [11.58-12.08], psychology [12.08-29.94]
+Wav2Vec2 CTC Phonetic Stream: GU OH NO YOU GOT TO GO BACK TO YOU GOT TO GO TO DJ BECAUSE LITTLE DELVIN IS OB LIKE YOU CAN'T THAT'S NOT GOOD FOR ANY KIDS LIKE PSYCHOLOGY
+
+--- CLIP 17 (zencastr-en_65f10f0c005cf06640ffb116-00001_100.wav, duration=17.95s) ---
+Pre-label Draft: look like i feel like if we were adults at that time we would think like it was the most horrific place imaginable like you do not want to step foot in that cesspit and now we're just catching up to it now
+Whisper Transcript: look like i f- i feel like if we were adults at that time we would think like the it was the most horrific place imaginable like you do not want to step foot in that cesspit and now it's we're just catching up to it now
+Whisper Word Timestamps: look [0.00-0.58], like [0.58-0.88], i [0.88-1.18], f- [1.18-1.34], i [1.34-1.56], feel [1.56-1.94], like [1.94-2.16], if [2.16-2.38], we [2.38-2.56], were [2.56-2.74], adults [2.74-3.32], at [3.32-3.84], that [3.84-4.12], time [4.12-4.58], we [4.58-5.14], would [5.14-5.38], think [5.38-5.98], like [5.98-6.60], the [6.60-6.84], it [6.84-7.22], was [7.22-7.36], the [7.36-7.50], most [7.50-7.74], horrific [7.74-8.46], place [8.46-8.94], imaginable [8.94-9.76], like [9.76-10.28], you [10.28-10.38], do [10.38-10.64], not [10.64-10.84], want [10.84-10.92], to [10.92-11.02], step [11.02-11.28], foot [11.28-11.60], in [11.60-11.84], that [11.84-12.16], cesspit [12.16-13.40], and [13.40-14.54], now [14.54-15.98], it's [15.98-16.36], we're [16.36-16.66], just [16.66-16.82], catching [16.82-17.10], up [17.10-17.30], to [17.30-17.40], it [17.40-17.54], now [17.54-29.94]
+Wav2Vec2 CTC Phonetic Stream: LOOK LIKE I I FEEL LIKE IF WE WERE ADULT AT THAT TIME WE WOULD THINK LIKE THAT IT WAS THE MOST HORIFIC PLACE IMAGINABLE LIKE YOU DO NOT WANT A STEP FOOT IN THAT SESS PIT AND NOW ITS WE'RE JUST CATCHING UP TO IT NOW
+
+--- CLIP 18 (zencastr-en_65f10f0c005cf06640ffb116-00001_19.wav, duration=11.26s) ---
+Pre-label Draft: i mean for a while i called myself the second and i don't that was based on my grandfather who has a different middle name so it doesn't even count it's not even a thing but i was doing it for shits and giggles
+Whisper Transcript: i mean for a while i called myself the second and i don't even uh that was based on my grandfather who has a different middle name so it doesn't even count it's not even a thing but i was doing it for shits and giggles
+Whisper Word Timestamps: i [0.00-0.10], mean [0.10-0.22], for [0.22-0.38], a [0.38-0.54], while [0.54-0.92], i [0.92-1.54], called [1.54-1.82], myself [1.82-2.30], the [2.30-2.56], second [2.56-2.68], and [2.68-2.94], i [2.94-3.12], don't [3.12-3.34], even [3.34-3.52], uh [3.52-3.70], that [3.70-4.24], was [4.24-4.40], based [4.40-4.70], on [4.70-4.80], my [4.80-4.92], grandfather [4.92-5.50], who [5.50-6.20], has [6.20-6.86], a [6.86-7.00], different [7.00-7.24], middle [7.24-7.42], name [7.42-7.66], so [7.66-7.80], it [7.80-7.96], doesn't [7.96-8.16], even [8.16-8.32], count [8.32-8.70], it's [8.70-8.82], not [8.82-8.98], even [8.98-9.10], a [9.10-9.18], thing [9.18-9.76], but [9.76-9.88], i [9.88-10.00], was [10.00-10.06], doing [10.06-10.26], it [10.26-10.42], for [10.42-10.56], shits [10.56-10.72], and [10.72-10.80], giggles [10.80-11.32]
+Wav2Vec2 CTC Phonetic Stream: I MEAN FOR A WHILE I CALLED MYSELF THE SECOND AND I DON'T THAT WAS BASED ON MY GRANDFATHER WHO HAS A DIFFERENT MIDDLE NAME SO IT DOESN'T EVENECCOUNTNOT VINYTHING BUT I'S DOIN IT FOR CHITZI GIGGLES
+
+--- CLIP 19 (zencastr-en_65f10f0c005cf06640ffb116-00001_30.wav, duration=14.75s) ---
+Pre-label Draft: i married into a family that has multiple roberts and then because they're like robert clark's then that just the whole thing is real messy so i prefer just not to talk to them if i can avoid it
+Whisper Transcript: i married into a family that has multiple roberts uh and then because they're like robert clarks then that just the whole thing is real messy so uh i prefer just not to talk to them if i can avoid it
+Whisper Word Timestamps: i [0.00-0.16], married [0.16-0.86], into [0.86-1.18], a [1.18-1.40], family [1.40-1.92], that [1.92-2.58], has [2.58-3.14], multiple [3.14-3.90], roberts [3.90-4.58], uh [4.58-5.50], and [5.50-5.76], then [5.76-5.94], because [5.94-6.34], they're [6.34-6.80], like [6.80-7.12], robert [7.12-7.82], clarks [7.82-8.42], then [8.42-8.64], that [8.64-8.90], just [8.90-9.72], the [9.72-9.98], whole [9.98-10.32], thing [10.32-10.56], is [10.56-10.68], real [10.68-10.90], messy [10.90-11.26], so [11.26-11.58], uh [11.58-11.96], i [11.96-12.18], prefer [12.18-12.64], just [12.64-12.86], not [12.86-13.06], to [13.06-13.26], talk [13.26-13.42], to [13.42-13.56], them [13.56-13.72], if [13.72-13.82], i [13.82-13.88], can [13.88-14.00], avoid [14.00-14.30], it [14.30-14.86]
+Wav2Vec2 CTC Phonetic Stream: I MARRIED INTO A FAMILY THAT HAS MULTIPLE ROBERTS AH AND THE ETHEY'RE LIKE ROBERT CLARKS THEN THAT' JUS ETHE WHOLE THING IS REAL MESSY SO I RJUSED NOT TO TALK TO THEM IF I CAN AVOID IT
+
+--- CLIP 20 (zencastr-en_65f10f0c005cf06640ffb116-00001_35.wav, duration=5.85s) ---
+Pre-label Draft: yeah yeah yeah new orleans slash michigan honestly it's weird yeah yeah
+Whisper Transcript: yeah yeah yeah yeah new orleans slash michigan honestly it's weird yeah yeah
+Whisper Word Timestamps: yeah [0.00-0.40], yeah [0.40-0.56], yeah [0.56-0.72], yeah [0.72-1.44], new [1.44-1.76], orleans [1.76-1.98], slash [1.98-2.28], michigan [2.28-3.10], honestly [3.10-3.82], it's [3.82-3.96], weird [3.96-5.04], yeah [5.04-5.38], yeah [5.38-6.14]
+Wav2Vec2 CTC Phonetic Stream: THEYRE A OW NEW ORLEAN SLASH MICHIGAN HONESTLY SWEIRD NOW OW
+
+--- CLIP 21 (zencastr-en_65f10f0c005cf06640ffb116-00001_61.wav, duration=27.55s) ---
+Pre-label Draft: all right look i will do you one better my grandmother and i used to watch basketball and i know very little chinese uh i just never picked it up and no one ever bothered to teach me uh my grandmother had a patience of about fifteen minutes and then was like now you figure this out on your own i do know however the words for black devil and uh just balance it out white devil
+Whisper Transcript: alright look i will do you one better my grandmother and i used to watch basketball and i know very little chinese uh i just never picked it up and no one ever bothered to teach me uh my grandmother had a patience of about 15 minutes and then was like now you figure this out on your own i do know however the words for black devil and uh just to balance it out white devil
+Whisper Word Timestamps: alright [0.00-0.16], look [0.16-0.56], i [0.56-0.78], will [0.78-1.04], do [1.04-1.38], you [1.38-1.72], one [1.72-1.98], better [1.98-2.76], my [2.76-3.88], grandmother [3.88-4.60], and [4.60-4.84], i [4.84-5.12], used [5.12-5.44], to [5.44-5.66], watch [5.66-6.08], basketball [6.08-7.42], and [7.42-8.10], i [8.10-8.64], know [8.64-8.86], very [8.86-9.34], little [9.34-9.70], chinese [9.70-10.62], uh [10.14-11.22], i [11.22-11.46], just [11.46-11.58], never [11.58-11.80], picked [11.80-12.04], it [12.04-12.16], up [12.16-12.40], and [12.40-12.54], no [12.54-12.74], one [12.74-12.82], ever [12.82-12.98], bothered [12.98-13.22], to [13.22-13.40], teach [13.40-13.72], me [13.72-14.12], uh [13.82-14.72], my [14.72-14.88], grandmother [14.88-15.14], had [15.14-15.44], a [15.44-15.52], patience [15.52-15.88], of [15.88-16.02], about [16.02-16.52], 15 [16.52-17.52], minutes [17.52-18.02], and [18.02-18.20], then [18.20-18.30], was [18.30-18.40], like [18.40-18.68], now [18.68-18.80], you [18.80-19.28], figure [19.28-19.50], this [19.50-19.66], out [19.66-19.78], on [19.78-19.92], your [19.92-20.04], own [20.04-20.32], i [20.14-20.90], do [20.90-21.20], know [21.20-21.68], however [21.68-22.12], the [22.12-22.66], words [22.66-23.00], for [23.00-23.32], black [23.32-23.76], devil [23.76-24.14], and [24.14-25.06], uh [25.06-25.40], just [25.40-25.76], to [25.76-25.84], balance [25.84-26.06], it [26.06-26.22], out [26.22-26.78], white [26.78-27.08], devil [27.08-27.46]
+Wav2Vec2 CTC Phonetic Stream: RIT LOOK I WILL DO YOU ONE BETTER MY GRANDMOTHER AND I USED TO WATCH BASKET BALL AND I KNOW VERY LITTLE CHINESE  I'DS NEVER PICKED IT UP AND NO ONE EVER BOTHERE TO TEACH ME AH MY GRANDMOTHER HAD PATIENCE OF ABOUT FIFTEEN MINUTES AND THAT WAS LIKE NOW YOU FIGUE THIS OUT ON YOUR OWN I DO KNOW HOWEVER THE WORDS FOR BLACK DEVIL AND A JUST OUNCE IT OUT WHITE DEVIL
+
+--- CLIP 22 (zencastr-en_65f10f0c005cf06640ffb116-00001_65.wav, duration=6.59s) ---
+Pre-label Draft: and they both came out quite frequently while watching nba games with my grandmother you know it's
+Whisper Transcript: uh and they both came out quite frequently while watching nba games with my grandmother um you know it's-
+Whisper Word Timestamps: uh [0.00-0.38], and [0.38-0.54], they [0.54-0.64], both [0.64-0.88], came [0.88-1.04], out [1.04-1.20], quite [1.20-1.64], frequently [1.64-2.08], while [2.08-2.28], watching [2.28-2.64], nba [2.64-3.04], games [3.04-3.34], with [3.34-3.50], my [3.50-3.66], grandmother [3.66-4.24], um [4.14-5.60], you [5.60-6.16], know [6.16-6.28], it's- [6.28-7.08]
+Wav2Vec2 CTC Phonetic Stream: AH AND THE BOOK CAME OUT QUITE FREQUENTLY WHILE WATCHING ENVIE GAMES WITH MY GRANDMOTHER AH THO IT'S
+
+--- CLIP 23 (zencastr-en_65f10f0c005cf06640ffb116-00001_91.wav, duration=6.52s) ---
+Pre-label Draft: were they like congratulations you've earned this free vacation day enjoy
+Whisper Transcript: were they like congratulations you've earned uh this free vacation day uh enjoy it
+Whisper Word Timestamps: were [0.00-0.64], they [0.64-0.86], like [0.86-1.26], congratulations [1.26-2.20], you've [2.20-2.88], earned [2.88-3.20], uh [3.20-3.56], this [3.56-3.86], free [3.86-4.36], vacation [4.36-4.84], day [4.84-5.74], uh [5.74-5.94], enjoy [5.94-6.34], it [6.34-6.78]
+Wav2Vec2 CTC Phonetic Stream: WHERE THEY LIKE CONGRATULATIONS YOU'VE EARNED A THIS FRE VACATION DAY I ENJOYINT

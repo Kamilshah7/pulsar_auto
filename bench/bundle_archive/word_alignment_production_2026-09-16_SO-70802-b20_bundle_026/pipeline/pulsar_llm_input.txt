@@ -1,0 +1,157 @@
+=== CLIPS TO PROCESS ===
+
+--- CLIP 0 (syndigate_podcasts_81d4c1dd26575dee829ccf417736f226_1900.0_2200.0-sortformer-16.wav) ---
+1. Whisper Full Text:
+   "And so why not have all this advice and support through the process? I am frequently the first one to tell clients as they're going through, this is a red flag, let's walk away. So I guess I would add that. Use a broker, use a good franchise consultant. We all use different names, coach, consultant, broker. That's the same animal. And if you don't communicate well or like the one you're working with, find another one."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "AND SO WHY NOT HAVE ALL THIS ADVICE AN SUPPORT THROUGH THE PROCESS I AM FREQUENTLY THE FIRST ONE TO TELL CLYAN SAYS THEY'RE GOIN THROUGH IS THE RED FLAGLES LET'S WALK AWAY IM NO SO I GUESS I GUESS IT WOULD ADD THAT USE A BROKER OR USE A GOOD BRANCH AS CONSULTIN WE ALL USE DIFFERENT NAMES COACH CONSULTAN BROKER THAT'S THE SAME ANIMAL IM AND IF YOU DON'T COMMUNICATE WELL OR LIKE THE ONE YOU'RE WORKIN WILL FIND ANOTHER ONE"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'have' [1.40s - 2.60s] -> Acoustic CTC heard: []
+   - Whisper 'through,' [9.96s - 11.04s] -> Acoustic CTC heard: ['goin', 'through', 'is']
+   - Whisper 'consultant.' [18.44s - 19.44s] -> Acoustic CTC heard: ['as', 'consultin', 'we']
+   - Whisper 'one.' [28.86s - 29.92s] -> Acoustic CTC heard: ['another', 'one']
+4. Targeted Micro-Slice detected 79 words (vs Whisper's 77 words).
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "and so why not have all this advice and support through the process i am frequently the first one to tell clients as they're going through this is a red flag let's let's walk away um you know so i guess i guess i would add that use a broker use a good franchise consultant we all use different names coach consultant broker that's the same animal and if you don't communicate well or like the one you are working with find another one"
+============================================================
+
+--- CLIP 1 (syndigate_podcasts_823b7c8ee60759c3ae58b4cda02e3c00_1180.0_1480.0-sortformer-34.wav) ---
+1. Whisper Full Text:
+   "You know, before that, they were third and 12. They were third and nine. They were in tough, tough situations. And so he's really good across the board in that in that drive. So it was running and throwing that he did. And that's what that's what's made Cam Rising so effective is his ability to run his ability to convert third downs and keep the chains moving forward."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "A YOU KNOW BEFORE THAT DAY WERE THIRD AND TWELVE THEY WERE THIRD AND NIGHT THEY WERE IN TOUGH TOUGH SITUATIONS AND SO HE'S REALLY GOOD ACROSS THE BOARD IN THAT AND IN THAT DRIVE SO IT WAS RUNNING AND THROWING THAT HE DID AND THAT'S WHAT THAT'S WHAT'S MADE CAMRISING SO EFFECTIVE IS HIS ABILITY TO RUN HIS ABILITY TO CONVERT THIRD DOWNS AND KEEP THE CHAINS MOVING"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'situations.' [4.26s - 5.60s] -> Acoustic CTC heard: ['situations', 'and', 'so']
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "you know before that they were third and twelve they were third and nine they were in tough tough situations and so he's really good across the board in that drive so it was running and throwing that he did and that's what's made cam rising so effective is his ability to run his ability to convert third downs and keep the chains moving"
+============================================================
+
+--- CLIP 2 (syndigate_podcasts_83151db80f2e582182a71428443f5b68_2440.0_2740.0-sortformer-20.wav) ---
+1. Whisper Full Text:
+   "This is the challenge of being at the top of the scouting report, though. When you're a preseason All-American, teams are going to sell out to try and stop you. Maybe Jackson Dart is at a place in his career where he is able to benefit from that in this Ole Miss receiving room, which lost Trey Harris, unfortunately, in this one. Hopefully, he's just banged up and he's going to be coming back. Kid Wade made a ridiculous OBJ-like catch on the side. That was incredible. Yeah."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "THIS IS THIS THE CHALLENGE OF BEING AT THE TOP OF THE COTDINGER PORTHOUGH LIKE WHEN YOUR PRECEES MALL AMERICAN TEAMS ARE GOING TO SELL OUT TO TRY AND STOP YOU MAYBE JACKSONDART IS TAT OF PLACE IN HIS CAREER WHERE HE IS ABLE TO BENEFIT FROM THAT IN THIS OLD MISS IN RECEIVING ROOM WHICH LOST TRAY HAIRS UNFORTUNATELY IN THIS ONE WHO NONT LIKE HOPEFULLY HE'S JUST BANGED UP AND HE'S GOINGT BE COMING BACK KID WADE MADE A RIDICULOUS LIKE OB J LIKE CATCH AH ON THE SIDE THAT WAS INCREDIBLE BUT"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'All-American,' [3.58s - 4.58s] -> Acoustic CTC heard: ['mall', 'american']
+   - Whisper 'one.' [15.98s - 16.68s] -> Acoustic CTC heard: ['this', 'one', 'who', 'nont', 'like']
+   - Whisper 'OBJ-like' [20.84s - 22.06s] -> Acoustic CTC heard: ['like', 'ob', 'j', 'like']
+   - Whisper 'on' [22.44s - 23.90s] -> Acoustic CTC heard: ['ah', 'on', 'the']
+4. Targeted Micro-Slice detected 93 words (vs Whisper's 88 words).
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "this is this is the challenge of being at the top of the scouting report though like when you are a preseason all american teams are going to sell out to try and stop you maybe jackson dart is at a place in his career where he is able to benefit from that in this ole miss receiving room which lost trey harris unfortunately in this one who like hopefully he's just banged up and he's going to be coming back kid wade made a ridiculous like obj like catch um on the side that was incredible but"
+============================================================
+
+--- CLIP 3 (syndigate_podcasts_83b8e1159f6d5a328c7067f4b23b3fca_390.0_690.0-sortformer-11.wav) ---
+1. Whisper Full Text:
+   "Yeah, good results. CSL, very similar. A COVID recovery story, more people being diagnosed with more ailments, and they've got more plasma to turn into treatments for those people. So long-term growth story, the train is not stopping. Anthony, you mentioned the Dan Murphy's loyalty program there. Tell us a little bit about in the retail sector how Endeavor Group's results were more broadly."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "ERE GOOD RESULTS SA ASELL VERY SIMILAR A COVERD RECOVERY STORY MORE PEOPLE BEING DIAGNIZED WITH MORE AILMENTS AND THERE'VE GOT MORE PLASHMA TO TURN INT TREATMENTS FOR THOSE PEOPLE SO LONG TERM GROWTH STORY THAT THE TRAIN IS NOT STOPPING A ETHNE YO MENTION THE DAN MURPHYES A RESUT A LOYALTY PROGRAMM THERE TELL US A LITTLE ABOUT LITTLE BIT ABOUT IN THE RETILE SECTAR HOW ENDEAVOUR GROUPS RESULTS WOR MORE BROADLY"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'ailments,' [6.36s - 7.76s] -> Acoustic CTC heard: ['ailments', 'and']
+   - Whisper 'long-term' [11.66s - 12.98s] -> Acoustic CTC heard: ['so', 'long', 'term']
+   - Whisper 'loyalty' [18.30s - 19.80s] -> Acoustic CTC heard: ['a', 'resut', 'a', 'loyalty']
+4. Targeted Micro-Slice detected 67 words (vs Whisper's 64 words).
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "yeah good results csl very similar a covid recovery story more people being diagnosed with more ailments and they've got more plasma to turn into treatments for those people so long term growth story that the train is not stopping anthony you mentioned the dan murphy's loyalty program there tell us a little bit about in the retail sector how endeavour group's results were more broadly"
+============================================================
+
+--- CLIP 4 (syndigate_podcasts_83f1f7b625ba5908a57986310ba2b318_50.0_335.490563-sortformer-7.wav) ---
+1. Whisper Full Text:
+   "And then, so that, we did that on a Tuesday, I think. And then on Wednesday and Thursday, we do exit interviews. And before that, in that group meeting, we have them fill out rankings. We have them fill out things that they were happy about, things that they weren't happy about, things that they think they need to work on, things they don't. A couple pages."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "AND THEN AH SO THAT I WILLIDED THAT ON A TUESDAY I THINK AND THET ON WEDNESDAY AND THURSDAY WE DO ACENNTERVIEWS AND ON BEFORE THAT IN IN THAT GROUPE MEETING WE HAVE EM FELL OUT RANKINGS WE HAVE THEM FILL OUS THINGS THAT THEY WERE HAPPY ABOUT THINGS THAT THEY WEREN'T HAPPY ABOUT THINGS THAT THEY THINK THEY NEED TO WORK ON THINGS THEY DON'T TOLD PAGES"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'so' [0.40s - 1.54s] -> Acoustic CTC heard: ['ah', 'so', 'that']
+   - Whisper 'And' [6.38s - 7.34s] -> Acoustic CTC heard: ['and']
+   - Whisper 'meeting,' [9.38s - 10.38s] -> Acoustic CTC heard: ['meeting', 'we']
+   - Whisper 'rankings.' [11.40s - 12.42s] -> Acoustic CTC heard: ['out', 'rankings', 'we', 'have', 'them']
+4. Targeted Micro-Slice detected 70 words (vs Whisper's 67 words).
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "and then so that we did that on a tuesday i think and then on wednesday and thursday we do exit interviews and before that in that group meeting we have them fill out rankings we have them fill out things that they were happy about things that they weren't happy about things that they think they need to work on things they don't couple pages"
+============================================================
+
+--- CLIP 5 (syndigate_podcasts_84597de21f045361971a495f3bad029a_100.0_400.0-sortformer-42.wav) ---
+1. Whisper Full Text:
+   "to my original joining of the military was, I think, more the stereotype, which is that my father was worried but very proud. I think his pride overtook any fear of something happening. And my mother just cried. She cried endlessly leading up to that first time she watched me leave on the bus. And that changed everything."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "TO MY ORIGINAL JOINING OF THE MILITARY WAS I THINK MORE THE STEREOTYPE WHICH IS THAT MY FATHER WAS WORRIED BUT VERY PROUD I THINK HIS HIS PRIDE OVERTOOK ANY FEAR OF SOMETHING HAPPENING AND MY MOTHER A JUST CRIED SE SHE CRIED ENDLESSLY AH LEADING UP TO TO THAT FIRST TIME SHE WATCHED ME LEAVE ON THE BUS AM AND THAT CHANGED A"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'was,' [2.76s - 3.76s] -> Acoustic CTC heard: ['was', 'i', 'think']
+   - Whisper 'was' [5.94s - 7.04s] -> Acoustic CTC heard: ['was']
+   - Whisper 'just' [13.70s - 14.76s] -> Acoustic CTC heard: ['a', 'just']
+   - Whisper 'leading' [16.68s - 17.88s] -> Acoustic CTC heard: ['ah', 'leading']
+   - Whisper 'everything.' [22.84s - 24.14s] -> Acoustic CTC heard: ['a']
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "to my original joining of the military was i think more the stereotype which is that my father was worried but very proud i think his pride overtook any fear of something happening and my mother just cried she cried endlessly leading up to that first time she watched me leave on the bus and that changed"
+============================================================
+
+--- CLIP 6 (syndigate_podcasts_860cc11fd6945943813db1466e083fdc_740.0_810.0-sortformer-1.wav) ---
+1. Whisper Full Text:
+   "That they have been, you know, I think open with his people that they wanted to get something done throughout this offseason. So my guess would be Jordan Love would be the next one. But Tua could certainly happen first. And the interesting thing about Tua is they've been planning for it, too. And if you look at like some of the things they've done, letting Christian Wilkins walk, cutting Jerome Baker, cutting Zabian Howard."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "DID THEY HAVE BEEN YOU KNOW I THINK OPEN WITH HIS PEOPLE THAT THEY WANTED TO GET SOMETHING DONE ON THROUGHOUT THIS OFF SEASON SO MY GUESTS WOULD BE GEORG AN LOVE WOULD BE THE NEXT ONE BUT TWO T COULD CERTAINLY HAPPEN FIRST AND THE INTERESTING THING ABOUT TWO HAS THEY'VE BEEN PLANNING FOR TWO AND IF YOU LOOK AT LIKE SOME OF THE THINGS THEY'VE DONE LETTING CHRISTIAN WILKINS WALK CUTTINGS YOUR OWN BAKER CUTTING SAVIEN HOWARD"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'throughout' [4.68s - 5.78s] -> Acoustic CTC heard: ['on', 'throughout']
+   - Whisper 'walk,' [18.74s - 20.02s] -> Acoustic CTC heard: ['walk', 'cuttings']
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "that they have been you know i think open with his people that they wanted to get something done throughout this off season so my guess would be jordan love would be the next one but tua could certainly happen first and the interesting thing about tua is they've been planning for it too and if you look at like some of the things they've done letting christian wilkins walk cutting jerome baker cutting zabian howard"
+============================================================
+
+--- CLIP 7 (syndigate_podcasts_8637895cca045d9c90cc9228e58078f7_1130.0_1390.0-sortformer-25.wav) ---
+1. Whisper Full Text:
+   "To say chairperson instead of chairman, the very first woman I write about in the book is this name, Ruth Hale, who was the president of two leagues. And this is in the 19-teens, the real high time for leagues in American culture. She was the president of what's called the Lucy Stone League, which was advocating for a woman's right to keep her last name."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "TO SAY CHAIR PERSON INSTEAD OF CHAIRMAN THE VERY FIRST A WOMAN I WRITE ABOUT ON THE BOOK IS THIS NAME RUTH HALE WHO AM WAS THE PRESIDENT OF TWO LEAGUES AND THIS IS IN THE NINETEENTEENTHS THE REAL HIGH TIME FOR LEAGUES IN AMERICAN CULTURE SHE WAS THE A PRESIDENT OF WHAT'S CALLED THE LUCY STONE LEAGUE WHICH WAS ADVOCATING FOR A WOMAN'S RIGHT TO KEEP HER LAST NAME"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'chairman,' [2.10s - 3.22s] -> Acoustic CTC heard: ['of', 'chairman', 'the']
+   - Whisper 'woman' [4.28s - 5.38s] -> Acoustic CTC heard: ['a', 'woman', 'i']
+   - Whisper 'was' [8.28s - 9.36s] -> Acoustic CTC heard: ['who', 'am', 'was', 'the']
+   - Whisper 'president' [16.42s - 17.60s] -> Acoustic CTC heard: ['a', 'president']
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "to say chairperson instead of chairman the very first woman i write about on the book is this name ruth hale who was the president of two leagues and this is in the nineteen teens the real high time for leagues in american culture she was the president of what's called the lucy stone league which was advocating for a woman's right to keep her last name"
+============================================================
+
+--- CLIP 8 (syndigate_podcasts_8637895cca045d9c90cc9228e58078f7_2250.0_2320.0-sortformer-2.wav) ---
+1. Whisper Full Text:
+   "Yeah. So I should say, you know, there's this interesting gender history of the crossword, right? It was largely women's work and now is largely, you know, I'm one of very few women who write crossword puzzles. But this is a history that's pretty white all the way down. And that's just an interesting question for me. And I've had some wonderful conversations with Portia and also a woman named Soleil Sancier about why that is, about why constructors tend to be white. Right."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "IA I SHOULD SAY YOU KNOW THERE'S THIS INTERESTING GENDER HISTORY OF THE CROSS WORD RIGHT IT WAS LARGELY WOMEN'S WORK AND NOW AS LARGELY I MEAN ON WON A VERY FEW WOMEN WHO WRITE CROSS WORD PUZZLES BUT THIS IS A HISTORY THAT'S PRETTY WHITE ALL THE WAY DOWN A AND THAT THATS JUST A INTERESTING QUESTION FOR ME AND I I'VE HAD SOME WONDERFUL CONVERSATIONS WITH PORTIA AND ALSO A WOMAN NAMED SOLI SINCER A ABOUT WHY THAT IS ABOUT WHY A CONSTRUCTORS TEN TO BE WHITE EM"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'about' [21.68s - 23.26s] -> Acoustic CTC heard: ['a', 'about']
+   - Whisper 'constructors' [25.40s - 26.86s] -> Acoustic CTC heard: ['a', 'constructors']
+4. Targeted Micro-Slice detected 87 words (vs Whisper's 84 words).
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "yeah so i should say we you know t here is this interesting gender history of the crossword right it was largely women's work and now is largely you know i am one of very few women who write crossword puzzles but this is a history that's pretty white all the way down um and that that's just an interesting question for me and i i've had some wonderful conversations with portia and also a woman named soleil san cier about why that is about why um constructors tend to be white um"
+============================================================
+
+--- CLIP 9 (syndigate_podcasts_863aeaa3833956358847e3be43a887c6_3020.0_3320.0-sortformer-27.wav) ---
+1. Whisper Full Text:
+   "But like I said, if you trade back and get this guy, because he's still young, he still has some room to grow. But there's a lot of games where you look and teams are definitely keying in on him saying we have to stop this guy because he's the one guy that can wreck our game. But like I said, there's just a few things in his game that I'm just not –"
+2. Acoustic CTC Stream (Wav2Vec2):
+   "BUDSA BUT LEGSAT IF YOU TRADE BACK AND GET THIS GUY CAUSE HE'S STILL YOUNG HE STILL HAS SOME ROOM TO TO GROW IM BUT THERE'S A LOT OF GAMES WHERE YOU LOOK AND TEAMS ARE DEAFLY KEYING IN ON HIM AND WE HAVE TO STOP THIS GUY BECAUSE HE'S THE ONE GUTIC AND CAN WRECK OUR GAME IM BELEG SAID THERE'S JUST A FEW THINGS IN HIS GAME THAT I'M JUST NOT"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'there's' [7.40s - 8.44s] -> Acoustic CTC heard: ['but', "there's", 'a']
+4. Targeted Micro-Slice detected 75 words (vs Whisper's 74 words).
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "but but like i said if you trade back and get this guy because he's still young he still has some room to grow but there is a lot of games where you look and teams are definitely keying in on him saying we have to stop this guy because he's the one guy that can wreck our game but like i said there is just a few things in his game that i am just not"
+============================================================
+
+--- CLIP 10 (syndigate_podcasts_86f4c7a7102c51c5bd2f5f3b66920bd8_300.0_600.0-sortformer-14.wav) ---
+1. Whisper Full Text:
+   "And before they banned the shifts, like if you had three defenders on the right side of second base, there was really no incentive or need to make a diving play for anybody over there because, you know, you're crowded that the grounders were all going to be scooped up by just taking a couple steps. So you want to be able to get things like the triple and scoring from first on a double and diving plays back into the game. They've now made some tweaks that will help with that."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "BEFORE THE BAND THE SHIFT LIKE IF YOU HAVE THREE DECENDERS ON THE RIGHT SIDE OF SECOND BASE THERE WAS REALLY NO INSENNEVEOR OR NEED TO TO MAKE A DIVING PLAY FOR ANYBODY OVER THERE BECAUSE YOU KNOW YOU'R CROWDED THAT THE GROUNDERS BROUTEN BE SCOOPED UP BY JUST OF TAKING A COUPLE O STEPS SO YOU WANT TO BE ABLE TO GET THINGS LIKE THE TRIPLE AND SCORING FROM FOREST ON A DOUBLE AND AN DIVING PLAYS BACK INTO THE GAME THAT THEY'VE THEY'VE NOW MADE SOME TWIGS THAT WILL HELP WOT THAT"
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "before they banned the shifts like if you had three defenders on the right side of second base there was really no incentive or need to make a diving play for anybody over there because you know are crowded that the grounders were all going to be scooped up by just taking a couple steps so you want to be able to get things like the triple and scoring from first on a double and diving plays back into the game they've now made some tweaks that will help with that"
+============================================================
+
+--- CLIP 11 (syndigate_podcasts_8718c6fa16375bce8bd1c65d79e36440_40.0_340.0-sortformer-12.wav) ---
+1. Whisper Full Text:
+   "That's a good noble cause for sure. We don't want that. But often this doing it so slow in a fear of ratcheting up, I think, has actually caused things to ratchet up more. And as you said, we're now well over a year and a half into this and not a lot of a great end in sight. Anything you're seeing on the horizon that might shift that or change that dynamic as it relates to Russia? And then we'll move on to China."
+2. Acoustic CTC Stream (Wav2Vec2):
+   "THAT'S A GOOD NOBLE CAUSE FOR SHORE WE DON'T WANT THAT BUT OFTEN THIS DOING IT SO SLOW IN A FEAR OF RATCHETING UP I THINK IT'S ACTUALLY CAUSED THINGS TO RATCH IT UP MORAN AS YOU SAID THAA WERE NOW A WELL OVER YEAR AND A HALF INTO THIS AND A NOT A LOT OF GREAT END IN SIGHT ANYTHING YOURE SEEING ON THE HORIZON THAT MIGHT SHIFT THAT OR CHANGE THAT THE DYNAMIC AS IT RELATES TO RUSSIAN THEN WE'LL MOVE ON TO CHINA"
+3. Key Disfluent / Bloated Spans to Reconcile:
+   - Whisper 'said,' [10.66s - 11.66s] -> Acoustic CTC heard: ['you', 'said', 'thaa', 'were']
+5. Prior Reference Transcript (independent prior pass -- corroborating context only, not authoritative):
+   "that's a good noble cause for sure we don't want that but often this doing it so slow in a fear of ratcheting up i think has actually caused things to ratchet up more and as you said we're now well over a year and a half into this and not a lot of great end in sight anything you are seeing on the horizon that might shift that or change that dynamic as it relates to russia then we'll move on to china"
+============================================================

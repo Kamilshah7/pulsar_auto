@@ -1,0 +1,118 @@
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+clip  0: 15 flagged words -> 10 cluster(s) (median_word_dur=230ms)
+  cluster [0,2] 'surprisingly, surprisingly restrained.' (3 words, 4740ms) -> 7 words: surprisingly su- surprisingly restrained and I think.
+  cluster [10,10] 'much.' (1 words, 900ms) -> 5 words: much and I think that's.
+  cluster [15,15] 'pretty' (1 words, 1040ms) -> 1 words: pretty.
+  cluster [19,20] 'think, uh,' (2 words, 700ms) -> 2 words: think [UH]
+  cluster [25,26] 'any shots' (2 words, 2280ms) -> 2 words: Any shots
+  cluster [31,31] 'Um,' (1 words, 660ms) -> 1 words: [UM]
+  cluster [48,48] 'costume.' (1 words, 980ms) -> 5 words: And costume. I think it's.
+  cluster [54,55] 'think, I' (2 words, 980ms) -> 5 words: think you I think you.
+  cluster [62,63] 'trailer should' (2 words, 1140ms) -> 2 words: Trailer should.
+  cluster [65,65] 'Um,' (1 words, 920ms) -> 1 words: [UM]
+clip  1: 11 flagged words -> 10 cluster(s) (median_word_dur=240ms)
+  cluster [7,7] 'thing' (1 words, 540ms) -> 3 words: the the thing.
+  cluster [11,11] 'most,' (1 words, 1420ms) -> 6 words: [UH] [UH] most [UH] I can.
+  cluster [16,16] 'when' (1 words, 800ms) -> 2 words: [UM] When
+  cluster [18,19] 'manage to' (2 words, 1100ms) -> 2 words: Managed to.
+  cluster [34,35] 'become a' (2 words, 1140ms) -> 1 words: [UH]
+  cluster [37,37] 'literally' (1 words, 860ms) -> 1 words: Literally.
+  cluster [45,46] 'sheep. And' (2 words, 660ms) -> 3 words: Sheep. And the.
+  cluster [60,60] 'time.' (1 words, 660ms) -> 3 words: I was like.
+  cluster [63,63] 'I' (1 words, 560ms) -> 1 words: I
+  cluster [69,69] 'money,' (1 words, 800ms) -> 1 words: [UH]
+clip  2: 24 flagged words -> 15 cluster(s) (median_word_dur=220ms)
+  cluster [0,1] 'The haggling' (2 words, 1820ms) -> 5 words: Well [UH] the the haggling.
+  cluster [7,8] 'like, it's' (2 words, 1140ms) -> 6 words: Like [UM] and it's like it's
+  cluster [17,17] 'in' (1 words, 580ms) -> 2 words: [UM] [UH]
+  cluster [19,19] 'markets' (1 words, 620ms) -> 2 words: [UH] markets.
+  cluster [23,24] 'that. They' (2 words, 400ms) -> 1 words: [UH]
+  cluster [32,32] 'areas.' (1 words, 1200ms) -> 1 words: Areas.
+  cluster [39,39] 'walk' (1 words, 540ms) -> 6 words: w- I w- I work in.
+  cluster [51,51] 'is' (1 words, 680ms) -> 5 words: This kid like a s-
+  cluster [57,58] 'that. And' (2 words, 280ms) -> 2 words: That's what
+  cluster [68,68] 'him' (1 words, 640ms) -> 1 words: [UM]
+  cluster [70,71] 'money. So' (2 words, 1000ms) -> 1 words: money.
+  cluster [80,81] 'money. And' (2 words, 800ms) -> 1 words: And
+  cluster [85,85] 'haggling.' (1 words, 820ms) -> 2 words: It's haggling.
+  cluster [88,92] 'like, what? Five bucks? Can't' (5 words, 2880ms) -> 4 words: What? My voice? Catch
+  cluster [96,96] '20?' (1 words, 980ms) -> 4 words: Twenty? I don't like.
+clip  3: 9 flagged words -> 9 cluster(s) (median_word_dur=200ms)
+  cluster [8,8] 'system,' (1 words, 460ms) -> 2 words: [UH] system,
+  cluster [30,30] 'so' (1 words, 780ms) -> 3 words: More expensive so
+  cluster [32,32] 'you're' (1 words, 1160ms) -> 3 words: You you can.
+  cluster [38,38] 'for' (1 words, 940ms) -> 5 words: A little room for for.
+  cluster [45,45] 'and' (1 words, 740ms) -> 1 words: And
+  cluster [49,49] 'price,' (1 words, 600ms) -> 1 words: [UH]
+  cluster [54,54] 'and' (1 words, 620ms) -> 4 words: The item cheaper and
+  cluster [61,61] 'at' (1 words, 460ms) -> 3 words: [UH] I don't.
+  cluster [68,68] 'Yeah.' (1 words, 1960ms) -> 3 words: Tell your friends.
+clip  4: 5 flagged words -> 4 cluster(s) (median_word_dur=180ms)
+  cluster [7,7] 'haggling.' (1 words, 900ms) -> 3 words: You start to.
+  cluster [11,12] 'read the' (2 words, 1960ms) -> 9 words: Like [UH] read [UH] read the k- read the.
+  cluster [32,32] 'sad?' (1 words, 840ms) -> 4 words: It's sad and it's.
+  cluster [36,36] 'what' (1 words, 760ms) -> 2 words: Well, well.
+clip  5: 9 flagged words -> 6 cluster(s) (median_word_dur=280ms)
+  cluster [3,3] 'is' (1 words, 1220ms) -> 7 words: The mechanic is the mechanic is gonna.
+  cluster [8,8] 'different' (1 words, 1100ms) -> 5 words: The m- [UH] the difference.
+  cluster [16,19] 'another mechanic that needs' (4 words, 2540ms) -> 6 words: [UM] another mechanic that [UH] need
+  cluster [21,23] 'signify tone, right?' (3 words, 2720ms) -> 4 words: Simple signify tone, right?
+  cluster [27,28] 'offer friendly,' (2 words, 1660ms) -> 2 words: offer friendly.
+  cluster [40,40] 'conversation,' (1 words, 880ms) -> 1 words: conversation.
+clip  6: 6 flagged words -> 6 cluster(s) (median_word_dur=260ms)
+  cluster [0,0] 'There' (1 words, 580ms) -> 1 words: [laughter]
+  cluster [2,2] 'sad' (1 words, 880ms) -> 5 words: [UH] [UH] s- s- s-
+  cluster [10,10] 'Lady' (1 words, 1100ms) -> 7 words: [UH] [UH] a hilarity of Lady G-
+  cluster [13,13] 'ex-borough' (1 words, 720ms) -> 1 words: Exper-
+  cluster [17,18] 'has died.' (2 words, 1300ms) -> 5 words: has died. It was a
+  cluster [45,45] 'think?' (1 words, 740ms) -> 1 words: [UM]
+clip  7: 10 flagged words -> 6 cluster(s) (median_word_dur=240ms)
+  cluster [0,0] 'Yes,' (1 words, 780ms) -> 2 words: Yes, yes.
+  cluster [2,5] 'indeed. Yeah, perfect, perfect.' (4 words, 6180ms) -> 7 words: Indeed. Yeah. This per- per- perfect, perfect.
+  cluster [7,7] 'I' (1 words, 580ms) -> 2 words: I I.
+  cluster [14,15] 'that coach' (2 words, 1620ms) -> 2 words: The coach.
+  cluster [24,24] 'debut,' (1 words, 840ms) -> 4 words: debut, which is a.
+  [warn] reslice failed: 'NoneType' object is not iterable
+clip  8: 8 flagged words -> 6 cluster(s) (median_word_dur=260ms)
+  cluster [0,0] 'Yeah,' (1 words, 1260ms) -> 3 words: Yeah. I I
+  cluster [15,15] 'plasterer' (1 words, 600ms) -> 1 words: Plasterer.
+  cluster [29,32] 'to say, and before' (4 words, 1760ms) -> 6 words: The courage to say and before.
+  cluster [48,48] 'the' (1 words, 720ms) -> 1 words: [UH]
+  cluster [50,50] 'because' (1 words, 700ms) -> 3 words: [UM] because of.
+  cluster [63,63] 'morning.' (1 words, 820ms) -> 2 words: Good morning.
+clip  9: 2 flagged words -> 2 cluster(s) (median_word_dur=260ms)
+  cluster [1,1] 'feel' (1 words, 1060ms) -> 3 words: I I feel.
+  cluster [27,27] 'I' (1 words, 1220ms) -> 3 words: I I I
+clip 10: 7 flagged words -> 7 cluster(s) (median_word_dur=210ms)
+  cluster [0,0] 'Oh,' (1 words, 1400ms) -> 3 words: [UH] Oh, that.
+  cluster [2,2] 'insane.' (1 words, 620ms) -> 1 words: insane,
+  cluster [9,9] 'is,' (1 words, 500ms) -> 1 words: is
+  cluster [18,18] 'trade.' (1 words, 540ms) -> 1 words: trade.
+  cluster [21,21] 'first?' (1 words, 760ms) -> 6 words: Who came first, who came second?
+  cluster [24,24] 'second?' (1 words, 740ms) -> 3 words: Second became last.
+  cluster [27,27] 'last?' (1 words, 680ms) -> 2 words: I'm lost.
+clip 11: 10 flagged words -> 6 cluster(s) (median_word_dur=240ms)
+  cluster [3,4] 'oh, sorry.' (2 words, 1440ms) -> 2 words: Oh, sorry.
+  cluster [21,24] 'specific and, you know,' (4 words, 5280ms) -> 8 words: Specific a- and and w- you know w-
+  cluster [26,27] 'while watching' (2 words, 1020ms) -> 3 words: And while watching.
+  cluster [30,30] 'shoulder.' (1 words, 860ms) -> 4 words: shoulder, but then I.
+  cluster [42,42] 'thinking' (1 words, 640ms) -> 2 words: [UM] [UM]
+  cluster [55,55] 'that?' (1 words, 760ms) -> 1 words: That.
+clip 12: 11 flagged words -> 7 cluster(s) (median_word_dur=280ms)
+  cluster [5,5] 'insinuate' (1 words, 640ms) -> 1 words: Insinuation.
+  cluster [19,20] 'but it's' (2 words, 1620ms) -> 5 words: Doing it, but it's the.
+  cluster [36,36] 'do' (1 words, 1840ms) -> 5 words: Allowed to [UH] [UH] do.
+  cluster [39,40] 'themselves but' (2 words, 1380ms) -> 3 words: themselves. But you.
+  cluster [43,47] 'watching women again not too' (5 words, 3140ms) -> 6 words: watching women, again, not g- too.
+  cluster [51,51] 'to' (1 words, 820ms) -> 3 words: Too young to
+  cluster [69,71] 'that happens too' (3 words, 2100ms) -> 5 words: thing that happens to you.
+clip 13: 4 flagged words -> 4 cluster(s) (median_word_dur=300ms)
+  cluster [5,5] 'felt' (1 words, 1000ms) -> 3 words: F- that felt.
+  cluster [14,14] 'was' (1 words, 820ms) -> 6 words: And it was and it was.
+  cluster [16,17] '– you' (2 words, 1700ms) -> 1 words: Yeah.
+  cluster [37,38] 'internal? Yeah.' (2 words, 1260ms) -> 1 words: Internal.
+
+Wrote output/microslice_crisperwhisper.json

@@ -1,0 +1,8 @@
+2026/09/12-03:24:41.635 1da8 Creating DB F:\BB\ETN-SC\pulsar_auto\profiles\labelbox\Default\Session Storage since it was missing.
+2026/09/12-03:24:41.660 1da8 Reusing MANIFEST F:\BB\ETN-SC\pulsar_auto\profiles\labelbox\Default\Session Storage/MANIFEST-000001
+2026/09/12-03:25:31.966 5848 Level-0 table #5: started
+2026/09/12-03:25:31.980 5848 Level-0 table #5: 20105 bytes OK
+2026/09/12-03:25:31.987 5848 Delete type=0 #3
+2026/09/12-03:25:52.316 5848 Level-0 table #7: started
+2026/09/12-03:25:52.323 5848 Level-0 table #7: 18503 bytes OK
+2026/09/12-03:25:52.326 5848 Delete type=0 #4

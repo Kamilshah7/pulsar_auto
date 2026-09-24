@@ -1,0 +1,59 @@
+✓ Initialized. View run at 
+https://modal.com/apps/alinarohannes777/main/ap-s6AvvbmRodVttp3a5Grrbw
+✓ Created objects.
+├── 🔨 Created mount F:\BB\ETN-SC\pulsar_auto\modal_crisperwhisper.py
+└── 🔨 Created function CrisperWhisperService.*.
+clip 0: verbatimize...
+
+[1AFetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]
+[1AFetching 11 files: 100%|██████████| 11/11 [00:00<00:00, 1121.69it/s]
+
+[1ALoading weights:   0%|          | 0/1259 [00:00<?, ?it/s]
+[1ALoading weights:   7%|▋         | 89/1259 [00:00<00:01, 869.26it/s]
+[1ALoading weights:  17%|█▋        | 209/1259 [00:00<00:01, 1025.24it/s]
+[1ALoading weights:  30%|██▉       | 375/1259 [00:00<00:00, 1268.63it/s]
+[1ALoading weights:  41%|████      | 519/1259 [00:00<00:00, 1319.79it/s]
+[1ALoading weights:  55%|█████▍    | 687/1259 [00:00<00:00, 1422.18it/s]
+[1ALoading weights:  66%|██████▌   | 830/1259 [00:00<00:00, 1360.45it/s]
+[1ALoading weights:  77%|███████▋  | 967/1259 [00:00<00:00, 1251.86it/s]
+[1ALoading weights:  88%|████████▊ | 1113/1259 [00:00<00:00, 1301.15it/s]
+[1ALoading weights: 100%|██████████| 1259/1259 [00:00<00:00, 1311.43it/s]
+[transformers] [1mWhisperForConditionalGeneration LOAD REPORT[0m from: /__modal/volumes/vo-AUV8IE5e0IAcZtNpMbQG33/hf/hub/models--nyralabs--CrisperWhisper2.0_large/snapshots/f4334f6e8193f2691212d49b20fa12d370e13896
+Key                       | Status     |  | 
+--------------------------+------------+--+-
+encoder_blank_head.bias   | UNEXPECTED |  | 
+encoder_blank_head.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:   can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  -> surprisingly, su- surprisingly restrained. And I think it doesn't show that much. And I think that's
+clip 1: verbatimize...
+  -> The thing is, Rami, is that the the the thing that [UM] I think [UH] [UH] most [UH] like in Jordan, 
+clip 2: verbatimize...
+  -> Well [UH] the haggling used to happen even with like [UM] and it's like, it's kind of sad because yo
+clip 3: verbatimize...
+  -> [laughter] I mean, like you you tie it to the system, right? Like imagine that when you're pricing t
+clip 4: verbatimize...
+  -> It'd be like L.A. Noire, but for haggling. You start to like [UH] read read the read the character a
+clip 5: verbatimize...
+  -> Well, the mechanic is the mechanic is going to be basically [UH] [UH] different ways of making an of
+clip 6: verbatimize...
+  -> [laughter] There was s- s- sad news last week among this hilarity of [UH] hilarity of Lady Gaga that
+clip 7: verbatimize...
+  -> Yes, yeah, indeed. Yeah, y- this per- per- perfect, perfect. Yeah, I I read whe- when he signed for 
+clip 8: verbatimize...
+  -> Yeah, a- as per an old Harry Pearson column in When Saturday Comes. [laughter] We had a plasterer wh
+clip 9: verbatimize...
+  -> I I I I feel like that, Harry, and I'm glad you took your turn in saying it because Andy can pronoun
+clip 10: verbatimize...
+  -> [UH] Oh, that's insane. Yeah, I forget about that. Who is, in terms of, there's three teams in this 
+clip 11: verbatimize...
+  -> So time in, oh, sorry. I was just going to say, so time in front of the TV was sort of s- s- specifi
+clip 12: verbatimize...
+  -> that she or to like insinuate that a girl is also doing it it's like they're all doing it but it's t
+clip 13: verbatimize...
+  -> So you beat something that f- that felt like it was consuming your life and it was and it was still 
+Wrote output/crisperwhisper_verbatimize.json
+Stopping app - local entrypoint completed.
+✓ App completed. View run at 
+https://modal.com/apps/alinarohannes777/main/ap-s6AvvbmRodVttp3a5Grrbw

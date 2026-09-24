@@ -1,0 +1,110 @@
+(1s) ear-judged continuous joins: share where the cut lands within 5 ms of a cut you ACCEPTED by ear
+
+ALL  n=1063
+    best landmark for this join (oracle pick)   75.2%
+    gold label                                  73.9%
+    v7 system                                   27.8%
+    loud min                                    23.9%
+    loud rise                                   23.8%
+    flatness fall                               22.3%
+    periodicity rise                            21.9%
+    centroid rise                               21.4%
+    flatness rise                               20.1%
+    periodicity fall                            18.8%
+    loud fall                                   17.8%
+stop>vowel  n=118
+    best landmark for this join (oracle pick)   83.1%
+    gold label                                  66.1%
+    loud rise                                   46.6%
+    flatness fall                               41.5%
+    periodicity rise                            37.3%
+    v7 system                                   29.7%
+    centroid rise                               27.1%
+    loud min                                    20.3%
+    flatness rise                               18.6%
+    periodicity fall                             8.5%
+    loud fall                                    3.4%
+vowel>fric  n=101
+    best landmark for this join (oracle pick)   73.3%
+    gold label                                  69.3%
+    loud fall                                   33.7%
+    periodicity fall                            28.7%
+    flatness rise                               26.7%
+    centroid rise                               23.8%
+    v7 system                                   13.9%
+    loud min                                     9.9%
+    flatness fall                                7.9%
+    loud rise                                    5.0%
+    periodicity rise                             5.0%
+vowel>vowel  n=78
+    gold label                                  69.2%
+    best landmark for this join (oracle pick)   66.7%
+    loud min                                    24.4%
+    loud rise                                   24.4%
+    flatness fall                               21.8%
+    v7 system                                   17.9%
+    loud fall                                   16.7%
+    periodicity fall                            16.7%
+    flatness rise                               15.4%
+    periodicity rise                            15.4%
+    centroid rise                               10.3%
+fric>vowel  n=75
+    best landmark for this join (oracle pick)   85.3%
+    gold label                                  74.7%
+    loud rise                                   65.3%
+    flatness fall                               56.0%
+    periodicity rise                            50.7%
+    v7 system                                   36.0%
+    loud min                                    17.3%
+    centroid rise                               10.7%
+    flatness rise                                5.3%
+    periodicity fall                             5.3%
+    loud fall                                    2.7%
+vowel>glide  n=68
+    gold label                                  66.2%
+    best landmark for this join (oracle pick)   61.8%
+    loud fall                                   26.5%
+    v7 system                                   23.5%
+    loud min                                    17.6%
+    flatness fall                               16.2%
+    periodicity rise                            14.7%
+    periodicity fall                            13.2%
+    flatness rise                                8.8%
+    loud rise                                    7.4%
+    centroid rise                                2.9%
+nasal>vowel  n=66
+    best landmark for this join (oracle pick)   87.9%
+    gold label                                  72.7%
+    centroid rise                               54.5%
+    loud rise                                   37.9%
+    flatness rise                               36.4%
+    v7 system                                   30.3%
+    loud min                                    19.7%
+    periodicity fall                            19.7%
+    periodicity rise                            16.7%
+    loud fall                                   13.6%
+    flatness fall                                9.1%
+fric>fric  n=63
+    gold label                                  90.5%
+    best landmark for this join (oracle pick)   79.4%
+    v7 system                                   36.5%
+    loud min                                    31.7%
+    periodicity fall                            28.6%
+    flatness rise                               23.8%
+    centroid rise                               19.0%
+    flatness fall                               19.0%
+    loud fall                                   17.5%
+    periodicity rise                            17.5%
+    loud rise                                   15.9%
+stop>fric  n=44
+    gold label                                  75.0%
+    best landmark for this join (oracle pick)   68.2%
+    flatness rise                               29.5%
+    periodicity fall                            29.5%
+    v7 system                                   25.0%
+    loud min                                    20.5%
+    centroid rise                               18.2%
+    loud fall                                   15.9%
+    loud rise                                    9.1%
+    periodicity rise                             9.1%
+    flatness fall                                6.8%

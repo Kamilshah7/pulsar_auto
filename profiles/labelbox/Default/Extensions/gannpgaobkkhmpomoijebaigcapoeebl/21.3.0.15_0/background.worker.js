@@ -1,0 +1,14 @@
+importScripts(
+	"bundle.min.js",
+	"constants.js",
+	"constants.override.js",
+	"sentry.init.js",
+	"URI.js",
+	"compat.js",
+	"utils.js",
+	"status.js",
+	"nmh.js",
+	"tabs.js",
+	"settings.js",
+	"background.js"
+);

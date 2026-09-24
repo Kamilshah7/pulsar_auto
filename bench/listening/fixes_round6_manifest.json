@@ -1,0 +1,98 @@
+[
+ {
+  "id": "C1-1",
+  "w1": "top",
+  "w2": "of",
+  "note": "fix moves it -34ms"
+ },
+ {
+  "id": "C1-2",
+  "w1": "exit",
+  "w2": "interviews",
+  "note": "fix moves it -35ms"
+ },
+ {
+  "id": "C3-1",
+  "w1": "to",
+  "w2": "grow",
+  "note": "fix moves it -21ms"
+ },
+ {
+  "id": "C3-2",
+  "w1": "more",
+  "w2": "plasma",
+  "note": "fix moves it -21ms"
+ },
+ {
+  "id": "C3-3",
+  "w1": "they",
+  "w2": "banned",
+  "note": "fix moves it -37ms"
+ },
+ {
+  "id": "C3-4",
+  "w1": "more",
+  "w2": "broadly",
+  "note": "fix moves it -10ms"
+ },
+ {
+  "id": "C3-5",
+  "w1": "the",
+  "w2": "dan",
+  "note": "fix moves it -10ms"
+ },
+ {
+  "id": "C3-6",
+  "w1": "really",
+  "w2": "good",
+  "note": "fix moves it -24ms"
+ },
+ {
+  "id": "C3-7",
+  "w1": "you",
+  "w2": "know",
+  "note": "fix moves it -8ms"
+ },
+ {
+  "id": "C3-8",
+  "w1": "able",
+  "w2": "to",
+  "note": "fix moves it -21ms"
+ },
+ {
+  "id": "D2-1",
+  "w1": "proud",
+  "w2": "i",
+  "note": "fix moves it -30ms"
+ },
+ {
+  "id": "D2-2",
+  "w1": "up",
+  "w2": "and",
+  "note": "fix moves it -30ms"
+ },
+ {
+  "id": "D2-3",
+  "w1": "board",
+  "w2": "in",
+  "note": "fix moves it -30ms"
+ },
+ {
+  "id": "D2-4",
+  "w1": "just",
+  "w2": "a-",
+  "note": "old -11ms from yours, new -10ms"
+ },
+ {
+  "id": "D2-5",
+  "w1": "scooped",
+  "w2": "up",
+  "note": "old -19ms from yours, new +3ms"
+ },
+ {
+  "id": "D2-6",
+  "w1": "banged",
+  "w2": "up",
+  "note": "old -23ms from yours, new -5ms"
+ }
+]

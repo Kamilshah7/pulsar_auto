@@ -1,0 +1,158 @@
+
+PULSAR TOKENIZATION RULES (verbatim word-level transcription):
+- Lowercase, no punctuation except: apostrophes in real contractions (don't, it's), and
+  a hyphen at the exact point of truncation in a cut-off word (elev-, see-).
+- Hyphenated words/numbers/backchannels are split into separate tokens with hyphens
+  stripped: "eighty-seven" -> "eighty" "seven"; "coca-cola" -> "coca" "cola";
+  "part-time" -> "part" "time"; "uh-huh" -> "uh" "huh"; "mm-mm" -> "mm" "mm".
+- Backchannels/filled pauses use ONLY these standard spellings (never substitute a
+  similar-sounding one): "mm hm" (agree, mouth closed), "uh huh" (agree, mouth open),
+  "hmm" (thinking -- even if it sounds like "mmm"), "uh" (open hesitation), "um"
+  (closed/nasal hesitation), "mm mm" (disagree, mouth closed), "nuh huh" (disagree,
+  mouth open), "oh" (realization), "ooh" (impressed). Each component is its own token.
+- STUTTERS AND REPETITIONS ARE TRANSCRIBED VERBATIM, EVERY TIME -- never collapsed to
+  one occurrence. A cut-off restart keeps a hyphen on every truncated attempt except the
+  final complete word: "el-" "el-" "elevator". A repeated whole word gets no hyphen and
+  every repetition is its own token: "the" "the" "the" (three tokens, not one).
+- Letter sequences (each letter its own token: "a" "b" "c") vs acronyms pronounced as a
+  word (one token: "opec", "nasa") -- do not confuse the two.
+- Informal contractions transcribed as written when that's how they're said: gonna,
+  wanna, gotta, gimme, lemme, whatcha, dunno, gotcha, kinda, y'all, 'til, 'er, 'em,
+  c'mon, 'cause. Anything else not a standard contraction: spell out the full words
+  ("there're" -> "there" "are").
+- Mispronunciations: transcribe the speaker's clearly INTENDED word, not a phonetic
+  spelling of the slip (intended "visit", said "vitis" -> write "visit").
+- Guessable-but-unclear word -> "((word))" (its own token). Fully unintelligible
+  stretch -> "(())" (its own token). Never invent words that aren't audible.
+- Proper names (people, places, brands, teams) are not dictionary words -- an ASR system
+  will frequently mishear/misspell them; use context to recover the intended spelling.
+
+
+WHY YOU ARE GIVEN THREE DIFFERENT DRAFT TRANSCRIPTS OF THE SAME AUDIO, AND HOW THEY
+TYPICALLY FAIL:
+
+1. WHISPER TRANSCRIPT: a general-purpose autoregressive ASR model trained to produce
+   clean, readable text. It is usually far more accurate on WORD CHOICE AND SPELLING,
+   but it is trained to smooth speech and will systematically DROP disfluencies it
+   treats as noise: stutters, restarts, repeated words, filler words (um/uh), and
+   truncated fragments often vanish entirely rather than being transcribed. It also
+   silently normalizes informal speech into its written-standard form (e.g. expanding a
+   contraction, or "cleaning up" a stutter), which Pulsar's tokenization rules do not
+   want -- Pulsar wants the verbatim spoken form. Because it's a language model, it can
+   also occasionally invent plausible-sounding words that were not actually said,
+   especially near the very start or end of a clip.
+
+2. WAV2VEC2 CTC ACOUSTIC STREAM: a plain discriminative frame-by-frame classifier run
+   directly on the audio, with NO language model and NO smoothing. It records essentially
+   every acoustic event including stutters, restarts, repeated words, and filler words
+   that Whisper drops -- if a sound was made, it tends to show up here. Its weakness is
+   spelling/word-choice: it has no notion of real words, dictionaries, or grammar, so it
+   frequently renders a real word as a garbled or nonsense-looking sequence of letters,
+   especially for proper nouns and short function words, and it has no punctuation or
+   capitalization at all. Unlike Whisper it cannot fabricate content that wasn't said --
+   if it's missing entirely, that's evidence the sound genuinely wasn't there.
+
+3. CRISPERWHISPER (VERBATIM MODE): a separate ASR model specifically fine-tuned to
+   transcribe disfluencies, repeats and cut-offs directly (unlike source 1, it usually
+   does NOT drop them), with reasonable spelling (better than source 2, since it is still
+   a full language model, just one trained not to "clean up" speech). It marks fillers as
+   "[UH]"/"[UM]" and may include a "[laughter]" tag for a non-lexical vocal sound -- these
+   bracketed tags are not Pulsar tokens; map "[UH]"/"[UM]" to the plain words uh/um and
+   drop non-lexical tags like [laughter] entirely (per the tokenization rules, non-lexical
+   vocal sounds are not transcribed). Its failure mode is its own: being a different
+   model/training run from source 1, it makes some different substitution errors and can
+   occasionally invent a word Whisper wouldn't, so don't treat it as automatically more
+   trustworthy than source 1 -- treat it as a third, largely independent vote.
+
+YOUR JOB: reconstruct the single, correct, verbatim, Pulsar-compliant token sequence for
+each clip by comparing all three sources at each position. As a general rule: trust
+whichever source(s) agree on WHETHER a disfluency, cut-off restart, repeated word, or
+filler token exists at all -- a disfluency shown by two of the three sources (especially
+the CTC stream, source 2, which cannot fabricate) is very likely real even if the third
+source dropped it; trust whichever source gives the most plausible, dictionary-attested
+SPELLING when sources disagree only on word choice, generally favoring source 1 or 3 over
+source 2's garbled rendering unless neither looks like a real word, in which case use
+source 2 phonetically (with context) to recover the intended word. When all three sources
+disagree with no clear majority, use surrounding sentence context and the tokenization
+rules to judge the most plausible verbatim rendering rather than guessing freely.
+
+
+CLIPS TO RECONCILE:
+
+--- Clip 0 ---
+Whisper transcript: surprisingly, surprisingly restrained. And I think it doesn't show that much. And I think that's pretty cool. Um, I think, uh, you don't really get any shots of like the villains. Um, you only get like glimpses of the bat suit. You don't even see cat woman in costume. I think it's good. I think, I think it does exactly what a trailer should do. Um,
+CTC acoustic stream: SURPRISINGLY SSURPRISINGLY RESTRAINED AND I THINK IT DOESN'T SHOW THAT MUCH AND I THINK THAT'S PRETTY COOL U I THINK A YOU DON'T REALLY GET ANDHY SHOTS UP LIKE THE VILLAINS A YOU ONLY GET LIKE GLIMPSES OF THE BAT SUITE YOU ONLY CEN SEE CAT WOMEN IN COSTUME I THINK IT'S GOOD I THINK YOU ITHINK IT DOES EXACTLY WHAT A TRELLER SHOULD DO U
+CrisperWhisper (verbatim): surprisingly su- surprisingly restrained and I think it doesn't show that much and I think that's pretty cool [UM] I think [UH] you don't really get any shots of like the villains [UM] you only get like glimpses of the batsuit, you don't even see Catwoman in costume. I think it's good. I think you I think it does exactly what a trailer should do [UM]
+
+--- Clip 1 ---
+Whisper transcript: The thing is, Rami, is that the thing that I think most, like in Jordan, definitely, when you manage to trick someone into buying something more expensive than what it actually is, then you become a kharouf, literally a sheep. They will call you a sheep. And there's like this inherent fear that's happening in everybody's mind at the same time. It's like, I don't care really about the money, but I don't want to be a sheep.
+CTC acoustic stream: THE THING IS FROM ME IS THAT DA DA THAT THE THINK THAT THEM I THINK AMOST A I CAN JORGEIM DEFINITELY AH WHEN YOU MANAGE TO TRICK SOMEONE INTO BUYING SOMETHING MORE EXPENSIVE THAN WHAT IT ACTUALLY IS AN THEN YOU BECOME A A CARUF LITERALLY A SHEEP THEY W'LL CALL YO A SHEEP AND THERE'S LIKE THIS INHERENT FEAR THAT'S HAPPENED IN EVERYBODY'S MIND AT THE SAME TIME WAS LIKE I DON'T CARE REALLY ABOUT THE MONEY BUT I DON'T WANT TO BE A SHEEP
+CrisperWhisper (verbatim): The thing is Rami is that [UH] the the thing that [UM] I think [UH] [UH] most [UH] like in Jordan definitely [UM] when you manage to trick someone into buying something more expensive than what it actually is [UH] [UM] then you become [UM] a kharoof. Literally a sheep. They will call you a sheep. And there's like this inherent fear that's happening in everybody's mind at the same time is like I don't care really about the money, but I don't want to be a sheep.
+
+--- Clip 2 ---
+Whisper transcript: The haggling used to happen even with like, it's kind of sad because you have those kids in those markets and stuff like that. They come from like, you know, really poor areas. Yeah, and like, you know, I walk into that area sometimes and go like, oh, this kid like is selling gum or something like that. And I go like, all right, I want to give him some money. So I go over and I give him the money. And then he starts haggling. I go like, what? Five bucks? Can't you give me 20?
+CTC acoustic stream: THE HAGLINK HE'S TAP AND EVEN LIKE AM AT IS LIKE HE'S GOT A SAD CAUSE HE HAT THOSE GID ZAMMA AN TOSE EMARK ETS IN STUFF LIKE THAT THAT COME FROM LIKE YOU TO REALLY POOR AREAS YEH A LIKE HE NI WE WELL WALK INTO THAT AREA SOMETHIES AGOT I GOT HIS KID LIKE THE SELLING GUM OR SOMETHING LIKE THAT THON AGO I GO I GOIN TA GIVE HIM OON O IVE HIM SOME MONEY SI GO OVER AND A GIVE HIM THE MONEY AND THEN HE STARTS HAGGLING EGOLI WHAT LIVE BUKS CAN'T YE GIVE ME TWENTY AND A LIKE
+CrisperWhisper (verbatim): But [UH] the the haggling used to happen even with like [UM] and it's like it's kind of sad cause you have those kids [UM] [UH] in those [UH] markets and stuff like that. They come from like you know really poor areas. Yeah and like you know I w- I walk into that area sometimes I go like oh this kid like is selling gum or something like that and I go like all right I wanna give him I wanna give him some money. So I go over and I give him the money and then he starts haggling. And I go like what? Five bucks? Can't you give me twenty? And I'm like
+
+--- Clip 3 ---
+Whisper transcript: I mean, like you tie it to the system, right? Like imagine that when you're pricing the items in the game, you're actually pricing them a little bit more expensive so that you're keeping like a little room for people to come in and haggle and like get the price, get the item cheaper and go like, well, I got this at a deal. Share, tell your friends. Yeah.
+CTC acoustic stream: A MA LIKE YE YOU TIETO TO ASSYSTEMRAT I CAN MAGINE THAT WHEN YOU'RE PRICING THE ITEMS IN A GAME YOU'RE ACTUALLY PRICING THEM A LITTLE BITH MORE EXPENSIVE SO THAT YYOU KEEPING LIKE A LITTLE ROOM FOR FOR PEOPLE TO COME IN AND HAGGLE AND I GET THE PRICE I GET THE ITEM CHEAPERING GALL IKE WELL I GOT THIS A AT A DEAL I CHAIR TELL YOUR FRIENDS
+CrisperWhisper (verbatim): [laughter] I mean, like, you could tie it to the system, right? Like, imagine that when you're pricing the items in the game, you're actually pricing them a little bit more expensive so that you're you're keeping, like, a little room for for people to come in and haggle and, like, get the price [UH] get the item cheaper and go like, well, I got this [UH] at a deal [UH] share, tell your friends. [laughter]
+
+--- Clip 4 ---
+Whisper transcript: It'd be like L.A. Noire, but for haggling. You start to read the character and go, oh, I got an N. What about my kid? Would you want to make my kid sad? And then see what they're going to react to that.
+CTC acoustic stream: BE LIKE ELLA ENOIR BUT FOR HAGGLING YOU STOP TO LIKE READ READ THE READ THE CAK TO THE GOLICO I GOT AN N WHAT ABOUT MY KIT WOULD YOU WANT TO MAKE MY KID SAB AND THE SE HE HE WET THEYE GOING TA REACT TO THAT
+CrisperWhisper (verbatim): It'd be like L.A. Noire but for haggling. You start to like [UH] read [UH] read the g- read the characters go like, oh I got an N. What about my kid? Would you want to make my kid sad? And then see what [laughter] what they're gonna react to that.
+
+--- Clip 5 ---
+Whisper transcript: Well, the mechanic is going to be basically different ways of making an offer. And then another mechanic that needs to signify tone, right? So, like, this offer friendly, this offer aggressive. And, like, based on the tone of the conversation, those kind of, like, even out.
+CTC acoustic stream: WAT THE MECHANIC IS THE MECHANIC IS GOIN TO BE BASICALLY ME A DIFFERENT WAYS OF MAKING AN OFFER AND THEN ANOTHER MECHANIC THATTHA NITA SIMPLE SIGNIFY TONE WRIGHT SO LIKE A THIS OFFER FRIENDLY THIS OFFER AGGRESSIVE AND LIKE BASED ON A TONE OF THE CONVERSATION N THOSE KANDA LIKE EVEN OUT
+CrisperWhisper (verbatim): Well, the mechanic is the mechanic is gonna be basically ma- [UH] the different ways of making an offer. And then another mechanic that [UH] need to simpli- signify tone. Right? So like [UH] this offer friendly, this offer aggressive. And like based on the tone of the conversation, those kind of like even out.
+
+--- Clip 6 ---
+Whisper transcript: There was sad news last week among this hilarity of Lady Gaga that ex-borough keeper Willie Wiggum has died. Was there any truth in those stories that he used to take a drag on cigarettes offered to him by fans behind the goal, do you think?
+CTC acoustic stream: THERE IS SAD NEWS LAST WEEK AMONG THIS HILERATY OF HLORATIVE LADY GARGA THE EXBOROUGH KEEPER WILLYE WIGHAM HAS DIED WAS THERE ANY TRUTH IN THOSE STORIES THAT USED TO TAKE A DRAG ON CIGARETTES OFFERED TO HIM BY FANDS BEHIND THE GOLD YOU THINK
+CrisperWhisper (verbatim): [laughter] There was s- s- sad news last week among this hilarity of [UH] hilarity of Lady Gaga that ex-borough keeper Willie Wiggum has died. Was there any truth in those stories that he used to take a drag on cigarettes offered to him by fans behind the goal, do you think
+
+--- Clip 7 ---
+Whisper transcript: Yes, yeah, indeed. Yeah, perfect, perfect. Yeah, I read when he signed for Borough that coach loads of Falkirk fans came to see his debut, which is a fine thing, travelling to watch a goalkeeper in action.
+CTC acoustic stream: YES YES INDEED YE THIS PAPER PERFECT PERFECT YO A I READ WET WHEN HE SIGND FOR BOROUGH THE COCHLOADS OF FALKIRK FANS CAME TO SEE HIS DEBUW WHICH IS A FINE THING TRAVELLING TO WATCH A GULL KEEPER IN ACTION
+CrisperWhisper (verbatim): Yes, yeah, indeed. Yeah. This per- per- perfect, perfect. Yeah, I I read whe- when he signed for Borough that [UH] coach loads of Falkirk fans came to see his debut, which is a fine thing traveling to watch a goalkeeper in action.
+
+--- Clip 8 ---
+Whisper transcript: Yeah, as per an old Harry Pearson column in When Saturday Comes. We had a plasterer who really looked like Willie Wiggum, and I never plucked up the courage to say, and before I did manage to say anything to him, he was taken off the job by the gaffer, because in his words, he'd grown too fond of opening cans in the morning. Which I'm out of touch.
+CTC acoustic stream: YE ASPAR AN OLD HURRYPEERCE AND COLUMNY WHEN SUTTURDAY COMES WE HAD A PLASTERE WHO REALLY LOOKED LIKE WILLY WIGHAM AND I NEVER PLOOKED UP THE COURAGE THE COURAGE TO SAY AND BEFORE I DID MANAGE TO SAY ANYTHING TO HIM HE WAS TAKEN OFF THE JOB BY THE EAR THE GAFFER EM BECAUSE IN HIS WORDS HE'D GROWN TOO FOND OF OPENING CANS IN THE MORNING
+CrisperWhisper (verbatim): Yeah. A- as per an old Harry Pearson column in When Saturday Comes. [laughter] We had a plasterer who really looked like Willy Wiggum, and I never plucked up the courage the courage to say, and before I did manage to say anything to him, he was taken off the job by the [UH] the gaffer [UM] because in his words, he'd grown too fond of opening cans in the morning, which I [laughter]
+
+--- Clip 9 ---
+Whisper transcript: I feel like that, Harry, and I'm glad you took your turn in saying it because Andy can pronounce it and proudly does on regular occasions, but I don't dare go...
+CTC acoustic stream: I'VE II FEEL LIKE THAT HURRY AND I'M GLAD YOU TOOK YOUR TURN IN SINCAS ANDECAN PRONOUNCE IT AND PROUDLY DOES ON REGULAR OCCASIONS BUT I I DON'T DARE GO YE
+CrisperWhisper (verbatim): I I I I feel like that, Harry, and I'm glad you took your turn in saying it, because Andy can pronounce it, and proudly does on regular occasions, but I I I don't dare go [laughter].
+
+--- Clip 10 ---
+Whisper transcript: Oh, that's insane. Yeah, I forget about that. Who is, in terms of, there's three teams in this trade. Who came first? Who came second? Who came last?
+CTC acoustic stream: UOH THAT'S INSANE HERE I FORGET ABOUT THAT WHO IS IN TERMS OF THERE'S THREE TAMES IN THIS TRADE WHO CAME FIRST WHO CAME SECOND WHO CAME LAST
+CrisperWhisper (verbatim): [UH] Ohh, that's insane. Yeah, I forget about that. Who is in terms of there's three teams in this trade, who came first, who came second, who came last
+
+--- Clip 11 ---
+Whisper transcript: So time in, oh, sorry. I was just going to say, so time in front of the TV was sort of specific and, you know, watched while watching over your shoulder. But then I imagine rest of your time awake was spent thinking about when you could be in front of the television again. Is that?
+CTC acoustic stream: SO TIME AN OAKS ICE I WAV JUSTCAN TO SAY SO TIME IN FRONT OF THE T V WAS SORT OF SSPECIFIC N AND YOU KNOW WATCH T LIN WHILE WATCHING OVER YOUR SHOULDER BUT THEN I IMAGINE REST OF YOUR TIME AWAKE WAS SPENT THINKING ABOUT WHEN YOU COULD BE IN FRONT OF THE TELEVISION AGAIN ZA
+CrisperWhisper (verbatim): So time in f- oh, sorry. I was just gonna say, so time in front of the TV was sort of s- s- specific a- and and w- you know, watched li- and while watching over your shoulder, but then I imagine rest of your time awake was spent thinking about when you could be in front of the television again. Is that?
+
+--- Clip 12 ---
+Whisper transcript: that she or to like insinuate that a girl is also doing it it's like they're all doing it but it's this cloak right that we live under that's like no no girls aren't allowed to do anything for themselves but you're like watching women again not too young too young to know this but you're getting an idea that like no I can see that this is something that happens too
+CTC acoustic stream: THAT SHE OUGHT TO LIKE INSINUATE THAT A GIRL IS ALLSO DU AG AIN IT'S LIKE THEY'RE ALL DOING IT BUT IT'S THIS CLOAK RIGT THAT WE LIVE UNDER THAT'S LIKE NONO GIRLS AREN'T ALLOWED TO EV DO ANYTHING FOR THEMSELVES BUT YOU'RE LIKE WATCHING WOMEN AGAIN NOT YOU'RE TOO YOUNG TOO YOUNG TO KNOW THIS BUT YOU'RE GETTING AN IDEA THAT LIKE NO I CAN SEE THAT THIS IS SOMETHING THAT HAPPENS TOO
+CrisperWhisper (verbatim): That she or to like insinuate that a girl is also doing it. It's like they're all doing it, but it's this cloak, right, that we live under that's like no no girls aren't allowed to [UH] [UH] do anything for themselves. But you're like watching women, again, not g- too young too young to know this, but you're getting an idea that like no I can see that this is something that happens too.
+
+--- Clip 13 ---
+Whisper transcript: So you beat something that felt like it was consuming your life and it was still – you didn't even get to share the joy of, like, beating something with someone. Like, it was all just still internal? Yeah.
+CTC acoustic stream: SO YOU BEAT SOMETHING THAT THAT FELT LIKE IT WAS CONSUMING YOUR LIFE AND IT WAS AND IT WAS STILL YOU DIDN'T EVEN GET TO SHARE THE JOY OF LIKE BEATING SOMETHING WITH SOME ONE LIKE IT WAS IT WAS ALL JUST STILL INTERNAL
+CrisperWhisper (verbatim): So you beat something that f- that felt like it was consuming your life and it was and it was still you didn't even get to share the joy of like beating something with someone, like it was j- it was all just still internal.
+
+
+OUTPUT: For each clip, output ONLY the corrected sequence of word tokens, in speaking
+order, as a JSON list of lowercase strings (no timestamps -- those are re-computed by a
+separate forced-alignment step from the audio, so do not spend effort estimating them).
+Format your entire response as a single JSON object mapping clip index (as a string) to
+that list, and nothing else -- no prose, no markdown fences.
+Example: {"0": ["i", "um", "think", "uh", "yes"], "1": ["the", "the", "cat", "ran"]}

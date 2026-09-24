@@ -1,0 +1,909 @@
+"""
+Core pipeline manager for Pulsar End-to-End Automation.
+Handles:
+  1. Deep extract with Botasaurus
+  2. Audio transcription with Groq Whisper-large-v3
+  3. Pre-label comparison and LLM prompt generation
+  4. LLM output parsing, timestamp offset calculation, and injector generation
+"""
+import os
+import sys
+import json
+import wave
+import re
+import threading
+from groq import Groq
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+AUDIO_DIR = os.path.join(BASE_DIR, "audio")
+OUTPUT_DIR = os.path.join(BASE_DIR, "output")
+os.makedirs(AUDIO_DIR, exist_ok=True)
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+GROQ_API_KEY = "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"
+
+class PulsarPipeline:
+    def __init__(self):
+        self.state = {
+            "status": "idle",       # idle, extracting, waiting_auth, transcribing, ready_for_llm, generating_injector, complete, error
+            "message": "Ready to start.",
+            "task_url": "",
+            "clips": [],
+            "current_step": 1,
+            "total_steps": 4,
+            "logs": [],
+            "error": None,
+            "llm_prompt": "",
+            "llm_input": "",
+            "combined_llm_payload": "",
+            "inject_script": "",
+            "tokens_count": 0,
+            "acoustic_stats": {
+                "total_tokens": 0,
+                "silence_trimmed_ms": 0.0,
+                "stutters_recovered": 0,
+                "false_starts_preserved": 0,
+                "zero_crossings_snapped": 0
+            }
+        }
+        self.auth_event = threading.Event()
+        self.lock = threading.Lock()
+        self._load_existing_state()
+
+    def _load_existing_state(self):
+        """Restore previous state if files exist."""
+        p_path = os.path.join(OUTPUT_DIR, "pulsar_llm_prompt.txt")
+        i_path = os.path.join(OUTPUT_DIR, "pulsar_llm_input.txt")
+        c_path = os.path.join(OUTPUT_DIR, "ordered_clips.json")
+        inj_path = os.path.join(OUTPUT_DIR, "inject_console.js")
+
+        if os.path.exists(c_path):
+            try:
+                self.state["clips"] = json.load(open(c_path, encoding="utf-8"))
+            except Exception:
+                pass
+
+        if os.path.exists(p_path) and os.path.exists(i_path):
+            try:
+                p_text = open(p_path, encoding="utf-8").read()
+                i_text = open(i_path, encoding="utf-8").read()
+                self.state["llm_prompt"] = p_text
+                self.state["llm_input"] = i_text
+                self.state["combined_llm_payload"] = f"{p_text}\n\n{'='*60}\n\n{i_text}"
+                self.state["status"] = "ready_for_llm"
+                self.state["current_step"] = 3
+                self.state["logs"].append(f"Loaded existing session with {len(self.state['clips'])} clips. Ready to copy prompt or paste LLM response.")
+            except Exception:
+                pass
+
+        if os.path.exists(inj_path):
+            try:
+                self.state["inject_script"] = open(inj_path, encoding="utf-8").read()
+            except Exception:
+                pass
+
+    def log(self, text):
+        with self.lock:
+            self.state["logs"].append(text)
+            self.state["message"] = text
+            print(f"[Pipeline] {text}")
+
+    def get_state(self):
+        with self.lock:
+            return dict(self.state)
+
+    def signal_auth_complete(self):
+        """Called when user clicks 'I have authenticated' in the GUI."""
+        self.log("Authentication confirmed by user. Resuming extraction...")
+        self.auth_event.set()
+
+    def start_pipeline_async(self, task_url):
+        t = threading.Thread(target=self._run_extraction_and_transcription, args=(task_url,), daemon=True)
+        t.start()
+
+    def _run_extraction_and_transcription(self, task_url):
+        try:
+            with self.lock:
+                self.state["status"] = "extracting"
+                self.state["current_step"] = 1
+                self.state["task_url"] = task_url
+                self.state["error"] = None
+                self.state["logs"] = []
+                self.auth_event.clear()
+
+            self.log(f"Starting extraction for task: {task_url[:60]}...")
+
+            # 1. Run Botasaurus deep extraction
+            self._do_botasaurus_extract(task_url)
+
+            # 2. Match WAV files & clips
+            with self.lock:
+                self.state["status"] = "transcribing"
+                self.state["current_step"] = 2
+            self.log("Matching audio clips and calculating sample-level offsets...")
+            clips = self._match_and_order_clips()
+
+            # 3. Transcribe with Groq
+            self.log(f"Transcribing {len(clips)} audio clips with Groq Whisper-large-v3...")
+            groq_results = self._transcribe_all_clips(clips)
+
+            # 4. Compare with pre-labels and prepare LLM payloads
+            with self.lock:
+                self.state["status"] = "ready_for_llm"
+                self.state["current_step"] = 3
+            self.log("Generating LLM system prompt and input payload...")
+            prompt, payload = self._generate_llm_payloads(clips, groq_results)
+
+            combined = f"{prompt}\n\n{'='*60}\n\n{payload}"
+            with self.lock:
+                self.state["llm_prompt"] = prompt
+                self.state["llm_input"] = payload
+                self.state["combined_llm_payload"] = combined
+                self.state["message"] = f"All {len(clips)} clips transcribed! Copy the prompt below into your LLM."
+
+            self.log("Ready for LLM! Copy payload and paste LLM response when ready.")
+
+        except Exception as e:
+            import traceback
+            err_msg = f"{str(e)}\n{traceback.format_exc()}"
+            self.log(f"ERROR: {str(e)}")
+            with self.lock:
+                self.state["status"] = "error"
+                self.state["error"] = err_msg
+
+    def _do_botasaurus_extract(self, task_url):
+        from botasaurus.browser import browser, Driver
+
+        pipeline = self
+
+        @browser(
+            block_images=False,
+            wait_for_complete_page_load=False,
+        )
+        def run_browser(driver: Driver, data):
+            pipeline.log("Opening Chrome to Pulsar task URL...")
+            driver.get(task_url)
+            driver.sleep(3)
+
+            with pipeline.lock:
+                pipeline.state["status"] = "waiting_auth"
+            pipeline.log("Waiting for user to authenticate in Chrome (Password: PulsarNew!! | Email: kamilkhan1704@gmail.com)...")
+
+            # Wait for user to signal in GUI or terminal
+            pipeline.auth_event.wait(timeout=600)  # 10 min timeout
+            driver.sleep(2)
+
+            with pipeline.lock:
+                pipeline.state["status"] = "extracting"
+            pipeline.log("Extracting localStorage and clip data from page...")
+
+            # Extract localStorage
+            all_storage = driver.run_js("""
+                const result = {};
+                for (let i = 0; i < localStorage.length; i++) {
+                    const key = localStorage.key(i);
+                    result[key] = localStorage.getItem(key);
+                }
+                return result;
+            """)
+            with open(os.path.join(OUTPUT_DIR, "full_localstorage.json"), "w", encoding="utf-8") as f:
+                json.dump(all_storage, f, indent=2)
+
+            clip_keys = [k for k in all_storage if k.startswith("pulsar_align_clip_")]
+            clips_data = {}
+            for key in clip_keys:
+                try:
+                    clips_data[key] = json.loads(all_storage[key])
+                except Exception:
+                    clips_data[key] = all_storage[key]
+
+            with open(os.path.join(OUTPUT_DIR, "clip_tokens.json"), "w", encoding="utf-8") as f:
+                json.dump(clips_data, f, indent=2)
+
+            # Extract clip list from DOM
+            clip_list = driver.run_js("""
+                const clipItems = document.querySelectorAll('.clip-item');
+                return Array.from(clipItems).map((ci, idx) => {
+                    const label = ci.querySelector('.clip-item-label');
+                    const time = ci.querySelector('.clip-item-time');
+                    return {
+                        index: idx,
+                        label: label ? label.textContent.trim() : '',
+                        time: time ? time.textContent.trim() : '',
+                        classes: ci.className,
+                    };
+                });
+            """)
+            with open(os.path.join(OUTPUT_DIR, "clip_list.json"), "w", encoding="utf-8") as f:
+                json.dump(clip_list, f, indent=2)
+
+            pipeline.log(f"Found {len(clip_list)} clips in editor. Downloading audio bundle...")
+
+            # Download audio bundle ZIP via authenticated browser session
+            download_result = driver.run_js("""
+                return (async () => {
+                    const bundleName = new URLSearchParams(window.location.search).get('bundle');
+                    const sig = new URLSearchParams(window.location.search).get('sig');
+                    const url = '/api/dl/pulsar-chunk/' + bundleName + '?sig=' + sig;
+                    try {
+                        const resp = await fetch(url);
+                        if (resp.ok) {
+                            const blob = await resp.blob();
+                            const reader = new FileReader();
+                            const base64 = await new Promise(function(resolve, reject) {
+                                reader.onload = function() { resolve(reader.result); };
+                                reader.onerror = reject;
+                                reader.readAsDataURL(blob);
+                            });
+                            return { ok: true, size: blob.size, base64: base64 };
+                        } else {
+                            const text = await resp.text();
+                            return { ok: false, status: resp.status, body: text.substring(0, 500) };
+                        }
+                    } catch (e) {
+                        return { ok: false, error: e.message };
+                    }
+                })();
+            """)
+
+            if not download_result or not download_result.get("ok"):
+                raise RuntimeError(f"Failed to download audio bundle: {download_result}")
+
+            pipeline.log(f"Audio bundle downloaded ({download_result['size']} bytes). Unpacking ZIP...")
+
+            import base64 as b64
+            data_url = download_result["base64"]
+            header, encoded = data_url.split(",", 1)
+            raw_bytes = b64.b64decode(encoded)
+
+            zip_path = os.path.join(AUDIO_DIR, "bundle.zip")
+            with open(zip_path, "wb") as f:
+                f.write(raw_bytes)
+
+            # Clean existing WAVs & JSONs
+            for f in os.listdir(AUDIO_DIR):
+                if f.endswith(('.wav', '.json')) and f != "bundle.zip":
+                    try:
+                        os.remove(os.path.join(AUDIO_DIR, f))
+                    except Exception:
+                        pass
+
+            import zipfile
+            with zipfile.ZipFile(zip_path, 'r') as zf:
+                zf.extractall(AUDIO_DIR)
+                manifest_wavs = [f for f in zf.namelist() if f.endswith('.wav')]
+                with open(os.path.join(OUTPUT_DIR, "bundle_manifest.json"), "w", encoding="utf-8") as mf:
+                    json.dump(manifest_wavs, mf, indent=2)
+
+            pipeline.log(f"Audio bundle unpacked ({len(manifest_wavs)} clips saved in manifest)!")
+            return True
+
+        run_browser()
+
+    def _match_and_order_clips(self):
+        clip_list = json.load(open(os.path.join(OUTPUT_DIR, "clip_list.json"), encoding="utf-8"))
+        
+        # Determine canonical WAV order directly from the downloaded server bundle.zip
+        zip_path = os.path.join(AUDIO_DIR, "bundle.zip")
+        manifest_file = os.path.join(OUTPUT_DIR, "bundle_manifest.json")
+        bundle_wavs = []
+        if os.path.exists(manifest_file):
+            bundle_wavs = json.load(open(manifest_file, encoding="utf-8"))
+        elif os.path.exists(zip_path):
+            import zipfile
+            with zipfile.ZipFile(zip_path, "r") as zf:
+                bundle_wavs = [f for f in zf.namelist() if f.endswith(".wav")]
+        else:
+            bundle_wavs = sorted([f for f in os.listdir(AUDIO_DIR) if f.endswith(".wav")])
+
+        # Measure exact durations of audio files
+        wav_durs = {}
+        for f in bundle_wavs:
+            wpath = os.path.join(AUDIO_DIR, f)
+            if os.path.exists(wpath):
+                with wave.open(wpath, "rb") as wf:
+                    wav_durs[f] = wf.getnframes() / wf.getframerate()
+
+        ordered_clips = []
+        cur_time_sec = 0.0
+        used_wavs = set()
+
+        for idx, c in enumerate(clip_list):
+            parts = c["time"].split("·")
+            dur_target = float(parts[1].strip().replace("s", ""))
+
+            # Primary Ground Truth: Exact 1-to-1 index from the server bundle archive
+            matched_wav = None
+            if idx < len(bundle_wavs):
+                candidate = bundle_wavs[idx]
+                c_dur = wav_durs.get(candidate, 0)
+                if abs(c_dur - dur_target) < 0.2:
+                    matched_wav = candidate
+
+            # Fallback (only if zip order differed): match strictly unused wav by duration
+            if not matched_wav:
+                for wname, wdur in wav_durs.items():
+                    if wname not in used_wavs and abs(wdur - dur_target) < 0.1:
+                        matched_wav = wname
+                        break
+
+            if not matched_wav and idx < len(bundle_wavs):
+                matched_wav = bundle_wavs[idx]
+
+            used_wavs.add(matched_wav)
+
+            # Get pre-label count directly from the server JSON in the audio bundle
+            jpath = os.path.join(AUDIO_DIR, matched_wav.replace(".wav", ".json"))
+            pre_word_count = 0
+            if os.path.exists(jpath):
+                try:
+                    jd = json.load(open(jpath, encoding="utf-8"))
+                    pre_word_count = len(jd.get("segments", []))
+                except Exception:
+                    pass
+
+            wpath = os.path.join(AUDIO_DIR, matched_wav)
+            with wave.open(wpath, "rb") as wf:
+                nframes = wf.getnframes()
+                sr = wf.getframerate()
+
+            dur_sec = nframes / sr
+
+            # Parse DOM start time directly from clip_list
+            dom_start = None
+            try:
+                t_str = c["time"].split("·")[0].strip()
+                t_parts = t_str.split(":")
+                if len(t_parts) == 2:
+                    dom_start = float(t_parts[0]) * 60 + float(t_parts[1])
+                elif len(t_parts) == 3:
+                    dom_start = float(t_parts[0]) * 3600 + float(t_parts[1]) * 60 + float(t_parts[2])
+            except Exception:
+                pass
+
+            start_sec = dom_start if dom_start is not None else cur_time_sec
+            end_sec = start_sec + dur_sec
+            cur_time_sec = end_sec
+
+            ordered_clips.append({
+                "index": idx,
+                "id": f"clip_{idx}",
+                "filename": matched_wav,
+                "duration_sec": dur_sec,
+                "start_sec": round(start_sec, 4),
+                "end_sec": round(end_sec, 4),
+                "token_count": pre_word_count
+            })
+
+        with open(os.path.join(OUTPUT_DIR, "ordered_clips.json"), "w", encoding="utf-8") as f:
+            json.dump(ordered_clips, f, indent=2)
+
+        with self.lock:
+            self.state["clips"] = ordered_clips
+        return ordered_clips
+
+    def _transcribe_all_clips(self, clips):
+        client = Groq(api_key=GROQ_API_KEY)
+        results = []
+
+        for clip in clips:
+            idx = clip["index"]
+            fname = clip["filename"]
+            path = os.path.join(AUDIO_DIR, fname)
+            self.log(f"[{idx+1}/{len(clips)}] Transcribing {fname} ({clip['duration_sec']:.2f}s)...")
+
+            with open(path, "rb") as audio_file:
+                resp = client.audio.transcriptions.create(
+                    file=(fname, audio_file.read()),
+                    model="whisper-large-v3",
+                    response_format="verbose_json",
+                    timestamp_granularities=["word"]
+                )
+
+            clip_result = {
+                "clip_index": idx,
+                "clip_id": clip["id"],
+                "filename": fname,
+                "global_offset_sec": clip["start_sec"],
+                "duration_sec": clip["duration_sec"],
+                "full_text": resp.text.strip(),
+                "words": resp.words or []
+            }
+            results.append(clip_result)
+
+        with open(os.path.join(OUTPUT_DIR, "groq_transcriptions.json"), "w", encoding="utf-8") as f:
+            json.dump(results, f, indent=2)
+
+        return results
+
+    def _generate_llm_payloads(self, clips, groq_results):
+        comparisons = []
+        for clip in groq_results:
+            idx = clip["clip_index"]
+            fname = clip["filename"]
+            json_name = fname.replace(".wav", ".json")
+            json_path = os.path.join(AUDIO_DIR, json_name)
+
+            pre_words = []
+            if os.path.exists(json_path):
+                with open(json_path, encoding="utf-8") as jf:
+                    jd = json.load(jf)
+                    pre_words = [s.get("refTranscript", s.get("text", "")) for s in jd.get("segments", [])]
+
+            comp = {
+                "clip_index": idx,
+                "clip_id": clip["clip_id"],
+                "filename": fname,
+                "pre_label_word_count": len(pre_words),
+                "pre_label_text": " ".join(pre_words),
+                "groq_word_count": len(clip["words"]),
+                "groq_text": clip["full_text"],
+                "groq_words_with_timing": [
+                    {"word": w["word"], "start": round(w["start"], 3), "end": round(w["end"], 3)}
+                    for w in clip["words"]
+                ]
+            }
+            comparisons.append(comp)
+
+        with open(os.path.join(OUTPUT_DIR, "clip_comparisons.json"), "w", encoding="utf-8") as f:
+            json.dump(comparisons, f, indent=2)
+
+        n_clips = len(comparisons)
+        system_prompt = f"""# PULSAR AUDIO ANNOTATION & TOKENIZATION AGENT
+
+You are an expert audio transcription annotator for the Pulsar alignment project.
+Your task is to review {n_clips} audio clips and output the perfected word-level tokens and timestamps for each clip, strictly adhering to the Pulsar guidelines.
+
+## SOURCE DATA PROVIDED FOR EACH CLIP:
+For each clip, you are given:
+1. Pre-label Draft: An earlier ASR output that captured stutters, truncations (e.g., "de-", "see-"), repetitions, and filler words.
+2. Groq Whisper v3 Transcript: High-accuracy phonetic transcript from Whisper-large-v3.
+3. Groq Word Timestamps: Millisecond-accurate word start and end times (in seconds).
+
+## TOKENIZATION & FORMATTING RULES:
+1. Spoken Form & Lowercase:
+   - Transcribe strictly what is spoken, in lowercase. Example: "billy eichner", "zuckerberg", "mickey mouse clubhouse".
+2. Punctuation:
+   - Strip all punctuation (periods, commas, exclamation marks, question marks, colons, quotes).
+   - EXCEPTIONS:
+     - Apostrophes in valid contractions: "that's", "i'd", "don't", "he's", "it's", "that'll".
+     - Hyphens at the exact point of truncation / cut-off words: "de-", "see-", "elev-", "li-".
+3. Hyphenated Words:
+   - Treat as separate lexical items. Split hyphens:
+     - "eighty-seven" -> "eighty", "seven"
+     - "part-time" -> "part", "time"
+     - "coca-cola" -> "coca", "cola"
+4. Backchannels & Filled Pauses:
+   - Standard spellings only:
+     - Agreeing (mouth closed): "mm hm" -> split into 2 tokens: "mm", "hm"
+     - Agreeing (mouth open): "uh huh" -> split into 2 tokens: "uh", "huh"
+     - Thinking / considering: "hmm" (even if audio sounds like "mmm", write "hmm")
+     - Hesitations: "uh", "um"
+     - Disagreeing (mouth closed): "mm mm" -> split: "mm", "mm"
+     - Disagreeing (mouth open): "nuh huh" -> split: "nuh", "huh"
+     - Realization / surprise: "oh"
+     - Impressed: "ooh"
+   - Hyphens are NOT allowed in backchannels ("uh-huh" must be split into "uh" and "huh").
+5. Letter Sequences & Acronyms:
+   - Individually pronounced letters get separate segments: "a", "b", "c" (no periods).
+   - Acronyms pronounced as a word stay single: "opec".
+   - "ok" or "okay" is a single token.
+6. Numbers:
+   - Transcribe as spoken words: "three zero six" or "three hundred and six"; "fifth".
+7. Contractions:
+   - Allowed informal contractions: "gonna", "wanna", "gotta", "gimme", "lemme", "whatcha", "dunno", "gotcha", "kinda", "y'all", "'til", "'er", "'em", "c'mon", "'cause".
+   - Non-standard/nested contractions must be expanded: "there're" -> "there are", "i'd've" -> "i'd have", "whaddya" -> "what do you".
+8. Stutters, Restarts, & Truncations:
+   - Transcribe every audible repetition.
+   - Cut-off words take a hyphen: "el-", "el-", "elevator".
+   - Whole-word repetitions do NOT take a hyphen: "the", "the".
+   - If pre-label shows stutters/cutoffs (e.g., "his his um his uh his shooty wheelchair", "he see- see- seem- seems"), keep and segment each repetition!
+9. Proper Names:
+   - Check against context and transcribe in lowercase: "billy eichner", "zuckerberg", "paul manafort", "delano", "graham", "io9", "gizmodo".
+10. Unclear Speech:
+    - If reasonably guessable: "((word))"
+    - If completely unintelligible: "(())"
+
+## TIMESTAMP & TRANSCRIPTION ALIGNMENT RULES:
+1. Pre-label Draft is the human baseline for lexical tokens, disfluencies, and stutters. DO NOT drop stutters, false starts, or fillers ('uh', 'um', 'i-') just because Whisper omitted them!
+2. Use Groq Whisper to correct phonetically misheard words (e.g., 'in his' -> 'and it was a', 'summery' -> 'summary') and to anchor acoustic speech onset.
+3. When Groq combines multiple tokens (or when splitting a word like "eighty-seven" into "eighty" and "seven", or adding stutter tokens), subdivide the time interval proportionally:
+   - Example: if "eighty-seven" spans [1.00, 1.80], assign "eighty" [1.00, 1.40] and "seven" [1.40, 1.80].
+4. Segments must NEVER overlap (token[i].end <= token[i+1].start). If needed, leave at least 0.002s gap.
+5. Duration of any segment must be at least 0.050s (50 ms).
+
+## OUTPUT FORMAT:
+Output ONLY a valid JSON object mapping clip index ("0" to "{n_clips - 1}") to a list of token objects:
+```json
+{{
+  "0": [
+    {{"text": "i'd", "start": 0.020, "end": 0.220}},
+    {{"text": "i", "start": 0.250, "end": 0.380}},
+    {{"text": "find", "start": 0.380, "end": 0.720}}
+  ],
+  "1": [ ... ],
+  ...
+  "{n_clips - 1}": [ ... ]
+}}
+```"""
+
+        lines = ["=== CLIPS TO PROCESS ===\n"]
+        for c in comparisons:
+            lines.append(f"--- CLIP {c['clip_index']} ({c['filename']}) ---")
+            lines.append(f"Pre-label Draft:\n{c['pre_label_text']}\n")
+            lines.append(f"Groq Whisper Transcript:\n{c['groq_text']}\n")
+            lines.append("Groq Word Timestamps (seconds):")
+            words_str = ", ".join(f"{w['word']} [{w['start']:.2f}-{w['end']:.2f}]" for w in c["groq_words_with_timing"])
+            lines.append(f"{words_str}\n")
+            lines.append("=" * 60 + "\n")
+
+        input_payload = "\n".join(lines)
+
+        with open(os.path.join(OUTPUT_DIR, "pulsar_llm_prompt.txt"), "w", encoding="utf-8") as pf:
+            pf.write(system_prompt.strip())
+        with open(os.path.join(OUTPUT_DIR, "pulsar_llm_input.txt"), "w", encoding="utf-8") as inf:
+            inf.write(input_payload.strip())
+
+        return system_prompt.strip(), input_payload.strip()
+
+    def generate_acoustic_baseline(self):
+        """Run Silero VAD & Chunked Phonetic Alignment on pre-labels / Whisper words to build perfected acoustic baseline."""
+        with self.lock:
+            self.state["status"] = "generating_injector"
+            self.state["current_step"] = 4
+        
+        self.log("=================================================================")
+        self.log("[Silero Engine] RUNNING SILERO VAD & PHONETIC ALIGNMENT ON BASELINE")
+        self.log("=================================================================")
+
+        clips_file = os.path.join(OUTPUT_DIR, "ordered_clips.json")
+        if not os.path.exists(clips_file):
+            raise FileNotFoundError("ordered_clips.json not found.")
+        clips = json.load(open(clips_file, encoding="utf-8"))
+
+        groq_file = os.path.join(OUTPUT_DIR, "groq_transcriptions.json")
+        groq_data = json.load(open(groq_file, encoding="utf-8")) if os.path.exists(groq_file) else []
+        groq_map = {g["clip_index"]: g.get("words", []) for g in groq_data}
+
+        from silero_chunked_aligner import SileroChunkedAligner, clean_pulsar_word
+        aligner = SileroChunkedAligner()
+
+        final_tokens = []
+        tot_silence_preserved = 0.0
+        tot_speech_chunks = 0
+        tot_blended_aligned = 0
+
+        for c in clips:
+            c_idx = c["index"]
+            fname = c["filename"]
+            offset = c["start_sec"]
+            dur = c["duration_sec"]
+            wpath = os.path.join(AUDIO_DIR, fname)
+            jpath = os.path.join(AUDIO_DIR, fname.replace(".wav", ".json"))
+
+            # Load pre-label segments
+            words_to_align = []
+            if os.path.exists(jpath):
+                try:
+                    jd = json.load(open(jpath, encoding="utf-8"))
+                    for s in jd.get("segments", []):
+                        def parse_time(ts):
+                            parts = ts.split(":")
+                            return float(parts[0])*3600 + float(parts[1])*60 + float(parts[2])
+                        words_to_align.append({
+                            "text": s.get("refTranscript", s.get("text", "")),
+                            "start": parse_time(s.get("startTime", "0:0:0")),
+                            "end": parse_time(s.get("endTime", "0:0:0")),
+                            "speaker": s.get("speaker", "S1")
+                        })
+                except Exception as e:
+                    self.log(f"[Silero Engine] Warning reading prelabels for {fname}: {e}")
+
+            if not words_to_align:
+                words_to_align = groq_map.get(c_idx, [])
+
+            if not os.path.exists(wpath):
+                self.log(f"[Silero Engine] Warning: Audio file {wpath} not found.")
+                continue
+
+            whisper_words = groq_map.get(c_idx, [])
+            aligned, stats = aligner.reconcile_with_prelabels(wpath, jpath, [w.get("text", "") for w in words_to_align], dur, whisper_words=whisper_words)
+
+            tot_silence_preserved += stats.get("silence_preserved_ms", 0.0)
+            tot_speech_chunks += stats.get("speech_chunks", 0)
+            tot_blended_aligned += stats.get("blended_words_aligned", 0)
+
+            # Map to global timeline offsets
+            for t_idx, t in enumerate(aligned, 1):
+                st = float(t["start"])
+                en = float(t["end"])
+                g_start = round(offset + st, 4)
+                g_end = round(offset + en, 4)
+                final_tokens.append({
+                    "id": f"t_{fname}_{t_idx}",
+                    "speaker": t.get("speaker", "S1"),
+                    "start": g_start,
+                    "end": g_end,
+                    "text": clean_pulsar_word(t.get("text", t.get("word", ""))) or "word",
+                    "type": "lexical",
+                    "clipId": f"clip_{c_idx}",
+                    "clipIndex": c_idx,
+                    "wrapOpen": t.get("wrapOpen", []),
+                    "wrapClose": t.get("wrapClose", [])
+                })
+
+            self.log(f"[Silero Engine] Clip {c_idx+1}/{len(clips)} ({fname[:28]}...): {len(aligned)} tokens | {stats.get('speech_chunks', 0)} speech chunks | {stats.get('blended_words_aligned', 0)} blended aligned | {stats.get('silence_preserved_ms', 0):.1f}ms silence preserved")
+
+        # Save tokens
+        with open(os.path.join(OUTPUT_DIR, "injected_tokens.json"), "w", encoding="utf-8") as f:
+            json.dump(final_tokens, f, indent=2)
+
+        # Build injection script
+        tokens_json = json.dumps(final_tokens)
+        js_code = f"""// === PULSAR SILERO CHUNKED ACOUSTIC BASELINE INJECTION SCRIPT ===
+// Generated with Silero VAD (Neural Pause Protection) & Wav2Vec2 Chunked Phonetic Alignment
+(function() {{
+    const newTokens = {tokens_json};
+    console.log('[Pulsar Injector] Updating state.tokens with ' + newTokens.length + ' perfected acoustic tokens...');
+    state.tokens = newTokens;
+    if (!state.tokenStats) state.tokenStats = {{}};
+    for (const t of state.tokens) {{
+        if (!state.tokenStats[t.id]) {{
+            state.tokenStats[t.id] = {{ played: false, selectedCount: 0 }};
+        }}
+    }}
+    renderAll();
+    console.log('[Pulsar Injector] SUCCESS! Injected ' + newTokens.length + ' acoustic tokens (Silero pause protected & phonetically aligned).');
+}})();
+"""
+        with open(os.path.join(OUTPUT_DIR, "inject_console.js"), "w", encoding="utf-8") as f:
+            f.write(js_code)
+
+        acoustic_summary = {
+            "total_tokens": len(final_tokens),
+            "silence_preserved_ms": round(tot_silence_preserved, 1),
+            "speech_chunks": tot_speech_chunks,
+            "blended_words_aligned": tot_blended_aligned
+        }
+
+        with self.lock:
+            self.state["status"] = "complete"
+            self.state["inject_script"] = js_code
+            self.state["tokens_count"] = len(final_tokens)
+            self.state["acoustic_stats"] = acoustic_summary
+            self.state["message"] = f"Acoustic baseline complete: {len(final_tokens)} tokens across {acoustic_summary['speech_chunks']} speech chunks ({acoustic_summary['blended_words_aligned']} blended words phonetically aligned)."
+
+        self.log(f"[Silero Engine] SUCCESS: Generated {len(final_tokens)} tokens across {tot_speech_chunks} speech chunks ({tot_blended_aligned} blended words phonetically aligned, 100% pauses preserved).")
+        return js_code
+
+    def process_llm_output_and_generate_injection(self, raw_llm_output):
+        """Parse LLM JSON output, run Silero VAD & Chunked Phonetic Alignment, map to global offsets, and generate inject_console.js."""
+        with self.lock:
+            self.state["status"] = "generating_injector"
+            self.state["current_step"] = 4
+
+        self.log("Parsing LLM response JSON...")
+
+        # Strip markdown ```json ... ``` wrappers if present
+        cleaned_json = raw_llm_output.strip()
+        m = re.search(r"```(?:json)?\s*([\s\S]*?)\s*```", cleaned_json)
+        if m:
+            cleaned_json = m.group(1).strip()
+
+        try:
+            parsed_data = json.loads(cleaned_json)
+        except Exception as e:
+            raise ValueError(f"Failed to parse LLM response as JSON: {str(e)}")
+
+        with open(os.path.join(OUTPUT_DIR, "llm_corrected_tokens.json"), "w", encoding="utf-8") as f:
+            json.dump(parsed_data, f, indent=2)
+
+        # Load ordered clips
+        clips_file = os.path.join(OUTPUT_DIR, "ordered_clips.json")
+        clips = json.load(open(clips_file, encoding="utf-8"))
+        clip_map = {c["index"]: c for c in clips}
+
+        from silero_chunked_aligner import SileroChunkedAligner, clean_pulsar_word
+        aligner = SileroChunkedAligner()
+
+        final_tokens = []
+        tot_silence_preserved = 0.0
+        tot_speech_chunks = 0
+        tot_blended_aligned = 0
+
+        self.log("=================================================================")
+        self.log("[Silero Engine] RUNNING SILERO VAD & PHONETIC ALIGNMENT ON LLM OUTPUT")
+        self.log("=================================================================")
+
+        # Load groq transcriptions for acoustic anchoring
+        groq_file = os.path.join(OUTPUT_DIR, "groq_transcriptions.json")
+        groq_data = []
+        if os.path.exists(groq_file):
+            try:
+                groq_data = json.load(open(groq_file, encoding="utf-8"))
+            except Exception:
+                pass
+
+        if isinstance(parsed_data, dict):
+            for c_idx_str, toks in parsed_data.items():
+                try:
+                    c_idx = int(c_idx_str)
+                except ValueError:
+                    continue
+                if c_idx not in clip_map:
+                    continue
+                c_info = clip_map[c_idx]
+                offset = c_info["start_sec"]
+                dur = c_info["duration_sec"]
+                fname = c_info["filename"]
+                wpath = os.path.join(AUDIO_DIR, fname)
+                jpath = os.path.join(AUDIO_DIR, fname.replace(".wav", ".json"))
+
+                if not os.path.exists(wpath):
+                    self.log(f"[Silero Engine] Audio file {wpath} not found.")
+                    continue
+
+                # Find matching whisper words
+                whisper_words = []
+                for item in groq_data:
+                    if item.get("filename") == fname or item.get("clip_index") == c_idx:
+                        whisper_words = item.get("words", [])
+                        break
+
+                aligned, stats = aligner.reconcile_with_prelabels(wpath, jpath, toks, dur, whisper_words=whisper_words)
+
+                tot_silence_preserved += stats.get("silence_preserved_ms", 0.0)
+                tot_speech_chunks += stats.get("speech_chunks", 0)
+                tot_blended_aligned += stats.get("blended_words_aligned", 0)
+
+                # Map to global timeline offsets
+                for t_idx, t in enumerate(aligned, 1):
+                    st = float(t["start"])
+                    en = float(t["end"])
+                    g_start = round(offset + st, 4)
+                    g_end = round(offset + en, 4)
+
+                    final_tokens.append({
+                        "id": f"t_{fname}_{t_idx}",
+                        "speaker": t.get("speaker", "S1"),
+                        "start": g_start,
+                        "end": g_end,
+                        "text": clean_pulsar_word(t.get("text", t.get("word", ""))) or "word",
+                        "type": "lexical",
+                        "clipId": f"clip_{c_idx}",
+                        "clipIndex": c_idx,
+                        "wrapOpen": t.get("wrapOpen", []),
+                        "wrapClose": t.get("wrapClose", [])
+                    })
+
+                self.log(f"[Silero Engine] Clip {c_idx+1}/{len(clips)} ({fname[:28]}...): {len(aligned)} tokens | {stats.get('speech_chunks', 0)} chunks | {stats.get('blended_words_aligned', 0)} blended aligned | {stats.get('silence_preserved_ms', 0):.1f}ms silence preserved")
+
+        elif isinstance(parsed_data, list):
+            final_tokens = parsed_data
+
+        with open(os.path.join(OUTPUT_DIR, "injected_tokens.json"), "w", encoding="utf-8") as f:
+            json.dump(final_tokens, f, indent=2)
+
+        # Build robust inject_console.js with multi-scope detection and localStorage persistence
+        packed_tokens = []
+        for t in final_tokens:
+            packed_tokens.append([
+                t["id"],
+                t["text"],
+                round(t["start"], 3),
+                round(t["end"], 3),
+                t.get("clipId", "clip_0"),
+                t.get("clipIndex", 0),
+                t.get("wrapOpen", []),
+                t.get("wrapClose", [])
+            ])
+
+        tokens_json = json.dumps(packed_tokens, separators=(',', ':'))
+        js_code = f"""// === PULSAR RECONCILED INJECTION SCRIPT ===
+// Multi-scope detection & localStorage persistence enabled
+(function() {{
+    const rawPacked = {tokens_json};
+    const incoming = rawPacked.map(p => ({{
+        id: p[0],
+        text: p[1],
+        start: p[2],
+        end: p[3],
+        speaker: "S1",
+        type: "lexical",
+        clipId: p[4],
+        clipIndex: p[5],
+        wrapOpen: p[6] || [],
+        wrapClose: p[7] || []
+    }}));
+
+    console.log('[Pulsar Injector] Unpacked ' + incoming.length + ' tokens.');
+
+    let editorState = null;
+    let editorWindow = window;
+    if (typeof state !== 'undefined' && state && Array.isArray(state.tokens)) {{
+        editorState = state;
+    }} else if (typeof window !== 'undefined' && window.state && Array.isArray(window.state.tokens)) {{
+        editorState = window.state;
+    }} else {{
+        const iframes = document.querySelectorAll('iframe');
+        for (const ifr of iframes) {{
+            try {{
+                if (ifr.contentWindow && ifr.contentWindow.state && Array.isArray(ifr.contentWindow.state.tokens)) {{
+                    editorState = ifr.contentWindow.state;
+                    editorWindow = ifr.contentWindow;
+                    break;
+                }}
+            }} catch(e) {{}}
+        }}
+    }}
+
+    // Update localStorage
+    try {{
+        let targetKey = null;
+        for (let i = 0; i < localStorage.length; i++) {{
+            const k = localStorage.key(i);
+            if (k && k.startsWith('pulsar_align_clip_')) {{
+                targetKey = k;
+                break;
+            }}
+        }}
+        if (targetKey) {{
+            const existingRaw = localStorage.getItem(targetKey);
+            if (existingRaw) {{
+                const parsed = JSON.parse(existingRaw);
+                if (Array.isArray(parsed)) {{
+                    localStorage.setItem(targetKey, JSON.stringify(incoming));
+                }} else {{
+                    parsed.tokens = incoming;
+                    localStorage.setItem(targetKey, JSON.stringify(parsed));
+                }}
+            }}
+        }}
+    }} catch(e) {{}}
+
+    if (editorState) {{
+        editorState.tokens = incoming;
+        if (!editorState.tokenStats) editorState.tokenStats = {{}};
+        for (const t of editorState.tokens) {{
+            if (!editorState.tokenStats[t.id]) {{
+                editorState.tokenStats[t.id] = {{ played: false, selectedCount: 0 }};
+            }}
+        }}
+        try {{
+            if (editorState.markDirty) editorState.markDirty();
+            if (editorState.notifyListeners) editorState.notifyListeners();
+            if (editorState.render) editorState.render();
+            if (typeof editorState.setTokens === 'function') editorState.setTokens(editorState.tokens);
+        }} catch(e) {{}}
+        try {{
+            editorWindow.dispatchEvent(new Event('resize'));
+            editorWindow.dispatchEvent(new CustomEvent('tokens-updated', {{ detail: {{ count: incoming.length }} }}));
+        }} catch(e) {{}}
+        console.log('[Pulsar Injector] SUCCESS! Injected ' + incoming.length + ' tokens.');
+    }} else {{
+        console.error('[Pulsar Injector] window.state.tokens not found! Please ensure you are on the Pulsar editor page.');
+    }}
+}})();
+"""
+        inject_file = os.path.join(OUTPUT_DIR, "inject_console.js")
+        with open(inject_file, "w", encoding="utf-8") as f:
+            f.write(js_code)
+
+        acoustic_summary = {
+            "total_tokens": len(final_tokens),
+            "silence_preserved_ms": round(tot_silence_preserved, 1),
+            "speech_chunks": tot_speech_chunks,
+            "blended_words_aligned": tot_blended_aligned
+        }
+
+        with self.lock:
+            self.state["status"] = "complete"
+            self.state["inject_script"] = js_code
+            self.state["tokens_count"] = len(final_tokens)
+            self.state["acoustic_stats"] = acoustic_summary
+            self.state["message"] = f"Generated injection script with {len(final_tokens)} tokens! ({acoustic_summary['speech_chunks']} chunks, {acoustic_summary['blended_words_aligned']} blended words phonetically aligned)"
+
+        self.log(f"[Silero Engine] SUCCESS: Generated {len(final_tokens)} tokens across {tot_speech_chunks} speech chunks ({tot_blended_aligned} blended words phonetically aligned, 100% pauses preserved).")
+        return js_code
+
+pipeline = PulsarPipeline()

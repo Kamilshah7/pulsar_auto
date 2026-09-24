@@ -1,0 +1,102 @@
+[aligner2] source changed -> redeploying GPU engine
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+  signals 1/49  (5s)
+  signals 2/49  (25s)
+  signals 3/49  (30s)
+  signals 4/49  (32s)
+  signals 5/49  (33s)
+  signals 6/49  (36s)
+  signals 7/49  (36s)
+  signals 8/49  (39s)
+  signals 9/49  (40s)
+  signals 10/49  (40s)
+  signals 11/49  (41s)
+  signals 12/49  (43s)
+  signals 13/49  (43s)
+  signals 14/49  (44s)
+  signals 15/49  (45s)
+  signals 16/49  (46s)
+  signals 17/49  (46s)
+  signals 18/49  (48s)
+  signals 19/49  (48s)
+  signals 20/49  (50s)
+  signals 21/49  (50s)
+  signals 22/49  (52s)
+  signals 23/49  (52s)
+  signals 24/49  (53s)
+  signals 25/49  (54s)
+  signals 26/49  (56s)
+  signals 27/49  (57s)
+  signals 28/49  (58s)
+  signals 29/49  (58s)
+  signals 30/49  (59s)
+  signals 31/49  (60s)
+  signals 32/49  (62s)
+  signals 33/49  (63s)
+  signals 34/49  (63s)
+  signals 35/49  (64s)
+  signals 36/49  (66s)
+  signals 37/49  (67s)
+  signals 38/49  (67s)
+  signals 39/49  (67s)
+  signals 40/49  (69s)
+  signals 41/49  (70s)
+  signals 42/49  (70s)
+  signals 43/49  (70s)
+  signals 44/49  (72s)
+  signals 45/49  (73s)
+  signals 46/49  (73s)
+  signals 47/49  (73s)
+  signals 48/49  (75s)
+  signals 49/49  (76s)
+StopAsyncIteration exception in shielded future
+future: <Future finished exception=StopAsyncIteration()>
+Traceback (most recent call last):
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 511, in wrapper_coro
+    return await inner_task
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 341, in coro_wrapped
+    value = await coro
+            ^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\exceptions.py", line 33, in coro_wrapped
+    return await coro
+           ^^^^^^^^^^
+StopAsyncIteration
+signals: 49 clips computed on the GPU (90s)
+aligned 50 clips x 35 settings on the GPU (16s)
+== aligner2 v2 -- leave-one-set-out; params per held-out set: {'009': {'lam': 1000.0, 'min_pause': 0.15}, '026': {'lam': 1000.0, 'min_pause': 0.2}, '049': {'lam': 1000.0, 'min_pause': 0.15}, 'old14': {'lam': 1000.0, 'min_pause': 0.2}}
+set   kind            n     MAE    med     w5    w10    w20   bias
+009   all          1876    32.0   19.5    17%    30%    51%   +1.5
+009   cont         1456    25.3   17.5    16%    31%    55%   +5.2
+009   pause         396    53.7   30.5    16%    26%    39%  -13.8
+009   human         596    38.7   22.5    15%    30%    47%   +1.9
+009   cont_human    499    29.1   18.9    16%    32%    51%   +7.8
+026   all          1946    28.6   17.4    17%    34%    57%   -0.7
+026   cont         1476    21.9   15.6    17%    36%    60%   +2.3
+026   pause         446    47.9   26.0    17%    27%    46%  -10.7
+026   human         432    33.7   22.3    16%    29%    47%   -0.0
+026   cont_human    367    26.1   19.3    18%    31%    51%   +5.5
+026   ear-hit       468   23.5%
+049   all          1826    36.0   19.9    18%    33%    50%   -3.3
+049   cont         1342    26.4   16.5    21%    37%    57%   +0.8
+049   pause         460    61.3   44.0    12%    20%    30%  -16.2
+049   human         546    38.1   22.7    16%    31%    47%   +2.5
+049   cont_human    461    30.0   19.7    18%    33%    51%   +7.6
+049   ear-hit       314   24.2%
+old14 all          1716    33.7   17.5    19%    33%    55%   -0.2
+old14 cont         1210    24.3   14.9    21%    36%    60%   -0.9
+old14 pause         478    50.6   28.7    14%    24%    42%   -1.6
+old14 human         513    38.4   19.9    16%    27%    50%   +8.7
+old14 cont_human    439    28.4   17.9    17%    28%    55%   +8.1
+old14 ear-hit       284   23.9%
+ALL   all          7364    32.5   18.4    18%    32%    53%   -0.7
+ALL   cont         5484    24.4   16.5    19%    35%    58%   +2.0
+ALL   pause        1780    53.4   31.6    15%    24%    39%  -10.4
+ALL   human        2087    37.4   21.8    16%    29%    48%   +3.3
+ALL   cont_human   1766    28.5   19.1    17%    31%    52%   +7.3
+ALL   ear-hit      1066   23.8%
+
+(best single setting on everything, for reference: {'lam': 1000.0, 'min_pause': 0.15} -> MAE 32.1, w5 18%)
