@@ -111,7 +111,7 @@ def joins(clip_id, j0, j1):
         if last:
             name = f"END {a['text']}"
             hdr = f"end g {fmt(a['end'])}{hflag(a, 'end')} s {fmt(sa['end'])} ({(sa['end'] - a['end']) * 1000:+.0f})"
-            lo, hi = min(a["end"], sa["end"]) - 0.030, max(a["end"], sa["end"]) + 0.030
+            lo, hi = min(a["end"], sa["end"]) - 0.030, max(a["end"], sa["end"]) + 0.080
             out.append(f"--- {name}  {hdr}  [{lo:.3f}-{hi:.3f}]")
             out.append(table(D, lo, hi, marks=marks))
             continue
@@ -120,7 +120,7 @@ def joins(clip_id, j0, j1):
         hdr = (f"end g {fmt(a['end'])}{hflag(a, 'end')} s {fmt(sa['end'])} ({(sa['end'] - a['end']) * 1000:+.0f})  "
                f"start g {fmt(bb['start'])}{hflag(bb, 'start')} s {fmt(sb['start'])} ({(sb['start'] - bb['start']) * 1000:+.0f})")
         if j == 0:
-            lo, hi = min(a["start"], sa["start"]) - 0.030, max(a["start"], sa["start"]) + 0.030
+            lo, hi = max(0.0, min(a["start"], sa["start"]) - 0.070), max(a["start"], sa["start"]) + 0.030
             out.append(f"--- START {a['text']}  start g {fmt(a['start'])}{hflag(a, 'start')} s {fmt(sa['start'])}"
                        f" ({(sa['start'] - a['start']) * 1000:+.0f})  [{lo:.3f}-{hi:.3f}]")
             out.append(table(D, lo, hi, marks=[(a["start"], f"G:{a['text']}.s"), (sa["start"], f"S:{a['text']}.s")]))
@@ -129,6 +129,9 @@ def joins(clip_id, j0, j1):
         e_lo, e_hi = min(a["end"], sa["end"]) - 0.030, max(a["end"], sa["end"]) + 0.030
         s_lo, s_hi = min(bb["start"], sb["start"]) - 0.030, max(bb["start"], sb["start"]) + 0.030
         if (gap > CONT_MAX_GAP or sgap > CONT_MAX_GAP) and s_lo > e_hi:
+            # pause: longer look past the end (tails) and before the start (pre-onset events)
+            e_hi = min(e_hi + 0.050, s_lo - 0.010)
+            s_lo = max(s_lo - 0.040, e_hi + 0.010)
             out.append(f"--- END {name}  {hdr}  [{e_lo:.3f}-{e_hi:.3f}]")
             out.append(table(D, e_lo, e_hi, marks=marks))
             out.append(f"--- START {name}  {hdr}  [{s_lo:.3f}-{s_hi:.3f}]")

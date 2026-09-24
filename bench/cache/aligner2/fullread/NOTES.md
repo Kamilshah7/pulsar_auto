@@ -4180,3 +4180,409 @@ System failure classes in 026-3:
 Accepted-gold errors found: a|loyalty +72 (L of "loyalty" given to "a"), were|more +50 (inside the M), story|that +25 (mid-DH),
  treatments|for +22 (inside the F), results|c +22, broadly.end -28, story.end -33, so.end -30.
 Listening candidates: tell|us (no L landmark), that|the (glottal T + DH voice bar), little|about (elided schwa of "about").
+
+## 026-4 DEEP READ (71 tokens, 20.9 s)
+Clip character: clean close-mic speech (dBfl 50-58 in vowels), floor -60..-66 with a faint very-low hum (cent 3.7-4.8).
+Many fillers with creaky phonation.
+- START and g 0.000 s 0.006: clip opens in voicing (-12 at 0.000, per .11→.46). Start at 0 (026-1 uh rule). Gold exact, system +6.
+- and|then (both H) g 0.133/0.134 s 0.089/0.090 (-43): loud N of "and" (lo 0, cent 5.2, per .54-.65, -6..-8, hi -44..-50) 0.058-0.124;
+  N→DH release: hi -45.0→-40.1→-35.1→-34.6 (0.124-0.142), lo -0.1→-0.2→-0.5→-0.7, cent 5.2→5.4→5.6, trn 4.1/3.6 at 0.136/0.142. CTC blank
+  .95-1.00 over the whole N, T .97 0.12-0.14. HUMAN = nasal release onset (0.130-0.134). System -43 mid-N (no CTC letter to anchor).
+- then.end g 0.570 s 0.564: N of then (lo 0, cent 5.4) -8→-18 (0.546)→-14→-13→-28 (0.564)→-32 (0.570)→-36→-36→-35 (0.576-0.588, nasal tail
+  lo 0, cent 5.2-5.3)→-40 (0.594)→-45→-48→-50 (0.618); small hum bump -47..-50 at 0.624-0.642 (lo -0.2..-1.3, cent 5.4-6.3) then floor.
+  R6 (-40) → 0.595 (next word vowel-initial after a pause, no knee exception). Gold -25, system -31 (both at the steep drop).
+- START uh g 0.699 s 0.704: floor -62..-66; attack trn 9.1/21.5 at 0.702/0.708 (-53→-20). Onset 0.700. Both OK.
+- uh.end g 1.275 s 1.266: -7→-16 (1.248)→-21→-23→-27 (1.266)→-36 (1.272)→-46 (1.278)→-54 (1.284); then a floor-level very-low hum
+  (1.302-1.332: -56..-65, cent 3.7-4.8, per .3-.55, dBfl 1-8). -40 at 1.275. Gold exact, system -9. OK.
+- START so g 1.440 s 1.450: pause contains a short voiced event 1.372-1.396 (trn 3.6/5.1/7.8, -50→-27→-37, per .44-.45, lo -9..-13, CTC
+  blank = lip smack + voice) and a low murmur -41..-47 (1.398-1.428, per .12-.37); S onset: trn 6.8 at 1.428, hi -31.5→-20.9→-10.3→-4.6→
+  -0.8 (1.422-1.446), zcr .06→.15→.31→.55. Onset ≈ 1.430. Gold +10, system +20 (both late; R1). Event excluded by both (R3).
+- so|that g 1.538/1.540 s 1.562 (+24/+22): OW (CTC O 1.50-1.52, -6..-14) → DH constriction: lo -2.0→-0.3→-0.1 (1.538-1.550), cent 5.8→5.4→
+  5.2, loudness -6→-9→-12→-12→-14 (1.532-1.556), hi min -44.9 at 1.562; DH release trn 9.5 at 1.580 (CTC T 1.58). DH onset ≈ 1.540.
+  Gold exact; system +22 (SEP peak .94-.97 1.550-1.574, inside the DH).
+- that.end g 1.778 s 1.768: glottal/creaky T (CTC T 1.738; per .13-.25, irregular -9/-20/-15/-19 at 1.744-1.762) → -33 (1.768) → -41 (1.774) →
+  -43 → -42 (1.786, voiced lo -0.1) → -46 → -52 → -54 (1.804) → floor hum. -40 at 1.773. Both within ±5. OK.
+- START uh (H) g 1.892 s 1.898: floor with tiny clicks (trn 4.4 at 1.862, -59); small transient trn 3.6 at 1.892 (-61, zcr .19); main attack
+  trn 18.7 at 1.898 (-44→-14). HUMAN = 6 ms before the main attack (at the first small transient) — same as 026-3 uh.start H.
+  System at the attack (+6). OK.
+- uh|we (both H) g 2.116/2.117 s 2.073/2.075 (-43): "uh" vowel 1.898-2.018 (lo -1..-8, hi -23..-40, cent 5.6-6.7); W constriction forms
+  2.018-2.078 (hi -40.8→-46→-52.4→-57.3→-61.3, lo → -0.1..-0.3) with CREAKY phonation (6-ms rows alternate -21/-15/-20/-16/-20/-17/-19 at
+  2.054-2.108); modal steady W 2.108-2.16 (hi -57..-60, per .56-.64); W release into IY 2.16-2.22 (CTC W .99 2.144). HUMAN = END OF THE
+  CREAK (falling creak = the filler, R5), 90 ms after the W transition midpoint. System -43 (mid-creak; CTC blank, SEP ~0.1).
+- we|really (really.s H) g 2.255/2.256 s 2.257/2.259: IY of we (creaky alternation -9..-15) → R with no clear landmark (lo -0.2..-0.3, hi
+  -30.5→-39.2 slowly); CTC blank/L .42-.21 2.22-2.26 (it hears L for the R). Both at 2.256-2.259. OK.
+- really|did (both H) g 2.453/2.454 s 2.565/2.567 (+113): IY of really to 2.416 (CTC E .58-.68); D closure (tap, voiced): loudness -11→
+  -16 (2.422-2.440), hi -42.8→-53.3 (min 2.446)→-43.5, CTC D .28 2.44-2.46; release trn 5.7 at 2.470 (hi -33.3); IH of did 2.476-2.524
+  (-7..-11); final D of did 2.530-2.560 (-12..-19, lo 0, cent 5.1-5.2, hi -41..-54); release + stopped DH of "that" trn 2.0/8.8/3.2/5.0 at
+  2.566-2.596 (CTC D .85 2.58-2.60); AE 2.602-2.660; glottal T dip -16 (per .40) at 2.698-2.704; "on" vowel 2.710-2.828 (lo -1.4..-3.1, cent
+  6.0-6.2; the N is only a nasalised vowel end); "a" = CREAKY schwa 2.830-2.960 (glottal pulses trn 2.0-4.8 every ~12 ms). HUMAN
+  really|did = middle of the first D closure (R8). The accepted did|that (2.563/2.565, at the D release) and that|on (2.699/2.701,
+  glottal dip, R5) are right.
+  SYSTEM SHIFTED ONE SYLLABLE: really|did +113 (placed on did's final D), did|that +134, that|on +82 (SEP 2.78), on|a +54. CTC letters
+  here read "D T O _ D I N N E R _ O N _ A" (the true "did" is the D-T-O region; "that" sounds like "DINNE"): the letter matcher put
+  "did" on the "DI" of "DINNER". Nucleus counting would have caught it (one vowel nucleus 2.476-2.524 between the two D closures).
+- on|a (both H) g 2.828/2.829 s 2.881/2.883 (+54): modal vowel of "on" → creaky "a": periodic glottal pulses trn 4.2/4.8/3.7/2.0/2.9/3.1 from
+  2.830 every ~12 ms, loudness alternating -10/-15; lo/cent/hi unchanged. HUMAN = ONSET OF CREAK (voice-quality change; no spectral
+  change). System +54 (SEP 2.86-2.90; part of the one-syllable shift).
+- a|tuesday (tuesday.s H) g 2.963 / 3.027 (gap 64) s 2.982 / 3.030: creaky schwa (CTC A .89 2.92-2.94) -15..-18 → per .27→.16 and -17→-26 at
+  2.956-2.962 (knee) → glottalised plateau -23 (2.968-2.974, per .03-.29) → -32 (2.980) → -44 → -50 (2.992) → T closure at the floor;
+  small voiced click trn 7.2 at 3.010; T burst trn 10.3 at 3.028 (-47→-38→-33), aspiration. HUMAN tuesday.start = the T burst (R8).
+  a.end: knee convention (you're|preseason H, tail into a voiceless closure) → 2.962 = accepted gold; R6 (-40) → 2.984 = system.
+- tuesday|i g 3.427/3.429 s 3.393/3.395 (-34): EY/IY offglide (CTC Y 3.362-3.400) → AY of "i" at constant level (-11..-13, per .53-.67);
+  only a tiny glottal cue: per min .61 + loudness -13 + lo local max -1.1 at 3.428; hi -27.1 (3.416)→-29.5 (3.428)→-26.6. CTC SEP .97-.99
+  3.428-3.434. Gold at the tiny glottal dip (so|effective H style); system -34 (SEP onset). V-V, weak cue.
+- i|think (both H) g 3.606/3.607 s 3.538/3.539 (-69): AY of "i" (-17..-20, lo 0, cent 4.8) decays -21→-26→-35 (3.532-3.548); a WEAK TH-like
+  frication 3.548-3.600 (-35..-51 dB, only +1..+14 over floor; hi -16→-4.8→-11, zcr .11→.45→.16, cent 5.9→7.9→6.7, per .17-.39; CTC T
+  3.56-3.60); voicing of "think" from 3.600 (per .37-.44, -46→-41→-33→-19→-11 by 3.632; lo → 0 and cent 5.1 at 3.620 = the NG already).
+  HUMAN cut at the VOICING ONSET (3.604), giving the weak TH frication to "i" — AGAINST R1. The TH here is near the floor
+  (+1..+14 fl), unlike the R1 human cases (+20..+40). Possibly heard as a stopped [t̪] (trn 2.4 at 3.604). Listening candidate;
+  R1 may need a strength condition. System at the AY decay onset (R1 onset would be ~3.548).
+- think|and g 3.773/3.775 s 3.788/3.789 (+14): NG (lo 0, cent 4.6-4.7) decays to -42 (3.766); K burst trn 18.0 at 3.772; aspiration 3.772-3.796
+  (-28..-37, hi -14..-25, zcr .06-.11); "and" voicing onset 3.802-3.808 (CTC A .97 3.802). Release-to-first-word rule (good|a- H) →
+  3.802. Accepted gold -29 (at the burst), system -14 (mid-aspiration). Both early.
+- and|then g 3.896/3.898 s 3.887/3.889 (-9): N/D (CTC N .91 3.856, D .97 3.862-3.880; lo 0, cent 5.1-5.2) → stopped voiced DH (voice bar
+  continues) → DH release trn 2.2/3.1/7.0 at 3.904-3.916 (hi -48→-32). Both inside the voiced closure (R8). OK.
+- then|on g 4.027/4.029 s 4.078/4.079 (+51): creaky N of then (CTC N .99 4.002-4.014; lo -0.1..-0.2, cent 5.3-5.4, loudness alternating
+  -16/-11) → NASAL RELEASE into AA: lo -0.1→-0.7, cent 5.3→5.6, hi -42.6→-38.7, trn 5.7 at 4.032; creak continues (pulses every ~12 ms).
+  CTC SEP .94-.99 4.044-4.074. Gold exact (nasal release); system +50 (SEP end, inside the AA).
+- on|wednesday g 4.272/4.274 s 4.252 (-21/-22): creaky N (lo -0.1..-0.6, cent 5.1-5.4, hi -48..-52) → W (hi -56.6→-59.2, lo 0): hi drop at
+  4.250-4.268, midpoint ≈ 4.260. CTC SEP 4.226-4.256, W .84 4.28. Gold +12 (W plateau start), system -8 (SEP end). N|W ±10. Minor.
+- wednesday|and g 4.654/4.656 s 4.688 (+34/+32): IY (CTC Y 4.62-4.66) → reduced "and" [ən] at constant -4/-5 (per .63-.70); no change until
+  the N (lo -0.7→-0.4, cent 5.7→5.5 from 4.696; CTC A 4.70-4.72). CTC SEP .98 4.672. V-V without a landmark; SEP centre 4.672. Gold
+  -18, system +16. Minor.
+- and|thursday g 4.822/4.824 s 4.776/4.842 (-46/+18): D of "and" (CTC D .99 4.744-4.760; voice bar lo 0, cent 5.1-5.3) to 4.776; D release trn
+  2.3/4.9/2.3 at 4.780-4.792; TH onset 4.792-4.800 (hi -11.6→-7.0→-3.5, zcr .19→.45→.53, cent 7.4→8.1); strong TH 4.804-4.87 (zcr .5-.79,
+  cent 8.1-8.7, hi -0.8..-4). CTC SEP .99 4.792, T 4.840. Released D keeps its burst (R8), TH onset ≈ 4.796 (R1). Accepted gold +27
+  (inside the TH); system and.end -20 (fine) but thursday.start +46 = CTC T letter (R1 violation).
+- thursday|we (both H) g 5.327/5.328 s 5.308 (-19): IY (lo -0.2..-0.5, hi -47..-52) → W: loudness dip -21 + per MIN .29 at 5.324 (glottal/
+  W constriction), hi -51.2..-57.9. CTC SEP 1.00 5.312-5.336. HUMAN = the per minimum. System -19 (SEP rise).
+- we.end g 5.645 s 5.640 / START do (H) g 5.666 s 5.682 (+16): IY of we decays -23→-32 (5.626); D VOICE BAR 5.626-5.662 (-30..-42, lo 0, cent
+  4.4-4.8, per .14-.47); D burst transients trn 4.2/11.1/12.9 at 5.668/5.674/5.680; fricated release 5.680-5.710 (zcr .33-.57, cent
+  8.2-8.4). HUMAN do.start = FIRST (weak) burst transient (R8); accepted we.end 5.645 leaves the voice-bar half unassigned (gap 21).
+  System do.start +16 at the strongest transient (after the burst onset). Minor.
+- do.end (H) g 6.007 s 6.004: UW (-13..-21) → -39 (6.004) → -45 → -55 (6.016) → floor. HUMAN at ~-42 (R6 -40 ≈ 6.005). System -3. OK.
+- START exit g 6.105 s 6.106: floor (click trn 5.5 at 6.080); glottal attack trn 25.5 at 6.104. Both exact.
+- exit|interviews g 6.455/6.457 s 6.434 (-21/-22): Z of exit 6.300-6.348 (zcr .55-.70); IH 6.356-6.420 (-11..-19; CTC L/D .75 6.38-6.40); glottal
+  T dip -26 at 6.428-6.436 (per .13-.22); a vowel pulse 6.444-6.452 (-14..-21, glottal attack trn 10.2 at 6.444; CTC E .23 6.44-6.46);
+  second glottal dip -29/-38 at 6.460-6.468 (per .05-.08); creaky N of "interviews" from 6.476 (-29→-16, lo -0.1..-0.7, cent 4.9-5.8,
+  trn 5.7/7.2; CTC N .68 6.46-6.48). Two readings: "interviews" starts with the pulse (IH) at 6.440 (= system, R5 at the first
+  dip) or the pulse is the voiced glottal release of exit's T and "interviews" starts [n..] at the second dip (= accepted gold
+  6.455). Listening candidate.
+- interviews.end (H) g 7.017 s 7.012: Z (zcr .40-.56, cent 8.2-8.4, -32..-41) → a voiced blip -26/-27 (7.000-7.006, lo -1.0, cent 5.8, per
+  .14) → -38 (7.012) → -46 (7.018) → -47 → -56 → -63. HUMAN at -46 (R7 floor-ish). System -5. OK.
+- START and g 7.058 s 7.058: rise -59 (7.042, trn 2.2) → -50 (trn 3.9) → -44 (7.054, trn 12.4) → -29 (trn 10.1) → -17. Main attack 7.054;
+  first rise 7.042-7.048 (uh.start H convention: ~6-8 ms before the main attack) → ~7.048. Both +10. Minor.
+- and|um (both H) g 7.418/7.419 s 7.370 (-48): "and" = vowel 7.058-7.23, N/D closure 7.24-7.39 (lo -0.1, cent 5.3-5.4, hi -47..-56;
+  CTC N .93 7.22-7.25, D .99 7.28-7.29, SEP 1.00 7.32-7.36). D RELEASE into "um": trn 4.9/8.3/8.7/8.6 at 7.392-7.400, lo -0.1→-3.4
+  →-5.4 (7.410), cent 5.3→6.4, zcr .06-.11 (7.398-7.408); release noise ends 7.412 (zcr → .04, cent 6.4→6.0, lo back to -2.6..-3.4
+  = vowel of um). HUMAN 7.418 = end of the D release (release +26 from the first transient), the good|a- / find|another rule
+  (released final stop + vowel-initial word: release stays with the first word). System -48 = SEP centre inside the closure.
+- um|before (um.e H 7.624, before.s 7.626) s 7.612 (-12/-14): M of um 7.560-7.642 (lo 0, cent 5.1-5.3, -15..-19) with two creak dips:
+  -24 at 7.612-7.614 and -26/-27 at 7.628-7.630 (per .23-.32). Labial closure shared by M and B; loudness stays -19 up to 7.642
+  (still nasal), B burst trn 6.9/13.5 at 7.644-7.646 (CTC B 1.00 7.64-7.66). HUMAN 7.624 = onset of the SECOND glottal dip
+  (4-6 ms before its minimum), 20 ms before the burst: filler-final glottal dip convention (more|uh). System at the first dip.
+  Minor (-12).
+- before|that g 8.000/8.002 s 8.008/8.009 (+8): R-vowel (0 dB, per .62-.64) → per .46 (7.988) → .27 (7.994), loudness -5/-7/-13
+  (7.994-8.006); DH closure voiced 7.998-8.020 (lo -0.3..-0.5, cent 5.3-5.5); DH release into AE 8.020-8.024 (lo -1.0→-3.2, cent
+  5.6→6.0, trn 2.7-4.1; CTC T 8.02). DH onset (per fall + lo → 0) ≈ 7.996-8.000. Gold exact, system +8. OK.
+- that.end g 8.258 s 8.248 (-10) / START in g 8.332 s 8.334: AE to 8.200; creaky glottal T 8.208-8.248 (lo 0, cent 5.2, hi -48..-56,
+  per .08-.34, -17..-26); decay -34 (8.248) → -41/-42 plateau 8.250-8.258 → -46 (8.260) → -56 (8.270); SILENT CLOSURE 8.270-8.304
+  (-54..-59, dBfl 3-8); T BURST trn 6.9/11.9/15.0/13.6 at 8.304-8.310 (cent 8.0-8.5, hi -0.6..-2.9); aspiration 8.310-8.330 (zcr
+  .25-.55, cent 7.7-8.5, -45..-47); voicing onset of "in" 8.330-8.334 (trn 6.6-7.5, per .24→.42, -39→-27). Accepted gold and
+  system end "that" at the creak decay (-42 / -34) and treat the 34 ms closure + 22 ms release as pause. By the good|a- rule
+  (H: 30 ms silent closure + 30 ms release stayed with "good") that.end ≈ 8.330 (release end = voicing onset): accepted gold
+  -72, system -82 vs rule. in.start both exact at the voicing onset. Old-gold candidate (same structure as good|a-).
+- in.end g 8.550 s 8.544 (-6) / START in g 8.618 s 8.622 (+4): N (-12..-14) → -21 (8.540) → -31 (8.544) → -39/-40 plateau 8.546-
+  8.554 → -46 (8.556); ALVEOLAR RELEASE CLICK 8.560-8.570 (trn 7.2/10.0/6.5, hi -11..-13, cent 6.3-6.6, -40/-41, dBfl 22), decays
+  -45 (8.572) → -55 (8.582). Weak voiced hum 8.586-8.606 (per .37-.56, -50..-53, cent 4.9-5.4, dBfl 9-12) separated by dips
+  (-55 at 8.582-8.584; -54..-56 at 8.610-8.616) = separate event (R3). Second "in" glottal attack trn 10.6/13.8 at 8.618-8.620
+  (-56→-48→-36→-30). Gold end at the -40 plateau (R6), excludes the contiguous release click (R2 would give ~8.572, +22;
+  low weight: the click is 4 ms after the -46 point). in.start: gold exact (first rise), system +4. OK.
+- in|that g 8.767/8.769 s 8.753/8.755 (-14): N 8.710-8.766 (lo -0.1, cent 5.3-5.4, hi -43..-48); NASAL RELEASE hi -44.6→-39.6→
+  -35.5 at 8.762-8.768, lo -0.1→-0.5 at 8.770, cent 5.4→5.7, glo 20.4 at 8.764-8.766; weak dental frication zcr .11-.14 8.788-
+  8.798 (assimilated DH); CTC SEP .99 8.752, T 8.782. Gold exact at the nasal release (Nasal→X rule). System -14 = SEP peak
+  (SEP-onset placement before a nasal release, 026-1 class).
+- that.end g 8.946 s 8.948 (+2) / START group g 9.172 s 9.172: vowel to 8.920; creak 8.922-8.946 (-10..-21, per .10-.31, lo 0);
+  KNEE -19→-38 at 8.946-8.952; low hum 8.952-8.988 (-40..-45, cent 4.6-5.3, per up to .50) → -51 (8.994) → floor -62 (9.012).
+  Gold/system at the knee (you're|preseason knee convention for a tail into a voiceless closure/pause). OK.
+  group: floor to 9.142; G BURST trn 2.1/7.1/10.0/8.6 at 9.144-9.150 (-62→-49→-38→-35, cent 6.8, hi -36..-38, lo -8..-10:
+  compact velar burst); second velar burst trn 4.5-7.3 at 9.166-9.172; voicing into R 9.180-9.192 (-26→-13). CTC G 9.16-9.18.
+  R8: start at the (first) burst, 9.144. Accepted gold +28 and system +28 both at the SECOND burst. Old-gold R8 error.
+- group|meeting g 9.418/9.420 s 9.405/9.407 (-13): UW to 9.350; labial closure with nasal murmur 9.354-9.44 (lo 0, cent 5.2-5.5):
+  P assimilated to the M, realised as glottal dips: -29/-30 at 9.382-9.388, DEEPEST -38 at 9.406-9.408, shallow -18 at 9.428;
+  re-onsets trn 5.5-6.7 at 9.390-9.392, 8.7/12.4 at 9.412-9.414, 8.0/9.0 at 9.430-9.432. CTC P 9.366-9.378, SEP 9.40-9.44, M 9.442.
+  R5 (deepest minimum) → 9.407 = system. Gold +11 at the re-onset after the deepest dip. Minor.
+- meeting.end g 9.791 s 9.782 (-9) / START we g 10.385 s 10.386: NG loud to 9.766; knee -18→-28 at 9.766-9.768; falling creaky
+  tail 9.768-9.800 (-26..-38, per .02-.38, cent 4.4-5.1, lo 0) → -43 (9.802) → -49 (9.808) → -55 (9.810); velar release click
+  trn 17.5/16.6 at 9.812-9.814 then a 420 ms INHALATION 9.814-10.26 (-32..-49, zcr .23-.33, cent 7.5-7.8, lo -14..-22) = R3
+  (excluded). R5/R6: falling creak to the previous word, end near -40 → 9.802. Gold -11 (mid-tail -34), system -20 (-26).
+  Here the tail is voiced creak, not breath, so the knee convention does not apply. Minor.
+  we: floor -65 to 10.356; articulatory rise 10.356-10.378 (-64→-55→-49..-51→-46, per .15-.43, lo -0.3..-0.5, mfc 3.6, fvel 3.4);
+  trn 6.5-8.0 at 10.378-10.382 (-46→-41); main attack -31→-14 at 10.388-10.392. Gold 10.385 / system 10.386 = ~6 ms before the
+  steep rise (uh.start H convention); the 20 ms pre-rise at -50 is borderline (R1-like weak onset). OK.
+- we|have g 10.509/10.511 s 10.502/10.503 (-8): IY (-1..-3, cent 5.6, hi -31..-33) → voiced /h/ with NO loudness or periodicity
+  dip: first HF jump trn 5.4/7.3 at 10.482-10.484 (cent 5.6→5.9, lo -0.3→-0.8, flat -6.5→-4.9), hi rises steadily -33→-25
+  (10.494)→-21 (10.506)→-16 (10.530), zcr step .06-.08→.11 at 10.504; CTC SEP 10.500-10.536, H 10.540-10.558. Candidates: spectral
+  onset 10.482 or zcr step 10.504. Gold and system both at the zcr step (±5). OK (no better landmark in the table).
+- have|em g 10.719/10.721 s 10.721/10.723 (+2): AE to 10.658; V constriction 10.660-10.700 (-9..-19, dip -27 at 10.690, lo -0.1..-0.4,
+  cent 5.1-5.5; CTC V .99 10.640-10.658 early, E 10.660-10.678); V release trn 5.6-5.9 at 10.698-10.700 (lo -0.2→-1.3, cent 5.4→
+  5.9); a -12 pulse 10.704-10.712; glottal dip -17 at 10.714; vowel of "em" -8→-5 from 10.716 (per .51 at 10.720). Glottal
+  attack of the vowel-initial word (is|at rule) → 10.715: gold +4, system +6. OK.
+- em.end g 10.901 s 10.894 / START fill g 10.952 s 10.944 (gap 51 ms): NO PAUSE. M of em 10.770-10.842 (-8..-14, lo 0, cent 5.2-5.3)
+  → weaker M/creak 10.848-10.862 (-21..-24, per .12-.28); NASAL RELEASE trn 7.4/8.3 at 10.858-10.860, lo -0.0→-0.3→-0.5, hi -45
+  →-39 (10.862) →-34 →-30 →-26 →-22 (10.870); F FRICATION 10.866-10.982 (116 ms; zcr .09→.50, cent 6.1→8.4, flat -0.7..-1.6,
+  hi -2..-17, -25..-36 dB, never below -36: contiguous); vowel of fill from 10.984 (cent 6.9→6.0, lo -2.3→-1.0). CTC F .95-1.00
+  10.940-10.958 only. R1 + nasal-release rule → em.end = fill.start ≈ 10.862. Accepted gold +39/+90 and system +32/+82: both cut
+  INSIDE the F and leave its middle 50 ms as a false pause (and|throwing class). Old-gold R1 error; system R1 violation (CTC
+  F letter start).
+- fill|out (both H) g 11.186/11.187 s 11.191/11.193 (+5): L of fill 11.024-11.13 (lo -2..-5, cent 5.8-6.0), creaky from 11.108 (per
+  .10-.24), first dip -18 at 11.162 (lo -7..-8.7); re-onset trn 6.5-8.8 11.146-11.150 and 4.5-6.1 11.166-11.168; per .37-.41 at
+  11.174-11.184, loudness -7 at 11.184-11.188; SECOND glottal dip -15 at 11.194 (per .23, zcr .11-.12); trn 5.0-5.9 at 11.196-
+  11.198, 8.5 at 11.210; vowel -5 at 11.212. lo -1.7 (11.166) → -7.6 (11.192): L→AW transition midpoint -4.6 at 11.184. HUMAN
+  11.186 = the start of the second (vowel-onset) glottal dip / the lo-transition midpoint, NOT the deepest minimum (11.162, -24).
+  Creaky L+vowel-initial word: the glottal attack of the next word wins over the deepest minimum inside the L (is|at rule).
+  System +5 (SEP end). OK.
+- out.end g 11.421 s 11.408 (-13) / START rankings g 11.518 s 11.514 (-4): glottal T creak -15 (11.396-11.402) → knee -18→-27→-30
+  (11.404-11.408) → -39 (11.414-11.416) → second creak pulse -30/-31 at 11.422-11.430 → -36 (11.432) → -40 (11.434) → -48
+  (11.436) → floor -59 (11.456). Falling creak with discrete pulses (not breath): R5/R6 → 11.435. Gold -14 (between pulses),
+  system -27 (knee). Minor.
+  rankings: pre-rise 11.494-11.508 (-59→-51, lo -0.5..-0.9, zcr .06-.14, dBfl 2-11); first pulse -43 at 11.510; main attack
+  -39→-27→-19 at 11.518-11.524 (R onset, hi -46→-59). uh.start convention (~6-8 ms before the main attack) → ~11.512: system
+  +2, gold +6. OK.
+- rankings|we g 12.018/12.020 s 12.019/12.021: final Z/S (zcr .38, cent 8.0, lo -11..-15) → W: zcr .35 (12.016) .30 .25 .19 .18
+  .11 (12.026); cent 7.9→7.7→7.4→7.0→6.6→6.4; lo -9.2→-7.1→-5.0→-3.1→-1.8→-1.2→-0.9; per .19→.27 (12.024)→.37. Crossfade
+  12.014-12.028, midpoint ~12.021. Both exact (fricative→sonorant crossfade-midpoint rule).
+- we|have g 12.150/12.153 s 12.143/12.145 (-7): vowel of we (-6..-9, lo -0.3..-0.8) → voiced /h/: loudness dip -14 at 12.144, trn
+  5.1/5.3 at 12.146-12.148, PERIODICITY DIP .26 at 12.150-12.152 (vs .45), lo -1.6→-2.9 (12.140-12.158); CTC SEP 12.14-12.158,
+  H .97 from 12.160. Gold exactly at the periodicity dip (R4 /h/ landmark); system at the loudness dip -7. Minor.
+- have|them g 12.330/12.332 s 12.316/12.317 (-14): AE to 12.258; V 12.264-12.290 (lo -3.5→-0.1, cent 5.9→5.0, -10..-19); STEADY
+  dental constriction 12.292-12.322 (-17..-23, lo -0.1..-0.2, cent 5.0-5.3, hi -50..-55, mfc .6-.9 = one phone: DH realised as a
+  voiced dental stop), HI MINIMUM -55.3 at 12.314; release/opening at 12.322-12.326 (lo -0.3, hi -46→-48, loudness peaks -13..-15,
+  trn 3.6-3.9, 6.3-6.7 at 12.338-12.340). As 026-0 all|this (DH as dental stop): boundary inside the closure (R8), hi min.
+  System 12.316 = hi minimum (OK). Accepted gold 12.330 is 6-8 ms AFTER the release (R8: never after the burst): +16 vs system.
+  Minor old-gold error.
+- them.end g 12.482 s 12.478 (-4) / START fill g 12.583 s 12.570 (-13): M -19 (12.470) → knee -29 (12.474) → -33/-34 → -41
+  (12.490) → weak re-voicing -39..-35 at 12.494-12.506 (per .29-.37, lo -0.2..-0.5, cent 5.0→5.7, trn 5.0 at 12.498 = labial
+  release of the M) → -40 (12.510) → -48 (12.514) → dip -53 at 12.518 (dBfl 10) → WEAK FRICATION 12.518-12.574 at -49..-53
+  (dBfl 10-16; cent 7.9-8.2, flat -1.1..-1.7, hi -2.3..-4.8, zcr .43-.56) → LOUD F from 12.578 (trn 9.6, -37→-31, lo -15..-17,
+  cent 7.7-8.2) → vowel of fill 12.618-12.624 (trn 8.2). The weak noise has the loud F's spectrum (same source, labiodental
+  friction building up) and is contiguous with it (no dip) → R1: fill.start ≈ 12.516 (-67 vs gold). If it is a separate
+  exhalation (R3) → 12.578 (gold +5, system -8 at CTC F). them.end: R6 → 12.510 (incl. the M release): gold -28, system -32.
+  Listening candidate (weak pre-frication before a loud F; em|fill had one continuous F at -25..-36).
+- fill|out (both H) g 12.804/12.805 s 12.841/12.843 (+37): L 12.720-12.780 (lo -0.5..-2.0, cent 5.5-5.7, hi -45..-53, creaky per
+  .14-.19); dip -17 at 12.782-12.784; re-onset trn 7.3/8.0 at 12.786-12.788; lo -2.0 (12.778) → -2.7 → -3.7 → -4.7 → -5.4 → -6.2
+  (12.796); hi -49 → -34 (12.798); second dip -15 at 12.798; re-onset trn 3.9/4.7 at 12.802-12.804; AW plateau lo -5..-8.8 from
+  12.800. HUMAN 12.804 = re-onset after the second dip, where lo reaches the vowel level (-5.4), same lo value as fill|out #1
+  (11.186, lo -5.4). RULE (2 H): L → vowel-initial word = end of the L→vowel transition, at the glottal (re-)onset of the
+  vowel. System +37: SEP plateau .93-.99 12.786-12.818, cut after its trailing edge (12.841, blank 1.0).
+- out.end g 13.142 s 13.372 (+230) / START things g 13.845 s 13.840 (-5): glottal-T creak -19..-21 (13.108-13.116) → -29 (13.120) →
+  -41 (13.122) → -44 plateau 13.124-13.128 → -46..-50 → -55 (13.140) → floor -61..-65 (13.150-13.200). R6 (-40) → 13.122; gold
+  +20 (-55). THEN a 210 ms NON-LEXICAL HISS 13.212-13.430 (trn 9.0 onset; -24..-39, zcr .59-.71, cent 8.5-8.7, hi -0.2..-2.1,
+  lo -15..-30), a voiced blip -30 at 13.440-13.452, floor 13.488-13.584, a low thump -44 at 13.596 (lo 0, cent 4.5), floor to
+  13.728, a short hiss 13.740-13.790 (-40..-55, cent 6.1→8.5, zcr up to .61), low tail -55..-57 13.800-13.830 (dBfl 17-19,
+  cent 6.6→4.8). CTC blank 1.00 over all of it (no letters, no SEP after 13.19). R3: separated by a floor gap, blank ≈ 1 →
+  belongs to no word. SYSTEM +230: swallowed the first half of the hiss into "out" (026-0 not.end +473 class: loud non-lexical
+  event after a floor gap).
+  things: TH onset 13.832-13.836 (trn 2.5→7.6→9.6, cent 4.8→6.2→6.9, zcr .01→.08→.16, hi -20→-10); weak TH frication -51..-53
+  to 13.844; dental burst trn 12.8/15.3 at 13.846-13.848 (-47→-33); CTC T 13.82-13.84, H 13.84-13.87. R1 → 13.833: gold +12,
+  system +7 (both past the TH onset, at the burst side). Minor; old-gold late-fricative-onset class.
+- things|that g 14.096/14.098 s 14.066/14.067 (-30): NG to 14.046; VOICED Z 14.046-14.062 (per .14-.33, hi -33→-17, cent 5.3→5.8;
+  CTC S 14.034-14.058); devoiced sibilant 14.062-14.100 (cent 7.7-8.5, zcr .37-.62, hi -1.4..-4.9, -26..-29); Z→DH spectral
+  change at 14.100-14.104 (cent 8.5→8.0→7.8, hi -1.4→-3.6→-4.3); DH 14.102-14.110; vowel from 14.110-14.112 (-22→-19, cent 7.2→6.6,
+  zcr .46→.21). CTC SEP 14.060-14.108 (peak 1.00 14.078-14.092), T 14.100. Gold at the Z→DH change (gangs|that / things|that
+  rule: a word-final fricative runs through the separator; cut at its end). System at the SEP leading edge (-30, wrong edge
+  of the owner's consonant, same as things|that -36 / gangs|that -43 elsewhere).
+- that.end g 14.263 s 14.250 (-13) / START they g 14.619 s 14.596 (-23): glottal-T creak -15..-23 (14.220-14.244, lo 0, cent 5.1-5.2)
+  → knee -31 (14.250) → -39 (14.256) → -41 (14.262) → -50 → -59 (14.274) → floor. R6 → 14.260: gold +3, system -10 (knee). OK.
+  they: floor noise -70..-72 (dBfl 1-4) to 14.598; PREVOICING 14.600-14.606 (-67→-63, per .31-.51, trn 3.0-4.8); DH BURST trn
+  11.7/15.3/10.8 at 14.606-14.610 (-63→-50→-42, cent 7.0-7.1, lo -5.2..-5.8); DH frication -39/-40 14.612-14.620 (zcr .11-.21,
+  cent 6.8-7.0); vowel attack trn 9.7-10.4 at 14.624-14.626 (-19→-8). R8 (stop-like DH: start inside the voiced closure or at the
+  burst) → 14.600-14.606. System 14.596 (-4 vs prevoicing onset, OK). Accepted gold 14.619 = 13 ms AFTER the burst, at the end
+  of the DH frication (R8 violation, old-gold late-onset class).
+- they|we're (we're.s H) g 14.713/14.715 s 14.700/14.701 (-14): EY → W: hi -51.5 (14.692) → -53.9 (14.700) → -55.7 (14.708) → -57.4
+  (14.710) → -58.3 (14.712, local min) → -57.4 (14.716) → -59.8 (14.722, global min) → -57.1 (14.728); loudness flat -9; glo min
+  10.4 at 14.716; CTC SEP peak .98 at 14.712, W 14.720-14.738. HUMAN 14.715 = the W constriction ONSET (hi reaches the plateau,
+  first local min 14.712-14.714 = SEP peak), 7 ms before the global hi minimum. System -14 at the SEP rise (hi still falling).
+  Glide join: human at constriction onset (cf. they|were ×3 ±15 scatter).
+- we're|happy (both H) g 14.813/14.814 s 14.859/14.861 (+47): IY/IH (hi -56→-45) → R 14.776-14.796 (lo -3.6..-5.5, cent 6.3-6.4, hi
+  -40..-43; CTC R 14.782-14.798); R offset at 14.796-14.800 (hi -37→-32, cent 6.4→6.1, lo -3.6→-2.7, per dip .34 + loudness dip
+  -9 at 14.798); transitional stretch 14.800-14.818 (-7/-8, hi -30..-32, lo -1.1..-2.4, cent 5.9-6.0; CTC E); breathy /h/ ramp
+  14.820-14.858 (hi -28.6→-21.3 (14.834)→-19.0→-16.4, zcr .08-.13, voiced throughout per .50-.60, no loudness dip); CTC SEP
+  14.818-14.860, H 14.860-14.872. HUMAN 14.813 = middle of the R-offset → /h/-ramp transition (15 ms after the R offset,
+  7 ms before the HF ramp). System +47 at the SEP trailing edge (the /h/ zcr peak): gave the whole voiced /h/ to "we're"
+  (026-1 his.start +40 class: /h/-initial words started late).
+- happy|about (both H) g 15.071/15.072 s 15.111/15.113 (+40): P burst trn 16.3 at 15.024, aspiration to 15.046; IY of happy 15.048-
+  15.070 (hi -30.4..-36, cent 5.6-6.0); IY→schwa: hi starts falling at 15.066-15.072 (-30.9→-33.0→-34.7→-36.6 (15.076)→-38.1
+  (15.088)), tiny loudness dip -7/-8 at 15.068-15.070 (vs -4), mfc MINIMUM 1.0 at 15.070-15.072; schwa of about 15.072-15.106;
+  B voice bar from 15.108-15.112 (lo 0, cent 5.2, -14..-16; CTC A 15.120 inside the closure). CTC SEP 15.074-15.112 (1.00
+  15.094-15.110). HUMAN 15.071 = onset of the IY→schwa formant transition (hi departure) at the loudness/mfcc dip, = SEP
+  RISE. System +40 at the SEP END (= the B closure onset: gave the whole schwa to "happy"). RULE: V-V junction without a
+  loudness landmark → start of the V1→V2 spectral transition (SEP rise), not the SEP centre/end.
+- about|things g 15.357/15.359 (continuous) s 15.326/15.404 (-31/+45): glottal T creak decays -25 (15.316) → -34 → -40 (15.324) →
+  -44 (15.330) → -48..-50 plateau (15.332-15.346) → -52..-56 (15.348-15.362) → weak hum -49..-52 (15.368-15.378, per .32-.38,
+  cent 4.3-4.8, lo 0) → -55..-59 (15.380-15.396); the whole tail is 15-25 dB over the floor at F0-level centroid (weak voicing,
+  not floor). TH ONSET 15.396-15.400 (trn 2.7→6.7→10.6, cent 4.6→5.5→6.3, hi -21→-16.5, lo -0.2→-2.0); TH frication -49..-52
+  (zcr .06→.29, cent 6.7-7.6) to 15.420; attack -42→-32 at 15.422-15.430 (CTC T 15.40-15.42, H 15.42+). Knee convention
+  (you're|preseason H: tail into a voiceless closure cut at the knee; next word starts at its burst/onset): about.end ≈ 15.322,
+  things.start ≈ 15.397 = SYSTEM (-4/+7 vs rule). Accepted gold continuous at mid-tail (-56 dB): about.end +35 / things.start
+  -38 vs rule (R1 violation: 38 ms of pre-TH hum given to "things"). Old-gold error.
+- things|that g 15.651/15.653 s 15.612/15.658 (-39/+5): NG → VOICED Z 15.588-15.604 (per .25, hi -19..-27; CTC S .37-1.00 15.58-
+  15.62); devoicing 15.604-15.610 (hi -14→-5, zcr .10→.35); weaker frication 15.608-15.620 (cent 7.5-7.7, zcr .32-.42, lo -1.1..
+  -2.2); STRONG SIBILANT 15.620-15.654 (cent 8.2-8.7, zcr .53-.80, hi -0.2..-2.6, lo -3.5..-15.7); centroid decline 8.7→8.6
+  (15.650)→8.4→8.3→8.1→7.8 (15.662), lo -14.8→-2.7; vowel voicing -25→-22 from 15.664. CTC SEP 15.60-15.64 (peak .99 15.632),
+  T 15.640-15.658. Gold at the ONSET of the centroid decline (= things|that #1 at 14.098, gangs|that: end of the word-final
+  fricative); system things.end at the devoicing onset (SEP rise, -39: wrong edge of the owner's consonant), that.start +5.
+  RULE (3 accepted cases, consistent): merged final sibilant + DH → cut where the sibilant's centroid starts to fall,
+  ~10-14 ms before the vowel voicing.
+- that|they g 15.802/15.804 s 15.778/15.822 (-24/+18): glottal T creak -23..-39 (15.760-15.770); weak creaky voicing plateau
+  -30..-35 15.772-15.790 (per .16-.44, cent 4.8-5.0, lo 0); decay -38 (15.792) → -41 (15.796) → -45 (15.802) → -49..-55 (15.806-
+  15.816); DH burst trn 3.2/4.3/7.3/11.0/11.0 at 15.816-15.824; frication 15.824-15.844 (zcr .21-.38). Knee convention →
+  that.end ≈ 15.792, they.start ≈ 15.818 (burst onset). Gold continuous at -45 (end +10, start inside the closure = R8-OK);
+  system that.end -14 (mid creak plateau), they.start +4 (burst peak). Minor.
+- they.end g 16.119 s 16.122 (+3) / START weren't g 16.345 s 16.332 (-13): creaky EY -17..-22 (lo 0, cent 5.0-5.3) → knee -33 (16.124)
+  → -41 (16.130) → -46..-49 (16.136-16.148) → -60 (16.154) → weak -54/-55 (16.160-16.172) → floor -66 (16.190). Both at the knee
+  (R6 -40 → 16.130). OK.
+  weren't: first spectral rise 16.328-16.330 (-64→-62, lo -0.5→-1.2, cent 5.0→5.5, fvel 2.8); -59/-56/-54 (16.332-16.336); step
+  -42 at 16.338 (trn 7.1); main attack -34→-23→-15 at 16.346-16.350. uh.start convention (~6-8 ms before the main attack) →
+  ~16.341: gold +4, system -9. OK.
+- weren't|happy g 16.498/16.500 s 16.546 (+47/+46): N of weren't (-14, lo -0.1) → creak -20..-30 (16.474-16.488; CTC ') → -37/-40/
+  -42 (16.492-16.498) → closure minimum -47/-48 at 16.500-16.502; T release build-up trn 3.5→5.1→6.4→8.6→11.7 at 16.504-16.512
+  (cent 5.7→6.2, lo -1.0→-3.5); MAIN BURST trn 18.5/19.6/12.5 at 16.514-16.518 (-39→-28→-25, cent 7.0-7.4, lo -6.6..-8.6);
+  voiceless aspiration 16.520-16.530 (-20, cent 7.3, zcr .14-.22, hi -17..-19, lo -7.2..-8.1); loudness minimum -25/-26 at
+  16.532-16.540 (lo -5.6→-4.3); breathy voiced /h/ 16.542-16.562 (per .20-.35, lo -3.7→-1.4, cent 6.7→6.2, zcr .08-.12);
+  CTC T 16.500-16.518, SEP 16.520-16.560 (peak 1.00 16.552), H 16.562. it|he rule (H: released final stop keeps burst + strong
+  aspiration; cut at the loudness minimum before the /h/) → ~16.535. Accepted gold -35 (at the closure: gives the burst and
+  aspiration to "happy", R8 violation); system +11 (SEP peak). Old-gold error.
+- happy|about (both H) g 16.804/16.805 s 16.832 (+28): IY (-7..-9, hi -34..-38, cent 5.7-5.8; CTC Y to 16.798) → schwa: hi -37.6
+  (16.800) → -39.0 → -39.8 (16.804) → [pulse dip -13 at 16.806] → -37..-43 → [dip -13 at 16.820] → -45.7 (16.832); mfc minimum
+  1.3 at 16.796-16.802, rising to 2.3 by 16.820; SEP crosses .5 at 16.804 (peak 1.00 at 16.832); B voice bar from 16.848-16.850
+  (cent 5.1→4.9, -16→-25). HUMAN 16.804 = the first glottal-pulse dip after the IY / mfc-minimum = start of the IY→schwa
+  transition (identical to happy|about #1, 15.071). System +28 at the SEP PEAK. RULE confirmed (2 H): V-V → start of the
+  V1→V2 transition (first pulse dip after the mfc minimum), not the separator peak.
+- about.end g 17.151 s 17.140 (-11) / START things g 17.257 s 17.214 (-43): glottal-T creak -21 (17.126-17.134, per .11-.38) → knee
+  -23→-27→-33 (17.136-17.140) → plateau -35 (17.142-17.150) → -37 → -41 (17.154) → -45 (17.158) → -55 (17.164) → floor.
+  R6 → 17.153 (gold -2); system -13 (knee; knee convention applies only before a voiceless closure, here a 100 ms pause).
+  things: floor -65 to 17.238; weak voiced onset 17.240-17.252 (-63→-48, lo -0.1→-1.5, cent 4.5→5.5, per .10-.35, trn ≤ 3.8, dBfl
+  4-18); rise -43→-40→-33 (17.254-17.260, trn 5.1-10.6); -21..-19 from 17.264. NO frication (TH lenited to a voiced dental
+  approximant: cent 5.5-5.9, zcr .03-.06, hi -23..-28). CTC T 17.224-17.240 fires on the floor BEFORE any energy. uh.start
+  convention (6-8 ms before the main attack 17.260) → ~17.254: gold +3 OK. System -43 (start in floor noise at an early CTC
+  letter after a pause, 026-1 class). If the weak onset counts (R1) → 17.242 (gold +15, system -28).
+- things|that g 17.460/17.462 s 17.454 (-6/-8): NG (-22, lo -0.1) to 17.436; weak Z 17.438-17.450 (-30..-34, cent 5.3-6.2, zcr .08-
+  .15, hi -12..-19, per .06-.26) with a CENTROID MINIMUM 5.7-5.8 at 17.446-17.450; a new, stronger dental frication rising from
+  17.452 (cent 6.1→8.0 by 17.470, zcr .11→.40, hi -12→-3.1) to 17.486; vowel from 17.488 (cent 6.7→6.0). CTC SEP 17.44-17.47
+  (peak .98 17.454), T 17.480. Here Z (weak) and DH (strong) are two frication peaks; landmark = centroid minimum between them
+  (17.449): gold +11, system +5. OK. (Refines the merged-sibilant rule: Z strong + DH weak tail → cent-decline onset
+  [14.098, 15.651]; Z weak + DH strong → centroid minimum between the peaks.)
+- that|they g 17.605/17.607 s 17.588/17.618 (-17/+11): glottal T -17..-21 (17.558-17.570) → knee -32 (17.576) → creaky plateau
+  -31..-35 (17.576-17.600, per .16-.43, cent 4.4-5.0) → -40 (17.606) → -44 (17.612) → DH burst trn 5.4 (17.612), 13.2 (17.618)
+  → frication 17.624-17.640 (zcr .07-.21) → vowel. Knee (end of the creak plateau) ≈ 17.603 → gold +2; they.start at the burst
+  onset ≈ 17.612: gold -5 (inside the closure, R8-OK), system +6. that.end system -15 (mid plateau). Minor.
+- they|think g 17.796/17.798 s 17.744/17.776 (-52/-22): EY (-12) → creak -21..-23 (17.724-17.738) → knee -25/-29/-32 (17.740-17.744)
+  → creak plateau -33..-36 (17.746-17.766, per .08-.45) → HF blip 17.764-17.774 (trn 1.7-6.3, hi -32→-21.4, cent 4.9→5.8, lo
+  -0.1→-0.8: dental contact) → low stretch 17.776-17.786 (cent 4.8, hi -22..-26, per .09-.38: dental closure) → TH RELEASE
+  FRICATION 17.788-17.804 (trn 3.1-5.4, cent 5.3→6.7, hi -19.6→-13.2, zcr .06→.16; CTC T 17.780-17.798, H 17.800) → vowel
+  17.814 (trn 3.2-4.0, -31→-24). TH realised as [t̪θ]. Knee convention: they.end ≈ 17.742 (system +2), think.start in the
+  closure / at the release 17.776-17.788 (system 17.776 OK by R8). Accepted gold continuous at 17.796 = 8 ms INTO the TH
+  release frication (R1/R8 late; they.end +54 incl. the dental closure). Old-gold late-onset class.
+- think|they g 17.936/17.938 s 17.958/17.959 (+22): NG (-12..-21, lo 0) with creak dips to 17.936; drop -29/-30 (17.938-17.940) →
+  -38/-39 (17.942-17.944); UNRELEASED K CLOSURE 17.944-17.956 (-36..-39, per .05-.23, cent 5.3-5.6, hi -20..-27); DH frication
+  onset 17.956-17.962 (trn 3.2-5.3, hi -20.7→-12.7→-9.4, cent 5.6→6.9, zcr .03→.16) → frication to 17.986 (cent 7.2-7.4, zcr
+  .21-.26); CTC SEP 17.940-17.960, T 17.960. The 18 ms closure is the K of "think" (good|a-: a closure is not a pause and
+  belongs to the stop's word) → boundary at the DH frication onset 17.957: SYSTEM exact; accepted gold -20 (at the NG→closure
+  knee, gives the K closure to "they").
+- they|need g 18.076/18.078 s 18.070 (-6/-8): EY (-7, cent 5.6, lo -0.3..-0.4, hi -40..-46) → N: cent 5.5→5.4→5.3 with a loudness
+  dip -13/-14 at 18.056-18.058 (nasal onset 1); hi -45 → -48.7 → -51.8 → -53.8 at 18.072-18.080 with trn 4.8/6.0 at 18.074-
+  18.076 (nasal onset 2 = hi drop to the nasal level); CTC SEP 18.062-18.094. Two-stage nasal onset 18.056 / 18.076: gold at the
+  hi-drop stage (why|not H landmark: hi → -53), system between. Minor (±10).
+- need|to g 18.245/18.247 s 18.256 (+11/+9): IY → N 18.184-18.210 (lo 0, cent 5.0-5.3) → voiced D/T closure 18.212-18.226 (-19..-26, per
+  .21-.39, pulses trn 1.6-5.5) → deeper closure 18.228-18.232 (-32..-36) → RELEASE trn 5.8/10.0/7.4/4.4 at 18.232-18.238 (cent 5.0→5.8,
+  lo -0.4→-0.9) → weak voiced 18.238-18.252 (-23..-28, per .12-.36, cent 5.5-5.8) → vowel of "to" -20→-13 at 18.254-18.256. Homorganic
+  D+T share one closure and ONE release (R8: second word) → boundary inside the shared closure (~18.222-18.230; had|to / said|the
+  mid-closure). Accepted gold +15..+20 and system +26..+32 both give the release to "need". Old-gold R8 error (small).
+- to|work (both H) g 18.340 s 18.326 (-14): UW/schwa → W with NO spectral change (hi -54..-62, cent 5.4-5.6, lo -0.2..-0.9 throughout);
+  creaky pulse dips every ~15 ms: -16 (18.308), -19 (18.322-18.324), -19/-17 (18.338-18.340), -17 (18.354), -16 (18.368); hi between the
+  dips deepens slowly -59.2 → -60.5 → -62.0 → -62.5 (W constriction building). CTC O .91 18.300-18.318, SEP 18.320-18.338 (peak .97
+  18.332), W 18.360. HUMAN = the pulse dip at 18.338-18.340, the dip nearest the midpoint of CTC O-end (18.318) and W-start (18.360);
+  system at the previous dip (-14, SEP rise). Identical-spectrum join: ±1 glottal period is the inherent tolerance.
+- work.end g 18.527 s 18.522 (-5) / START on g 18.552 s 18.554 (+2): R to 18.470; K closure: decay -16 → -34 (18.490) → -38 plateau
+  (18.492-18.500, weak voicing leak) → -42..-55 (18.502-18.516); weak K release noise 18.518-18.528 (trn 2.7-4.9, cent 5.5→6.7, hi -22→
+  -19.5, lo -0.7→-2.9, -51..-55, dBfl 2-3); floor 18.530-18.546. R2 (release to the floor) → 18.529: gold -2, system -7. OK.
+  on: breathy pre-attack 18.542-18.550 (trn 1.9-6.2, cent 4.6→7.0, hi -19.8→-12.1, lo -0.1→-3.4, at the floor level); attack trn 8.0/
+  13.6/14.7 at 18.552-18.556 (-49→-36→-25). uh.start convention → ~18.547: gold +5, system +7; R1 (weak aperiodic onset) → 18.543.
+- on|things g 18.751/18.753 s 18.734/18.735 (-17): creaky N -19 (18.726-18.734) → knee -27/-28 (18.736-18.738) → creak plateau -27..-31
+  (18.736-18.754, per .03-.22, cent 4.5-5.1) → -34 (18.756) → -40 (18.758) → dental closure -41..-46 (18.760-18.772) → TH BURST trn 6.7/
+  13.6/18.9/17.1 at 18.774-18.780 (-46→-44→-31, cent 5.1→6.8, lo -0.3→-4.1); CTC T 18.762-18.778. R5/R6 (falling creak to "on",
+  -40) → on.end 18.757; things.start in the closure / at the burst 18.758-18.774. Gold continuous 18.751/18.753 (-6; OK). System
+  18.734/18.735 = the knee: things.start INSIDE "on"'s creak plateau, 40 ms before the burst (R5 violation).
+- things|they g 18.985/18.987 s 18.954 (-31/-32): NG → sibilant onset 18.930-18.940 (cent 5.5→8.0, zcr .04→.36), plateau 18.944-18.968
+  (cent 8.5-8.7, zcr .55-.77, hi -0.1..-1.2, -30..-40); CENTROID DECLINE 8.7 (18.966) → 8.6 → 8.5 (18.972) → 8.3 (18.976) → 8.0 → 7.6
+  (18.982) → 6.7 → 5.9 (18.988); vowel voicing -25→-14 at 18.990-18.994. CTC SEP 18.940-18.960 (peak .97 18.952), T 18.960-18.996.
+  Merged-sibilant rule (cent-decline onset) → ~18.970: gold +15 (at the END of the decline, 4 ms before the vowel), system -16 (SEP
+  peak). Accepted golds place the S|DH cut 4-13 ms before the vowel (14.098: -12, 15.651: -13, 18.985: -4): ±8 scatter.
+- they|don't g 19.130/19.132 s 19.104/19.164 (-26/+32): creaky EY → knee -22→-27→-35 (19.098-19.104) → creak tail -35..-46 (19.104-19.128,
+  per .15-.32, cent 4.4-4.9) → voicing ends -46→-56 at 19.128-19.130 → D closure -55..-60 (19.130-19.150) → burst build-up trn 1.9/4.5/
+  6.4 (19.150-19.154) → strong burst trn 6.6-13.0 (19.156-19.170, -50→-26) → release frication 19.170-19.180 (zcr .26-.33) → vowel
+  19.186. Knee convention (tail into a voiceless closure) → they.end 19.103 = system; accepted gold at the voicing end (+27).
+  don't.start: burst onset 19.151: gold 19.132 (closure start, R8-OK), system 19.164 (+13 after the burst onset: CTC D letter,
+  R8 violation).
+- don't.end (H) g 19.524 s 19.446 (-78) / START couple g 20.205 s 20.206: N creak -22 to 19.444 → T closure -45/-47 (19.452-19.456) →
+  T BURST trn 3.6/12.1/15.9 at 19.460-19.468 → release frication 19.468-19.500 (-30..-45, cent 6.9-7.6, zcr .13-.28, hi -5..-10) →
+  decay -50 (19.504) → -55 → -56..-58 (19.512-19.524, dBfl 9-11) → BREATH onset 19.528-19.536 (trn 2.8-8.5, cent 4.9→8.1, zcr → .41)
+  continuing to ~19.6+. HUMAN 19.524 = the floor dip between the T release and the breath (R2 release kept + R3 breath excluded).
+  System -78: dropped the burst and 40 ms of release (R2 class, SEP-edge at the N end).
+  couple: K burst onset trn 1.0-4.2 at 20.192-20.198 (cent 5.3→6.4), main burst trn 10.8/16.3/15.0 at 20.200-20.204 (-64→-47). Gold
+  +5/+8 and system +6/+9 after the main/first transient. Minor.
+- couple|pages (both H) g 20.448/20.450 s 20.436 (-12/-14): dark L -12..-19 (20.398-20.408) → -24/-30 → plateau -28 (20.414-20.422) → -33..
+  -36 → -42 plateau (20.430-20.442, P closure with weak voicing, cent 4.5-5.2); WEAK PRE-BURST TRANSIENTS at constant loudness trn 2.7/7.7/
+  10.1/8.5/10.9 at 20.436-20.444 (-42/-43, cent 4.8→6.7, hi -29→-21, lo -0.3→-2.5); MAIN BURST trn 16.8/15.5 at 20.446-20.448 with the
+  loudness jump -37→-24→-19; aspiration 20.448-20.460. HUMAN 20.448 = the main burst / loudness jump, 10 ms after the first
+  transients; system at the first transient. Contrast do.start (H, 026-4 5.666): human at the FIRST weak transient (at constant
+  loudness -45, jump 12 ms later). Burst-onset convention scatters ±10 ms between these two human edits.
+- END pages (H) g 20.953 s 20.940 (-13): final Z decays -37 (20.930) → -43 (20.940) → -46 → -49/-50 (20.944-20.950) → -51 (20.952-20.954)
+  → -53 → -57 (20.958); cent 8.1 → 7.7 → 7.3 → 6.8 (20.946) → 6.2 → 5.9 → 5.7 (20.952); lo -13.9 → -7.8 → -3.5 → -1.5 → -0.7 → -0.3
+  (20.952); zcr .41 → .25 → .19 → .14 → .11 → .09. HUMAN = where the fricative spectrum is gone (lo ≈ -0.3, cent < 6, zcr ≈ .1),
+  at -51 dB, 13 ms after the -43/-45 point. System at -43 (R7 literal). R7 refined: end at the fricative-spectrum offset, not a
+  fixed -45 dB.
+
+### 026-4 summary (71 tokens, 70 joins + edges)
+Human conventions confirmed / new in 026-4:
+ - nasal release for N→DH (and|then 0.133, in|that accepted), N→X throughout; UW→W/IY→W glides at constriction onset (they|we're H
+   = hi plateau start), thursday|we H at the periodicity minimum.
+ - released final stop + vowel-initial word: the release stays with the first word (and|um H: D release end, +26 from the first
+   transient; think|and by rule). Released final stop + /h/: it|he rule (weren't|happy by rule).
+ - filler-final nasal → stop: cut at the filler's last glottal dip (um|before H, 20 ms before the B burst); filler creak end (uh|we
+   H); onset of creak = boundary (on|a H); uh.start ~6 ms before the main attack (H).
+ - L → vowel-initial word (fill|out ×2 H): end of the L→vowel transition at the vowel's glottal re-onset (lo reaches the vowel's
+   level, -5.4 both times), not the deepest minimum inside the creaky L.
+ - V-V (happy|about ×2 H, tuesday|i accepted): start of the V1→V2 transition = first pulse dip after the mfcc minimum ≈ SEP rise.
+ - R → voiced /h/ (we're|happy H): 15 ms after the R offset, before the breathy HF ramp. Voiced /h/ with a periodicity dip:
+   at the dip (we|have accepted).
+ - UW → W with no spectral change (to|work H): the glottal-pulse dip nearest the CTC letters' midpoint (±1 period).
+ - final T release before a breath (don't.end H): keep the release to the floor dip, exclude the breath.
+ - final Z (pages.end H): end at the fricative-spectrum offset (lo → 0, cent < 6, zcr ≈ .1), -51 dB, not at -45.
+ - stop onset after a pause: first weak transient (do.start H) vs main burst with the loudness jump (couple|pages H): ±10 ms.
+ - i|think (H): a near-floor TH (+1..+14 dB over floor) was given to "i" — R1 needs a strength condition (listening candidate).
+Accepted (old) gold problems in 026-4 (rule-based, candidates):
+ - that.end 8.258: a T burst + aspiration after a 34 ms silent closure left out (good|a- rule → 8.330, +72).
+ - em|fill: false 51 ms pause INSIDE the F (fill.start +90 vs the F onset 10.862) — R1.
+ - group.start +28 (second velar burst), they.start 14.619 +13 after the DH burst, things.start 13.845 +12, they|think +8 into the
+   TH release, have|them +6 after the DH release, need|to +15 after the homorganic release — onsets late (R1/R8).
+ - about|things 15.357/15.359 continuous at mid-hum (things.start -38 vs the TH onset), think|they -20 (K closure given away),
+   weren't|happy -35 (burst + aspiration given to "happy").
+ - so.start +10 (S onset), then.end -25, a.end/knee cases: several accepted ends sit at the knee or the voicing end inconsistently.
+ - Listening: exit|interviews (pulse = IH of interviews or T release), them|fill (weak pre-frication before a loud F: R1 → -67),
+   i|think.
+System failure classes in 026-4:
+ - ONE-SYLLABLE SHIFT (really|did +113, did|that +134, that|on +82, on|a +54): CTC letters "D T O _ D I N N E R _ O N _ A" for "really did
+   that on a"; the letter matcher put "did" on "DINNE". Needs a nucleus/syllable-count constraint between word anchors.
+ - swallowing a non-lexical event across a floor gap: out.end +230 (210 ms hiss, CTC blank 1.0) — R3 (as 026-0 not.end +473).
+ - dropped releases: don't.end -78 (T burst + 40 ms release), and|um -48 (D release given to "um").
+ - SEP trailing-edge / peak placement: we're|happy +47 (/h/ given to we're), happy|about +40/+28 (V-V), fill|out #2 +37, then|on +50,
+   wednesday|and +32, so|that +22.
+ - SEP leading-edge ("wrong edge of the owner's consonant"): things|that -30/-39, and|then -43, in|that -14, uh|we -43.
+ - R1 violations (CTC letter start mid-frication): em|fill +32/+82, and|thursday +46, so.start +20.
+ - start in floor at an early CTC letter: things.start 17.214 (-43), they.start 14.596 (OK here: prevoicing).
+ - R5: next word started inside the previous word's creak plateau: on|things (-40 vs burst); stop start after the burst: don't.start
+   +13 (CTC D letter).
+ - knee vs R6: the system usually cuts creaky tails at the knee (out.end 11.408, that.end, about.end, they.end); correct only when the
+   tail runs into a voiceless closure (you're|preseason convention), otherwise R5/R6 (-40) applies.
