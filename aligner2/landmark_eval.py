@@ -151,6 +151,19 @@ def main():
                 top = S.Ls[S.clip(pa_):S.clip(pb_) + 1].max()
                 cd["mid20_vguard"] = wm if top - S.Ls[wm] >= 10.0 else cd["mid_to_b_loudmin"]
             cd.update(mfcc_marks(z, S, lx["last"][k], lx["first"][k + 1], a_, b_))
+            if pb_ - pa_ >= MS(10):              # nasal offset: after >= 20 ms of murmur (lo >= -0.3), the first frame
+                lo_s = R._box(S.lo, MS(6)); ce = R._box(S.cent, MS(6))   # that leaves it (lo < -0.5 or centroid +0.3)
+                i0 = next((i for i in range(pa_, pb_) if (lo_s[i:i + MS(20)] >= -0.3).all()), None)
+                if i0 is not None:
+                    m = np.median(ce[i0:i0 + MS(20)])
+                    i1 = next((i for i in range(i0 + MS(20), pb_ + MS(20)) if lo_s[i] < -0.5 or ce[i] > m + 0.3), None)
+                    if i1 is not None:
+                        cd["nas_off"] = i1
+            if pb_ - pa_ >= MS(10):              # spectral step inside a frication stretch (if|you, guy's|horrible H)
+                cs = R._box(S.cent, MS(10)); zs = R._box(S.zcr, MS(10))
+                cd["cent_min"] = pa_ + int(np.argmin(cs[pa_:pb_]))
+                cd["zcr_min"] = pa_ + int(np.argmin(zs[pa_:pb_]))
+                cd["cent_step"] = pa_ + int(np.argmax(np.abs(np.gradient(cs[pa_:pb_]))))
             if b_ > a_ + 2:
                 cd["hi_min_region"] = a_ + int(np.argmin(S.hi[a_:b_]))
                 lm = a_ + int(np.argmin(S.Ls[a_:b_]))

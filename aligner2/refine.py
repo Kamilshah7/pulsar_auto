@@ -62,6 +62,13 @@ Pause edges (the coarse stage found a pause):
   E1  first word: rises out of the last real gap before its first letter; no gap = the clip cuts into running
       speech -> the clip start.
   E2  last word: P1 against the clip end; a clip that cuts off running speech -> the clip end.
+Cut-off words (post-pass):
+  PW  a fricative fragment ('s-', 'th-', 'f-', 'sh-', 'h-') has the sound its letters begin a word with (R9). HuBERT emits
+      no letter for a lone fragment, so the coarse stage parks it on a neighbour's sound (on|s-: inside "on"'s nasal,
+      -455 ms). When the coarse span holds (almost) no frication, the fragment moves to the strongest audible frication
+      island between the neighbours' letters (not the next word's own onset frication); the previous word keeps its
+      sound to the ear threshold, the next word starts after it (s- -455/-360 -> +13/+28, th- +196/+160 -> +2/-5 H;
+      dev +0.69 s, 049 unchanged).
 Real gap: >= 8 dB under the word, within 30 dB of the local floor, >= 16 ms wide (6 dB band).
 """
 import numpy as np
@@ -75,7 +82,7 @@ CLASS = {**{p: "V" for p in VOWELS}, **{p: "stop" for p in ("P", "B", "T", "D", 
 BG_DB = 6.0                                   # a released stop's tail: until within 6 dB of the residual level
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
 RULES = {"F2", "J0", "J1", "J1n", "J1m", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "P3", "E1", "E2",
-         "P1b100", "P1bt2"}   # enabled
+         "P1b100", "P1bt2", "PW", "PWa"}   # enabled
 # (aligner2/local_bench.py --rules J1,J4,... for ablations)
 
 
@@ -327,7 +334,9 @@ class Clip:
     def __init__(self, z, texts, arpa, coarse, lex=None, device=None):
         self.S = Sig(z)
         self.lex = lex if lex is not None else lexical_peaks(z, texts, device)
-        self.texts, self.arpa = texts, arpa
+        self.texts = texts
+        self.arpa = [fragment_arpa(t) if ("PWa" in RULES and t.strip().endswith("-") and fragment_arpa(t)) else a
+                     for t, a in zip(texts, arpa)]
         self.n = len(texts)
         self.e = [c["end"] for c in coarse]
         self.s = [c["start"] for c in coarse]
@@ -694,6 +703,8 @@ class Clip:
                     r = self.onset(k + 1, self.e[k])
                 if r is not None:
                     s[k + 1] = r * HOP
+        if "PW" in RULES:
+            self.fragments(e, s)
         if "E1" in RULES:
             r = self.clip_start()
             if r is not None:
@@ -709,6 +720,92 @@ class Clip:
                 en = st + 0.010
             out.append({"start": float(st), "end": float(en)})
         return out
+
+
+    def fragments(self, e, s):
+        """PW (candidate): a cut-off word ('s-', 'th-') has the sound its letters begin a word with (R9). HuBERT emits
+        no letter for a lone fragment, so the coarse stage parks it on a neighbour's sound. Fricative fragments sit on
+        the strongest audible frication island between the neighbours' letters (the previous word's last letter, the
+        next non-filler word's first letter); the previous word keeps its sound until it falls under the ear threshold
+        (-40 dB re p99 / floor + 10 dB) but never past the fragment; the next word starts after it."""
+        S = self.S
+        p99 = float(np.percentile(S.L, 99))
+        fric = (S.zcr >= 0.15) & (S.hi >= -20.0) & (S.Ls >= S.floor + 10.0)
+        for j in range(self.n):
+            w = self.texts[j].strip().lower()
+            if not w.endswith("-") or fragment_class(w) != "fric":
+                continue
+            a = self.lex["last"][j - 1] if j > 0 else 0
+            q = j + 1
+            while q < self.n and (self.texts[q].strip().endswith("-") or _is_filler(self.texts[q])):
+                q += 1
+            b = self.lex["first"][q] if q < self.n else S.T - 1
+            if b - a < MS(30):
+                continue
+            c0, c1 = self.idx(s[j]), self.idx(e[j])                # trigger: the coarse span holds (almost) no
+            if c1 > c0 and fric[c0:c1].mean() >= 0.3:               # frication -> it was parked on another sound
+                continue
+            best = None
+            for x, y in _runs(fric[a:b], MS(10), MS(20)):
+                x, y = a + x, a + y
+                if y >= b - MS(10):                                 # contiguous with the next word's letters:
+                    continue                                        # its own onset frication, not the fragment
+                energy = float(np.sum(S.Ls[x:y] - S.floor[x:y]))
+                if best is None or energy > best[0]:
+                    best = (energy, x, y)
+            if best is None:
+                continue
+            _, x, y = best
+            s[j], e[j] = x * HOP, y * HOP
+            if j > 0:                                   # the previous word: its own sound, up to the fragment
+                i = min(self.idx(e[j - 1]), x)
+                while i < x and S.Ls[i] >= max(p99 - 40.0, S.floor[i] + 10.0):
+                    i += 1
+                e[j - 1] = max(s[j - 1] + 0.010, min(i, x) * HOP - (0.001 if i >= x else 0.0))
+            if j + 1 < self.n:                                      # the next word starts after the fragment,
+                s[j + 1] = min(max(s[j + 1], y * HOP + 0.001), b * HOP)   # never past its own first letter
+            self.note(j, f"PW fricative island {x * HOP:.3f}-{y * HOP:.3f}")
+
+
+FRAG_CLASS = [("sh", "fric"), ("th", "fric"), ("ch", "fric"), ("s", "fric"), ("f", "fric"), ("v", "fric"),
+              ("z", "fric"), ("h", "fric"), ("b", "stop"), ("p", "stop"), ("t", "stop"), ("d", "stop"), ("k", "stop"),
+              ("g", "stop"), ("c", "stop"), ("m", "nas"), ("n", "nas"), ("l", "liq"), ("r", "liq"), ("w", "gl"),
+              ("y", "gl"), ("a", "V"), ("e", "V"), ("i", "V"), ("o", "V"), ("u", "V")]
+
+
+FRAG_ARPA = [("sh", "SH"), ("th", "TH"), ("ch", "CH"), ("wh", "W"), ("ph", "F"), ("s", "S"), ("f", "F"), ("v", "V"),
+             ("z", "Z"), ("h", "HH"), ("b", "B"), ("p", "P"), ("t", "T"), ("d", "D"), ("k", "K"), ("g", "G"), ("c", "K"),
+             ("j", "JH"), ("m", "M"), ("n", "N"), ("l", "L"), ("r", "R"), ("w", "W"), ("y", "Y"), ("a", "AH"),
+             ("e", "EH"), ("i", "IH"), ("o", "AA"), ("u", "AH")]
+
+
+def fragment_arpa(word):
+    """the onset phone of a cut-off made only of its first letter group ('s-', 'th-', 'b-', 'a-'): g2p reads these as
+    letter NAMES ('th-' -> T IY EY CH) or not at all. Longer fragments ('yo-', 'it-') keep their g2p phones."""
+    w = "".join(ch for ch in word.lower() if ch.isalpha())
+    ph = next((p for pre, p in FRAG_ARPA if w == pre), None)
+    return ph
+
+
+def fragment_class(word):
+    """the sound class a cut-off word begins with, from its letters (phonics of a word onset, R9)"""
+    w = "".join(ch for ch in word.lower() if ch.isalpha())
+    return next((c for pre, c in FRAG_CLASS if w.startswith(pre)), None)
+
+
+def _is_filler(text):
+    return text.strip().lower() in ("uh", "um", "uhm", "umm", "ah", "er", "erm", "hmm", "hm", "mm")
+
+
+def _runs(mask, merge, min_len):
+    idx = np.flatnonzero(np.diff(np.r_[0, mask.astype(int), 0]))
+    out = []
+    for x, y in zip(idx[::2], idx[1::2]):
+        if out and x - out[-1][1] <= merge:
+            out[-1][1] = y
+        else:
+            out.append([x, y])
+    return [(x, y) for x, y in out if y - x >= min_len]
 
 
 def refine(z, texts, arpa, coarse, trace=None, lex=None, device=None):

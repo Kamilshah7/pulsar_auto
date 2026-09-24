@@ -5630,3 +5630,24 @@ Candidates (aligner2/filler_eval.py, coarse_ab.py; dev MAE vs the current rules)
 Conclusion: no single fixed definition covers filler realisations; each fixes the fillers it models and breaks the others.
 A working filler model probably needs to COMBINE evidence per filler (A emitted? island present? glottal attack?) with a
 decision order checked on H -- to be designed, not a blanket substitution.
+
+## CUT-OFF WORDS AND OTHER CLASSES (local session 2026-09-24)
+Remaining dev error by neighbourhood: fillers 10.3% (H 17.1%), partial words 4.7% (H 10.5%, MAE 42 ms), unintelligible
+1.7%, spelled letters 2.4%, everything else 80.9% (under 20 ms: 28%, 20-40: 24%, 40-80: 18.5%, gross: 10.4%).
+PARTIAL WORDS: HuBERT emits no letter for a lone fragment (on s- in: blank 1.00 over a clean isolated /s/ 1.88-2.00), so
+the coarse stage parks it on a neighbour (s- inside "on"'s nasal murmur -455/-360; that th- uh: th- on the uh +196/+160;
+back i th-: on i's tail -57; they b-: on they's tail -81). And g2p reads "th-" as letter names T IY EY CH, single-letter
+cut-offs get '*'. -> PW: fricative fragments move to the strongest audible frication island between the neighbours'
+letters when the coarse span holds < 30% frication (not an island ending at the next word's letters: its own onset);
+the previous word keeps its sound to -40 dB re p99 / floor + 10, the next word starts after the fragment but never past
+its own first letter. Dev +0.69 s (s- -455/-360 -> +13/+28, th- +196/+160 -> +2/-5 H), 049 unchanged (the unguarded
+version lost 0.11 s on 049: it moved fragments the coarse stage had right and pushed the next word's end). ADOPTED.
+-> PWa: fragments made of one letter group get its phone (s- S, th- TH, b- B, a- AH): dev +0.07 s (to|f- +51 -> +1,
+b-|it -51 -> -30, a-|a +45 -> +19; i|th- worse by J4's creak artifact), 049 neutral. ADOPTED.
+NASAL > DH (9 H joins, 33 ms, no rule firing): the H cut is the END OF THE NASAL MURMUR (concern|though 4.103: lo leaves
+0, hi -49 -> -39, cent 5.4 -> 6.1, trn 3.6). A nasal-offset landmark: dev H 33.9 -> 20.5 but overall neutral, 049 -0.03 s
+(H 11.4 -> 18.0, n=3) -> REJECTED by the held-out. saving|this: the gap is fricated DH (H includes it) but not frication
+"throughout", so F2-for-DH is neutral -> not adopted.
+FRIC > FRIC: 39 of 61 are fric>DH (J13); spectral-step candidates (centroid min / zcr min / steepest centroid change) are
+worse (26-29 ms vs v16 19.6); the quietest point is best overall but worse on H -> unchanged.
+Scores (local == engine v19, all 5648 boundaries identical): dev 17.0 (H 21.4), 049 19.8 (H 23.0), all sets 19.0 (H 22.4).

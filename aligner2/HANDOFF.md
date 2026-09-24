@@ -16,11 +16,11 @@ Branch: `claude/pulsar-auto-conversation-oi3e40` (pushed; not merged; no PR). Ev
   (So far it was used once to reject a variant, J13c, and its worst cases were spot-read after the build. That exposed
   two bugs, fixed in E1 and J14. So it is no longer perfectly clean.)
 
-## Current scores (MAE ms; `python -m aligner2.local_bench --test`; engine run `aligner2_v18` identical)
+## Current scores (MAE ms; `python -m aligner2.local_bench --test`; engine run `aligner2_v19` identical)
 | | old production (forced_aligner) | v16 (coarse) | + rule stage (production) |
 |---|---|---|---|
-| dev 009+026, all | (circular) | 21.8 | **17.5** |
-| dev, H | cont-H 32.2 | 28.9 | **22.5** |
+| dev 009+026, all | (circular) | 21.8 | **17.0** |
+| dev, H | cont-H 32.2 | 28.9 | **21.4** |
 | held-out 049, all | (circular) | 24.9 | **19.8** |
 | held-out 049, H | cont-H 29.1 | 28.7 | **23.0** |
 | ear judgments, 182 manual placements | 32.3 | 27.4 | **24.9** |
@@ -86,7 +86,9 @@ throughout before a fricative-initial word → join).
 Pause edges: P1 (a separate event after the word: breath / hiss / fricative runs on / stop release -- the release
 searched up to 100 ms after the coarse end, weak (>= 2 dB) transients count, must decay: P1b100 + P1bt2), P2, **P3**
 (steepest rise within 30 ms). Clip edges: E1 (fixed: running speech only if the level never nears the floor; gap band
-measured from the floor), E2.
+measured from the floor), E2. Cut-off words: **PW** (a fricative fragment 's-' / 'th-' parked on a neighbour's sound
+moves to the frication island between its neighbours' letters), **PWa** (fragments get the phone of their letter group,
+not letter names: 'th-' = TH, not T IY EY CH).
 
 ## Findings (full write-up: `bench/cache/aligner2/fullread/NOTES.md`, last two sections)
 - NOTES.md also has the earlier boundary-by-boundary full read: all of 009 and 026-0..026-6, plus 026-7 through join 42.
@@ -111,7 +113,8 @@ J1 dip path on its own. Local session: zcr-led J4 onset (no better as a cascade;
 nasals / liquids / fricatives (H joins moved the wrong way; deepest-dip variant -0.06 s). Details: NOTES.md "RULE-STAGE REGRESSIONS".
 FILLER DETECTOR attempts (all worse than the current rules on dev; NOTES.md "FILLER DETECTOR"): respelling uh->a / um->am
 (-0.73 s), soft letter-or-blank filler states in the CTC (-2.37 s), charsiu central-vowel islands, DSP steady-voiced islands,
-glottal-attack onsets (80-150 ms MAE vs 29-34 for the rules).
+glottal-attack onsets (80-150 ms MAE vs 29-34 for the rules). Also rejected: F2 for DH (neutral), J4n = nasal offset
+for nasal>DH (dev H 33.9 -> 20.5 but 049 -0.03 s), fric>fric spectral-step landmarks (26-29 ms vs 19.6).
 
 ## Next steps
 1. ~~Modal~~ **DONE (local session, 2026-09-24):** modal 1.5.5, workspace `alinarohannes777` (owns `aligner2-cache`).
