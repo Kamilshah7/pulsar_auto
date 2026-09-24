@@ -5666,3 +5666,37 @@ REJECTED IN THE NEXT ROUND (dev / 049 via rule_ab; tools kept in pause_eval.py /
    letters' (averaging does not help); better only where rules already win (nas>V J8 11.8, stop>V J1 16.0).
  - Fricative pause starts (rules 22.1 vs v16 19.4 on the audited gold): P3f (frication onset walked back from the
    letter) dev -0.09 s / 049 -0.11 s; P3nf (no P3 for fricatives) dev +0.02 s / 049 -0.06 s.
+
+## ONE FAMILY AT A TIME (local session 2026-09-25; the user: stay on one error until it is fixed with no systemwide
+## regression). Acceptance for every rule: dev all / H, 049 (reject-only), the ear judgments; source of truth = signal,
+## then H, then accepted gold.
+STOP-FINAL PAUSE ENDS (H 42.3 -> 21.8 ms, all 24.7 -> 21.5) -- sub-patterns read at 2 ms:
+ (a) release after a VOICED closure (like H -233: voice bar per 0.7, lo -0.3, silent above 4 kHz; K burst; 170 ms of
+     affricated release ending abruptly at -37 -> -59 dB): the closure test on broadband level missed it (burst only
+     3 dB over the voice bar). P1bv: a periodic voice bar counts when the level above 4 kHz jumps >= 12 dB; the
+     release lasts while >= p99 - 40 dB or fricated. First version (resid + 6 dB, 80 ms): cried / brand overshot into
+     inaudible decay (049 -0.03 s); aperiodic low-frequency noise before sight's "burst" is not a voice bar (per 0.1-0.3).
+     Adopted: dev +0.22 s, 049 / ear unchanged.
+ (b) FRICATED release with no closure (wasn't H -126: the nasal devoices straight into 100 ms of /s/, hi -1, zcr .6).
+     P1f: frication within 30 ms of the coarse end and of the last voiced frame, starting where the voicing stops.
+     Without the voicing-offset test: 049 -0.04 s (an H end already +60 ms late went further). Adopted: dev +0.11 s.
+ (c) GLOTTALISED T (but H -80 / -53: creaky voicing fading -30 -> -45 dB after the coarse end, no closure). P1g: a
+     final T still voiced 30 ms after the coarse end lasts while the creak is >= p99 - 40 dB, falling. Every H case
+     improves (but, but, chest, it-, first); the losses are accepted golds cutting the creak (that x2, movement).
+     Adopted: dev +0.13 s, 049 +0.06 s.
+ (d) coarse misallocations (it -84: the voiced bump is the next word's per v16) and (e) breath after a release (like
+     +180 H: H ends at the burst; the 240 ms breath has hi -10..-15, zcr .2-.35 vs a release's hi > -10): singletons.
+ End in silence (the mirror of P3a for ends): only 4 cases, 3 legitimate final-stop closures -> no rule. Retreating an
+ end to p99 - 40 dB: 18.4 -> 18.2 ms, H neutral -> no rule.
+FRICATIVE-INITIAL PAUSE STARTS (27.0 -> 22.7 ms, v16 26.3; H 56.8 -> 52.6):
+ monday|senior H / couple|steps H: an /s/ at the noise floor (dBfl 0-9, spectrally clear) -- the reviewer starts at the
+ vowel; a|the H: a -50 dB prevoicing bump before the dental release. P3i (walk to floor + 10 dB, fricatives): every
+ gold-pause start improves (+0.34 s) but gold-continuous starts (false coarse pauses) lose (-0.22 s; 049 -0.10 s).
+ P3a (walk to the EAR threshold p99 - 40 dB, all classes, never past max(first letter, +40 ms)): all pause starts
+ 13.6 -> 12.9 ms; dev +0.32 s, 049 +0.27 s, ear unchanged. Adopted.
+ Rejected again with P3a in place: P3nf (no P3 for fricatives) dev +0.04 s, 049 -0.12 s.
+ Remaining: J0 joins that swallow a gold pause before a fricative (and|support, them|fill, and|so, going|through H,
+ couple|steps H) -- the inaudible-run length does not separate them from gold-continuous closures (the|same 62 ms,
+ about|things 78 ms are gold-continuous accepted joins); be|scooped H -135 and to|say -70 are coarse misplacements.
+PRODUCTION: the app's FastAPI endpoints are async; Modal refused its blocking starmap there, so every clip fell back
+ to the old ForcedAligner (live log 2026-09-24 20:40). production.prefetch now runs the engine in a worker thread.
