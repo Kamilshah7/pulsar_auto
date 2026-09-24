@@ -5610,3 +5610,23 @@ Coarse gross misses (v16 and refined both > 80 ms): 72 dev boundaries, 15.1% of 
    after it), be|scooped (H excludes a 150 ms S-like hiss the CTC calls S -- ambiguous), uh|but (J13's letter midpoint is
    dragged by the filler's peak; the B burst sits at "but"'s own first letter).
 Scores after this round (local == engine v18): dev 17.5 (H 22.5), 049 19.8 (H 23.0), all four sets 19.1 (H 23.0).
+
+## FILLER DETECTOR (local session 2026-09-24) -- five fixed definitions, all rejected on dev
+Target: filler joins in running speech (cont starts 31.8 ms MAE, cont ends 30.7; H ~32-33) and ~10 gross H misses.
+Current rules already put most fillers within +-30 ms; the gross misses come from the letter model hearing the filler's
+vowel as a neighbour's vowel letter (your|uh|opinion: "opinion"'s O fires inside the uh, every word shifts one slot;
+v16 put "uh" on your's R tail) or from the forced U-H letters that HuBERT never emits.
+Reads: your|uh H 21.889 = glottal attack (trn 10.9) after the R's creaky tail, uh end H 21.972 = the drop, "opinion"'s own
+attack 22.032; and|and|uh H 22.898 = a re-attack (dip -33, trn 5.1) after the N releases into a schwa that H keeps in "and".
+Candidates (aligner2/filler_eval.py, coarse_ab.py; dev MAE vs the current rules):
+ 1. respell uh->"a", um->"am" (HuBERT emits A in 48% of dev "uh", nothing in 33%): -0.73 s (fixes uh uh you; the A fires at a
+    sustained filler's onset, and blank-only fillers collapse).
+ 2. soft filler letters in the CTC (letter-or-blank states): -2.37 s (fixes and|uh -147 -> +9, uh uh you; the blank-emitting
+    state swallows pauses far away, uh.start -462).
+ 3. charsiu central-vowel islands (AH/ER/UH/AA/AO >= 0.5): mostly worse (cont starts 65 ms); filler vowel quality varies by
+    speaker ([e]-like, creaky) -- only fc_loud pause starts looked good (10.4 vs 21.3 on 28/38).
+ 4. DSP steady voiced islands (low MFCC change, periodic, loud): 55-110 ms -- creaky fillers are not steady.
+ 5. glottal-attack onset between the reliable neighbour letters: 80-150 ms (catches neighbours' stops and creak pulses).
+Conclusion: no single fixed definition covers filler realisations; each fixes the fillers it models and breaks the others.
+A working filler model probably needs to COMBINE evidence per filler (A emitted? island present? glottal attack?) with a
+decision order checked on H -- to be designed, not a blanket substitution.

@@ -14,13 +14,15 @@ from concurrent.futures import ProcessPoolExecutor
 
 import numpy as np
 
-CHANGES = ("respell_fillers",)
+CHANGES = ("respell_fillers", "softblank_fillers")
 
 
 def _apply(change):
     from aligner2 import lexical
     if change == "respell_fillers":
         lexical.RESPELL_FILLERS = True
+    elif change == "softblank_fillers":
+        lexical.SOFTBLANK_FILLERS = True
 
 
 def _run_clip(args):

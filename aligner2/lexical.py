@@ -32,12 +32,19 @@ WILD = -1
 FILLER_SPELL = {"uh": "a", "ah": "a", "um": "am", "uhm": "am", "umm": "am"}
 RESPELL_FILLERS = False                  # REJECTED as a blanket rule (coarse_ab: dev -0.73 s): fixes "uh uh you" but
 # the A fires at a sustained filler's ONSET and a third of fillers emit nothing, so ends collapse (uh|so -128 ms)
+# SOFT fillers (candidate): each filler letter state emits its letter OR blank ("A|blank", "M|blank"), so a filler
+# absorbs the frames between its neighbours where the model emits "a" or nothing, and the neighbours' letters stay put.
+SOFTBLANK_FILLERS = False                # REJECTED (coarse_ab: dev -2.37 s; numpy path only): fixes fillers that do
+# emit "a" (uh uh you, and|uh -147 -> +9) but the blank-emitting state swallows pauses far away (uh.start -462 ms)
+SOFT = {"A": -2, "M": -3}                 # special label ids: letter-or-blank
 
 
 def spell(token):
     """token text -> list of label ids (WILD for a wildcard)"""
     w = token.strip()
     w = re.sub(r"^\(\((.*)\)\)$", r"\1", w)
+    if SOFTBLANK_FILLERS and w.lower() in FILLER_SPELL:
+        return [SOFT[ch] for ch in FILLER_SPELL[w.lower()].upper()]
     if RESPELL_FILLERS and w.lower() in FILLER_SPELL:
         w = FILLER_SPELL[w.lower()]
     if re.search(r"\d", w):
@@ -68,8 +75,14 @@ def forward_backward(logp, labels, wild_from=SEP + 1):
     wild = st == WILD
     best_letter = np.max(logp[:, wild_from:], axis=1)
     em = np.empty((T, S))
-    em[:, ~wild] = logp[:, st[~wild]]
+    soft = {sid: VOCAB[ch] for ch, sid in SOFT.items()}
+    plain = ~wild & ~np.isin(st, list(soft))
+    em[:, plain] = logp[:, st[plain]]
     em[:, wild] = best_letter[:, None]
+    for sid, lid in soft.items():                           # soft filler letters: the letter or blank
+        m = st == sid
+        if m.any():
+            em[:, m] = np.logaddexp(logp[:, lid], logp[:, BLANK])[:, None]
     skip = np.zeros(S, bool)
     skip[3::2] = (st[3::2] != st[1:-2:2]) | wild[3::2]      # s-2 -> s allowed between different labels
     NEG = -1e30

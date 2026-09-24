@@ -109,6 +109,9 @@ arbiter (the rules are closer 298 : 88 where they disagree by > 60 ms); soft / w
 J1 dip path on its own. Local session: zcr-led J4 onset (no better as a cascade; S/F/SH worse), J13 window guards
 (help DH, hurt every stop class), J13th = TH at the quietest point (dev +0.14 s, 049 -0.04 s), J14x = glottal onset after
 nasals / liquids / fricatives (H joins moved the wrong way; deepest-dip variant -0.06 s). Details: NOTES.md "RULE-STAGE REGRESSIONS".
+FILLER DETECTOR attempts (all worse than the current rules on dev; NOTES.md "FILLER DETECTOR"): respelling uh->a / um->am
+(-0.73 s), soft letter-or-blank filler states in the CTC (-2.37 s), charsiu central-vowel islands, DSP steady-voiced islands,
+glottal-attack onsets (80-150 ms MAE vs 29-34 for the rules).
 
 ## Next steps
 1. ~~Modal~~ **DONE (local session, 2026-09-24):** modal 1.5.5, workspace `alinarohannes777` (owns `aligner2-cache`).
