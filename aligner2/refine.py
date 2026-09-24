@@ -37,6 +37,9 @@ Continuous joins (the coarse stage found no pause):
   J14 vowel > vowel-initial word with a HARD (glottal) onset: a >= 8 dB transient after a glottal closure (>= 10
       dB quieter before than after) between the two letter peaks -> its onset (today|at, i|and, know|i, law|and,
       uh|ailments: 0-5 ms). Only after a vowel: after a nasal / liquid the release itself is a transient.
+  J4l J4 also after a LIQUID (for|sure, your|friends, or|something): the fricative starts at its frication onset.
+      Listening: coarse liq>fric cuts were late by +17 ms (026) / +31 ms (049 + old14); gold +0.49 s on every set,
+      ear accepted +2 / rejected -2 on 026 and old14.
   Jthe "the" + consonant: the cut is the end of the reduced vowel (6 dB under its peak) -- the LISTENING convention;
       the editor gold keeps "the" ~40 ms longer (Clip.the_end).
   Other junctions keep the coarse cut.
@@ -99,7 +102,7 @@ CLASS = {**{p: "V" for p in VOWELS}, **{p: "stop" for p in ("P", "B", "T", "D", 
 BG_DB = 6.0                                   # a released stop's tail: until within 6 dB of the residual level
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
 RULES = {"F2", "J0", "J1", "J1n", "J1m", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "P3", "E1", "E2",
-         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe"}   # enabled
+         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe", "J4l"}   # enabled
 # (aligner2/local_bench.py --rules J1,J4,... for ablations)
 
 
@@ -418,7 +421,7 @@ class Clip:
                     m = glottal_attack(S, a, b)
                     t = first_rise(S, m, min(hi_lim, m + MS(30))) if m is not None else None
                     self.note(k, "J1 dip", dip=m, rise=t)
-        if cA in ("V", "nas") and cB == "fric" and "J4" in RULES:                 # J4
+        if (cA in ("V", "nas") or (cA == "liq" and "J4l" in RULES)) and cB == "fric" and "J4" in RULES:   # J4
             for name, q, feats in (("onset", 0.2, ("zcr", "hi")), ("loud-fall", 0.5, ("Ls",)), ("joint", 0.2, None)):
                 t = transition(S, cA, cB, a, cut, b, q, feats)
                 if t is not None:

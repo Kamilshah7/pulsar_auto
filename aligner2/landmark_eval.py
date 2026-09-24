@@ -53,6 +53,22 @@ def candidates(S, pa, pb, cut, pair):
     m = R.loud_min(S, a, b)
     if m is not None:
         c["loud_min"] = m
+        # the END of the low stretch around the minimum: the first frame after it >= 3 / 6 dB above it (the rise into
+        # word k+1's vowel starts there: a W / Y / R held at the end of word k's vowel, so|why)
+        Lsm = R._box(S.Ls, R.MS(6))
+        for db in (3, 6):
+            q = next((i for i in range(m, b) if Lsm[i] >= Lsm[m] + db), None)
+            if q is not None:
+                c[f"min_rise{db}"] = q
+        # only a real HOLD: >= 60 ms around the minimum within 2 dB of it, voiced -> its end
+        h0 = m
+        while h0 > a and abs(Lsm[h0 - 1] - Lsm[m]) <= 2.0 and S.per[h0 - 1] >= 0.5:
+            h0 -= 1
+        h1 = m
+        while h1 < b and abs(Lsm[h1 + 1] - Lsm[m]) <= 2.0 and S.per[h1 + 1] >= 0.5:
+            h1 += 1
+        if h1 - h0 >= R.MS(60):
+            c["hold_end"] = h1
     hm = a + int(np.argmin(S.hi[a:b])) if b > a else None
     if hm is not None:
         c["hi_min"] = hm
