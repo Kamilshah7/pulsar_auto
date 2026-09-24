@@ -101,6 +101,17 @@ def candidates(S, clip, k, coarse, p99, nxt):
             while q < j and S.Ls[q] >= p99 - X:
                 q += 1
             c[f"ftail_aud{X}"] = max(i_end, q)
+    # a GLOTTALISED T (but H: the vowel ends in creak, no closure / burst): the 30 ms after the coarse end still voiced ->
+    # the word lasts while the voicing goes on above the ear threshold (p99 - 40 dB), falling (no re-rise > 3 dB)
+    if R.last_phone(clip["_arpa"][k]) == "T":
+        pm = R._box(S.per, MS(6))
+        w = slice(i_end, min(cap, i_end + MS(30)))
+        if w.stop - w.start >= MS(20) and np.median(pm[w]) >= 0.3 and R.burst_onset(S, i_end, min(cap, i_end + MS(100))) is None:
+            for X in (40, 43):
+                j, low = i_end, S.Ls[i_end]
+                while j < min(cap, i_end + MS(150)) and pm[j] >= 0.25 and S.Ls[j] >= max(p99 - X, S.floor[j] + 6.0)                         and S.Ls[j] <= low + 3.0:
+                    low = min(low, S.Ls[j]); j += 1
+                c[f"creakT{X}"] = j
     # R6: a smooth voiced / breathy decay continuing from the coarse end ends near -40 dB re p99 (no re-rise, <= 150 ms)
     for X in (38, 40, 43):
         j, low = i_end, S.Ls[i_end]

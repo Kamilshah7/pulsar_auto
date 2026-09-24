@@ -62,7 +62,8 @@ Pause edges (the coarse stage found a pause):
       over the residual) or still fricated (zcr >= 0.15 over floor + 6), <= 200 ms (like H: voiced K closure, then
       170 ms of affricated release, -233 -> +27 ms; cried +10; dev +0.22 s, 049 / ear unchanged).
       P1f: no burst, but the stop devoices straight into frication (a fricated release, wasn't H): it runs on until
-      it dies (Clip.fricated_release).
+      it dies (Clip.fricated_release). P1g: a final T still voiced after the coarse end is glottalised (creak): the
+      word lasts while the creak stays above the ear threshold (Clip.glottal_tail).
   P2  word start: kept unless a separate event precedes the word across a real gap -> start out of the gap.
   P3  otherwise the speech onset: the steepest loudness rise within 30 ms of the coarse start (after the
       pause's middle, before the first-letter peak).
@@ -95,7 +96,7 @@ CLASS = {**{p: "V" for p in VOWELS}, **{p: "stop" for p in ("P", "B", "T", "D", 
 BG_DB = 6.0                                   # a released stop's tail: until within 6 dB of the residual level
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
 RULES = {"F2", "J0", "J1", "J1n", "J1m", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "P3", "E1", "E2",
-         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f"}   # enabled
+         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g"}   # enabled
 # (aligner2/local_bench.py --rules J1,J4,... for ablations)
 
 
@@ -581,7 +582,33 @@ class Clip:
                 t = self.fricated_release(k, i_end, lim)
                 if t is not None:
                     return t
+            if "P1g" in RULES and last_phone(self.arpa[k]) == "T":
+                t = self.glottal_tail(k, i_end, lim)
+                if t is not None:
+                    return t
         return None
+
+    def glottal_tail(self, k, i_end, lim):
+        """P1g: a GLOTTALISED final T (but H x2: the vowel ends in creak, no closure, no burst): when the 30 ms after the
+        coarse end are still voiced, the word lasts while that voicing goes on above the ear threshold (p99 - 40 dB,
+        floor + 6), falling (no re-rise > 3 dB), <= 150 ms, never into the next word's letters. Every H case it moves
+        improves (but -80 -> -27, -53 -> -5, chest -53 -> -15, it- , first); the losses are accepted golds that cut the
+        creak (that x2, movement: the old aligner's ends, like the weak fricatives C1 / C2). Dev +0.13 s (H +0.16),
+        049 +0.06 s, ear unchanged."""
+        S = self.S
+        p99 = float(np.percentile(S.L, 99))
+        bound = lim if k + 1 >= self.n else min(lim, self.lex["first"][k + 1] - MS(20))
+        pm = _box(S.per, MS(6))
+        w = slice(i_end, min(bound, i_end + MS(30)))
+        if w.stop - w.start < MS(20) or np.median(pm[w]) < 0.3:
+            return None
+        j, low = i_end, S.Ls[i_end]
+        while j < min(bound, i_end + MS(150)) and pm[j] >= 0.25 and S.Ls[j] >= max(p99 - 40.0, S.floor[j] + 6.0)                 and S.Ls[j] <= low + 3.0:
+            low = min(low, S.Ls[j]); j += 1
+        if j - i_end < MS(10):
+            return None
+        self.note(k, "P1 glottal tail", end=j)
+        return j
 
     def fricated_release(self, k, i_end, lim):
         """P1f: a stop released as FRICATION with no closure (wasn't H: the nasal runs straight into 100 ms of /s/-like
