@@ -16,14 +16,16 @@ Branch: `claude/pulsar-auto-conversation-oi3e40` (pushed; not merged; no PR). Ev
   (So far it was used once to reject a variant, J13c, and its worst cases were spot-read after the build. That exposed
   two bugs, fixed in E1 and J14. So it is no longer perfectly clean.)
 
-## Current scores (MAE ms; `python -m aligner2.local_bench --test`; engine run `aligner2_v20` identical)
+## Current scores (MAE ms; `python -m aligner2.local_bench --test`; engine run `aligner2_v21` identical on all 5648)
 | | old production (forced_aligner) | v16 (coarse) | + rule stage (production) |
 |---|---|---|---|
-| dev 009+026, all | (circular) | 21.8 | **16.8** |
-| dev, H | cont-H 32.2 | 28.9 | **20.9** |
-| held-out 049, all | (circular) | 24.9 | **19.8** |
-| held-out 049, H | cont-H 29.1 | 28.7 | **23.0** |
+| dev 009+026, all | (circular) | 21.8 | **16.6** |
+| dev, H | cont-H 32.2 | 28.9 | **20.3** |
+| held-out 049, all | (circular) | 24.9 | **19.7** |
+| held-out 049, H | cont-H 29.1 | 28.7 | **22.9** |
+| old14 (never used for development), all / H | | 26.5 / 28.9 | **22.3 / 23.8** |
 | ear judgments, 182 manual placements | 32.3 | 27.4 | **24.9** |
+(v21 = v20 + P1bv, P1f, P1g, P3a. The ear judgments are junctions, which these pause-edge rules do not move.)
 
 ## Pipeline
 1. **Signals** (GPU, Modal engine `modal_aligner2.py`, app `aligner2-signals`, volume `aligner2-cache`): loudness,
@@ -91,6 +93,10 @@ moves to the frication island between its neighbours' letters), **PWa** (fragmen
 not letter names: 'th-' = TH, not T IY EY CH), **P1c** (a nasal-final word's lengthened murmur after a short dip is not a
 separate event), **E1f** (a voiced-onset first word does not start inside the previous speaker's voiceless frication),
 **J4b** (a breath-filled pause before a fricative that the coarse stage joined: split at the fricative's own onset).
+Stop-final pause ends: **P1bv** (a release after a VOICED closure: voice bar = periodic, silent above 4 kHz), **P1f** (a
+stop that devoices straight into frication keeps it until it dies: wasn't), **P1g** (a final T still voiced after the
+coarse end is glottalised: the creak stays in the word while >= p99 - 40 dB). Pause starts: **P3a** (never before the
+sound reaches the ear threshold p99 - 40 dB).
 
 ## Findings (full write-up: `bench/cache/aligner2/fullread/NOTES.md`, last two sections)
 - NOTES.md also has the earlier boundary-by-boundary full read: all of 009 and 026-0..026-6, plus 026-7 through join 42.

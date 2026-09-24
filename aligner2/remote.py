@@ -33,6 +33,12 @@ def _source_hash():
     return h.hexdigest()
 
 
+def _env():
+    """the modal CLI prints non-ASCII (a check mark); on Windows a piped child defaults to cp1252 and the deploy dies
+    with 'charmap' codec can't encode (seen 2026-09-25) -> force UTF-8 in every modal subprocess"""
+    return dict(os.environ, PYTHONIOENCODING="utf-8", PYTHONUTF8="1")
+
+
 def log(msg):
     print(f"[{time.strftime('%H:%M:%S')}] {msg}", flush=True)
 
@@ -42,11 +48,12 @@ def ensure_deployed():
     if os.path.exists(STAMP) and open(STAMP).read().strip() == h:
         return
     log("source changed -> redeploying GPU engine (deploy output follows)")
-    p = subprocess.Popen([sys.executable, "-m", "modal", "deploy", "modal_aligner2.py"], cwd=ROOT,
+    p = subprocess.Popen([sys.executable, "-m", "modal", "deploy", "modal_aligner2.py"], cwd=ROOT, env=_env(),
                          stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, encoding="utf-8", errors="replace")
     for line in p.stdout:
         if "Deprecation" not in line and "set_event_loop" not in line and line.strip():
-            print("    " + line.rstrip(), flush=True)
+            enc = getattr(sys.stdout, "encoding", None) or "utf-8"      # the app's console / a log file may be cp1252
+            print("    " + line.rstrip().encode(enc, "replace").decode(enc, "replace"), flush=True)
     if p.wait() != 0:
         raise RuntimeError("modal deploy failed (see output above)")
     os.makedirs(os.path.dirname(STAMP), exist_ok=True)
@@ -60,14 +67,15 @@ def stop_containers(why="so no call reaches old code"):
     the OLD code otherwise (seen 2026-09-24: calls right after a deploy still ran the previous segment.py);
     production also calls it after each bundle so no idle time is billed"""
     import json
-    r = subprocess.run([sys.executable, "-m", "modal", "container", "list", "--json"], cwd=ROOT,
+    r = subprocess.run([sys.executable, "-m", "modal", "container", "list", "--json"], cwd=ROOT, env=_env(),
                        capture_output=True, text=True, encoding="utf-8", errors="replace")
     try:
         ids = [c["container_id"] for c in json.loads(r.stdout) if c.get("app_name") == APP_NAME]
     except ValueError:
         ids = []
     for cid in ids:
-        subprocess.run([sys.executable, "-m", "modal", "container", "stop", "--yes", cid], cwd=ROOT, capture_output=True)
+        subprocess.run([sys.executable, "-m", "modal", "container", "stop", "--yes", cid], cwd=ROOT, env=_env(),
+                       capture_output=True)
     log(f"stopped {len(ids)} running engine container(s) {why}")
 
 
