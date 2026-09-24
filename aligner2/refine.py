@@ -40,6 +40,8 @@ Continuous joins (the coarse stage found no pause):
   J8m nasal > vowel where J8's class references fail (34 dev + held-out joins, coarse cut late +14..+19 ms by ear):
       the vowel starts at the release of the nasal murmur found near the cut (low-band share or high band leaves it).
       Ear: 049 accepted +3 / rejected -1, 026 rejected -1; gold +0.02 s.
+  J4h J4 also before an ASPIRATED h (>= 20 ms of noise before the next word's first letter: where|he); an h that is
+      voiced or dropped (functioning|had, we|have) keeps the coarse cut. Ear +49 ms, gold +0.07 s.
   J4l J4 also after a LIQUID (for|sure, your|friends, or|something): the fricative starts at its frication onset.
       Listening: coarse liq>fric cuts were late by +17 ms (026) / +31 ms (049 + old14); gold +0.49 s on every set,
       ear accepted +2 / rejected -2 on 026 and old14.
@@ -105,7 +107,7 @@ CLASS = {**{p: "V" for p in VOWELS}, **{p: "stop" for p in ("P", "B", "T", "D", 
 BG_DB = 6.0                                   # a released stop's tail: until within 6 dB of the residual level
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
 RULES = {"F2", "J0", "J1", "J1n", "J1m", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "P3", "E1", "E2",
-         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe", "J4l", "J8m"}   # enabled
+         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe", "J4l", "J8m", "J4h"}   # enabled
 # (aligner2/local_bench.py --rules J1,J4,... for ablations)
 
 
@@ -424,7 +426,11 @@ class Clip:
                     m = glottal_attack(S, a, b)
                     t = first_rise(S, m, min(hi_lim, m + MS(30))) if m is not None else None
                     self.note(k, "J1 dip", dip=m, rise=t)
-        if (cA in ("V", "nas") or (cA == "liq" and "J4l" in RULES)) and cB == "fric" and "J4" in RULES:   # J4
+        asp = False
+        if cB == "h" and "J4h" in RULES:                 # J4h: only an ASPIRATED h (>= 20 ms of noise before
+            w0, w1 = max(a, cut - MS(40)), max(pb_, cut + MS(10))       # the next letter); a voiced / dropped h has none
+            asp = w1 > w0 and ((_box(S.zcr, MS(6))[w0:w1] >= 0.2) & (_box(S.hi, MS(6))[w0:w1] >= -15.0)).sum() >= MS(20)
+        if (cA in ("V", "nas") or (cA == "liq" and "J4l" in RULES)) and                 (cB == "fric" or asp) and "J4" in RULES:     # J4
             for name, q, feats in (("onset", 0.2, ("zcr", "hi")), ("loud-fall", 0.5, ("Ls",)), ("joint", 0.2, None)):
                 t = transition(S, cA, cB, a, cut, b, q, feats)
                 if t is not None:
