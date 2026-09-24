@@ -1,0 +1,182 @@
+{
+ "009_00": {
+  "npz": "e7b1b08b54332450_98e63a51.npz",
+  "wav": "bench/gold_sets/20260924_0536_word_alignment_production_2026-09-16_SO-70802-b22_bundle_009/audio/syndigate_podcasts_29567fe75c525ab69423b057a86708a7_930.0_1230.0-sortformer-14.wav",
+  "maxdiff": 3.800305989898334e-06
+ },
+ "009_01": {
+  "npz": "14b1eb911d0842a7_98e63a51.npz",
+  "wav": "bench/gold_sets/20260924_0536_word_alignment_production_2026-09-16_SO-70802-b22_bundle_009/audio/syndigate_podcasts_295fa16570105103b5706e4f2195985d_1840.0_2030.0-sortformer-8.wav",
+  "maxdiff": 3.807787635423665e-06
+ },
+ "009_02": {
+  "npz": "41c9820ad883a020_98e63a51.npz",
+  "wav": "bench/gold_sets/20260924_0536_word_alignment_production_2026-09-16_SO-70802-b22_bundle_009/audio/syndigate_podcasts_2b4fac71b9a5572f850cc34f4df5d740_1670.0_1970.0-sortformer-23.wav",
+  "maxdiff": 3.809609466998154e-06
+ },
+ "009_03": {
+  "npz": "6e76dea464d46b09_98e63a51.npz",
+  "wav": "bench/gold_sets/20260924_0536_word_alignment_production_2026-09-16_SO-70802-b22_bundle_009/audio/syndigate_podcasts_2c10481a206e59efaa1a72adcf7cc3d1_820.0_1070.0-sortformer-11.wav",
+  "maxdiff": 3.8099098134125597e-06
+ },
+ "009_04": {
+  "npz": "c2292817373d4d9d_98e63a51.npz",
+  "wav": "bench/gold_sets/20260924_0536_word_alignment_production_2026-09-16_SO-70802-b22_bundle_009/audio/syndigate_podcasts_2c7fd69a289d57378d163db7b602f510_2340.0_2590.0-sortformer-12.wav",
+  "maxdiff": 3.8086870688402996e-06
+ },
+ "009_05": {
+  "npz": "cc041ddc207550c1_98e63a51.npz",
+  "wav": "bench/gold_sets/20260924_0536_word_alignment_production_2026-09-16_SO-70802-b22_bundle_009/audio/syndigate_podcasts_2cd0712bd71e5e119d198f372bb34663_2330.0_2630.0-sortformer-20.wav",
+  "maxdiff": 3.686649534984099e-06
+ },
+ "009_06": {
+  "npz": "c223b02148991864_98e63a51.npz",
+  "wav": "bench/gold_sets/20260924_0536_word_alignment_production_2026-09-16_SO-70802-b22_bundle_009/audio/syndigate_podcasts_2cded1b3f58156aa9ab264c213bc832a_1660.0_1890.0-sortformer-16.wav",
+  "maxdiff": 3.8137520732561825e-06
+ },
+ "009_07": {
+  "npz": "c15448dde2ae716d_98e63a51.npz",
+  "wav": "bench/gold_sets/20260924_0536_word_alignment_production_2026-09-16_SO-70802-b22_bundle_009/audio/syndigate_podcasts_2d03cf22a5825a07a90b1189565b5ecb_710.0_850.0-sortformer-7.wav",
+  "maxdiff": 3.7952140985453298e-06
+ },
+ "009_08": {
+  "npz": "dcca6152601fe854_98e63a51.npz",
+  "wav": "bench/gold_sets/20260924_0536_word_alignment_production_2026-09-16_SO-70802-b22_bundle_009/audio/syndigate_podcasts_2d602371169b5aa89510bc9ed85ef8a5_1720.0_2020.0-sortformer-0.wav",
+  "maxdiff": 3.8131559279008798e-06
+ },
+ "009_09": {
+  "npz": "bf8793f48f116a93_98e63a51.npz",
+  "wav": "bench/gold_sets/20260924_0536_word_alignment_production_2026-09-16_SO-70802-b22_bundle_009/audio/syndigate_podcasts_2ddf18f8f34759728fa8e0406d9ddfde_560.0_650.0-sortformer-14.wav",
+  "maxdiff": 3.801211732934462e-06
+ },
+ "009_10": {
+  "npz": "8839a3c3b7d16656_98e63a51.npz",
+  "wav": "bench/gold_sets/20260924_0536_word_alignment_production_2026-09-16_SO-70802-b22_bundle_009/audio/syndigate_podcasts_2e49527d6a8b596d98ea5439a58fe024_1280.0_1580.0-sortformer-17.wav",
+  "maxdiff": 3.807216714335482e-06
+ },
+ "009_11": {
+  "npz": "942d9bb6685feef5_98e63a51.npz",
+  "wav": "bench/gold_sets/20260924_0536_word_alignment_production_2026-09-16_SO-70802-b22_bundle_009/audio/syndigate_podcasts_2eb8e17f398651f8abfa0b1c6ba1c3cd_3060.0_3360.0-sortformer-15.wav",
+  "maxdiff": 3.8091159524356044e-06
+ },
+ "026_00": {
+  "npz": "5dc70c088f8648f9_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026/audio/syndigate_podcasts_81d4c1dd26575dee829ccf417736f226_1900.0_2200.0-sortformer-16.wav",
+  "maxdiff": 3.8131696697973894e-06
+ },
+ "026_01": {
+  "npz": "4eb57b0c0d147d0f_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026/audio/syndigate_podcasts_823b7c8ee60759c3ae58b4cda02e3c00_1180.0_1480.0-sortformer-34.wav",
+  "maxdiff": 3.8057310689509904e-06
+ },
+ "026_02": {
+  "npz": "057423e12d01e3be_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026/audio/syndigate_podcasts_83151db80f2e582182a71428443f5b68_2440.0_2740.0-sortformer-20.wav",
+  "maxdiff": 3.813148524045573e-06
+ },
+ "026_03": {
+  "npz": "8187c8c6df93db5b_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026/audio/syndigate_podcasts_83b8e1159f6d5a328c7067f4b23b3fca_390.0_690.0-sortformer-11.wav",
+  "maxdiff": 3.8089788318984574e-06
+ },
+ "026_04": {
+  "npz": "2e325b69c57a10e1_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026/audio/syndigate_podcasts_83f1f7b625ba5908a57986310ba2b318_50.0_335.490563-sortformer-7.wav",
+  "maxdiff": 3.813344221725856e-06
+ },
+ "026_05": {
+  "npz": "46c6810ec435fabb_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026/audio/syndigate_podcasts_84597de21f045361971a495f3bad029a_100.0_400.0-sortformer-42.wav",
+  "maxdiff": 3.813148524045573e-06
+ },
+ "026_06": {
+  "npz": "9ac8b18f2e5ff13b_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026/audio/syndigate_podcasts_860cc11fd6945943813db1466e083fdc_740.0_810.0-sortformer-1.wav",
+  "maxdiff": 3.7920805624480636e-06
+ },
+ "026_07": {
+  "npz": "556cc327ed1c7c54_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026/audio/syndigate_podcasts_8637895cca045d9c90cc9228e58078f7_1130.0_1390.0-sortformer-25.wav",
+  "maxdiff": 3.807851797432704e-06
+ },
+ "026_08": {
+  "npz": "cc19f1a3a3993977_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026/audio/syndigate_podcasts_8637895cca045d9c90cc9228e58078f7_2250.0_2320.0-sortformer-2.wav",
+  "maxdiff": 3.788687166661475e-06
+ },
+ "026_09": {
+  "npz": "2d73723f5961486f_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026/audio/syndigate_podcasts_863aeaa3833956358847e3be43a887c6_3020.0_3320.0-sortformer-27.wav",
+  "maxdiff": 3.8096287369171478e-06
+ },
+ "026_10": {
+  "npz": "59ad39daaba86c90_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026/audio/syndigate_podcasts_86f4c7a7102c51c5bd2f5f3b66920bd8_300.0_600.0-sortformer-14.wav",
+  "maxdiff": 3.809609466998154e-06
+ },
+ "026_11": {
+  "npz": "8ba96b8bfde751e8_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1847_word_alignment_production_2026-09-16_SO-70802-b20_bundle_026/audio/syndigate_podcasts_8718c6fa16375bce8bd1c65d79e36440_40.0_340.0-sortformer-12.wav",
+  "maxdiff": 3.813971204635891e-06
+ },
+ "049_00": {
+  "npz": "94ff0cfef3c29b5e_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049/audio/syndigate_podcasts_f656b2823256589f9ce90f687859b141_1820.0_2120.0-sortformer-20.wav",
+  "maxdiff": 3.814199672547147e-06
+ },
+ "049_01": {
+  "npz": "7d06e9e658505a11_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049/audio/syndigate_podcasts_f6930880bdb45dd386e60a699ec4f9f3_2390.0_2690.0-sortformer-8.wav",
+  "maxdiff": 3.8086115381474883e-06
+ },
+ "049_02": {
+  "npz": "9db26b203e60684b_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049/audio/syndigate_podcasts_f6e6176ee7f054b1a1924bb85a1211c5_440.0_740.0-sortformer-6.wav",
+  "maxdiff": 3.8116849907510186e-06
+ },
+ "049_03": {
+  "npz": "93c2b28cec6d698a_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049/audio/syndigate_podcasts_f77228af80395de3a5b569486bf50f2c_360.0_660.0-sortformer-32.wav",
+  "maxdiff": 3.8056886921822297e-06
+ },
+ "049_04": {
+  "npz": "4ccb6f104da46f9a_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049/audio/syndigate_podcasts_f79a4632276d55b495289ad57aaa2b3d_2740.0_3040.0-sortformer-31.wav",
+  "maxdiff": 3.810846479268548e-06
+ },
+ "049_05": {
+  "npz": "2edad3f59dfad04d_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049/audio/syndigate_podcasts_f81e71c59850566b95141e52c65c208c_610.0_910.0-sortformer-9.wav",
+  "maxdiff": 3.7633523390923074e-06
+ },
+ "049_06": {
+  "npz": "981492cc2b15e6a4_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049/audio/syndigate_podcasts_f850878ca0f25094b1d0aa4b246afb19_3080.0_3360.0-sortformer-31.wav",
+  "maxdiff": 3.811816696952519e-06
+ },
+ "049_07": {
+  "npz": "591369bcfc235be7_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049/audio/syndigate_podcasts_f86683b91527598da4d1ad52aa94fbce_2510.0_2700.0-sortformer-0.wav",
+  "maxdiff": 3.8096228252015862e-06
+ },
+ "049_08": {
+  "npz": "0b6d14c3572d2fb7_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049/audio/syndigate_podcasts_f8c8e77a069c5faba3e235e99cf93874_360.0_660.0-sortformer-10.wav",
+  "maxdiff": 3.8116997131965036e-06
+ },
+ "049_09": {
+  "npz": "7ea4e7195913f013_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049/audio/syndigate_podcasts_f8e17213c56855e1983a3b626d74abc8_4000.0_4300.0-sortformer-8.wav",
+  "maxdiff": 3.812956421711533e-06
+ },
+ "049_10": {
+  "npz": "13113cbdcd3c146c_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049/audio/syndigate_podcasts_f8e31611f2a651869d0895ddad0521ce_2120.0_2420.0-sortformer-27.wav",
+  "maxdiff": 3.80862368842827e-06
+ },
+ "049_11": {
+  "npz": "3f3772ee374ea5f1_98e63a51.npz",
+  "wav": "bench/gold_sets/20260923_1604_word_alignment_production_2026-09-16_SO-70802-b19_bundle_049/audio/syndigate_podcasts_fa07d94b1ffe5b68b89a70b142be688c_940.0_1240.0-sortformer-17.wav",
+  "maxdiff": 3.813148524045573e-06
+ }
+}

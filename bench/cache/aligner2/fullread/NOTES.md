@@ -3293,3 +3293,49 @@ local-floor stats are unreliable (dBfl goes negative at 0.36). Relative, not abs
 - so|he's (so.e H, he's.s H) g 5.768/5.769 s 5.756 (-12): HH between vowels: per dip .68/.67 at 5.760-5.766, loudness dip -4/-5
   5.760-5.772, hi -33→-24 (5.754-5.766), lo -4.5→-1.0 rising. SEP peak .97 at 5.754, H letter 5.784. HUMAN at the per
   minimum / end of the hi rise (R4 /h/ = periodicity dip confirmed). System = SEP peak (-12).
+- he's|really g 5.949/5.951 s 5.940/5.941 (-9): Z of he's very strong (zcr .53-.71, cent 8.5-8.7, hi -0.9..-2.0, lo -35..-37,
+  -3..-6 dB) to 5.938; Z→R crossfade 5.944-5.962: zcr .57→.44→.19→.07, hi -1.6→-3.9→-12.4→-20.8, lo -16→-6→-0.7, per
+  .21→.48→.65; loudness min -17 at 5.950. CTC SEP 5.920-5.940, R 5.940+. Crossfade midpoint ≈ 5.953 (fricative→sonorant
+  rule, as situations|and). Gold -3 (at the loudness min) OK; system -12 (SEP end).
+- really|good g 6.190/6.192 s 6.182/6.183: IY (lo 0, per .58-.62) → G: per .50→.22→.03 (6.180-6.192), loudness -20→-26→-28
+  (min 6.192), glo 21.1 at 6.192; short voiceless closure 6.184-6.196; burst trn 8.6/7.3 at 6.198/6.204; release frication
+  6.198-6.216 (zcr .24-.32, cent 7.8). CTC SEP 6.162-6.200, G 6.200. Both inside the closure (R8): gold at the deepest point,
+  system at the closure onset (-8 vs gold, -16 vs burst). OK.
+- good|a- (both H) g 6.591/6.592 s 6.464/6.536 (-127/-56): "good" vowel to 6.390 (CTC D 6.38-6.40); D voice bar 6.402-6.456
+  (lo 0, cent 5.1-5.3, per .53-.66, -11..-18); voicing dies 6.462-6.492 (per .37→.00, -21..-30); FLOOR 6.498-6.528 (-37..-49,
+  dBfl 5..-8, only the clip's HF background); burst trn 4.7/14.5 at 6.534/6.540; release frication 6.540-6.570 (zcr .36-.57,
+  cent 8.0-8.3, hi -3..-8, -15..-25); voicing onset 6.576-6.582 (per .59→.66, lo -3.1→-1.1, zcr .18→.06); vowel -4 at 6.588.
+  CTC blank .96-1.00 from 6.466 over the whole fragment (no letters for "a-"). HUMAN = vowel onset: the whole 140 ms D
+  (voice bar + silent closure + burst + 30 ms frication release) stays with "good" (same as find|another: stop release
+  into a vowel-initial word belongs to the first word). The 30 ms floor stretch is a CLOSURE, not a pause (R6/R8).
+  System: good.end in the voice bar (dropped closure + release), a-.start AT the burst (gave the release to the fragment).
+  RULE: final stop + vowel-initial next word → boundary at the voicing onset after the release (not at the burst).
+- a-|across (a-.e H) g 6.726/6.727 s 6.694/6.736 (-32/+9): fragment vowel 6.578-6.688 (per .30-.69, -4..-9); drop -17→-25→-32
+  (6.688-6.700); noise 6.700-6.730 (zcr .34-.47, cent 7.7-8.0, hi -4..-6, lo -7..-15, per .13-.42, -26..-33) = the fragment's
+  aspirated/breathy offset ([k]-like, "ac-"); rise into across's AH: trn 2.0/2.6 at 6.724/6.730, -17 at 6.736, -7 at 6.742
+  (trn 5.5). CTC blank .99 throughout. HUMAN = end of the noise / start of the rise (6.726): the noise belongs to the
+  fragment (R2). System a-.end = noise onset (-32, dropped it, 42 ms false gap); across.start +9 (in the rise). OK start.
+- across|the g 7.143/7.145 s 7.112/7.112 (-31/-32): S of across very strong (zcr .74-.87, cent 8.8, hi -0.1, lo -26..-35) to
+  7.116; 7.118-7.134 frication continues (zcr .70→.59, hi -0.4..-1.3) while lo rises -27.1→-24.6→-21.7→-17.1→-13.3→-9.2 = voicing
+  under frication = DH assimilated to the S ([sð] → voiced sibilant-like DH), loudness dip -14 at 7.132-7.136; frication
+  collapses 7.136-7.144 (hi -3→-19, zcr .52→.13, per .30→.50) into the vowel. CTC SEP peak .98 at 7.112, T(H) 7.120-7.140,
+  H 7.140-7.160. S|DH ≈ 7.118 (lo rise onset = CTC T onset). System -6 RIGHT; accepted gold +25 = vowel onset (gives the
+  whole DH to "across"). Accepted-gold error suspected (R1: word-initial DH belongs to "the").
+- the|board g 7.240/7.242 s 7.216 (-24/-26): "the" vowel 7.140-7.166 (-1..-3, per .53-.60, lo -1..-2.5); closure onset
+  7.168-7.178 (-3→-14, lo → 0, hi -32→-43); B VOICE BAR 7.178-7.254 (lo 0, cent 4.9-5.2, per .63-.69, -12..-18, 76 ms);
+  burst trn 6.6/5.8/13.3/9.8 at 7.254-7.266; vowel 7.270+. CTC E 7.180-7.200 (on the voice bar), SEP 7.200-7.240 (peak .97
+  7.230), B 7.240-7.260. Voiced-closure convention (know|before, they're|going, you|don't: voice bar to the previous word,
+  boundary at closure minimum/first transient) → 7.252. Gold -12 (late voice bar, OK by R8); system -36 = SEP centre.
+- board|in g 7.532/7.534 s 7.540: vowel to 7.476 (CTC D 7.460-7.480 on the vowel end); D tap: -5→-13 (7.476-7.492), plateau
+  -13/-14 7.492-7.512 (lo -0.1..-0.5, cent 5.3-5.6, per .38-.61); release trn 2.4/5.4/4.4/3.0 at 7.508-7.520, hi -35→-25;
+  IH vowel -10 (7.520) → -7 (7.532). SEP 7.500-7.556 (peak 1.00 7.532). Release+8 convention (find|another) → 7.520.
+  Gold +12 (loudness plateau start = SEP peak), system +20 (SEP falling edge). Minor.
+- in|that g 7.709/7.711 s 7.706/7.707: loud N (-5, lo -0.1, cent 5.4, hi -35..-38, per .66-.71) → dental DH: glo 11→17→21
+  (7.704-7.716), flat -7.4→-4.6 and hi -37.9→-26.4 (7.710-7.722), trn 4.0 at 7.722; CTC SEP to 7.720, T(H) 7.720. N|DH ≈
+  7.712. Both OK.
+- that.end g 7.935 s 7.926 (-9): T release aspiration 7.908-7.936 (zcr .23-.45, cent 7.7-8.3, hi -3..-10, -18..-33); ends
+  7.936-7.944 (zcr .27→.06, hi -4.8→-15.3, -33/-34). Gold = aspiration end (R2 OK); system inside the aspiration (minor).
+  Pause 7.944-8.136 = separate events, all CTC blank 1.00: dip -48 (dBfl 2) at 7.952; low hum 7.960-7.980 (per .59-.72,
+  cent 3.9-4.4 = <100 Hz, -33..-36); second low event 8.008-8.064 (-32..-40, per .42-.66, trn 5.1 at 8.040); inhalation
+  8.072-8.128 (zcr .45-.66, cent 7.9-8.5, hi -0.8..-3.3, -38..-45). All excluded by both (R3). OK.
+- START and g 8.139 s 8.138: onset trn 2.1/2.8 at 8.136/8.144, -37→-17 dB. Both OK.
