@@ -117,6 +117,10 @@ FILLER DETECTOR attempts (all worse than the current rules on dev; NOTES.md "FIL
 (-0.73 s), soft letter-or-blank filler states in the CTC (-2.37 s), charsiu central-vowel islands, DSP steady-voiced islands,
 glottal-attack onsets (80-150 ms MAE vs 29-34 for the rules). Also rejected: F2 for DH (neutral), J4n = nasal offset
 for nasal>DH (dev H 33.9 -> 20.5 but 049 -0.03 s), fric>fric spectral-step landmarks (26-29 ms vs 19.6).
+Pause ends / onsets: F1x = hiss tail for any final phone (dev -0.05 s, 049 -0.04 s: late hisses are breaths), R6x =
+decay to -40 dB (-0.61 / -0.37 s), P3f = fricative onset walked back from the letter (-0.09 / -0.11 s), P3nf = no P3 for
+fricatives (+0.02 / -0.06 s). Glides: high-band transition midpoints and phone-CTC (xlsr) peak midpoints are worse than
+the letter midpoint for V>V / V>gl / V>liq (errors correlated 0.5-0.8 with the letters').
 
 ## Next steps
 1. ~~Modal~~ **DONE (local session, 2026-09-24):** modal 1.5.5, workspace `alinarohannes777` (owns `aligner2-cache`).

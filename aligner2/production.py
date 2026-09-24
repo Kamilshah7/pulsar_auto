@@ -16,14 +16,29 @@ the last call (modal_aligner2.SCALEDOWN_S) and prefetch stops them right away wh
 for its cold start (model load, ~30-60 s) and the processing, never for idle time. If the engine cannot be reached, the old ForcedAligner is used for that clip (logged), so the
 pipeline never stops. ALIGNER=forced in the environment selects the old aligner outright.
 """
+import asyncio
 import os
 import time
+from concurrent.futures import ThreadPoolExecutor
 
 from aligner2 import remote
 from aligner2.run_bench import GRID
 
 SETTING = GRID[3]                      # v16 + rule stage (refine=True)
 assert SETTING.get("refine") is True, "production setting must include the rule stage"
+
+
+def _off_event_loop(fn, *args):
+    """run fn(*args) where no asyncio event loop is running. The app's FastAPI endpoints (async def) call the
+    pipeline on the event-loop thread, and Modal refuses its blocking interface there ("You can't
+    iter(Function.starmap()) from an async function"): every engine call failed and each clip fell back to the old
+    ForcedAligner (seen live 2026-09-24). A worker thread has no running loop, so the blocking calls work."""
+    try:
+        asyncio.get_running_loop()
+    except RuntimeError:
+        return fn(*args)                               # plain synchronous caller: call directly
+    with ThreadPoolExecutor(1, thread_name_prefix="aligner2-engine") as ex:
+        return ex.submit(fn, *args).result()
 
 
 class Aligner2:
@@ -46,11 +61,8 @@ class Aligner2:
             return
         t0 = time.time()
         keys = [clip_key(p) for p, _ in todo]
-        try:
-            remote.ensure_signals(list(zip(keys, [p for p, _ in todo])))
-            res = remote.align_many([(k, w) for k, (_, w) in zip(keys, todo)], [SETTING])
-        finally:
-            remote.stop_containers("(bundle done: no idle billing)")   # billed per second while a container runs: no idle tail after the bundle
+        self.log(f"[aligner2] aligning {len(todo)} clips in one parallel engine call")
+        res = _off_event_loop(self._engine, keys, todo)
         for k, (p, w) in zip(keys, todo):
             preds = res[k][0]
             if len(preds) != len(w):
@@ -58,6 +70,15 @@ class Aligner2:
             self._cache[self._key(p, w)] = [{"text": t, "start": float(q["start"]), "end": float(q["end"]), "score": 1.0}
                                             for t, q in zip(w, preds)]
         self.log(f"[aligner2] aligned {len(todo)} clips on the GPU engine ({time.time() - t0:.0f}s)")
+
+    @staticmethod
+    def _engine(keys, todo):
+        """signals for the clips the engine's volume lacks, then every clip aligned, all in parallel on the GPU"""
+        try:
+            remote.ensure_signals(list(zip(keys, [p for p, _ in todo])))
+            return remote.align_many([(k, w) for k, (_, w) in zip(keys, todo)], [SETTING])
+        finally:
+            remote.stop_containers("(bundle done: no idle billing)")   # billed per second while a container runs: no idle tail after the bundle
 
     def align(self, wav_path, words, **ignored):
         """same result shape as ForcedAligner.align; pre-labels / hybrid flags are not used"""
