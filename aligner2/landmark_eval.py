@@ -57,6 +57,10 @@ def candidates(S, pa, pb, cut, pair):
     bu = R.burst_onset(S, a, b, prefer="last")
     if bu is not None:
         c["burst_last"] = bu
+    for cdb in (6.0, 10.0):
+        at = R.burst_onset(S, a, b, prefer="max", closure_db=cdb)
+        if at is not None:
+            c[f"attack{int(cdb)}"] = at
     if cB in ("stop", "aff"):
         bm = R.burst_onset(S, a, b, prefer="max")
         if bm is not None:
@@ -66,6 +70,26 @@ def candidates(S, pa, pb, cut, pair):
                 c["clos_on"] = off
                 c["clos_mid"] = (off + bm) // 2
     return c
+
+
+def mfcc_marks(z, S, pa, pb, a, b):
+    """spectral-envelope candidates: progress in MFCC space (c1..c12) from the 10 ms around pa to the 10 ms
+    around pb (distance ratio d_A / (d_A + d_B), 6 ms smoothed); the steepest MFCC / formant change"""
+    out = {}
+    if pb - pa < MS(12) or b - a < 3:
+        return out
+    M = z["mfcc"][:, 1:].astype(float)
+    mA = np.median(M[pa - MS(5):pa + MS(5)], 0); mB = np.median(M[pb - MS(5):pb + MS(5)], 0)
+    Ms = np.column_stack([R._box(M[:, j], 3) for j in range(M.shape[1])])
+    dA = np.linalg.norm(Ms[pa:pb] - mA, axis=1); dB = np.linalg.norm(Ms[pa:pb] - mB, axis=1)
+    p = dA / (dA + dB + 1e-9)
+    for q in (0.2, 0.35, 0.5, 0.65, 0.8):
+        i = R.crossing(p, q)
+        if i is not None:
+            out[f"mfcc{int(q * 100)}"] = pa + i
+    out["mfcc_vel"] = a + int(np.argmax(R._box(z["mfcc_change"][a:b].astype(float), 3)))
+    out["fvel"] = a + int(np.argmax(R._box(z["formant_vel"][a:b].astype(float), 3)))
+    return out
 
 
 def closure_onset(S, pa, bu, a):
@@ -111,6 +135,7 @@ def main():
                     cd[f"mid_loudmin{r}"] = w0 + int(np.argmin(S.Ls[w0:w1]))
                     cd[f"mid_himin{r}"] = w0 + int(np.argmin(S.hi[w0:w1]))
                     cd[f"mid_glo{r}"] = w0 + int(np.argmax(S.glottal[w0:w1]))
+            cd.update(mfcc_marks(z, S, lx["last"][k], lx["first"][k + 1], a_, b_))
             if b_ > a_ + 2:
                 cd["hi_min_region"] = a_ + int(np.argmin(S.hi[a_:b_]))
                 lm = a_ + int(np.argmin(S.Ls[a_:b_]))

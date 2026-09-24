@@ -33,10 +33,18 @@ Continuous joins (the coarse stage found no pause):
       and cannot hear where, so the quietest point is the stable choice (V>stop 18.6 -> 17.0 ms, V>DH 24.3 ->
       16.0: the frication onset of J4 fires on nothing for DH, which has almost no hiss). After a nasal, DH
       assimilates ("in the" -> dental nasal) and has no dip: J4 stays.
+  J14 vowel > vowel-initial word with a HARD (glottal) onset: a >= 8 dB transient after a glottal closure (>= 10
+      dB quieter before than after) between the two letter peaks -> its onset (today|at, i|and, know|i, law|and,
+      uh|ailments: 0-5 ms). Only after a vowel: after a nasal / liquid the release itself is a transient.
   Other junctions keep the coarse cut.
   J0  a short coarse "pause" (< 100 ms) that never comes within 10 dB of the local floor is not a pause: it is a
       closure, voicing bar or frication inside running speech (v16 splits weak word-initial fricatives, whose CTC
       letter lags to the fricative's end) -> treated as a continuous join (rules above; none -> gap middle).
+  F2  a coarse gap (< 200 ms) before a fricative-initial word (not DH) that is frication throughout (10th
+      percentile zcr >= 0.2 and >= -10 dB above 4 kHz) is that fricative: a weak F / TH / S sits at the
+      background level, so no loudness test can see it -> a continuous join (rules above; none -> the fricative
+      starts where word k ends). Reviewer-moved joins agree (the|field, how|far, any|fear, my|father, die|for,
+      a|force, it's|fine: H); the old accepted golds leave the weak fricative out (very|first, em|fill).
 Pause edges (the coarse stage found a pause):
   P1  word end: kept unless (a) a SEPARATE EVENT follows the word's last letter across a real gap (breath, hum,
       laugh, click; R3) -> end at the gap; (d) a sonorant-final word runs into a long hiss with no CTC letters
@@ -59,7 +67,7 @@ CLASS = {**{p: "V" for p in VOWELS}, **{p: "stop" for p in ("P", "B", "T", "D", 
          "HH": "h", **{p: "nas" for p in ("M", "N", "NG")}, "L": "liq", "R": "liq", "W": "gl", "Y": "gl"}
 BG_DB = 6.0                                   # a released stop's tail: until within 6 dB of the residual level
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
-RULES = {"J0", "J1", "J13", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "E1", "E2"}   # enabled
+RULES = {"F2", "J0", "J1", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "E1", "E2"}   # enabled
 # (aligner2/local_bench.py --rules J1,J4,... for ablations)
 
 
@@ -193,6 +201,18 @@ def glottal_attack(S, a, b, depth_db=3.0):
     i = a + int(np.argmin(S.Ls[a:b]))
     left = S.Ls[max(0, i - MS(20)):i + 1].max(); right = S.Ls[i:min(S.T, i + MS(20))].max()
     if min(left, right) - S.Ls[i] < depth_db:
+        return None
+    return i
+
+
+GA_FROM = ("V",)                               # J14: word k's last sound classes checked for a hard onset
+
+
+def glottal_onset(S, pa, pb, min_trn=8.0, closure_db=10.0):
+    """a vowel-initial word's hard (glottal) onset between the two letter peaks: a >= 8 dB transient after a
+    glottal closure (the 16 ms before >= 10 dB quieter than the 16 ms after) -> its onset"""
+    i = burst_onset(S, pa, pb, prefer="max", closure_db=closure_db)
+    if i is None or S.trn[i:i + MS(12)].max() < min_trn:
         return None
     return i
 
@@ -376,6 +396,11 @@ class Clip:
             if pb_ > pa_:                                                          # J9: no acoustic landmark
                 t = (pa_ + pb_) // 2
                 self.note(k, "J9 letter-midpoint", cut=t)
+        if cB == "V" and cA in GA_FROM and "J14" in RULES and pb_ > pa_:          # J14: glottal attack
+            g = glottal_onset(S, pa_, pb_)
+            if g is not None:
+                t = g
+                self.note(k, "J14 glottal-attack", cut=t)
         if cA == "stop" and cB in ("gl", "nas") and "J10" in RULES:              # J10: release into a sonorant
             t = transition(S, cA, cB, a, cut, b, 0.5)
             if t is not None:
@@ -582,9 +607,30 @@ class Clip:
         a, b = self.idx(self.e[k]), self.idx(self.s[k + 1])
         return b > a and (self.S.Ls[a:b] - self.S.floor[a:b]).min() > 10.0
 
+    def fricative_gap(self, k):
+        """F2: a coarse gap (< 200 ms) before a fricative-initial word that is frication THROUGHOUT (10th
+        percentile zcr >= 0.2 and high-band share >= -10 dB: energy above ~2 kHz) is that fricative, not a
+        pause: a weak word-initial F / TH / S sits at the background level and its CTC letter lags to its end,
+        so the coarse pause test takes it for silence (the|field, how|far, any|fear, my|father: H)"""
+        B = first_phone(self.arpa[k + 1])
+        g = self.s[k + 1] - self.e[k]
+        if pclass(B) != "fric" or B == "DH" or not (0.005 < g < 0.200):
+            return False
+        a, b = self.idx(self.e[k]), self.idx(self.s[k + 1])
+        return b - a >= MS(10) and np.percentile(self.S.zcr[a:b], 10) >= 0.2 and np.percentile(self.S.hi[a:b], 10) >= -10.0
+
     def run(self):
         e, s = list(self.e), list(self.s)
         for k in range(self.n - 1):
+            if "F2" in RULES and self.fricative_gap(k):
+                t = self.join(k)                  # the junction rules; none -> the fricative starts where A ends
+                if t is None:
+                    t = self.idx(self.e[k])
+                    self.note(k, "F2 gap-to-fricative", cut=t)
+                else:
+                    self.trace[k] = "F2+" + self.trace.get(k, "")
+                e[k], s[k + 1] = t * HOP - 0.001, t * HOP + 0.001
+                continue
             if "J0" in RULES and self.voiced_gap(k):
                 t = self.join(k)
                 if t is None:
