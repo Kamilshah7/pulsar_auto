@@ -7,7 +7,8 @@ aligner2 GPU engine on Modal (deployed app "aligner2-signals"). Runs the whole a
 
 The local client (aligner2/remote.py) redeploys this app automatically when aligner2/*.py or this file
 changes. No memory snapshot (it restored stale code after redeploys): a cold container loads the models
-itself (~30-60 s); containers stay warm for SCALEDOWN_S after the last call (python -m aligner2.remote warm|cool).
+itself (~30-60 s); containers stay up only SCALEDOWN_S after the last call (Modal bills per second while a
+container runs, nothing when none does), and aligner2/production.py stops them as soon as a bundle is aligned.
 """
 import io
 import os
@@ -30,7 +31,7 @@ LAYERS = (6, 12, 18, 24)
 SHIFTS = (80, 160, 240)          # 5 / 10 / 15 ms: HuBERT frame-phase ensemble
 PYA_BIN = "/cache/pyannote-seg3/pytorch_model.bin"
 SIG_DIR = "/cache/signals"
-SCALEDOWN_S = 900
+SCALEDOWN_S = 20                 # spans the gaps between one run's calls; no paid idle tail
 
 
 def _sig_path(key):

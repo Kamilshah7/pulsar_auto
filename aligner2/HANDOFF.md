@@ -16,13 +16,14 @@ Branch: `claude/pulsar-auto-conversation-oi3e40` (pushed; not merged; no PR). Ev
   (So far it was used once to reject a variant, J13c, and its worst cases were spot-read after the build. That exposed
   two bugs, fixed in E1 and J14. So it is no longer perfectly clean.)
 
-## Current scores (MAE ms; `python -m aligner2.local_bench --test`)
-| | v16 (coarse) | + rule stage |
-|---|---|---|
-| dev 009+026, all | 21.8 | **17.5** |
-| dev, H | 28.9 | **22.7** |
-| held-out 049, all | 24.9 | **19.9** |
-| held-out 049, H | 28.7 | **22.9** |
+## Current scores (MAE ms; `python -m aligner2.local_bench --test`; engine run `aligner2_v18` identical)
+| | old production (forced_aligner) | v16 (coarse) | + rule stage (production) |
+|---|---|---|---|
+| dev 009+026, all | (circular) | 21.8 | **17.5** |
+| dev, H | cont-H 32.2 | 28.9 | **22.5** |
+| held-out 049, all | (circular) | 24.9 | **19.8** |
+| held-out 049, H | cont-H 29.1 | 28.7 | **23.0** |
+| ear judgments, 182 manual placements | 32.3 | 27.4 | **24.9** |
 
 ## Pipeline
 1. **Signals** (GPU, Modal engine `modal_aligner2.py`, app `aligner2-signals`, volume `aligner2-cache`): loudness,
@@ -34,7 +35,20 @@ Branch: `claude/pulsar-auto-conversation-oi3e40` (pushed; not merged; no PR). Ev
 3. **Rule stage** `aligner2/refine.py` (`refine.refine(z, texts, arpa, coarse)`): moves each boundary onto the
    acoustic landmark reviewers use for that junction class. The module docstring lists every rule and its evidence.
    Enabled rules are the `refine.RULES` set. It is wired into the engine (`modal_aligner2.align` pops
-   `refine=True` from a grid entry; `run_bench.GRID[3]` is v16 + rules) but **has not yet run on Modal**.
+   `refine=True` from a grid entry; `run_bench.GRID[3]` is v16 + rules). Ran on Modal as `aligner2_v17`: identical
+   to the local bench on every boundary.
+
+## Production (wired in, local session 2026-09-24)
+`pipeline.py` (the app's pipeline) now aligns with `aligner2/production.py`: v16 + rule stage (`run_bench.GRID[3]`) on
+the Modal engine, same `align(wav, words)` interface as the old `forced_aligner.ForcedAligner`, one batched engine call
+per bundle (`prefetch`), results identical to the benchmark (checked on 009-02, 026-04, 049-08: max diff 0.0 ms).
+Engine unreachable -> the old ForcedAligner for that clip (logged); `ALIGNER=forced` selects the old one outright.
+Cost: containers stop 20 s after the last call (`SCALEDOWN_S`) and production stops them as soon as a bundle is done,
+so only the cold start (~20-40 s model load) and processing are billed, never idle time. (A CPU-only local run was
+considered: no local GPU, 8 CPU threads; HuBERT-large x4 + xlsr-53 per clip were judged too slow.)
+Old vs new on the user's ear judgments (182 manual placements): old production 32.3 ms MAE, v16 27.4, v16 + rules 24.9;
+share of judged options it lands on that the user accepted: 56.8% / 61.3% / 74.0%. (The raw "ear-hit" in the reports
+favours the old aligner: its own cut was always one of the options played.)
 
 ## Running locally (CPU, no GPU needed)
 - `python -m aligner2.local_bench [--test] [--sides] [--pairs] [--audit] [--rules a,b]`: v16 vs refined.
@@ -50,10 +64,11 @@ Branch: `claude/pulsar-auto-conversation-oi3e40` (pushed; not merged; no PR). Ev
 - `python bench/tools/joins.py 026_04 5 9` or `... win T0 T1 STEP`: the wide table used for the full reads.
 - Letter peaks are cached in `bench/cache/aligner2/lexical_peaks_letter4.json` (dev + 049). `refine.refine` recomputes
   them if absent (numpy, a few s/clip; `device="cuda"` in the engine).
-- `segment.py` imports `aligner2.signals` (torch). To run segment on CPU without torch, stub it:
-  `sys.modules['aligner2.signals'] = types.SimpleNamespace(HOP=0.002)`. Reproducing v16 exactly also needs the xlsr
-  espeak vocab (`phones.vocab()`, Hugging Face; blocked in the cloud, probably fine locally) and sklearn (only for the
-  unused gmm pause model).
+- Coarse stage on CPU: `python -m aligner2.local_coarse 026_04 | --check 009 026 049` (torch CPU + the cached signals;
+  espeak / g2p strings are taken from the last engine run, `aligner2_v17.json`). Reproduces v16 exactly on all 36
+  dev + held-out clips (12-22 s per clip), so coarse-stage changes can be developed without a Modal deploy.
+- `python -m aligner2.gross [--audit] [--list CAT] [--worse MS]`: error by neighbourhood (filler / partial / letter /
+  unintelligible / other) and the boundaries the rule stage made worse than v16.
 
 ## Workflow that produced every rule
 residuals → worst cases → 2 ms `--show` reads → a principled definition → `landmark_eval` compares 2-5 definitions →
@@ -68,7 +83,8 @@ any>DH except after a nasal: the quietest frame ±20 ms of the letter midpoint),
 vowel-initial word after a vowel).
 False pauses: **J0** (coarse gap < 100 ms never within 10 dB of the floor → join), **F2** (gap that is frication
 throughout before a fricative-initial word → join).
-Pause edges: P1 (a separate event after the word: breath / hiss / fricative runs on / stop release), P2, **P3**
+Pause edges: P1 (a separate event after the word: breath / hiss / fricative runs on / stop release -- the release
+searched up to 100 ms after the coarse end, weak (>= 2 dB) transients count, must decay: P1b100 + P1bt2), P2, **P3**
 (steepest rise within 30 ms). Clip edges: E1 (fixed: running speech only if the level never nears the floor; gap band
 measured from the floor), E2.
 
@@ -90,14 +106,19 @@ held-out -0.4 s); nasal+DH dental-nasal release (overshoots 20-56 ms); V>W at th
 midpoint); floor-level-silence missed-pause test (8/10 not pauses); fixed word-peak-relative / end-of-fall /
 x%-of-fall pause-end definitions (all worse on accepted golds); J14 after nasals / liquids / fricatives; charsiu as an
 arbiter (the rules are closer 298 : 88 where they disagree by > 60 ms); soft / wildcard filler modes (grid 1-2: worse);
-J1 dip path on its own.
+J1 dip path on its own. Local session: zcr-led J4 onset (no better as a cascade; S/F/SH worse), J13 window guards
+(help DH, hurt every stop class), J13th = TH at the quietest point (dev +0.14 s, 049 -0.04 s), J14x = glottal onset after
+nasals / liquids / fricatives (H joins moved the wrong way; deepest-dip variant -0.06 s). Details: NOTES.md "RULE-STAGE REGRESSIONS".
 
 ## Next steps
-1. **Modal (needs the user):** `pip install modal`; set `MODAL_TOKEN_ID` / `MODAL_TOKEN_SECRET` for the workspace
-   that owns `aligner2-signals` + `aligner2-cache` (it must be able to deploy: `aligner2/remote.py` redeploys when
-   the code changes). Then run `python -m aligner2.run_bench` and confirm GRID[3] (v16 + rules) matches local_bench.
-   The engine calls `refine.refine(z, texts, fc_strs, p, device="cuda")`, so it recomputes letter peaks with torch
-   forward-backward; check they match the numpy cache.
+1. ~~Modal~~ **DONE (local session, 2026-09-24):** modal 1.5.5, workspace `alinarohannes777` (owns `aligner2-cache`).
+   `python -m aligner2.run_bench --tag v17` redeployed the engine (code 387157bd), 0 clips needed signals, 50 clips x 4
+   settings in 111 s. Boundary-by-boundary: engine GRID[0] == stored v16 on all 7364 boundaries, and engine GRID[3] ==
+   `local_bench --test` refined on all 5648 (009/026/049), max |d| 0.0 ms -- the torch letter peaks reproduce the numpy
+   cache exactly. Per set, v16 -> rules: 009 23.5 -> 18.6, 026 20.2 -> 16.5, 049 24.9 -> 19.9, old14 26.5 -> 22.0
+   (H 28.9 -> 23.9; old14 was never used for development). Output: `bench/prov_runs/aligner2_v17.{json,txt,log}`.
+   `run_bench` now keeps 049 out of every leave-one-set-out selection pool (HELD_OUT); the choice is unchanged
+   (v16 + rules on every set).
 2. **Coarse-stage work (the biggest remaining lever):**
    - Filler-aware lexical alignment (fillers as sustained-vowel islands; repeated fillers split at gaps).
    - Transcript-mismatch detection (the CTC emits letters the transcript lacks).

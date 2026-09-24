@@ -3,7 +3,7 @@ Client for the aligner2 GPU engine (modal_aligner2.py, deployed app "aligner2-si
 
     python -m aligner2.remote fill     # compute + cache signals for every benchmark clip on the GPU
     python -m aligner2.remote warm     # keep 1 A10G container always on (~$1.10/h while warm!)
-    python -m aligner2.remote cool     # back to on-demand (containers idle out after 15 min)
+    python -m aligner2.remote cool     # back to on-demand (containers stop 20 s after the last call)
     python -m aligner2.remote ping     # time a round trip (cold vs warm start)
 
 Any change to the engine's code (REMOTE_FILES, modal_aligner2.py) is redeployed automatically before the next call.
@@ -55,9 +55,10 @@ def ensure_deployed():
     log("deployed; the first call starts a fresh container that loads the models (~30-60 s)")
 
 
-def stop_containers():
+def stop_containers(why="so no call reaches old code"):
     """stop every running container of the engine: warm containers from a previous deploy keep serving
-    the OLD code otherwise (seen 2026-09-24: calls right after a deploy still ran the previous segment.py)"""
+    the OLD code otherwise (seen 2026-09-24: calls right after a deploy still ran the previous segment.py);
+    production also calls it after each bundle so no idle time is billed"""
     import json
     r = subprocess.run([sys.executable, "-m", "modal", "container", "list", "--json"], cwd=ROOT,
                        capture_output=True, text=True, encoding="utf-8", errors="replace")
@@ -67,7 +68,7 @@ def stop_containers():
         ids = []
     for cid in ids:
         subprocess.run([sys.executable, "-m", "modal", "container", "stop", "--yes", cid], cwd=ROOT, capture_output=True)
-    log(f"stopped {len(ids)} running engine container(s) so no call reaches old code")
+    log(f"stopped {len(ids)} running engine container(s) {why}")
 
 
 def _local_code_hash():

@@ -1,0 +1,110 @@
+[18:58:01] asking the engine which of 50 clips need signals (starts a container if none is warm)
+[18:58:01] source changed -> redeploying GPU engine (deploy output follows)
+    Building image im-ehuSluTuBEJmSXuvZqwo0K
+    Using legacy Image Builder version. We suggest upgrading at https://modal.com/settings/image-config.
+    => Step 0: FROM base
+    => Step 1: COPY . /
+    Saving image...
+    Image saved, took 1.01s
+    Built image im-ehuSluTuBEJmSXuvZqwo0K in 1.96s
+    ✓ Created objects.
+    ├── 🔨 Created mount F:\BB\ETN-SC\pulsar_auto\modal_aligner2.py
+    ├── 🔨 Created mount PythonPackage:aligner2
+    └── 🔨 Created function Engine.*.
+    ✓ App deployed in 11.386s! 🎉
+    View Deployment:
+    https://modal.com/apps/alinarohannes777/main/deployed/aligner2-signals
+[18:58:19] stopped 0 running engine container(s) so no call reaches old code
+[18:58:19] deployed; the first call starts a fresh container that loads the models (~30-60 s)
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+[18:58:49] engine code verified (387157bd, loaded from /root/aligner2)
+[18:58:50] 0 clips need signals
+signals: 0 clips computed on the GPU (49s)
+[18:58:50] aligning 50 clips x 4 settings
+[18:59:08] aligned 1/50  (18s)
+[18:59:17] aligned 2/50  (27s)
+[18:59:18] aligned 3/50  (28s)
+[18:59:22] aligned 4/50  (32s)
+[18:59:23] aligned 5/50  (33s)
+[18:59:26] aligned 6/50  (36s)
+[18:59:28] aligned 7/50  (38s)
+[18:59:30] aligned 8/50  (40s)
+[18:59:30] aligned 9/50  (40s)
+[18:59:30] aligned 10/50  (40s)
+[18:59:33] aligned 11/50  (43s)
+[18:59:36] aligned 12/50  (46s)
+[18:59:40] aligned 13/50  (50s)
+[18:59:41] aligned 14/50  (51s)
+[18:59:41] aligned 15/50  (51s)
+[18:59:43] aligned 16/50  (53s)
+[18:59:47] aligned 17/50  (57s)
+[18:59:47] aligned 18/50  (58s)
+[18:59:47] aligned 19/50  (58s)
+[18:59:50] aligned 20/50  (60s)
+[18:59:53] aligned 21/50  (63s)
+[18:59:56] aligned 22/50  (66s)
+[18:59:58] aligned 23/50  (68s)
+[18:59:58] aligned 24/50  (68s)
+[18:59:58] aligned 25/50  (69s)
+[19:00:01] aligned 26/50  (71s)
+[19:00:04] aligned 27/50  (74s)
+[19:00:07] aligned 28/50  (78s)
+[19:00:08] aligned 29/50  (78s)
+[19:00:08] aligned 30/50  (79s)
+[19:00:11] aligned 31/50  (82s)
+[19:00:14] aligned 32/50  (84s)
+[19:00:15] aligned 33/50  (85s)
+[19:00:16] aligned 34/50  (86s)
+[19:00:16] aligned 35/50  (86s)
+[19:00:23] aligned 36/50  (93s)
+[19:00:24] aligned 37/50  (94s)
+[19:00:24] aligned 38/50  (94s)
+[19:00:27] aligned 39/50  (97s)
+[19:00:27] aligned 40/50  (98s)
+[19:00:28] aligned 41/50  (98s)
+[19:00:30] aligned 42/50  (101s)
+[19:00:31] aligned 43/50  (101s)
+[19:00:32] aligned 44/50  (102s)
+[19:00:32] aligned 45/50  (102s)
+[19:00:33] aligned 46/50  (103s)
+[19:00:35] aligned 47/50  (105s)
+[19:00:36] aligned 48/50  (106s)
+[19:00:36] aligned 49/50  (106s)
+[19:00:40] aligned 50/50  (111s)
+aligned 50 clips x 4 settings on the GPU (111s)
+== aligner2 v17 -- leave-one-set-out; params per held-out set: {'009': {'min_pause': 0.03, 'pause_model': 'word_ref', 'lam': 1000.0, 'cont_model': 'class', 'radius_ms': 10, 'onset_ms': 10, 'ref_mode': 'word', 'theta_db': 20.0, 'clip_anchor_ms': 150, 'unit': 'letter4', 'soft': 'off', 'refine': True}, '026': {'min_pause': 0.03, 'pause_model': 'word_ref', 'lam': 1000.0, 'cont_model': 'class', 'radius_ms': 10, 'onset_ms': 10, 'ref_mode': 'word', 'theta_db': 20.0, 'clip_anchor_ms': 150, 'unit': 'letter4', 'soft': 'off', 'refine': True}, '049': {'min_pause': 0.03, 'pause_model': 'word_ref', 'lam': 1000.0, 'cont_model': 'class', 'radius_ms': 10, 'onset_ms': 10, 'ref_mode': 'word', 'theta_db': 20.0, 'clip_anchor_ms': 150, 'unit': 'letter4', 'soft': 'off', 'refine': True}, 'old14': {'min_pause': 0.03, 'pause_model': 'word_ref', 'lam': 1000.0, 'cont_model': 'class', 'radius_ms': 10, 'onset_ms': 10, 'ref_mode': 'word', 'theta_db': 20.0, 'clip_anchor_ms': 150, 'unit': 'letter4', 'soft': 'off', 'refine': True}}
+set   kind            n     MAE    med     w5    w10    w20   bias
+009   all          1876    18.6   11.0    29%    48%    72%   -1.2
+009   cont         1456    16.6   11.0    27%    47%    72%   +0.8
+009   pause         396    25.2   10.0    37%    50%    72%   -7.9
+009   human         596    24.2   11.6    27%    44%    66%   -2.2
+009   cont_human    499    18.6   11.2    27%    46%    68%   +1.7
+026   all          1946    16.5   10.0    29%    51%    73%   -1.4
+026   cont         1476    16.1   11.0    26%    48%    72%   -0.1
+026   pause         446    17.8    8.0    38%    59%    75%   -6.1
+026   human         432    20.8   12.1    24%    43%    67%   +0.2
+026   cont_human    367    19.7   12.1    24%    43%    68%   +1.6
+026   ear-hit       468   35.7%
+049   all          1826    19.9   11.5    26%    46%    66%   -2.4
+049   cont         1342    19.8   12.1    24%    43%    65%   -2.4
+049   pause         460    20.3    9.1    34%    52%    70%   -1.9
+049   human         546    22.9   11.9    26%    45%    62%   +2.0
+049   cont_human    461    22.2   11.4    26%    46%    62%   +4.1
+049   ear-hit       314   38.9%
+old14 all          1716    22.0   12.0    25%    44%    67%   -5.4
+old14 cont         1210    19.2   12.0    24%    44%    68%   -4.2
+old14 pause         478    27.8   11.7    26%    45%    65%   -8.9
+old14 human         513    23.9   11.6    26%    45%    64%   +2.0
+old14 cont_human    439    21.1   10.9    26%    46%    65%   +2.9
+old14 ear-hit       284   37.7%
+ALL   all          7364    19.2   11.0    27%    47%    70%   -2.5
+ALL   cont         5484    17.8   11.5    25%    45%    69%   -1.3
+ALL   pause        1780    22.8    9.9    33%    52%    70%   -6.2
+ALL   human        2087    23.1   11.8    26%    44%    65%   +0.4
+ALL   cont_human   1766    20.4   11.4    26%    45%    66%   +2.6
+ALL   ear-hit      1066   37.1%
+
+(best single setting on everything, for reference: {'min_pause': 0.03, 'pause_model': 'word_ref', 'lam': 1000.0, 'cont_model': 'class', 'radius_ms': 10, 'onset_ms': 10, 'ref_mode': 'word', 'theta_db': 20.0, 'clip_anchor_ms': 150, 'unit': 'letter4', 'soft': 'off', 'refine': True} -> MAE 19.2, w5 27%)

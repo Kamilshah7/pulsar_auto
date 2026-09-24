@@ -27,12 +27,19 @@ FRAME_OFF = 0.0125          # HuBERT frame k covers samples [320k, 320k + 400): 
 VOCAB = {c: i for i, c in enumerate(["<pad>", "<s>", "</s>", "<unk>", "|", "E", "T", "A", "O", "N", "I", "H", "S", "R",
                                      "D", "L", "U", "M", "W", "C", "F", "G", "Y", "P", "B", "V", "K", "'", "X", "J", "Q", "Z"])}
 WILD = -1
+# Fillers spelled the way the model hears them: HuBERT (LibriSpeech CTC, no fillers in its training text) never emits
+# U-H for "uh" -- inside the 42 dev "uh" it emits "A" 20x and nothing 14x; inside 17 "um": A 6x, AM 4x, M 2x.
+FILLER_SPELL = {"uh": "a", "ah": "a", "um": "am", "uhm": "am", "umm": "am"}
+RESPELL_FILLERS = False                  # REJECTED as a blanket rule (coarse_ab: dev -0.73 s): fixes "uh uh you" but
+# the A fires at a sustained filler's ONSET and a third of fillers emit nothing, so ends collapse (uh|so -128 ms)
 
 
 def spell(token):
     """token text -> list of label ids (WILD for a wildcard)"""
     w = token.strip()
     w = re.sub(r"^\(\((.*)\)\)$", r"\1", w)
+    if RESPELL_FILLERS and w.lower() in FILLER_SPELL:
+        w = FILLER_SPELL[w.lower()]
     if re.search(r"\d", w):
         from num2words import num2words
         w = re.sub(r"\d+(\.\d+)?", lambda m: " " + num2words(float(m.group()) if "." in m.group() else int(m.group())) + " ", w)

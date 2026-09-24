@@ -37,14 +37,15 @@ def candidates(S, pa, pb, cut, pair):
     a, b = S.clip(min(pa, cut) - MS(10)), S.clip(max(pb, cut) + MS(10))
     c = {"v16": cut, "mid_peaks": (pa + pb) // 2}
     c.update(transition_marks(S, pa, pb))
-    for name, feats in (("zh", ("zcr", "hi")), ("lo_cent", ("lo", "cent")), ("loud", ("Ls",))):
+    for name, feats in (("zh", ("zcr", "hi")), ("z", ("zcr",)), ("lo_cent", ("lo", "cent")), ("loud", ("Ls",))):
         for q, i in transition_marks(S, pa, pb, feats).items():
             c[f"{name}_{q}"] = i
     cA, cB = pair.split(">")
     if "?" in (cA, cB):
         return c
     for q in (0.2, 0.5, 0.8):
-        for name, feats in (("self", None), ("self_zh", ("zcr", "hi")), ("self_loud", ("Ls",)), ("self_lo", ("lo", "cent"))):
+        for name, feats in (("self", None), ("self_zh", ("zcr", "hi")), ("self_z", ("zcr",)), ("self_loud", ("Ls",)),
+                            ("self_lo", ("lo", "cent"))):
             i = R.transition(S, cA, cB, a, cut, b, q, feats)
             if i is not None:
                 c[f"{name}{int(q * 100)}"] = i
@@ -135,6 +136,20 @@ def main():
                     cd[f"mid_loudmin{r}"] = w0 + int(np.argmin(S.Ls[w0:w1]))
                     cd[f"mid_himin{r}"] = w0 + int(np.argmin(S.hi[w0:w1]))
                     cd[f"mid_glo{r}"] = w0 + int(np.argmax(S.glottal[w0:w1]))
+            pa_, pb_ = lx["last"][k], lx["first"][k + 1]
+            if pb_ > pa_:
+                # the closure precedes word k+1's first-letter peak: from 20 ms before the letter midpoint up to it
+                w0, w1 = S.clip(mid - MS(20)), S.clip(max(pb_, mid + MS(20)))
+                cd["mid_to_b_loudmin"] = w0 + int(np.argmin(S.Ls[w0:w1]))
+                # the +-20 ms window only when it holds a real dip (>= 6 dB under the louder of its edges' 10 ms)
+                v0, v1 = S.clip(mid - MS(20)), S.clip(mid + MS(20))
+                wm = v0 + int(np.argmin(S.Ls[v0:v1]))
+                edge = max(S.Ls[S.clip(v0 - MS(10)):v0 + 1].max(), S.Ls[v1:S.clip(v1 + MS(10)) + 1].max())
+                cd["mid20_guard"] = wm if edge - S.Ls[wm] >= 6.0 else cd["mid_to_b_loudmin"]
+                # no closure in the window = its quietest frame is still within 10 dB of the loudest frame between
+                # the two letter peaks (e.g. inside a spelled letter's vowel) -> extend up to word k+1's first letter
+                top = S.Ls[S.clip(pa_):S.clip(pb_) + 1].max()
+                cd["mid20_vguard"] = wm if top - S.Ls[wm] >= 10.0 else cd["mid_to_b_loudmin"]
             cd.update(mfcc_marks(z, S, lx["last"][k], lx["first"][k + 1], a_, b_))
             if b_ > a_ + 2:
                 cd["hi_min_region"] = a_ + int(np.argmin(S.hi[a_:b_]))

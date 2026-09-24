@@ -5532,3 +5532,81 @@ partial / unintelligible neighbourhoods 5% dev, 1.5% 049). Read cases: all are t
 Tried and rejected in this round (principled, but no gain or held-out loss): a generic 50%-change rule for all remaining class
 pairs (-0.28 s), the dental-nasal release for nasal+DH without frication (overshoots 20-56 ms), V>W at the loudness minimum
 (= letter midpoint), a floor-level-silence missed-pause test (8 of 10 runs >= 40 ms are not gold pauses).
+
+## RULE-STAGE REGRESSIONS (local session 2026-09-24; 2 ms reads; source of truth = signal, then H, then accepted gold)
+Modal check first: engine GRID[0] == stored v16 (7364/7364 boundaries) and engine GRID[3] == local_bench refined (5648/5648),
+max |d| 0.0 ms. The coarse stage also runs on CPU now (aligner2/local_coarse.py, stored espeak/ARPAbet strings), identical to v16.
+aligner2/gross.py --audit --worse 40: 37 dev boundaries where the rule stage is >= 40 ms worse than v16 (+2.53 s). Read at 2 ms:
+ A. FRICATION ONSET FROM THE HIGH-BAND RATIO ALONE (J4, J6). hi rises whenever the level falls (the noise floor dominates the
+    ratio), so "20% of the zcr / high-band change" fires on the decay of the previous sound, not on frication:
+    they|think (J4 17.722; TH onset 17.790 = zcr .07->.11, trn 5.1; accepted gold 17.796), going|through H (J4 10.002; zcr stays
+    .03-.06 until 10.048, trn 6.4; H 10.052), and|support (J6 4.500 at hi -42 while the D voice bar is at -45 dB; S onset
+    4.542-4.548 zcr .08->.16, trn 5.3). -> frication onset must be zcr-led (aperiodic HF energy), not hi alone.
+ B. J13 WINDOW WITHOUT A CLOSURE. "quietest frame within +-20 ms of the letter-peak midpoint" lands inside a loud vowel when the
+    two letter peaks are far apart: j|crew (5.784 at -2 dB inside the spelled letter's EY; closure 5.850-5.912, K burst 5.914,
+    gold 5.896), leather|blazer (0.576; B voice bar decays to -31 at 0.666, burst 0.672, gold 0.650/0.675), we|do H (5.592 = a
+    jitter dip of creaky "we"; closure 5.644-5.672, burst 5.674, H 5.666).
+ C. GLOTTAL ONSET OF A VOWEL-INITIAL WORD MISSED because J14 is gated on the ARPAbet class of word k's last phone and on an
+    8 dB transient: chance|i (S elided, N murmur -> glottal stop -35 dB, 10+ dB under both sides -> attack trn 14.3 at 9.868;
+    accepted gold 9.866; J5 cut the AE>N transition 9.762), but|i H (glottalized T: loudness min 17.666, first creaky pulse
+    trn 3.8 at 17.678; H 17.681; J1 change-mid 17.746), this|interesting (S ends 2.858, creaky schwa 2.864-2.906, glottal stop
+    2.912-2.918, attack trn 9.5-10.0 at 2.918-2.924; accepted 2.917; J5 2.860), largely|i (creak with pulses every ~25 ms;
+    deepest minimum 7.892-7.904 before the attack at 7.910; gold 7.902; J9 midpoint 7.834), blazer|and H (no loudness dip:
+    per .67->.32 at 1.308-1.320 with zcr/hi up, trn 4.0; H 1.326 = end of the per dip; J9 1.256), double|and H (flat -5..-8 dB;
+    a 2-3 dB dip with trn 2.4 at 22.228 = H; J9 liq-rise 22.170).
+ D. FRICATIVE ONSET FOUND FORWARD FROM THE VOWEL instead of back from the fricative's own letter peak: yeah|so (350 ms exhale
+    0.374-0.72, cent 6.6-7.3, zcr .13-.23, hi -15; the S proper 0.746-0.752: cent 8.3, zcr .5, hi -2; J4 took the breath onset
+    0.370, so.start -384; v16 had missed the pause), guy's|horrible H (Z fades to a spectral trough 4.974-4.990, then a
+    stronger /h/ frication cent 8.0-8.5 zcr .41-.62 to 5.21; H horrible.start 4.982 = the trough; F1 ran "guy's" on to 5.096;
+    coarse gap 304 ms > F2's 200 ms), steps|so H (coarse gap inside the S of "so"; so.start H 15.789 = transient 15.792 + the
+    strong S; J0 gap-mid 15.858).
+ E. P1/P2 "SEPARATE EVENT" ACROSS A GAP THAT IS NOT A SEPARATION: then|the H (a 70 ms dip at floor+19 dB, then a 160 ms nasal
+    murmur = the word's own lengthened N, lo 0, cent 5.5; H keeps it: 14.579; P1 cut 14.350), so|so H (a 40 ms hum, a ~10 ms
+    dip, then the S; H 0.824 keeps the hum; P2 0.890). Contrast 026-0 you.start H: a hum with a 130 ms FLOOR gap before the
+    word is excluded. Separation needs a real silence (floor, >= ~100 ms?) or a class mismatch, not any 16 ms dip.
+ F. E1 CLIP START: 009-06 you (H 0.326): 180 ms loud sibilant at the clip start (0.084-0.264, zcr .4-.5, cent 8.2, 0 dB) +
+    voiced stretch; E1 took a dip at 0.02 as "the last real gap" -> start 0.032 (-294). A /j/-initial word cannot contain a
+    180 ms voiceless sibilant; the foreign segment's class ends at 0.27 (R11).
+ G. J5 ON A TWO-STAGE FRICATIVE DECAY: was|able (loud Z to 17.165, then weak frication zcr .12-.31 until the vowel 17.240;
+    accepted 17.243; R7: until it dies; J5 took the first drop 17.170).
+ H. J0 + J13 ON A VOICELESS-STOP CLOSURE THE GOLD LEAVES AS A GAP: very|proud (closure 8.296-8.344, burst 8.350; gold
+    8.292/8.349), a|kitten (closure 9.332-9.386, burst 9.392; gold 9.332/9.387): J13 puts both sides near the burst -> the
+    first word's END is off by the closure (+49). Accepted-gold convention; H convention not yet measured.
+ NOT rule errors (data or H disagree with the accepted gold): them|fill (weak F from 12.518, zcr -> .5 by 12.538, J4 12.512
+    is right; the accepted gold 12.583 leaves the F out = C1 class the audit misses because the gap starts with the M decay),
+    and|uh H (one long creaky nasal 13.962-14.064 -> release 14.066; H 13.992 = SEP peak, no acoustic event; the rule follows the
+    data), and|in (affricated D release crossfading to the vowel by 8.388; midpoint ~8.35; gold/rule +-30: ambiguous).
+ Tested on those readings (landmark_eval on gold-continuous joins, rule_ab on dev, 049 only to reject) -- all REJECTED:
+  - zcr-led frication onset for J4 (self_z20 cascade): better where zcr has contrast (V>fric 15.8 vs 19.0 on 60%), but the full
+    cascade is no better (20.4 vs 20.0, H 24.5 vs 23.4); per phone the current J4 wins for S / F / SH. Kept J4.
+  - J13 window guards (edge-dip guard, vowel-level guard, window up to word k+1's first letter): better for DH (V>DH 15.5 -> 11.1/
+    12.0) but worse for every stop class (V>stop H 21.9 -> 24.7, liq>stop 9.7 -> 12.4, stop>stop 10.9 -> 12.9). Kept J13.
+  - J13th (TH treated like DH, the quietest point; V>TH J4 is 33.7 ms, median -29): dev +0.14 s, held-out 049 -0.04 s -> rejected.
+  - J14x (glottal onset after nasal / liquid / fricative): v1 (largest transient, closure >= 10 dB under the sound before)
+    dev +0.13 s but both H joins moved the wrong way against the 2 ms data (um|and, of|uh: the largest transient is a later
+    pulse inside the vowel); v2 (deepest dip between the letter peaks) dev -0.06 s (the deepest dip is often elsewhere). Rejected.
+  Conclusion: the regressions are scattered single cases; the class definitions are near what the evidence supports (as the
+  handoff found for V>V). The remaining lever is the coarse / lexical stage.
+
+## PRODUCTION + COARSE-MISS ROUND (local session 2026-09-24)
+Production: pipeline.py now aligns with aligner2/production.py (v16 + rules on the Modal engine, one batched call per
+bundle, containers stopped after each bundle; fallback = old ForcedAligner). Fair comparison with the old production
+aligner on the user's ear judgments (the options played always included the old aligner's own cut, so raw ear-hit is
+biased toward it): 182 manual placements -- old 32.3 ms MAE, v16 27.4, v16 + rules 24.9; of the judged options each system
+lands on, the user accepted 56.8% / 61.3% / 74.0%.
+Coarse gross misses (v16 and refined both > 80 ms): 72 dev boundaries, 15.1% of dev error, 45 of them H.
+ - FINAL STOP RELEASE AFTER A LONG / VOICED CLOSURE (like.end H -233: voiced K closure 50 ms, burst trn 6.1 at +64 ms, 170 ms
+   aspiration to -38 dB; walk.end H -135: weak release trn 2.0-2.4 at +60 ms; wasn't.end H -126: T released straight into
+   110 ms of sibilant frication). H stop-final pause ends sit at median -43 dB re p99 (range -29..-58).
+   -> P1(b): burst search 100 ms (was 60), >= 2 dB transients, never into the next word's letters, and the burst must DECAY
+   (a burst that grows into a vowel within 50 ms is the next word: that fixed a 049 stop>DH loss). Dev +0.10 s (stop>stop
+   pause H 33.3 -> 25.9, stop>V pause H 19.7 -> 17.6), 049 +0.05 s. ADOPTED (P1b100, P1bt2).
+   Rejected: a level-only "audibility" end (word lasts until < p99-40/43/46 dB): overshoots every class (median +10..+37 ms).
+ - FILLERS: HuBERT never emits U-H for "uh" (42 dev: A 20x, nothing 14x); "um": A/AM/M. Respelling uh->a, um->am fixes
+   "uh uh you" (-220 -> +14) but breaks others (uh|so -128, quick|uh -163/-196: the A fires at a sustained filler's onset
+   and a third emit nothing) -> dev -0.73 s, REJECTED. At continuous filler joins the gold lies -200..+250 ms from any letter
+   peak (midpoint scatter +-100 ms): fillers need an ACOUSTIC segmenter (sustained-vowel island), not a letter reference.
+ - Other H misses read: platinum|and (CTC fired "and"'s A on the M murmur 150 ms early, the real 60 ms floor pause lies
+   after it), be|scooped (H excludes a 150 ms S-like hiss the CTC calls S -- ambiguous), uh|but (J13's letter midpoint is
+   dragged by the filler's peak; the B burst sits at "but"'s own first letter).
+Scores after this round (local == engine v18): dev 17.5 (H 22.5), 049 19.8 (H 23.0), all four sets 19.1 (H 23.0).

@@ -2,7 +2,8 @@
 Run aligner2 on the GPU engine over every gold clip and score it (aligner2/benchmark.py).
 
 The two global parameters are never tuned on the set being scored: for each gold set, the grid
-setting with the lowest MAE on the OTHER three sets is applied to it (leave-one-set-out).
+setting with the lowest MAE on the OTHER sets is applied to it (leave-one-set-out). The held-out set
+(049) is scored but never part of any selection pool.
 
     python -m aligner2.run_bench [--tag NAME]
 """
@@ -21,6 +22,7 @@ BASE = {"min_pause": 0.03, "pause_model": "word_ref", "lam": 1000.0, "cont_model
 GRID = [dict(BASE, unit="letter4", radius_ms=10, soft=sm) for sm in ("off", "wild", "wild+cut")]
 GRID += [dict(BASE, unit="letter4", radius_ms=10, soft="off", refine=True)]     # + the rule stage (aligner2/refine.py)
 SETS = ("009", "026", "049", "old14")
+HELD_OUT = ("049",)              # scored, but never in the pool that picks a setting for any set
 
 
 def main():
@@ -40,7 +42,7 @@ def main():
         scores.append(S)
     loso, chosen = {}, {}
     for s in SETS:
-        others = [o for o in SETS if o != s]
+        others = [o for o in SETS if o != s and o not in HELD_OUT]
         def mae_others(gi):
             num = sum(scores[gi][o]["all"]["mae"] * scores[gi][o]["all"]["n"] for o in others)
             return num / sum(scores[gi][o]["all"]["n"] for o in others)

@@ -219,11 +219,21 @@ class PulsarPipeline:
         return round(min(100.0, n_final_tokens / expected * 100), 1)
 
     def _get_aligner(self):
-        """Lazily initialize and cache ForcedAligner to avoid 60-90s model reload overhead."""
+        """Production word aligner: aligner2 (v16 + rule stage) on the Modal GPU engine, see aligner2/production.py.
+        Falls back to the old ForcedAligner per clip if the engine is unreachable; ALIGNER=forced selects it outright."""
         if self._aligner is None:
-            from forced_aligner import ForcedAligner
-            self._aligner = ForcedAligner()
+            from aligner2.production import get_aligner
+            self._aligner = get_aligner(log=self.log)
+            self.log(f"[Acoustic Engine] word aligner: {getattr(self._aligner, 'name', type(self._aligner).__name__)}")
         return self._aligner
+
+    def _prefetch_alignments(self, aligner, items):
+        """align a whole bundle in one parallel engine call (aligner2); per-clip align() then reads the cache"""
+        if hasattr(aligner, "prefetch") and items:
+            try:
+                aligner.prefetch(items)
+            except Exception as e:
+                self.log(f"[Acoustic Engine] batch alignment failed ({e!r}); aligning clip by clip")
 
     def _load_existing_state(self):
         """Restore previous state if files exist."""
@@ -1021,6 +1031,15 @@ Return ONLY a valid JSON object mapping clip index ("{start_idx}" to "{end_idx}"
 
         aligner = self._get_aligner()
         final_tokens = []
+        from forced_aligner import split_abbreviations
+        batch = []
+        for c in clips:
+            wpath = os.path.join(AUDIO_DIR, c["filename"])
+            ws = split_abbreviations([w["word"].strip(".,?!\"'") for w in rep_map.get(c["index"], groq_map.get(c["index"], []))
+                                      if w.get("word")])
+            if os.path.exists(wpath) and ws:
+                batch.append((wpath, ws))
+        self._prefetch_alignments(aligner, batch)
 
         for c in clips:
             c_idx = c["index"]
@@ -1162,6 +1181,15 @@ Return ONLY a valid JSON object mapping clip index ("{start_idx}" to "{end_idx}"
         clip_map = {c["index"]: c for c in clips}
 
         aligner = self._get_aligner()
+        if isinstance(parsed_data, dict):
+            batch = []
+            for c_idx_str, toks in parsed_data.items():
+                ci = int(c_idx_str) if str(c_idx_str).lstrip("-").isdigit() else None
+                if ci in clip_map and toks:
+                    wpath = os.path.join(AUDIO_DIR, clip_map[ci]["filename"])
+                    if os.path.exists(wpath):
+                        batch.append((wpath, toks))
+            self._prefetch_alignments(aligner, batch)
 
         final_tokens = []
         self.log("=================================================================")

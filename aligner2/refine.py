@@ -51,7 +51,11 @@ Pause edges (the coarse stage found a pause):
       laugh, click; R3) -> end at the gap; (d) a sonorant-final word runs into a long hiss with no CTC letters
       (a breath) -> end where the hiss starts; F1 a final fricative still sounding at the coarse end runs on
       until the frication dies (R7; H convention -- the old accepted golds cut fricatives ~15 ms earlier);
-      (b) a final stop's release burst right after the coarse end is kept (R2).
+      (b) a final stop's release burst right after the coarse end is kept (R2): searched up to 100 ms after it
+      (voiced / silent closures run that long: like.end, walk.end H), never into the next word's letters, any
+      >= 2 dB transient after a closure (weak releases), and only if it DECAYS -- a burst that grows into a vowel
+      within 50 ms is the next word's onset (P1b100 + P1bt2: dev +0.10 s, stop>stop pause H 33.3 -> 25.9 ms;
+      049 +0.05 s).
   P2  word start: kept unless a separate event precedes the word across a real gap -> start out of the gap.
   P3  otherwise the speech onset: the steepest loudness rise within 30 ms of the coarse start (after the
       pause's middle, before the first-letter peak).
@@ -70,7 +74,8 @@ CLASS = {**{p: "V" for p in VOWELS}, **{p: "stop" for p in ("P", "B", "T", "D", 
          "HH": "h", **{p: "nas" for p in ("M", "N", "NG")}, "L": "liq", "R": "liq", "W": "gl", "Y": "gl"}
 BG_DB = 6.0                                   # a released stop's tail: until within 6 dB of the residual level
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
-RULES = {"F2", "J0", "J1", "J1n", "J1m", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "P3", "E1", "E2"}   # enabled
+RULES = {"F2", "J0", "J1", "J1n", "J1m", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "P3", "E1", "E2",
+         "P1b100", "P1bt2"}   # enabled
 # (aligner2/local_bench.py --rules J1,J4,... for ablations)
 
 
@@ -118,7 +123,7 @@ class Sig:
 
 
 # ── landmark detectors (indices on the 2 ms grid) ────────────────────────────────────────────────────────
-def burst_onset(S, a, b, prefer="last", closure_db=6.0):
+def burst_onset(S, a, b, prefer="last", closure_db=6.0, min_trn=3.0):
     """stop release in [a, b): a >2 kHz transient (>= 3 dB) that follows a CLOSURE -- the 16 ms before it at
     least closure_db quieter than the 16 ms after it (glottal pulses in creaky voice have no closure).
     Returns the burst onset: the first frame >= 25% of the transient peak within 10 ms before it."""
@@ -128,7 +133,7 @@ def burst_onset(S, a, b, prefer="last", closure_db=6.0):
     cands = []
     i = a
     while i < b:
-        if S.trn[i] >= 3.0:
+        if S.trn[i] >= min_trn:
             j = i
             while j + 1 < b and S.trn[j + 1] >= 1.5:
                 j += 1
@@ -513,8 +518,15 @@ class Clip:
                     self.note(k, "P1 fricative", end=j)
                     return j
         if stop_final:                                                         # (b) release after the coarse end
-            bu = burst_onset(S, i_end, min(lim, i_end + MS(60)), prefer="first")
+            win = 100 if "P1b100" in RULES else 60                     # closures up to 100 ms
+            blim = min(lim, i_end + MS(win))
+            if "P1b100" in RULES and k + 1 < self.n:                    # never into the next word's letters
+                blim = min(blim, self.lex["first"][k + 1] - MS(20))
+            bu = burst_onset(S, i_end, blim, prefer="first",
+                             min_trn=2.0 if "P1bt2" in RULES else 3.0)  # weak releases count
             wpk = S.Ls[self.idx(self.s[k]):i_end + 1].max()
+            if bu is not None and "P1b100" in RULES and                     S.Ls[S.clip(bu + MS(30)):S.clip(bu + MS(50))].max() > S.Ls[bu:S.clip(bu + MS(12))].max():
+                bu = None                                  # it grows into a vowel: the next word's onset, not a release
             if bu is not None and S.Ls[bu:bu + MS(20)].max() >= wpk - 30.0:   # an audible release
                 resid = S.Ls[bu:min(lim, bu + MS(200))].min()
                 j = bu + MS(6)
