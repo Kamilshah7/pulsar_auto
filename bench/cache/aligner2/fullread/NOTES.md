@@ -5651,3 +5651,8 @@ NASAL > DH (9 H joins, 33 ms, no rule firing): the H cut is the END OF THE NASAL
 FRIC > FRIC: 39 of 61 are fric>DH (J13); spectral-step candidates (centroid min / zcr min / steepest centroid change) are
 worse (26-29 ms vs v16 19.6); the quietest point is best overall but worse on H -> unchanged.
 Scores (local == engine v19, all 5648 boundaries identical): dev 17.0 (H 21.4), 049 19.8 (H 23.0), all sets 19.0 (H 22.4).
+RULE-STAGE MISSES FIXED (same session): P1c nasal continuation (then|the H 114.7 -> 17.7 ms; dev +0.10 s, 049 0; the
+vowel / liquid version hurt -0.13 s), E1f foreign voiceless frication at the clip start (009-06 you H -294 -> -76;
+049 0), J4b breath split before a fricative (yeah|so -384 -> -7, i|thought H -70 -> -3; dev +0.21 s, 049 0). These are
+narrow and principled; 049 is unchanged by all three (no held-out gain, no loss).
+Scores (local == engine v20): dev 16.8 (H 20.9), 049 19.8 (H 23.0), all sets 18.9 (H 22.1).

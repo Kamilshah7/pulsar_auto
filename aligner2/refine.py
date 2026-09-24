@@ -51,6 +51,8 @@ Pause edges (the coarse stage found a pause):
       laugh, click; R3) -> end at the gap; (d) a sonorant-final word runs into a long hiss with no CTC letters
       (a breath) -> end where the hiss starts; F1 a final fricative still sounding at the coarse end runs on
       until the frication dies (R7; H convention -- the old accepted golds cut fricatives ~15 ms earlier);
+      (c') P1c: not an event when it is the word's own lengthened nasal (then|the H: a 70 ms dip above the floor, then
+      160 ms of nasal murmur "thennn"; dev +0.10 s, 049 unchanged; the same test for vowels / liquids hurt: -0.13 s);
       (b) a final stop's release burst right after the coarse end is kept (R2): searched up to 100 ms after it
       (voiced / silent closures run that long: like.end, walk.end H), never into the next word's letters, any
       >= 2 dB transient after a closure (weak releases), and only if it DECAYS -- a burst that grows into a vowel
@@ -61,7 +63,13 @@ Pause edges (the coarse stage found a pause):
       pause's middle, before the first-letter peak).
   E1  first word: rises out of the last real gap before its first letter; no gap = the clip cuts into running
       speech -> the clip start.
+  E1f a first word that begins with a voiced sound cannot begin with >= 50 ms of loud voiceless frication: that is the
+      previous speaker's tail (R11); it starts where the last such stretch ends (009-06 you H -294 -> -76 ms).
   E2  last word: P1 against the clip end; a clip that cuts off running speech -> the clip end.
+  J4b vowel / nasal > fricative joined by the coarse stage, where the fricative's own onset (walked back from its
+      letter peak while the spectrum of its steady part holds) is >= 60 ms after the first aperiodic onset and the
+      stretch between does not sound like the fricative: a breath-filled pause -> word k ends at the aperiodic onset,
+      word k+1 starts at its own onset (yeah|so -384 -> -7, i|thought H -70 -> -3; dev +0.21 s, 049 unchanged).
 Cut-off words (post-pass):
   PW  a fricative fragment ('s-', 'th-', 'f-', 'sh-', 'h-') has the sound its letters begin a word with (R9). HuBERT emits
       no letter for a lone fragment, so the coarse stage parks it on a neighbour's sound (on|s-: inside "on"'s nasal,
@@ -82,7 +90,7 @@ CLASS = {**{p: "V" for p in VOWELS}, **{p: "stop" for p in ("P", "B", "T", "D", 
 BG_DB = 6.0                                   # a released stop's tail: until within 6 dB of the residual level
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
 RULES = {"F2", "J0", "J1", "J1n", "J1m", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "P3", "E1", "E2",
-         "P1b100", "P1bt2", "PW", "PWa"}   # enabled
+         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b"}   # enabled
 # (aligner2/local_bench.py --rules J1,J4,... for ablations)
 
 
@@ -497,6 +505,8 @@ class Clip:
                         ok = False                                        # the final stop's release (R2)
                     if ok and (fric_final or stop_final) and (short or lexical) and np.median(S.zcr[i:i + MS(40)]) >= 0.25:
                         ok = False                                        # the final fricative / affricated release
+                    if ok and "P1c" in RULES and self.continues(k, t0, t1, i, ev_end, m):
+                        ok = False                                        # the word's own lengthened last sound
                     if ok:
                         self.note(k, "P1 event", end=t0, trough=ti)
                         return t0
@@ -544,6 +554,57 @@ class Clip:
                 self.note(k, "P1 release", end=j, burst=bu)
                 return j
         return None
+
+    def breath_split(self, k):
+        """J4b (candidate): vowel / nasal > fricative joined by the coarse stage, where the fricative's OWN onset (walked
+        back from its letter peak while its spectrum holds) lies >= 60 ms after the first aperiodic onset after the vowel
+        (J4's onset), and the stretch between does not sound like the fricative (centroid >= 0.5 lower or zcr under 60%
+        of the fricative's): a breath-filled pause the coarse stage missed (yeah|so: a 350 ms exhale before the /s/).
+        -> word k ends at the aperiodic onset, word k+1 starts at the fricative's own onset."""
+        A, B = last_phone(self.arpa[k]), first_phone(self.arpa[k + 1])
+        cA, cB = pclass(A), pclass(B)
+        if cA not in ("V", "nas") or cB != "fric" or B == "DH":
+            return None
+        S = self.S
+        pa, pb = self.lex["last"][k], self.lex["first"][k + 1]
+        if pb - pa < MS(80):
+            return None
+        cut = self.idx((self.e[k] + self.s[k + 1]) / 2)
+        a, b = max(0, min(pa, cut) - MS(10)), min(S.T - 1, max(pb, cut) + MS(10))
+        f = transition(S, cA, cB, a, cut, b, 0.2, ("zcr", "hi"))          # J4's forward onset
+        if f is None:
+            return None
+        zs, cs = _box(S.zcr, MS(10)), _box(S.cent, MS(10))
+        ref = slice(pb, min(S.T, pb + MS(30)))                     # the fricative's steady part (letters lag into it)
+        zref, cref = float(np.median(zs[ref])), float(np.median(cs[ref]))
+        if zref < 0.25:
+            return None                                            # only a clearly fricated onset can be walked back
+        i = pb
+        while i > f and zs[i] >= 0.6 * zref and cs[i] >= cref - 0.5 and S.Ls[i] >= S.floor[i] + 6.0:
+            i -= 1
+        own = i + 1
+        if own - f < MS(60):
+            return None
+        mid = slice(f, own)
+        if np.median(cs[mid]) >= cref - 0.5 and np.median(zs[mid]) >= 0.6 * zref:
+            return None
+        self.note(k, f"J4b breath split end={f * HOP:.3f} start={own * HOP:.3f}")
+        return f, own
+
+    def continues(self, k, t0, t1, i, ev_end, m):
+        """P1c (candidate): an 'event' after word k is the word's own lengthened last phone (then|the H: a 70 ms dip at
+        floor + 19 dB, then 160 ms of nasal murmur = "thennn") when the dip is not a real silence (< 100 ms, or never
+        within 6 dB of the floor) and the event is a nasal murmur after a nasal-final word."""
+        S = self.S
+        silent = t1 - t0 >= MS(100) and m <= S.floor[(t0 + t1) // 2] + 6.0
+        if silent:
+            return False
+        cA = pclass(last_phone(self.arpa[k]))
+        ev = slice(i, min(ev_end, i + MS(50)) + 1)
+        wd = slice(max(0, t0 - MS(30)), t0 + 1)                      # the word's last 30 ms before the dip
+        if cA == "nas":
+            return np.median(S.lo[ev]) >= -0.5 and np.median(S.per[ev]) >= 0.4 and                 np.median(S.cent[ev]) <= np.median(S.cent[wd]) + 0.3
+        return False                       # vowels / liquids: same-colour voicing also fits real events (liq>h -0.13 s)
 
     def pause_start(self, k, prv):
         """P2 (word k after a pause): the coarse start is kept unless, between it and word k's first letter, a
@@ -634,6 +695,14 @@ class Clip:
         lvl = max(m + 6.0, top - 35.0)
         on = next((i for i in range(ti, hi + 1) if S.Ls[i] >= lvl), None)
         self.trace[-1] = f"E1 gap start={on * HOP:.3f}" if on is not None else "E1 -"
+        if on is not None and "E1f" in RULES and pclass(first_phone(self.arpa[0])) in ("V", "gl", "liq", "nas"):
+            # R11 (candidate): a word that begins with a voiced sound cannot begin with >= 50 ms of loud VOICELESS
+            # frication -- that is the previous speaker's tail; start where the last such stretch ends
+            vf = (S.zcr >= 0.3) & (S.per < 0.3) & (S.Ls >= S.floor + 10.0)
+            runs = [(on + x, on + y) for x, y in _runs(vf[on:hi], MS(10), MS(50))]
+            if runs:
+                on = runs[-1][1]
+                self.trace[-1] = f"E1f after foreign frication start={on * HOP:.3f}"
         return on
 
     def clip_end(self):
@@ -690,6 +759,11 @@ class Clip:
                     self.trace[k] = "J0+" + self.trace.get(k, "")
                 e[k], s[k + 1] = t * HOP - 0.001, t * HOP + 0.001
                 continue
+            if self.s[k + 1] - self.e[k] <= 0.005 and "J4b" in RULES:
+                sp = self.breath_split(k)
+                if sp is not None:
+                    e[k], s[k + 1] = sp[0] * HOP, sp[1] * HOP
+                    continue
             if self.s[k + 1] - self.e[k] <= 0.005:
                 t = self.join(k)
                 if t is not None:                                 # the gold convention: end = cut - 1 ms,
