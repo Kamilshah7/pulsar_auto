@@ -1,1 +1,3 @@
 pulsar_auto.zip
+__pycache__/
+*.pyc
