@@ -66,7 +66,8 @@ Pause edges (the coarse stage found a pause):
       word lasts while the creak stays above the ear threshold (Clip.glottal_tail).
   P2  word start: kept unless a separate event precedes the word across a real gap -> start out of the gap.
   P3  otherwise the speech onset: the steepest loudness rise within 30 ms of the coarse start (after the
-      pause's middle, before the first-letter peak).
+      pause's middle, before the first-letter peak). P3a: never before the sound reaches the ear threshold
+      (p99 - 40 dB; Clip.audible_start).
   E1  first word: rises out of the last real gap before its first letter; no gap = the clip cuts into running
       speech -> the clip start.
   E1f a first word that begins with a voiced sound cannot begin with >= 50 ms of loud voiceless frication: that is the
@@ -96,7 +97,7 @@ CLASS = {**{p: "V" for p in VOWELS}, **{p: "stop" for p in ("P", "B", "T", "D", 
 BG_DB = 6.0                                   # a released stop's tail: until within 6 dB of the residual level
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
 RULES = {"F2", "J0", "J1", "J1n", "J1m", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "P3", "E1", "E2",
-         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g"}   # enabled
+         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a"}   # enabled
 # (aligner2/local_bench.py --rules J1,J4,... for ablations)
 
 
@@ -744,6 +745,24 @@ class Clip:
             return None
         return a + int(np.argmax(S.slope[a:b]))
 
+    def audible_start(self, k, i):
+        """P3a: a word after a pause starts no earlier than where its sound reaches the ear threshold (p99 - 40 dB, the
+        level P1bv / P1g end a word at): from a start i under it, the first frame at it -- never past max(word k's
+        first-letter peak, i + 40 ms), 150 ms, or the word's end - 10 ms (monday|senior H: an /s/ at the noise floor
+        -57 -> +3 ms; a|the H: a prevoicing bump at -50 dB before the dental release). All pause starts 13.6 -> 12.9 ms
+        (DH 19.9 -> 18.0, other fricatives 31.1 -> 29.1); dev +0.32 s, 049 +0.27 s, ear unchanged. The same walk to
+        floor + 10 dB (P3i) was worse on 049 (-0.10 s): a floor-relative test misses loud-background clips."""
+        S = self.S
+        thr = float(np.percentile(S.L, 99)) - 40.0
+        if S.Ls[i] >= thr:
+            return None
+        lim = min(max(self.lex["first"][k], i + MS(40)), i + MS(150), self.idx(self.e[k]) - MS(10))
+        j = next((q for q in range(i, lim) if S.Ls[q] >= thr), None)
+        if j is None or j == i:
+            return None
+        self.trace[k - 1] = self.trace.get(k - 1, "") + f" | P3a audible start={j * HOP:.3f}"
+        return j
+
     def _trough_before(self, hi):
         """scanning back from hi: the deepest real gap before the word -- a stretch >= 8 dB under the word,
         within 30 dB of the local floor, >= 16 ms wide (6 dB band). Returns (trough index, level) or None."""
@@ -865,6 +884,10 @@ class Clip:
                 r = self.pause_start(k + 1, self.e[k]) if "P2" in RULES else None
                 if r is None and "P3" in RULES:
                     r = self.onset(k + 1, self.e[k])
+                if "P3a" in RULES:
+                    q = self.audible_start(k + 1, r if r is not None else self.idx(self.s[k + 1]))
+                    if q is not None:
+                        r = q
                 if r is not None:
                     s[k + 1] = r * HOP
         if "PW" in RULES:
