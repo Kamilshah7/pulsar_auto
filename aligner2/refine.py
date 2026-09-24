@@ -584,10 +584,11 @@ class Clip:
             if x < m:
                 m = x; ti = i
             if (x - m >= 6.0 or i == 0) and M - m >= 8.0 and m <= S.floor[ti] + 30.0:
+                band = max(m, S.floor[ti]) + 6.0          # a dip below the background: measure from the background
                 t0 = t1 = ti
-                while t0 > 0 and S.Ls[t0 - 1] <= m + 6.0:
+                while t0 > 0 and S.Ls[t0 - 1] <= band:
                     t0 -= 1
-                while t1 < hi and S.Ls[t1 + 1] <= m + 6.0:
+                while t1 < hi and S.Ls[t1 + 1] <= band:
                     t1 += 1
                 if t1 - t0 >= MS(16):
                     return ti, m
@@ -602,8 +603,8 @@ class Clip:
         if hi < MS(10):
             return None
         g = self._trough_before(hi)
-        if g is None:
-            if np.median(S.Ls[MS(10):MS(30)]) >= S.floor[0] + 15.0:
+        if g is None:                                 # running speech: loud at the clip start, never near the background
+            if np.median(S.Ls[MS(10):MS(30)]) >= S.floor[0] + 15.0 and (S.Ls[:hi] - S.floor[:hi]).min() >= 6.0:
                 self.trace[-1] = "E1 running speech at the clip start"
                 return 0
             return None
