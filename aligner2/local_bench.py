@@ -12,6 +12,7 @@ never read boundary by boundary; score it only with --test.
     python -m aligner2.local_bench --pairs         # + error by phone-class pair
     python -m aligner2.local_bench --test          # also the held-out 049 set
     python -m aligner2.local_bench --dump out.json # refined predictions
+    python -m aligner2.local_bench --audit         # also score against the audited gold (aligner2/gold_audit.py)
 """
 import argparse
 import collections
@@ -72,6 +73,7 @@ def main():
     ap.add_argument("--dump")
     ap.add_argument("--rules", help="comma-separated rule names to enable (default: refine.RULES)")
     ap.add_argument("--sides", action="store_true", help="pause ends / starts separately")
+    ap.add_argument("--audit", action="store_true", help="also score against the audited gold")
     args = ap.parse_args()
     if args.rules is not None:
         refine.RULES.clear(); refine.RULES.update(r for r in args.rules.split(",") if r)
@@ -83,8 +85,14 @@ def main():
     new = {}
     for c, z, ar, coarse, lx in data:
         new[(c["set"], c["clip"])] = refine.refine(z, [t["text"] for t in c["tokens"]], ar, coarse, lex=lx)
-    for name, P in (("v16 (coarse input)", base), ("refined", new)):
-        S, rows = evaluate(C, P, ear={})
+    golds = [("", C)]
+    if args.audit:
+        from aligner2 import gold_audit
+        CA, log = gold_audit.audited(data)
+        golds.append((f" -- AUDITED gold ({len(log)} boundaries corrected)", CA))
+    for (gname, G), (name, P) in [(g, p) for g in golds for p in (("v16 (coarse input)", base), ("refined", new))]:
+        name += gname
+        S, rows = evaluate(G, P, ear={})
         print(report(S, name))
         if args.sides:
             for kind in ("pause", "edge", "cont"):
