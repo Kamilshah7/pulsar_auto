@@ -5512,3 +5512,23 @@ Root causes found, in order of size, and what was done:
 Scores (MAE ms; H = reviewer-moved boundaries):   v16 -> rules
   dev 009+026   21.8 -> 17.5   H 28.9 -> 22.7
   held-out 049  24.9 -> 19.9   H 28.7 -> 22.9
+
+### Gold audit and the gross errors (after the rule-stage study)
+GOLD AUDIT (aligner2/gold_audit.py, overlay; the user: the data, when clear, is the source of truth). Two contradiction classes,
+every dev case read at 2 ms (16/16 clear), the same fixed criteria then flag 11 on 049:
+ - C1 weak initial fricative left out of its word (gold gap = frication throughout): this|film and benefit|from are 43-45 ms
+   "gaps" inside unbroken frication 30 dB over the floor; question|for, very|first, happen|first, em|fill, a|fear leave the whole F out.
+ - C2 final fricative cut while still loud (before a pause): please (the whole Z left out), markets (the whole S), is, race, miss,
+   ridiculous, was: 40-120 ms of /s z/ at 15-55 dB over the floor after the gold end.
+GROSS ERRORS (|err| > 80 ms: 95 dev boundaries, 19% of the error; filler neighbourhoods 8-9% of all error / 14-15% of the H error,
+partial / unintelligible neighbourhoods 5% dev, 1.5% 049). Read cases: all are the LEXICAL stage placing letters 100-200 ms off:
+ - transcript / audio mismatch: 026-04 "we really did that on" -- the CTC hears "we'll" (E ' L after W), every later word slides.
+ - repeated fillers: 009-02 "uh uh you" -- both uh's put inside the first 420 ms sustained vowel; the 80 ms gap and the short second
+   uh are missed. 026-10 "and uh": the D letter 100 ms before the acoustic D release (creaky run-in to the filler).
+ - spelled letters (j, p): the letter's CTC peak marks only its consonant, the letter-name vowel follows.
+ - partial words ("s-", "th-"), unintelligible "(())": no letters to align.
+ charsiu (10 ms phone classifier) is not an arbiter: where it and the rules disagree by > 60 ms the rules are closer 298 : 88.
+ These need the coarse stage itself (filler-aware / multi-view lexical alignment) -- engine work (Modal), not a rule on its output.
+Tried and rejected in this round (principled, but no gain or held-out loss): a generic 50%-change rule for all remaining class
+pairs (-0.28 s), the dental-nasal release for nasal+DH without frication (overshoots 20-56 ms), V>W at the loudness minimum
+(= letter midpoint), a floor-level-silence missed-pause test (8 of 10 runs >= 40 ms are not gold pauses).
