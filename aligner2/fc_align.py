@@ -42,6 +42,42 @@ def token_phones(tokens):
 def viterbi(logp, token_ids):
     """logp (T, 42) log posteriors. States: [SIL] w1p1 .. w1pn [SIL] w2p1 .. [SIL]; SIL states optional.
     Returns per token (first_frame, last_frame) and per gap (sil_first, sil_last) or None."""
+    path, kind, owner = _path(logp, token_ids)
+    n = len(token_ids)
+    first, last = [None] * n, [None] * n
+    gaps = [None] * (n + 1)
+    for t, s in enumerate(path):
+        o = owner[s]
+        if kind[s] == 1:
+            first[o] = t if first[o] is None else first[o]; last[o] = t
+        else:
+            g = o + 1                                                  # silence before token o+1
+            gaps[g] = (t, t) if gaps[g] is None else (gaps[g][0], t)
+    return first, last, gaps
+
+
+def phone_spans(logp, token_ids):
+    """per token: [(phone_id, first_frame, last_frame), ...] from the same Viterbi path (frames of 10 ms)"""
+    path, kind, owner = _path(logp, token_ids)
+    pos = []                                           # state -> index of the phone inside its token
+    for k, ph in enumerate(token_ids):
+        pos.append(None)
+        pos.extend(range(len(ph)))
+    pos.append(None)
+    out = [[None] * len(ph) for ph in token_ids]
+    for t, s in enumerate(path):
+        if kind[s] == 1:
+            k, i = owner[s], pos[s]
+            out[k][i] = [token_ids[k][i], t, t] if out[k][i] is None else [out[k][i][0], out[k][i][1], t]
+    return out
+
+
+def frame_time(f):
+    """start time (s) of 10 ms frame f"""
+    return f * FRAME + FRAME_OFF - FRAME / 2
+
+
+def _path(logp, token_ids):
     T = logp.shape[0]
     best_speech = np.max(logp[:, 1:40], axis=1)
     states, kind, owner = [], [], []                 # kind: 0 = SIL, 1 = phone
@@ -73,17 +109,7 @@ def viterbi(logp, token_ids):
     path = np.empty(T, dtype=np.int32)
     for t in range(T - 1, -1, -1):
         path[t] = s; s = back[t, s]
-    n = len(token_ids)
-    first, last = [None] * n, [None] * n
-    gaps = [None] * (n + 1)
-    for t, s in enumerate(path):
-        o = owner[s]
-        if kind[s] == 1:
-            first[o] = t if first[o] is None else first[o]; last[o] = t
-        else:
-            g = o + 1                                                  # silence before token o+1
-            gaps[g] = (t, t) if gaps[g] is None else (gaps[g][0], t)
-    return first, last, gaps
+    return path, kind, owner
 
 
 def word_times(logp, token_ids):
