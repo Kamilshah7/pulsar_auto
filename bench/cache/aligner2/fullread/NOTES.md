@@ -5709,3 +5709,26 @@ FILLERS (this round): filler-token boundaries are 23-25 ms MAE (H 31-34) after v
  cases, only "you" is a misplacement (weak initial fricatives and lengthened nasals are legitimately under p99 - 40).
 STOP > V vs THE EAR: on 026's review items the "self" 20-50% transition lands on more accepted options (22 vs 18, rejected
  10 vs 14) but the H gold prefers J1 (H 17.0 vs 17.8): the ear and the editor disagree by a few ms -> kept J1.
+
+## LISTENING WINS (the user 2026-09-25) -- case by case with aligner2/verify.py after every change
+Tools: aligner2/verify.py (gold 009/026/049/old14 all / H + the listening review per set: lands on accepted /
+rejected, distance to accepted, manual MAE), aligner2/case.py (one junction at 2 ms with A / R / M ear markers).
+Round (ear 026 accepted 169 -> 175, rejected 59 -> 49, manual MAE 23.0 -> 19.7; 049 122 -> 129 / 40 -> 39;
+old14 108 -> 112 / 35 -> 31, manual 19.1 -> 16.3):
+ - J1e (stop>V at the change midpoint for every release): ear 026 better, 049 / old14 rejections +2 -> no. Released
+   stop>V ear options (burst = 0, voicing onset = 1): accepted cluster at 1.0-1.5 (13) and 0.5-1.0 (8); inside the
+   aspiration mostly rejected. J1l (vowel loudness onset, with / without voicing): system-wide worse -> kept J1.
+ - Jthe ADOPTED: "the" + consonant: 17 of 20 dev ear cuts > 10 ms before ours (median -38), none after; the user
+   rejected the editor gold's cut in most. Cut = end of the reduced vowel (6 dB under its peak, else high band -5 dB).
+   Gold -3.8 s (the editor keeps "the" long) -- the listening convention wins.
+ - J4l ADOPTED (liquid > fricative: frication onset; coarse cuts were late +17 / +31 ms by ear): gold +0.49 s.
+ - J8m ADOPTED (nasal > vowel where J8 fails: the murmur's release near the cut; letters lag, taking|a): ear +53 ms.
+ - J4h ADOPTED only for an ASPIRATED h (>= 20 ms of noise); unguarded: gold -0.75 s (voiced / dropped h).
+ - J1m moved from the change's middle to its ONSET (20 %): ear accepted +4 / rejected -2, gold +0.15 s.
+ - J4w ADOPTED (J4 retry with the window 60 ms further back when the letters lag into the fricative, i|said H).
+   Generalising the retry to every transition rule (Jw): gold -1.7 s, ear -248 ms -> no.
+ - J9h (vowel > glide: the end of a >= 60 ms hold, so|why): fixes so|why +82 but breaks say|we, show|you -> no.
+   End-of-hold / transition-onset landmarks class-wide for V>gl / V>liq / V>V / V>nas: worse on gold and ear.
+ - really|did (+115 by ear and H): the CTC emits D twice; "did"'s first-letter peak took the second D -> coarse.
+ - J8p (J8 fallback between the letter peaks, 20 / 50 %): mixed -> no (the letters lag).
+v22 engine run == local on all 5648 boundaries.

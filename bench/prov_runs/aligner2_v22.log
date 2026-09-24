@@ -1,0 +1,123 @@
+[01:10:13] asking the engine which of 50 clips need signals (starts a container if none is warm)
+[01:10:13] source changed -> redeploying GPU engine (deploy output follows)
+    Building image im-uSubuO9MokdOQtskDDpnWK
+    Using legacy Image Builder version. We suggest upgrading at https://modal.com/settings/image-config.
+    => Step 0: FROM base
+    => Step 1: COPY . /
+    Saving image...
+    Image saved, took 1.28s
+    Built image im-uSubuO9MokdOQtskDDpnWK in 3.01s
+    ? Created objects.
+    ??? ? Created mount F:\BB\ETN-SC\pulsar_auto\modal_aligner2.py
+    ??? ? Created mount PythonPackage:aligner2
+    ??? ? Created function Engine.*.
+    ? App deployed in 13.163s! ?
+    View Deployment:
+    https://modal.com/apps/alinarohannes777/main/deployed/aligner2-signals
+[01:10:35] stopped 0 running engine container(s) so no call reaches old code
+[01:10:35] deployed; the first call starts a fresh container that loads the models (~30-60 s)
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+[01:11:00] engine code verified (f80db850, loaded from /root/aligner2)
+[01:11:01] 0 clips need signals
+signals: 0 clips computed on the GPU (48s)
+[01:11:01] aligning 50 clips x 4 settings
+[01:11:15] aligned 1/50  (14s)
+[01:11:21] aligned 2/50  (20s)
+[01:11:28] aligned 3/50  (27s)
+[01:11:32] aligned 4/50  (31s)
+[01:11:38] aligned 5/50  (37s)
+[01:11:38] aligned 6/50  (37s)
+[01:11:38] aligned 7/50  (38s)
+[01:11:40] aligned 8/50  (39s)
+[01:11:42] aligned 9/50  (41s)
+[01:11:44] aligned 10/50  (43s)
+[01:11:45] aligned 11/50  (44s)
+[01:11:49] aligned 12/50  (49s)
+[01:11:51] aligned 13/50  (50s)
+[01:11:53] aligned 14/50  (52s)
+[01:11:54] aligned 15/50  (53s)
+[01:11:58] aligned 16/50  (57s)
+[01:11:58] aligned 17/50  (57s)
+[01:12:00] aligned 18/50  (59s)
+[01:12:02] aligned 19/50  (61s)
+[01:12:06] aligned 20/50  (65s)
+[01:12:06] aligned 21/50  (65s)
+[01:12:10] aligned 22/50  (69s)
+[01:12:12] aligned 23/50  (71s)
+[01:12:13] aligned 24/50  (72s)
+[01:12:13] aligned 25/50  (72s)
+[01:12:15] aligned 26/50  (74s)
+[01:12:18] aligned 27/50  (77s)
+[01:12:22] aligned 28/50  (81s)
+[01:12:23] aligned 29/50  (82s)
+[01:12:24] aligned 30/50  (83s)
+[01:12:26] aligned 31/50  (85s)
+[01:12:29] aligned 32/50  (88s)
+[01:12:29] aligned 33/50  (88s)
+[01:12:32] aligned 34/50  (91s)
+[01:12:33] aligned 35/50  (92s)
+[01:12:36] aligned 36/50  (95s)
+[01:12:38] aligned 37/50  (97s)
+[01:12:42] aligned 38/50  (101s)
+[01:12:42] aligned 39/50  (101s)
+[01:12:42] aligned 40/50  (101s)
+[01:12:43] aligned 41/50  (102s)
+[01:12:46] aligned 42/50  (105s)
+[01:12:47] aligned 43/50  (106s)
+[01:12:47] aligned 44/50  (107s)
+[01:12:48] aligned 45/50  (107s)
+[01:12:49] aligned 46/50  (108s)
+[01:12:51] aligned 47/50  (110s)
+[01:12:52] aligned 48/50  (111s)
+[01:12:52] aligned 49/50  (111s)
+[01:12:56] aligned 50/50  (115s)
+StopAsyncIteration exception in shielded future
+future: <Future finished exception=StopAsyncIteration()>
+Traceback (most recent call last):
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 511, in wrapper_coro
+    return await inner_task
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 341, in coro_wrapped
+    value = await coro
+            ^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\exceptions.py", line 33, in coro_wrapped
+    return await coro
+           ^^^^^^^^^^
+StopAsyncIteration
+aligned 50 clips x 4 settings on the GPU (115s)
+== aligner2 v22 -- leave-one-set-out; params per held-out set: {'009': {'min_pause': 0.03, 'pause_model': 'word_ref', 'lam': 1000.0, 'cont_model': 'class', 'radius_ms': 10, 'onset_ms': 10, 'ref_mode': 'word', 'theta_db': 20.0, 'clip_anchor_ms': 150, 'unit': 'letter4', 'soft': 'off', 'refine': True}, '026': {'min_pause': 0.03, 'pause_model': 'word_ref', 'lam': 1000.0, 'cont_model': 'class', 'radius_ms': 10, 'onset_ms': 10, 'ref_mode': 'word', 'theta_db': 20.0, 'clip_anchor_ms': 150, 'unit': 'letter4', 'soft': 'off', 'refine': True}, '049': {'min_pause': 0.03, 'pause_model': 'word_ref', 'lam': 1000.0, 'cont_model': 'class', 'radius_ms': 10, 'onset_ms': 10, 'ref_mode': 'word', 'theta_db': 20.0, 'clip_anchor_ms': 150, 'unit': 'letter4', 'soft': 'off', 'refine': True}, 'old14': {'min_pause': 0.03, 'pause_model': 'word_ref', 'lam': 1000.0, 'cont_model': 'class', 'radius_ms': 10, 'onset_ms': 10, 'ref_mode': 'word', 'theta_db': 20.0, 'clip_anchor_ms': 150, 'unit': 'letter4', 'soft': 'off', 'refine': True}}
+set   kind            n     MAE    med     w5    w10    w20   bias
+009   all          1876    17.6   10.5    30%    49%    72%   -0.7
+009   cont         1456    17.0   11.0    26%    47%    71%   -0.1
+009   pause         396    19.7    7.6    42%    55%    75%   -2.8
+009   human         596    20.6   11.1    28%    47%    68%   -0.8
+009   cont_human    499    18.3   10.5    28%    48%    68%   +0.4
+026   all          1946    16.6    9.5    30%    51%    73%   -1.9
+026   cont         1476    16.9   11.0    26%    48%    71%   -1.7
+026   pause         446    15.7    7.0    42%    62%    78%   -2.8
+026   human         432    20.9   12.1    24%    43%    66%   -0.4
+026   cont_human    367    20.7   12.1    24%    42%    66%   -0.3
+026   ear-hit       468   37.4%
+049   all          1826    19.8   11.0    28%    47%    66%   -3.0
+049   cont         1342    20.1   12.0    24%    44%    64%   -3.5
+049   pause         460    19.0    8.0    38%    56%    72%   -1.0
+049   human         546    22.3   10.9    27%    47%    62%   +1.3
+049   cont_human    461    21.6   10.6    28%    48%    62%   +3.0
+049   ear-hit       314   41.1%
+old14 all          1716    22.7   12.0    25%    44%    66%   -6.0
+old14 cont         1210    20.8   12.5    24%    43%    67%   -6.4
+old14 pause         478    26.2   10.7    25%    47%    66%   -5.5
+old14 human         513    23.7   11.6    26%    45%    65%   +1.2
+old14 cont_human    439    20.9   10.8    27%    47%    67%   +1.7
+old14 ear-hit       284   39.4%
+ALL   all          7364    19.1   10.9    28%    48%    70%   -2.8
+ALL   cont         5484    18.6   11.5    25%    45%    68%   -2.8
+ALL   pause        1780    20.3    8.0    36%    55%    73%   -3.1
+ALL   human        2087    21.9   11.4    27%    46%    65%   +0.3
+ALL   cont_human   1766    20.3   11.1    27%    46%    66%   +1.3
+ALL   ear-hit      1066   39.0%
+
+(best single setting on everything, for reference: {'min_pause': 0.03, 'pause_model': 'word_ref', 'lam': 1000.0, 'cont_model': 'class', 'radius_ms': 10, 'onset_ms': 10, 'ref_mode': 'word', 'theta_db': 20.0, 'clip_anchor_ms': 150, 'unit': 'letter4', 'soft': 'off', 'refine': True} -> MAE 19.1, w5 28%)

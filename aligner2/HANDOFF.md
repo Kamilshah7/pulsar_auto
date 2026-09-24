@@ -26,6 +26,11 @@ Branch: `claude/pulsar-auto-conversation-oi3e40` (pushed; not merged; no PR). Ev
 | old14 (never used for development), all / H | | 26.5 / 28.9 | **22.3 / 23.8** |
 | ear judgments, 182 manual placements | 32.3 | 27.4 | **24.9** |
 (v21 = v20 + P1bv, P1f, P1g, P3a. The ear judgments are junctions, which these pause-edge rules do not move.)
+**v22 (listening wins, the user 2026-09-25):** + Jthe, J4l, J8m, J4h, J1m at 20 %, J4w. Gold 009 17.59 / H 20.56,
+026 16.57 / 20.87, 049 19.83 / 22.34, old14 22.75 / 23.73 -- the gold is ~0.5 ms worse than v21 on purpose (Jthe:
+the editor keeps "the" ~40 ms longer than the ear accepts). Listening review (verify.py): accepted / rejected
+026 175 / 49 (was 169 / 59), 049 129 / 39 (122 / 40), old14 112 / 31 (108 / 35); manual MAE 026 19.7 (23.0),
+old14 16.3 (19.1). Every rule change is now checked with `python -m aligner2.verify --add X` (gold + ear, all sets).
 
 ## Pipeline
 1. **Signals** (GPU, Modal engine `modal_aligner2.py`, app `aligner2-signals`, volume `aligner2-cache`): loudness,
