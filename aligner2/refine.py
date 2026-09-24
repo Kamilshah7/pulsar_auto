@@ -15,7 +15,8 @@ Continuous joins (the coarse stage found no pause):
   J1  stop > vowel-initial word: the release belongs to word k; cut where the spectrum is halfway from the
       release to the vowel (voicing onset; good|a-, and|if, write|about, book|is: H). No release: a final
       /nd/ /nt/ (and, find, want) loses its stop in running speech -> the nasal > vowel rule (J8); other
-      (flapped / glottal) stops -> the middle of the joint stop > vowel change; else the re-onset after the dip.
+      (flapped / glottal) stops -> the ONSET (20 %) of the joint stop > vowel change (was its middle: the listening
+      review accepted cuts ~13 ms earlier; ear accepted +4 / rejected -2, gold +0.15 s); else the re-onset after the dip.
   J4  vowel or nasal > fricative: frication onset (20% of the zcr / high-band change); else the middle of the
       loudness fall; else 20% of the joint change. (The 009 reviewer's convention; the 026 reviewer cuts later,
       at the steady-frication start.)
@@ -418,8 +419,8 @@ class Clip:
                         if t is not None:
                             self.note(k, f"J1 nasal-{name}", cut=t)
                             break
-                elif "J1m" in RULES:                      # flapped / glottal: middle of the change
-                    t = transition(S, cA, cB, a, cut, b, 0.5)
+                elif "J1m" in RULES:                      # flapped / glottal: the ONSET of the change (20 %; the
+                    t = transition(S, cA, cB, a, cut, b, 0.2)    # ear: accepted cuts ~13 ms before its middle)
                     if t is not None:
                         self.note(k, "J1 change-mid", cut=t)
                 if t is None:                             # re-onset after the dip
