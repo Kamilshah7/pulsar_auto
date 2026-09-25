@@ -721,7 +721,10 @@ class Clip:
         s0 = self.idx(self.s[k])
         if cut - s0 < MS(20):
             return None
-        pk = s0 + int(np.argmax(S.Ls[s0:cut]))
+        voiced = S.per[s0:cut] >= 0.4                 # the VOWEL's peak (a loud next fricative, the|scouting,
+        if not voiced.any():                          # must not count)
+            return None
+        pk = s0 + int(np.argmax(np.where(voiced, S.Ls[s0:cut], -1e9)))
         hs = _box(S.hi, MS(6))
         ref = float(np.median(hs[max(s0, pk - MS(10)):pk + MS(10)]))
         q = next((i for i in range(pk, min(lim, S.T - 1)) if S.Ls[i] < S.Ls[pk] - 6.0), None)   # the vowel's end
