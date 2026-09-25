@@ -21,6 +21,9 @@ Continuous joins (the coarse stage found no pause):
       loudness fall; else 20% of the joint change. (The 009 reviewer's convention; the 026 reviewer cuts later,
       at the steady-frication start.)
   J5  fricative > vowel or glide: crossfade midpoint (situations|and, drive|so, his|ability, next|one: H).
+      J5l: also fricative > liquid (was|largely, with|like; ear accepted +3, old14 manual MAE 16.3 -> 14.4;
+      049 accepted gold -0.17 s).
+  J7l liquid > nasal: the onset (20 %) of the change (we're|not; gold +0.21 s, ear +48 ms).
   J6  stop > fricative: frication crossover (50% of the zcr / high-band change between the letter peaks).
   J7  vowel > nasal: END of the nasal-onset transition (80% of the low-band / centroid change; think|more,
       my|mother: H).
@@ -111,7 +114,7 @@ CLASS = {**{p: "V" for p in VOWELS}, **{p: "stop" for p in ("P", "B", "T", "D", 
 BG_DB = 6.0                                   # a released stop's tail: until within 6 dB of the residual level
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
 RULES = {"F2", "J0", "J1", "J1n", "J1m", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "P3", "E1", "E2",
-         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe", "J4l", "J8m", "J4h", "J4w"}   # enabled
+         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe", "J4l", "J8m", "J4h", "J4w", "J5l", "J7l"}   # enabled
 # (aligner2/local_bench.py --rules J1,J4,... for ablations)
 
 
@@ -445,12 +448,16 @@ class Clip:
                 t = transition(S, cA, cB, a2, cut, b, 0.2, ("zcr", "hi"))    # must reach back to the vowel
                 if t is not None:
                     self.note(k, "J4w onset", cut=t)
-        if cA == "fric" and cB in ("V", "gl") and "J5" in RULES:                  # J5
+        if cA == "fric" and (cB in ("V", "gl") or (cB == "liq" and "J5l" in RULES)) and "J5" in RULES:   # J5
             for name, q, feats in (("crossfade", 0.5, ("zcr", "hi")), ("joint", 0.5, None)):
                 t = transition(S, cA, cB, a, cut, b, q, feats)
                 if t is not None:
                     self.note(k, f"J5 {name}", cut=t)
                     break
+        if cA == "liq" and cB == "nas" and "J7l" in RULES:                        # J7l: liquid > nasal
+            t = transition(S, cA, cB, a, cut, b, 0.2)                              # the onset of the change
+            if t is not None:
+                self.note(k, "J7l onset", cut=t)
         if cA == "nas" and cB == "V" and "J8" in RULES:                           # J8
             for name, q, feats in (("release", 0.5, ("lo", "cent")), ("joint", 0.5, None)):
                 t = transition(S, cA, cB, a, cut, b, q, feats)
