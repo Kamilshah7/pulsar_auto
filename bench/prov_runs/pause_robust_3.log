@@ -1,0 +1,9 @@
+clean    floor6min60   026 MAE  16.45 H  20.40 acc 177 rej  51 dist  13.8 | 049 MAE  19.65 H  21.60 acc 129 rej  38 dist  15.7
+clean    floor6min90   026 MAE  16.32 H  20.40 acc 177 rej  51 dist  13.9 | 049 MAE  19.73 H  21.79 acc 129 rej  38 dist  15.7
+clean    floor6min120  026 MAE  16.32 H  20.40 acc 177 rej  51 dist  13.9 | 049 MAE  19.73 H  21.79 acc 129 rej  38 dist  15.7
+noise20  floor6min60   026 MAE  20.48 H  22.90 acc 170 rej  53 dist  14.3 | 049 MAE  27.02 H  29.38 acc 121 rej  36 dist  17.3
+noise20  floor6min90   026 MAE  20.48 H  22.90 acc 170 rej  53 dist  14.3 | 049 MAE  27.02 H  29.38 acc 121 rej  36 dist  17.3
+noise20  floor6min120  026 MAE  20.48 H  22.90 acc 170 rej  53 dist  14.3 | 049 MAE  27.02 H  29.38 acc 121 rej  36 dist  17.3
+noise10  floor6min60   026 MAE  24.87 H  27.35 acc 145 rej  62 dist  16.4 | 049 MAE  30.24 H  31.87 acc 108 rej  40 dist  19.0
+noise10  floor6min90   026 MAE  24.87 H  27.35 acc 145 rej  62 dist  16.4 | 049 MAE  30.24 H  31.87 acc 108 rej  40 dist  19.0
+noise10  floor6min120  026 MAE  24.87 H  27.35 acc 145 rej  62 dist  16.4 | 049 MAE  30.24 H  31.87 acc 108 rej  40 dist  19.0

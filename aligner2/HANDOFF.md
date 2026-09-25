@@ -35,6 +35,11 @@ old14 16.3 (19.1). Every rule change is now checked with `python -m aligner2.ver
 Gold 009 17.10 / H 19.69, 026 16.32 / 20.40, 049 19.73 / 21.79, old14 22.53 / 23.61 (all better than v22 despite
 Jthe). Ear accepted / rejected 026 177 / 51, 049 129 / 38, old14 114 / 31; manual MAE 026 19.6, old14 14.4.
 `python -m aligner2.case SET-CLIP K [--add X]` reads one junction at 2 ms with the ear marks.
+**v25 (noise robustness):** the coarse pause model also accepts a >= 90 ms stretch at the local noise floor, only in clips
+whose speech peaks are < 40 dB over the background (run_bench.BASE). Benchmark identical to v23 (all clips are cleaner);
+20 dB noise 33.7 -> 20.0 (026) / 39.9 -> 26.6 (049), 10 dB noise 44.0 -> 25.0 / 48.4 -> 29.8. Enhancement study (pretrained
+DNS64 etc., modal_enhance.py, preprocess_eval.py, select_eval.py): DNS64 gated on the floor drop restores noisy clips to
+~clean accuracy with no change on clean ones -- not wired into production (NOTES.md "NOISE-ROBUST PAUSES + ENHANCEMENT").
 
 ## Pipeline
 1. **Signals** (GPU, Modal engine `modal_aligner2.py`, app `aligner2-signals`, volume `aligner2-cache`): loudness,

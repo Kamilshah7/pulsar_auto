@@ -149,6 +149,7 @@ class Prepared:
         sm = np.convolve(self.loud, np.ones(25) / 25, "same")
         pad = np.pad(sm, 500, mode="edge")
         self.floor = np.lib.stride_tricks.sliding_window_view(pad, 1001).min(axis=1)[:self.T]
+        self.snr = float(np.percentile(self.loud, 99) - np.median(self.floor))   # speech peaks over the background
         self.vad = z["speech_prob"].astype(float) if "speech_prob" in z else None
         self.slope = _slope(self.loud)
         self.gmm_runs = _runs(_gmm_silence(z) > 0.5)
@@ -212,7 +213,21 @@ def _silent_run(prep, a, b, theta_db, between=None):
     return a + r0, a + r1
 
 
-def _word_quiet_run(prep, k, delta_db, ref_mode="edge", floor_db=None, vad=None, floor_vad=None):
+def _word_quiet_run(prep, k, delta_db, ref_mode="edge", floor_db=None, vad=None, floor_vad=None, floor_min=None):
+    """see _quiet_run; floor_min (s): a silence found only by the floor / VAD cues must last >= floor_min (in noise,
+    weak consonants near the raised floor are short, real pauses long); a word-referenced silence keeps min_pause"""
+    run = _quiet_run(prep, k, delta_db, ref_mode)
+    if floor_db is None and vad is None:
+        return run
+    both = _quiet_run(prep, k, delta_db, ref_mode, floor_db, vad, floor_vad)
+    if floor_min is None:
+        return both
+    if run and (run[1] - run[0]) * HOP >= 0.03:
+        return run if both is None or (both[1] - both[0]) <= (run[1] - run[0]) else both
+    return both if both and (both[1] - both[0]) * HOP >= floor_min else run
+
+
+def _quiet_run(prep, k, delta_db, ref_mode="edge", floor_db=None, vad=None, floor_vad=None):
     """pause candidate for boundary k: the longest run between the two words' letter peaks that the
     lexical stage puts in neither word (P(between) > 0.5) and that is >= delta_db quieter than the
     quieter of the two words (loudness around their edge-letter peaks). Breath and room noise count
@@ -255,8 +270,11 @@ def _slope(x, w=3):
 
 def align(prep, lam=1.0, pause_model="word_ref", theta_db=12.0, min_pause=0.1, snap_ms=0, unit="letter",
           cont_model="edge", radius_ms=40, fall_mode="fall", center="lexical", onset_ms=0, offset_ms=0,
-          ref_mode="edge", anchor_ms=0, clip_anchor_ms=0, pause_floor_db=None, pause_vad=None, pause_floor_vad=None):
+          ref_mode="edge", anchor_ms=0, clip_anchor_ms=0, pause_floor_db=None, pause_vad=None, pause_floor_vad=None,
+          pause_floor_min_ms=None, pause_floor_snr_max=None):
     prep.use(unit)
+    if pause_floor_snr_max is not None and prep.snr >= pause_floor_snr_max:
+        pause_floor_db = None                # a quiet background: the word-referenced pause test is enough
     T, n = prep.T, len(prep.priors) + 1
     ends, starts = [None] * n, [None] * n
     for k, pr in enumerate(prep.priors):
@@ -269,7 +287,8 @@ def align(prep, lam=1.0, pause_model="word_ref", theta_db=12.0, min_pause=0.1, s
             sil = prep.fc[2][k]
             run = (int(sil[0] / HOP), int(sil[1] / HOP)) if sil else None
         elif pause_model == "word_ref":
-            run = _word_quiet_run(prep, k, theta_db, ref_mode, pause_floor_db, pause_vad, pause_floor_vad)
+            run = _word_quiet_run(prep, k, theta_db, ref_mode, pause_floor_db, pause_vad, pause_floor_vad,
+                                  pause_floor_min_ms / 1000 if pause_floor_min_ms else None)
         elif pause_model == "gmm":
             run = None
             for a0, b0 in prep.gmm_runs:

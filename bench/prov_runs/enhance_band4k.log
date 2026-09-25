@@ -1,0 +1,259 @@
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+[20:32:43] engine code verified (926f4fb8, loaded from /root/aligner2)
+[20:34:06] band4k_e_deepfilter: signals 10/24 (39s)
+[20:34:17] band4k_e_deepfilter: signals 20/24 (50s)
+[20:34:21] band4k_e_deepfilter: signals 24/24 (55s)
+[20:34:21] aligning 24 clips x 1 settings
+[20:34:33] aligned 1/24  (12s)
+[20:34:33] aligned 2/24  (12s)
+[20:34:35] aligned 3/24  (13s)
+[20:34:35] aligned 4/24  (14s)
+[20:34:38] aligned 5/24  (17s)
+[20:34:40] aligned 6/24  (19s)
+[20:34:41] aligned 7/24  (20s)
+[20:34:42] aligned 8/24  (20s)
+[20:34:46] aligned 9/24  (25s)
+[20:34:47] aligned 10/24  (26s)
+[20:34:49] aligned 11/24  (27s)
+[20:34:49] aligned 12/24  (28s)
+[20:34:51] aligned 13/24  (30s)
+[20:34:53] aligned 14/24  (31s)
+[20:34:56] aligned 15/24  (35s)
+[20:34:57] aligned 16/24  (36s)
+[20:34:58] aligned 17/24  (37s)
+[20:35:00] aligned 18/24  (39s)
+[20:35:03] aligned 19/24  (42s)
+[20:35:04] aligned 20/24  (43s)
+[20:35:05] aligned 21/24  (44s)
+[20:35:06] aligned 22/24  (45s)
+[20:35:08] aligned 23/24  (46s)
+[20:35:13] aligned 24/24  (52s)
+[20:37:05] band4k_e_dns64: signals 10/24 (48s)
+[20:37:23] band4k_e_dns64: signals 20/24 (67s)
+[20:37:28] band4k_e_dns64: signals 24/24 (71s)
+StopAsyncIteration exception in shielded future
+future: <Future finished exception=StopAsyncIteration()>
+Traceback (most recent call last):
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 511, in wrapper_coro
+    return await inner_task
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 341, in coro_wrapped
+    value = await coro
+            ^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\exceptions.py", line 33, in coro_wrapped
+    return await coro
+           ^^^^^^^^^^
+StopAsyncIteration
+[20:37:28] aligning 24 clips x 1 settings
+[20:37:41] aligned 1/24  (13s)
+[20:37:43] aligned 2/24  (15s)
+[20:37:44] aligned 3/24  (16s)
+[20:37:45] aligned 4/24  (17s)
+[20:37:48] aligned 5/24  (20s)
+[20:37:52] aligned 6/24  (24s)
+[20:37:52] aligned 7/24  (24s)
+[20:37:53] aligned 8/24  (25s)
+[20:37:59] aligned 9/24  (31s)
+[20:38:00] aligned 10/24  (32s)
+[20:38:01] aligned 11/24  (33s)
+[20:38:03] aligned 12/24  (35s)
+[20:38:05] aligned 13/24  (37s)
+[20:38:06] aligned 14/24  (38s)
+[20:38:10] aligned 15/24  (42s)
+[20:38:12] aligned 16/24  (44s)
+[20:38:13] aligned 17/24  (45s)
+[20:38:14] aligned 18/24  (46s)
+[20:38:19] aligned 19/24  (51s)
+[20:38:20] aligned 20/24  (52s)
+[20:38:22] aligned 21/24  (54s)
+[20:38:23] aligned 22/24  (55s)
+[20:38:23] aligned 23/24  (55s)
+[20:38:29] aligned 24/24  (61s)
+[20:39:44] band4k_e_metricgan: signals 10/24 (42s)
+[20:40:00] band4k_e_metricgan: signals 20/24 (57s)
+[20:40:04] band4k_e_metricgan: signals 24/24 (62s)
+[20:40:04] aligning 24 clips x 1 settings
+[20:40:15] aligned 1/24  (11s)
+[20:40:17] aligned 2/24  (13s)
+[20:40:20] aligned 3/24  (16s)
+[20:40:21] aligned 4/24  (17s)
+[20:40:21] aligned 5/24  (17s)
+[20:40:23] aligned 6/24  (19s)
+[20:40:27] aligned 7/24  (23s)
+[20:40:28] aligned 8/24  (24s)
+[20:40:28] aligned 9/24  (24s)
+[20:40:32] aligned 10/24  (28s)
+[20:40:33] aligned 11/24  (29s)
+[20:40:36] aligned 12/24  (32s)
+[20:40:36] aligned 13/24  (32s)
+[20:40:38] aligned 14/24  (34s)
+[20:40:41] aligned 15/24  (37s)
+[20:40:43] aligned 16/24  (39s)
+[20:40:44] aligned 17/24  (40s)
+[20:40:48] aligned 18/24  (44s)
+[20:40:49] aligned 19/24  (45s)
+[20:40:49] aligned 20/24  (45s)
+[20:40:51] aligned 21/24  (47s)
+[20:40:51] aligned 22/24  (47s)
+[20:40:57] aligned 23/24  (53s)
+[20:40:59] aligned 24/24  (55s)
+StopAsyncIteration exception in shielded future
+future: <Future finished exception=StopAsyncIteration()>
+Traceback (most recent call last):
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 511, in wrapper_coro
+    return await inner_task
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 341, in coro_wrapped
+    value = await coro
+            ^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\exceptions.py", line 33, in coro_wrapped
+    return await coro
+           ^^^^^^^^^^
+StopAsyncIteration
+[20:42:28] band4k_e_sepformer: signals 10/24 (46s)
+[20:42:39] band4k_e_sepformer: signals 20/24 (57s)
+[20:42:44] band4k_e_sepformer: signals 24/24 (62s)
+[20:42:44] aligning 24 clips x 1 settings
+[20:42:55] aligned 1/24  (11s)
+[20:42:56] aligned 2/24  (12s)
+[20:42:58] aligned 3/24  (14s)
+[20:43:01] aligned 4/24  (17s)
+[20:43:01] aligned 5/24  (17s)
+[20:43:02] aligned 6/24  (18s)
+[20:43:05] aligned 7/24  (21s)
+[20:43:07] aligned 8/24  (23s)
+[20:43:09] aligned 9/24  (25s)
+[20:43:10] aligned 10/24  (26s)
+[20:43:14] aligned 11/24  (30s)
+[20:43:14] aligned 12/24  (30s)
+[20:43:16] aligned 13/24  (32s)
+[20:43:16] aligned 14/24  (32s)
+[20:43:21] aligned 15/24  (37s)
+[20:43:22] aligned 16/24  (38s)
+[20:43:23] aligned 17/24  (39s)
+[20:43:25] aligned 18/24  (41s)
+[20:43:28] aligned 19/24  (44s)
+[20:43:30] aligned 20/24  (46s)
+[20:43:30] aligned 21/24  (46s)
+[20:43:31] aligned 22/24  (47s)
+[20:43:34] aligned 23/24  (50s)
+[20:43:38] aligned 24/24  (54s)
+[20:45:24] band4k_e_wpe: signals 10/24 (48s)
+[20:45:34] band4k_e_wpe: signals 20/24 (58s)
+[20:45:39] band4k_e_wpe: signals 24/24 (63s)
+[20:45:39] aligning 24 clips x 1 settings
+[20:45:50] aligned 1/24  (11s)
+[20:45:51] aligned 2/24  (12s)
+[20:45:52] aligned 3/24  (13s)
+[20:45:52] aligned 4/24  (13s)
+[20:45:56] aligned 5/24  (17s)
+[20:45:58] aligned 6/24  (19s)
+[20:45:59] aligned 7/24  (20s)
+[20:45:59] aligned 8/24  (20s)
+[20:46:05] aligned 9/24  (26s)
+[20:46:05] aligned 10/24  (26s)
+[20:46:06] aligned 11/24  (27s)
+[20:46:08] aligned 12/24  (29s)
+[20:46:10] aligned 13/24  (31s)
+[20:46:10] aligned 14/24  (31s)
+[20:46:13] aligned 15/24  (34s)
+[20:46:16] aligned 16/24  (37s)
+[20:46:16] aligned 17/24  (37s)
+[20:46:18] aligned 18/24  (39s)
+[20:46:21] aligned 19/24  (42s)
+[20:46:22] aligned 20/24  (43s)
+[20:46:24] aligned 21/24  (45s)
+[20:46:24] aligned 22/24  (45s)
+[20:46:26] aligned 23/24  (47s)
+[20:46:30] aligned 24/24  (51s)
+[20:48:50] band4k_e_voicefixer: signals 10/24 (45s)
+[20:49:09] band4k_e_voicefixer: signals 20/24 (64s)
+[20:49:15] band4k_e_voicefixer: signals 24/24 (70s)
+[20:49:15] aligning 24 clips x 1 settings
+[20:49:26] aligned 1/24  (12s)
+[20:49:29] aligned 2/24  (15s)
+[20:49:31] aligned 3/24  (16s)
+[20:49:32] aligned 4/24  (17s)
+[20:49:32] aligned 5/24  (18s)
+[20:49:37] aligned 6/24  (22s)
+[20:49:39] aligned 7/24  (24s)
+[20:49:40] aligned 8/24  (25s)
+[20:49:45] aligned 9/24  (30s)
+[20:49:48] aligned 10/24  (33s)
+[20:49:51] aligned 11/24  (36s)
+[20:49:52] aligned 12/24  (37s)
+[20:49:55] aligned 13/24  (40s)
+[20:49:56] aligned 14/24  (42s)
+[20:49:59] aligned 15/24  (44s)
+[20:50:04] aligned 16/24  (50s)
+[20:50:06] aligned 17/24  (51s)
+[20:50:07] aligned 18/24  (52s)
+[20:50:09] aligned 19/24  (55s)
+[20:50:11] aligned 20/24  (56s)
+[20:50:13] aligned 21/24  (58s)
+[20:50:14] aligned 22/24  (59s)
+[20:50:15] aligned 23/24  (60s)
+[20:50:21] aligned 24/24  (66s)
+StopAsyncIteration exception in shielded future
+future: <Future finished exception=StopAsyncIteration()>
+Traceback (most recent call last):
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 511, in wrapper_coro
+    return await inner_task
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 341, in coro_wrapped
+    value = await coro
+            ^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\exceptions.py", line 33, in coro_wrapped
+    return await coro
+           ^^^^^^^^^^
+StopAsyncIteration
+[20:51:37] band4k_e_demucs: signals 10/24 (37s)
+[20:51:54] band4k_e_demucs: signals 20/24 (54s)
+[20:51:59] band4k_e_demucs: signals 24/24 (59s)
+[20:51:59] aligning 24 clips x 1 settings
+[20:52:08] aligned 1/24  (8s)
+[20:52:11] aligned 2/24  (12s)
+[20:52:15] aligned 3/24  (15s)
+[20:52:17] aligned 4/24  (17s)
+[20:52:17] aligned 5/24  (18s)
+[20:52:21] aligned 6/24  (21s)
+[20:52:21] aligned 7/24  (22s)
+[20:52:25] aligned 8/24  (26s)
+[20:52:26] aligned 9/24  (27s)
+[20:52:27] aligned 10/24  (27s)
+[20:52:31] aligned 11/24  (32s)
+[20:52:32] aligned 12/24  (32s)
+[20:52:32] aligned 13/24  (33s)
+[20:52:34] aligned 14/24  (34s)
+[20:52:38] aligned 15/24  (39s)
+[20:52:39] aligned 16/24  (40s)
+[20:52:40] aligned 17/24  (40s)
+[20:52:43] aligned 18/24  (44s)
+[20:52:46] aligned 19/24  (47s)
+[20:52:47] aligned 20/24  (47s)
+[20:52:47] aligned 21/24  (48s)
+[20:52:49] aligned 22/24  (50s)
+[20:52:52] aligned 23/24  (52s)
+[20:52:57] aligned 24/24  (58s)
+[20:53:19] stopped 4 running engine container(s) (pre-processing experiment done)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "F:\BB\ETN-SC\pulsar_auto\aligner2\preprocess_eval.py", line 142, in <module>
+    main()
+    ~~~~^^
+  File "F:\BB\ETN-SC\pulsar_auto\aligner2\preprocess_eval.py", line 115, in main
+    results[v] = score(run_variant(v, clips, args.degrade), clips, J)
+                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\BB\ETN-SC\pulsar_auto\aligner2\preprocess_eval.py", line 56, in run_variant
+    remote._bytes(preprocess.apply(degrade.apply(load_audio(c["wav"]), deg), variant)), False)
+                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\BB\ETN-SC\pulsar_auto\aligner2\preprocess.py", line 91, in apply
+    return slow(x, stretch_factor(variant))
+  File "F:\BB\ETN-SC\pulsar_auto\aligner2\preprocess.py", line 34, in slow
+    return torchaudio.functional.resample(torch.as_tensor(x, dtype=torch.float64), den, num).numpy()
+                                          ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: At least one stride in the given numpy array is negative, and tensors with negative strides are not currently supported. (You can probably work around this by making a copy of your array  with array.copy().) 

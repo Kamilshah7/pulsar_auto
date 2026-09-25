@@ -18,14 +18,38 @@ SETTINGS = {"base": {}, "floor6": {"pause_floor_db": 6.0}, "floor10": {"pause_fl
             "floor6+vad50": {"pause_floor_db": 6.0, "pause_vad": 0.5},
             "floor6&vad50": {"pause_floor_db": 6.0, "pause_floor_vad": 0.5},
             "floor10&vad50": {"pause_floor_db": 10.0, "pause_floor_vad": 0.5},
-            "floor6&vad30": {"pause_floor_db": 6.0, "pause_floor_vad": 0.3}}
+            "floor6&vad30": {"pause_floor_db": 6.0, "pause_floor_vad": 0.3},
+            "floor6min60": {"pause_floor_db": 6.0, "_floor_min_ms": 60}, "floor6min90": {"pause_floor_db": 6.0, "_floor_min_ms": 90},
+            "floor6min120": {"pause_floor_db": 6.0, "_floor_min_ms": 120},
+            "gated": {"pause_floor_db": 6.0, "pause_floor_min_ms": 90, "pause_floor_snr_max": 40.0}}
 LOCAL = os.path.join("bench", "cache", "aligner2", "preproc")
+
+
+def _floor_min_patch(min_ms):
+    """TEST-ONLY override of segment._word_quiet_run: a floor-only silence must last >= min_ms (a silence the word-
+    referenced test finds keeps the usual min_pause); in noise, weak consonants near the floor are short, pauses long"""
+    from aligner2 import segment
+    from aligner2.signals import HOP
+    orig = segment._word_quiet_run
+
+    def patched(prep, k, delta_db, ref_mode="edge", floor_db=None, vad=None, floor_vad=None):
+        run = orig(prep, k, delta_db, ref_mode)                       # the word-referenced silence alone
+        if floor_db is None:
+            return run
+        both = orig(prep, k, delta_db, ref_mode, floor_db, vad, floor_vad)
+        if run and (run[1] - run[0]) * HOP >= 0.03:
+            return run if both is None or (both[1] - both[0]) <= (run[1] - run[0]) else both
+        return both if both and (both[1] - both[0]) * HOP >= min_ms / 1000 else run
+    segment._word_quiet_run = patched
 
 
 def _clip(args):
     c, cond, setting = args
     import torch
     torch.set_num_threads(1)
+    fm = SETTINGS[setting].get("_floor_min_ms")
+    if fm:
+        _floor_min_patch(fm)
     from aligner2 import local_coarse, refine
     from aligner2.run_bench import GRID
     from aligner2.signals import clip_key
@@ -34,7 +58,7 @@ def _clip(args):
     else:
         zf = np.load(os.path.join(LOCAL, f"{clip_key(c['wav'])}_dg_{cond}_pp_none.npz"))
         z = {k: zf[k] for k in zf.files}
-    g = dict(GRID[0]); g.pop("refine", None); g.update(SETTINGS[setting])
+    g = dict(GRID[0]); g.pop("refine", None); g.update({k: v for k, v in SETTINGS[setting].items() if not k.startswith("_")})
     coarse, fc = local_coarse.coarse(c, setting=g, z=z)
     texts = [t["text"] for t in c["tokens"]]
     return (c["set"], str(c["clip"])), refine.refine(z, texts, fc, coarse, lex=refine.lexical_peaks(z, texts))

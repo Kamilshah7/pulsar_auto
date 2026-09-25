@@ -1,0 +1,17 @@
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+✓ Created objects.
+├── 🔨 Created mount F:\BB\ETN-SC\pulsar_auto\modal_enhance.py
+├── 🔨 Created function deepfilter.
+├── 🔨 Created function dns64.
+├── 🔨 Created function metricgan.
+├── 🔨 Created function sepformer.
+├── 🔨 Created function wpe.
+├── 🔨 Created function voicefixer.
+└── 🔨 Created function demucs.
+✓ App deployed in 5.022s! 🎉
+
+View Deployment: 
+https://modal.com/apps/alinarohannes777/main/deployed/aligner2-enhance

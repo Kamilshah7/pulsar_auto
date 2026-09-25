@@ -5773,3 +5773,29 @@ unchanged (18.3 -> 19.9). The coarse stage's pause model is level-based (a gap ~
 pauses. Per natural clip, denoise gain vs SNR: corr 0.07 (real low-SNR clips have non-stationary noise, not pink).
 Conclusion: no pre-processing for production. If noisy / reverberant clips matter, the fix is a noise-robust pause model
 (neural speech probability / the local floor), or denoising only the DSP input when a clip's background is loud.
+
+## NOISE-ROBUST PAUSES + ENHANCEMENT APPROACHES (2026-09-25; the user: "try that, and approaches that make garbled
+## clips more like cleanly spoken ones")
+Degraded 026 / 049 (all / H MAE, ms), clean = 16.32 / 20.40, 19.73 / 21.79.
+PAUSE MODEL (aligner2/segment.py, aligner2/pause_robust_eval.py): noise fills pauses, the "20 dB under the words" test fails.
+ floor6 (silent also within 6 dB of the local floor): noise20 33.7 -> 19.8 / 39.9 -> 25.9, noise10 44.0 -> 26.7 / 48.4 ->
+ 30.9, clean mixed (026 +0.24, 049 -0.12), ear worse in noise (026 noise20 accepted 171 -> 165, rejected 53 -> 62).
+ pyannote speech probability: in noise it keeps calling noisy pauses speech (vad50: 33.7 -> 33.1; floor AND vad: no effect).
+ floor6 with a 90 ms minimum for floor-only silences: clean identical, noise20 20.5 / 27.0, ear ~neutral.
+ ADOPTED (run_bench.BASE): + gate "only if p99 - floor < 40 dB" (clean benchmark clips >= 44.8 dB, noise20 <= 29.3,
+ noise10 <= 19.4): benchmark identical (v25 == v23 on all 7364), noise20 20.0 / 26.6, noise10 25.0 / 29.8, reverb unchanged.
+ENHANCEMENT (modal_enhance.py, pretrained, separate app; preprocess_eval.py e_<method>), deltas vs no enhancement (all):
+ DNS64: clean +0.2 / +0.4, noise20 -16.2 / -19.7, noise10 -24.3 / -26.3, reverb -6.4 / -5.8 (ear accepted +37 / +22),
+ band4k +0.5. SepFormer ~ DNS64 on noise, not on reverb. DeepFilterNet3 good on noise, reverb -3.9 / -4.2, clean +0.5 / +1.0.
+ VoiceFixer (vocoder; its output leads 6.75 ms -> compensated) noise / reverb gains, clean +3.4 / +1.3. Demucs noise only.
+ MetricGAN+ weakest. WPE: reverb -1.0 / -1.5 only. Slow-down by resampling x1.25: clean H -0.15 / -0.72, ear distance
+ better, all +0.3; x1.5 worse. (A phase-vocoder stretch smears onsets by up to 14 ms: not used.)
+ Real low-SNR benchmark clips (24-30 dB): no enhancer helps (DNS64 -0.19 ms, corr(SNR, gain) 0): their noise is room tone /
+ breath, not continuous noise under speech.
+ GATING: transcript likelihood under the letter model (choose the version where the transcript is more probable): safe on
+ clean, misses half the noisy clips (the letter model is robust to noise; the gain is on the DSP side). Floor drop from
+ DNS64 (10th-percentile loudness, original - enhanced): clean median 1.8 dB, noise20 36, noise10 49, reverb 11.5; gate at
+ 15 dB: clean 0/24 enhanced (identical), noise20 23/24 (17.5 / 20.8), noise10 24/24 (19.7 / 22.2), reverb 6/24.
+ NOT in production: needs DNS64 on every clip (to measure the drop) + a second signals pass for noisy clips.
+Fixed on the way: refine.P1(b) read an empty window when a release fell at the clip end (crash on enhanced audio); refine()
+now keeps the coarse times if a rule raises.

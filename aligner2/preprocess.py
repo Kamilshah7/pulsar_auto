@@ -31,7 +31,7 @@ def slow(x, factor):
     import torch
     import torchaudio
     num = int(round(factor * 100)); den = 100
-    return torchaudio.functional.resample(torch.as_tensor(x, dtype=torch.float64), den, num).numpy()
+    return torchaudio.functional.resample(torch.as_tensor(np.ascontiguousarray(x), dtype=torch.float64), den, num).numpy()
 
 
 def _box(x, n):

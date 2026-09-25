@@ -1,0 +1,301 @@
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+[19:33:07] engine code verified (926f4fb8, loaded from /root/aligner2)
+[19:33:09] aligning 24 clips x 1 settings
+[19:33:15] aligned 1/24  (7s)
+[19:33:18] aligned 2/24  (10s)
+[19:33:19] aligned 3/24  (10s)
+[19:33:19] aligned 4/24  (11s)
+[19:33:21] aligned 5/24  (12s)
+[19:33:25] aligned 6/24  (16s)
+[19:33:25] aligned 7/24  (17s)
+[19:33:26] aligned 8/24  (18s)
+[19:33:30] aligned 9/24  (21s)
+[19:33:31] aligned 10/24  (22s)
+[19:33:34] aligned 11/24  (26s)
+[19:33:35] aligned 12/24  (26s)
+[19:33:35] aligned 13/24  (27s)
+[19:33:36] aligned 14/24  (27s)
+[19:33:41] aligned 15/24  (32s)
+[19:33:42] aligned 16/24  (33s)
+[19:33:43] aligned 17/24  (34s)
+[19:33:45] aligned 18/24  (36s)
+[19:33:48] aligned 19/24  (39s)
+[19:33:49] aligned 20/24  (40s)
+[19:33:50] aligned 21/24  (42s)
+[19:33:51] aligned 22/24  (42s)
+[19:33:54] aligned 23/24  (45s)
+[19:33:57] aligned 24/24  (48s)
+[19:36:48] e_sepformer: signals 10/24 (52s)
+[19:36:59] e_sepformer: signals 20/24 (64s)
+[19:37:04] e_sepformer: signals 24/24 (69s)
+[19:37:04] aligning 24 clips x 1 settings
+[19:37:40] aligned 1/24  (35s)
+[19:37:41] aligned 2/24  (37s)
+[19:37:42] aligned 3/24  (37s)
+[19:37:43] aligned 4/24  (38s)
+[19:37:45] aligned 5/24  (41s)
+[19:37:48] aligned 6/24  (44s)
+[19:37:49] aligned 7/24  (45s)
+[19:37:50] aligned 8/24  (45s)
+[19:37:54] aligned 9/24  (49s)
+[19:37:55] aligned 10/24  (50s)
+[19:37:58] aligned 11/24  (53s)
+[19:37:58] aligned 12/24  (54s)
+[19:37:59] aligned 13/24  (55s)
+[19:38:00] aligned 14/24  (55s)
+[19:38:05] aligned 15/24  (60s)
+[19:38:07] aligned 16/24  (62s)
+[19:38:07] aligned 17/24  (63s)
+[19:38:07] aligned 18/24  (63s)
+[19:38:12] aligned 19/24  (68s)
+[19:38:13] aligned 20/24  (68s)
+[19:38:14] aligned 21/24  (70s)
+[19:38:15] aligned 22/24  (71s)
+[19:38:16] aligned 23/24  (71s)
+[19:38:21] aligned 24/24  (76s)
+[19:40:32] e_wpe: signals 10/24 (47s)
+[19:40:53] e_wpe: signals 20/24 (68s)
+[19:40:59] e_wpe: signals 24/24 (73s)
+[19:40:59] aligning 24 clips x 1 settings
+[19:41:30] aligned 1/24  (32s)
+[19:41:32] aligned 2/24  (34s)
+[19:41:34] aligned 3/24  (35s)
+[19:41:35] aligned 4/24  (36s)
+[19:41:36] aligned 5/24  (38s)
+[19:41:39] aligned 6/24  (40s)
+[19:41:41] aligned 7/24  (42s)
+[19:41:41] aligned 8/24  (43s)
+[19:41:45] aligned 9/24  (47s)
+[19:41:46] aligned 10/24  (47s)
+[19:41:48] aligned 11/24  (49s)
+[19:41:49] aligned 12/24  (51s)
+[19:41:51] aligned 13/24  (52s)
+[19:41:51] aligned 14/24  (53s)
+[19:41:55] aligned 15/24  (57s)
+[19:41:57] aligned 16/24  (59s)
+[19:41:58] aligned 17/24  (59s)
+[19:41:58] aligned 18/24  (60s)
+[19:42:03] aligned 19/24  (64s)
+[19:42:03] aligned 20/24  (65s)
+[19:42:05] aligned 21/24  (66s)
+[19:42:05] aligned 22/24  (67s)
+[19:42:06] aligned 23/24  (67s)
+[19:42:12] aligned 24/24  (73s)
+StopAsyncIteration exception in shielded future
+future: <Future finished exception=StopAsyncIteration()>
+Traceback (most recent call last):
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 511, in wrapper_coro
+    return await inner_task
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 341, in coro_wrapped
+    value = await coro
+            ^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\exceptions.py", line 33, in coro_wrapped
+    return await coro
+           ^^^^^^^^^^
+StopAsyncIteration
+[19:45:47] e_voicefixer: signals 10/24 (62s)
+[19:45:58] e_voicefixer: signals 20/24 (74s)
+[19:46:03] e_voicefixer: signals 24/24 (79s)
+StopAsyncIteration exception in shielded future
+future: <Future finished exception=StopAsyncIteration()>
+Traceback (most recent call last):
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 511, in wrapper_coro
+    return await inner_task
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 341, in coro_wrapped
+    value = await coro
+            ^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\exceptions.py", line 33, in coro_wrapped
+    return await coro
+           ^^^^^^^^^^
+StopAsyncIteration
+[19:46:04] aligning 24 clips x 1 settings
+[19:46:12] aligned 1/24  (8s)
+[19:46:13] aligned 2/24  (9s)
+[19:46:13] aligned 3/24  (10s)
+[19:46:15] aligned 4/24  (11s)
+[19:46:19] aligned 5/24  (15s)
+[19:46:19] aligned 6/24  (16s)
+[19:46:20] aligned 7/24  (16s)
+[19:46:23] aligned 8/24  (19s)
+[19:46:27] aligned 9/24  (23s)
+[19:46:27] aligned 10/24  (24s)
+[19:46:29] aligned 11/24  (25s)
+[19:46:31] aligned 12/24  (27s)
+[19:46:32] aligned 13/24  (28s)
+[19:46:34] aligned 14/24  (30s)
+[19:46:37] aligned 15/24  (33s)
+[19:46:37] aligned 16/24  (34s)
+[19:46:41] aligned 17/24  (37s)
+[19:46:43] aligned 18/24  (39s)
+[19:46:43] aligned 19/24  (39s)
+[19:46:45] aligned 20/24  (41s)
+[19:46:47] aligned 21/24  (43s)
+[19:46:50] aligned 22/24  (46s)
+[19:46:50] aligned 23/24  (47s)
+[19:46:52] aligned 24/24  (48s)
+[19:48:44] e_demucs: signals 10/24 (50s)
+[19:49:00] e_demucs: signals 20/24 (66s)
+[19:49:05] e_demucs: signals 24/24 (71s)
+StopAsyncIteration exception in shielded future
+future: <Future finished exception=StopAsyncIteration()>
+Traceback (most recent call last):
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 511, in wrapper_coro
+    return await inner_task
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 341, in coro_wrapped
+    value = await coro
+            ^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\exceptions.py", line 33, in coro_wrapped
+    return await coro
+           ^^^^^^^^^^
+StopAsyncIteration
+[19:49:05] aligning 24 clips x 1 settings
+[19:49:15] aligned 1/24  (10s)
+[19:49:18] aligned 2/24  (13s)
+[19:49:18] aligned 3/24  (13s)
+[19:49:21] aligned 4/24  (15s)
+[19:49:21] aligned 5/24  (16s)
+[19:49:24] aligned 6/24  (19s)
+[19:49:25] aligned 7/24  (20s)
+[19:49:30] aligned 8/24  (24s)
+[19:49:30] aligned 9/24  (25s)
+[19:49:30] aligned 10/24  (25s)
+[19:49:34] aligned 11/24  (29s)
+[19:49:35] aligned 12/24  (30s)
+[19:49:35] aligned 13/24  (30s)
+[19:49:38] aligned 14/24  (33s)
+[19:49:41] aligned 15/24  (36s)
+[19:49:42] aligned 16/24  (37s)
+[19:49:44] aligned 17/24  (38s)
+[19:49:47] aligned 18/24  (42s)
+[19:49:48] aligned 19/24  (42s)
+[19:49:49] aligned 20/24  (44s)
+[19:49:50] aligned 21/24  (45s)
+[19:49:51] aligned 22/24  (46s)
+[19:49:56] aligned 23/24  (51s)
+[19:49:57] aligned 24/24  (52s)
+StopAsyncIteration exception in shielded future
+future: <Future finished exception=StopAsyncIteration()>
+Traceback (most recent call last):
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 511, in wrapper_coro
+    return await inner_task
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 341, in coro_wrapped
+    value = await coro
+            ^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\exceptions.py", line 33, in coro_wrapped
+    return await coro
+           ^^^^^^^^^^
+StopAsyncIteration
+[19:50:28] slow125: signals 10/24 (28s)
+[19:50:43] slow125: signals 20/24 (43s)
+[19:50:49] slow125: signals 24/24 (49s)
+StopAsyncIteration exception in shielded future
+future: <Future finished exception=StopAsyncIteration()>
+Traceback (most recent call last):
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 511, in wrapper_coro
+    return await inner_task
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 341, in coro_wrapped
+    value = await coro
+            ^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\exceptions.py", line 33, in coro_wrapped
+    return await coro
+           ^^^^^^^^^^
+StopAsyncIteration
+[19:50:50] aligning 24 clips x 1 settings
+[19:50:59] aligned 1/24  (9s)
+[19:51:00] aligned 2/24  (11s)
+[19:51:01] aligned 3/24  (11s)
+[19:51:05] aligned 4/24  (15s)
+[19:51:07] aligned 5/24  (18s)
+[19:51:08] aligned 6/24  (19s)
+[19:51:09] aligned 7/24  (19s)
+[19:51:14] aligned 8/24  (24s)
+[19:51:16] aligned 9/24  (26s)
+[19:51:20] aligned 10/24  (31s)
+[19:51:21] aligned 11/24  (31s)
+[19:51:22] aligned 12/24  (32s)
+[19:51:23] aligned 13/24  (33s)
+[19:51:26] aligned 14/24  (36s)
+[19:51:30] aligned 15/24  (41s)
+[19:51:32] aligned 16/24  (43s)
+[19:51:33] aligned 17/24  (43s)
+[19:51:36] aligned 18/24  (46s)
+[19:51:39] aligned 19/24  (49s)
+[19:51:40] aligned 20/24  (50s)
+[19:51:43] aligned 21/24  (53s)
+[19:51:44] aligned 22/24  (54s)
+[19:51:45] aligned 23/24  (55s)
+[19:51:50] aligned 24/24  (61s)
+StopAsyncIteration exception in shielded future
+future: <Future finished exception=StopAsyncIteration()>
+Traceback (most recent call last):
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 511, in wrapper_coro
+    return await inner_task
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 341, in coro_wrapped
+    value = await coro
+            ^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\exceptions.py", line 33, in coro_wrapped
+    return await coro
+           ^^^^^^^^^^
+StopAsyncIteration
+[19:53:18] slow150: signals 10/24 (67s)
+[19:53:37] slow150: signals 20/24 (86s)
+[19:53:44] slow150: signals 24/24 (93s)
+[19:53:44] aligning 24 clips x 1 settings
+[19:53:53] aligned 1/24  (9s)
+[19:53:56] aligned 2/24  (13s)
+[19:53:57] aligned 3/24  (13s)
+[19:53:59] aligned 4/24  (15s)
+[19:54:01] aligned 5/24  (17s)
+[19:54:05] aligned 6/24  (21s)
+[19:54:07] aligned 7/24  (23s)
+[19:54:10] aligned 8/24  (27s)
+[19:54:14] aligned 9/24  (30s)
+[19:54:14] aligned 10/24  (31s)
+[19:54:20] aligned 11/24  (36s)
+[19:54:21] aligned 12/24  (38s)
+[19:54:22] aligned 13/24  (38s)
+[19:54:23] aligned 14/24  (39s)
+[19:54:30] aligned 15/24  (46s)
+[19:54:31] aligned 16/24  (47s)
+[19:54:34] aligned 17/24  (50s)
+[19:54:36] aligned 18/24  (52s)
+[19:54:39] aligned 19/24  (55s)
+[19:54:43] aligned 20/24  (59s)
+[19:54:43] aligned 21/24  (59s)
+[19:54:45] aligned 22/24  (61s)
+[19:54:49] aligned 23/24  (65s)
+[19:54:55] aligned 24/24  (71s)
+[19:55:30] stopped 4 running engine container(s) (pre-processing experiment done)
+degradation: clean
+variant  |               026               |               049              
+         |    MAE      H  acc  rej   dist |    MAE      H  acc  rej   dist
+none     |  16.32  20.40  177   51   13.9 |  19.73  21.79  129   38   15.7
+e_deepfilter |  16.82  21.49  170   53   14.0 |  20.76  23.49  132   35   16.8
+e_dns64  |  16.54  21.27  172   52   14.0 |  20.14  22.43  130   33   15.4
+e_metricgan |  18.18  23.80  170   46   14.6 |  20.61  24.42  109   38   17.7
+e_sepformer |  16.36  20.26  171   52   13.9 |  20.45  23.11  131   33   16.3
+e_wpe    |  16.48  20.64  178   50   13.9 |  19.63  22.37  133   39   15.5
+e_voicefixer |  19.73  24.00  170   58   15.4 |  21.06  24.56  123   30   16.5
+e_demucs |  16.48  20.59  173   51   13.9 |  19.78  22.47  132   39   15.9
+slow125  |  16.67  20.25  177   53   13.6 |  20.03  21.07  130   40   14.6
+slow150  |  17.71  22.33  162   53   14.5 |  22.32  26.95  126   44   18.2
+
+delta vs none (MAE / H: negative = better; acc: positive = better; rej: negative = better)
+e_deepfilter |  +0.49  +1.08   -7   +2   +0.1 |  +1.03  +1.70   +3   -3   +1.1
+e_dns64  |  +0.22  +0.87   -5   +1   +0.1 |  +0.41  +0.63   +1   -5   -0.2
+e_metricgan |  +1.85  +3.40   -7   -5   +0.7 |  +0.88  +2.63  -20   +0   +2.0
+e_sepformer |  +0.04  -0.14   -6   +1   +0.0 |  +0.72  +1.32   +2   -5   +0.6
+e_wpe    |  +0.16  +0.23   +1   -1   +0.0 |  -0.10  +0.58   +4   +1   -0.1
+e_voicefixer |  +3.40  +3.60   -7   +7   +1.5 |  +1.33  +2.77   -6   -8   +0.8
+e_demucs |  +0.16  +0.18   -4   +0   +0.0 |  +0.05  +0.67   +3   +1   +0.3
+slow125  |  +0.34  -0.15   +0   +2   -0.3 |  +0.30  -0.72   +1   +2   -1.1
+slow150  |  +1.39  +1.92  -15   +2   +0.6 |  +2.59  +5.16   -3   +6   +2.5

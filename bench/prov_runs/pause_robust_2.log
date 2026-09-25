@@ -1,0 +1,16 @@
+clean    floor6&vad50  026 MAE  16.48 H  20.40 acc 177 rej  51 dist  13.9 | 049 MAE  19.73 H  21.79 acc 129 rej  38 dist  15.7
+clean    floor10&vad50 026 MAE  16.48 H  20.40 acc 177 rej  51 dist  13.9 | 049 MAE  19.73 H  21.79 acc 129 rej  38 dist  15.7
+clean    floor6&vad30  026 MAE  16.48 H  20.40 acc 177 rej  51 dist  13.9 | 049 MAE  19.73 H  21.79 acc 129 rej  38 dist  15.7
+clean    floor6        026 MAE  16.56 H  20.58 acc 177 rej  52 dist  13.9 | 049 MAE  19.61 H  21.54 acc 129 rej  38 dist  15.6
+noise20  floor6&vad50  026 MAE  33.07 H  29.39 acc 171 rej  53 dist  14.3 | 049 MAE  38.72 H  36.81 acc 122 rej  34 dist  17.0
+noise20  floor10&vad50 026 MAE  33.07 H  29.39 acc 171 rej  53 dist  14.3 | 049 MAE  38.72 H  36.81 acc 122 rej  34 dist  17.0
+noise20  floor6&vad30  026 MAE  33.19 H  30.53 acc 171 rej  53 dist  14.3 | 049 MAE  38.96 H  37.27 acc 122 rej  34 dist  17.0
+noise20  floor6        026 MAE  19.76 H  23.31 acc 165 rej  62 dist  14.8 | 049 MAE  25.88 H  29.14 acc 112 rej  40 dist  17.8
+noise10  floor6&vad50  026 MAE  43.29 H  34.35 acc 147 rej  62 dist  16.4 | 049 MAE  47.10 H  39.98 acc 108 rej  40 dist  19.4
+noise10  floor10&vad50 026 MAE  43.29 H  34.35 acc 147 rej  62 dist  16.4 | 049 MAE  47.10 H  39.98 acc 108 rej  40 dist  19.4
+noise10  floor6&vad30  026 MAE  43.83 H  34.59 acc 147 rej  62 dist  16.4 | 049 MAE  47.19 H  39.86 acc 108 rej  40 dist  19.4
+noise10  floor6        026 MAE  26.74 H  28.81 acc 139 rej  66 dist  16.8 | 049 MAE  30.86 H  33.60 acc 101 rej  39 dist  19.4
+reverb   floor6&vad50  026 MAE  24.38 H  24.63 acc 135 rej  50 dist  16.5 | 049 MAE  27.23 H  27.71 acc 109 rej  40 dist  18.5
+reverb   floor10&vad50 026 MAE  24.37 H  24.63 acc 135 rej  50 dist  16.5 | 049 MAE  27.23 H  27.71 acc 109 rej  40 dist  18.5
+reverb   floor6&vad30  026 MAE  24.38 H  24.63 acc 135 rej  50 dist  16.5 | 049 MAE  27.23 H  27.71 acc 109 rej  40 dist  18.5
+reverb   floor6        026 MAE  24.37 H  24.87 acc 135 rej  51 dist  16.7 | 049 MAE  26.98 H  27.11 acc 110 rej  39 dist  18.2

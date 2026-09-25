@@ -18,7 +18,12 @@ from aligner2.benchmark import BENCH, evaluate, load_sets, report
 from aligner2.signals import clip_key
 
 BASE = {"min_pause": 0.03, "pause_model": "word_ref", "lam": 1000.0, "cont_model": "class", "radius_ms": 20,
-        "onset_ms": 10, "ref_mode": "word", "theta_db": 20.0, "clip_anchor_ms": 150}                     # v11
+        "onset_ms": 10, "ref_mode": "word", "theta_db": 20.0, "clip_anchor_ms": 150,                     # v11
+        # noise-robust pauses (2026-09-25): in a clip whose speech peaks are < 40 dB over the background, a pause may
+        # also be a >= 90 ms stretch within 6 dB of the local floor (noise fills pauses, so the 20 dB-under-the-words
+        # test fails). Clean clips (all benchmark clips: >= 44 dB) are unchanged; 20 dB noise: 026 33.7 -> 20.0 ms,
+        # 049 39.9 -> 26.6 ms; 10 dB noise: 44.0 -> 25.0, 48.4 -> 29.8 (aligner2/pause_robust_eval.py)
+        "pause_floor_db": 6.0, "pause_floor_min_ms": 90, "pause_floor_snr_max": 40.0}
 GRID = [dict(BASE, unit="letter4", radius_ms=10, soft=sm) for sm in ("off", "wild", "wild+cut")]
 GRID += [dict(BASE, unit="letter4", radius_ms=10, soft="off", refine=True)]     # + the rule stage (aligner2/refine.py)
 SETS = ("009", "026", "049", "old14")
