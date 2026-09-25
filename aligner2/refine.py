@@ -89,6 +89,7 @@ Pause edges (the coarse stage found a pause):
   P3  otherwise the speech onset: the steepest loudness rise within 30 ms of the coarse start (after the
       pause's middle, before the first-letter peak). P3a: never before the sound reaches the ear threshold
       (p99 - 40 dB; Clip.audible_start).
+  E2a the clip's last word fades out audibly (p99 - 40 dB; Clip.audible_fade) -- the H convention at clip ends.
   E1  first word: rises out of the last real gap before its first letter; no gap = the clip cuts into running
       speech -> the clip start.
   E1f a first word that begins with a voiced sound cannot begin with >= 50 ms of loud voiceless frication: that is the
@@ -118,7 +119,7 @@ CLASS = {**{p: "V" for p in VOWELS}, **{p: "stop" for p in ("P", "B", "T", "D", 
 BG_DB = 6.0                                   # a released stop's tail: until within 6 dB of the residual level
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
 RULES = {"F2", "J0", "J1", "J1n", "J1m", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "P3", "E1", "E2",
-         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe", "J4l", "J8m", "J4h", "J4w", "J5l", "J7l", "MP"}   # enabled
+         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe", "J4l", "J8m", "J4h", "J4w", "J5l", "J7l", "MP", "E2a"}   # enabled
 # (aligner2/local_bench.py --rules J1,J4,... for ablations)
 
 
@@ -943,6 +944,24 @@ class Clip:
                 self.trace[-1] = f"E1f after foreign frication start={on * HOP:.3f}"
         return on
 
+    def audible_fade(self, k, i):
+        """E2a: the clip's LAST word lasts while its sound fades above the ear threshold (p99 - 40 dB, floor
+        + 6): falling, no re-rise > 3 dB, <= 200 ms (bar H: the R decays -12 -> -40 dB over 90 ms after the coarse end;
+        dev H clip ends were early by 21.5 ms on average). Every H clip end it moves on every set improves but one
+        (bar +68, camp +50, a +42; H 009 19.94 -> 19.84, 026 20.60 -> 20.53, 049 22.17 -> 21.98); the losses are
+        accepted golds (the old aligner cut clip ends early): total gold -0.09 s."""
+        S = self.S
+        if i >= S.T - 1:
+            return None
+        thr = float(np.percentile(S.L, 99)) - 40.0
+        j, low = i, S.Ls[i]
+        while j < min(S.T - 1, i + MS(200)) and S.Ls[j] >= max(thr, S.floor[j] + 6.0) and S.Ls[j] <= low + 3.0:
+            low = min(low, S.Ls[j]); j += 1
+        if j - i < MS(6):
+            return None
+        self.trace[k] = self.trace.get(k, "") + f" | E2a fade end={j * HOP:.3f}"
+        return j
+
     def clip_end(self):
         """E2: the last word: the P1 checks against the clip end; if the clip cuts off running speech (no drop
         after the last letter) it ends at the clip end"""
@@ -1032,6 +1051,10 @@ class Clip:
                 s[0] = r * HOP
         if "E2" in RULES:
             r = self.clip_end()
+            if r is not None:
+                e[-1] = r * HOP
+        if "E2a" in RULES:                                   # E2a: the clip's last word fades out audibly
+            r = self.audible_fade(self.n - 1, self.idx(e[-1]))
             if r is not None:
                 e[-1] = r * HOP
         out = []
