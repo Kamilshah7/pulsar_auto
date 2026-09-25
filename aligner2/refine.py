@@ -948,7 +948,7 @@ class Clip:
                 self.trace[-1] = f"E1f after foreign frication start={on * HOP:.3f}"
         return on
 
-    def audible_fade(self, k, i, db=40.0):
+    def audible_fade(self, k, i, db=40.0, label="E2a"):
         """E2a: the clip's LAST word lasts while its sound fades above the ear threshold (p99 - 40 dB, floor
         + 6): falling, no re-rise > 3 dB, <= 200 ms (bar H: the R decays -12 -> -40 dB over 90 ms after the coarse end;
         dev H clip ends were early by 21.5 ms on average). Every H clip end it moves on every set improves but one
@@ -963,7 +963,7 @@ class Clip:
             low = min(low, S.Ls[j]); j += 1
         if j - i < MS(6):
             return None
-        self.trace[k] = self.trace.get(k, "") + f" | E2a fade end={j * HOP:.3f}"
+        self.trace[k] = self.trace.get(k, "") + f" | {label} fade end={j * HOP:.3f}"
         return j
 
     def clip_end(self):
@@ -1037,7 +1037,7 @@ class Clip:
             else:
                 r = self.pause_end(k, self.s[k + 1]) if "P1" in RULES else None
                 if r is None and "P1a" in RULES:              # P1a: no event / release / tail: the word fades out
-                    r = self.audible_fade(k, self.idx(self.e[k]), 30.0)     # (to p99 - 30 dB before a pause)
+                    r = self.audible_fade(k, self.idx(self.e[k]), 30.0, "P1a")   # (to p99 - 30 dB before a pause)
                     if r is not None and r * HOP >= self.s[k + 1] - 0.010:
                         r = None
                 if r is not None:
