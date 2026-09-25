@@ -1,0 +1,76 @@
+== 1. production denoiser: deploy, equivalence with the tested DNS64, gate on all 50 clean clips
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+production Denoiser vs tested dns64 (one clip): max |diff| 0.00e+00
+clean clips the gate would denoise: []  (of 50)
+largest floor drops: [('026-10', 12.9, 52.0), ('049-11', 11.9, 67.6), ('026-05', 9.4, 84.1), ('026-00', 9.4, 66.9), ('old14-07', 7.3, 56.1)]
+[23:12:10] stopped 2 running engine container(s) (denoise check)
+
+== 2. production path in an async context: 3 clean clips + 4 clips with 20 dB noise
+[aligner2] aligning 7 clips in one parallel engine call
+[aligner2] denoiser: 4 of 7 clips have loud background noise -> aligned from the denoised audio
+[23:12:19] asking the engine which of 3 clips need signals (starts a container if none is warm)
+[23:12:41] engine code verified (13ccdd75, loaded from /root/aligner2)
+[23:12:43] 0 clips need signals
+[23:12:50] signals (denoised) 1/4  (6s)
+[23:12:54] signals (denoised) 2/4  (10s)
+[23:12:59] signals (denoised) 3/4  (15s)
+[23:13:04] signals (denoised) 4/4  (20s)
+[23:13:04] aligning 7 clips x 1 settings
+[23:13:14] aligned 1/7  (11s)
+[23:13:16] aligned 2/7  (13s)
+[23:13:19] aligned 3/7  (16s)
+[23:13:20] aligned 4/7  (17s)
+[23:13:23] aligned 5/7  (19s)
+[23:13:28] aligned 6/7  (24s)
+[23:13:29] aligned 7/7  (25s)
+[23:13:46] stopped 3 running engine container(s) (bundle done: no idle billing)
+[aligner2] aligned 7 clips on the GPU engine (95s)
+prefetch + align: 95s, old-aligner fallback used: False
+clean 009-02: max |production - v25| = 0.0 ms
+clean 026-04: max |production - v25| = 0.0 ms
+clean 049-08: max |production - v25| = 0.0 ms
+noise20 026-01: MAE no denoise  26.3 -> tested DNS64  15.5, production  15.9 ms (max |production - tested| 62.0 ms)
+noise20 026-06: MAE no denoise  25.3 -> tested DNS64  14.3, production  14.3 ms (max |production - tested| 0.0 ms)
+noise20 049-03: MAE no denoise  32.2 -> tested DNS64  21.6, production  21.6 ms (max |production - tested| 2.0 ms)
+noise20 049-09: MAE no denoise  41.3 -> tested DNS64  21.0, production  21.0 ms (max |production - tested| 0.0 ms)
+
+== 3. time budget: a denoiser that does not answer in time -> original audio
+[aligner2] aligning 1 clips in one parallel engine call
+[aligner2] denoiser unavailable (no answer within 0 s); aligning every clip from the original audio
+[23:13:46] asking the engine which of 1 clips need signals (starts a container if none is warm)
+StopAsyncIteration exception in shielded future
+future: <Future finished exception=StopAsyncIteration()>
+Traceback (most recent call last):
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 511, in wrapper_coro
+    return await inner_task
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 341, in coro_wrapped
+    value = await coro
+            ^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\exceptions.py", line 33, in coro_wrapped
+    return await coro
+           ^^^^^^^^^^
+StopAsyncIteration
+[23:15:01] 1 clips need signals
+[23:15:10] signals 1/1  (9s)
+[23:15:10] aligning 1 clips x 1 settings
+[23:15:21] aligned 1/1  (10s)
+StopAsyncIteration exception in shielded future
+future: <Future finished exception=StopAsyncIteration()>
+Traceback (most recent call last):
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 511, in wrapper_coro
+    return await inner_task
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 341, in coro_wrapped
+    value = await coro
+            ^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\exceptions.py", line 33, in coro_wrapped
+    return await coro
+           ^^^^^^^^^^
+StopAsyncIteration
+[23:15:33] stopped 2 running engine container(s) (bundle done: no idle billing)
+[aligner2] aligned 1 clips on the GPU engine (107s)
+noise20 026|1: MAE 16.8 ms (the no-denoise run with the pause model, not the pre-v25 26.3)

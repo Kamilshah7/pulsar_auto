@@ -5796,6 +5796,24 @@ ENHANCEMENT (modal_enhance.py, pretrained, separate app; preprocess_eval.py e_<m
  clean, misses half the noisy clips (the letter model is robust to noise; the gain is on the DSP side). Floor drop from
  DNS64 (10th-percentile loudness, original - enhanced): clean median 1.8 dB, noise20 36, noise10 49, reverb 11.5; gate at
  15 dB: clean 0/24 enhanced (identical), noise20 23/24 (17.5 / 20.8), noise10 24/24 (19.7 / 22.2), reverb 6/24.
- NOT in production: needs DNS64 on every clip (to measure the drop) + a second signals pass for noisy clips.
+ Two-signal gate (the 15 dB gate missed a noisy clip at 11.7 dB): drop >= 15 dB, OR drop >= 5 dB in a clip whose
+ background is loud (p99 - local floor < 40 dB, the pause model's test): clean 0/24 (identical), noise20 24/24
+ (17.5 / 20.2 = always-DNS64), noise10 24/24 (19.7 / 22.2), reverb 16/24 (20.0 / 23.1; always 18.0 / 21.4), band4k 0/24
+ (identical). Clean benchmark: 0 of 50 clips selected (largest drops 026-10 12.9 dB at snr 52, 049-11 11.9 at 67.6).
+
+## PRODUCTION DENOISER (2026-09-25; the user: "wire it in")
+modal_denoise.py (app aligner2-denoise, A10G, own image: torch 2.1.2 + denoiser 0.1.5, DNS64 weights on the volume);
+aligner2/denoise_gate.py (the two-signal gate above); aligner2/remote.py denoise_many / ensure_denoise_deployed (redeploy
+when the file's sha1 changes, stamp bench/cache/aligner2/deployed_denoise.sha) / ensure_signals_audio (signals from audio
+under <clip key>_dns64); aligner2/production.py _engine: every clip of a bundle is denoised in parallel, the gate picks
+per clip, signals + alignment for the chosen audio; ALIGNER_DENOISE=off disables it; a failure or no answer within
+ALIGNER_DENOISE_BUDGET (240 s) -> original audio for the whole bundle. Stop-containers covers both apps.
+Checked (bench/prov_runs/denoise_verify.log): production Denoiser == the tested dns64 (max |diff| 0); 0/50 clean clips
+selected; production path from an async context: 3 clean clips identical to v25; 4 noise20 clips all denoised, MAE
+026-1 26.3 -> 15.9, 026-6 25.3 -> 14.3, 049-3 32.2 -> 21.6, 049-9 41.3 -> 21.0 (the test WAVs are 16-bit: 026-1 moves one
+boundary by 62 ms vs the float32 experiment, MAE 15.5 there); the forced timeout aligned 026-1 from the original
+(16.8 ms: the v25 pause model alone; the "no denoise" figures above are pre-v25). Cost: ~1 s of A10G per clip (50 clips
+in 40 s with a 16 s cold start, 4 containers). The very first containers of the freshly built image took minutes to start
+(one-off) -> the time budget.
 Fixed on the way: refine.P1(b) read an empty window when a release fell at the clip end (crash on enhanced audio); refine()
 now keeps the coarse times if a rule raises.

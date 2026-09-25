@@ -39,7 +39,12 @@ Jthe). Ear accepted / rejected 026 177 / 51, 049 129 / 38, old14 114 / 31; manua
 whose speech peaks are < 40 dB over the background (run_bench.BASE). Benchmark identical to v23 (all clips are cleaner);
 20 dB noise 33.7 -> 20.0 (026) / 39.9 -> 26.6 (049), 10 dB noise 44.0 -> 25.0 / 48.4 -> 29.8. Enhancement study (pretrained
 DNS64 etc., modal_enhance.py, preprocess_eval.py, select_eval.py): DNS64 gated on the floor drop restores noisy clips to
-~clean accuracy with no change on clean ones -- not wired into production (NOTES.md "NOISE-ROBUST PAUSES + ENHANCEMENT").
+~clean accuracy with no change on clean ones (NOTES.md "NOISE-ROBUST PAUSES + ENHANCEMENT").
+**v26 (production denoiser):** every clip of a bundle goes through DNS64 (modal_denoise.py, app `aligner2-denoise`);
+aligner2/denoise_gate.py keeps the denoised audio when the background floor drops >= 15 dB, or >= 5 dB in a clip with a
+loud background (< 40 dB under the speech peaks). No clean benchmark clip is selected (benchmark identical to v25);
+20 dB noise 026 / 049 33.7 / 39.9 -> 17.5 / 20.2 ms, 10 dB 44.0 / 48.4 -> 19.7 / 22.2, reverb 24.4 / 27.2 -> 20.0 / 23.1.
+`ALIGNER_DENOISE=off` disables it; a failure or no answer within 240 s -> original audio (NOTES.md "PRODUCTION DENOISER").
 
 ## Pipeline
 1. **Signals** (GPU, Modal engine `modal_aligner2.py`, app `aligner2-signals`, volume `aligner2-cache`): loudness,
@@ -59,6 +64,8 @@ DNS64 etc., modal_enhance.py, preprocess_eval.py, select_eval.py): DNS64 gated o
 the Modal engine, same `align(wav, words)` interface as the old `forced_aligner.ForcedAligner`, one batched engine call
 per bundle (`prefetch`), results identical to the benchmark (checked on 009-02, 026-04, 049-08: max diff 0.0 ms).
 Engine unreachable -> the old ForcedAligner for that clip (logged); `ALIGNER=forced` selects the old one outright.
+Since v26 each bundle is first denoised (DNS64, app `aligner2-denoise`, ~1 s of A10G per clip) and the gate picks the
+original or the denoised audio per clip; both apps' containers are stopped when the bundle is done.
 Cost: containers stop 20 s after the last call (`SCALEDOWN_S`) and production stops them as soon as a bundle is done,
 so only the cold start (~20-40 s model load) and processing are billed, never idle time. (A CPU-only local run was
 considered: no local GPU, 8 CPU threads; HuBERT-large x4 + xlsr-53 per clip were judged too slow.)

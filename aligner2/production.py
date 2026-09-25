@@ -10,6 +10,10 @@ Benchmark (bench/prov_runs/aligner2_v17.*, same engine and setting):
   049 held-out    24.9   19.9      |  28.7 -> 22.9
   ear judgments (the user's manual placements, n=182): old production aligner 32.3, v16 27.4, v16 + rules 24.9.
 
+Noisy clips: every clip is first run through DNS64 (modal_denoise.py); a clip whose background noise it clearly removes
+(floor drop >= 15 dB, aligner2/denoise_gate.py) is aligned from the denoised audio, every other clip from the original
+(clean clips: unchanged). ALIGNER_DENOISE=off skips it; a denoiser failure falls back to the original audio.
+
 `prefetch([(wav_path, words), ...])` aligns a whole bundle in one parallel engine call; `align` then answers
 from that cache. Cost: Modal bills per second only while a container runs; the engine's containers stop 20 s after
 the last call (modal_aligner2.SCALEDOWN_S) and prefetch stops them right away when the bundle is done, so a run pays
@@ -25,6 +29,7 @@ from aligner2 import remote
 from aligner2.run_bench import GRID
 
 SETTING = GRID[3]                      # v16 + rule stage (refine=True)
+DENOISE_BUDGET_S = float(os.environ.get("ALIGNER_DENOISE_BUDGET", 240))   # 50 clips take ~40 s; else original audio
 assert SETTING.get("refine") is True, "production setting must include the rule stage"
 
 
@@ -62,7 +67,7 @@ class Aligner2:
         t0 = time.time()
         keys = [clip_key(p) for p, _ in todo]
         self.log(f"[aligner2] aligning {len(todo)} clips in one parallel engine call")
-        res = _off_event_loop(self._engine, keys, todo)
+        res = _off_event_loop(self._engine, keys, todo, self.log)
         for k, (p, w) in zip(keys, todo):
             preds = res[k][0]
             if len(preds) != len(w):
@@ -72,11 +77,39 @@ class Aligner2:
         self.log(f"[aligner2] aligned {len(todo)} clips on the GPU engine ({time.time() - t0:.0f}s)")
 
     @staticmethod
-    def _engine(keys, todo):
-        """signals for the clips the engine's volume lacks, then every clip aligned, all in parallel on the GPU"""
+    def _engine(keys, todo, log=print):
+        """per clip: DNS64 denoising kept only when it removes loud background noise (aligner2/denoise_gate.py), then
+        signals for the chosen audio and every clip aligned, all in parallel on the GPU"""
         try:
-            remote.ensure_signals(list(zip(keys, [p for p, _ in todo])))
-            return remote.align_many([(k, w) for k, (_, w) in zip(keys, todo)], [SETTING])
+            use = [None] * len(todo)                     # (key, denoised audio) for the clips aligned from it
+            if os.environ.get("ALIGNER_DENOISE", "on").lower() != "off":
+                try:
+                    from aligner2 import denoise_gate
+                    from aligner2.signals import load_audio
+                    xs = [load_audio(p) for p, _ in todo]
+                    pool = ThreadPoolExecutor(1)     # a time budget: a slow GPU start must not hold the bundle up
+                    try:
+                        ys = pool.submit(remote.denoise_many, xs).result(timeout=DENOISE_BUDGET_S)
+                    finally:
+                        pool.shutdown(wait=False)    # on a timeout the late results are dropped (containers stopped below)
+                    for i, (x, y) in enumerate(zip(xs, ys)):
+                        if denoise_gate.use_denoised(x, y):
+                            use[i] = (f"{keys[i]}_dns64", y)
+                    log(f"[aligner2] denoiser: {sum(u is not None for u in use)} of {len(todo)} clips have loud background "
+                        f"noise -> aligned from the denoised audio")
+                except Exception as e:                   # the denoiser must never cost a clip
+                    why = f"no answer within {DENOISE_BUDGET_S:.0f} s" if isinstance(e, TimeoutError) else repr(e)
+                    log(f"[aligner2] denoiser unavailable ({why}); aligning every clip from the original audio")
+                    use = [None] * len(todo)
+            orig = [(k, p) for k, (p, _), u in zip(keys, todo, use) if u is None]
+            if orig:
+                remote.ensure_signals(orig)
+            den = [u for u in use if u is not None]
+            if den:
+                remote.ensure_signals_audio(den)
+            akeys = [u[0] if u is not None else k for k, u in zip(keys, use)]
+            res = remote.align_many([(ak, w) for ak, (_, w) in zip(akeys, todo)], [SETTING])
+            return {k: res[ak] for k, ak in zip(keys, akeys)}
         finally:
             remote.stop_containers("(bundle done: no idle billing)")   # billed per second while a container runs: no idle tail after the bundle
 

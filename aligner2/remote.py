@@ -62,6 +62,36 @@ def ensure_deployed():
     log("deployed; the first call starts a fresh container that loads the models (~30-60 s)")
 
 
+DENOISE_APP, DENOISE_CLS = "aligner2-denoise", "Denoiser"
+DENOISE_STAMP = os.path.join(ROOT, "bench", "cache", "aligner2", "deployed_denoise.sha")
+_DENOISER = None
+
+
+def ensure_denoise_deployed():
+    """the production denoiser (modal_denoise.py), redeployed when that file changes"""
+    h = hashlib.sha1(open(os.path.join(ROOT, "modal_denoise.py"), "rb").read()).hexdigest()
+    if os.path.exists(DENOISE_STAMP) and open(DENOISE_STAMP).read().strip() == h:
+        return
+    log("denoiser source changed -> deploying modal_denoise.py")
+    r = subprocess.run([sys.executable, "-m", "modal", "deploy", "modal_denoise.py"], cwd=ROOT, env=_env(),
+                       capture_output=True, text=True, encoding="utf-8", errors="replace")
+    if r.returncode != 0:
+        raise RuntimeError("modal deploy modal_denoise.py failed: " + (r.stdout + r.stderr)[-800:])
+    os.makedirs(os.path.dirname(DENOISE_STAMP), exist_ok=True)
+    open(DENOISE_STAMP, "w").write(h)
+
+
+def denoise_many(audios):
+    """[float array 16 kHz] -> [float32 array], DNS64 on the GPU, all clips in parallel (modal_denoise.py)"""
+    global _DENOISER
+    import modal
+    ensure_denoise_deployed()
+    if _DENOISER is None:
+        _DENOISER = modal.Cls.from_name(DENOISE_APP, DENOISE_CLS)()
+    out = list(_DENOISER.run.map([_bytes(a) for a in audios]))
+    return [np.frombuffer(b, dtype=np.float32) for b in out]
+
+
 def stop_containers(why="so no call reaches old code"):
     """stop every running container of the engine: warm containers from a previous deploy keep serving
     the OLD code otherwise (seen 2026-09-24: calls right after a deploy still ran the previous segment.py);
@@ -70,7 +100,7 @@ def stop_containers(why="so no call reaches old code"):
     r = subprocess.run([sys.executable, "-m", "modal", "container", "list", "--json"], cwd=ROOT, env=_env(),
                        capture_output=True, text=True, encoding="utf-8", errors="replace")
     try:
-        ids = [c["container_id"] for c in json.loads(r.stdout) if c.get("app_name") == APP_NAME]
+        ids = [c["container_id"] for c in json.loads(r.stdout) if c.get("app_name") in (APP_NAME, DENOISE_APP)]
     except ValueError:
         ids = []
     for cid in ids:
@@ -130,6 +160,18 @@ def ensure_signals(clips):
     t0 = time.time()
     for i, r in enumerate(_obj().signals.starmap(todo, order_outputs=False), 1):
         log(f"signals {i}/{len(todo)}  ({time.time() - t0:.0f}s)")
+    return len(todo)
+
+
+def ensure_signals_audio(items):
+    """items: [(key, float audio 16 kHz)] -> signals computed on the GPU for the keys the volume lacks (denoised audio)"""
+    keys = [k for k, _ in items]
+    miss = set(_obj().missing.remote(keys))
+    todo = [(k, _bytes(a), False) for k, a in items if k in miss]
+    if todo:
+        t0 = time.time()
+        for i, _ in enumerate(_obj().signals.starmap(todo, order_outputs=False), 1):
+            log(f"signals (denoised) {i}/{len(todo)}  ({time.time() - t0:.0f}s)")
     return len(todo)
 
 
