@@ -11,12 +11,27 @@ analysis / synthesis window), so no variant shifts a boundary in time.
   denoise  spectral subtraction (32 ms STFT, 8 ms hop): noise power = mean of the 10 % quietest frames, 1.5x
            over-subtraction, gain floor -20 dB
   combo    hpf80 -> denoise -> peak
+  slowNNN  time-stretch by NNN/100 by resampling (slower and lower-pitched; exact timing): more CTC frames per sound
+           for fast / mumbled speech. The aligner's times are divided by the factor afterwards (preprocess_eval.py).
 """
 import numpy as np
 from scipy.signal import butter, sosfiltfilt, stft, istft
 
 SR = 16000
 VARIANTS = ("none", "peak", "rms20", "hpf80", "agc", "denoise", "combo")
+
+
+def stretch_factor(variant):
+    return int(variant[4:]) / 100 if variant.startswith("slow") else 1.0
+
+
+def slow(x, factor):
+    """time stretch by RESAMPLING: the samples are stretched by `factor` (the speech is slower AND lower-pitched, 1/factor):
+    an event at input time t is at factor * t exactly (a phase vocoder keeps the pitch but smears onsets by up to 14 ms)"""
+    import torch
+    import torchaudio
+    num = int(round(factor * 100)); den = 100
+    return torchaudio.functional.resample(torch.as_tensor(x, dtype=torch.float64), den, num).numpy()
 
 
 def _box(x, n):
@@ -72,4 +87,6 @@ def apply(x, variant):
         return denoise(x)
     if variant == "combo":
         return peak(denoise(hpf(x)))
+    if variant.startswith("slow"):
+        return slow(x, stretch_factor(variant))
     raise ValueError(variant)

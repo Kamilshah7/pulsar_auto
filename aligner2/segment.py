@@ -144,6 +144,12 @@ class Prepared:
         self.C = contrast(self.Y)
         self.loud = z["loudness"].astype(float)
         self.loud_z = (self.loud - self.loud.mean()) / (self.loud.std() + 1e-9)
+        # noise-robust pause cues (align(pause_floor_db=..., pause_vad=...)): the local background = the minimum of the
+        # 50 ms-smoothed loudness within +-1 s; pyannote's speech probability
+        sm = np.convolve(self.loud, np.ones(25) / 25, "same")
+        pad = np.pad(sm, 500, mode="edge")
+        self.floor = np.lib.stride_tricks.sliding_window_view(pad, 1001).min(axis=1)[:self.T]
+        self.vad = z["speech_prob"].astype(float) if "speech_prob" in z else None
         self.slope = _slope(self.loud)
         self.gmm_runs = _runs(_gmm_silence(z) > 0.5)
         self.lex = {"letter": Lexical(self.Y, self.T, z["ctc_logp"], texts, device)}
@@ -206,7 +212,7 @@ def _silent_run(prep, a, b, theta_db, between=None):
     return a + r0, a + r1
 
 
-def _word_quiet_run(prep, k, delta_db, ref_mode="edge"):
+def _word_quiet_run(prep, k, delta_db, ref_mode="edge", floor_db=None, vad=None, floor_vad=None):
     """pause candidate for boundary k: the longest run between the two words' letter peaks that the
     lexical stage puts in neither word (P(between) > 0.5) and that is >= delta_db quieter than the
     quieter of the two words (loudness around their edge-letter peaks). Breath and room noise count
@@ -222,7 +228,15 @@ def _word_quiet_run(prep, k, delta_db, ref_mode="edge"):
         ref = min(body(f1, pa), body(pb, l2))
     else:
         ref = min(np.max(prep.loud[max(0, pa - w):pa + w + 1]), np.max(prep.loud[max(0, pb - w):pb + w + 1]))
-    quiet = (prep.loud[a:b] < ref - delta_db) & (prep.between[k][a:b] > 0.5)
+    quiet = prep.loud[a:b] < ref - delta_db
+    if floor_db is not None:                  # noise-robust: at the local background (a noisy pause is not
+        at_floor = prep.loud[a:b] < prep.floor[a:b] + floor_db    # delta_db under the words, but it is at the floor)
+        if floor_vad is not None and prep.vad is not None:     # ... and the speech detector agrees (weak consonants
+            at_floor &= prep.vad[a:b] < floor_vad               # near a noisy floor are still speech)
+        quiet |= at_floor
+    if vad is not None and prep.vad is not None:   # noise-robust: the neural speech detector says non-speech
+        quiet |= prep.vad[a:b] < vad
+    quiet &= prep.between[k][a:b] > 0.5
     runs = _runs(quiet)
     if not runs:
         return None
@@ -241,7 +255,7 @@ def _slope(x, w=3):
 
 def align(prep, lam=1.0, pause_model="word_ref", theta_db=12.0, min_pause=0.1, snap_ms=0, unit="letter",
           cont_model="edge", radius_ms=40, fall_mode="fall", center="lexical", onset_ms=0, offset_ms=0,
-          ref_mode="edge", anchor_ms=0, clip_anchor_ms=0):
+          ref_mode="edge", anchor_ms=0, clip_anchor_ms=0, pause_floor_db=None, pause_vad=None, pause_floor_vad=None):
     prep.use(unit)
     T, n = prep.T, len(prep.priors) + 1
     ends, starts = [None] * n, [None] * n
@@ -255,7 +269,7 @@ def align(prep, lam=1.0, pause_model="word_ref", theta_db=12.0, min_pause=0.1, s
             sil = prep.fc[2][k]
             run = (int(sil[0] / HOP), int(sil[1] / HOP)) if sil else None
         elif pause_model == "word_ref":
-            run = _word_quiet_run(prep, k, theta_db, ref_mode)
+            run = _word_quiet_run(prep, k, theta_db, ref_mode, pause_floor_db, pause_vad, pause_floor_vad)
         elif pause_model == "gmm":
             run = None
             for a0, b0 in prep.gmm_runs:

@@ -606,8 +606,9 @@ class Clip:
             bu = burst_onset(S, i_end, blim, prefer="first",
                              min_trn=2.0 if "P1bt2" in RULES else 3.0,   # weak releases count
                              hb_db=12.0 if "P1bv" in RULES else None, info=binfo)   # voiced closures (P1bv)
-            wpk = S.Ls[self.idx(self.s[k]):i_end + 1].max()
-            if bu is not None and "P1b100" in RULES and                     S.Ls[S.clip(bu + MS(30)):S.clip(bu + MS(50))].max() > S.Ls[bu:S.clip(bu + MS(12))].max():
+            wpk = S.Ls[min(self.idx(self.s[k]), i_end):i_end + 1].max()
+            post, burst = S.Ls[S.clip(bu + MS(30)):S.clip(bu + MS(50))] if bu is not None else [],                 S.Ls[bu:S.clip(bu + MS(12)) + 1] if bu is not None else []
+            if bu is not None and "P1b100" in RULES and len(post) and post.max() > burst.max():
                 bu = None                                  # it grows into a vowel: the next word's onset, not a release
             if bu is not None and S.Ls[bu:bu + MS(20)].max() >= wpk - 30.0:   # an audible release
                 resid = S.Ls[bu:min(lim, bu + MS(200))].min()
@@ -1164,8 +1165,16 @@ def refine(z, texts, arpa, coarse, trace=None, lex=None, device=None):
     """z: signals dict (aligner2/signals.py), texts: tokens, arpa: per-token ARPAbet strings (fc_align), coarse:
     the coarse [{start, end}] -> refined [{start, end}]. trace: optional dict filled with {boundary k: rule and
     landmarks}; lex: precomputed lexical_peaks(z, texts); device: 'cuda' for the lexical forward-backward"""
-    c = Clip(z, texts, arpa, coarse, lex, device)
-    out = c.run()
+    try:
+        c = Clip(z, texts, arpa, coarse, lex, device)
+        out = c.run()
+    except Exception as e:                    # a rule must never cost a clip: keep the coarse times (logged)
+        import traceback
+        print(f"[refine] rule stage failed ({e!r}); keeping the coarse times", flush=True)
+        print(traceback.format_exc(), flush=True)
+        if trace is not None:
+            trace[-2] = f"rule stage failed: {e!r}"
+        return [dict(q) for q in coarse]
     if trace is not None:
         trace.update(c.trace)
     return out

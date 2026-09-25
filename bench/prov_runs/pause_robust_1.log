@@ -1,0 +1,12 @@
+clean    base          026 MAE  16.32 H  20.40 acc 177 rej  51 dist  13.9 | 049 MAE  19.73 H  21.79 acc 129 rej  38 dist  15.7
+clean    floor6        026 MAE  16.56 H  20.58 acc 177 rej  52 dist  13.9 | 049 MAE  19.61 H  21.54 acc 129 rej  38 dist  15.6
+clean    floor10       026 MAE  16.57 H  20.61 acc 178 rej  52 dist  13.9 | 049 MAE  19.58 H  21.77 acc 128 rej  38 dist  15.6
+clean    vad50         026 MAE  16.35 H  20.40 acc 177 rej  51 dist  13.9 | 049 MAE  19.73 H  21.79 acc 129 rej  38 dist  15.7
+clean    vad30         026 MAE  16.35 H  20.40 acc 177 rej  51 dist  13.9 | 049 MAE  19.81 H  21.79 acc 129 rej  38 dist  15.7
+clean    floor6+vad50  026 MAE  16.43 H  20.58 acc 177 rej  52 dist  13.9 | 049 MAE  19.61 H  21.54 acc 129 rej  38 dist  15.6
+noise20  base          026 MAE  33.65 H  31.50 acc 171 rej  53 dist  14.3 | 049 MAE  39.87 H  38.38 acc 122 rej  34 dist  17.0
+noise20  floor6        026 MAE  19.76 H  23.31 acc 165 rej  62 dist  14.8 | 049 MAE  25.88 H  29.14 acc 112 rej  40 dist  17.8
+noise20  floor10       026 MAE  21.03 H  25.11 acc 159 rej  60 dist  15.9 | 049 MAE  26.27 H  30.51 acc 109 rej  39 dist  18.5
+noise20  vad50         026 MAE  33.07 H  29.39 acc 171 rej  53 dist  14.3 | 049 MAE  38.59 H  36.81 acc 122 rej  34 dist  17.0
+noise20  vad30         026 MAE  33.19 H  30.53 acc 171 rej  53 dist  14.3 | 049 MAE  38.96 H  37.27 acc 122 rej  34 dist  17.0
+noise20  floor6+vad50  026 MAE  19.76 H  23.31 acc 165 rej  62 dist  14.8 | 049 MAE  25.71 H  29.14 acc 112 rej  40 dist  17.8
