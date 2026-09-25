@@ -72,6 +72,16 @@ def candidates(S, pa, pb, cut, pair):
     hm = a + int(np.argmin(S.hi[a:b])) if b > a else None
     if hm is not None:
         c["hi_min"] = hm
+        hs = R._box(S.hi, R.MS(6)); cs = R._box(S.cent, R.MS(6))
+        hm2 = a + int(np.argmin(hs[a:b]))
+        for db in (4, 6, 8):                         # the next phone's quality arrives: the high band climbs out
+            q = next((i for i in range(hm2, b) if hs[i] >= hs[hm2] + db), None)    # of its minimum
+            if q is not None:
+                c[f"hi_rise{db}"] = q
+        cm = a + int(np.argmin(cs[a:b]))
+        q = next((i for i in range(cm, b) if cs[i] >= cs[cm] + 0.2), None)
+        if q is not None:
+            c["cent_rise"] = q
     bu = R.burst_onset(S, a, b, prefer="last")
     if bu is not None:
         c["burst_last"] = bu

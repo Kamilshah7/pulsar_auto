@@ -31,6 +31,10 @@ Branch: `claude/pulsar-auto-conversation-oi3e40` (pushed; not merged; no PR). Ev
 the editor keeps "the" ~40 ms longer than the ear accepts). Listening review (verify.py): accepted / rejected
 026 175 / 49 (was 169 / 59), 049 129 / 39 (122 / 40), old14 112 / 31 (108 / 35); manual MAE 026 19.7 (23.0),
 old14 16.3 (19.1). Every rule change is now checked with `python -m aligner2.verify --add X` (gold + ear, all sets).
+**v23:** + J5l, J7l, MP (missed pause), E2a (clip-end fade), P1a (pause-end fade to -30 dB), Jthe voiced-peak fix.
+Gold 009 17.10 / H 19.69, 026 16.32 / 20.40, 049 19.73 / 21.79, old14 22.53 / 23.61 (all better than v22 despite
+Jthe). Ear accepted / rejected 026 177 / 51, 049 129 / 38, old14 114 / 31; manual MAE 026 19.6, old14 14.4.
+`python -m aligner2.case SET-CLIP K [--add X]` reads one junction at 2 ms with the ear marks.
 
 ## Pipeline
 1. **Signals** (GPU, Modal engine `modal_aligner2.py`, app `aligner2-signals`, volume `aligner2-cache`): loudness,

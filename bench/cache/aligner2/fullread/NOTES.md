@@ -5732,3 +5732,24 @@ old14 108 -> 112 / 35 -> 31, manual 19.1 -> 16.3):
  - really|did (+115 by ear and H): the CTC emits D twice; "did"'s first-letter peak took the second D -> coarse.
  - J8p (J8 fallback between the letter peaks, 20 / 50 %): mixed -> no (the letters lag).
 v22 engine run == local on all 5648 boundaries.
+Round 2 (case by case, verify.py after each):
+ - J5l ADOPTED (fricative > liquid crossfade; was|largely +58 by ear; ear accepted +3; 049 accepted gold -0.17 s).
+ - J7l ADOPTED (liquid > nasal: 20 % of the change; gold +0.21 s, ear +48 ms).
+ - Jthe fix ADOPTED: the vowel's peak over VOICED frames only (the|scouting: the /s/ was louder than the vowel).
+ - MP ADOPTED (missed pause: >= 60 ms under p99 - 40 dB near the floor inside a coarse continuous join before a
+   sonorant-initial word, no stop / affricate among the two phones on either side; platinum|and H -210 -> -11).
+   The first-letter peak can LEAD into the silence (and: 9.312, silence 9.37-9.46): search 200 ms into word k+1.
+ - E2a ADOPTED (clip end: fade above p99 - 40 dB; H better on every set, accepted golds lose).
+ - P1a ADOPTED (pause end with no P1 event: fade above p99 - 30 dB; all + H better on every set, +1.47 s; at -40 dB
+   the accepted pause ends lose -2.8 s; at -35 mixed). P3a at -35 / -30 (starts): worse -> starts stay at -40.
+ - Rejected: J8g (nasal > glide at the dip: old14 manual MAE 14.4 -> 20.1), J13n (nasal > DH murmur end: ear neutral,
+   gold -0.35 s), Jfn (Jthe for "a" / "to": gold -4.0 s, ear -470 ms -- "the" is special), J1dw (dip window), F2h
+   (F2 for h: breaks his), end-of-hold / high-band-rise landmarks for V>V / V>gl / V>liq / liq>V (worse on both).
+ - Letter peaks vs H continuous joins (699): word k's last letter peaks 36 ms before the cut, word k+1's first letter
+   54 ms after (median); their midpoint is +8 ms overall but centred for V>V (-0.4), V>gl (-2.9), liq>V (+0.1).
+ - Individual cases logged, no principled fix without regressions: guy's|horrible (a 170 ms aspirated h absorbed by
+   F1), saving|this (fricated DH, F2 excludes DH), them|for (F at the noise floor, F2 misses by threshold), the|right
+   (the ear cuts inside the R, Jthe 31 ms early), really|did (CTC D twice), that|on / that|it (transcript mismatch).
+v23 engine run == local on all 5648 boundaries. Gold: 009 17.10 / H 19.69, 026 16.32 / 20.40, 049 19.73 / 21.79,
+old14 22.53 / 23.61. Ear accepted / rejected: 026 177 / 51, 049 129 / 38, old14 114 / 31; manual MAE 026 19.6,
+old14 14.4.
