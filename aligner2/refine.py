@@ -55,6 +55,10 @@ Continuous joins (the coarse stage found no pause):
   Jthe "the" + consonant: the cut is the end of the reduced vowel (6 dB under its peak) -- the LISTENING convention;
       the editor gold keeps "the" ~40 ms longer (Clip.the_end).
   Other junctions keep the coarse cut.
+  MP  the reverse of J0: a coarse CONTINUOUS join holding >= 60 ms of real silence (under p99 - 40 dB, within 12 dB
+      of the floor) before a sonorant-initial word, with no stop / affricate among the two phones on either side (a
+      closure is silent inside running speech): a pause (platinum|and H: -210 -> -11 ms; gold +0.22 s, ear neutral).
+      The search reaches 200 ms into word k+1: its first-letter peak can LEAD into the silence.
   J0  a short coarse "pause" (< 100 ms) that never comes within 10 dB of the local floor is not a pause: it is a
       closure, voicing bar or frication inside running speech (v16 splits weak word-initial fricatives, whose CTC
       letter lags to the fricative's end) -> treated as a continuous join (rules above; none -> gap middle).
@@ -114,7 +118,7 @@ CLASS = {**{p: "V" for p in VOWELS}, **{p: "stop" for p in ("P", "B", "T", "D", 
 BG_DB = 6.0                                   # a released stop's tail: until within 6 dB of the residual level
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
 RULES = {"F2", "J0", "J1", "J1n", "J1m", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "P3", "E1", "E2",
-         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe", "J4l", "J8m", "J4h", "J4w", "J5l", "J7l"}   # enabled
+         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe", "J4l", "J8m", "J4h", "J4w", "J5l", "J7l", "MP"}   # enabled
 # (aligner2/local_bench.py --rules J1,J4,... for ablations)
 
 
@@ -627,6 +631,37 @@ class Clip:
                     return t
         return None
 
+    def missed_pause(self, k):
+        """MP: a join the coarse stage made continuous that holds a real SILENCE (platinum|and H: 140 ms at the
+        noise floor between the M and "and"): >= 60 ms under the ear threshold (p99 - 40 dB) and within 12 dB of the
+        floor, between word k's last letter and word k+1's first (+60 ms: the letters lag). Not next to a stop /
+        affricate: their closure is a silence inside running speech. -> word k ends where the silence starts, word k+1
+        starts where it ends."""
+        A, B = last_phone(self.arpa[k]), first_phone(self.arpa[k + 1])
+        if not A or not B or pclass(A) in ("stop", "aff", "?") or pclass(B) not in ("V", "gl", "liq", "nas"):
+            return None                                   # a sonorant-initial word cannot begin with a silence
+        near = self.arpa[k].split()[-2:] + self.arpa[k + 1].split()[:2]
+        if any(pclass(p) in ("stop", "aff") for p in near):
+            return None                                   # a closure near the junction (ex-pensive) is not a pause
+        S = self.S
+        thr = float(np.percentile(S.L, 99)) - 40.0
+        a = S.clip(self.lex["last"][k])
+        b = S.clip(max(self.lex["first"][k + 1] + MS(60), self.idx(self.s[k + 1]) + MS(200)))
+        a = max(a, self.idx(self.s[k]) + MS(10)); b = min(b, self.idx(self.e[k + 1]) - MS(10))
+        if b - a < MS(60):
+            return None
+        quiet = (S.Ls[a:b] < thr) & (S.Ls[a:b] < S.floor[a:b] + 12.0)
+        best, cur, bi = 0, 0, 0
+        for i, v in enumerate(quiet):
+            cur = cur + 1 if v else 0
+            if cur > best:
+                best, bi = cur, i
+        if best < MS(60):
+            return None
+        q0, q1 = a + bi - best + 1, a + bi + 1
+        self.note(k, f"MP missed pause {q0 * HOP:.3f}-{q1 * HOP:.3f}")
+        return q0, q1
+
     def glottal_tail(self, k, i_end, lim):
         """P1g: a GLOTTALISED final T (but H x2: the vowel ends in creak, no closure, no burst): when the 30 ms after the
         coarse end are still voiced, the word lasts while that voicing goes on above the ear threshold (p99 - 40 dB,
@@ -964,6 +999,11 @@ class Clip:
                 continue
             if self.s[k + 1] - self.e[k] <= 0.005 and "J4b" in RULES:
                 sp = self.breath_split(k)
+                if sp is not None:
+                    e[k], s[k + 1] = sp[0] * HOP, sp[1] * HOP
+                    continue
+            if self.s[k + 1] - self.e[k] <= 0.005 and "MP" in RULES:
+                sp = self.missed_pause(k)
                 if sp is not None:
                     e[k], s[k + 1] = sp[0] * HOP, sp[1] * HOP
                     continue
