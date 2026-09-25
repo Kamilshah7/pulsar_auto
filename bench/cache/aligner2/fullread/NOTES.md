@@ -5753,3 +5753,23 @@ Round 2 (case by case, verify.py after each):
 v23 engine run == local on all 5648 boundaries. Gold: 009 17.10 / H 19.69, 026 16.32 / 20.40, 049 19.73 / 21.79,
 old14 22.53 / 23.61. Ear accepted / rejected: 026 177 / 51, 049 129 / 38, old14 114 / 31; manual MAE 026 19.6,
 old14 14.4.
+
+## PRE-PROCESSING EXPERIMENT (2026-09-25; the user: "higher quality clips align better -- test normalisation etc.")
+Tools: aligner2/preprocess.py (zero-phase variants), aligner2/degrade.py (controlled degradations),
+aligner2/preprocess_eval.py (signals on the Modal engine under <clip key>_pp_<variant> keys, production setting, gold + ear),
+aligner2/hybrid_eval.py (neural signals from processed audio, DSP from unprocessed, local coarse + rules).
+Quality vs error on the benchmark: SNR (p99 - floor) corr +0.24 with MAE (the wrong way); sample rate / bandwidth +0.6 but
+confounded (the 44.1 / 48 kHz clips are old14, the noisier gold). Live clips (112) have the benchmark's SNR distribution
+(median 36.5 vs 36.9 dB; 1 % as noisy as the noise20 condition).
+Clean benchmark (MAE all / H deltas vs none): peak, rms20: +-0.02 (the CTC models normalise; the rules are relative);
+hpf80 +0.2..0.3 / +0.3..0.95 (the floor drops, floor-relative thresholds move); agc +0.5..2.0; denoise +0.3..0.6 / +0.7..1.1
+(ear 049 +9 / -7, 026 +1 / +3); combo worse. Hybrid (denoised neural, original DSP): ~neutral (026 better, 009 / 049 a bit
+worse) -- the full-denoise losses AND its 049 ear gain both come from the DSP side.
+Degraded (026 / 049, all / H): noise20 33.7 / 31.5, 39.9 / 38.4 (clean 16.3 / 20.4, 19.7 / 21.8) -> denoise 21.8 / 23.2,
+25.9 / 27.6 (70 % of the gap); hybrid 33.5 / 39.4 (no help: the neural models are robust to 20 dB noise). noise10 44 / 48 ->
+denoise ~-2.7 / -0.2 only. reverb 24.4 / 27.2 (denoise -0.6 / -0.9). band4k 17.3 / 22.8, quiet 16.7 / 20.3 (small).
+WHERE the noise damage is: pause edges (906 boundaries: coarse 23.3 -> 97.9 ms, rules 17.1 -> 89.0); continuous joins
+unchanged (18.3 -> 19.9). The coarse stage's pause model is level-based (a gap ~20 dB under the word): noise fills the
+pauses. Per natural clip, denoise gain vs SNR: corr 0.07 (real low-SNR clips have non-stationary noise, not pink).
+Conclusion: no pre-processing for production. If noisy / reverberant clips matter, the fix is a noise-robust pause model
+(neural speech probability / the local floor), or denoising only the DSP input when a clip's background is loud.

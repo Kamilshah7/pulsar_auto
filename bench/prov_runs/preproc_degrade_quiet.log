@@ -1,0 +1,96 @@
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+[17:57:23] engine code verified (70eb2b6b, loaded from /root/aligner2)
+[17:58:03] quiet_none: signals 10/24 (39s)
+[17:58:14] quiet_none: signals 20/24 (50s)
+[17:58:19] quiet_none: signals 24/24 (55s)
+[17:58:19] aligning 24 clips x 1 settings
+[17:58:29] aligned 1/24  (10s)
+[17:58:31] aligned 2/24  (13s)
+[17:58:32] aligned 3/24  (13s)
+[17:58:32] aligned 4/24  (14s)
+[17:58:34] aligned 5/24  (16s)
+[17:58:38] aligned 6/24  (19s)
+[17:58:38] aligned 7/24  (19s)
+[17:58:39] aligned 8/24  (20s)
+[17:58:43] aligned 9/24  (24s)
+[17:58:43] aligned 10/24  (25s)
+[17:58:45] aligned 11/24  (26s)
+[17:58:46] aligned 12/24  (27s)
+[17:58:48] aligned 13/24  (29s)
+[17:58:48] aligned 14/24  (30s)
+[17:58:52] aligned 15/24  (33s)
+[17:58:54] aligned 16/24  (35s)
+[17:58:54] aligned 17/24  (36s)
+[17:58:56] aligned 18/24  (37s)
+[17:58:59] aligned 19/24  (41s)
+[17:59:00] aligned 20/24  (41s)
+[17:59:01] aligned 21/24  (42s)
+[17:59:02] aligned 22/24  (43s)
+[17:59:03] aligned 23/24  (44s)
+[17:59:08] aligned 24/24  (50s)
+[17:59:36] quiet_denoise: signals 10/24 (23s)
+[17:59:47] quiet_denoise: signals 20/24 (34s)
+[17:59:52] quiet_denoise: signals 24/24 (39s)
+StopAsyncIteration exception in shielded future
+future: <Future finished exception=StopAsyncIteration()>
+Traceback (most recent call last):
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 511, in wrapper_coro
+    return await inner_task
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 341, in coro_wrapped
+    value = await coro
+            ^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\exceptions.py", line 33, in coro_wrapped
+    return await coro
+           ^^^^^^^^^^
+StopAsyncIteration
+[17:59:52] aligning 24 clips x 1 settings
+[17:59:58] aligned 1/24  (6s)
+[18:00:01] aligned 2/24  (9s)
+[18:00:01] aligned 3/24  (9s)
+[18:00:02] aligned 4/24  (10s)
+[18:00:04] aligned 5/24  (12s)
+[18:00:07] aligned 6/24  (15s)
+[18:00:08] aligned 7/24  (15s)
+[18:00:09] aligned 8/24  (17s)
+[18:00:13] aligned 9/24  (21s)
+[18:00:14] aligned 10/24  (22s)
+[18:00:15] aligned 11/24  (23s)
+[18:00:16] aligned 12/24  (24s)
+[18:00:18] aligned 13/24  (26s)
+[18:00:24] aligned 14/24  (31s)
+[18:00:24] aligned 15/24  (32s)
+[18:00:24] aligned 16/24  (32s)
+[18:00:25] aligned 17/24  (33s)
+[18:00:26] aligned 18/24  (34s)
+[18:00:28] aligned 19/24  (36s)
+[18:00:31] aligned 20/24  (39s)
+[18:00:31] aligned 21/24  (39s)
+[18:00:33] aligned 22/24  (40s)
+[18:00:33] aligned 23/24  (41s)
+[18:00:39] aligned 24/24  (47s)
+StopAsyncIteration exception in shielded future
+future: <Future finished exception=StopAsyncIteration()>
+Traceback (most recent call last):
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 511, in wrapper_coro
+    return await inner_task
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 341, in coro_wrapped
+    value = await coro
+            ^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\exceptions.py", line 33, in coro_wrapped
+    return await coro
+           ^^^^^^^^^^
+StopAsyncIteration
+[18:01:00] stopped 4 running engine container(s) (pre-processing experiment done)
+degradation: quiet
+variant  |               026               |               049              
+         |    MAE      H  acc  rej   dist |    MAE      H  acc  rej   dist
+none     |  16.66  20.61  175   53   14.5 |  20.31  23.36  126   40   16.2
+denoise  |  16.53  20.78  174   53   14.4 |  19.99  22.82  130   39   16.4
+
+delta vs none (MAE / H: negative = better; acc: positive = better; rej: negative = better)
+denoise  |  -0.13  +0.17   -1   +0   -0.0 |  -0.32  -0.55   +4   -1   +0.2

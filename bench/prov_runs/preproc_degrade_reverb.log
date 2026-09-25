@@ -1,0 +1,83 @@
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+[18:01:26] engine code verified (70eb2b6b, loaded from /root/aligner2)
+[18:02:05] reverb_none: signals 10/24 (36s)
+[18:02:15] reverb_none: signals 20/24 (47s)
+[18:02:20] reverb_none: signals 24/24 (51s)
+StopAsyncIteration exception in shielded future
+future: <Future finished exception=StopAsyncIteration()>
+Traceback (most recent call last):
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 511, in wrapper_coro
+    return await inner_task
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\synchronizer.py", line 341, in coro_wrapped
+    value = await coro
+            ^^^^^^^^^^
+  File "C:\Users\Farhat\AppData\Roaming\Python\Python314\site-packages\synchronicity\exceptions.py", line 33, in coro_wrapped
+    return await coro
+           ^^^^^^^^^^
+StopAsyncIteration
+[18:02:20] aligning 24 clips x 1 settings
+[18:02:31] aligned 1/24  (11s)
+[18:02:33] aligned 2/24  (12s)
+[18:02:33] aligned 3/24  (13s)
+[18:02:34] aligned 4/24  (14s)
+[18:02:37] aligned 5/24  (17s)
+[18:02:39] aligned 6/24  (19s)
+[18:02:39] aligned 7/24  (19s)
+[18:02:40] aligned 8/24  (20s)
+[18:02:45] aligned 9/24  (25s)
+[18:02:45] aligned 10/24  (25s)
+[18:02:46] aligned 11/24  (26s)
+[18:02:48] aligned 12/24  (28s)
+[18:02:50] aligned 13/24  (30s)
+[18:02:51] aligned 14/24  (30s)
+[18:02:54] aligned 15/24  (33s)
+[18:02:56] aligned 16/24  (36s)
+[18:02:57] aligned 17/24  (36s)
+[18:02:58] aligned 18/24  (38s)
+[18:03:01] aligned 19/24  (41s)
+[18:03:02] aligned 20/24  (41s)
+[18:03:04] aligned 21/24  (44s)
+[18:03:05] aligned 22/24  (44s)
+[18:03:06] aligned 23/24  (45s)
+[18:03:09] aligned 24/24  (49s)
+[18:03:35] reverb_denoise: signals 10/24 (21s)
+[18:03:45] reverb_denoise: signals 20/24 (31s)
+[18:03:50] reverb_denoise: signals 24/24 (36s)
+[18:03:50] aligning 24 clips x 1 settings
+[18:03:57] aligned 1/24  (7s)
+[18:03:59] aligned 2/24  (8s)
+[18:03:59] aligned 3/24  (9s)
+[18:04:00] aligned 4/24  (9s)
+[18:04:03] aligned 5/24  (12s)
+[18:04:05] aligned 6/24  (15s)
+[18:04:06] aligned 7/24  (15s)
+[18:04:06] aligned 8/24  (16s)
+[18:04:12] aligned 9/24  (22s)
+[18:04:13] aligned 10/24  (23s)
+[18:04:23] aligned 11/24  (33s)
+[18:04:23] aligned 12/24  (33s)
+[18:04:25] aligned 13/24  (35s)
+[18:04:25] aligned 14/24  (35s)
+[18:04:25] aligned 15/24  (35s)
+[18:04:25] aligned 16/24  (35s)
+[18:04:25] aligned 17/24  (35s)
+[18:04:25] aligned 18/24  (35s)
+[18:04:28] aligned 19/24  (38s)
+[18:04:29] aligned 20/24  (39s)
+[18:04:30] aligned 21/24  (40s)
+[18:04:31] aligned 22/24  (41s)
+[18:04:32] aligned 23/24  (41s)
+[18:04:37] aligned 24/24  (46s)
+[18:05:13] stopped 4 running engine container(s) (pre-processing experiment done)
+degradation: reverb
+variant  |               026               |               049              
+         |    MAE      H  acc  rej   dist |    MAE      H  acc  rej   dist
+none     |  24.38  24.63  135   50   16.5 |  27.23  27.71  109   40   18.5
+denoise  |  23.80  23.72  138   50   16.2 |  26.38  26.77  109   37   18.1
+
+delta vs none (MAE / H: negative = better; acc: positive = better; rej: negative = better)
+denoise  |  -0.57  -0.92   +3   +0   -0.3 |  -0.85  -0.94   +0   -3   -0.5

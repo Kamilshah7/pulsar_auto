@@ -1,3 +1,6 @@
 pulsar_auto.zip
 __pycache__/
 *.pyc
+
+# pre-processing experiment signal downloads (aligner2/hybrid_eval.py): large, reproducible from the Modal volume
+bench/cache/aligner2/preproc/
