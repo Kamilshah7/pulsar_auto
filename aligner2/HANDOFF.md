@@ -66,6 +66,10 @@ per bundle (`prefetch`), results identical to the benchmark (checked on 009-02, 
 Engine unreachable -> the old ForcedAligner for that clip (logged); `ALIGNER=forced` selects the old one outright.
 Since v26 each bundle is first denoised (DNS64, app `aligner2-denoise`, ~1 s of A10G per clip) and the gate picks the
 original or the denoised audio per clip; both apps' containers are stopped when the bundle is done.
+Network: IPv6 to Modal hangs at times on this machine's network while IPv4 works, and Modal's client never falls back:
+every Modal call could hang (2026-09-25: the denoiser timed out in the app, the engine got no container).
+aligner2/ipv4.py puts IPv4 addresses first for the whole process (imported by remote.py; the modal CLI children too).
+If the apps are stopped (e.g. in Modal's dashboard), the next call redeploys them; deployed apps cost nothing while idle.
 Cost: containers stop 20 s after the last call (`SCALEDOWN_S`) and production stops them as soon as a bundle is done,
 so only the cold start (~20-40 s model load) and processing are billed, never idle time. (A CPU-only local run was
 considered: no local GPU, 8 CPU threads; HuBERT-large x4 + xlsr-53 per clip were judged too slow.)

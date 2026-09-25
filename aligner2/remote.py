@@ -17,6 +17,8 @@ import time
 
 import numpy as np
 
+from aligner2 import ipv4  # noqa: F401  (IPv4 first: IPv6 to Modal hangs on this network, see aligner2/ipv4.py)
+
 APP_NAME, CLS_NAME = "aligner2-signals", "Engine"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STAMP = os.path.join(ROOT, "bench", "cache", "aligner2", "deployed.sha")
@@ -39,6 +41,10 @@ def _env():
     return dict(os.environ, PYTHONIOENCODING="utf-8", PYTHONUTF8="1")
 
 
+# the modal CLI in a child process, with the same IPv4-first fix (python -m modal would resolve IPv6 first and hang)
+MODAL_CLI = [sys.executable, "-c", "import runpy, aligner2.ipv4; runpy.run_module('modal', run_name='__main__', alter_sys=True)"]
+
+
 def log(msg):
     print(f"[{time.strftime('%H:%M:%S')}] {msg}", flush=True)
 
@@ -48,7 +54,7 @@ def ensure_deployed():
     if os.path.exists(STAMP) and open(STAMP).read().strip() == h:
         return
     log("source changed -> redeploying GPU engine (deploy output follows)")
-    p = subprocess.Popen([sys.executable, "-m", "modal", "deploy", "modal_aligner2.py"], cwd=ROOT, env=_env(),
+    p = subprocess.Popen(MODAL_CLI + ["deploy", "modal_aligner2.py"], cwd=ROOT, env=_env(),
                          stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, encoding="utf-8", errors="replace")
     for line in p.stdout:
         if "Deprecation" not in line and "set_event_loop" not in line and line.strip():
@@ -73,7 +79,7 @@ def ensure_denoise_deployed():
     if os.path.exists(DENOISE_STAMP) and open(DENOISE_STAMP).read().strip() == h:
         return
     log("denoiser source changed -> deploying modal_denoise.py")
-    r = subprocess.run([sys.executable, "-m", "modal", "deploy", "modal_denoise.py"], cwd=ROOT, env=_env(),
+    r = subprocess.run(MODAL_CLI + ["deploy", "modal_denoise.py"], cwd=ROOT, env=_env(),
                        capture_output=True, text=True, encoding="utf-8", errors="replace")
     if r.returncode != 0:
         raise RuntimeError("modal deploy modal_denoise.py failed: " + (r.stdout + r.stderr)[-800:])
@@ -88,7 +94,15 @@ def denoise_many(audios):
     ensure_denoise_deployed()
     if _DENOISER is None:
         _DENOISER = modal.Cls.from_name(DENOISE_APP, DENOISE_CLS)()
-    out = list(_DENOISER.run.map([_bytes(a) for a in audios]))
+    try:
+        out = list(_DENOISER.run.map([_bytes(a) for a in audios]))
+    except modal.exception.NotFoundError:            # the app was stopped (e.g. in Modal's dashboard): deploy it again
+        log("the denoiser app is not deployed (stopped?) -> deploying it (no container runs until it is called)")
+        if os.path.exists(DENOISE_STAMP):
+            os.remove(DENOISE_STAMP)
+        ensure_denoise_deployed()
+        _DENOISER = modal.Cls.from_name(DENOISE_APP, DENOISE_CLS)()
+        out = list(_DENOISER.run.map([_bytes(a) for a in audios]))
     return [np.frombuffer(b, dtype=np.float32) for b in out]
 
 
@@ -97,14 +111,14 @@ def stop_containers(why="so no call reaches old code"):
     the OLD code otherwise (seen 2026-09-24: calls right after a deploy still ran the previous segment.py);
     production also calls it after each bundle so no idle time is billed"""
     import json
-    r = subprocess.run([sys.executable, "-m", "modal", "container", "list", "--json"], cwd=ROOT, env=_env(),
+    r = subprocess.run(MODAL_CLI + ["container", "list", "--json"], cwd=ROOT, env=_env(),
                        capture_output=True, text=True, encoding="utf-8", errors="replace")
     try:
         ids = [c["container_id"] for c in json.loads(r.stdout) if c.get("app_name") in (APP_NAME, DENOISE_APP)]
     except ValueError:
         ids = []
     for cid in ids:
-        subprocess.run([sys.executable, "-m", "modal", "container", "stop", "--yes", cid], cwd=ROOT, env=_env(),
+        subprocess.run(MODAL_CLI + ["container", "stop", "--yes", cid], cwd=ROOT, env=_env(),
                        capture_output=True)
     log(f"stopped {len(ids)} running engine container(s) {why}")
 
@@ -124,7 +138,15 @@ def _obj():
         _OBJ = modal.Cls.from_name(APP_NAME, CLS_NAME)()
         want = _local_code_hash()
         for attempt in range(3):
-            got = _OBJ.code_version.remote()
+            try:
+                got = _OBJ.code_version.remote()
+            except modal.exception.NotFoundError:    # the app was stopped (e.g. in Modal's dashboard): deploy it again
+                log("the engine app is not deployed (stopped?) -> deploying it (no container runs until it is called)")
+                if os.path.exists(STAMP):
+                    os.remove(STAMP)
+                ensure_deployed()
+                _OBJ = modal.Cls.from_name(APP_NAME, CLS_NAME)()
+                continue
             where = got.split(" @ ")[1] if " @ " in got else "?"
             if got.split(" @ ")[0] == want:
                 log(f"engine code verified ({want[:8]}, loaded from {where})")
