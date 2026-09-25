@@ -89,6 +89,10 @@ Pause edges (the coarse stage found a pause):
   P3  otherwise the speech onset: the steepest loudness rise within 30 ms of the coarse start (after the
       pause's middle, before the first-letter peak). P3a: never before the sound reaches the ear threshold
       (p99 - 40 dB; Clip.audible_start).
+  P1a before a pause, when no P1 event / release / tail fired: the word lasts while its sound fades above p99 - 30 dB
+      (falling, <= 200 ms, never within 10 ms of the next word). Gold better on EVERY set, all and H (009 17.32 ->
+      17.10 / H 19.84 -> 19.69, 049 19.91 -> 19.73 / 21.98 -> 21.79, old14 22.75 -> 22.53); ear +37 ms. At -40 dB
+      (the clip-end level) the accepted pause ends lose -2.8 s; at -35, 009 / 049 all-gold lose.
   E2a the clip's last word fades out audibly (p99 - 40 dB; Clip.audible_fade) -- the H convention at clip ends.
   E1  first word: rises out of the last real gap before its first letter; no gap = the clip cuts into running
       speech -> the clip start.
@@ -119,7 +123,7 @@ CLASS = {**{p: "V" for p in VOWELS}, **{p: "stop" for p in ("P", "B", "T", "D", 
 BG_DB = 6.0                                   # a released stop's tail: until within 6 dB of the residual level
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
 RULES = {"F2", "J0", "J1", "J1n", "J1m", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "P3", "E1", "E2",
-         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe", "J4l", "J8m", "J4h", "J4w", "J5l", "J7l", "MP", "E2a"}   # enabled
+         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe", "J4l", "J8m", "J4h", "J4w", "J5l", "J7l", "MP", "E2a", "P1a"}   # enabled
 # (aligner2/local_bench.py --rules J1,J4,... for ablations)
 
 
@@ -944,7 +948,7 @@ class Clip:
                 self.trace[-1] = f"E1f after foreign frication start={on * HOP:.3f}"
         return on
 
-    def audible_fade(self, k, i):
+    def audible_fade(self, k, i, db=40.0):
         """E2a: the clip's LAST word lasts while its sound fades above the ear threshold (p99 - 40 dB, floor
         + 6): falling, no re-rise > 3 dB, <= 200 ms (bar H: the R decays -12 -> -40 dB over 90 ms after the coarse end;
         dev H clip ends were early by 21.5 ms on average). Every H clip end it moves on every set improves but one
@@ -953,7 +957,7 @@ class Clip:
         S = self.S
         if i >= S.T - 1:
             return None
-        thr = float(np.percentile(S.L, 99)) - 40.0
+        thr = float(np.percentile(S.L, 99)) - db
         j, low = i, S.Ls[i]
         while j < min(S.T - 1, i + MS(200)) and S.Ls[j] >= max(thr, S.floor[j] + 6.0) and S.Ls[j] <= low + 3.0:
             low = min(low, S.Ls[j]); j += 1
@@ -1032,6 +1036,10 @@ class Clip:
                     e[k], s[k + 1] = t * HOP - 0.001, t * HOP + 0.001      # start = cut + 1 ms
             else:
                 r = self.pause_end(k, self.s[k + 1]) if "P1" in RULES else None
+                if r is None and "P1a" in RULES:              # P1a: no event / release / tail: the word fades out
+                    r = self.audible_fade(k, self.idx(self.e[k]), 30.0)     # (to p99 - 30 dB before a pause)
+                    if r is not None and r * HOP >= self.s[k + 1] - 0.010:
+                        r = None
                 if r is not None:
                     e[k] = r * HOP
                 r = self.pause_start(k + 1, self.e[k]) if "P2" in RULES else None
@@ -1054,7 +1062,7 @@ class Clip:
             if r is not None:
                 e[-1] = r * HOP
         if "E2a" in RULES:                                   # E2a: the clip's last word fades out audibly
-            r = self.audible_fade(self.n - 1, self.idx(e[-1]))
+            r = self.audible_fade(self.n - 1, self.idx(e[-1]), 40.0)
             if r is not None:
                 e[-1] = r * HOP
         out = []
