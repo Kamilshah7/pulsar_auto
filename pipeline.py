@@ -12,6 +12,10 @@ import json
 import wave
 import re
 import threading
+
+# IPv4 first for every connection (bundle download, Groq, Modal): IPv6 on this network hangs at times and each
+# connection then waits ~20 s before falling back (2026-09-25); see aligner2/ipv4.py
+import aligner2.ipv4  # noqa: F401
 from groq import Groq
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
