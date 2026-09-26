@@ -5817,3 +5817,15 @@ in 40 s with a 16 s cold start, 4 containers). The very first containers of the 
 (one-off) -> the time budget.
 Fixed on the way: refine.P1(b) read an empty window when a release fell at the clip end (crash on enhanced audio); refine()
 now keeps the coarse times if a rule raises.
+
+## OLD / NEW HYBRID ON THE EAR (2026-09-26; the user: "any way we can hybridize the old and new aligner ... especially
+## on the ear test set"; also: hand-moved boundaries are not fully reliable, the ear tests are the benchmark)
+aligner2/hybrid_ear.py. The old aligner's cut (forced_aligner, hybrid=True, no pre-labels = the "live" cut of every
+review item, reproducible by bench/trace_branches.py) was ALWAYS an option heard; the new cut often not. Distance to the
+nearest accepted time (biased to old): 026 old 16.3 / new 13.9, 049 19.3 / 15.7, old14 9.6 / 14.9; best-of-both 7.2 /
+8.6 / 5.1 (big headroom). Both cuts heard (cuts > 2 ms apart, 176): only old ok 12, only new ok 77, both ok 62, both
+wrong 25 (small gaps too: 9 vs 40) -> "old when the two are close" is the bias, not real; on 049 "old if < 20 ms" adds
++24 accepted / +45 rejected. Open candidate: old at X>dh/th (old accepted 49 : rejected 18 there, the new cut almost
+never heard; also fric / vowel>stop). Listening round bench/review/confirm_hybrid (bench/build_confirm_hybrid.py):
+180 blind A/B items, per set 30 X>dh/th, 15 X>stop, 15 control; decision fixed before listening (a group switches to
+old only if old wins on 026 and does not lose on 049 / old14): `python -m aligner2.hybrid_ear --round`.
