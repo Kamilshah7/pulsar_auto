@@ -115,7 +115,7 @@ def fetch():
     finally:
         os.makedirs(OUT, exist_ok=True)
         json.dump(have, open(RES, "w"))
-        subprocess.run(remote.MODAL_CLI + ["app", "stop", "aligner2-listen"], cwd=remote.ROOT, env=remote._env(),
+        subprocess.run(remote.MODAL_CLI + ["app", "stop", "--yes", "aligner2-listen"], cwd=remote.ROOT, env=remote._env(),
                        capture_output=True)          # the experiment app: nothing left running or deployed
         remote.log("listener app stopped")
     return have
