@@ -1,0 +1,54 @@
+stop>X r4 c0.5 n325      009 +0.03/+0.04 | 026 +0.01/+0.08 ear -2/-2 d+0.0 m-0.1 | 049 -0.02/-0.07 ear -1/+1 d+0.1 m-0.0 | old14 -0.02/+0.02 ear -2/+2 d-0.0 m+0.0
+                         moves closer/further: 009 H 12/18 | 026 H 10/18 hand 9/9 ear 20/30 | 049 H 19/8 hand 2/2 ear 15/20 | old14 H 12/11 ear 15/9
+                         share of moves that go closer, all sets: H 49% (n=108), hand 50% (n=22), ear 46% (n=109)
+stop>X r4 c1.0 n215      009 +0.02/+0.03 | 026 +0.03/+0.12 ear -3/-2 d+0.1 m-0.0 | 049 -0.00/-0.00 ear +0/+0 d+0.0 m+0.0 | old14 +0.01/+0.07 ear -1/+2 d-0.0 m+0.0
+                         moves closer/further: 009 H 9/12 | 026 H 6/15 hand 4/7 ear 14/26 | 049 H 11/7 hand 1/2 ear 9/14 | old14 H 6/9 ear 9/5
+                         share of moves that go closer, all sets: H 43% (n=75), hand 36% (n=14), ear 42% (n=77)
+stop>X r4 c2.0 n99       009 +0.02/+0.03 | 026 +0.00/+0.07 ear -3/+0 d+0.0 m-0.0 | 049 +0.00/+0.01 ear -1/+0 d+0.1 m+0.1 | old14 +0.02/+0.06 ear -2/+2 d+0.0 m+0.0
+                         moves closer/further: 009 H 2/5 | 026 H 4/8 hand 2/4 ear 5/12 | 049 H 3/3 hand 0/1 ear 1/9 | old14 H 3/6 ear 5/3
+                         share of moves that go closer, all sets: H 35% (n=34), hand 29% (n=7), ear 31% (n=35)
+stop>X r8 c0.5 n371      009 +0.07/+0.12 | 026 -0.05/-0.06 ear -3/-2 d-0.0 m-0.1 | 049 -0.03/+0.01 ear -7/+4 d+0.2 m+0.4 | old14 -0.04/-0.01 ear +0/+0 d-0.0 m+0.0
+                         moves closer/further: 009 H 17/22 | 026 H 15/16 hand 11/12 ear 25/30 | 049 H 17/13 hand 2/4 ear 14/25 | old14 H 16/13 ear 18/12
+                         share of moves that go closer, all sets: H 50% (n=129), hand 45% (n=29), ear 46% (n=124)
+stop>X r8 c1.0 n254      009 +0.06/+0.12 | 026 -0.01/-0.01 ear -2/-2 d-0.0 m-0.1 | 049 -0.02/-0.02 ear -3/+3 d+0.1 m+0.3 | old14 -0.00/+0.06 ear +0/+1 d-0.0 m+0.0
+                         moves closer/further: 009 H 10/15 | 026 H 11/13 hand 6/8 ear 20/25 | 049 H 13/8 hand 1/3 ear 11/17 | old14 H 9/11 ear 13/6
+                         share of moves that go closer, all sets: H 48% (n=90), hand 39% (n=18), ear 48% (n=92)
+stop>X r8 c2.0 n115      009 +0.02/+0.04 | 026 -0.01/+0.06 ear -2/-1 d-0.0 m-0.0 | 049 +0.00/+0.00 ear -2/+1 d+0.1 m+0.2 | old14 +0.02/+0.06 ear -2/+2 d+0.0 m+0.0
+                         moves closer/further: 009 H 3/6 | 026 H 5/8 hand 2/4 ear 7/11 | 049 H 4/4 hand 0/2 ear 2/10 | old14 H 4/7 ear 6/3
+                         share of moves that go closer, all sets: H 39% (n=41), hand 25% (n=8), ear 38% (n=39)
+X>stop r4 c0.5 n256      009 -0.01/-0.03 | 026 -0.06/+0.01 ear +1/-1 d+0.0 m+0.0 | 049 -0.08/+0.01 ear +0/+0 d+0.0 m+0.0 | old14 -0.05/-0.03 ear +0/+0 d-0.0 m-0.3
+                         moves closer/further: 009 H 11/10 | 026 H 6/9 hand 2/2 ear 14/13 | 049 H 5/7 ear 3/7 | old14 H 6/6 hand 1/0 ear 4/3
+                         share of moves that go closer, all sets: H 47% (n=60), hand 60% (n=5), ear 48% (n=44)
+X>stop r4 c1.0 n175      009 -0.02/-0.05 | 026 -0.05/-0.01 ear +0/+0 d-0.0 m+0.1 | 049 -0.07/+0.01 ear +0/+0 d+0.0 m+0.0 | old14 -0.03/-0.01 ear +0/+0 d+0.0 m-0.3
+                         moves closer/further: 009 H 9/6 | 026 H 3/4 hand 0/2 ear 9/9 | 049 H 5/6 ear 3/5 | old14 H 3/3 hand 1/0 ear 2/2
+                         share of moves that go closer, all sets: H 51% (n=39), hand 33% (n=3), ear 47% (n=30)
+X>stop r4 c2.0 n92       009 -0.01/-0.02 | 026 -0.04/-0.01 ear +1/+0 d-0.0 m+0.0 | 049 -0.02/+0.00 ear +0/+0 d+0.0 m+0.0 | old14 -0.01/-0.02 ear +0/+0 d-0.0 m-0.2
+                         moves closer/further: 009 H 5/3 | 026 H 2/4 hand 0/2 ear 7/7 | 049 H 2/5 ear 1/3 | old14 H 2/1 hand 1/0 ear 2/1
+                         share of moves that go closer, all sets: H 46% (n=24), hand 33% (n=3), ear 48% (n=21)
+X>stop r8 c0.5 n277      009 -0.04/-0.06 | 026 -0.10/-0.01 ear +1/+0 d+0.0 m+0.0 | 049 -0.14/-0.00 ear -2/+1 d+0.1 m+0.0 | old14 -0.11/-0.05 ear +1/+0 d+0.0 m-0.1
+                         moves closer/further: 009 H 11/10 | 026 H 7/9 hand 2/2 ear 16/13 | 049 H 5/7 ear 3/7 | old14 H 6/8 hand 1/0 ear 4/3
+                         share of moves that go closer, all sets: H 46% (n=63), hand 60% (n=5), ear 50% (n=46)
+X>stop r8 c1.0 n190      009 -0.03/-0.06 | 026 -0.08/+0.02 ear -2/+0 d+0.0 m+0.0 | 049 -0.10/+0.00 ear -1/+0 d+0.0 m+0.0 | old14 -0.08/-0.09 ear +1/+0 d-0.0 m-0.1
+                         moves closer/further: 009 H 9/6 | 026 H 3/5 hand 1/2 ear 10/9 | 049 H 5/6 ear 3/5 | old14 H 5/3 hand 1/0 ear 3/2
+                         share of moves that go closer, all sets: H 52% (n=42), hand 50% (n=4), ear 50% (n=32)
+X>stop r8 c2.0 n97       009 -0.01/-0.02 | 026 -0.04/-0.01 ear +0/+0 d-0.0 m+0.1 | 049 -0.02/+0.00 ear -1/+0 d+0.0 m+0.0 | old14 -0.01/-0.02 ear +0/+0 d-0.0 m-0.2
+                         moves closer/further: 009 H 5/3 | 026 H 2/4 hand 0/2 ear 7/7 | 049 H 2/5 ear 1/3 | old14 H 2/1 hand 1/0 ear 2/1
+                         share of moves that go closer, all sets: H 46% (n=24), hand 33% (n=3), ear 48% (n=21)
+stop>stop r4 c0.5 n55    009 +0.02/+0.01 | 026 +0.00/+0.01 ear -1/+0 d+0.0 m+0.0 | 049 -0.02/+0.01 ear -1/+0 d+0.0 m+0.0 | old14 +0.01/+0.01 ear +0/+0 d-0.0 m+0.0
+                         moves closer/further: 009 H 0/2 | 026 H 0/1 ear 2/2 | 049 H 1/1 ear 1/1 | old14 H 0/2 ear 1/0
+                         share of moves that go closer, all sets: H 14% (n=7), hand 0% (n=0), ear 57% (n=7)
+stop>stop r4 c1.0 n31    009 +0.01/+0.00 | 026 -0.00/+0.01 ear -1/+0 d+0.0 m+0.0 | 049 -0.02/+0.01 ear -1/+0 d+0.0 m+0.0 | old14 +0.01/+0.00 ear +0/+0 d+0.0 m+0.0
+                         moves closer/further: 009 H 0/1 | 026 H 0/1 ear 2/2 | 049 H 1/1 ear 0/1 | old14 
+                         share of moves that go closer, all sets: H 25% (n=4), hand 0% (n=0), ear 40% (n=5)
+stop>stop r4 c2.0 n11    009 -0.00/+0.00 | 026 +0.00/+0.01 ear +0/+0 d+0.0 m+0.0 | 049 -0.00/+0.00 ear +0/+0 d+0.0 m+0.0 | old14 +0.00/+0.00 ear +0/+0 d+0.0 m+0.0
+                         moves closer/further: 009  | 026 H 0/1 ear 0/1 | 049  | old14 
+                         share of moves that go closer, all sets: H 0% (n=1), hand 0% (n=0), ear 0% (n=1)
+stop>stop r8 c0.5 n56    009 +0.04/+0.01 | 026 +0.00/+0.01 ear -1/+0 d+0.0 m+0.0 | 049 -0.04/+0.00 ear -1/+0 d+0.0 m+0.0 | old14 +0.02/+0.01 ear +0/+0 d-0.0 m+0.0
+                         moves closer/further: 009 H 0/2 | 026 H 0/1 ear 2/2 | 049 H 1/1 ear 1/1 | old14 H 0/2 ear 1/0
+                         share of moves that go closer, all sets: H 14% (n=7), hand 0% (n=0), ear 57% (n=7)
+stop>stop r8 c1.0 n34    009 +0.02/+0.00 | 026 -0.00/+0.01 ear -1/+0 d+0.0 m+0.0 | 049 -0.03/+0.00 ear -1/+0 d+0.0 m+0.0 | old14 +0.02/+0.00 ear +0/+0 d+0.0 m+0.0
+                         moves closer/further: 009 H 0/1 | 026 H 0/1 ear 2/2 | 049 H 1/1 ear 0/1 | old14 
+                         share of moves that go closer, all sets: H 25% (n=4), hand 0% (n=0), ear 40% (n=5)
+stop>stop r8 c2.0 n11    009 -0.00/+0.00 | 026 +0.00/+0.01 ear +0/+0 d+0.0 m+0.0 | 049 -0.00/+0.00 ear +0/+0 d+0.0 m+0.0 | old14 +0.00/+0.00 ear +0/+0 d+0.0 m+0.0
+                         moves closer/further: 009  | 026 H 0/1 ear 0/1 | 049  | old14 
+                         share of moves that go closer, all sets: H 0% (n=1), hand 0% (n=0), ear 0% (n=1)

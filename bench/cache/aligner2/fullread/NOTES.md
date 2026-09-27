@@ -5877,3 +5877,8 @@ H = the user's hand-moved gold, hand = the user's review cuts, ear = the nearest
  CANDIDATE -> blind listening round bench/review/confirm_nudge (bench/build_confirm_nudge.py, 120 items, 30 per set,
  moves >= 3 ms; decision fixed before listening: nudged wins >= 60 % on 009 + 026 where exactly one cut is accepted,
  >= 50 % on 049; `python -m aligner2.nudge_round`). Launch: .claude/launch.json "nudge-review" (port 8769).
+ Stop junctions (step 3; aligner2/stop_nudge.py, raw audio, 3 ms windows, 1 ms hop): on the ear pairs 0-10 ms apart,
+ "no high-band energy in the 4 ms after the cut" prefers the accepted cut 69 % at stop>X (n 94), "the quietest cut"
+ 76 % at X>stop (n 21) (bench/prov_runs/stop_junctions.log). As a nudge of OUR cut (+-4 / 8 ms, move cost 0.5-2 dB/ms):
+ per move closer 29-52 % in every variant (bench/prov_runs/stop_nudge_eval.log) -- REJECTED: the rule stage already
+ places stop junctions by bursts / closures; what is left there is not reached by these cues.

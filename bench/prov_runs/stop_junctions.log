@@ -1,0 +1,13 @@
+pairwise: does the cue prefer the cut you ACCEPTED over one you REJECTED at stop junctions? (50 % = chance) by gap 0-10 / 10-20 / >20 ms / all
+  X>stop    high-band 5 ms after cut (lower = no burst leaked)      0-10 57% (n=21) | 10-20 67% (n=27) | >20 69% (n=108) | all 67% (n=156)
+  X>stop    level 5 ms before cut (higher = word 1 keeps its tail)  0-10 48% (n=21) | 10-20 56% (n=27) | >20 38% (n=108) | all 42% (n=156)
+  X>stop    level at cut above closure floor (lower = better)       0-10 67% (n=21) | 10-20 52% (n=27) | >20 64% (n=108) | all 62% (n=156)
+  X>stop    loudest 3 ms around cut above floor (lower = better)    0-10 76% (n=21) | 10-20 59% (n=27) | >20 59% (n=108) | all 62% (n=156)
+  stop>X    high-band 5 ms after cut (lower = no burst leaked)      0-10 69% (n=94) | 10-20 64% (n=118) | >20 51% (n=320) | all 57% (n=532)
+  stop>X    level 5 ms before cut (higher = word 1 keeps its tail)  0-10 35% (n=94) | 10-20 48% (n=118) | >20 51% (n=320) | all 48% (n=532)
+  stop>X    level at cut above closure floor (lower = better)       0-10 61% (n=94) | 10-20 54% (n=118) | >20 47% (n=320) | all 51% (n=532)
+  stop>X    loudest 3 ms around cut above floor (lower = better)    0-10 59% (n=94) | 10-20 57% (n=118) | >20 43% (n=320) | all 49% (n=532)
+  stop>stop high-band 5 ms after cut (lower = no burst leaked)      0-10 50% (n=2) | 10-20 75% (n=4) | >20 73% (n=22) | all 71% (n=28)
+  stop>stop level 5 ms before cut (higher = word 1 keeps its tail)  0-10 100% (n=2) | 10-20 0% (n=4) | >20 23% (n=22) | all 25% (n=28)
+  stop>stop level at cut above closure floor (lower = better)       0-10 50% (n=2) | 10-20 100% (n=4) | >20 82% (n=22) | all 82% (n=28)
+  stop>stop loudest 3 ms around cut above floor (lower = better)    0-10 100% (n=2) | 10-20 75% (n=4) | >20 86% (n=22) | all 86% (n=28)
