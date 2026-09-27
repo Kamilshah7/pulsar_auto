@@ -4,3 +4,6 @@ __pycache__/
 
 # pre-processing experiment signal downloads (aligner2/hybrid_eval.py): large, reproducible from the Modal volume
 bench/cache/aligner2/preproc/
+
+# credentials: never commit (secrets_loader.py reads it locally)
+local_secrets.json
