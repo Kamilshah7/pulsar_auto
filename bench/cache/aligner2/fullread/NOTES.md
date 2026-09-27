@@ -5829,3 +5829,18 @@ wrong 25 (small gaps too: 9 vs 40) -> "old when the two are close" is the bias, 
 never heard; also fric / vowel>stop). Listening round bench/review/confirm_hybrid (bench/build_confirm_hybrid.py):
 180 blind A/B items, per set 30 X>dh/th, 15 X>stop, 15 control; decision fixed before listening (a group switches to
 old only if old wins on 026 and does not lose on 049 / old14): `python -m aligner2.hybrid_ear --round`.
+
+## MACHINE "LISTENER" FOR MICRO-ADJUSTMENTS (2026-09-27; the user: "after alignment, a step that nudges continuous
+## word boundaries until each word sounds exactly right -- micro adjustments only") -- REJECTED
+Size of the job (v25, 1063 continuous junctions judged by ear): our cut within 5 ms of an accepted cut 39 %, 5-10 ms
+20 %, 10-20 ms 17 %, 20-40 ms 15 %, > 40 ms 8 %; the user's own cuts: median 13 ms from ours.
+Test (aligner2/listen_eval.py, modal_listen.py = app aligner2-listen, stopped after the run; ~3 min of A10G): every
+judged option rebuilt as the review tool played it (word 1 up to the cut, word 2 from it, 0.6 s cap, 2 ms fades),
+each word scored ALONE by the engine's recognizers: CTC log P(exactly this word), also + the next word's first unit
+(bleed) / - its last unit (clipped). 1914 accepted-vs-rejected pairs; does the listener prefer the accepted cut?
+ letters (HuBERT) 52 / 53 / 54 % (026 / 049 / old14, chance 50), phonemes (xlsr) 59 / 62 / 66 %, margins no better;
+ "closer to our current cut" 67 / 66 / 70 %. By the gap between the two cuts (phonemes / ours): 0-10 ms 47 / 64 %,
+ 10-20 ms 49 / 63 % (026) -- chance where the micro corrections are; > 40 ms 74 / 71 %. Ours + w * phonemes: +0.7 on
+ 026, 0 on 049. Why: recognizers are trained to hear the word despite coarticulation and a few ms of bleed -- the
+ opposite of the ear's "word 1 keeps nothing of word 2" -- and their 20 ms frames are coarser than the corrections.
+ The micro scale stays with the acoustic rules (refine.py), fixed from the ear judgments one class at a time.
