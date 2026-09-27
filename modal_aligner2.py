@@ -120,9 +120,9 @@ class Engine:
     def code_version(self) -> str:
         """hash of the aligner code this container actually runs (the client checks it matches local)"""
         import hashlib
-        from aligner2 import fc_align, lexical, phones, refine, segment, signals
+        from aligner2 import fc_align, fc_nudge, lexical, phones, refine, segment, signals
         h = hashlib.sha1()
-        for m in (signals, lexical, segment, phones, fc_align, refine):   # the files actually imported
+        for m in (signals, lexical, segment, phones, fc_align, refine, fc_nudge):   # the files actually imported
             h.update(open(m.__file__, "rb").read())
         return h.hexdigest() + " @ " + os.path.dirname(segment.__file__)
 

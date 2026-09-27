@@ -123,7 +123,7 @@ CLASS = {**{p: "V" for p in VOWELS}, **{p: "stop" for p in ("P", "B", "T", "D", 
 BG_DB = 6.0                                   # a released stop's tail: until within 6 dB of the residual level
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
 RULES = {"F2", "J0", "J1", "J1n", "J1m", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "P3", "E1", "E2",
-         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe", "J4l", "J8m", "J4h", "J4w", "J5l", "J7l", "MP", "E2a", "P1a"}   # enabled
+         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe", "J4l", "J8m", "J4h", "J4w", "J5l", "J7l", "MP", "E2a", "P1a", "FCN"}   # enabled
 # (aligner2/local_bench.py --rules J1,J4,... for ablations)
 
 
@@ -1161,6 +1161,15 @@ def _runs(mask, merge, min_len):
     return [(x, y) for x, y in out if y - x >= min_len]
 
 
+# FCN (2026-09-27; the user: "whatever showed improvement, implement it" -- the micro corrections they make are 3-11 ms):
+# after every other rule, a cut between touching words moves by <= 8 ms in the direction the 10 ms phone detector
+# (charsiu, fc_logp) points -- word 1's last phone before the cut, word 2's first after it -- except next to a stop
+# (a silent closure: the detector cannot place it). aligner2/fc_nudge.py; evidence NOTES.md "MACHINE LISTENER" ff.:
+# per move closer to the user's hand-moved gold 73 %, their review cuts 85 %, an accepted ear cut 68 %; gold all / H
+# better in every set (009 -0.19 / -0.40, 026 -0.13 / -0.31, 049 -0.18 / -0.52, old14 -0.00 / -0.18).
+FCN = dict(radius=0.008, tau=0.008, win=0.040, skip_stops=True)
+
+
 def refine(z, texts, arpa, coarse, trace=None, lex=None, device=None):
     """z: signals dict (aligner2/signals.py), texts: tokens, arpa: per-token ARPAbet strings (fc_align), coarse:
     the coarse [{start, end}] -> refined [{start, end}]. trace: optional dict filled with {boundary k: rule and
@@ -1177,4 +1186,10 @@ def refine(z, texts, arpa, coarse, trace=None, lex=None, device=None):
         return [dict(q) for q in coarse]
     if trace is not None:
         trace.update(c.trace)
+    if "FCN" in RULES and "fc_logp" in z:
+        try:
+            from aligner2 import fc_nudge
+            out = fc_nudge.nudge(z, out, arpa, trace=trace, **FCN)
+        except Exception as e:                # never cost a clip: keep the rule stage's times
+            print(f"[refine] FCN failed ({e!r}); keeping the rule stage's times", flush=True)
     return out

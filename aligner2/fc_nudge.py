@@ -1,6 +1,6 @@
 """
-EXPERIMENT (2026-09-27; the user: "2 sounds good" -- the 10 ms phone detector as an aligner step; the corrections
-the user makes by ear are "at least 3-11 ms"). A final micro step after the rule stage, continuous junctions only:
+PRODUCTION (rule FCN, aligner2/refine.py; 2026-09-27; the micro corrections the user makes by ear are 3-11 ms).
+A final micro step after the rule stage, touching words only (the rule stage leaves a 2 ms gap between them):
 the cut moves within +-radius of the rules' cut to where the 10 ms phone detector (charsiu frame classifier, the
 engine's fc_logp) hears word 1's LAST phone before the cut and word 2's FIRST phone after it, minus a cost for moving
 (|move| / tau: tau = seconds of move one nat of evidence buys). Training-free: a pretrained model + two numbers.
@@ -68,5 +68,5 @@ def nudge(z, preds, arpa, radius=0.020, tau=0.004, win=0.040, clip_to_words=True
             d = bi * HOP - (e + s) / 2                      # move the cut, keep the gap
             out[k]["end"] = e + d; out[k + 1]["start"] = s + d
             if trace is not None:
-                trace[k] = f"FCN {(bi - i0) * HOP * 1000:+.0f} ms"
+                trace[k] = (str(trace[k]) + " | " if trace.get(k) else "") + f"FCN {(bi - i0) * HOP * 1000:+.0f} ms"
     return out

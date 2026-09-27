@@ -5882,3 +5882,7 @@ H = the user's hand-moved gold, hand = the user's review cuts, ear = the nearest
  76 % at X>stop (n 21) (bench/prov_runs/stop_junctions.log). As a nudge of OUR cut (+-4 / 8 ms, move cost 0.5-2 dB/ms):
  per move closer 29-52 % in every variant (bench/prov_runs/stop_nudge_eval.log) -- REJECTED: the rule stage already
  places stop junctions by bursts / closures; what is left there is not reached by these cues.
+ SHIPPED as rule FCN (v27) without the listening round (the user: "fuck this listening round, whatever showed
+ improvement you said, implement it"): refine.py (FCN = r8 tau8 w40 skip_stops, last step, try/except), fc_nudge.py in
+ remote.REMOTE_FILES and the engine's code_version. verify (bench/prov_runs/verify_fcn.log) reproduces the experiment;
+ the engine run (aligner2_v27.json) equals local on all 7364 boundaries; v27 vs v25: 816 boundaries moved, max 8 ms.

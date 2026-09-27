@@ -40,6 +40,13 @@ whose speech peaks are < 40 dB over the background (run_bench.BASE). Benchmark i
 20 dB noise 33.7 -> 20.0 (026) / 39.9 -> 26.6 (049), 10 dB noise 44.0 -> 25.0 / 48.4 -> 29.8. Enhancement study (pretrained
 DNS64 etc., modal_enhance.py, preprocess_eval.py, select_eval.py): DNS64 gated on the floor drop restores noisy clips to
 ~clean accuracy with no change on clean ones (NOTES.md "NOISE-ROBUST PAUSES + ENHANCEMENT").
+**v27 (FCN micro nudge, 2026-09-27):** after the rule stage, a cut between touching words moves by <= 8 ms in the
+direction the 10 ms phone detector (charsiu) points -- word 1's last phone before it, word 2's first after it --
+except next to a stop (aligner2/fc_nudge.py, rule FCN in refine.py; no listening round: the user said implement it).
+Gold all / H: 009 17.10 / 19.69 -> 16.91 / 19.29, 026 16.32 / 20.40 -> 16.19 / 20.09, 049 19.73 / 21.79 -> 19.55 / 21.28,
+old14 22.53 / 23.61 -> 22.53 / 23.43; ear 026 accepted 177 -> 187, rejected 51 -> 49, manual MAE 19.6 -> 18.9 (049
+129 -> 126 / 38 -> 40, manual 33.2 -> 32.3). 408 junctions move; per move closer to the hand-moved gold 73 %.
+Engine (bench/prov_runs/aligner2_v27.json) == local on all 7364 boundaries.
 **v26 (production denoiser):** every clip of a bundle goes through DNS64 (modal_denoise.py, app `aligner2-denoise`);
 aligner2/denoise_gate.py keeps the denoised audio when the background floor drops >= 15 dB, or >= 5 dB in a clip with a
 loud background (< 40 dB under the speech peaks). No clean benchmark clip is selected (benchmark identical to v25);
