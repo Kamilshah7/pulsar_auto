@@ -5844,3 +5844,13 @@ each word scored ALONE by the engine's recognizers: CTC log P(exactly this word)
  026, 0 on 049. Why: recognizers are trained to hear the word despite coarticulation and a few ms of bleed -- the
  opposite of the ear's "word 1 keeps nothing of word 2" -- and their 20 ms frames are coarser than the corrections.
  The micro scale stays with the acoustic rules (refine.py), fixed from the ear judgments one class at a time.
+Other training-free "ear" cues (aligner2/cue_ear_eval.py, cached 2 ms signals, same 1914 pairs; 026 / 049 / old14,
+chance 50, our cut 67.4 / 66.5 / 70.1 %): loudness dip, flux, burst, glottal, weak voicing, HuBERT word-gap / blank /
+change, speech prob all 43-63 %; MFCC change / spectral contrast 62-64 %; the 10 ms phone detector (charsiu: frames
+before the cut = word 1's last phone, after = word 2's first) 70 / 75 / 71 % overall but 53 / 55 / 49 % at 0-10 ms
+apart (ours 64 / 62 / 64). On top of our cut (w on 026): phone detector 70.0 / 69.1 / 72.3 (+2.2..2.6 everywhere,
+mostly pairs > 20 ms apart) -- a candidate for the ALIGNER (verify.py gold + ear), not for 1-3 ms refinement.
+The user (2026-09-27): the corrections in question are often 1-3 ms. Waveform level, 189 hand cuts vs ours vs random
++-5 ms: level at the cut / local RMS median 0.47 / 0.52 / 0.56, at a zero crossing (0.1 ms) 29 / 29 / 24 %, pitch-cycle
+phase spread evenly (concentration 0.10 / 0.17 / 0.06): no "snap to" point. Ear repeatability: the same cut played in
+two rounds was judged differently 35 / 128 times (27 %; the other options on screen differ between rounds).
