@@ -5854,3 +5854,10 @@ The user (2026-09-27): the corrections in question are often 1-3 ms. Waveform le
 +-5 ms: level at the cut / local RMS median 0.47 / 0.52 / 0.56, at a zero crossing (0.1 ms) 29 / 29 / 24 %, pitch-cycle
 phase spread evenly (concentration 0.10 / 0.17 / 0.06): no "snap to" point. Ear repeatability: the same cut played in
 two rounds was judged differently 35 / 128 times (27 %; the other options on screen differ between rounds).
+10 ms PHONE-DETECTOR NUDGE (aligner2/fc_nudge.py, fc_nudge_eval.py; the user chose it; their corrections are "at least
+3-11 ms") -- REJECTED. After the rule stage, continuous junctions: the cut moves within +-radius to where charsiu hears
+word 1's last phone before it and word 2's first phone after it, minus |move| / tau. Grid r 10-40 ms x tau 2-64 x
+win 20 / 40 (bench/prov_runs/fc_nudge_eval*.log). Best on dev (r30 tau16 w40): moves 172 junctions (median 11 ms);
+gold MAE all / H 009 -0.10 / -0.39, 026 +0.01 / -0.24, 049 -0.13 / -0.47, old14 +0.07 / +0.07; ear 026 acc +3 rej -3,
+manual MAE -0.9 (049 -3.1, old14 -3.0). Per move it is a coin flip: vs gold 86 closer / 84 further (old14 14 / 24),
+vs the ear 41 closer / 36 further. The detector ranks cuts > 20 ms apart; it does not locate the edge to 3-11 ms.
