@@ -57,7 +57,7 @@ def main():
                            "win_start": max(0.0, lo - PAD - 0.05), "win_end": hi + PAD + 0.05,
                            "options": [{"key": key, "t": o["t"]} for key, o in zip("AB", opts)]})
             private[iid] = {"set": s, "kind": "nudge", "clip": str(c["clip"]), "pair": j, "wav": c["wav"],
-                            "rule": "FCN", "class": M.junction_type(arpa[k], j),
+                            "rule": "FCN", "branch": "FCN", "leaf_line": None, "class": M.junction_type(arpa[k], j),
                             "gold": (toks[j]["end"] + toks[j + 1]["start"]) / 2, "live": old, "cand": new,
                             "options": {key: o for key, o in zip("AB", opts)}}
         print(f"{s}: {len(chosen)} of {len(pool)} moved junctions", flush=True)

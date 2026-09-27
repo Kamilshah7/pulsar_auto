@@ -109,8 +109,8 @@ class Handler(BaseHTTPRequestHandler):
             rec = {"id": iid, "ts": time.strftime("%Y-%m-%dT%H:%M:%S"), "ok": ok,
                    "manual": float(manual) if manual is not None else None, "note": str(a.get("note", ""))[:500],
                    # server-side enrichment: what each blind letter was
-                   "set": prv["set"], "kind": prv["kind"], "class": prv["class"], "branch": prv["branch"],
-                   "leaf_line": prv["leaf_line"], "gold": prv["gold"], "live": prv["live"], "rule": prv.get("rule"),
+                   "set": prv["set"], "kind": prv["kind"], "class": prv.get("class"), "branch": prv.get("branch"),
+                   "leaf_line": prv.get("leaf_line"), "gold": prv.get("gold"), "live": prv.get("live"), "rule": prv.get("rule"),
                    "options": {k: {"t": m["t"], "cues": m["cues"], "ok": ok.get(k, False)} for k, m in prv["options"].items()}}
             with LOCK:
                 with open(ANSWERS, "a", encoding="utf-8") as f:
