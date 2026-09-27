@@ -1,0 +1,15 @@
+nostop r6 tau6 w60 n242  009 -0.07/-0.14 | 026 -0.17/-0.28 ear +7/-1 d-0.4 m-0.5 | 049 -0.07/-0.23 ear -3/+1 d-0.2 m-0.3 | old14 +0.01/-0.10 ear +0/+0 d-0.2 m+0.0
+                         moves closer/further: 009 H 10/4 | 026 H 14/5 hand 16/2 ear 47/10 | 049 H 16/4 hand 3/0 ear 23/9 | old14 H 6/1 ear 10/2
+                         share of moves that go closer, all sets: H 77% (n=60), hand 90% (n=21), ear 79% (n=101)
+nostop r6 tau8 w40 n407  009 -0.16/-0.35 | 026 -0.14/-0.24 ear +8/-2 d-0.4 m-0.6 | 049 -0.13/-0.43 ear -3/+3 d-0.3 m-0.6 | old14 -0.01/-0.15 ear -4/+1 d-0.1 m-0.3
+                         moves closer/further: 009 H 26/6 | 026 H 20/12 hand 21/5 ear 65/24 | 049 H 30/8 hand 6/0 ear 36/18 | old14 H 14/6 hand 1/0 ear 17/10
+                         share of moves that go closer, all sets: H 74% (n=122), hand 85% (n=33), ear 69% (n=170)
+nostop r8 tau8 w40 n408  009 -0.19/-0.40 | 026 -0.13/-0.31 ear +10/-2 d-0.5 m-0.7 | 049 -0.18/-0.52 ear -3/+2 d-0.4 m-0.8 | old14 -0.00/-0.18 ear -3/+1 d-0.2 m-0.3
+                         moves closer/further: 009 H 25/6 | 026 H 19/12 hand 21/5 ear 62/24 | 049 H 30/9 hand 6/0 ear 36/18 | old14 H 14/6 hand 1/0 ear 17/11
+                         share of moves that go closer, all sets: H 73% (n=121), hand 85% (n=33), ear 68% (n=168)
+nostop r10 tau8 w40 n408 009 -0.20/-0.46 | 026 -0.11/-0.39 ear +6/+1 d-0.5 m-0.8 | 049 -0.20/-0.57 ear +3/+1 d-0.5 m-1.0 | old14 +0.00/-0.18 ear -3/+2 d-0.2 m-0.3
+                         moves closer/further: 009 H 25/7 | 026 H 19/13 hand 20/5 ear 59/27 | 049 H 30/9 hand 6/0 ear 36/18 | old14 H 14/6 hand 1/0 ear 17/9
+                         share of moves that go closer, all sets: H 72% (n=123), hand 84% (n=32), ear 67% (n=166)
+nostop r10 tau12 w40 n645 009 -0.26/-0.53 | 026 -0.14/-0.40 ear +3/+5 d-0.5 m-1.3 | 049 -0.27/-0.80 ear +0/+4 d-0.5 m-1.9 | old14 -0.06/-0.42 ear -2/+0 d-0.4 m-1.7
+                         moves closer/further: 009 H 34/17 | 026 H 30/20 hand 31/12 ear 76/50 | 049 H 45/21 hand 7/0 ear 45/37 | old14 H 29/14 hand 3/1 ear 38/20
+                         share of moves that go closer, all sets: H 66% (n=210), hand 76% (n=54), ear 60% (n=266)

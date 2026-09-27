@@ -4,8 +4,19 @@
     {
       "name": "boundary-review",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["bench/review_server.py"],
+      "runtimeArgs": [
+        "bench/review_server.py"
+      ],
       "port": 8765
+    },
+    {
+      "name": "nudge-review",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-c",
+        "import os, runpy; os.environ['REVIEW_DIR'] = 'bench/review/confirm_nudge'; os.environ['REVIEW_PORT'] = '8769'; runpy.run_path('bench/review_server.py', run_name='__main__')"
+      ],
+      "port": 8769
     }
   ]
 }

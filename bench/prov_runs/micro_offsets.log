@@ -1,0 +1,12 @@
+V>liq -4 ms              009 -0.01/-0.04 | 026 +0.05/+0.00 ear -1/+1 d-0.0 m-0.1 | 049 +0.01/-0.04 ear +0/+1 d-0.0 m+0.1 | old14 +0.02/-0.05 ear +0/+0 d-0.1 m+0.0
+                         moves closer/further: 009 gold 11/8 | 026 gold 6/18 ear 8/6 | 049 gold 5/8 ear 5/3 | old14 gold 8/13 ear 7/3
+V>liq -8 ms              009 -0.00/-0.04 | 026 +0.10/+0.00 ear -3/+0 d-0.0 m-0.1 | 049 +0.03/-0.08 ear +1/+0 d-0.1 m+0.2 | old14 +0.05/-0.10 ear +2/-4 d-0.1 m-0.0
+                         moves closer/further: 009 gold 9/9 | 026 gold 6/18 ear 8/7 | 049 gold 5/8 ear 5/3 | old14 gold 8/13 ear 8/3
+V>liq -12 ms             009 -0.00/-0.04 | 026 +0.16/-0.01 ear -4/-1 d-0.0 m-0.1 | 049 +0.05/-0.09 ear +2/-1 d-0.1 m+0.3 | old14 +0.08/-0.09 ear +4/-5 d-0.1 m+0.0
+                         moves closer/further: 009 gold 9/10 | 026 gold 5/19 ear 7/8 | 049 gold 5/8 ear 5/2 | old14 gold 8/13 ear 8/4
+stop>fric -4 ms          009 -0.03/-0.03 | 026 -0.05/+0.00 ear +2/+0 d-0.1 m-0.0 | 049 +0.02/-0.01 ear +1/+0 d-0.0 m+0.0 | old14 -0.00/-0.05 ear +2/+1 d-0.0 m+0.0
+                         moves closer/further: 009 gold 30/24 | 026 gold 31/22 ear 15/9 | 049 gold 10/15 ear 4/1 | old14 gold 17/17 ear 5/3
+stop>fric -8 ms          009 +0.00/-0.04 | 026 -0.03/+0.00 ear +1/+1 d-0.1 m-0.0 | 049 +0.07/-0.00 ear +0/+1 d-0.0 m+0.0 | old14 +0.04/-0.10 ear +3/+1 d-0.0 m+0.0
+                         moves closer/further: 009 gold 26/28 | 026 gold 24/23 ear 14/10 | 049 gold 8/17 ear 4/2 | old14 gold 17/21 ear 5/3
+stop>fric -12 ms         009 +0.08/-0.03 | 026 +0.04/+0.00 ear +1/-2 d-0.0 m-0.0 | 049 +0.15/+0.00 ear +0/+1 d-0.0 m+0.0 | old14 +0.12/-0.10 ear +3/+1 d+0.0 m+0.0
+                         moves closer/further: 009 gold 22/32 | 026 gold 23/29 ear 13/10 | 049 gold 7/19 ear 3/3 | old14 gold 14/22 ear 4/3

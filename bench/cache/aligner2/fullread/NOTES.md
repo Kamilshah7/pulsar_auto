@@ -5861,3 +5861,19 @@ win 20 / 40 (bench/prov_runs/fc_nudge_eval*.log). Best on dev (r30 tau16 w40): m
 gold MAE all / H 009 -0.10 / -0.39, 026 +0.01 / -0.24, 049 -0.13 / -0.47, old14 +0.07 / +0.07; ear 026 acc +3 rej -3,
 manual MAE -0.9 (049 -3.1, old14 -3.0). Per move it is a coin flip: vs gold 86 closer / 84 further (old14 14 / 24),
 vs the ear 41 closer / 36 further. The detector ranks cuts > 20 ms apart; it does not locate the edge to 3-11 ms.
+CORRECTION (same day): the nudge result above is WRONG -- the rule stage leaves a 2 ms gap between touching words
+(82 % of gold-continuous junctions have a 1-5 ms gap), and the test only treated gaps <= 1 ms as continuous (12 %).
+Fixed (continuous = gap -1..+5 ms, the gap is kept when a cut moves; aligner2/micro_eval.py: per move closer/further vs
+H = the user's hand-moved gold, hand = the user's review cuts, ear = the nearest accepted ear cut).
+ Step 1, error anatomy (923 continuous junctions with a hand-moved gold boundary): median signed error +0.2 ms, within
+ 3 ms 18 %, 3-11 ms 32 %, > 11 ms 50 %: scatter, not bias. Per type only V>liq is consistently late (+7..+12 ms in all
+ sets, H only) -- but a fixed V>liq / stop>fric shift is a coin flip over all such junctions: REJECTED.
+ Nudge on all touching junctions: a stop on either side = coin flip (V>stop 47-53 %, stop>V 45-61 %, fric>stop 31-38 %:
+ a stop's closure is silence, the detector cannot place it); fric / nasal / liquid / glide / vowel junctions 62-100 %.
+ skip_stops=True, r8 tau8 w40 (chosen on 009 + 026): 408 moves (<= 8 ms, median 8), gold all / H 009 -0.19 / -0.40,
+ 026 -0.13 / -0.31, 049 -0.18 / -0.52, old14 -0.00 / -0.18; ear 026 acc +10 rej -2; per move closer: H 73 % (n 121),
+ hand 85 % (33), ear 68 % (168); 049 alone H 30 / 9, hand 6 / 0, ear 36 / 18. Requiring an interior optimum (a real
+ peak, not the window edge) is WORSE (ear 60 %): the detector knows the DIRECTION, a capped move in it is right ~70 %.
+ CANDIDATE -> blind listening round bench/review/confirm_nudge (bench/build_confirm_nudge.py, 120 items, 30 per set,
+ moves >= 3 ms; decision fixed before listening: nudged wins >= 60 % on 009 + 026 where exactly one cut is accepted,
+ >= 50 % on 049; `python -m aligner2.nudge_round`). Launch: .claude/launch.json "nudge-review" (port 8769).

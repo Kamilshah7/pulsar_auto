@@ -1,0 +1,29 @@
+r6 tau6 w60: move sizes median 6 ms; share of moves going closer by junction type (dev = 009 + 026)
+   V>stop      dev  47% (n= 30) | 049  40% (n=  5) | old14  67% (n=6)
+   fric>fric   dev  88% (n= 16) | 049 100% (n=  3) | old14 100% (n=1)
+   nas>fric    dev  81% (n= 16) | 049  75% (n=  4) | old14 -
+   stop>fric   dev  64% (n= 14) | 049  50% (n=  2) | old14 -
+   V>fric      dev  62% (n= 13) | 049  67% (n=  6) | old14  60% (n=5)
+   stop>V      dev  45% (n= 11) | 049  38% (n= 13) | old14  46% (n=13)
+   V>gl        dev  80% (n= 10) | 049  83% (n=  6) | old14  75% (n=4)
+   liq>fric    dev 100% (n=  9) | 049 100% (n=  7) | old14 -
+   V>nas       dev  88% (n=  8) | 049    -         | old14 -
+   fric>stop   dev  38% (n=  8) | 049   0% (n=  3) | old14 100% (n=1)
+   V>liq       dev  75% (n=  8) | 049 100% (n=  2) | old14 -
+r6 tau8 w40: move sizes median 6 ms; share of moves going closer by junction type (dev = 009 + 026)
+   V>stop      dev  53% (n= 43) | 049  40% (n=  5) | old14  50% (n=8)
+   stop>V      dev  61% (n= 33) | 049  59% (n= 17) | old14  50% (n=18)
+   V>fric      dev  52% (n= 29) | 049  33% (n=  6) | old14  62% (n=8)
+   V>gl        dev  62% (n= 24) | 049  80% (n= 10) | old14  86% (n=7)
+   nas>fric    dev  76% (n= 21) | 049  67% (n=  9) | old14 100% (n=1)
+   stop>fric   dev  57% (n= 21) | 049  75% (n=  4) | old14  75% (n=4)
+   fric>fric   dev  85% (n= 20) | 049  91% (n= 11) | old14  29% (n=7)
+   fric>stop   dev  31% (n= 16) | 049   0% (n=  6) | old14  75% (n=4)
+   V>liq       dev  86% (n= 14) | 049 100% (n=  6) | old14 100% (n=2)
+   V>V         dev  73% (n= 11) | 049  75% (n=  4) | old14 100% (n=2)
+   liq>fric    dev  82% (n= 11) | 049 100% (n=  7) | old14   0% (n=2)
+   liq>stop    dev  60% (n= 10) | 049  86% (n=  7) | old14 -
+   nas>V       dev  89% (n=  9) | 049  56% (n=  9) | old14  50% (n=2)
+   V>nas       dev  89% (n=  9) | 049    -         | old14 100% (n=2)
+   nas>stop    dev  88% (n=  8) | 049   0% (n=  4) | old14 100% (n=1)
+   fric>V      dev  62% (n=  8) | 049  71% (n= 14) | old14 -

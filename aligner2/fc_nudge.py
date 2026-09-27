@@ -29,22 +29,28 @@ def _edge_phones(arpa, k):
     return fc_align.VOCAB.get(a[-1]), fc_align.VOCAB.get(b[0])
 
 
+STOPS = {"P", "B", "T", "D", "K", "G"}
+
+
 def nudge(z, preds, arpa, radius=0.020, tau=0.004, win=0.040, clip_to_words=True, min_dur=0.020, fcg=None,
-          trace=None):
+          trace=None, skip_stops=False, interior=False, search=None):
     """preds: [{start, end}] after the rule stage -> the same with continuous junctions nudged"""
     fcg = fc_on_grid(z) if fcg is None else fcg
     T = len(fcg); R, W, M = int(round(radius / HOP)), int(round(win / HOP)), int(round(min_dur / HOP))
     out = [dict(p) for p in preds]
     for k in range(len(preds) - 1):
         e, s = preds[k]["end"], preds[k + 1]["start"]
-        if abs(s - e) > 0.001:                              # a pause: not this step
+        if not -0.001 <= s - e <= 0.005:                    # a pause: not this step (touching words keep a 2 ms gap)
             continue
         ph1, ph2 = _edge_phones(arpa, k)
         if ph1 is None or ph2 is None:
             continue
+        if skip_stops and ((arpa[k] or "").split()[-1] in STOPS or (arpa[k + 1] or "").split()[0] in STOPS):
+            continue                                        # a stop's silent closure: the detector cannot place it
         i0 = int(round((e + s) / 2 / HOP))
         a0, b1 = int(round(preds[k]["start"] / HOP)), int(round(preds[k + 1]["end"] / HOP))
-        lo, hi = max(i0 - R, a0 + M, 1), min(i0 + R, b1 - M, T - 2)
+        S = int(round(search / HOP)) if search else R          # search window (>= the allowed move)
+        lo, hi = max(i0 - S, a0 + M, 1), min(i0 + S, b1 - M, T - 2)
         if hi < lo:
             continue
         best, bi = -np.inf, i0
@@ -54,8 +60,13 @@ def nudge(z, preds, arpa, radius=0.020, tau=0.004, win=0.040, clip_to_words=True
             sc = fcg[l0:i, ph1].mean() + fcg[i:r1, ph2].mean() - abs(i - i0) * HOP / tau
             if sc > best:
                 best, bi = sc, i
+        if interior and bi in (lo, hi):                     # best at the window's edge: no edge found, just a drift
+            continue
+        if abs(bi - i0) > R:                                # beyond the allowed move
+            continue
         if bi != i0:
-            out[k]["end"] = out[k + 1]["start"] = bi * HOP
+            d = bi * HOP - (e + s) / 2                      # move the cut, keep the gap
+            out[k]["end"] = e + d; out[k + 1]["start"] = s + d
             if trace is not None:
                 trace[k] = f"FCN {(bi - i0) * HOP * 1000:+.0f} ms"
     return out
