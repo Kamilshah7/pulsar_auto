@@ -48,8 +48,13 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
                     chrome.notifications.create('task_snagged_' + Date.now(), {
                         type: 'basic',
                         iconUrl: 'icon128.png',
-                        title: '🚨 TASK READY & SNAGGED! 🚨',
-                        message: 'Labelbox Start button became active and was automatically clicked! Jump to your tab now.',
+                        title: message.mode === 'opened' ? '🚨 TASK OPENED! 🚨'
+                             : message.clicked === false ? '🚨 TASK READY! 🚨' : '🚨 TASK READY & SNAGGED! 🚨',
+                        message: message.mode === 'opened'
+                            ? 'Pressing Start opened a Labelbox task. Jump to your tab now.'
+                            : message.clicked === false
+                            ? 'The labelling button is active (auto-click is off). Click it now!'
+                            : 'The labelling button was active and was clicked automatically! Jump to your tab now.',
                         priority: 2,
                         requireInteraction: true
                     });

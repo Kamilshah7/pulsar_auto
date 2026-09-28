@@ -42,6 +42,13 @@
     } catch (e) {
         setTimeout(bootSniper, 2500);
     }
+    try {
+        chrome.storage.onChanged.addListener((changes, area) => {
+            if (area === 'local' && changes.sniper_settings && changes.sniper_settings.newValue) {
+                settings = { ...settings, ...changes.sniper_settings.newValue };
+            }
+        });
+    } catch (e) { /* ignore */ }
 
     function findStartButton() {
         // Labelbox's Start button is in the top right header
@@ -69,7 +76,8 @@
         return style.pointerEvents !== 'none' && style.cursor !== 'not-allowed';
     }
 
-    function snagTask(btn) {
+    function snagTask(btn, autoClick) {
+        // btn = the control that proves a task is there (since 2026-09: the labelling button, not Start)
         if (taskSnagged) return;
         taskSnagged = true;
 
@@ -84,34 +92,29 @@
         }
         settings.enableAutoReload = false;
 
-        console.log('%c [SNIPER] 🎯 TASK AVAILABLE! SNAGGING NOW!', 'background: #00dd55; color: #000; font-size: 16px; font-weight: bold; padding: 4px 8px;');
+        // mode: 'clicked' (labelling button clicked for you), 'alert' (auto-click off: you click it), 'opened'
+        // (pressing Start went straight into a task, btn = null)
+        const mode = !btn ? 'opened' : autoClick ? 'clicked' : 'alert';
+        const TXT = {
+            clicked: { status: '🎉 TASK SNAGGED!', state: 'LABELLING CLICKED!', title: '🚨🚨 TASK READY! SNAGGED! 🚨🚨' },
+            alert:   { status: '🎉 TASK AVAILABLE: CLICK LABELLING!', state: 'LABELLING ACTIVE (not clicked)', title: '🚨🚨 TASK READY! CLICK LABELLING! 🚨🚨' },
+            opened:  { status: '🎉 TASK OPENED!', state: 'START OPENED A TASK', title: '🚨🚨 TASK OPENED! 🚨🚨' }
+        }[mode];
+        console.log('%c [SNIPER] 🎯 TASK AVAILABLE! (' + mode + ')',
+                    'background: #00dd55; color: #000; font-size: 16px; font-weight: bold; padding: 4px 8px;');
 
-        // Dispatch synthetic events
-        try {
-            btn.scrollIntoView({ behavior: 'instant', block: 'center' });
-            btn.dispatchEvent(new MouseEvent('pointerdown', { bubbles: true, cancelable: true }));
-            btn.dispatchEvent(new MouseEvent('mousedown', { bubbles: true, cancelable: true }));
-            btn.dispatchEvent(new MouseEvent('pointerup', { bubbles: true, cancelable: true }));
-            btn.dispatchEvent(new MouseEvent('mouseup', { bubbles: true, cancelable: true }));
-            btn.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
-            if (typeof btn.click === 'function') btn.click();
-        } catch (e) {
-            console.error('[Sniper] Click error:', e);
+        // Click it (auto-click on). btn may be null when pressing Start already opened a task.
+        if (mode === 'clicked') {
+            try { clickLikeUser(btn); } catch (e) { console.error('[Sniper] Click error:', e); }
         }
-
-        // Check for dropdown split menuitem
-        setTimeout(() => {
-            const menuItems = document.querySelectorAll('[role="menuitem"], .MuiMenuItem-root');
-            if (menuItems.length > 0) {
-                menuItems[0].click();
-            }
-        }, 150);
 
         // Notify background for offscreen loud siren + notification
         try {
             chrome.runtime.sendMessage({
                 action: 'TASK_SNAGGED',
-                duration: settings.sirenDurationSec
+                duration: settings.sirenDurationSec,
+                clicked: mode !== 'alert',
+                mode: mode
             });
         } catch (e) {
             console.error('[Sniper] Message error:', e);
@@ -123,9 +126,9 @@
         // Update HUD
         if (shadowRoot) {
             const st = shadowRoot.getElementById('hud-status');
-            if (st) st.innerHTML = '<span style="color: #00ff88; font-weight: bold;">🎉 TASK SNAGGED!</span>';
+            if (st) st.innerHTML = `<span style="color: #00ff88; font-weight: bold;">${TXT.status}</span>`;
             const btnSt = shadowRoot.getElementById('hud-btn-state');
-            if (btnSt) btnSt.innerHTML = '<span style="color: #00ff88; font-weight: bold;">ACTIVE (CLICKED!)</span>';
+            if (btnSt) btnSt.innerHTML = `<span style="color: #00ff88; font-weight: bold;">${TXT.state}</span>`;
             const timerEl = shadowRoot.getElementById('hud-timer');
             if (timerEl) timerEl.innerHTML = '<span style="color: #ff3366; font-weight: bold;">🛑 STOPPED</span>';
             const cb = shadowRoot.getElementById('cb-autoreload');
@@ -135,7 +138,7 @@
             }
         }
 
-        document.title = '🚨🚨 TASK READY! SNAGGED! 🚨🚨';
+        document.title = TXT.title;
     }
 
     function triggerFlashingBorder() {
@@ -242,7 +245,7 @@
                     <span class="hud-val" id="hud-status" style="color: #ffaa00;">Monitoring</span>
                 </div>
                 <div class="hud-row">
-                    <span class="hud-label">Start button:</span>
+                    <span class="hud-label">Labelling:</span>
                     <span class="hud-val" id="hud-btn-state" style="color: #94a3b8;">Checking...</span>
                 </div>
                 <div class="hud-row">
@@ -303,43 +306,116 @@
         window.addEventListener('mouseup', () => { isDragging = false; });
     }
 
-    function checkStartButton() {
-        if (taskSnagged || !settings.enabled) return;
+    // ---- Detection (2026-09-28): Labelbox now keeps the Start button blue at all times, so "Start is active" no
+    // longer means a task is waiting. Instead: press Start, then look at the LABELLING button that appears -- greyed
+    // out = no task (close the menu, try again after the next reload); not greyed out = a task is there.
+    const LABEL_RE = /label/i;
+    let probing = false;
+    let lastProbe = 0;
 
+    const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+
+    function clickLikeUser(el) {
+        el.scrollIntoView({ behavior: 'instant', block: 'center' });
+        for (const type of ['pointerdown', 'mousedown', 'pointerup', 'mouseup']) {
+            el.dispatchEvent(new MouseEvent(type, { bubbles: true, cancelable: true }));
+        }
+        if (typeof el.click === 'function') el.click();
+        else el.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
+    }
+
+    function isVisible(el) {
+        return el.getClientRects().length > 0 && window.getComputedStyle(el).visibility !== 'hidden';
+    }
+
+    // visible buttons / menu items whose text mentions labelling (innermost only)
+    function labelCandidates() {
+        const all = [...document.querySelectorAll('button, [role="menuitem"], [role="option"], [role="button"], a, li')]
+            .filter(el => {
+                const txt = (el.innerText || el.textContent || '').trim();
+                return txt && txt.length < 60 && LABEL_RE.test(txt) && isVisible(el);
+            });
+        return all.filter(el => !all.some(o => o !== el && el.contains(o)));
+    }
+
+    function isGreyedOut(el) {
+        // the element and its two nearest ancestors: MUI puts Mui-disabled / aria-disabled / opacity .38 on the item
+        for (let e = el, d = 0; e && e !== document.body && d < 3; e = e.parentElement, d++) {
+            if (e.disabled || e.hasAttribute('disabled') || e.getAttribute('aria-disabled') === 'true' ||
+                e.classList.contains('Mui-disabled') || e.classList.contains('disabled')) return true;
+            const st = window.getComputedStyle(e);
+            if (st.pointerEvents === 'none' || st.cursor === 'not-allowed') return true;
+            if (d === 0 && parseFloat(st.opacity) < 0.6) return true;      // only the item itself: menus fade in
+        }
+        return false;
+    }
+
+    function closeMenu() {
+        const esc = { key: 'Escape', code: 'Escape', keyCode: 27, which: 27, bubbles: true, cancelable: true };
+        (document.activeElement || document.body).dispatchEvent(new KeyboardEvent('keydown', esc));
+        document.dispatchEvent(new KeyboardEvent('keydown', esc));
+        setTimeout(() => {
+            const bd = document.querySelector('.MuiPopover-root .MuiBackdrop-root, .MuiMenu-root .MuiBackdrop-root');
+            if (bd) bd.click();
+        }, 150);
+    }
+
+    function hudState(html) {
+        if (!shadowRoot) return;
+        const el = shadowRoot.getElementById('hud-btn-state');
+        if (el) el.innerHTML = html;
+    }
+
+    async function probe() {
+        if (probing || taskSnagged || !isOverviewPage()) return;
+        const start = findStartButton();
+        if (!start) { hudState('<span style="color: #64748b;">Waiting for Start...</span>'); return; }
+        if (!isButtonActive(start)) { hudState('<span style="color: #94a3b8;">Start disabled</span>'); return; }
+
+        probing = true;
+        lastProbe = Date.now();
         checkCount++;
         if (shadowRoot) {
             const scansEl = shadowRoot.getElementById('hud-scans');
             if (scansEl) scansEl.innerText = checkCount;
         }
+        hudState('<span style="color: #00d4ff;">Pressing Start...</span>');
+        try {
+            const before = new Set(labelCandidates());
+            const url0 = location.href;
+            clickLikeUser(start);
 
-        const btn = findStartButton();
-        if (!btn) {
-            if (shadowRoot) {
-                const btnSt = shadowRoot.getElementById('hud-btn-state');
-                if (btnSt) btnSt.innerHTML = '<span style="color: #64748b;">Waiting for render...</span>';
+            // wait (<= 4 s) for a NEW labelling control, or for Start to open a task directly
+            let found = null;
+            for (let i = 0; i < 40 && !found; i++) {
+                await sleep(100);
+                if (location.href !== url0 && !isOverviewPage()) {
+                    hudState('<span style="color: #00ff88; font-weight: bold;">Start opened a task!</span>');
+                    snagTask(null, false);
+                    return;
+                }
+                found = labelCandidates().find(el => !before.has(el)) || null;
             }
-            return;
-        }
-
-        const active = isButtonActive(btn);
-        if (active) {
-            // Immediately freeze reload before anything else
-            if (reloadTimer) {
-                clearInterval(reloadTimer);
-                reloadTimer = null;
+            if (!found) {
+                hudState('<span style="color: #ffaa00;">Labelling button not found</span>');
+                console.log('[Labelbox Sniper] After Start: no new labelling button. Visible label-like controls:',
+                            labelCandidates().map(el => (el.innerText || '').trim()));
+                closeMenu();
+                return;
             }
-            settings.enableAutoReload = false;
-
-            if (shadowRoot) {
-                const btnSt = shadowRoot.getElementById('hud-btn-state');
-                if (btnSt) btnSt.innerHTML = '<span style="color: #00ff88; font-weight: bold;">ACTIVE (BLUE)!</span>';
+            await sleep(700);                                   // let the menu finish opening before judging
+            if (!document.contains(found)) found = labelCandidates().find(el => !before.has(el)) || found;
+            if (isGreyedOut(found)) {
+                hudState('<span style="color: #94a3b8;">Labelling greyed out (no task)</span>');
+                closeMenu();
+            } else {
+                hudState('<span style="color: #00ff88; font-weight: bold;">LABELLING AVAILABLE!</span>');
+                snagTask(found, settings.enabled !== false);
             }
-            snagTask(btn);
-        } else {
-            if (shadowRoot) {
-                const btnSt = shadowRoot.getElementById('hud-btn-state');
-                if (btnSt) btnSt.innerHTML = '<span style="color: #94a3b8;">Disabled (Grey)</span>';
-            }
+        } catch (e) {
+            console.error('[Sniper] Probe error:', e);
+        } finally {
+            probing = false;
         }
     }
 
@@ -352,8 +428,13 @@
         console.log('[Labelbox Sniper] Starting safe monitoring engine...');
         buildIsolatedHud();
 
-        // Safe polling every 450ms (Zero DOM mutation feedback, 0% CPU impact)
-        monitorTimer = setInterval(checkStartButton, 450);
+        // First probe as soon as Start has rendered; after that one probe per auto-reload (the page reloads), or,
+        // with auto-reload off, one probe every autoReloadSeconds
+        monitorTimer = setInterval(() => {
+            if (taskSnagged || probing) return;
+            const every = Math.max(5, settings.autoReloadSeconds || 12) * 1000;
+            if (lastProbe === 0 || (!settings.enableAutoReload && Date.now() - lastProbe >= every)) probe();
+        }, 450);
 
         // Safe Auto-Reload Timer (every 1s)
         reloadTimer = setInterval(() => {
@@ -366,6 +447,7 @@
                 return;
             }
 
+            if (probing) return;                                // never reload in the middle of a probe
             reloadCountdown--;
             if (shadowRoot) {
                 const timerEl = shadowRoot.getElementById('hud-timer');
