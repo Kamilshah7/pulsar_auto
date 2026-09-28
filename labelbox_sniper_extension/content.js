@@ -307,7 +307,8 @@
     // opens -- greyed out (Mui-disabled, aria-disabled, opacity .38) = no task (close the menu, try again after the
     // next reload); not greyed out = a task is there. Only that MENU ITEM counts: pressing Start also shows a "Read
     // labeling instructions" link-button outside the menu, which the first version wrongly took for it.
-    const LABEL_ITEM_RE = /^start\s+label(l)?ing\b/i;
+    // The item reads "Start labeling" while greyed out and just "Labeling" when a task is there (the user, 2026-09-28).
+    const LABEL_ITEM_RE = /^(start\s+)?label(l)?ing\b/i;
     let probing = false;
     let lastProbe = 0;
 
@@ -330,9 +331,12 @@
         return [...document.querySelectorAll('[role="menuitem"], .MuiMenuItem-root')].filter(isVisible);
     }
 
-    // the visible "Start labeling" menu item, or null
+    // the visible labelling menu item ("Start labeling" / "Labeling"), or null
     function labellingItem() {
-        return menuItems().find(el => LABEL_ITEM_RE.test((el.innerText || el.textContent || '').trim())) || null;
+        return menuItems().find(el => {
+            const txt = (el.innerText || el.textContent || '').trim();
+            return LABEL_ITEM_RE.test(txt) && !/instruction/i.test(txt);
+        }) || null;
     }
 
     function isGreyedOut(el) {
@@ -394,8 +398,8 @@
                 }
             }
             if (!found) {
-                hudState('<span style="color: #ffaa00;">"Start labeling" not found</span>');
-                console.log('[Labelbox Sniper] After Start: no "Start labeling" menu item. Visible menu items:',
+                hudState('<span style="color: #ffaa00;">Labelling item not found</span>');
+                console.log('[Labelbox Sniper] After Start: no labelling menu item. Visible menu items:',
                             menuItems().map(el => (el.innerText || '').trim()));
                 closeMenu();
                 return;
