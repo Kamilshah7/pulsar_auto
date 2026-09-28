@@ -51,15 +51,11 @@
     } catch (e) { /* ignore */ }
 
     function findStartButton() {
-        // Labelbox's Start button is in the top right header
-        const buttons = document.querySelectorAll('button');
-        for (const btn of buttons) {
-            const txt = (btn.innerText || btn.textContent || '').trim();
-            if (/^start/i.test(txt)) {
-                return btn;
-            }
-        }
-        return null;
+        // Labelbox's Start button is in the top right header. The page also has a second, permanently disabled
+        // "Start" button (seen 2026-09-28): prefer the active one.
+        const starts = [...document.querySelectorAll('button')]
+            .filter(btn => /^start$/i.test((btn.innerText || btn.textContent || '').trim()));
+        return starts.find(isButtonActive) || starts[0] || null;
     }
 
     function isButtonActive(btn) {
@@ -307,9 +303,11 @@
     }
 
     // ---- Detection (2026-09-28): Labelbox now keeps the Start button blue at all times, so "Start is active" no
-    // longer means a task is waiting. Instead: press Start, then look at the LABELLING button that appears -- greyed
-    // out = no task (close the menu, try again after the next reload); not greyed out = a task is there.
-    const LABEL_RE = /label/i;
+    // longer means a task is waiting. Instead: press Start, then look at the "Start labeling" item of the menu it
+    // opens -- greyed out (Mui-disabled, aria-disabled, opacity .38) = no task (close the menu, try again after the
+    // next reload); not greyed out = a task is there. Only that MENU ITEM counts: pressing Start also shows a "Read
+    // labeling instructions" link-button outside the menu, which the first version wrongly took for it.
+    const LABEL_ITEM_RE = /^start\s+label(l)?ing\b/i;
     let probing = false;
     let lastProbe = 0;
 
@@ -328,14 +326,13 @@
         return el.getClientRects().length > 0 && window.getComputedStyle(el).visibility !== 'hidden';
     }
 
-    // visible buttons / menu items whose text mentions labelling (innermost only)
-    function labelCandidates() {
-        const all = [...document.querySelectorAll('button, [role="menuitem"], [role="option"], [role="button"], a, li')]
-            .filter(el => {
-                const txt = (el.innerText || el.textContent || '').trim();
-                return txt && txt.length < 60 && LABEL_RE.test(txt) && isVisible(el);
-            });
-        return all.filter(el => !all.some(o => o !== el && el.contains(o)));
+    function menuItems() {
+        return [...document.querySelectorAll('[role="menuitem"], .MuiMenuItem-root')].filter(isVisible);
+    }
+
+    // the visible "Start labeling" menu item, or null
+    function labellingItem() {
+        return menuItems().find(el => LABEL_ITEM_RE.test((el.innerText || el.textContent || '').trim())) || null;
     }
 
     function isGreyedOut(el) {
@@ -381,30 +378,30 @@
         }
         hudState('<span style="color: #00d4ff;">Pressing Start...</span>');
         try {
-            const before = new Set(labelCandidates());
-            const url0 = location.href;
-            clickLikeUser(start);
-
-            // wait (<= 4 s) for a NEW labelling control, or for Start to open a task directly
-            let found = null;
-            for (let i = 0; i < 40 && !found; i++) {
-                await sleep(100);
-                if (location.href !== url0 && !isOverviewPage()) {
-                    hudState('<span style="color: #00ff88; font-weight: bold;">Start opened a task!</span>');
-                    snagTask(null, false);
-                    return;
+            let found = labellingItem();                        // the menu may already be open
+            if (!found) {
+                const url0 = location.href;
+                clickLikeUser(start);
+                // wait (<= 4 s) for the "Start labeling" menu item, or for Start to open a task directly
+                for (let i = 0; i < 40 && !found; i++) {
+                    await sleep(100);
+                    if (location.href !== url0 && !isOverviewPage()) {
+                        hudState('<span style="color: #00ff88; font-weight: bold;">Start opened a task!</span>');
+                        snagTask(null, false);
+                        return;
+                    }
+                    found = labellingItem();
                 }
-                found = labelCandidates().find(el => !before.has(el)) || null;
             }
             if (!found) {
-                hudState('<span style="color: #ffaa00;">Labelling button not found</span>');
-                console.log('[Labelbox Sniper] After Start: no new labelling button. Visible label-like controls:',
-                            labelCandidates().map(el => (el.innerText || '').trim()));
+                hudState('<span style="color: #ffaa00;">"Start labeling" not found</span>');
+                console.log('[Labelbox Sniper] After Start: no "Start labeling" menu item. Visible menu items:',
+                            menuItems().map(el => (el.innerText || '').trim()));
                 closeMenu();
                 return;
             }
             await sleep(700);                                   // let the menu finish opening before judging
-            if (!document.contains(found)) found = labelCandidates().find(el => !before.has(el)) || found;
+            if (!document.contains(found)) found = labellingItem() || found;
             if (isGreyedOut(found)) {
                 hudState('<span style="color: #94a3b8;">Labelling greyed out (no task)</span>');
                 closeMenu();
