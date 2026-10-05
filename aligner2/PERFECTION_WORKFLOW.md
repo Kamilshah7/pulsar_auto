@@ -91,6 +91,11 @@ open cases. Report progress against it.
 Overfitting check: rules must be phonetically explainable (a reason a phonetician would accept), never keyed to a clip
 or a time. Keep reporting the old held-out sets (049, old14) so a rule that only memorises the captures shows up.
 
+## Open cases (seen before the captures; check them in the golden data)
+
+- Overlapping words in the injected output: b15_pack_025 clip 4, "get" 79.123-79.310 overlaps "what" 79.294-79.451
+  by 16 ms (pipeline log "1 overlaps"). Our output must never overlap -- find which step produces it.
+
 ## Tools
 
 - `bench/bundle_archive/<bundle>/` -- audio + pipeline files per bundle (pipeline.py archive_bundle).

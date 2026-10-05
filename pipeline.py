@@ -85,7 +85,8 @@ def archive_bundle(bundle_name, log=print):
                         os.remove(dst)
                     continue
             shutil.copy2(src, dst); n_out += 1
-        log(f"Archived bundle {bundle_name}: {n_audio} audio files, {n_out} pipeline files -> {dest}"
+        log(f"Archived bundle {bundle_name}: {len(wavs)} clips ({n_audio} audio files incl. their .json sidecars), "
+            f"{n_out} pipeline files -> {dest}"
             + (f" (left out {', '.join(skipped)}: from the previous bundle -- LLM/inject never ran for this one)" if skipped else ""))
         return dest
     except Exception as e:
