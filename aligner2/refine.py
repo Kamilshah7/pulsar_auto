@@ -126,11 +126,11 @@ P1AF_MIN_PAUSE = 0.0                          # P1af only before pauses at least
 F1W_SEARCH_MS = 120                           # F1w: how far after the coarse end to look for the final hiss
 F1W_JOIN_DB = 10.0                            # F1w: no dip below floor + this between the word and its hiss
 F1W_END_DB = 12.0                             # F1w: the hiss lasts while >= floor + this
-F1X_DROP = 32.0                               # F1x: a loud hiss ends this far under its peak
+F1X_DROP = 40.0                               # F1x: a loud hiss ends this far under its peak
 J1ND_STRONG = 15.0                            # J1nd: a transient this strong = the stop WAS released
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
 RULES = {"F2", "J0", "J1", "J1n", "J1m", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "P3", "E1", "E2",
-         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe", "J4l", "J8m", "J4h", "J4w", "J5l", "J7l", "MP", "E2a", "P1a", "FCN", "J1f", "J1nd", "F1w", "FRW", "FRS", "F1x"}   # enabled
+         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe", "J4l", "J8m", "J4h", "J4w", "J5l", "J7l", "MP", "E2a", "P1a", "FCN", "J1f", "J1nd", "F1w", "FRW", "FRS", "F1x", "F1xb"}   # enabled
 # (aligner2/local_bench.py --rules J1,J4,... for ablations)
 
 
@@ -628,7 +628,10 @@ class Clip:
                 while j < bound and S.zcr[j] >= max(0.15, 0.5 * zr) and S.Ls[j] >= S.floor[j] + 6.0 \
                         and S.Ls[j] <= low + 3.0:          # a decaying tail, not a new rise
                     low = min(low, S.Ls[j]); j += 1
-                if "F1x" in RULES and self.hiss_goes_on(j):  # F1x: F1 stopped on a single frame while a loud,
+                if "F1xb" in RULES and j >= bound:          # F1xb: a loud hiss runs F1 into its bound ("never
+                    j = self.fric_tail_end(i_end, bound)    # died" -> P1a cut it at the coarse end: is -133,
+                                                            # guys -114): it ends on the way down (peak - 32 dB)
+                elif "F1x" in RULES and self.hiss_goes_on(j):  # F1x: F1 stopped on a single frame while a loud,
                     j = self.fric_tail_end(j, bound)        # strong hiss goes on (enough -148, thirteenth -117)
                 if j > i_end and j < bound:                 # it must die before the bound
                     self.note(k, "P1 fricative", end=j)
@@ -652,9 +655,13 @@ class Clip:
                     while j < hard and S.zcr[j] >= max(0.15, 0.5 * zr) and S.Ls[j] >= S.floor[j] + F1W_END_DB \
                             and S.Ls[j] <= low + 3.0:
                         low = min(low, S.Ls[j]); j += 1
-                    if "F1x" in RULES and self.hiss_goes_on(j):
-                        j = self.fric_tail_end(j, hard)
-                    if j < hard and j > f:
+                    if "F1x" in RULES and (self.hiss_goes_on(j) or j - f < MS(4)):   # also a WEAK hiss the level
+                        j = self.fric_tail_end(f, hard) if j - f < MS(4) else self.fric_tail_end(j, hard)  # test
+                                                            # could not follow at all (themselves: 6-10 dB, zcr .6-.9)
+                    if j > f and (j < hard or ("F1x" in RULES and hard == lim and j - f <= MS(150))):
+                        # (F1x: a hiss that runs up to the NEXT WORD ends there -- themselves|i've; the "must die
+                        # before the bound" test is against the 200 ms cap, i.e. runaway breaths; a weak tail running
+                        # > 150 ms up to the next word is a breath: 049 us|uh +170 where the user kept the end)
                         self.note(k, "F1w fricative", start=f, end=j)
                         return j
         if stop_final:                                                         # (b) release after the coarse end
@@ -754,14 +761,17 @@ class Clip:
         Ls = _box(S.Ls[a:b], MS(10)); zs = _box(S.zcr[a:b], MS(10)); hs = _box(S.hi[a:b], MS(10))
         o = f - a
         pk = float(Ls[o:o + MS(60)].max())
-        j, low = o, Ls[o]
+        weak = pk - float(S.floor[f]) < 20.0          # the "however quiet" clause is for WEAK hisses only (themselves):
+        j, low = o, Ls[o]                             # a loud one ends on the way down even if it still hisses (is)
         while j < bound - a:
             loud = Ls[j] >= max(pk - F1X_DROP, S.floor[a + j] + 6.0) and zs[j] >= 0.15
-            hissy = zs[j] >= 0.45 and hs[j] >= -4.0
+            hissy = weak and zs[j] >= 0.45 and hs[j] >= -4.0
             if not (loud or hissy) or Ls[j] > low + 6.0:
                 break
             low = min(low, Ls[j]); j += 1
-        return a + j
+        if j > o + MS(10) and float(zs[o:j].mean()) < 0.35:
+            return f                                  # not the word's hiss but a breath / noise: mean zcr .27 (049
+        return a + j                                  # us|uh +170) vs real tails .45-.72 (enough, is, themselves)
 
     def glottal_tail(self, k, i_end, lim):
         """P1g: a GLOTTALISED final T (but H x2: the vowel ends in creak, no closure, no burst): when the 30 ms after the

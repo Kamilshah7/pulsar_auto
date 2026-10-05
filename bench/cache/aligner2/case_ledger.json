@@ -3423,14 +3423,14 @@
   "cap:b15_pack_025|5|34|end": {
    "notes": [],
    "first_err": -122.1,
-   "err": -122.1,
-   "status": "open",
+   "err": 7.9,
+   "status": "window",
    "word": "themselves",
    "pair": "themselves|i've",
    "jtype": "fric>V",
    "pause": true,
    "corrected": true,
-   "rule": ""
+   "rule": "F1w fricative start=11.886 end=12.016"
   },
   "cap:b15_pack_025|5|35|end": {
    "notes": [],
@@ -3687,14 +3687,14 @@
   "cap:b15_pack_025|6|5|end": {
    "notes": [],
    "first_err": -133.0,
-   "err": -133.0,
-   "status": "open",
+   "err": 5.0,
+   "status": "window",
    "word": "is",
    "pair": "is|i",
    "jtype": "fric>V",
    "pause": true,
    "corrected": true,
-   "rule": " | P1a fade end=2.328"
+   "rule": "P1 fricative end=2.466"
   },
   "cap:b15_pack_025|6|6|end": {
    "notes": [],
@@ -6240,6 +6240,20 @@
    "window": 1027,
    "n": 1484,
    "mae": 9.37
+  },
+  {
+   "tag": "+F1xb, F1x drop 40",
+   "exact": 967,
+   "window": 1028,
+   "n": 1484,
+   "mae": 9.28
+  },
+  {
+   "tag": "F1x weak/breath, F1xb",
+   "exact": 967,
+   "window": 1029,
+   "n": 1484,
+   "mae": 9.21
   }
  ]
 }

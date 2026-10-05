@@ -5929,3 +5929,9 @@ After J1f, J1nd, F1w: match 65.2 %, MAE 11.2 ms.
   -117 -> -43; golden 2 / 0. Where F1's short stop was right the following stretch is weak (zcr <= .33) or quiet
   (<= 8 dB: is, rights, its). Replacing F1's end everywhere broke 11 right ends (he's +55, bengals +68, games -106).
   Old sets: 9 unmoved (".") ends extended (neighborhoods +26 -> +148 may run into a breath) -- WATCH on new bundles.
+- F1x refinements: F1xb (ON) -- a loud hiss runs F1 into its 200 ms bound ("never died" -> P1a took over at the coarse
+  end): re-found from the start, ending on the way down at peak - F1X_DROP (40 dB; is -133 -> +5). The "however quiet"
+  clause only for WEAK hisses (peak < floor + 20 dB; themselves' z: 6-10 dB, zcr .6-.9 -> -122 -> +8, allowed to run up
+  to the next word when that is the bound, <= 150 ms). Breath check: an extension whose mean smoothed zcr < 0.35 is
+  not the word's hiss (049 us|uh: .27, +170 ms) vs real tails .45-.72. Golden: enough, thirteenth, themselves, is
+  closer, 0 further. Old sets: 0.33 s on unmoved (".") ends already late (neighborhoods, please, catch) -- WATCH.
