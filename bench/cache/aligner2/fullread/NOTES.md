@@ -5935,3 +5935,7 @@ After J1f, J1nd, F1w: match 65.2 %, MAE 11.2 ms.
   to the next word when that is the bound, <= 150 ms). Breath check: an extension whose mean smoothed zcr < 0.35 is
   not the word's hiss (049 us|uh: .27, +170 ms) vs real tails .45-.72. Golden: enough, thirteenth, themselves, is
   closer, 0 further. Old sets: 0.33 s on unmoved (".") ends already late (neighborhoods, please, catch) -- WATCH.
+- F1xb also in the F1w branch (a hiss found AFTER the coarse end that runs the whole 200 ms), gated to strong hisses
+  (mean smoothed zcr >= 0.35 over its first 20 ms; the 049 us|uh breath is .27). F1X_DROP 36 dB is a compromise:
+  the user ends "is" 40 dB under its hiss peak, "guys" 31 dB -- one level cannot fit both to the window (is -9, guys
+  +18 ms). Golden fricative ends: enough -8, thirteenth -43, themselves +8, is -9, guys +18 (5 closer, 0 further).

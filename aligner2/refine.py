@@ -126,7 +126,7 @@ P1AF_MIN_PAUSE = 0.0                          # P1af only before pauses at least
 F1W_SEARCH_MS = 120                           # F1w: how far after the coarse end to look for the final hiss
 F1W_JOIN_DB = 10.0                            # F1w: no dip below floor + this between the word and its hiss
 F1W_END_DB = 12.0                             # F1w: the hiss lasts while >= floor + this
-F1X_DROP = 40.0                               # F1x: a loud hiss ends this far under its peak
+F1X_DROP = 36.0                               # F1x: a loud hiss ends this far under its peak
 J1ND_STRONG = 15.0                            # J1nd: a transient this strong = the stop WAS released
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
 RULES = {"F2", "J0", "J1", "J1n", "J1m", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "P3", "E1", "E2",
@@ -655,7 +655,11 @@ class Clip:
                     while j < hard and S.zcr[j] >= max(0.15, 0.5 * zr) and S.Ls[j] >= S.floor[j] + F1W_END_DB \
                             and S.Ls[j] <= low + 3.0:
                         low = min(low, S.Ls[j]); j += 1
-                    if "F1x" in RULES and (self.hiss_goes_on(j) or j - f < MS(4)):   # also a WEAK hiss the level
+                    if "F1xb" in RULES and j >= hard and float(zs[f:f + MS(20)].mean()) >= 0.35:   # a strong, loud
+                        j = self.fric_tail_end(f, hard)          # hiss ran the whole 200 ms: it ends on the way down
+                        if j >= hard:                            # (guys|how -114: 60 -> 21 dB over the floor; a
+                            j = hard - 1                         # breath (049 us: zcr .27) is not a hiss)
+                    elif "F1x" in RULES and (self.hiss_goes_on(j) or j - f < MS(4)):   # also a WEAK hiss the level
                         j = self.fric_tail_end(f, hard) if j - f < MS(4) else self.fric_tail_end(j, hard)  # test
                                                             # could not follow at all (themselves: 6-10 dB, zcr .6-.9)
                     if j > f and (j < hard or ("F1x" in RULES and hard == lim and j - f <= MS(150))):
