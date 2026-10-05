@@ -29,7 +29,7 @@ The user completes 15-35 bundles (enough to capture almost all edge cases). Per 
    shows them (never the prelabels -- clicking it before the injection would capture those; the server warns when a
    CURRENT capture does not carry our injected token ids or differs from injected_tokens.json).
 3. Correct every boundary by ear until the whole bundle is golden.
-4. While correcting, write a note line for each change (see "Change notes" below).
+4. (No change notes -- dropped by the user.)
 5. Click the extension -> **Save GOLDEN labels**. The server answers with how many boundaries differ from the
    starting point -- a quick sanity check that the right state was saved.
 
@@ -38,7 +38,13 @@ save, nothing is overwritten). They are matched to the clips by the WAV names in
 If the CURRENT save was forgotten, `bench/bundle_archive/<bundle>/pipeline/injected_tokens.json` is the fallback
 starting point.
 
-### Change notes (the user)
+### Change notes -- DROPPED (the user, 2026-10-05: "too tiresome, you'll get the context from the data")
+
+No notes will be written: derive every case from the audio, the signals and the CURRENT -> GOLDEN differences.
+(The capture server still creates an empty notes file per bundle; ignore it. The format below is kept only in case
+the user ever adds a note.)
+
+### Change notes format (unused)
 
 One plain-text file per bundle, created automatically (with the format as a header) on the bundle's first capture:
 `bench/edit_notes/<batch>_<bundle>.txt`, e.g. `b24_bundle_042.txt` or `b13_pack_006.txt` -- the capture popup shows
