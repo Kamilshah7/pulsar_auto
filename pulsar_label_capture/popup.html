@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { width: 330px; margin: 0; padding: 14px; font: 13px/1.45 system-ui, sans-serif; background: #12161f; color: #e6ebf5; }
+  h1 { font-size: 14px; margin: 0 0 10px; color: #7fd3ff; }
+  button { width: 100%; padding: 11px 10px; margin: 0 0 8px; border: 1px solid #33405e; border-radius: 8px; cursor: pointer;
+           font: 600 13px system-ui, sans-serif; color: #fff; text-align: left; }
+  button small { display: block; font-weight: 400; color: #c5cee0; margin-top: 2px; }
+  #current { background: #22314f; }
+  #golden { background: #2c4a2c; }
+  button:disabled { opacity: .5; cursor: default; }
+  #out { margin-top: 6px; padding: 9px 10px; border-radius: 8px; background: #1b2130; white-space: pre-wrap; min-height: 18px; }
+  .ok { color: #7dffa8; } .err { color: #ff8a8a; } .warn { color: #ffd27a; }
+</style>
+</head>
+<body>
+  <h1>Pulsar Label Capture</h1>
+  <button id="current">Save CURRENT labels<small>the system's labels: AFTER injecting them, before you change anything (not the prelabels)</small></button>
+  <button id="golden">Save GOLDEN labels<small>the same labels after you perfected every boundary</small></button>
+  <div id="out">Open the Pulsar editor tab, then click a button. Keep this popup open until it reports.</div>
+  <script src="popup.js"></script>
+</body>
+</html>

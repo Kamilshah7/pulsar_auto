@@ -119,6 +119,19 @@ async def save_ground_truth(req: Request):
         print(f">>> [API /api/save-ground-truth] ERROR: {e}", flush=True)
         return JSONResponse({"ok": False, "error": str(e)}, status_code=500)
 
+@app.post("/api/capture-labels")
+async def capture_labels(req: Request):
+    """CURRENT / GOLDEN label captures from the Pulsar Label Capture extension (aligner2/PERFECTION_WORKFLOW.md)."""
+    try:
+        import label_capture
+        from pipeline import ARCHIVE_DIR, AUDIO_DIR, archive_bundle
+        summary = label_capture.save_capture(await req.json(), OUTPUT_DIR, AUDIO_DIR, ARCHIVE_DIR,
+                                             archive_fn=archive_bundle, log=lambda m: print(">>> " + m, flush=True))
+        return JSONResponse(summary)
+    except Exception as e:
+        print(f">>> [API /api/capture-labels] ERROR: {e}", flush=True)
+        return JSONResponse({"ok": False, "error": str(e)}, status_code=400)
+
 if __name__ == "__main__":
     port = 7860
     print(f"\n=======================================================")

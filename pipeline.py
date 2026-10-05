@@ -1382,6 +1382,16 @@ Return ONLY a valid JSON object mapping clip index ("{start_idx}" to "{end_idx}"
         with open(inject_file, "w", encoding="utf-8") as f:
             f.write(js_code)
 
+        # Save this bundle's clips + starting labels now, not only when the next bundle starts (the last bundle of a
+        # session was otherwise archived late or never) -- aligner2/PERFECTION_WORKFLOW.md
+        try:
+            cb = os.path.join(OUTPUT_DIR, "current_bundle.txt")
+            bundle_now = open(cb, encoding="utf-8").read().strip() if os.path.exists(cb) else ""
+            if bundle_now:
+                archive_bundle(bundle_now, self.log)
+        except Exception as e:
+            self.log(f"[Archive] could not archive after injection: {e!r}")
+
         snap_count = 0
         overlap_violations = 0
         for i in range(len(final_tokens) - 1):

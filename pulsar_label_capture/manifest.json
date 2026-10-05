@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Pulsar Label Capture",
+  "version": "1.0",
+  "description": "One click: save the Pulsar editor's word labels as CURRENT (before your edits) or GOLDEN (after) to the local pulsar_auto app.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["http://127.0.0.1:7860/*"],
+  "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Pulsar Label Capture",
+    "default_icon": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" }
+  }
+}
