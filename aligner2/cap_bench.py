@@ -133,9 +133,27 @@ def boundaries(c, p):
     return out
 
 
-def report(results, listing=False):
+SILENT_DB = 6.0      # "only silence between the two cuts": every 2 ms frame within this many dB of the local floor
+
+
+def silent_between(z, a, b):
+    """True when the audio between two cut times is background only -- moving a cut through silence changes nothing
+    audible (the user's "window where it sounds right")"""
+    i0, i1 = sorted((int(round(a / 0.002)), int(round(b / 0.002))))
+    if i1 <= i0:
+        return True
+    L = z["loudness"][i0:i1 + 1]
+    from aligner2.refine import Sig
+    return bool((L <= z.get("_floor", Sig(z).floor)[i0:i1 + 1] + SILENT_DB).all())
+
+
+def report(results, listing=False, zs=None):
     rows = []
     for c, m, p, tr in results:
+        z = (zs or {}).get(c["clip"]) if zs is not None else None
+        if z is not None and "_floor" not in z:
+            from aligner2.refine import Sig
+            z["_floor"] = Sig(z).floor
         for s, ci, j, side, g, o in boundaries(c, p):
             k = j if side == "end" else j - 1                 # the junction this boundary belongs to
             rows.append(dict(set=s, clip=ci, j=j, side=side, gold=g, ours=o, err=(o - g) * 1000,
@@ -144,8 +162,12 @@ def report(results, listing=False):
                              nxt=c["tokens"][k + 1]["text"] if 0 <= k < len(p) - 1 else "",
                              prv=c["tokens"][k]["text"] if 0 <= k < len(p) - 1 else "",
                              rule=str(tr.get(k, "")) if k >= 0 else "", pause=(0 <= k < len(p) - 1 and
-                             c["tokens"][k + 1]["start"] - c["tokens"][k]["end"] > 0.010)))
+                             c["tokens"][k + 1]["start"] - c["tokens"][k]["end"] > 0.010),
+                             silent=bool(z is not None and abs(o - g) > 0.001 and silent_between(z, o, g))))
     e = np.abs([r["err"] for r in rows])
+    if zs is not None:
+        w = np.array([abs(r["err"]) <= 5 or r["silent"] for r in rows])
+        print(f"   perceptual window (<= 5 ms, or only silence between our cut and golden): {w.sum()} = {w.mean():.1%}")
     n = len(rows)
     print(f"{n} golden boundaries: MATCH (<= 1 ms) {np.sum(e <= 1)} = {np.mean(e <= 1):.1%} | <= 2 ms {np.mean(e <= 2):.1%} | "
           f"<= 5 {np.mean(e <= 5):.1%} | <= 10 {np.mean(e <= 10):.1%} | <= 20 {np.mean(e <= 20):.1%} | MAE {e.mean():.1f} ms")
@@ -186,7 +208,7 @@ def main():
     res = run(prep, rules)
     same = sum(all(abs(a[s] - b[s]) < 1e-6 for a, b in zip(p, m["production"]) for s in ("start", "end")) for c, m, p, _ in res)
     print(f"local rule stage == the engine's production cuts on {same} / {len(res)} clips")
-    report(res, args.list)
+    report(res, args.list, zs={c["clip"]: z for c, m, z in prep})
 
 
 if __name__ == "__main__":

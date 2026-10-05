@@ -129,7 +129,7 @@ F1W_END_DB = 12.0                             # F1w: the hiss lasts while >= flo
 J1ND_STRONG = 15.0                            # J1nd: a transient this strong = the stop WAS released
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
 RULES = {"F2", "J0", "J1", "J1n", "J1m", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "P3", "E1", "E2",
-         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe", "J4l", "J8m", "J4h", "J4w", "J5l", "J7l", "MP", "E2a", "P1a", "FCN", "J1f", "J1nd", "F1w"}   # enabled
+         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe", "J4l", "J8m", "J4h", "J4w", "J5l", "J7l", "MP", "E2a", "P1a", "FCN", "J1f", "J1nd", "F1w", "FRW", "FRS"}   # enabled
 # (aligner2/local_bench.py --rules J1,J4,... for ablations)
 
 
@@ -406,6 +406,13 @@ class Clip:
         lo_lim = self.idx(self.s[k]) + MS(10)                       # stay inside the two words
         hi_lim = self.idx(self.e[k + 1]) - MS(10)
         pa, pb = self.lex["last"][k], self.lex["first"][k + 1]      # the lexical region
+        if "FRW" in RULES and self.texts[k + 1].strip().endswith("-") and \
+                len([ch for ch in self.texts[k + 1] if ch.isalpha()]) <= 2:     # only letter-less fragments (y-, m-,
+                                                                                # th-): would|allo- has its own letters
+            # FRW: a cut-off fragment emits no CTC letter of its own (HuBERT has no lone-fragment letters), so its
+            # "first-letter peak" anchors nothing: the window reaches over its coarse span (if|y-: J0 fell back to the
+            # gap middle inside the /f/ hiss, -42 ms; the hiss -> voicing change is at the fragment's start)
+            pb = max(pb, self.idx(self.e[k + 1]) - MS(10))
         a, b = max(lo_lim, min(pa, cut) - MS(10)), min(hi_lim, max(pb, cut) + MS(10))
         if b - a < MS(10):
             return None
@@ -1125,6 +1132,8 @@ class Clip:
                     s[k + 1] = r * HOP
         if "PW" in RULES:
             self.fragments(e, s)
+        if "FRS" in RULES:
+            self.restarts(e, s)
         if "E1" in RULES:
             r = self.clip_start()
             if r is not None:
@@ -1145,6 +1154,53 @@ class Clip:
             out.append({"start": float(st), "end": float(en)})
         return out
 
+
+    def restarts(self, e, s):
+        """FRS (captured golden b15_pack_025): a cut-off fragment that restarts the next word ('wha-' what, 'w-' what,
+        'd-' date) sits on the LAST sound burst before that word, after the speaker's hesitation. When the coarse stage
+        instead parked the fragment on word k's drawn-out end (its span starts seamlessly in word k's sound: a dip
+        < 5 dB), the fragment moves to that burst: the burst before the next word's start, across a >= 10 dB dip
+        (um|wha- -516 -> +3, trial|w- -254 -> -1, trial|d- -200 -> -17 ms); word k ends where the burst begins
+        (anything in the silence before it sounds the same)."""
+        S = self.S
+        Lb = _box(S.Ls, MS(10))
+        for k in range(self.n - 2):
+            frag, nxt = self.texts[k + 1].strip().lower(), self.texts[k + 2].strip().lower()
+            letters = "".join(ch for ch in frag if ch.isalpha())
+            if not frag.endswith("-") or not letters or not nxt.startswith(letters) or letters[0] in "aeiou":
+                continue                                          # vowel fragments ('a-') "restart" anything with a
+                                                                  # vowel: specific|a- +43 ms on old14
+            ek, sf = self.idx(e[k]), self.idx(s[k + 1])
+            if sf - ek > MS(5) or ek < MS(10):
+                continue                                          # already separated from word k
+            dip = float(S.Ls[ek - MS(20):ek].mean() - S.Ls[ek:sf + MS(30)].min())
+            if dip >= 5.0:
+                continue                                          # a real break: the fragment has its own onset
+            n0 = self.idx(s[k + 2])
+            w0 = max(sf, n0 - MS(120))
+            if n0 - w0 < MS(10):
+                continue
+            gmin = w0 + int(np.argmin(Lb[w0:n0]))
+            i = gmin
+            while i > sf and Lb[i] < Lb[gmin] + 10.0:
+                i -= 1
+            top = i
+            while i > max(sf, gmin - MS(400)) and Lb[i] >= Lb[gmin] + 10.0:
+                i -= 1
+            if i <= sf or top - i < MS(40) or n0 - top > MS(120):
+                continue                                          # no later burst of its own, right before the word
+            if FRAG_ARPA_FIRST(letters) in ("P", "B", "T", "D", "K", "G"):   # a stop-initial fragment starts with
+                c0 = max(sf, i - MS(80))                                      # its CLOSURE (uh|pe- old14: the burst
+                cm = c0 + int(np.argmin(Lb[c0:i + 1]))                        # comes after a silence that is part of
+                j = cm                                                        # 'pe-': +94 -> the closure start)
+                while j > sf and Lb[j - 1] <= Lb[cm] + 6.0:
+                    j -= 1
+                i = j
+            e[k] = (i - 1) * HOP
+            s[k + 1] = (i + 1) * HOP
+            e[k + 1] = max(e[k + 1], (top + 1) * HOP) if top * HOP > s[k + 1] else e[k + 1]
+            e[k + 1] = min((top + 1) * HOP, s[k + 2] - 0.002)
+            self.note(k, "FRS restart burst", start=i, end=top)
 
     def fragments(self, e, s):
         """PW (candidate): a cut-off word ('s-', 'th-') has the sound its letters begin a word with (R9). HuBERT emits
@@ -1201,6 +1257,12 @@ FRAG_ARPA = [("sh", "SH"), ("th", "TH"), ("ch", "CH"), ("wh", "W"), ("ph", "F"),
              ("z", "Z"), ("h", "HH"), ("b", "B"), ("p", "P"), ("t", "T"), ("d", "D"), ("k", "K"), ("g", "G"), ("c", "K"),
              ("j", "JH"), ("m", "M"), ("n", "N"), ("l", "L"), ("r", "R"), ("w", "W"), ("y", "Y"), ("a", "AH"),
              ("e", "EH"), ("i", "IH"), ("o", "AA"), ("u", "AH")]
+
+
+def FRAG_ARPA_FIRST(letters):
+    """the first phone a fragment's letters begin with (FRAG_ARPA prefixes), or None"""
+    w = letters.lower()
+    return next((p for pre, p in FRAG_ARPA if w.startswith(pre)), None)
 
 
 def fragment_arpa(word):

@@ -9,6 +9,19 @@ conflict.
 The system's word boundaries must equal the user's golden labels on every boundary of every captured bundle:
 golden labels = system output. Not "better on average" -- every boundary, every edge case.
 
+## CURRENT TASK (resume here after a compaction)
+
+Perfect bundle **b15_pack_025** (the first golden capture) before the next one -- the user (2026-10-05): "see the raw data,
+for every single case in every single junction and fix them all, only then we move to the next clip. dont stop until
+perfection is reached". A cut is fixed when it lands in the window where it sounds right (<= 5 ms of golden; exact =
+<= 1 ms also tracked) -- "sometimes there's a window instead of an exact cut point where it sounds right anyway".
+- Ledger: `python -m aligner2.case_ledger summary | open [--cls X] | note CLIP J SIDE "..." | refresh --tag "..."`
+  (bench/cache/aligner2/case_ledger.json: every missed boundary, its status, notes on what the raw data showed).
+- Inspect: `python -m aligner2.cap_case --clip N --j J` (raw 2 ms data), `python -m aligner2.landmark_lab "CLS"`.
+- Score: `python -m aligner2.cap_bench [--add X]`; old sets: `python -m aligner2.verify --add X`.
+- Order: largest errors first (coarse misplacements), then junction classes by open count. Every rule change: refresh
+  the ledger, check every regression one by one, note it, commit.
+
 ## Terms (the user, 2026-10-05 -- keep them straight)
 
 - **CURRENT labels** = the labels the CURRENT SYSTEM generates (our aligner's output, injected into the editor by the

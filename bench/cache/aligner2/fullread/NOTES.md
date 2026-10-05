@@ -5911,3 +5911,15 @@ V>stop 44, V>V 44 (late +18), pause starts 42 (late +8), V>gl 30, V>fric 28, sto
   the release's own rise). Golden stop>V: the vowel's loudness-rise onset (breathy / creaky vowel onsets lag the
   periodicity-based voicing onset: that|aaron -27, like|i -10 ms) -- not yet a clean rule.
 After J1f, J1nd, F1w: match 65.2 %, MAE 11.2 ms.
+- Scoring: cap_bench / case_ledger count a cut as in the WINDOW when it is <= 5 ms from golden or only silence (every
+  frame within 6 dB of the local floor) lies between our cut and golden -- moving a cut through silence is inaudible
+  (the user: "sometimes there's a window instead of an exact cut point where it sounds right").
+- FRW (ON): a letter-less cut-off fragment (<= 2 letters: y-, m-, th-) has no CTC letter, so its "first-letter peak"
+  anchored a tiny window: the join window now reaches over its coarse span (if|y- -42 -> -2: J5 hiss -> voicing
+  crossfade instead of J0's gap middle; trial|m- -72 -> -24). Multi-letter fragments keep theirs (would|allo- broke).
+  Golden 4 closer / 0 further; 026 H 20.12 -> 20.00.
+- FRS (ON): a consonant-initial fragment that restarts the next word ('wha-' what, 'w-' what, 'd-' date) and that the
+  coarse stage parked on word k's drawn-out end (seamless: dip < 5 dB) moves to the last sound burst before the next
+  word (>= 10 dB dip; >= 40 ms; ending <= 120 ms before it); a stop-initial fragment starts at its closure
+  (old14 uh|pe- -82 -> +13). um|wha- -516 -> +5, trial|w- -254 -> +1, trial|d- -200 -> -29. Golden 9 / 0; old14 better.
+  Vowel fragments excluded ('a-' "restarts" any a-word: old14 specific|a- +43).
