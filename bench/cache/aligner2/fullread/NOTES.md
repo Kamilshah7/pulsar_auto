@@ -5923,3 +5923,9 @@ After J1f, J1nd, F1w: match 65.2 %, MAE 11.2 ms.
   word (>= 10 dB dip; >= 40 ms; ending <= 120 ms before it); a stop-initial fragment starts at its closure
   (old14 uh|pe- -82 -> +13). um|wha- -516 -> +5, trial|w- -254 -> +1, trial|d- -200 -> -29. Golden 9 / 0; old14 better.
   Vowel fragments excluded ('a-' "restarts" any a-word: old14 specific|a- +43).
+- F1x (ON): F1 stops on single 2 ms frames; where a loud, strong hiss goes on after its stop (20 ms after: smoothed zcr
+  >= 0.45 and >= 15 dB over the floor) the hiss end is re-found on smoothed signals: louder than max(peak - 32 dB,
+  floor + 6) with zcr >= 0.15, or unmistakable hiss (zcr >= 0.45, high band >= -4 dB). enough -148 -> -8, thirteenth
+  -117 -> -43; golden 2 / 0. Where F1's short stop was right the following stretch is weak (zcr <= .33) or quiet
+  (<= 8 dB: is, rights, its). Replacing F1's end everywhere broke 11 right ends (he's +55, bengals +68, games -106).
+  Old sets: 9 unmoved (".") ends extended (neighborhoods +26 -> +148 may run into a breath) -- WATCH on new bundles.

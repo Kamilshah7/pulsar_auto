@@ -747,14 +747,14 @@
   "cap:b15_pack_025|2|27|end": {
    "notes": [],
    "first_err": -148.5,
-   "err": -148.5,
-   "status": "open",
+   "err": -8.5,
+   "status": "window",
    "word": "enough",
    "pair": "enough|and",
    "jtype": "fric>V",
    "pause": true,
    "corrected": true,
-   "rule": "P1 fricative end=8.492"
+   "rule": "P1 fricative end=8.632"
   },
   "cap:b15_pack_025|2|29|end": {
    "notes": [],
@@ -1911,14 +1911,14 @@
   "cap:b15_pack_025|3|26|end": {
    "notes": [],
    "first_err": -117.2,
-   "err": -117.2,
+   "err": -43.2,
    "status": "open",
    "word": "thirteenth",
    "pair": "thirteenth|but",
    "jtype": "fric>stop",
    "pause": true,
    "corrected": true,
-   "rule": "P1 fricative end=6.288 | P3a audible start=6.932"
+   "rule": "P1 fricative end=6.362 | P3a audible start=6.932"
   },
   "cap:b15_pack_025|3|28|end": {
    "notes": [],
@@ -3430,7 +3430,7 @@
    "jtype": "fric>V",
    "pause": true,
    "corrected": true,
-   "rule": "F1w fricative start=11.886 end=11.886"
+   "rule": ""
   },
   "cap:b15_pack_025|5|35|end": {
    "notes": [],
@@ -6233,6 +6233,13 @@
    "window": 1026,
    "n": 1484,
    "mae": 9.52
+  },
+  {
+   "tag": "+F1x",
+   "exact": 967,
+   "window": 1027,
+   "n": 1484,
+   "mae": 9.37
   }
  ]
 }
