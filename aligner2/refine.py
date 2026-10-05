@@ -121,9 +121,15 @@ CLASS = {**{p: "V" for p in VOWELS}, **{p: "stop" for p in ("P", "B", "T", "D", 
          **{p: "aff" for p in ("CH", "JH")}, **{p: "fric" for p in ("F", "V", "TH", "DH", "S", "Z", "SH", "ZH")},
          "HH": "h", **{p: "nas" for p in ("M", "N", "NG")}, "L": "liq", "R": "liq", "W": "gl", "Y": "gl"}
 BG_DB = 6.0                                   # a released stop's tail: until within 6 dB of the residual level
+P1AF_DB, P1AF_MAX_MS, P1AF_RISE = 6.0, 400, 6.0   # P1af: fade to the pause's background + 6 dB, <= 400 ms
+P1AF_MIN_PAUSE = 0.0                          # P1af only before pauses at least this long (s)
+F1W_SEARCH_MS = 120                           # F1w: how far after the coarse end to look for the final hiss
+F1W_JOIN_DB = 10.0                            # F1w: no dip below floor + this between the word and its hiss
+F1W_END_DB = 12.0                             # F1w: the hiss lasts while >= floor + this
+J1ND_STRONG = 15.0                            # J1nd: a transient this strong = the stop WAS released
 RISE_DB = 4.0                                 # a clear loudness rise: >= 4 dB per 12 ms
 RULES = {"F2", "J0", "J1", "J1n", "J1m", "J13", "J14", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J12", "P1", "P1d", "F1", "P2", "P3", "E1", "E2",
-         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe", "J4l", "J8m", "J4h", "J4w", "J5l", "J7l", "MP", "E2a", "P1a", "FCN"}   # enabled
+         "P1b100", "P1bt2", "PW", "PWa", "P1c", "E1f", "J4b", "P1bv", "P1f", "P1g", "P3a", "Jthe", "J4l", "J8m", "J4h", "J4w", "J5l", "J7l", "MP", "E2a", "P1a", "FCN", "J1f", "J1nd", "F1w"}   # enabled
 # (aligner2/local_bench.py --rules J1,J4,... for ablations)
 
 
@@ -420,13 +426,33 @@ class Clip:
                 self.note(k, "J13 quietest", cut=t)
                 return t
         if cA == "stop" and cB == "V" and "J1" in RULES:                         # J1
-            bu = burst_onset(S, a, b, prefer="max")
+            ph = self.arpa[k].split()
+            nd = len(ph) >= 2 and pclass(ph[-2]) == "nas" and A in ("D", "T")
+            t = None
+            strong = S.trn[a:b].max() >= J1ND_STRONG if b > a else False
+            if nd and "J1nd" in RULES and not strong:     # J1nd (captured golden): /nd/ /nt/ usually lose the stop:
+                for name, q, feats in (("release", 0.5, ("lo", "cent")), ("joint", 0.5, None)):  # the nasal release
+                    t = transition(S, "nas", cB, a, cut, b, q, feats)                         # first, the burst
+                    if t is not None and t >= pa_:                                             # path only if none;
+                        self.note(k, f"J1nd nasal-{name}", cut=t)                              # never before word
+                        return t                                                               # k's last letter
+                t = None
+            bu = burst_onset(S, a, b, prefer="first" if "J1f" in RULES else "max")
             if bu is not None:                            # released: voicing onset after the release
                 t = voicing_onset(S, bu, hi_lim)
                 self.note(k, "J1 burst", burst=bu, voice=t)
+                hiss_before = np.median(S.zcr[max(0, bu - MS(16)):bu]) >= 0.3 if bu > 0 else False
+                if t is None and "J1vr" in RULES and not hiss_before:   # J1vr: no voicing onset -> the loudness
+                    q = bu + MS(4)                                       # rise after the release, else the release
+                    while q < min(hi_lim, bu + MS(40)) and S.zcr[q] >= 0.2:   # (not after frication: a click
+                        q += 1                                           # inside an /s/ is no release -- just|a);
+                    t = first_rise(S, q, min(hi_lim, bu + MS(60)))      # the rise is searched after the release's
+                    t = bu if t is None else t                           # own hiss (settlement|offer)
+                    self.note(k, "J1vr", cut=t)
+                elif t is None and "J1v" in RULES:        # J1v: no voicing onset found -> the release itself
+                    t = bu
+                    self.note(k, "J1v", cut=t)
             else:                                         # no release
-                ph = self.arpa[k].split()
-                nd = len(ph) >= 2 and pclass(ph[-2]) == "nas" and A in ("D", "T")
                 t = None
                 if nd and "J1n" in RULES:                 # 'and', 'find', 'want': /nd/, /nt/ lose the stop ->
                     for name, q, feats in (("release", 0.5, ("lo", "cent")), ("joint", 0.5, None)):   # nasal > vowel (J8)
@@ -597,6 +623,28 @@ class Clip:
                 if j > i_end and j < bound:                 # it must die before the bound
                     self.note(k, "P1 fricative", end=j)
                     return j
+            elif "F1w" in RULES:                            # F1w (captured golden): the coarse end falls BEFORE the
+                bound = min(lim, i_end + MS(F1W_SEARCH_MS))     # final fricative's hiss (is -133, with -75, love
+                if k + 1 < self.n:                              # -160, guys -85 ms): find the hiss after the end
+                    bound = min(bound, self.lex["first"][k + 1] - MS(20))
+                zs = _box(S.zcr, MS(10))
+                f = i_end
+                while f < bound - MS(20) and not ((zs[f:f + MS(20)] >= 0.25).all() and S.Ls[f] >= S.floor[f] + 6.0):
+                    f += 1
+                joined = f > i_end and f - i_end <= MS(80) and \
+                    (S.Ls[i_end:f] - S.floor[i_end:f]).min() >= F1W_JOIN_DB   # the word's own fricative continues
+                if f == i_end:                                  # straight out of it; a breath comes after a dip
+                    joined = True                               # (049 was +191, old14 is +166 without this)
+                if f < bound - MS(20) and joined:           # sustained hiss found: it runs on until it dies (F1)
+                    zr = float(np.median(S.zcr[f:f + MS(20)]))
+                    j, low = f, S.Ls[f]
+                    hard = min(lim, f + MS(200))
+                    while j < hard and S.zcr[j] >= max(0.15, 0.5 * zr) and S.Ls[j] >= S.floor[j] + F1W_END_DB \
+                            and S.Ls[j] <= low + 3.0:
+                        low = min(low, S.Ls[j]); j += 1
+                    if j < hard:
+                        self.note(k, "F1w fricative", start=f, end=j)
+                        return j
         if stop_final:                                                         # (b) release after the coarse end
             win = 100 if "P1b100" in RULES else 60                     # closures up to 100 ms
             blim = min(lim, i_end + MS(win))
@@ -967,6 +1015,26 @@ class Clip:
         self.trace[k] = self.trace.get(k, "") + f" | {label} fade end={j * HOP:.3f}"
         return j
 
+    def floor_fade(self, k, i, nxt, label="P1af"):
+        """P1af (2026-10-05, captured golden b15_pack_025): before a pause the user ends a word where its tail has
+        faded into the PAUSE'S OWN background -- 0-12 dB above it -- while P1a stopped at p99 - 30 dB, still 15-35 dB
+        above it in quiet recordings (like -78, people -72, he's -77, love -160 ms). Background = 10th percentile of
+        the pause (between the coarse end and the next word's coarse start), else the local floor. The word lasts
+        while its sound stays >= background + P1AF_DB, no new event (a rise > P1AF_RISE dB over the running low),
+        <= P1AF_MAX_MS, never within 10 ms of the next word."""
+        S = self.S
+        if i >= S.T - 1:
+            return None
+        bg = float(np.percentile(S.Ls[i:nxt], 10)) if nxt - i >= MS(40) else float(S.floor[i])
+        stop = min(S.T - 1, i + MS(P1AF_MAX_MS), nxt - MS(10))
+        j, low = i, S.Ls[i]
+        while j < stop and S.Ls[j] >= bg + P1AF_DB and S.Ls[j] <= low + P1AF_RISE:
+            low = min(low, S.Ls[j]); j += 1
+        if j - i < MS(4):
+            return None
+        self.trace[k] = self.trace.get(k, "") + f" | {label} fade end={j * HOP:.3f} (bg {bg:.0f})"
+        return j
+
     def clip_end(self):
         """E2: the last word: the P1 checks against the clip end; if the clip cuts off running speech (no drop
         after the last letter) it ends at the clip end"""
@@ -1038,7 +1106,10 @@ class Clip:
             else:
                 r = self.pause_end(k, self.s[k + 1]) if "P1" in RULES else None
                 if r is None and "P1a" in RULES:              # P1a: no event / release / tail: the word fades out
-                    r = self.audible_fade(k, self.idx(self.e[k]), 30.0, "P1a")   # (to p99 - 30 dB before a pause)
+                    if "P1af" in RULES and self.s[k + 1] - self.e[k] >= P1AF_MIN_PAUSE:   # ... to the PAUSE'S
+                        r = self.floor_fade(k, self.idx(self.e[k]), self.idx(self.s[k + 1]))  # background (long pauses)
+                    if r is None and not ("P1af" in RULES and self.s[k + 1] - self.e[k] >= P1AF_MIN_PAUSE):
+                        r = self.audible_fade(k, self.idx(self.e[k]), 30.0, "P1a")   # (to p99 - 30 dB before a pause)
                     if r is not None and r * HOP >= self.s[k + 1] - 0.010:
                         r = None
                 if r is not None:

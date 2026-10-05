@@ -1,0 +1,5 @@
+local rule stage == the engine's production cuts on 9 / 9 clips
+1484 golden boundaries: MATCH (<= 1 ms) 969 = 65.3% | <= 2 ms 66.0% | <= 5 68.3% | <= 10 73.0% | <= 20 82.3% | MAE 11.5 ms
+   left alone by the user (CURRENT was right)     973: match 98.8%, <= 10 ms 99.3%, MAE 0.2
+   corrected by the user                          511: match 1.6%, <= 10 ms 23.1%, MAE 33.0
+   by junction: pause 70% of 322, stop>V 55% of 118, V>stop 59% of 108, stop>fric 82% of 78, V>fric 64% of 78, V>V 41% of 74, V>gl 52% of 62, fric>V 76% of 62, stop>gl 53% of 60, fric>fric 69% of 58, stop>stop 91% of 46, nas>fric 71% of 42, V>liq 39% of 36, nas>stop 94% of 34

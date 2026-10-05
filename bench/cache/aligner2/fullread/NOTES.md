@@ -5886,3 +5886,28 @@ H = the user's hand-moved gold, hand = the user's review cuts, ear = the nearest
  improvement you said, implement it"): refine.py (FCN = r8 tau8 w40 skip_stops, last step, try/except), fc_nudge.py in
  remote.REMOTE_FILES and the engine's code_version. verify (bench/prov_runs/verify_fcn.log) reproduces the experiment;
  the engine run (aligner2_v27.json) equals local on all 7364 boundaries; v27 vs v25: 816 boundaries moved, max 8 ms.
+
+## PERFECTION LOOP, bundle b15_pack_025 (first golden capture, 2026-10-05) -- aligner2/PERFECTION_WORKFLOW.md
+Tools: aligner2/cap_bench.py (prepare = one engine call on the golden words, then local; local == engine 9 / 9 clips),
+aligner2/cap_case.py (raw 2 ms data around a boundary), aligner2/landmark_lab.py (candidate landmarks per junction class).
+v27 on the golden words: 1484 boundaries, match (<= 1 ms) 65.3 %, MAE 11.5 ms; left alone 973: 98.8 % match; corrected
+511: 1.6 % match, MAE 33 ms. Word corrections (text): 14 added, 8 removed, 12 changed (wanna/gonna, cut-offs, fillers) --
+a transcript issue, the aligner is scored on the golden words. Golden touching words sit 1-2 ms apart.
+Rule ablation on the golden bundle (bench/prov_runs/cap_ablation_v27.log): EVERY rule helps (FCN: 157 of 174 moves right;
+J9 the weakest: 76 wrong of 190). Errors by group: pause ends 54 (ours early, median -49 ms), stop>V 53 (late +18),
+V>stop 44, V>V 44 (late +18), pause starts 42 (late +8), V>gl 30, V>fric 28, stop>gl 28 (early -34), V>liq 22 (+12) ...
+- Pause ends: no single level explains golden ends (spread ~12 dB vs the pause background, the word peak, p99, the next
+  word); P1a (p99 - 30) already matches 68 % within 5 ms. Fade-to-background (P1af, kept OFF): breaks vowel-final words
+  (crazy, be, so, know: the user ends them where P1a does) and runs into breaths; it only helps fricative-final words.
+- F1w (ON): a fricative-final word whose coarse end falls BEFORE its final hiss (F1 needs the hiss AT the end): hiss
+  searched <= 120 ms after the end, joined to the word (no dip under floor + 10 dB), lasting while >= floor + 12 dB:
+  he's -77 -> +3, guys -85 -> -3, love -160 -> -42 (3 closer / 0 further); old sets -0.49 s, all on unmoved (".")
+  boundaries (no H change).
+- J1f (ON): J1 takes the FIRST release, not the strongest (but|it: the strongest click came 20 ms after the release).
+- J1nd (ON): /nd/ /nt/ words try the nasal release first unless a strong (>= 15) transient shows the stop was released
+  and never before word k's last letter (and|eat +84 -> -12, and|again +23 -> +5; settlement|offer is released: J1).
+  J1f + J1nd: 5 closer / 1 further; old sets neutral.
+- J1v / J1vr (OFF): no voicing onset after a release -> the release / the rise after it: mixed (a click inside an /s/,
+  the release's own rise). Golden stop>V: the vowel's loudness-rise onset (breathy / creaky vowel onsets lag the
+  periodicity-based voicing onset: that|aaron -27, like|i -10 ms) -- not yet a clean rule.
+After J1f, J1nd, F1w: match 65.2 %, MAE 11.2 ms.

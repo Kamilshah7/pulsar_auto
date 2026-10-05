@@ -10,7 +10,8 @@ Terms: CURRENT = the labels the current system generated and injected (current.j
 injected_tokens.json) -- never the platform's prelabels; GOLDEN = those labels after the user perfected them.
 EVERY golden boundary is gold (start_human / end_human True): unchanged ones were reviewed and right, changed ones were
 corrected (start_changed / end_changed: moved > 0.5 ms from CURRENT, or a token with no CURRENT counterpart).
-Times are clip-local seconds (as injected).
+Times are converted to clip-local seconds: the editor (and injected_tokens.json) uses ONE timeline across the bundle,
+clip i spanning [start_sec, end_sec) of the archived ordered_clips.json.
 
     python -m aligner2.captures            # list the captured bundles and their correction counts
 """
@@ -66,18 +67,24 @@ def load_captures():
             if m and t.get("clipIndex") is not None:
                 clip_wav.setdefault(int(t["clipIndex"]), m.group(1))
         notes = _notes(bundle)
+        oc_path = os.path.join(ARCHIVE, safe, "pipeline", "ordered_clips.json")
+        offset = {int(c["index"]): float(c["start_sec"]) for c in json.load(open(oc_path, encoding="utf-8"))}             if os.path.exists(oc_path) else {}
+        for c in (json.load(open(oc_path, encoding="utf-8")) if os.path.exists(oc_path) else []):
+            clip_wav.setdefault(int(c["index"]), c["filename"])
         for ci in sorted({int(t["clipIndex"]) for t in gold if t.get("clipIndex") is not None}):
-            toks = []
+            toks, off = [], offset.get(ci, 0.0)
             for t in sorted((t for t in gold if t.get("clipIndex") == ci), key=lambda t: float(t["start"])):
                 s = S.get(t.get("id"))
-                toks.append({"text": t.get("text", ""), "start": float(t["start"]), "end": float(t["end"]),
+                toks.append({"text": t.get("text", ""), "start": float(t["start"]) - off, "end": float(t["end"]) - off,
                              "start_human": True, "end_human": True,
                              "start_changed": s is None or abs(float(t["start"]) - float(s["start"])) > TOL,
                              "end_changed": s is None or abs(float(t["end"]) - float(s["end"])) > TOL})
             wav = clip_wav.get(ci)
             wav_path = next((p for p in (os.path.join(ARCHIVE, safe, "audio", wav or ""),) if wav and os.path.exists(p)), None)
             out.append({"set": f"cap:{short_id(bundle)}", "clip": ci, "bundle": bundle, "wav": wav_path, "tokens": toks,
-                        "start_tokens": sorted((t for t in start if t.get("clipIndex") == ci), key=lambda t: float(t["start"])),
+                        "start_tokens": [dict(t, start=float(t["start"]) - off, end=float(t["end"]) - off) for t in
+                                         sorted((t for t in start if t.get("clipIndex") == ci), key=lambda t: float(t["start"]))],
+                        "offset": off,
                         "notes": notes})
     return out
 
